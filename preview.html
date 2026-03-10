@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bachata GANG — Aperçu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #111118;
+      --bg-card: #16161f;
+      --bg-card-hover: #1e1e2a;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.15);
+      --text-primary: #f0f0f8;
+      --text-secondary: #8888aa;
+      --text-muted: #55556a;
+      --accent: #a855f7;
+      --accent-dim: rgba(168,85,247,0.15);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+    ::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 999px; }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .navbar-inner {
+      max-width: 1280px; margin: 0 auto;
+      display: flex; align-items: center;
+      justify-content: space-between; height: 64px; gap: 24px;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.02em; cursor: pointer; }
+    .logo-icon {
+      width: 34px; height: 34px;
+      background: linear-gradient(135deg, var(--accent), #ec4899);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center; font-size: 18px;
+    }
+    .logo-text {
+      background: linear-gradient(135deg, #fff 40%, var(--accent));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .search-bar { flex: 1; max-width: 400px; position: relative; }
+    .search-bar input {
+      width: 100%;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 999px; padding: 9px 20px 9px 44px;
+      color: var(--text-primary); font-size: 0.875rem; font-family: inherit;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+    .search-bar input::placeholder { color: var(--text-muted); }
+    .search-bar input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
+    .search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 15px; pointer-events: none; }
+    .song-count {
+      font-size: 0.8rem; color: var(--text-muted);
+      background: var(--bg-card); border: 1px solid var(--border);
+      padding: 5px 14px; border-radius: 999px; white-space: nowrap;
+    }
+
+    /* HERO */
+    .hero { padding: 72px 24px 48px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(168,85,247,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent); background: var(--accent-dim);
+      border: 1px solid rgba(168,85,247,0.25);
+      padding: 6px 16px; border-radius: 999px; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem,6vw,4rem); font-weight: 700;
+      letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 16px;
+      background: linear-gradient(135deg, #fff 0%, rgba(240,240,255,0.7) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p { color: var(--text-secondary); font-size: 1.05rem; max-width: 520px; margin: 0 auto 48px; }
+    .tags-filter { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; }
+    .tag-btn {
+      padding: 6px 16px; border-radius: 999px; font-size: 0.8rem; font-weight: 500;
+      border: 1px solid var(--border); color: var(--text-secondary);
+      background: var(--bg-card); transition: all var(--transition);
+    }
+    .tag-btn:hover, .tag-btn.active { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+    /* GRID */
+    .section-label {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-muted);
+      max-width: 1280px; margin: 0 auto 20px; padding: 0 24px;
+    }
+    .song-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px; padding: 0 24px 80px;
+      max-width: 1280px; margin: 0 auto;
+    }
+
+    /* CARD */
+    .song-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden; cursor: pointer;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      display: flex; flex-direction: column; position: relative;
+    }
+    .song-card::before {
+      content: ''; position: absolute; inset: 0; border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .song-card:hover {
+      transform: translateY(-4px); border-color: var(--border-hover);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--border-hover);
+    }
+    .card-cover {
+      height: 140px; position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card-cover-bg { position: absolute; inset: 0; opacity: 0.85; }
+    .card-cover-pattern {
+      position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 12px);
+    }
+    .card-cover-title {
+      position: relative; font-family: 'Playfair Display', serif;
+      font-style: italic; font-size: 1.5rem; color: rgba(255,255,255,0.9);
+      text-align: center; padding: 0 20px; text-shadow: 0 2px 20px rgba(0,0,0,0.5); z-index: 1;
+    }
+    .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 12px; }
+    .card-artist-row { display: flex; align-items: center; justify-content: space-between; }
+    .card-artist { font-weight: 600; font-size: 0.95rem; }
+    .card-year { font-size: 0.75rem; color: var(--text-muted); background: var(--bg-secondary); padding: 3px 10px; border-radius: 999px; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; line-height: 1.3; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .card-tag { font-size: 0.7rem; font-weight: 500; color: var(--text-muted); background: var(--bg-secondary); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 4px; }
+    .card-cta { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; color: var(--accent); transition: gap var(--transition); }
+    .song-card:hover .card-cta { gap: 10px; }
+    .card-spotify {
+      display: flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(30,215,96,0.12); color: #1ed760;
+      border: 1px solid rgba(30,215,96,0.25); transition: all var(--transition); flex-shrink: 0;
+      text-decoration: none;
+    }
+    .card-spotify:hover { background: rgba(30,215,96,0.25); border-color: #1ed760; transform: scale(1.1); }
+    .spotify-listen-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: #1ed760; background: rgba(30,215,96,0.1);
+      border: 1px solid rgba(30,215,96,0.25);
+      padding: 9px 18px; border-radius: 999px;
+      font-size: 0.85rem; font-weight: 600;
+      transition: all var(--transition); white-space: nowrap; text-decoration: none;
+    }
+    .spotify-listen-btn:hover { background: rgba(30,215,96,0.2); border-color: #1ed760; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(30,215,96,0.2); }
+
+    /* PASSES */
+    .nav-links { display: flex; gap: 24px; font-weight: 600; font-size: 0.95rem; }
+    .nav-links span { transition: color var(--transition); cursor: pointer; }
+    .nav-links span:hover { color: #fff !important; }
+    .passe-video-container { position: relative; width: 100%; aspect-ratio: 9/16; background: #000; overflow: hidden; border-bottom: 1px solid var(--border); }
+    .passe-video { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .passe-style-badge { position: absolute; top: 12px; right: 12px; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 10; }
+    .passe-card:hover { transform: translateY(-4px); }
+    #passes-view { display: none; }
+
+    /* LYRICS VIEW */
+    #lyrics-view { display: none; }
+    .lyrics-header { padding: 40px 24px 32px; max-width: 1280px; margin: 0 auto; }
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 500; color: var(--text-secondary);
+      padding: 8px 16px; background: var(--bg-card);
+      border: 1px solid var(--border); border-radius: 999px;
+      transition: all var(--transition); margin-bottom: 32px;
+    }
+    .back-btn:hover { color: var(--text-primary); border-color: var(--border-hover); }
+    .lyrics-meta { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; }
+    .lyrics-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem,5vw,3.2rem); font-weight: 700;
+      letter-spacing: -0.02em; line-height: 1.15;
+      background: linear-gradient(135deg, #fff 0%, rgba(240,240,255,0.75) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .lyrics-artist-badge { display: flex; align-items: center; gap: 10px; color: var(--text-secondary); font-size: 1rem; font-weight: 500; margin-top: 8px; }
+    .artist-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .lyrics-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .lyrics-tag { font-size: 0.75rem; font-weight: 500; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border); padding: 5px 14px; border-radius: 999px; }
+    .divider { height: 1px; background: var(--border); margin: 0 auto 32px; max-width: calc(1280px - 48px); }
+    .lyrics-columns { display: none; }
+    .lyrics-interleaved {
+      display: block;
+      max-width: 900px; margin: 0 auto; padding: 0 24px 64px;
+    }
+    .lyrics-interleaved { display: block; max-width: 900px; margin: 0 auto; padding: 0 24px 64px; }
+    .column-header {
+      padding: 16px 24px; background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .column-flag { font-size: 1.2rem; }
+    .column-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); }
+    .column-sublabel { font-size: 0.7rem; color: var(--text-muted); margin-left: auto; }
+    .lyrics-text { padding: 28px; white-space: pre-line; font-size: 0.95rem; line-height: 2; color: var(--text-primary); }
+
+    /* FOOTER */
+    .footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+    .footer span { color: var(--accent); }
+
+    /* NO RESULTS */
+    .no-results { grid-column: 1 / -1; text-align: center; padding: 80px 20px; color: var(--text-muted); display: none; }
+    .no-results-icon { font-size: 3rem; margin-bottom: 16px; }
+    .no-results h3 { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 8px; }
+
+    /* FAVORITES */
+    .favorite-btn {
+      position: absolute; top: 16px; right: 16px; z-index: 10;
+      background: rgba(244,63,94,0.12); border: 1.5px solid rgba(244,63,94,0.4);
+      border-radius: 999px; padding: 8px 16px;
+      display: flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.75); font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; transition: all 0.25s; white-space: nowrap;
+    }
+    .favorite-btn .fav-icon { font-size: 1.2rem; line-height: 1; }
+    .favorite-btn:hover { background: rgba(244,63,94,0.25); border-color: rgba(244,63,94,0.8); color: white; transform: scale(1.04); }
+    .favorite-btn.active { background: rgba(244,63,94,0.25); border-color: #f43f5e; color: #f43f5e; }
+
+    .card-fav-btn {
+      position: absolute; top: 10px; right: 10px; z-index: 10;
+      background: rgba(0,0,0,0.55); border: 1.5px solid rgba(255,255,255,0.2);
+      border-radius: 50%; width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.6); font-size: 1.3rem; cursor: pointer;
+      transition: all 0.2s; backdrop-filter: blur(4px);
+    }
+    .card-fav-btn:hover { background: rgba(244,63,94,0.3); border-color: rgba(244,63,94,0.7); color: white; transform: scale(1.1); }
+    .card-fav-btn.active { background: rgba(244,63,94,0.2); border-color: #f43f5e; color: #f43f5e; }
+
+    /* INTERLEAVED LYRICS */
+    .lyric-pair { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .lyric-pair:last-child { border-bottom: none; }
+    
+    /* ── Spanish line ── */
+    .lyric-es {
+      display: flex; align-items: baseline; gap: 10px;
+      font-size: 1.05rem; color: #f0f0f8; line-height: 1.7; font-weight: 500; letter-spacing: 0.01em;
+    }
+    .lyric-es::before {
+      content: 'VO'; flex-shrink: 0; font-size: 0.6rem; font-weight: 800; letter-spacing: 0.1em;
+      color: #f43f5e; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.3);
+      border-radius: 4px; padding: 1px 5px; line-height: 1.6; align-self: center;
+    }
+    
+    /* ── French translation line ── */
+    .lyric-fr {
+      display: flex; align-items: baseline; gap: 10px;
+      font-size: 0.88rem; color: #c4b5fd; line-height: 1.6; font-style: italic; margin-top: 5px;
+      padding-left: 2px; letter-spacing: 0.02em; opacity: 0.85;
+    }
+    .lyric-fr::before {
+      content: 'FR'; flex-shrink: 0; font-size: 0.6rem; font-weight: 800; letter-spacing: 0.1em; font-style: normal;
+      color: #a78bfa; background: rgba(167, 139, 250, 0.12); border: 1px solid rgba(167, 139, 250, 0.3);
+      border-radius: 4px; padding: 1px 5px; line-height: 1.6; align-self: center;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-inner { flex-wrap: wrap; height: auto; padding: 12px 0; gap: 12px; }
+      .nav-links { order: 2; width: 100%; justify-content: center; border-top: 1px solid var(--border); padding-top: 12px; margin-top: 4px; }
+      .search-bar { max-width: 100%; order: 3; width: 100%; }
+      .song-count { display: none; }
+      .hero { padding: 48px 24px 32px; }
+      .song-grid { grid-template-columns: 1fr; padding: 0 16px 64px; }
+      .lyrics-interleaved { padding: 0 20px 48px; }
+      .lyrics-header { padding: 24px 16px 20px; }
+    }
+    @media (max-width: 480px) {
+      .logo-text { display: none; }
+      .hero h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ░░ NAVBAR ░░ -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <div class="logo" onclick="showHome()">
+      <div class="logo-icon">🎶</div>
+      <span class="logo-text">Bachata GANG</span>
+    </div>
+    <div class="nav-links">
+      <span id="nav-sons" style="color:var(--accent)" onclick="showHome()">Sons</span>
+      <span id="nav-passes" style="color:var(--text-muted)" onclick="showPasses()">Passes</span>
+    </div>
+    <div class="search-bar" id="search-wrapper">
+      <span class="search-icon">🔍</span>
+      <input id="search-input" type="text" placeholder="Rechercher..." oninput="handleSearch()" />
+    </div>
+    <div class="song-count" id="item-count">3 sons</div>
+  </div>
+</nav>
+
+<!-- ░░ HOME VIEW ░░ -->
+<div id="home-view">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">💃 Bachata · Paroles bilingues</div>
+    <h1>Les plus belles paroles<br>de bachata</h1>
+    <p>Retrouve les textes originaux en espagnol avec leur traduction en français, côte à côte, pour mieux ressentir chaque chanson.</p>
+
+    <div class="tags-filter" id="tags-filter">
+      <button class="tag-btn" onclick="toggleFavoritesFilter(this, 'songs')" id="fav-btn-songs">❤️ Mes Favoris</button>
+      <button class="tag-btn active" onclick="filterByTag(null, this)">Tout voir</button>
+    </div>
+  </section>
+
+  <div class="section-label" id="section-label">Tous les sons</div>
+
+  <div class="song-grid" id="song-grid">
+    <!-- cards injected by JS -->
+    <div class="no-results" id="no-results">
+      <div class="no-results-icon">🎵</div>
+      <h3>Aucun résultat trouvé</h3>
+      <p>Essaie un autre terme de recherche</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Fait avec <span>♥</span> pour les amoureux de bachata · 2025</p>
+  </footer>
+</div>
+
+<!-- ░░ PASSES VIEW ░░ -->
+<div id="passes-view" style="display:none">
+  <section class="hero" style="padding-bottom: 32px;">
+    <div class="hero-eyebrow" style="color:#3b82f6;background:rgba(59,130,246,0.15);border-color:rgba(59,130,246,0.25)">🕺 Mouvements & Passes</div>
+    <h1>Apprends par <br>l'image</h1>
+    <p>Découvre les passes de bachata, zouk et autres styles pour enrichir ta danse sur tes sons préférés.</p>
+
+    <div class="tags-filter" id="passes-tags-filter" style="margin-top:0">
+      <button class="tag-btn" onclick="toggleFavoritesFilter(this, 'passes')" id="fav-btn-passes">❤️ Mes Favoris</button>
+      <button class="tag-btn active" onclick="filterPassesByTag(null, this)">Tout voir</button>
+    </div>
+  </section>
+
+  <div class="section-label" id="passes-section-label">Toutes les passes</div>
+
+  <div class="song-grid" id="passes-grid">
+    <!-- cards injected by JS -->
+    <div class="no-results" id="passes-no-results">
+      <div class="no-results-icon">🎥</div>
+      <h3>Aucun résultat trouvé</h3>
+      <p>Essaie un autre style</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Fait avec <span style="color:#3b82f6">♥</span> pour les amoureux de la danse · 2025</p>
+  </footer>
+</div>
+
+<!-- ░░ LYRICS VIEW ░░ -->
+<div id="lyrics-view" style="display:none">
+  <div class="lv-color-bar" id="lv-color-bar"></div>
+  <button class="lv-back" onclick="showHome()">← Retour aux sons</button>
+  
+  <div class="lv-header" style="position:relative">
+    <button class="favorite-btn" id="lv-favorite-btn" onclick="toggleFavoriteCurrentSong(event)">
+      <span class="fav-icon">♡</span><span id="lv-fav-label">Ajouter</span>
+    </button>
+    <div>
+      <div id="lv-color-bar" style="width:48px;height:4px;border-radius:999px;margin-bottom:16px;"></div>
+      <h1 class="lyrics-title" id="lv-title"></h1>
+      <div class="lyrics-artist-badge">
+        <span class="artist-dot" id="lv-dot"></span>
+        <span id="lv-artist"></span>
+        <span style="color:var(--text-muted);font-size:.85rem" id="lv-year"></span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px">
+      <div class="lyrics-tags" id="lv-tags"></div>
+      <a id="lv-spotify" href="#" target="_blank" rel="noopener noreferrer" class="spotify-listen-btn" style="display:none">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        Écouter sur Spotify
+      </a>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <!-- 2-column layout (desktop) -->
+  <div class="lyrics-columns">
+    <div class="lyrics-column">
+      <div class="column-header">
+        <span class="column-flag">🇩🇴</span>
+        <span class="column-label">Original</span>
+        <span class="column-sublabel">Original</span>
+      </div>
+      <div class="lyrics-text" id="lv-es"></div>
+    </div>
+    <div class="lyrics-column">
+      <div class="column-header">
+        <span class="column-flag">🇫🇷</span>
+        <span class="column-label">Traduction</span>
+        <span class="column-sublabel">Français</span>
+      </div>
+      <div class="lyrics-text" id="lv-fr"></div>
+    </div>
+  </div>
+
+  <!-- Interleaved layout (mobile) -->
+  <div class="lyrics-interleaved" id="lv-interleaved"></div>
+
+  <footer class="footer">
+    <p>Fait avec <span>♥</span> pour les amoureux de bachata · 2025</p>
+  </footer>
+</div>
+
+<script>
+  const songs = [
+    {
+      id: "lejania-jensen",
+      title: "Lejanía",
+      artist: "Jensen",
+      year: 2023,
+      tags: ["sensuel", "mélancolie", "distance"],
+      color: "#7c3aed",
+      spotify: "https://open.spotify.com/track/3dsEINNJ3QjrUl3RkWk6rc",
+      lyrics: {
+        es: `Me he quedado solo, solo
+En el silencio escucho tu nombre en repeat
+Imaginando toda las veces que te di
+Baby, vuelve a mí
+
+Me sentí como un bobo, bobo
+Cogiendo vuelos, siempre yendo tras de ti
+Aunque estoy solo tengo un par que están pa′ mí
+Desapareciste y ya no estás aquí
+
+¿Y qué de mí?
+
+Es evidente que te sigo buscando en el pasado
+Será que ya no cruzo por tu mente
+Quizás tu corazón aún no ha sanado
+Tendría que vivir otra vida
+Pa' volver a tenerte a mi lado
+Quizás te perdí para siempre
+Y la corriente ya te ha llevado
+
+Quizás regreses otro día
+Buscando consuelo en mis brazos
+Quizás entre la lejanía, si Dios lo quiere
+Nos encontramos
+
+Periódico de ayer
+Mensaje leído, corazón partido
+Dime qué lo que
+Cómo te olvidaste tan fácil de esa noche allá en Benidorm
+Con el baby doll, tú eras mi baby doll
+Dime qué te pasó
+
+Es evidente que te sigo buscando en el pasado
+Será que ya no cruzo por tu mente
+Quizás tu corazón aún no ha sanado
+Tendría que vivir otra vida
+Pa′ volver a tenerte a mi lado
+Quizás te perdí para siempre
+Y la corriente ya te ha llevado
+
+Quizás regreses otro día
+Buscando consuelo en mis brazos
+Quizás entre la lejanía, si Dios lo quiere
+Nos encontramos
+
+It's Jensen
+SP it's a problem
+Sácala a bailar
+
+Tendría que vivir otra vida
+Pa′ volver a tenerte a mi lado
+Quizás te perdí para siempre
+Y la corriente ya te ha llevado
+Quizás regreses otro día
+Buscando consuelo en mis brazos
+Quizás entre la lejanía, si Dios lo quiere
+Nos encontramos`,
+        fr: `Je me suis retrouvé seul, seul
+Dans le silence, j'entends ton nom en boucle
+Imaginant toutes les fois que je t'ai donné
+Baby, reviens vers moi
+
+Je me suis senti comme un idiot, un idiot
+À prendre des avions, toujours à courir après toi
+Même si je suis seul, j'ai quelques proches qui sont là pour moi
+Tu as disparu et tu n'es plus là
+
+Et moi dans tout ça ?
+
+Il est évident que je continue à te chercher dans le passé
+Est-ce que je ne traverse même plus ton esprit ?
+Peut-être que ton cœur n'a pas encore guéri
+Il faudrait que je vive une autre vie
+Pour pouvoir te retrouver à mes côtés
+Peut-être que je t'ai perdue pour toujours
+Et que le courant t'a déjà emportée
+
+Peut-être reviendras-tu un autre jour
+En cherchant du réconfort dans mes bras
+Peut-être qu'à travers la distance, si Dieu le veut
+On se retrouvera
+
+Journal d'hier
+Message lu, cœur brisé
+Dis-moi ce qui s'est passé
+Comment as-tu pu oublier si facilement cette nuit là-bas à Benidorm
+Avec le baby doll, tu étais mon baby doll
+Dis-moi ce qui t'est arrivé
+
+Il est évident que je continue à te chercher dans le passé
+Est-ce que je ne traverse même plus ton esprit ?
+Peut-être que ton cœur n'a pas encore guéri
+Il faudrait que je vive une autre vie
+Pour pouvoir te retrouver à mes côtés
+Peut-être que je t'ai perdue pour toujours
+Et que le courant t'a déjà emportée
+
+Peut-être reviendras-tu un autre jour
+En cherchant du réconfort dans mes bras
+Peut-être qu'à travers la distance, si Dieu le veut
+On se retrouvera
+
+C'est Jensen
+SP c'est un problème
+Emmène-la danser
+
+Il faudrait que je vive une autre vie
+Pour pouvoir te retrouver à mes côtés
+Peut-être que je t'ai perdue pour toujours
+Et que le courant t'a déjà emportée
+Peut-être reviendras-tu un autre jour
+En cherchant du réconfort dans mes bras
+Peut-être qu'à travers la distance, si Dieu le veut
+On se retrouvera`
+      }
+    },
+    {
+      id: "dame-un-minuto",
+      title: "Dame un Minuto",
+      artist: "Imperatore & Alex",
+      year: 2022,
+      tags: ["amour", "apprentissage", "romantique"],
+      color: "#dc2626",
+      spotify: "https://open.spotify.com/track/3YEJ3gQ4if3MTO9gotBK7z",
+      lyrics: {
+        es: `A ti no te voté
+A ti yo no te miento
+En el amor fallé
+Porque fuí un inexperto
+
+Dame un minuto, dame un minuto
+Dame un minuto y yo te bajaré el sol
+Dame un minuto, dame un minuto
+Dame un minuto enséñame del amor
+
+Que yo no te voté
+A ti yo no te miento
+En el amor fallé
+Porque fuí un inexperto
+
+Y los errores se pagan
+Comprendeme esa asignatura no la he dado
+Enséñame que necesito y yo lo hago
+Lo que me pidas voy al cielo y te lo bajo
+
+Oye Mami
+
+Dame un minuto, dame un minuto
+Dame un minuto y yo te bajaré el sol
+Dame un minuto, dame un minuto
+Dame un minuto enséñame del amor
+
+Dame un minuto y que pasen las horas
+Que pasen las horas besando tu boca
+Dame un minuto y vamo′ hacer historia
+Vamo' hacer historia que sobre la ropa
+
+Cuando uno se enamora
+Mil tonterías perdona perdona
+Cuando uno se enamora
+Mentiras saben a gloria
+
+Que yo no te voté
+A ti yo no te miento
+En el amor fallé
+Porque fuí un inexperto
+
+Dame un minuto, dame un minuto
+Dame un minuto y yo te bajaré el sol
+Dame un minuto, dame un minuto
+Dame un minuto enséñame del amor
+
+Pa ra dise dise
+Imperatore
+Alex
+Los Poderes
+
+Que yo no te voté
+A ti yo no te miento
+En el amor fallé
+Porque fuí un inexperto
+
+Dame un minuto, dame un minuto
+Dame un minuto y yo te bajaré el sol`,
+        fr: `Je ne t'ai pas choisie au hasard
+Je ne te mens pas
+J'ai échoué en amour
+Parce que j'étais inexpérimenté
+
+Donne-moi une minute, donne-moi une minute
+Donne-moi une minute et je te décrocherai le soleil
+Donne-moi une minute, donne-moi une minute
+Donne-moi une minute, apprends-moi l'amour
+
+Parce que je ne t'ai pas choisie au hasard
+Je ne te mens pas
+J'ai échoué en amour
+Parce que j'étais inexpérimenté
+
+Les erreurs se paient
+Comprends-moi, je n'ai pas encore pris ce cours
+Apprends-moi ce dont j'ai besoin et je le ferai
+Tout ce que tu me demandes, j'irai au ciel te le chercher
+
+Écoute-moi chérie
+
+Donne-moi une minute, donne-moi une minute
+Donne-moi une minute et je te décrocherai le soleil
+Donne-moi une minute, donne-moi une minute
+Donne-moi une minute, apprends-moi l'amour
+
+Donne-moi une minute et que les heures passent
+Que les heures passent à embrasser ta bouche
+Donne-moi une minute et on va faire l'histoire
+On va faire l'histoire par-dessus les vêtements
+
+Quand on tombe amoureux
+On pardonne mille bêtises, on pardonne
+Quand on tombe amoureux
+Les mensonges ont un goût de gloire
+
+Parce que je ne t'ai pas choisie au hasard
+Je ne te mens pas
+J'ai échoué en amour
+Parce que j'étais inexpérimenté
+
+Donne-moi une minute, donne-moi une minute
+Donne-moi une minute et je te décrocherai le soleil
+Donne-moi une minute, donne-moi une minute
+Donne-moi une minute, apprends-moi l'amour
+
+Paradis, paradis
+Imperatore
+Alex
+Les Pouvoirs
+
+Parce que je ne t'ai pas choisie au hasard
+Je ne te mens pas
+J'ai échoué en amour
+Parce que j'étais inexpérimenté
+
+Donne-moi une minute, donne-moi une minute
+Donne-moi une minute et je te décrocherai le soleil`
+      }
+    },
+    {
+      id: "mayinbito-capitulo",
+      title: "Cerremos ese Capítulo",
+      artist: "Mayinbito",
+      year: 2023,
+      tags: ["trahison", "regrets", "pardon"],
+      color: "#059669",
+      spotify: "https://open.spotify.com/track/4ztBYIuncBxGARmctAWZXS",
+      lyrics: {
+        es: `Oye, quiero hablar, es tiempo de aclarar
+Sé que falle, mala mía
+Dijiste que ya que ya no ibas a luchar
+Por lo nuestro, por lo nuestro
+
+Yo estuve con ella, no te hablaré mentiras
+Sé que me arrepentiré por toda la vida
+Por favor, no llores, por favor ya no sigas
+Haré lo que sea pa que entiendas
+
+Que lo siento mi amor, un error cometí
+Querer llenar lo que te toca a ti
+Qué estúpido fui en dejar enciegarme así
+Cerremos ese capítulo
+
+Que lo siento mi amor, un error cometí
+Querer llenar lo que te toca a ti
+Qué estúpido fui en dejar enciegarme así
+Cerremos ese capítulo
+
+Yo estuve con ella, no te hablaré mentiras
+Sé que me arrepentiré por toda la vida
+Por favor, no llores, por favor ya no sigas
+Haré lo que sea pa que entiendas
+
+Que lo siento mi amor, un error cometí
+Querer llenar lo que te toca a ti
+Qué estúpido fui en dejar enciegarme así
+Cerremos ese capítulo
+
+Que lo siento mi amor, un error cometí
+Querer llenar lo que te toca a ti
+Qué estúpido fui en dejar enciegarme así
+Cerremos ese capítulo
+
+Mayinbito
+Dueño del movimiento
+Cerremos ese capítulo`,
+        fr: `Écoute, je veux parler, il est temps de clarifier
+Je sais que j'ai failli, c'est ma faute
+Tu as dit que tu n'allais plus te battre
+Pour nous, pour ce qu'on avait
+
+J'étais avec elle, je ne vais pas te mentir
+Je sais que je le regretterai toute ma vie
+S'il te plaît, ne pleure pas, s'il te plaît, arrête
+Je ferai tout ce qu'il faut pour que tu comprennes
+
+Je suis désolé mon amour, j'ai commis une erreur
+Vouloir combler ce qui te revient de droit
+J'ai été tellement stupide de me laisser aveugler ainsi
+Fermons ce chapitre
+
+Je suis désolé mon amour, j'ai commis une erreur
+Vouloir combler ce qui te revient de droit
+J'ai été tellement stupide de me laisser aveugler ainsi
+Fermons ce chapitre
+
+J'étais avec elle, je ne vais pas te mentir
+Je sais que je le regretterai toute ma vie
+S'il te plaît, ne pleure pas, s'il te plaît, arrête
+Je ferai tout ce qu'il faut pour que tu comprennes
+
+Je suis désolé mon amour, j'ai commis une erreur
+Vouloir combler ce qui te revient de droit
+J'ai été tellement stupide de me laisser aveugler ainsi
+Fermons ce chapitre
+
+Je suis désolé mon amour, j'ai commis une erreur
+Vouloir combler ce qui te revient de droit
+J'ai été tellement stupide de me laisser aveugler ainsi
+Fermons ce chapitre
+
+Mayinbito
+Maître du mouvement
+Fermons ce chapitre`,
+      }
+    },
+    {
+    id: "la-carretera-prince-royce",
+    title: "La Carretera",
+    artist: "Prince Royce",
+    year: 2017,
+    tags: ["voyage", "nostalgie", "romantique"],
+    color: "#3b82f6",
+    spotify: "https://open.spotify.com/search/La%20Carretera%20Prince%20Royce",
+    lyrics: {
+      es: `Voy manejando por la noche y pienso en ti
+Y en tantas cosas que no te llegué a decir
+Y la luna desde lejos me acompaña
+Y me trae tantos recuerdos que perdí
+
+Y la radio está tocando tu canción
+La que bailamos tantas veces tú y yo
+Y la lluvia cae tan fuerte en mi ventana
+Y se evapora como gotas de tu amor
+
+Y las luces de los autos brillan como las estrellas en el cielo del dolor
+El camino va pasando y yo voy acelerando como quien busca el amor
+
+Yo te busco como un loco
+Dime
+¿Dónde estarás?
+¿Dónde estarás?
+¿Todavía piensas en mí?
+
+¿Dónde estarás?
+¿Dónde estarás?
+Yo sigo pensando en ti
+Quiero saber si todavía te quedará un poquito de amor por mí
+La carretera se hace larga y yo siento que puedo morir
+
+Voy manejando, creo que va salir el sol
+¡Qué diera yo por estar en tu habitación!
+Tu contestador responde mi llamada
+Dejo grabado un mensaje con mi voz
+
+Y te digo que te extraño
+Que eres tú toda mi vida
+Que me ahogo el alcohol
+Que no acepto que termine
+Esta historia tan bonita
+Esta historia de los dos
+
+Que ese tipo que pretende
+Secuestrarme tus caricias
+No va ser mejor que yo
+No lo dudes
+Mi amor
+
+Dime
+¿Dónde estarás?
+¿Dónde estarás?
+¿Todavía piensas en mí?
+
+¿Dónde estarás?
+¿Dónde estarás?
+Yo sigo pensando en ti
+Quiero saber si todavía te quedará un poquito de amor por mí
+La carretera se hace larga y yo siento que puedo morir`,
+      fr: `Je conduis la nuit et je pense à toi
+Et à tant de choses que je ne suis pas arrivé à te dire
+Et la lune de loin m'accompagne
+Et m'apporte tant de souvenirs que j'ai perdus
+
+Et la radio joue ta chanson
+Celle que nous avons dansée tant de fois toi et moi
+Et la pluie tombe si fort sur ma fenêtre
+Et s'évapore comme des gouttes de ton amour
+
+Et les phares des voitures brillent comme les étoiles dans le ciel de la douleur
+Le chemin défile et j'accélère comme celui qui cherche l'amour
+
+Je te cherche comme un fou
+Dis-moi
+Où seras-tu ?
+Où seras-tu ?
+Penses-tu encore à moi ?
+
+Où seras-tu ?
+Où seras-tu ?
+Je continue à penser à toi
+Je veux savoir s'il te reste encore un peu d'amour pour moi
+La route se fait longue et je sens que je pourrais mourir
+
+Je conduis, je crois que le soleil va se lever
+Qu'est-ce que je donnerais pour être dans ta chambre !
+Ton répondeur prend mon appel
+Je laisse un message avec ma voix
+
+Et je te dis que tu me manques
+Que tu es toute ma vie
+Que je me noie dans l'alcool
+Que je n'accepte pas que se termine
+Cette histoire si belle
+Cette histoire de nous deux
+
+Que ce type qui prétend
+Me kidnapper tes caresses
+Ne sera pas meilleur que moi
+N'en doute pas
+Mon amour
+
+Dis-moi
+Où seras-tu ?
+Où seras-tu ?
+Penses-tu encore à moi ?
+
+Où seras-tu ?
+Où seras-tu ?
+Je continue à penser à toi
+Je veux savoir s'il te reste encore un peu d'amour pour moi
+La route se fait longue et je sens que je pourrais mourir`,
+    },
+  },
+  {
+    id: "luna-de-crucero-jean-alex",
+    title: "Luna de crucero",
+    artist: "Jean & Alex",
+    year: 2025,
+    tags: ["sensuel", "r&b", "recommencer"],
+    color: "#ec4899",
+    spotify: "https://open.spotify.com/search/Luna%20de%20crucero%20Jean%20Alex",
+    lyrics: {
+      es: `Qué casualidad, aquí tú y yo otra vez
+Con la mente te llamé y ahora te encontré
+Sé que la última vez fui yo la quien la cagué
+Pero tu mirada dice qué lo que
+
+Bastó con pegarme para recordarte, desearte
+Qué cabrón sería besarte otra vez
+Y poderte dar como antes
+Ojalá pudiera volver a tocarte
+Pa poderte dar como antes
+
+Quiero repetirte parte por parte
+Las noches en vela mojado en tus besos
+Bailando pegados bajo el aguacero
+Sol de Cartagena, luna de crucero
+Ya que terminamos, empecemos de cero
+Ya que terminamos, empecemos de cero
+Ya que terminamos, empecemos de cero
+
+El malo de la película
+Ese pasado, déjalo atrás
+Es innegable la química
+Sigues siendo mi debilidad
+
+Aunque tu mente diga
+Que no quieres saber más de mí
+Tu cora no me olvida
+Sabes que no es mentira
+
+Bastó con pegarme para recordarte, desearte
+Qué cabrón sería besarte otra vez
+Y poderte dar como antes
+Ojalá pudiera volver a tocarte
+Pa poderte dar como antes
+
+Quiero repetirte parte por parte
+Las noches en vela mojado en tus besos
+Bailando pegados bajo el aguacero
+Sol de Cartagena, luna de crucero
+Ya que terminamos, empecemos de cero`,
+      fr: `Quel hasard, nous voici encore toi et moi
+Je t'ai appelée par la pensée et maintenant je t'ai trouvée
+Je sais que la dernière fois c'est moi qui ai tout gâché
+Mais ton regard en dit long
+
+Il a suffi de m'approcher pour me souvenir de toi, te désirer
+Ce serait dingue de t'embrasser à nouveau
+Et pouvoir me donner à toi comme avant
+Si seulement je pouvais te toucher à nouveau
+Pour pouvoir me donner à toi comme avant
+
+Je veux te répéter partie par partie
+Les nuits blanches trempé de tes baisers
+En dansant collés sous l'averse
+Soleil de Carthagène, lune de croisière
+Puisqu'on a rompu, recommençons de zéro
+Puisqu'on a rompu, recommençons de zéro
+Puisqu'on a rompu, recommençons de zéro
+
+Le méchant de l'histoire
+Ce passé, laisse-le derrière
+Notre alchimie est indéniable
+Tu restes ma faiblesse
+
+Même si ton esprit dit
+Que tu ne veux plus rien savoir de moi
+Ton cœur ne m'oublie pas
+Tu sais que ce n'est pas un mensonge
+
+Il a suffi de m'approcher pour me souvenir de toi, te désirer
+Ce serait dingue de t'embrasser à nouveau
+Et pouvoir me donner à toi comme avant
+Si seulement je pouvais te toucher à nouveau
+Pour pouvoir me donner à toi comme avant
+
+Je veux te répéter partie par partie
+Les nuits blanches trempé de tes baisers
+En dansant collés sous l'averse
+Soleil de Carthagène, lune de croisière
+Puisqu'on a rompu, recommençons de zéro`,
+    },
+  },
+  {
+    id: "me-preguntaron-por-ti-sp-polanco",
+    title: "Me Preguntaron Por Ti",
+    artist: "sP Polanco, BCHTA RISING, Sebas Garreta",
+    year: 2025,
+    tags: ["rupture", "regrets", "nostalgie"],
+    color: "#8b5cf6",
+    spotify: "https://open.spotify.com/search/Me%20Preguntaron%20Por%20Ti%20sP%20Polanco",
+    lyrics: {
+      es: `Siempre fuimos mejor pa comernos que pa' hablarnos
+Pero ya va un tiempo desde que no hablamos
+Preguntaron por ti y me ganó la duda
+Mirando tu foto me pegó de una
+
+Que te ves feliz sin mí
+Qué no daría yo pa poder estar ahí
+Y darte los besos que no te di
+Y cumplir con todo lo que prometí
+
+Pero el tiempo no para y tú tampoco
+Y ahora me duele que tú seas de otro
+Que te da los besos que no te di
+Que está cumpliendo todo lo que prometí
+Veo que el tiempo no para ni tú tampoco
+Y ahora me duele que tú seas de otro
+
+De vez en cuando en mente regreso
+A esa noche en Ibiza que te robé un beso
+Te hice mía sin duda ninguna
+Cuando te entregaste a mí bajo la luna
+
+Sé que ya no estás pa' que mires atrás
+Me ha costado olvidar y no logro aceptar
+Que te ves feliz sin mí
+Qué no daría yo pa poder estar ahí
+Y darte los besos que no te di
+Y cumplir con todo lo que prometí
+
+Pero el tiempo no para y tú tampoco
+Y ahora me duele que tú seas de otro
+Que te da los besos que no te di
+Que está cumpliendo todo lo que prometí
+Veo que el tiempo no para ni tú tampoco
+Y ahora me duele que tú seas de otro`,
+      fr: `Nous avons toujours été meilleurs pour nous dévorer que pour parler
+Mais ça fait un moment qu'on ne se parle plus
+On m'a posé des questions sur toi et le doute m'a envahi
+En regardant ta photo ça m'a frappé d'un coup
+
+Que tu as l'air heureuse sans moi
+Ce que je ne donnerais pas pour pouvoir être là
+Et te donner les baisers que je ne t'ai pas donnés
+Et accomplir tout ce que j'ai promis
+
+Mais le temps ne s'arrête pas et toi non plus
+Et maintenant ça me fait mal que tu sois à un autre
+Qui te donne les baisers que je ne t'ai pas donnés
+Qui accomplit tout ce que j'avais promis
+Je vois que le temps ne s'arrête pas ni toi non plus
+Et maintenant ça me fait mal que tu sois à un autre
+
+De temps en temps mon esprit retourne
+À cette nuit à Ibiza où je t'ai volé un baiser
+Je t'ai faite mienne sans aucun doute
+Quand tu t'es donnée à moi sous la lune
+
+Je sais que tu n'es plus du genre à regarder en arrière
+J'ai eu du mal à oublier et je n'arrive pas à accepter
+Que tu as l'air heureuse sans moi
+Ce que je ne donnerais pas pour pouvoir être là
+Et te donner les baisers que je ne t'ai pas donnés
+Et accomplir tout ce que j'ai promis
+
+Mais le temps ne s'arrête pas et toi non plus
+Et maintenant ça me fait mal que tu sois à un autre
+Qui te donne les baisers que je ne t'ai pas donnés
+Qui accomplit tout ce que j'avais promis
+Je vois que le temps ne s'arrête pas ni toi non plus
+Et maintenant ça me fait mal que tu sois à un autre`,
+    },
+  },
+  {
+    id: "mamacita-mickey-then",
+    title: "Mamacita",
+    artist: "Mickey Then",
+    year: 2025,
+    tags: ["danse", "sensuel", "hot"],
+    color: "#f59e0b",
+    spotify: "https://open.spotify.com/search/Mamacita%20Mickey%20Then",
+    lyrics: {
+      es: `Si la veo bailando
+Me entran unas ganas que no puedo controlar
+Mueve su cintura
+Que al mirarla noto que me lo hace de maldad
+
+Es algo que controla ella de mí
+Con solo una mirada se apodera así de mí
+Créeme, no exagero cuando pienso esto de ti
+Nunca había visto algo así
+
+Es que es tremenda mamacita
+Con unos ojos y una cara bien bonita
+Mueve su cuerpo como que anda solterita
+Y una cintura que a cualquiera debilita (así de buena estás tú)
+
+Una shorty mamacita
+Con unos ojos y una cara tan bonita
+Mueve su cuerpo como que anda solterita
+Y una cintura que a cualquiera debilita
+
+Ese cuerpo debe ser todo un arte de armonía
+Aquí me tiene pensando y maquinando todo el día
+Abusadora de mujer, eres tú mi fantasía
+
+Es algo que controla ella de mí
+Con solo una mirada se apodera así de mí
+Créeme, no exagero cuando pienso esto de ti
+Nunca había visto algo así
+
+Es que es tremenda mamacita
+Con unos ojos y una cara bien bonita
+Mueve su cuerpo como que anda solterita
+Y una cintura que a cualquiera debilita (así de buena estás tú)
+
+Una shorty mamacita
+Con unos ojos y una cara tan bonita
+Mueve su cuerpo como que anda solterita
+Y una cintura que a cualquiera debilita
+
+Es que es tremenda mamacita
+Con unos ojos y una cara bien bonita
+Mueve su cuerpo como que anda solterita
+Y una cintura que a cualquiera debilita (así de buena estás tú)
+
+Una shorty mamacita
+Con unos ojos y una cara tan bonita
+Mueve su cuerpo como que anda solterita
+Y una cintura que a cualquiera debilita`,
+      fr: `Si je la vois danser
+J'ai des envies que je ne peux pas contrôler
+Elle bouge sa taille
+Quand je la regarde, je remarque qu'elle me fait ça par méchanceté
+
+C'est quelque chose qu'elle contrôle chez moi
+D'un seul regard, elle s'empare ainsi de moi
+Crois-moi, je n'exagère pas quand je pense ça de toi
+Je n'avais jamais vu quelque chose comme ça
+
+C'est que c'est une sacrée mamacita
+Avec des yeux et un très joli visage
+Elle bouge son corps comme si elle était célibataire
+Et une taille qui affaiblit n'importe qui (tu es si bonne)
+
+Une shorty mamacita
+Avec des yeux et un visage si joli
+Elle bouge son corps comme si elle était célibataire
+Et une taille qui affaiblit n'importe qui
+
+Ce corps doit être tout un art d'harmonie
+Elle me fait penser et comploter toute la journée
+Abusatrice de femme, tu es ma fantaisie
+
+C'est quelque chose qu'elle contrôle chez moi
+D'un seul regard, elle s'empare ainsi de moi
+Crois-moi, je n'exagère pas quand je pense ça de toi
+Je n'avais jamais vu quelque chose comme ça
+
+C'est que c'est une sacrée mamacita
+Avec des yeux et un très joli visage
+Elle bouge son corps comme si elle était célibataire
+Et une taille qui affaiblit n'importe qui (tu es si bonne)
+
+Une shorty mamacita
+Avec des yeux et un visage si joli
+Elle bouge son corps comme si elle était célibataire
+Et une taille qui affaiblit n'importe qui
+
+C'est que c'est une sacrée mamacita
+Avec des yeux et un très joli visage
+Elle bouge son corps comme si elle était célibataire
+Et une taille qui affaiblit n'importe qui (tu es si bonne)
+
+Une shorty mamacita
+Avec des yeux et un visage si joli
+Elle bouge son corps comme si elle était célibataire
+Et une taille qui affaiblit n'importe qui`,
+    },
+  },
+];
+
+  const passesData = [
+    {
+      id: "dominicaine-footwork",
+      title: "Dominicaine Footwork sur Cerremos Ese Capitulo",
+      style: "Bachata Jack and Jill",
+      videoUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1772967528/ScreenRecording_03-08-2026_11-07-10_1_t35djp.mov",
+      tags: ["footwork", "dominicaine", "musicalité"],
+      color: "#eab308"
+    },
+    {
+      id: "melvin-gatica-penche",
+      title: "Penché Arrière Follow Main Sur Le Coup Leader",
+      style: "Influence Bachata",
+      videoUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1772967525/ScreenRecording_03-08-2026_11-09-01_1_de8pha.mov",
+      tags: ["sensuel", "cambré", "melvin & gatica"],
+      color: "#ec4899"
+    },
+    {
+      id: "zouk-brezilien-passage",
+      title: "Passage Sous Le Bras De LA Follow",
+      style: "Zouk Brésilien",
+      videoUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1772967514/ScreenRecording_03-08-2026_11-06-32_1_xfaswg.mov",
+      tags: ["zouk", "fluide", "tour"],
+      color: "#3b82f6"
+    },
+    {
+      id: "footwork-solo",
+      title: "Footwork Solo",
+      style: "Bachata Solo",
+      videoUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1773082596/9C07D8C9-9205-48FD-B2F7-89A3E1AA59F2_yepqss.mp4",
+      tags: ["footwork", "solo", "technique"],
+      color: "#10b981"
+    }
+  ];
+
+  let currentView = 'songs'; // 'songs' | 'passes' | 'lyrics'
+  let activeTag = null;
+  let activePasseTag = null;
+  let currentSearch = '';
+  
+  let favoriteSongs = JSON.parse(localStorage.getItem('favSongs') || '[]');
+  let favoritePasses = JSON.parse(localStorage.getItem('favPasses') || '[]');
+  let showFavoritesSongs = false;
+  let showFavoritesPasses = false;
+
+  function toggleFavoriteSong(id, e) {
+    e.stopPropagation();
+    if (favoriteSongs.includes(id)) { favoriteSongs = favoriteSongs.filter(fid => fid !== id); }
+    else { favoriteSongs.push(id); }
+    localStorage.setItem('favSongs', JSON.stringify(favoriteSongs));
+    renderCards();
+    if (currentView === 'lyrics') {
+       const btn = document.getElementById('lv-favorite-btn');
+       btn.textContent = favoriteSongs.includes(id) ? '♥' : '♡';
+       btn.classList.toggle('active', favoriteSongs.includes(id));
+    }
+  }
+
+  function toggleFavoritePasse(id, e) {
+    e.stopPropagation();
+    if (favoritePasses.includes(id)) { favoritePasses = favoritePasses.filter(fid => fid !== id); }
+    else { favoritePasses.push(id); }
+    localStorage.setItem('favPasses', JSON.stringify(favoritePasses));
+    renderPasses();
+  }
+
+  function toggleFavoriteCurrentSong(e) {
+    const currentSongTitle = document.getElementById('lv-title').textContent;
+    const song = songs.find(s => s.title === currentSongTitle);
+    if(song) toggleFavoriteSong(song.id, e);
+  }
+
+  function toggleFavoritesFilter(btn, type) {
+    if (type === 'songs') {
+      showFavoritesSongs = !showFavoritesSongs;
+      btn.classList.toggle('active', showFavoritesSongs);
+      if(showFavoritesSongs) {
+        activeTag = null;
+        document.querySelectorAll('#tags-filter .tag-btn:not(#fav-btn-songs)').forEach(b => b.classList.remove('active'));
+      }
+      renderCards();
+    } else {
+      showFavoritesPasses = !showFavoritesPasses;
+      btn.classList.toggle('active', showFavoritesPasses);
+      if(showFavoritesPasses) {
+        activePasseTag = null;
+        document.querySelectorAll('#passes-tags-filter .tag-btn:not(#fav-btn-passes)').forEach(b => b.classList.remove('active'));
+      }
+      renderPasses();
+    }
+  }
+
+  /* ── Build tags ── */
+  function buildTags() {
+    // Songs tags
+    const allTags = [...new Set(songs.flatMap(s => s.tags))];
+    const filter = document.getElementById('tags-filter');
+    allTags.forEach(tag => {
+      const btn = document.createElement('button');
+      btn.className = 'tag-btn';
+      btn.textContent = tag;
+      btn.onclick = () => filterByTag(tag, btn);
+      filter.appendChild(btn);
+    });
+
+    // Passes tags
+    const allPasseTags = [...new Set(passesData.flatMap(p => p.tags))];
+    const pFilter = document.getElementById('passes-tags-filter');
+    allPasseTags.forEach(tag => {
+      const btn = document.createElement('button');
+      btn.className = 'tag-btn';
+      btn.textContent = tag;
+      btn.onclick = () => filterPassesByTag(tag, btn);
+      pFilter.appendChild(btn);
+    });
+  }
+
+  /* ── Render cards ── */
+  function renderCards() {
+    const grid = document.getElementById('song-grid');
+    const noResults = document.getElementById('no-results');
+    const countEl = document.getElementById('item-count');
+    const label = document.getElementById('section-label');
+
+    // Remove existing cards (not the no-results div)
+    grid.querySelectorAll('.song-card').forEach(c => c.remove());
+
+    const q = currentSearch.toLowerCase();
+    const filtered = songs.filter(song => {
+      const matchSearch = !q || song.title.toLowerCase().includes(q) || song.artist.toLowerCase().includes(q) || song.tags.some(t => t.includes(q));
+      const matchTag = !activeTag || song.tags.includes(activeTag);
+      const matchFav = !showFavoritesSongs || favoriteSongs.includes(song.id);
+      return matchSearch && matchTag && matchFav;
+    });
+
+    countEl.textContent = `${filtered.length} son${filtered.length !== 1 ? 's' : ''}`;
+    let labelText = activeTag ? `Filtre : ${activeTag}` : 'Tous les sons';
+    if (showFavoritesSongs) labelText = 'Mes Favoris';
+    label.textContent = labelText;
+
+    if (filtered.length === 0) {
+      noResults.style.display = 'block';
+      return;
+    }
+    noResults.style.display = 'none';
+
+    filtered.forEach(song => {
+      const card = document.createElement('article');
+      card.className = 'song-card';
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.innerHTML = `
+        <div class="card-cover">
+          <button class="card-fav-btn ${favoriteSongs.includes(song.id) ? 'active' : ''}" onclick="toggleFavoriteSong('${song.id}', event)">
+            ${favoriteSongs.includes(song.id) ? '♥' : '♡'}
+          </button>
+          <div class="card-cover-bg" style="background:linear-gradient(135deg,${song.color}cc,${song.color}44)"></div>
+          <div class="card-cover-pattern"></div>
+          <span class="card-cover-title">${song.title}</span>
+        </div>
+        <div class="card-body">
+          <div class="card-artist-row">
+            <span class="card-artist">${song.artist}</span>
+            <span class="card-year">${song.year}</span>
+          </div>
+          <div class="card-title">${song.title}</div>
+          <div class="card-tags">${song.tags.map(t => `<span class="card-tag">#${t}</span>`).join('')}</div>
+          <div class="card-footer">
+            <div class="card-cta"><span>Voir les paroles</span><span>→</span></div>
+            ${song.spotify ? `<a class="card-spotify" href="${song.spotify}" target="_blank" rel="noopener noreferrer" title="Écouter sur Spotify" onclick="event.stopPropagation()"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a>` : ''}
+          </div>
+        </div>
+      `;
+      card.onclick = () => showLyrics(song);
+      card.onkeydown = e => e.key === 'Enter' && showLyrics(song);
+      grid.insertBefore(card, noResults);
+    });
+  }
+
+  /* ── Filter by tag ── */
+  function filterByTag(tag, btn) {
+    if (tag !== null) { showFavoritesSongs = false; document.getElementById('fav-btn-songs').classList.remove('active'); }
+    activeTag = activeTag === tag ? null : tag;
+    document.querySelectorAll('#tags-filter .tag-btn:not(#fav-btn-songs)').forEach(b => b.classList.remove('active'));
+    if (!activeTag && !showFavoritesSongs) {
+      document.querySelector('#tags-filter .tag-btn:nth-child(2)').classList.add('active'); // Tout voir
+    } else if (btn) {
+      btn.classList.add('active');
+    }
+    renderCards();
+  }
+
+  /* ── Filter passes by tag ── */
+  function filterPassesByTag(tag, btn) {
+    if (tag !== null) { showFavoritesPasses = false; document.getElementById('fav-btn-passes').classList.remove('active'); }
+    activePasseTag = activePasseTag === tag ? null : tag;
+    document.querySelectorAll('#passes-tags-filter .tag-btn:not(#fav-btn-passes)').forEach(b => b.classList.remove('active'));
+    if (!activePasseTag && !showFavoritesPasses) {
+      document.querySelector('#passes-tags-filter .tag-btn:nth-child(2)').classList.add('active'); // Tout voir
+    } else if (btn) {
+      btn.classList.add('active');
+    }
+    renderPasses();
+  }
+
+  /* ── Search router ── */
+  function handleSearch() {
+    currentSearch = document.getElementById('search-input').value;
+    if (currentView === 'songs') renderCards();
+    if (currentView === 'passes') renderPasses();
+  }
+
+  /* ── Switch to PASSES view ── */
+  function showPasses() {
+    currentView = 'passes';
+    document.getElementById('home-view').style.display = 'none';
+    document.getElementById('lyrics-view').style.display = 'none';
+    document.getElementById('passes-view').style.display = 'block';
+    
+    document.getElementById('nav-sons').style.color = 'var(--text-muted)';
+    document.getElementById('nav-passes').style.color = 'var(--accent)';
+    
+    document.getElementById('search-wrapper').style.display = '';
+    document.getElementById('search-input').placeholder = "Rechercher une passe...";
+    document.getElementById('item-count').style.display = '';
+    
+    // Stop all videos when switching views
+    document.querySelectorAll('video').forEach(v => v.pause());
+    
+    // Clear search if we just came from another page
+    renderPasses();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* ── Render Passes Cards ── */
+  function renderPasses() {
+    const grid = document.getElementById('passes-grid');
+    const noResults = document.getElementById('passes-no-results');
+    const countEl = document.getElementById('item-count');
+    const label = document.getElementById('passes-section-label');
+
+    grid.querySelectorAll('.passe-card').forEach(c => c.remove());
+
+    const q = currentSearch.toLowerCase();
+    const filtered = passesData.filter(p => {
+      const matchSearch = !q || p.title.toLowerCase().includes(q) || p.style.toLowerCase().includes(q) || p.tags.some(t => t.includes(q));
+      const matchTag = !activePasseTag || p.tags.includes(activePasseTag);
+      const matchFav = !showFavoritesPasses || favoritePasses.includes(p.id);
+      return matchSearch && matchTag && matchFav;
+    });
+
+    countEl.textContent = `${filtered.length} passe${filtered.length !== 1 ? 's' : ''}`;
+    let labelText = activePasseTag ? `Filtre : ${activePasseTag}` : 'Toutes les passes';
+    if (showFavoritesPasses) labelText = 'Mes Favoris';
+    label.textContent = labelText;
+
+    if (filtered.length === 0) {
+      noResults.style.display = 'block';
+      return;
+    }
+    noResults.style.display = 'none';
+
+    filtered.forEach(passe => {
+      const card = document.createElement('article');
+      card.className = 'song-card passe-card';
+      card.innerHTML = `
+        <div class="passe-video-container">
+          <button class="card-fav-btn ${favoritePasses.includes(passe.id) ? 'active' : ''}" onclick="toggleFavoritePasse('${passe.id}', event)">
+            ${favoritePasses.includes(passe.id) ? '♥' : '♡'}
+          </button>
+          <video src="${passe.videoUrl}" controls preload="metadata" class="passe-video"></video>
+          <div class="passe-style-badge" style="background:${passe.color}">${passe.style}</div>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title" style="font-size:1.2rem;margin-bottom:8px">${passe.title}</h2>
+          <div class="card-tags" style="margin-top:auto">
+            ${passe.tags.map(t => `<span class="card-tag">#${t}</span>`).join('')}
+          </div>
+        </div>
+      `;
+      grid.insertBefore(card, noResults);
+    });
+  }
+
+  /* ── Show lyrics view ── */
+  function showLyrics(song) {
+    currentView = 'lyrics';
+    document.getElementById('home-view').style.display = 'none';
+    document.getElementById('passes-view').style.display = 'none';
+    document.getElementById('search-wrapper').style.display = 'none';
+    document.getElementById('item-count').style.display = 'none';
+    
+    document.getElementById('nav-sons').style.color = 'var(--accent)';
+    document.getElementById('nav-passes').style.color = 'var(--text-muted)';
+    
+    const lv = document.getElementById('lyrics-view');
+    lv.style.display = 'block';
+
+    document.getElementById('lv-color-bar').style.background = song.color;
+    document.getElementById('lv-title').textContent = song.title;
+    document.getElementById('lv-dot').style.background = song.color;
+    document.getElementById('lv-artist').textContent = song.artist;
+    document.getElementById('lv-year').textContent = `· ${song.year}`;
+    document.getElementById('lv-tags').innerHTML = song.tags.map(t => `<span class="lyrics-tag">#${t}</span>`).join('');
+    
+    const isFav = favoriteSongs.includes(song.id);
+    const favBtn = document.getElementById('lv-favorite-btn');
+    favBtn.querySelector('.fav-icon').textContent = isFav ? '♥' : '♡';
+    document.getElementById('lv-fav-label').textContent = isFav ? 'Sauvegardé' : 'Ajouter';
+    favBtn.classList.toggle('active', isFav);
+
+    const spotifyBtn = document.getElementById('lv-spotify');
+    if (song.spotify) { spotifyBtn.href = song.spotify; spotifyBtn.style.display = 'inline-flex'; }
+    else { spotifyBtn.style.display = 'none'; }
+    document.getElementById('lv-es').textContent = song.lyrics.es;
+    document.getElementById('lv-fr').textContent = song.lyrics.fr;
+
+    // Build interleaved view
+    const esLines = song.lyrics.es.split('\n');
+    const frLines = song.lyrics.fr.split('\n');
+    const interleaved = document.getElementById('lv-interleaved');
+    interleaved.innerHTML = esLines.map((esLine, i) => {
+      const frLine = frLines[i] || '';
+      if (!esLine.trim() && !frLine.trim()) return `<div style="height:16px"></div>`;
+      return `<div class="lyric-pair">
+        ${esLine ? `<div class="lyric-es">${esLine}</div>` : ''}
+        ${frLine ? `<div class="lyric-fr">${frLine}</div>` : ''}
+      </div>`;
+    }).join('');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* ── Show home ── */
+  function showHome() {
+    currentView = 'songs';
+    document.getElementById('lyrics-view').style.display = 'none';
+    document.getElementById('passes-view').style.display = 'none';
+    document.getElementById('home-view').style.display = 'block';
+    
+    document.getElementById('nav-sons').style.color = 'var(--accent)';
+    document.getElementById('nav-passes').style.color = 'var(--text-muted)';
+    
+    document.getElementById('search-wrapper').style.display = '';
+    document.getElementById('search-input').placeholder = "Rechercher un titre, artiste...";
+    document.getElementById('item-count').style.display = '';
+    
+    // Stop all videos
+    document.querySelectorAll('video').forEach(v => v.pause());
+    
+    renderCards();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* ── INIT ── */
+  buildTags();
+  renderCards();
+  renderPasses();
+</script>
+</body>
+</html>
