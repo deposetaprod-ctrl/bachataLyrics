@@ -44,7 +44,7 @@ export default function Passes() {
       <Head>
         <title>Bachata GANG — Passes & Mouvements</title>
         <style dangerouslySetInnerHTML={{ __html: `
-          .passe-video-container { position: relative; width: 100%; aspect-ratio: 9/16; background: #000; overflow: hidden; border-bottom: 1px solid var(--border); }
+          .passe-video-container { position: relative; width: 100%; aspect-ratio: 4/5; background: #000; overflow: hidden; border-bottom: 1px solid var(--border); }
           .passe-video { width: 100%; height: 100%; object-fit: contain; display: block; }
           .passe-style-badge { position: absolute; top: 12px; right: 12px; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 10; }
           .passe-card:hover { transform: translateY(-4px); border-color: var(--border-hover); box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--border-hover); }
@@ -156,6 +156,10 @@ export default function Passes() {
 }
 
 function PasseCard({ passe, isFavorite, onToggleFav }) {
+  const posterUrl = passe.videoUrl && passe.videoUrl.includes('cloudinary.com') 
+    ? passe.videoUrl.replace(/\.(mp4|mov)$/i, '.jpg')
+    : '';
+
   return (
     <article className="song-card passe-card">
       <div className="passe-video-container">
@@ -171,7 +175,7 @@ function PasseCard({ passe, isFavorite, onToggleFav }) {
           controls 
           preload="metadata"
           className="passe-video"
-          poster=""
+          poster={posterUrl}
         />
         <div className="passe-style-badge" style={{ background: passe.color }}>
           {passe.style}
