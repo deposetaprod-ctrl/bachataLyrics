@@ -32,7 +32,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact — Bachata GANG</title>
+        <title>Contact — Bachata Lyrics</title>
         <meta name="description" content="Envoie-nous un message !" />
       </Head>
 
@@ -41,7 +41,7 @@ export default function Contact() {
         <div className="navbar-inner">
           <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
             <div className="logo-icon">🎶</div>
-            <span className="logo-text">Bachata GANG</span>
+            <span className="logo-text">Bachata Lyrics</span>
           </div>
           <div className="nav-links" style={{ display: 'flex', gap: '24px', fontWeight: 600, flex: 1, paddingLeft: '40px' }}>
             <span style={{ cursor: 'pointer', color: 'var(--text-muted)' }} onClick={() => router.push('/')}>Sons</span>

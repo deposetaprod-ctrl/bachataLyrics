@@ -37,7 +37,7 @@ export default function SongPage({ song }) {
   return (
     <>
       <Head>
-        <title>{song.title} — {song.artist} | Bachata GANG</title>
+        <title>{song.title} — {song.artist} | Bachata Lyrics</title>
         <meta
           name="description"
           content={`Paroles de ${song.title} par ${song.artist} en espagnol avec traduction française.`}
@@ -49,7 +49,7 @@ export default function SongPage({ song }) {
         <div className="navbar-inner">
           <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
             <div className="logo-icon">🎶</div>
-            <span className="logo-text">Bachata GANG</span>
+            <span className="logo-text">Bachata Lyrics</span>
           </div>
           
           <div className="nav-links" style={{ display: 'flex', gap: '24px', fontWeight: 600, flex: 1, paddingLeft: '40px' }}>

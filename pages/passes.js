@@ -42,7 +42,7 @@ export default function Passes() {
   return (
     <>
       <Head>
-        <title>Bachata GANG — Passes & Mouvements</title>
+        <title>Bachata Lyrics — Passes & Mouvements</title>
         <style dangerouslySetInnerHTML={{ __html: `
           .passe-video-container { position: relative; width: 100%; aspect-ratio: 4/5; background: #000; overflow: hidden; border-bottom: 1px solid var(--border); }
           .passe-video { width: 100%; height: 100%; object-fit: contain; display: block; }
@@ -56,7 +56,7 @@ export default function Passes() {
         <div className="navbar-inner">
           <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
             <div className="logo-icon">🎶</div>
-            <span className="logo-text">Bachata GANG</span>
+            <span className="logo-text">Bachata Lyrics</span>
           </div>
           
           <div className="nav-links" style={{ display: 'flex', gap: '24px', fontWeight: 600 }}>

@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bachata GANG — Les plus belles paroles en français</title>
+        <title>Bachata Lyrics — Les plus belles paroles en français</title>
       </Head>
 
       {/* ─── NAVBAR ─── */}
@@ -51,7 +51,7 @@ export default function Home() {
         <div className="navbar-inner">
           <div className="logo">
             <div className="logo-icon">🎶</div>
-            <span className="logo-text">Bachata GANG</span>
+            <span className="logo-text">Bachata Lyrics</span>
           </div>
 
           <div className="nav-links" style={{ display: 'flex', gap: '24px', fontWeight: 600 }}>

@@ -17,12 +17,12 @@ export default async function handler(req, res) {
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'Bachata GANG <onboarding@resend.dev>',
+        from: 'Bachata Lyrics <onboarding@resend.dev>',
         to: ['maximiliengodefroid@gmail.com'],
-        subject: `💌 Message de ${name} — Bachata GANG`,
+        subject: `💌 Message de ${name} — Bachata Lyrics`,
         html: `
           <div style="font-family:sans-serif;max-width:600px;margin:auto;padding:32px;background:#0f0f13;color:#e2e8f0;border-radius:12px">
-            <h2 style="color:#c026d3;margin-top:0">Nouveau message via Bachata GANG</h2>
+            <h2 style="color:#c026d3;margin-top:0">Nouveau message via Bachata Lyrics</h2>
             <p><strong>Nom :</strong> ${name}</p>
             <p><strong>Email :</strong> ${email}</p>
             <hr style="border-color:#2d2d3a;margin:20px 0"/>
