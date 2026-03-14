@@ -10,6 +10,9 @@ export default function Home() {
   const [activeTag, setActiveTag] = useState(null);
   const [favoriteSongs, setFavoriteSongs] = useState([]);
   const [showFavorites, setShowFavorites] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [suggestionForm, setSuggestionForm] = useState({ title: '', artist: '' });
+  const [status, setStatus] = useState('idle'); // idle | loading | success | error
 
   useEffect(() => {
     const saved = localStorage.getItem('favSongs');
@@ -40,6 +43,34 @@ export default function Home() {
     return matchSearch && matchTag && matchFav;
   });
 
+  const handleSuggestionSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: 'Suggestion de Son',
+          email: 'onboarding@resend.dev',
+          message: `Nouvelle suggestion de chanson :\n- Titre : ${suggestionForm.title}\n- Artiste : ${suggestionForm.artist}`
+        }),
+      });
+      if (res.ok) {
+        setStatus('success');
+        setTimeout(() => {
+          setIsModalOpen(false);
+          setStatus('idle');
+          setSuggestionForm({ title: '', artist: '' });
+        }, 2000);
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  };
+
   return (
     <>
       <Head>
@@ -57,6 +88,23 @@ export default function Home() {
           <div className="nav-links" style={{ display: 'flex', gap: '24px', fontWeight: 600 }}>
             <span style={{ cursor: 'pointer', color: 'var(--accent)' }}>Sons</span>
             <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/passes')}>Passes</span>
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              style={{ 
+                background: 'linear-gradient(135deg, #c026d3, #7c3aed)',
+                color: 'white',
+                border: 'none',
+                padding: '6px 14px',
+                borderRadius: '999px',
+                fontSize: '0.85rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+                transition: 'transform 0.2s'
+              }}
+              className="hover-scale"
+            >
+              ➕ Ajouter un son
+            </button>
           </div>
 
           <div className="search-bar">
@@ -151,9 +199,125 @@ export default function Home() {
       <footer className="footer">
         <p>Fait avec <span>♥</span> pour les amoureux de bachata · {new Date().getFullYear()}</p>
       </footer>
+
+      {/* ─── SUGGESTION MODAL ─── */}
+      {isModalOpen && (
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          background: 'rgba(0,0,0,0.8)',
+          backdropFilter: 'blur(8px)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000,
+          padding: '24px'
+        }} onClick={() => setIsModalOpen(false)}>
+          <div 
+            style={{
+              background: 'var(--bg-card)',
+              border: '1px solid var(--border)',
+              borderRadius: '24px',
+              padding: '32px',
+              width: '100%',
+              maxWidth: '440px',
+              position: 'relative',
+              boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)'
+            }}
+            onClick={e => e.stopPropagation()}
+          >
+            <button 
+              onClick={() => setIsModalOpen(false)}
+              style={{ position: 'absolute', top: '20px', right: '20px', color: 'var(--text-muted)', fontSize: '1.5rem' }}
+            >
+              ×
+            </button>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '8px' }}>Proposer une chanson</h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '24px' }}>
+              Tu as une chanson en tête ? Dis-nous tout !
+            </p>
+
+            <form onSubmit={handleSuggestionSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '6px', color: 'var(--text-secondary)' }}>
+                  Titre de la chanson
+                </label>
+                <input
+                  required
+                  type="text"
+                  value={suggestionForm.title}
+                  onChange={e => setSuggestionForm({...suggestionForm, title: e.target.value})}
+                  placeholder="Ex: Lejanía"
+                  style={inputStyle}
+                />
+              </div>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '6px', color: 'var(--text-secondary)' }}>
+                  Artiste
+                </label>
+                <input
+                  required
+                  type="text"
+                  value={suggestionForm.artist}
+                  onChange={e => setSuggestionForm({...suggestionForm, artist: e.target.value})}
+                  placeholder="Ex: Jensen"
+                  style={inputStyle}
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                style={{
+                  marginTop: '12px',
+                  padding: '14px',
+                  borderRadius: '12px',
+                  background: 'linear-gradient(135deg, #c026d3, #7c3aed)',
+                  color: 'white',
+                  fontWeight: 700,
+                  border: 'none',
+                  cursor: status === 'loading' ? 'not-allowed' : 'pointer',
+                  opacity: status === 'loading' ? 0.7 : 1,
+                  transition: 'all 0.2s'
+                }}
+              >
+                {status === 'loading' ? 'Envoi...' : 'Envoyer la suggestion'}
+              </button>
+
+              {status === 'success' && (
+                <p style={{ textAlign: 'center', color: '#34d399', fontWeight: 600, marginTop: '8px' }}>
+                  ✅ Merci ! Suggestion envoyée.
+                </p>
+              )}
+              {status === 'error' && (
+                <p style={{ textAlign: 'center', color: '#f87171', fontWeight: 600, marginTop: '8px' }}>
+                  ❌ Erreur. Réessaie plus tard.
+                </p>
+              )}
+            </form>
+          </div>
+        </div>
+      )}
+
+      <style jsx global>{`
+        .hover-scale:hover { transform: scale(1.05); }
+        .hover-scale:active { transform: scale(0.95); }
+      `}</style>
     </>
   );
 }
+
+const inputStyle = {
+  width: '100%',
+  padding: '12px 16px',
+  background: '#0a0a0f',
+  border: '1px solid var(--border)',
+  borderRadius: '12px',
+  color: 'white',
+  fontSize: '0.95rem',
+  outline: 'none',
+  transition: 'border-color 0.2s',
+};
 
 function SongCard({ song, onClick, isFavorite, onToggleFav }) {
   return (
