@@ -17,8 +17,8 @@ export default async function handler(req, res) {
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'Bachata Lyrics <onboarding@resend.dev>',
-        to: ['maximiliengodefroid@gmail.com'],
+        from: 'Bachata Lyrics <contact@bachatalyrics.com>',
+        to: ['Maximilien.godeau.off@gmail.com'],
         subject: `💌 Message de ${name} — Bachata Lyrics`,
         html: `
           <div style="font-family:sans-serif;max-width:600px;margin:auto;padding:32px;background:#0f0f13;color:#e2e8f0;border-radius:12px">
