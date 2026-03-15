@@ -198,9 +198,23 @@ export default function JackAndJill() {
           )}
 
           <div className="controls">
-            {status === 'idle' && (
-              <button className="btn-primary" onClick={startSession} disabled={songs.length === 0}>
-                {songs.length === 0 ? 'Chargement...' : 'Démarrer la Session'}
+            {(status === 'loading' || (status === 'idle' && songs.length === 0)) && (
+              <div className="loading-state">
+                <div className="spinner"></div>
+                <p>Récupération des morceaux de bachata...</p>
+              </div>
+            )}
+            
+            {status === 'error' && (
+              <div className="error-state">
+                <p>Oups ! Impossible de charger la musique.</p>
+                <button className="btn-secondary" onClick={fetchBachataSongs}>Réessayer</button>
+              </div>
+            )}
+
+            {status === 'idle' && songs.length > 0 && (
+              <button className="btn-primary" onClick={startSession}>
+                Démarrer la Session
               </button>
             )}
             {status === 'playing' && (
@@ -253,7 +267,7 @@ export default function JackAndJill() {
           -webkit-text-fill-color: transparent;
         }
         .badge {
-          background: rgba(24acc15, 0.2);
+          background: rgba(250, 204, 21, 0.1);
           color: #facc15;
           padding: 6px 16px;
           border-radius: 999px;
@@ -261,6 +275,7 @@ export default function JackAndJill() {
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.05em;
+          border: 1px solid rgba(250, 204, 21, 0.2);
         }
         .timer-section {
           margin: 40px 0;
@@ -368,6 +383,23 @@ export default function JackAndJill() {
           to { opacity: 1; transform: translateY(0); }
         }
         .animate-fade-in { animation: fadeIn 0.4s ease-out; }
+        
+        .loading-state, .error-state {
+          padding: 20px;
+          color: var(--text-muted);
+        }
+        .spinner {
+          width: 40px;
+          height: 40px;
+          border: 4px solid rgba(255,255,255,0.1);
+          border-top-color: var(--accent);
+          border-radius: 50%;
+          margin: 0 auto 16px;
+          animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
       `}</style>
     </>
   );

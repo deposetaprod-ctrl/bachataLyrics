@@ -22,5 +22,13 @@ export const passes = [
     videoUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1773351985/C3F6CD5C-4CDF-43F0-A85E-21D83341E89A_2_hzzkg5.mp4",
     tags: ["nouveau", "bachata"],
     color: "#f97316"
+  },
+  {
+    id: "melvin-gatica-slow-dip",
+    title: "Penché Arrière Lent (Melvin & Gatica)",
+    style: "Bachata Sensual",
+    videoUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1773597916/1494E3FE-5BC9-4EE0-8475-D462C60425DB_yhsxl6.mov",
+    tags: ["melvin-gatica", "dip", "sensual", "variation-energie"],
+    color: "#e11d48"
   }
 ];
