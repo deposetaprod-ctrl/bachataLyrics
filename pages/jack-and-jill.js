@@ -6,7 +6,8 @@ export default function JackAndJill() {
   const router = useRouter();
   
   // -- State --
-  const [status, setStatus] = useState('idle'); // idle | loading | playing | paused | finished
+  const [status, setStatus] = useState('category_select'); // category_select | loading | playing | paused | finished
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [songs, setSongs] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sessionTime, setSessionTime] = useState(1800); // 30 minutes in seconds
@@ -17,27 +18,40 @@ export default function JackAndJill() {
   const timerRef = useRef(null);
   const currentSongTimerRef = useRef(null);
 
-  // -- iTunes API Fetch --
-  const fetchBachataSongs = async () => {
+  const categories = {
+    sensual: { name: 'Sensuel', ratios: { sensual: 36, fusion: 12, dominican: 12 } },
+    fusion: { name: 'Influence', ratios: { fusion: 36, sensual: 12, dominican: 12 } },
+    dominican: { name: 'Dominicain', ratios: { dominican: 36, sensual: 12, fusion: 12 } }
+  };
+
+  // -- iTunes API Fetch with Ratios --
+  const preparePlaylist = async (categoryKey) => {
     setStatus('loading');
+    setSelectedCategory(categoryKey);
+    const category = categories[categoryKey];
+    
     try {
-      // Fetching songs via our internal API proxy to avoid CORS/Network issues
-      const res = await fetch('/api/training-songs');
-      const data = await res.json();
-      const filtered = data.results.filter(song => song.previewUrl);
-      // Shuffle songs
-      const shuffled = filtered.sort(() => Math.random() - 0.5);
-      setSongs(shuffled);
+      const allFetchedSongs = [];
+      
+      // Fetch each type based on ratios
+      for (const [type, count] of Object.entries(category.ratios)) {
+        const res = await fetch(`/api/training-songs?type=${type}`);
+        const data = await res.json();
+        const filtered = data.results.filter(s => s.previewUrl);
+        // Take N random songs from this type
+        const sampled = filtered.sort(() => Math.random() - 0.5).slice(0, count);
+        allFetchedSongs.push(...sampled.map(s => ({ ...s, danceStyle: type })));
+      }
+
+      // Final shuffle of the mixed playlist
+      const shuffledPlaylist = allFetchedSongs.sort(() => Math.random() - 0.5);
+      setSongs(shuffledPlaylist);
       setStatus('idle');
     } catch (error) {
       console.error('Error fetching songs:', error);
       setStatus('error');
     }
   };
-
-  useEffect(() => {
-    fetchBachataSongs();
-  }, []);
 
   // -- Session Controls --
   const startSession = () => {
@@ -61,12 +75,12 @@ export default function JackAndJill() {
 
   const resetSession = () => {
     pauseSession();
-    setStatus('idle');
+    setStatus('category_select');
     setTotalEllapsed(0);
     setSongTime(30);
     setCurrentIndex(0);
-    // Re-shuffle for next time
-    setSongs([...songs].sort(() => Math.random() - 0.5));
+    setSongs([]);
+    setSelectedCategory(null);
   };
 
   const playSong = (index) => {
@@ -193,29 +207,70 @@ export default function JackAndJill() {
               <div>
                 <h3>{currentSong.trackName}</h3>
                 <p>{currentSong.artistName}</p>
+                <div style={{ marginTop: '8px' }}>
+                  <span className="badge-style" style={{ 
+                    background: currentSong.danceStyle === 'sensual' ? 'rgba(236, 72, 153, 0.2)' : 
+                                currentSong.danceStyle === 'fusion' ? 'rgba(124, 58, 237, 0.2)' : 
+                                'rgba(250, 204, 21, 0.2)',
+                    color: currentSong.danceStyle === 'sensual' ? '#ec4899' : 
+                           currentSong.danceStyle === 'fusion' ? '#a78bfa' : 
+                           '#facc15',
+                    fontSize: '0.7rem',
+                    padding: '4px 10px',
+                    borderRadius: '8px',
+                    textTransform: 'uppercase',
+                    fontWeight: 700
+                  }}>
+                    {currentSong.danceStyle === 'sensual' ? 'Sensuel' : 
+                     currentSong.danceStyle === 'fusion' ? 'Influence' : 
+                     'Dominicain'}
+                  </span>
+                </div>
               </div>
             </div>
           )}
 
           <div className="controls">
-            {(status === 'loading' || (status === 'idle' && songs.length === 0)) && (
+            {status === 'category_select' && (
+              <div className="category-select animate-fade-in">
+                <h2>Choisis ton style d'entraînement</h2>
+                <div className="category-grid">
+                  {Object.entries(categories).map(([key, cat]) => (
+                    <button key={key} className="category-btn" onClick={() => preparePlaylist(key)}>
+                      <span className="cat-name">{cat.name}</span>
+                      <span className="cat-desc">60% {cat.name} / 20% Influence / 20% Dominicain</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {(status === 'loading') && (
               <div className="loading-state">
                 <div className="spinner"></div>
-                <p>Récupération des morceaux de bachata...</p>
+                <p>Création de ta playlist {categories[selectedCategory]?.name} personnalisée...</p>
+                <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Récupération des 60 morceaux...</p>
               </div>
             )}
             
             {status === 'error' && (
               <div className="error-state">
                 <p>Oups ! Impossible de charger la musique.</p>
-                <button className="btn-secondary" onClick={fetchBachataSongs}>Réessayer</button>
+                <button className="btn-secondary" onClick={() => preparePlaylist(selectedCategory)}>Réessayer</button>
+                <button className="btn-ghost" onClick={resetSession}>Changer de style</button>
               </div>
             )}
 
             {status === 'idle' && songs.length > 0 && (
-              <button className="btn-primary" onClick={startSession}>
-                Démarrer la Session
-              </button>
+              <div className="ready-state animate-fade-in">
+                <div className="ready-icon">⚖️</div>
+                <h3>Playlist Prête !</h3>
+                <p>60 morceaux de bachata mixés et prêts pour 30 minutes de Jack & Jill.</p>
+                <button className="btn-primary" onClick={startSession}>
+                  C'est parti !
+                </button>
+                <button className="btn-ghost" onClick={resetSession}>Changer de style</button>
+              </div>
             )}
             {status === 'playing' && (
               <button className="btn-secondary" onClick={pauseSession}>Pause</button>
@@ -384,6 +439,30 @@ export default function JackAndJill() {
         }
         .animate-fade-in { animation: fadeIn 0.4s ease-out; }
         
+        .category-select h2 { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.1em;}
+        .category-grid { display: flex; flex-direction: column; gap: 12px; }
+        .category-btn {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 20px;
+          border-radius: 20px;
+          color: white;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+          transition: all 0.2s;
+        }
+        .category-btn:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent); transform: translateY(-2px); }
+        .cat-name { font-size: 1.3rem; font-weight: 800; }
+        .cat-desc { font-size: 0.8rem; color: var(--text-muted); }
+
+        .ready-state { padding: 20px; }
+        .ready-icon { font-size: 3rem; margin-bottom: 16px; }
+        .ready-state h3 { font-size: 1.5rem; margin: 0 0 8px; }
+        .ready-state p { color: var(--text-muted); margin-bottom: 24px; }
+
         .loading-state, .error-state {
           padding: 20px;
           color: var(--text-muted);
