@@ -238,7 +238,11 @@ export default function JackAndJill() {
                   {Object.entries(categories).map(([key, cat]) => (
                     <button key={key} className="category-btn" onClick={() => preparePlaylist(key)}>
                       <span className="cat-name">{cat.name}</span>
-                      <span className="cat-desc">60% {cat.name} / 20% Influence / 20% Dominicain</span>
+                      <span className="cat-desc">
+                        {key === 'fusion' 
+                          ? '60% Remix (DJ Cat, Melvin & Gatica) / 20% Sensuel / 20% Dom.'
+                          : `60% ${cat.name} / 20% Influence / 20% Dominicain`}
+                      </span>
                     </button>
                   ))}
                 </div>

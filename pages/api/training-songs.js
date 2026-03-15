@@ -1,17 +1,26 @@
 export default async function handler(req, res) {
   const { type } = req.query;
   
-  // Map our categories to iTunes search terms
-  const searchTerms = {
-    sensual: 'bachata sensual',
-    fusion: 'bachata fusion influence',
-    dominican: 'bachata dominicana tradicional'
+  // Map our categories to more precise iTunes search terms/artists
+  const typeSearch = {
+    sensual: {
+      term: 'bachata sensual prince royce romeo santos aventura',
+      exclude: ['antony santos', 'luis vargas', 'raulin rodriguez', 'tradicional']
+    },
+    fusion: {
+      term: 'bachata remix dj cat melvin gatica i love you hello',
+      exclude: ['tradicional', 'antony santos']
+    },
+    dominican: {
+      term: 'bachata tradicional antony santos raulin rodriguez luis vargas',
+      exclude: ['remix', 'sensual', 'dj cat']
+    }
   };
 
-  const term = searchTerms[type] || 'bachata';
+  const config = typeSearch[type] || { term: 'bachata', exclude: [] };
 
   try {
-    const response = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(term)}&media=music&entity=song&limit=100`);
+    const response = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(config.term)}&media=music&entity=song&limit=200`);
     
     if (!response.ok) {
       throw new Error(`iTunes API responded with status: ${response.status}`);
@@ -19,8 +28,20 @@ export default async function handler(req, res) {
     
     const data = await response.json();
     
-    // Filter to ensure we have preview URLs
-    const filtered = data.results.filter(song => song.previewUrl);
+    // Filtering logic to increase accuracy
+    const filtered = data.results.filter(song => {
+      if (!song.previewUrl) return false;
+      
+      const artist = (song.artistName || '').toLowerCase();
+      const track = (song.trackName || '').toLowerCase();
+      
+      // Check exclusions for this type
+      const isExcluded = config.exclude.some(ex => 
+        artist.includes(ex) || track.includes(ex)
+      );
+      
+      return !isExcluded;
+    });
     
     res.status(200).json({ results: filtered });
   } catch (error) {
