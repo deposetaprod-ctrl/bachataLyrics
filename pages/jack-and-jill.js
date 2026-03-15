@@ -21,8 +21,8 @@ export default function JackAndJill() {
   const fetchBachataSongs = async () => {
     setStatus('loading');
     try {
-      // Fetching 50 bachata songs to have variety
-      const res = await fetch('https://itunes.apple.com/search?term=bachata&media=music&entity=song&limit=50');
+      // Fetching songs via our internal API proxy to avoid CORS/Network issues
+      const res = await fetch('/api/training-songs');
       const data = await res.json();
       const filtered = data.results.filter(song => song.previewUrl);
       // Shuffle songs
