@@ -62,6 +62,7 @@ export default function Passes() {
           <div className="nav-links" style={{ display: 'flex', gap: '24px', fontWeight: 600 }}>
             <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/')}>Sons</span>
             <span style={{ cursor: 'pointer', color: 'var(--accent)' }}>Passes</span>
+            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
           </div>
 
           <div className="search-bar">

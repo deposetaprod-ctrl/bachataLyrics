@@ -55,6 +55,7 @@ export default function SongPage({ song }) {
           <div className="nav-links" style={{ display: 'flex', gap: '24px', fontWeight: 600, flex: 1, paddingLeft: '40px' }}>
             <span style={{ cursor: 'pointer', color: 'var(--accent)' }} onClick={() => router.push('/')}>Sons</span>
             <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/passes')}>Passes</span>
+            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
           </div>
         </div>
       </nav>
