@@ -834,4 +834,852 @@ Aucune dans la boîte de nuit ne t'égale.
 Ma sainte le jour et ma diablesse la nuit.`,
     },
   },
+  {
+    id: "hierro-chris-paradise",
+    title: "HIERRO",
+    artist: "Chris Paradise",
+    year: 2024,
+    tags: ["regrets", "rupture", "douleur"],
+    color: "#4b5563",
+    spotify: "https://open.spotify.com/search/HIERRO%20Chris%20Paradise",
+    lyrics: {
+      es: `A veces te extraño
+Y no me duele aceptarlo
+Son tragos amargos
+Que no puedo pasarlos
+
+Tengo que admitir que yo
+No soy de hierro como yo esperaba
+Tengo que admitir que yo
+Ya perdí esta batalla
+Y no empezaba
+
+Y ahora dime que pasó
+Qué te dió
+Que no te he dado yo
+No no no
+
+Eso es mentira por Dios
+Qué te hizo, te hechizó
+Palabritas de amor
+Cobarde sin dirección (que)
+
+Que mentiras de dijo
+Nadie te ama como yo (uououooah)
+Que mentiras de dijo
+Nadie te ama como yo (uououooah)
+
+Imperatore (uououooah)
+Nadie te amó como yo (yeah, sentimiento)
+no no no nou (chris paradise)
+Nadie te amó como yo
+
+Cuando más te necesitaba
+algo de pronto surgió
+Fui tu superhéroe sin capa
+
+Y ahora dime que pasó
+Qué te dió
+Que no te he dado yo
+No no no
+
+Eso es mentira por dios
+Qué te hizo, te hechizó
+Palabritas de amor
+Cobarde sin dirección (que)
+
+A veces te extraño
+Y no me duele aceptarlo
+Son tragos amargos
+Que no puedo pasarlos
+
+Tengo que admitir que yo
+No soy de hierro como yo esperaba
+Tengo que admitir que yo
+Ya perdí esta batalla
+Y no empezaba
+
+Y ahora dime que pasó
+Qué te dió
+Que no te he dado yo
+No no no
+
+Eso es mentira por dios
+Qué te hizo, te hechizó
+Palabritas de amor
+Cobarde sin dirección (que)
+
+Que mentiras de dijo
+Nadie te ama como yo (uououooah)
+Que mentiras de dijo
+Nadie te ama como yo (uououooah)`,
+      fr: `Parfois tu me manques
+Et ça ne me fait pas mal de l'accepter
+Ce sont des gorgées amères
+Que je ne peux pas avaler
+
+Je dois admettre que je
+Ne suis pas de fer comme je l'espérais
+Je dois admettre que je
+Ai déjà perdu cette bataille
+Alors qu'elle n'avait pas commencé
+
+Et maintenant dis-moi ce qui s'est passé
+Qu'est-ce qu'il t'a donné
+Que je ne t'ai pas donné moi
+Non non non
+
+C'est un mensonge par Dieu
+Qu'est-ce qu'il t'a fait, il t'a ensorcelée
+De petits mots d'amour
+Lâche sans direction (quoi)
+
+Quels mensonges il t'a dit
+Personne ne t'aime comme moi (uououooah)
+Quels mensonges il t'a dit
+Personne ne t'aime comme moi (uououooah)
+
+Imperatore (uououooah)
+Personne ne t'a aimée comme moi (yeah, sentiment)
+non non non nou (chris paradise)
+Personne ne t'a aimée comme moi
+
+Quand j'avais le plus besoin de toi
+quelque chose a soudain surgi
+J'étais ton super-héros sans cape
+
+Et maintenant dis-moi ce qui s'est passé
+Qu'est-ce qu'il t'a donné
+Que je ne t'ai pas donné moi
+Non non non
+
+C'est un mensonge par dieu
+Qu'est-ce qu'il t'a fait, il t'a ensorcelée
+De petits mots d'amour
+Lâche sans direction (quoi)
+
+Parfois tu me manques
+Et ça ne me fait pas mal de l'accepter
+Ce sont des gorgées amères
+Que je ne peux pas avaler
+
+Je dois admettre que je
+Ne suis pas de fer comme je l'espérais
+Je dois admettre que je
+Ai déjà perdu cette bataille
+Alors qu'elle n'avait pas commencé
+
+Et maintenant dis-moi ce qui s'est passé
+Qu'est-ce qu'il t'a donné
+Que je ne t'ai pas donné moi
+Non non non
+
+C'est un mensonge par dieu
+Qu'est-ce qu'il t'a fait, il t'a ensorcelée
+De petits mots d'amour
+Lâche sans direction (quoi)
+
+Quels mensonges il t'a dit
+Personne ne t'aime comme moi (uououooah)
+Quels mensonges il t'a dit
+Personne ne t'aime comme moi (uououooah)`,
+    },
+  },
+  {
+    id: "senor-juez-antony-santos-ozuna",
+    title: "Señor Juez",
+    artist: "Antony Santos & Ozuna",
+    year: 2021,
+    tags: ["trahison", "douleur", "repentance"],
+    color: "#1e293b",
+    spotify: "https://open.spotify.com/search/Señor%20Juez%20Antony%20Santos%20Ozuna",
+    lyrics: {
+      es: `Tu Mayimbe
+Señor juez, vengo hasta aquí a declararme culpable
+He cometido un delito y no merezco mi libertad
+¿Cuántos años me daría? A mí no me va a doler
+Si me da vida, le insisto un poco má'
+Señor juez, soy culpable, uh-woh-oh
+Y es que por más que la quiero, oh
+Nada me la va a traer de vuelta
+Prefiero enterrar mi corazón antes de dar amor de nuevo, oh-oh
+Y es que por más que la quiero, oh
+Nada me la va a traer de vuelta
+Prefiero enterrar mi corazón antes de dar amor, de nuevo, oh-oh
+Qué ironía, qué surprise da la vida tan grande
+Esa mujer por la que tú estás aquí
+Yo soy el padre
+Este dolor no tiene perdón, está acabando mi vida
+No hay castigo que sane esta herida
+El tiempo no vuelve atrás, uh-oh-oh
+Y es que por más que yo quiero
+Nada me la va a traer de vuelta
+Tú le rompiste en dos el corazón
+Y con este dolor me muero, ah
+En la vida, uno nunca llega a conocer a una persona
+Qué lamentable, qué tristeza tan grande
+Pero dime algo, Ozuna
+Uno nunca termina de conocer el amor
+Durmiendo con el enemigo, la venganza y el temor
+Siempre estamos viviendo con la traición
+Romo pa'l dolor, mientes con solo tu mirada
+El amor se vuelve a nada
+Esperando tanto tiempo pa' decir que no me ama'
+Secretos se quedaron esa noche ahí en mi almohada
+Después que di mi vida, dice que no supe amarla, ah
+Ya mi princessa no vuelve donde mí
+¿Qué tú le hiciste para que ella se fuera así?
+Yo que tantas veces le advertí
+Que por hombres como tú no vale la pena sufrir
+Y es que por más que la quiero, oh
+Nada me la va a traer de vuelta
+Prefiero enterrar mi corazón antes de dar amor de nuevo, oh-oh
+Y es que por más que yo quiero, oh
+Nada me la va a traer de vuelta
+Tú le rompiste en dos el corazón y con este dolor me muero, oh, ay
+Ay, ay, ay
+Mmm
+Oh
+Yeh-yeh
+Ay, ay, ay`,
+      fr: `Ton Mayimbe
+Monsieur le juge, je viens ici pour plaider coupable
+J'ai commis un délit et je ne mérite pas ma liberté
+Combien d'années me donneriez-vous ? Ça ne me fera pas mal
+Si c'est à perpétuité, j'insiste pour un peu plus
+Monsieur le juge, je suis coupable, uh-woh-oh
+Et c'est que plus je l'aime, oh
+Rien ne me la ramènera
+Je préfère enterrer mon cœur avant d'aimer à nouveau, oh-oh
+Et c'est que plus je l'aime, oh
+Rien ne me la ramènera
+Je préfère enterrer mon cœur avant d'aimer à nouveau, oh-oh
+
+Quelle ironie, quelle surprise la vie nous réserve
+Cette femme pour laquelle tu es ici
+J'en suis le père
+Cette douleur est impardonnable, elle détruit ma vie
+Aucun châtiment ne guérira cette blessure
+On ne peut pas revenir en arrière, uh-oh-oh
+Et c'est que plus je le veux
+Rien ne me la ramènera
+Tu lui as brisé le cœur en deux
+Et je meurs de cette douleur, ah
+
+Dans la vie, on ne finit jamais par connaître vraiment quelqu'un
+C'est lamentable, quelle immense tristesse
+Mais dis-moi Ozuna
+On ne finit jamais de connaître l'amour
+Dormir avec l'ennemi, entre vengeance et peur
+On vit toujours avec la trahison
+Le rhum pour la douleur, tu mens par ton seul regard
+L'amour s'évanouit
+Attendre si longtemps pour dire qu'elle ne m'aime pas
+Des secrets restés cette nuit-là sur mon oreiller
+Après avoir donné ma vie, elle dit que je n'ai pas su l'aimer, ah
+
+Ma princesse ne reviendra plus vers moi
+Qu'est-ce que tu lui as fait pour qu'elle s'en aille ainsi ?
+Moi qui lui avais si souvent dit
+Que pour des hommes comme toi ça ne vaut pas la peine de souffrir
+Et c'est que plus je l'aime, oh
+Rien ne me la ramènera
+Je préfère enterrer mon cœur avant d'aimer à nouveau, oh-oh
+Et c'est que plus je le veux, oh
+Rien ne me la ramènera
+Tu lui as brisé le cœur en deux et je meurs de cette douleur, oh, ay
+Ay, ay, ay
+Mmm
+Oh
+Yeh-yeh
+Ay, ay, ay`,
+    },
+  },
+  {
+    id: "ay-san-miguel-romeo-santos-prince-royce",
+    title: "Ay! San Miguel",
+    artist: "Romeo Santos & Prince Royce",
+    year: 2025,
+    tags: ["protection", "foi", "spiritualité"],
+    color: "#facc15",
+    spotify: "https://open.spotify.com/search/Ay!%20San%20Miguel%20Romeo%20Santos%20Prince%20Royce",
+    lyrics: {
+      es: `[Romeo Santos]
+Ay, San Miguel, destruye al maleficio
+De lo malo protege a mi amorcito
+En nombre de Dios, rompe ese hechizo
+Con tu espada vence al enemigo
+Bori, que saquen el romo
+Que llegué con los guerreros
+
+[Romeo Santos]
+Alguien me hizo vudú para augurar que ella me deje de amar
+Tengo una virtud, a mí me cuida San Miguel
+Con fe yo lo invoco a él, me protejo con un amuleto
+Todo mal se desvanece en el mal, va a quebrar en nombre de Jesús
+
+[Prince Royce & Romeo Santos]
+La bruja me lo dijo, me hicieron un hechizo
+Con alfileres, clavando un muñequito
+Pobre gallina, se jodió el chivito
+Lo sacrificaron, y ella y yo juntitos
+También me dijo que cuide mi alrededor
+
+La envidia está presente para todo el que triunfó
+En mi mente crucificaron a Dios
+Tus planes no se los cuente' al prójimo
+
+[Romeo Santos]
+Cúbreme desde el cielo
+Ay, ChiChi
+
+[Prince Royce & Romeo Santos]
+El que apueste a mi fracaso, va a perder su dinero y su tiempo también
+Dios mío, dale salud a mis envidiosos, pa' que me vean vencer
+San Miguel, cuídame a mi mujer, y resguarda mi relación con ella
+Todo mal se desvanece en el mar, va a quebrar en nombre de Jesús
+
+[Prince Royce & Romeo Santos]
+La bruja me lo dijo, me hicieron un hechizo
+Con alfileres, clavando un muñequito
+Pobre gallina, se jodió el chivito
+Lo sacrificaron, y ella y yo juntitos
+También me dijo que cuide mi alrededor
+La envidia está presente para todo el que triunfó
+En mi mente crucificaron a Dios
+Tus planes no se los cuente' al prójimo
+
+[Romeo Santos]
+Ayo, Mikey
+Funk, funk
+So nasty
+Cúbreme desde el cielo
+
+Ay, San Miguel, destruye al maleficio
+De lo malo protege a mi amorcito
+En nombre de Dios, rompe ese hechizo
+Con tu espada vence al enemigo
+
+[Romeo Santos & Prince Royce]
+Pa' los celosos que están pendiente de mí
+Ando con mi azabache y me protege a mí (Tell 'em with the harmony)
+Pa' los celosos que están pendiente de mí
+Ando con mi azabache y me protege a mí
+Royce with The King
+Pa' los celosos que están pendiente de mí (Ay, mis hijos)
+Ando with my azabache and it protects me (I can't do it like you do it)
+Pa' los celosos`,
+      fr: `[Romeo Santos]
+Ay, San Miguel, détruis le maléfice
+Du mal protège mon petit amour
+Au nom de Dieu, brise ce sort
+Avec ton épée vaincs l'ennemi
+Bori, qu'ils sortent le rhum
+Je suis arrivé avec les guerriers
+
+[Romeo Santos]
+Quelqu'un m'a jeté un sort vaudou pour prédire qu'elle cessera de m'aimer
+J'ai une vertu, Saint Michel prend soin de moi
+Avec foi je l'invoque, je me protège avec une amulette
+Tout le mal s'évanouit dans la mer, il va se briser au nom de Jésus
+
+[Prince Royce & Romeo Santos]
+La sorcière me l'a dit, on m'a jeté un sort
+Avec des épingles, en piquant une petite poupée
+Pauvre poule, le petit chevreau est foutu
+Ils l'ont sacrifié, et elle et moi sommes toujours ensemble
+Elle m'a aussi dit de faire attention autour de moi
+
+L'envie est présente pour tous ceux qui ont réussi
+Dans mon esprit, ils ont crucifié Dieu
+Ne raconte pas tes plans à ton prochain
+
+[Romeo Santos]
+Couvre-moi depuis le ciel
+Ay, ChiChi
+
+[Prince Royce & Romeo Santos]
+Celui qui parie sur mon échec va perdre son argent et son temps aussi
+Mon Dieu, donne la santé à mes envieux pour qu'ils me voient vaincre
+Saint Michel, prends soin de ma femme, et protège ma relation avec elle
+Tout le mal s'évanouit dans la mer, il va se briser au nom de Jésus
+
+[Prince Royce & Romeo Santos]
+La sorcière me l'a dit, on m'a jeté un sort
+Avec des épingles, en piquant une petite poupée
+Pauvre poule, le petit chevreau est foutu
+Ils l'ont sacrifié, et elle et moi sommes toujours ensemble
+Elle m'a aussi dit de faire attention autour de moi
+L'envie est présente pour tous ceux qui ont réussi
+Dans mon esprit, ils ont crucifié Dieu
+Ne raconte pas tes plans à ton prochain
+
+[Romeo Santos]
+Ayo, Mikey
+Funk, funk
+Si méchant
+Couvre-moi depuis le ciel
+
+Ay, San Miguel, détruis le maléfice
+Du mal protège mon petit amour
+Au nom de Dieu, brise ce sort
+Avec ton épée vaincs l'ennemi
+
+[Romeo Santos & Prince Royce]
+Pour les jaloux qui me surveillent
+Je marche avec mon jais et il me protège (Dites-leur avec l'harmonie)
+Pour les jaloux qui me surveillent
+Je marche avec mon jais et il me protège
+Royce avec Le Roi
+Pour les jaloux qui me surveillent (Ay, mes fils)
+Je marche avec mon jais et il me protège (Je ne peux pas le faire comme tu le fais)
+Pour les jaloux`,
+    },
+  },
+  {
+    id: "nubes-dj-husky-dimelo-cupido-felix",
+    title: "NUBES",
+    artist: "DJ Husky, Dimelo Cupido & Felix",
+    year: 2025,
+    tags: ["amour", "désir", "nuages"],
+    color: "#7dd3fc",
+    spotify: "https://open.spotify.com/search/NUBES%20DJ%20Husky%20Felix",
+    lyrics: {
+      es: `Soy Félix
+Tu pendiente está en mi habitación
+No lo logro cambiar de rincón
+Si alguien cuenta de que te he olvidado, te miente
+Te miente
+No hay lógica para un triste final así
+Tú me advertiste y yo quise quedarme aquí
+No te rindas,
+Déjame intentar como hacerte feliz
+Y espérame, no quiero que sea la última vez
+Contigo estoy en las nubes, las ganas me suben
+Pensando en todas las veces que yo te tuve
+Y espérame, no quiero que sea la última vez
+Contigo las horas vuelan, y si te consuela
+Lo nuestro será un amor de telenovela
+No lo dejes morir
+Tu perfume sigue en mi colchón
+Y cada noche es una maldición
+Restos de un amor que se esfumó con el viento,
+El viento
+No hay lógica para un triste final así
+Tú me advertiste y yo quise quedarme aquí
+No te rindas, déjame intentar como hacerte feliz
+Y espérame, no quiero que sea la última vez
+Contigo estoy en las nubes, las ganas me suben
+Pensando en todas las veces que yo te tuve
+Y espérame, no quiero que sea la última vez
+Contigo las horas vuelan, y si te consuela
+Lo nuestro será un amor de telenovela
+No lo dejes morir
+Cu-Cu-Cupido
+Dj Husky
+Alexio
+Y espérame, no quiero que sea la última vez
+Contigo estoy en las nubes, las ganas me suben
+Pensando en todas las veces que yo te tuve
+Y espérame, no quiero que sea la última vez
+Contigo las horas vuelan, y si te consuela
+Lo nuestro será un amor de telenovela
+No lo dejes morir
+Oh, oh, oh, oh, oh`,
+      fr: `Je suis Félix
+Ta boucle d'oreille est dans ma chambre
+Je ne parviens pas à la changer de place
+Si quelqu'un raconte que je t'ai oubliée, il te ment
+Il te ment
+Il n'y a pas de logique pour une fin aussi triste
+Tu m'avais prévenu et j'ai voulu rester ici
+Ne baisse pas les bras,
+Laisse-moi essayer de te rendre heureuse
+Et attends-moi, je ne veux pas que ce soit la dernière fois
+Avec toi je suis dans les nuages, mon désir monte
+En pensant à toutes les fois où je t'ai eue
+Et attends-moi, je ne veux pas que ce soit la dernière fois
+Avec toi les heures s'envolent, et si ça peut te consoler
+Notre histoire sera un amour de telenovela
+Ne le laisse pas mourir
+
+Ton parfum est toujours sur mon matelas
+Et chaque nuit est une malédiction
+Restes d'un amour qui s'est envolé avec le vent,
+Le vent
+Il n'y a pas de logique pour une fin aussi triste
+Tu m'avais prévenu et j'ai voulu rester ici
+Ne baisse pas les bras, laisse-moi essayer de te rendre heureuse
+
+Et attends-moi, je ne veux pas que ce soit la dernière fois
+Avec toi je suis dans les nuages, mon désir monte
+En pensant à toutes les fois où je t'ai eue
+Et attends-moi, je ne veux pas que ce soit la dernière fois
+Avec toi les heures s'envolent, et si ça peut te consoler
+Notre histoire sera un amour de telenovela
+Ne le laisse pas mourir
+
+Cu-Cu-Cupido
+Dj Husky
+Alexio
+
+Et attends-moi, je ne veux pas que ce soit la dernière fois
+Avec toi je suis dans les nuages, mon désir monte
+En pensant à toutes les fois où je t'ai eue
+Et attends-moi, je ne veux pas que ce soit la dernière fois
+Avec toi les heures s'envolent, et si ça peut te consoler
+Notre histoire sera un amour de telenovela
+Ne le laisse pas mourir
+Oh, oh, oh, oh, oh`,
+    },
+  },
+  {
+    id: "entre-los-dos-sp-polanco-karlos-rose",
+    title: "Entre Los Dos",
+    artist: "sP Polanco & Karlos Rosé",
+    year: 2019,
+    tags: ["amour", "secret", "défi"],
+    color: "#9b1c1c",
+    spotify: "https://open.spotify.com/search/Entre%20Los%20Dos%20sP%20Polanco%20Karlos%20Rose",
+    lyrics: {
+      es: `No hay barreras que me impidan construir
+Ese amor que imaginamos
+Aunque el mundo no te quiera junto a mí
+Nunca podrán separarnos
+No dejemos que nos gane la envidia
+Nadie entiende que por ti doy la vida
+No develes este amor
+Y te pido, por favor
+
+No le confieses a tus padres quién soy yo
+Dirán que no soy bueno para ti
+Mejor, mantenlo a lo callado entre los dos
+Si ellos no saben, tú serás feliz
+Que no soy bueno y que el dinero me cambió
+Y que te causaré dolor
+Mejor, mantenlo a lo callado entre tú y yo
+Si ellos no saben, tú serás feliz
+
+¿Por qué dudan
+Lo que el tiempo tiene escrito?
+Si mi único delito
+Fue amarte sin piedad
+No hay muro construido que nos pueda separar
+No hay mares que por ti, mi amor, no pueda navegar
+Por más que intenten, no hay quién nos niegue
+Estar juntitos una eternidad
+No dejemos que nos gane la envidia
+Nadie entiende que por ti doy la vida
+No develes este amor
+Te lo suplico (Oh-oh-oh, yeh)
+
+No le confieses a tus padres quién soy yo
+Dirán que no soy bueno para ti
+Mejor, mantenlo a lo callado entre los dos (Yeh)
+Si ellos no saben, tú serás feliz
+Que no soy bueno y que el dinero me cambió
+Y que te causaré dolor
+Mejor, mantenlo a lo callado entre tú y yo
+Si ellos no saben, tú serás feliz
+
+Bachata rising, Karlos Rosé, sP
+It′s a problem
+Mayinbito, lets it go
+
+No le confieses a tus padres quién soy yo
+Dirán que no soy bueno para ti
+Mejor, mantenlo a lo callado entre los dos
+Si ellos no saben, tú serás feliz
+Que no soy bueno y que el dinero me cambió
+Y que te causaré dolor
+Mejor, mantenlo a lo callado entre tú y yo
+Si ellos no saben, tú serás feliz`,
+      fr: `Il n'y a pas de barrières qui m'empêchent de construire
+Cet amour que nous avons imaginé
+Même si le monde ne te veut pas à mes côtés
+Ils ne pourront jamais nous séparer
+Ne laissons pas l'envie gagner sur nous
+Personne ne comprend que pour toi je donnerais ma vie
+Ne dévoile pas cet amour
+Et je te demande, s'il te plaît
+
+Ne confesse pas à tes parents qui je suis
+Ils diront que je ne suis pas quelqu'un de bien pour toi
+Mieux vaut garder cela secret entre nous deux
+S'ils ne le savent pas, tu seras heureuse
+Que je ne suis pas bon et que l'argent m'a changé
+Y que je te causerai de la douleur
+Mieux vaut garder cela secret entre toi et moi
+S'ils ne le savent pas, tu seras heureuse
+
+Pourquoi doutent-ils
+De ce que le temps a écrit ?
+Si mon seul délit
+A été de t'aimer sans pitié
+Il n'y a pas de mur construit qui puisse nous séparer
+Il n'y a pas de mers que pour toi, mon amour, je ne puisse traverser
+Même s'ils essaient, personne ne pourra nous refuser
+D'être ensemble pour une éternité
+Ne laissons pas l'envie gagner sur nous
+Personne ne comprend que pour toi je donnerais ma vie
+Ne dévoile pas cet amour
+Je t'en supplie (Oh-oh-oh, yeh)
+
+Ne confesse pas à tes parents qui je suis
+Ils diront que je ne suis pas quelqu'un de bien pour toi
+Mieux vaut garder cela secret entre nous deux (Yeh)
+S'ils ne le savent pas, tu seras heureuse
+Que je ne suis pas bon et que l'argent m'a changé
+Et que je te causerai de la douleur
+Mieux vaut garder cela secret entre toi et moi
+S'ils ne le savent pas, tu seras heureuse
+
+Bachata rising, Karlos Rosé, sP
+C'est un problème
+Mayinbito, laisse couler
+
+Ne confesse pas à tes parents qui je suis
+Ils diront que je ne suis pas quelqu'un de bien pour toi
+Mieux vaut garder cela secret entre nous dos
+S'ils ne le savent pas, tu seras heureuse
+Que je ne suis pas bon et que l'argent m'a changé
+Et que je te causerai de la douleur
+Mieux vaut garder cela secret entre toi et moi
+S'ils ne le savent pas, tu seras heureuse`,
+    },
+  },
+  {
+    id: "soy-yo-jalil-lopez",
+    title: "Soy yo",
+    artist: "Jalil Lopez",
+    year: 2019,
+    tags: ["amour", "nostalgie", "regrets"],
+    color: "#1d4ed8",
+    spotify: "https://open.spotify.com/search/Soy%20yo%20Jalil%20Lopez",
+    lyrics: {
+      es: `Jalil
+Paso mis días pensando en tu amor
+Lo mucho que teníamos
+Cómo ha pasado el tiempo, oh-oh
+Ya me dijeron que tienes tu vida
+Y que te ves deprimida
+Él no te trata como te trataba yo
+Y sigues ahí, no sé por qué
+No estás obligada estar con él
+Mientras más tiempo pasa, más tiempo gastas
+Viviendo tu vida infeliz
+Yo sé que piensas en mí
+Soy yo el hombre que te quiso más que él
+El mismo que dejaste en el ayer
+El que siempre peleaba por tu amor
+Soy yo el hombre que siempre te valoró
+El que un día de ti se enamoró
+El que cantaba de amor con su guitarra
+Soy yo
+I'm back
+Luigi, Jay
+We got another one, 'cause we rock
+(Jalil)
+No existe otro hombre que te pueda amar
+Tan profundo como el mar
+Así, cómo lo siento
+Yo a ti te quiero con toda mi vida
+Y no seré feliz si no eres mía
+Tú eres mi angel, mi musa, mi aire, siempre yo rezó por ti
+Y sigues ahí, no sé por qué
+No estás obligada estar con él
+Mientras más tiempo pasa, más tiempo gastas
+Viviendo tu vida infeliz
+Yo sé que piensas en mí
+Soy yo el hombre que te quizo más que él
+El mismo que dejaste en el ayer
+El que siempre peleaba por tu amor
+Soy yo el hombre que siempre te valoró (te valoró)
+El que un día de ti se enamoró
+El que cantaba de amor con su guitarra
+Soy yo el hombre que te quiso más que él (uh-uh-uh)
+El mismo que dejaste en el ayer (uh-uh)
+El que siempre peleaba por tu amor`,
+      fr: `Jalil
+Je passe mes journées à penser à ton amour
+À tout ce que nous avions
+Comment le temps a passé, oh-oh
+On m'a déjà dit que tu avais ta vie
+Et que tu avais l'air déprimée
+Il ne te traite pas comme je te traitais
+Et tu restes là, je ne sais pas pourquoi
+Tu n'es pas obligée de rester avec lui
+Plus le temps passe, plus tu perds ton temps
+À vivre ta vie malheureuse
+Je sais que tu penses à moi
+
+C'est moi l'homme qui t'a aimée plus que lui
+Le même que tu as laissé dans le passé
+Celui qui se battait toujours pour ton amour
+C'est moi l'homme qui t'a toujours valorisée
+Celui qui un jour est tombé amoureux de toi
+Celui qui chantait l'amour avec sa guitare
+C'est moi
+
+Je suis de retour
+Luigi, Jay
+On en a une autre, car on assure
+(Jalil)
+Il n'existe pas d'autre homme qui puisse t'aimer
+Aussi profondément que la mer
+C'est ce que je ressens
+Moi, je t'aime de toute mi vie
+Et je ne serai pas heureux si tu n'es pas mienne
+Tu es mon ange, ma muse, mon air, je prie toujours pour toi
+
+Et tu restes là, je ne sais pas pourquoi
+Tu n'es pas obligée de rester avec lui
+Plus le temps passe, plus tu perds ton temps
+À vivre ta vie malheureuse
+Je sais que tu penses à moi
+
+C'est moi l'homme qui t'a aimée plus que lui
+Le même que tu as laissé dans le passé
+Celui qui se battait toujours pour ton amour
+C'est moi l'homme qui t'a toujours valorisée (t'a valorisée)
+Celui qui un jour est tombé amoureux de toi
+Celui qui chantait l'amour avec sa guitare
+C'est moi l'homme qui t'a aimée plus que lui (uh-uh-uh)
+Le même que tu as laissé dans le passé (uh-uh)
+Celui qui se battait toujours pour ton amour`,
+    },
+  },
+  {
+    id: "bypass-mr-don",
+    title: "Bypass",
+    artist: "Mr. Don (The Romance)",
+    year: 2021,
+    tags: ["amour", "sourire", "passion"],
+    color: "#ec4899",
+    spotify: "https://open.spotify.com/search/Bypass%20Mr.%20Don",
+    lyrics: {
+      es: `Desde que yo vi esa mirada cautivaste mis mañanas
+Es cierto, me enamoré, lo siento
+Apareciste de momento me robaste hasta el aliento
+Olvidarte, ay, no quiero
+A la luna le pregunté si me había visto alguna vez
+De improviso, no me dijo
+Al sol también le pregunté con su experiencia de inmortal
+Si me quiso, ay, yo le suplico
+Tan solo pienso en abrazarte
+Mirarte
+Al oído con mi voz cantarte
+Mirar contigo las estrellas
+Y darme cuenta que tú eres más bella
+Tan solo pienso en abrazarte
+Mirarte
+Al oído con mi voz cantarte
+Mirar contigo las estrellas
+Y darme cuenta que tú eres más bella
+Cuando te veo caminar
+Latidos vienen y se van
+Mi corazón tiene Bypass
+Por tu sonrisa singular
+Cuando te veo caminar
+Mi mundo comienza a girar
+Me tiene todo alborotado
+No sé dónde voy a terminar
+Ho, ya tú sabes quién soy yo
+Ele
+E-Q-S
+So beautiful Love
+¡Oye!
+Tan solo pienso en abrazarte
+Mirarte
+Al oído con mi voz cantarte
+Mirar contigo las estrellas
+Y darme cuenta que tú eres más bella
+Tan solo pienso en abrazarte
+Mirarte
+Al oído con mi voz cantarte
+Mirar contigo las estrellas
+Y darme cuenta que tú eres más bella
+Cuando te veo caminar
+Latidos vienen y se van
+Mi corazón tiene bypass
+Por tu sonrisa singular
+Cuando te veo caminar
+Mi mundo comienza a girar
+Me tiene todo alborotado
+No sé dónde voy a terminar
+Desde que yo vi esa mirada cautivaste mis mañanas es cierto
+Me enamoré, lo siento
+Apareciste de momento me robaste hasta el aliento
+Olvidarte, ay, no quiero
+Cuando te veo caminar
+Latidos vienen y se van
+Mi corazón tiene bypass
+Por tu sonrisa singular
+Cuando te veo caminar
+Mi mundo comienza a girar
+Me tiene todo alborotado
+No sé dónde voy a terminar`,
+      fr: `Depuis que j'ai vu ce regard, tu as captivé mes matinées
+C'est vrai, je suis tombé amoureux, je suis désolé
+Tu es apparue d'un coup, tu m'as volé jusqu'au souffle
+T'oublier, ah, je ne le veux pas
+À la lune j'ai demandé si elle m'avait vu une fois
+À l'improviste, elle ne m'a rien dit
+Au soleil aussi j'ai demandé avec son expérience d'immortel
+Si elle m'a aimé, ah, je lui supplie
+Je ne pense qu'à t'embrasser
+Te regarder
+À l'oreille avec ma voix te chanter
+Regarder avec toi les étoiles
+Et me rendre compte que tu es plus belle
+Je ne pense qu'à t'embrasser
+Te regarder
+À l'oreille avec ma voix te chanter
+Regarder avec toi les étoiles
+Et me rendre compte que tu es plus belle
+Quand je te vois marcher
+Les battements de cœur vont et viennent
+Mon cœur a un bypass
+À cause de ton sourire singulier
+Quand je te vois marcher
+Mon monde commence à tourner
+Cela me met tout en émoi
+Je ne sais pas où je vais finir
+Oh, tu sais déjà qui je suis
+Ele
+E-Q-S
+Amour si beau
+Écoute !
+Je ne pense qu'à t'embrasser
+Te regarder
+À l'oreille avec ma voix te chanter
+Regarder avec toi les étoiles
+Et me rendre compte que tu es plus belle
+Je ne pense qu'à t'embrasser
+Te regarder
+À l'oreille avec ma voix te chanter
+Regarder avec toi les étoiles
+Et me rendre compte que tu es plus belle
+Quand je te vois marcher
+Les battements de cœur vont et viennent
+Mon cœur a un bypass
+À cause de ton sourire singulier
+Quand je te vois marcher
+Mon monde commence à tourner
+Cela me met tout en émoi
+Je ne sais pas où je vais finir
+Depuis que j'ai vu ce regard tu as captivé mes matinées c'est vrai
+Je suis tombé amoureux, je suis désolé
+Tu es apparue d'un coup tu m'as volé jusqu'au souffle
+T'oublier, ah, je ne le veux pas
+Quand je te vois marcher
+Les battements de cœur vont et viennent
+Mon cœur a un bypass
+À cause de ton sourire singulier
+Quand je te vois marcher
+Mon monde commence à tourner
+Cela me met tout en émoi
+Je ne sais pas où je vais finir`,
+    },
+  },
 ];
