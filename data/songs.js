@@ -1682,4 +1682,160 @@ Cela me met tout en émoi
 Je ne sais pas où je vais finir`,
     },
   },
+  {
+    id: "dardos-romeo-santos-prince-royce",
+    title: "Dardos",
+    artist: "Romeo Santos & Prince Royce",
+    year: 2024,
+    tags: ["collab", "sensuel", "romantique"],
+    color: "#4f46e5",
+    spotify: "https://open.spotify.com/search/Dardos%20Romeo%20Santos%20Prince%20Royce",
+    lyrics: {
+      es: `[ Prince Royce]
+Por poquito te olvido de verdad, ya había dejado la bebida
+La señal que continúa mi mala racha, tus llamadas perdidas
+
+Quisiera creer que yo te puedo ignorar, que no importas tanto
+Mi dignidad es un tablero en la pared, donde tú tiras dardos
+
+[Romeo Santos]
+Para ser más sincero y certero
+Mi signo de Cáncer es muy vulnerable para un Leo
+Puede que sea por Venus que no puedo
+Apagar las llamas, y así me quemo en tu fuego
+
+[Prince Royce & Romeo Santos]
+Ámame, solo un CC por lo menos
+Quiéreme, nada má' un chinchín, te lo ruego
+Cuidado, no abuses demasiado (Demasiado)
+Comprobado, tú eres un caramelo envenenado
+Ámame, solo un CC por lo menos
+Quiéreme, nada má' un chinchín, te lo ruego
+
+Me han voceado: "Bachatero aficiado" (Aficiado)
+Embriagado, dicen las malas lenguas, idiotizado
+
+Ah ya, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+Ah ya, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+Ah ya, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+Ah ya, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+
+[Romeo Santos]
+Para ser más sincero y certero
+Mi signo de Cáncer es muy vulnerable para un Leo
+Puede que sea por Venus que no puedo
+Apagar las llamas, y así me quemo en tu fuego
+
+[Prince Royce & Romeo Santos]
+Ámame, solo un CC por lo menos
+Quiéreme, nada má' un chinchín, te lo ruego
+Cuidado, no abuses demasiado (Demasiado)
+
+Comprobado, tú eres un caramelo envenenado
+Ámame, solo un CC por lo menos
+Quiéreme, nada má' un chinchín, te lo ruego
+Me han voceado: "Bachatero aficiado" (Aficiado)
+Embriagado, dicen las malas lenguas, idiotizado
+
+[Prince Royce]
+Ah ya, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+Ah ya, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+Ah ya, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya (Yaqui-ye, yaqui-ye, yaqui-ya)
+Ah ya, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+
+[Prince Royce]
+Royce
+The biggest
+Ah-ah, I'm not okay
+[Prince Royce & Romeo Santos]
+Ya no quiero ser esa burla
+No me gusta que seas tan cruel
+Ay, ay, auxilio, ay, Dios mío
+Ay, ay, ay, grito, me haces sufrir (Uh)
+Si tiras un dardo más, no voy a aguantar
+Me tiras un dardo más, me vas a matar
+Ay, ay, dolores, mal de amores
+Ay, ay, voy a llorar, mi amor (Uh)
+Si tiras un dardo más, voy a desangrar
+Si tiras un dardo más, me vas a matar
+Ouch
+You're killing me, ma
+Me han voceado: "Bachatero aficiado"
+Embriagado, dicen las malas lenguas, idiotizado`,
+      fr: `[Prince Royce]
+J'étais sur le point de t'oublier vraiment, j'avais déjà arrêté de boire
+Le signe que ma mauvaise passe continue, tes appels manqués
+
+J'aimerais croire que je peux t'ignorer, que tu n'es pas si importante
+Ma dignité est un tableau sur le mur, où tu lances des fléchettes
+
+[Romeo Santos]
+Pour être plus sincère et précis
+Mon signe du Cancer est très vulnérable face à un Lion
+C'est peut-être à cause de Vénus que je ne peux pas
+Éteindre les flammes, et ainsi je brûle dans ton feu
+
+[Prince Royce & Romeo Santos]
+Aime-moi, juste un peu au moins
+Aime-moi, juste un petit peu, je t'en supplie
+Attention, n'abuse pas trop (Trop)
+
+C'est prouvé, tu es un bonbon empoisonné
+Aime-moi, juste un peu au moins
+Aime-moi, juste un petit peu, je t'en supplie
+On m'a crié : "Bachatero amateur" (Amateur)
+Ivrogne, disent les mauvaises langues, idiotisé
+
+Ah oui, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+Ah oui, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+Ah oui, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+Ah oui, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+
+[Romeo Santos]
+Pour être plus sincère et précis
+Mon signe du Cancer est très vulnérable face à un Lion
+C'est peut-être à cause de Vénus que je ne peux pas
+Éteindre les flammes, et ainsi je brûle dans ton feu
+
+
+[Prince Royce & Romeo Santos]
+Aime-moi, juste un peu au moins
+Aime-moi, juste un petit peu, je t'en supplie
+Attention, n'abuse pas trop (Trop)
+C'est prouvé, tu es un bonbon empoisonné
+Aime-moi, juste un peu au moins
+Aime-moi, juste un petit peu, je t'en supplie
+On m'a crié : "Bachatero amateur" (Amateur)
+Ivrogne, disent les mauvaises langues, idiotisé
+
+[Prince Royce]
+Ah oui, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+Ah oui, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+Ah oui, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya (Yaqui-ye, yaqui-ye, yaqui-ya)
+Ah oui, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
+
+
+[Prince Royce]
+Royce
+Le plus grand
+Ah-ah, je ne vais pas bien
+[Prince Royce & Romeo Santos]
+Je ne veux plus être cette moquerie
+Je n'aime pas que tu sois si cruelle
+Oh, oh, au secours, oh mon Dieu
+Oh, oh, oh, je crie, tu me fais souffrir (Uh)
+Si tu lances une fléchette de plus, je ne vais pas tenir
+Si tu lances une fléchette de plus, tu vas me tuer
+Oh, oh, douleurs, mal d'amour
+Oh, oh, je vais pleurer, mon amour (Uh)
+Si tu lances une fléchette de plus, je vais saigner
+Si tu lances une fléchette de plus, tu vas me tuer
+
+Aïe
+Tu me tues, ma
+On m'a crié : "Bachatero amateur"
+Ivrogne, disent les mauvaises langues, idiotisé`,
+    },
+  },
 ];
+
