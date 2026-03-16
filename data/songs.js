@@ -1840,7 +1840,7 @@ Ivrogne, disent les mauvaises langues, idiotisé`,
   {
     id: "its-you-ali-gatie-remix",
     title: "It's You (Bachata Remix)",
-    artist: "Ali Gatie",
+    artist: "Paxmax (Ali Gatie)",
     year: 2024,
     tags: ["remix", "anglais", "exclu"],
     color: "#0ea5e9",
@@ -1954,6 +1954,116 @@ Bébé, je te veux, bébé, je te veux
 Toi, toi`,
     },
   },
+  {
+    id: "pompom-aya-nakamura-remix",
+    title: "Pompom (Bachata Remix)",
+    artist: "Paxmax (Aya Nakamura)",
+    year: 2024,
+    tags: ["remix", "fraçais", "exclu"],
+    color: "#fbbf24",
+    audioUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1773689917/Bachaya2_bpwj7u.wav",
+    lyrics: {
+      es: `J'aime comment tu danses c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan
+
+J'aime comment tu bouges c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan
+
+Ironie du sort, j'ai calmé le boug
+Il en a vu des gos mais j'ai gagné la coupe
+T'as des manières à faire craquer
+Aya comment t'as fait pour le choper ?
+
+C'est toi et moi dans le merco, toi et moi dans le bendo
+Est-ce que ça te plaît ?
+La go est sexy, s'pavane solo, est-ce que ça te plaît ?
+Le mec est blindé, intelligent, est-ce que ça te plaît ?
+
+J'aime comment tu danses c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan
+
+J'aime comment tu bouges c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan
+
+Il veut la go, il veut la maille
+Il veut le biff, il veut le travail
+Il veut la go, il veut la maille
+Il veut le biff, il veut le travail
+
+C'est toi et moi dans le merco, toi et moi dans le bendo
+Est-ce que ça te plaît ?
+La go est sexy, s'pavane solo, est-ce que ça te plaît ?
+Le mec est blindé, intelligent, est-ce que ça te plaît ?
+
+J'aime comment tu danses c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan
+
+J'aime comment tu bouges c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan`,
+      fr: `J'aime comment tu danses c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan
+
+J'aime comment tu bouges c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan
+
+Ironie du sort, j'ai calmé le boug
+Il en a vu des gos mais j'ai gagné la coupe
+T'as des manières à faire craquer
+Aya comment t'as fait pour le choper ?
+
+C'est toi et moi dans le merco, toi et moi dans le bendo
+Est-ce que ça te plaît ?
+La go est sexy, s'pavane solo, est-ce que ça te plaît ?
+Le mec est blindé, intelligent, est-ce que ça te plaît ?
+
+J'aime comment tu danses c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan
+
+J'aime comment tu bouges c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan
+
+Il veut la go, il veut la maille
+Il veut le biff, il veut le travail
+Il veut la go, il veut la maille
+Il veut le biff, il veut le travail
+
+C'est toi et moi dans le merco, toi et moi dans le bendo
+Est-ce que ça te plaît ?
+La go est sexy, s'pavane solo, est-ce que ça te plaît ?
+Le mec est blindé, intelligent, est-ce que ça te plaît ?
+
+J'aime comment tu danses c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan
+
+J'aime comment tu bouges c'est bien
+Ma musique te va trop bien dans ces pas
+Voilà d'la musique qui fait pom pom pom
+Voilà d'la musique, viens ser-dan, ser-dan`,
+    },
+  },
 ];
+
 
 

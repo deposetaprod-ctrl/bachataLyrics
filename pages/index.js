@@ -391,7 +391,18 @@ function SongCard({ song, onClick, isFavorite, onToggleFav }) {
           {song.audioUrl && (
             <div 
               className="card-spotify" 
-              style={{ background: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '0.8rem', width: 'auto', padding: '0 10px' }}
+              style={{ 
+                background: 'linear-gradient(135deg, #c026d3, #7c3aed)', 
+                color: 'white', 
+                fontSize: '0.65rem', 
+                fontWeight: 900,
+                width: 'auto', 
+                padding: '4px 10px',
+                borderRadius: '8px',
+                letterSpacing: '0.05em',
+                boxShadow: '0 4px 12px rgba(124, 58, 237, 0.3)',
+                border: 'none'
+              }}
               title="Exclusivité Bachata Lyrics"
             >
               EXCLU

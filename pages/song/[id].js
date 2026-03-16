@@ -108,14 +108,15 @@ export default function SongPage({ song }) {
                 <div style={{ 
                   background: 'linear-gradient(135deg, #c026d3, #7c3aed)', 
                   color: 'white', 
-                  padding: '10px 20px', 
-                  borderRadius: '16px',
-                  fontWeight: 800,
-                  fontSize: '0.9rem',
-                  letterSpacing: '0.05em',
-                  boxShadow: '0 8px 24px rgba(124, 58, 237, 0.3)'
+                  padding: '6px 16px', 
+                  borderRadius: '12px',
+                  fontWeight: 900,
+                  fontSize: '0.75rem',
+                  letterSpacing: '0.1em',
+                  boxShadow: '0 8px 20px rgba(124, 58, 237, 0.4)',
+                  textTransform: 'uppercase'
                 }}>
-                  ✨ REMIX EXCLUSIF
+                  Remix Exclusif
                 </div>
               )}
               {song.spotify && !song.audioUrl && (

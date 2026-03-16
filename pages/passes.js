@@ -193,10 +193,23 @@ function PasseCard({ passe, isFavorite, onToggleFav }) {
               rel="noopener noreferrer"
               className="instagram-link"
               onClick={(e) => e.stopPropagation()}
-              style={{ color: '#ec4899', fontSize: '1.4rem', marginLeft: '12px', transition: 'transform 0.2s', display: 'flex' }}
+              style={{ 
+                color: '#ec4899', 
+                marginLeft: '12px', 
+                transition: 'all 0.2s ease', 
+                display: 'flex',
+                background: 'rgba(236, 72, 153, 0.1)',
+                padding: '6px',
+                borderRadius: '8px',
+                border: '1px solid rgba(236, 72, 153, 0.2)'
+              }}
               title="Suivre l'artiste sur Instagram"
             >
-              📸
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
             </a>
           )}
         </div>
