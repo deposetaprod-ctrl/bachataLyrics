@@ -184,7 +184,22 @@ function PasseCard({ passe, isFavorite, onToggleFav }) {
       </div>
       
       <div className="card-body">
-        <h2 className="card-title" style={{ fontSize: '1.2rem', marginBottom: '8px' }}>{passe.title}</h2>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
+          <h2 className="card-title" style={{ fontSize: '1.2rem', margin: 0, flex: 1 }}>{passe.title}</h2>
+          {passe.instagram && (
+            <a 
+              href={passe.instagram} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="instagram-link"
+              onClick={(e) => e.stopPropagation()}
+              style={{ color: '#ec4899', fontSize: '1.4rem', marginLeft: '12px', transition: 'transform 0.2s', display: 'flex' }}
+              title="Suivre l'artiste sur Instagram"
+            >
+              📸
+            </a>
+          )}
+        </div>
         
         <div className="card-tags" style={{ marginTop: 'auto' }}>
           {passe.tags.map((tag) => (
@@ -193,5 +208,6 @@ function PasseCard({ passe, isFavorite, onToggleFav }) {
         </div>
       </div>
     </article>
+
   );
 }
