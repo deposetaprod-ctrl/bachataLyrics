@@ -1,15 +1,11 @@
 export default async function handler(req, res) {
   const { type } = req.query;
   
-  // Map our categories to more precise iTunes search terms/artists
+  // Map to two clear pillars
   const typeSearch = {
     sensual: {
       term: 'bachata sensual prince royce romeo santos aventura',
       exclude: ['antony santos', 'luis vargas', 'raulin rodriguez', 'tradicional']
-    },
-    fusion: {
-      term: 'bachata remix dj cat melvin gatica i love you hello',
-      exclude: ['tradicional', 'antony santos']
     },
     dominican: {
       term: 'bachata tradicional antony santos raulin rodriguez luis vargas',

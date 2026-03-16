@@ -19,9 +19,8 @@ export default function JackAndJill() {
   const currentSongTimerRef = useRef(null);
 
   const categories = {
-    sensual: { name: 'Sensuel', ratios: { sensual: 36, fusion: 12, dominican: 12 } },
-    fusion: { name: 'Influence', ratios: { fusion: 36, sensual: 12, dominican: 12 } },
-    dominican: { name: 'Dominicain', ratios: { dominican: 36, sensual: 12, fusion: 12 } }
+    sensual: { name: 'Sensuel', ratios: { sensual: 42, dominican: 18 } },
+    dominican: { name: 'Dominicain', ratios: { dominican: 42, sensual: 18 } }
   };
 
   // -- iTunes API Fetch with Ratios --
@@ -221,9 +220,7 @@ export default function JackAndJill() {
                     textTransform: 'uppercase',
                     fontWeight: 700
                   }}>
-                    {currentSong.danceStyle === 'sensual' ? 'Sensuel' : 
-                     currentSong.danceStyle === 'fusion' ? 'Influence' : 
-                     'Dominicain'}
+                    {currentSong.danceStyle === 'sensual' ? 'Sensuel' : 'Dominicain'}
                   </span>
                 </div>
               </div>
@@ -239,9 +236,7 @@ export default function JackAndJill() {
                     <button key={key} className="category-btn" onClick={() => preparePlaylist(key)}>
                       <span className="cat-name">{cat.name}</span>
                       <span className="cat-desc">
-                        {key === 'fusion' 
-                          ? '60% Remix (DJ Cat, Melvin & Gatica) / 20% Sensuel / 20% Dom.'
-                          : `60% ${cat.name} / 20% Influence / 20% Dominicain`}
+                        70% {cat.name} / 30% {key === 'sensual' ? 'Dominicain' : 'Sensuel'}
                       </span>
                     </button>
                   ))}
