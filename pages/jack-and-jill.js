@@ -6,8 +6,7 @@ export default function JackAndJill() {
   const router = useRouter();
   
   // -- State --
-  const [status, setStatus] = useState('category_select'); // category_select | loading | playing | paused | finished
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [status, setStatus] = useState('ready'); // ready | loading | playing | paused | finished
   const [songs, setSongs] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sessionTime, setSessionTime] = useState(1800); // 30 minutes in seconds
@@ -18,33 +17,52 @@ export default function JackAndJill() {
   const timerRef = useRef(null);
   const currentSongTimerRef = useRef(null);
 
-  const categories = {
-    sensual: { name: 'Sensuel', ratios: { sensual: 42, dominican: 18 } },
-    dominican: { name: 'Dominicain', ratios: { dominican: 42, sensual: 18 } }
-  };
-
-  // -- iTunes API Fetch with Ratios --
-  const preparePlaylist = async (categoryKey) => {
+  const preparePlaylist = async () => {
     setStatus('loading');
-    setSelectedCategory(categoryKey);
-    const category = categories[categoryKey];
     
     try {
-      const allFetchedSongs = [];
+      const savedFavs = JSON.parse(localStorage.getItem('favSongs') || '[]');
+      const appSongs = require('../data/songs').songs;
       
-      // Fetch each type based on ratios
-      for (const [type, count] of Object.entries(category.ratios)) {
-        const res = await fetch(`/api/training-songs?type=${type}`);
-        const data = await res.json();
-        const filtered = data.results.filter(s => s.previewUrl);
-        // Take N random songs from this type
-        const sampled = filtered.sort(() => Math.random() - 0.5).slice(0, count);
-        allFetchedSongs.push(...sampled.map(s => ({ ...s, danceStyle: type })));
+      // Separate app songs into favorites and others
+      const priorityAppSongs = appSongs.filter(s => savedFavs.includes(s.id));
+      const otherAppSongs = appSongs.filter(s => !savedFavs.includes(s.id));
+      
+      // Final priority list: favorites first, then other app songs
+      const allAppPriority = [...priorityAppSongs, ...otherAppSongs];
+      
+      let finalPlaylist = [];
+
+      // 1. Try to fetch previews for app songs
+      for (const appSong of allAppPriority) {
+        try {
+          const res = await fetch(`/api/training-songs?type=search&term=${encodeURIComponent(appSong.title + ' ' + appSong.artist)}`);
+          const data = await res.json();
+          // Find the best match
+          const match = data.results.find(s => 
+            s.trackName.toLowerCase().includes(appSong.title.toLowerCase()) ||
+            s.artistName.toLowerCase().includes(appSong.artist.toLowerCase())
+          );
+          if (match && match.previewUrl) {
+            finalPlaylist.push({ ...match, isAppSong: true, isFavorite: savedFavs.includes(appSong.id) });
+          }
+        } catch (e) {
+          console.error("Error fetching preview for", appSong.title, e);
+        }
+        if (finalPlaylist.length >= 60) break;
       }
 
-      // Final shuffle of the mixed playlist
-      const shuffledPlaylist = allFetchedSongs.sort(() => Math.random() - 0.5);
-      setSongs(shuffledPlaylist);
+      // 2. If we need more songs, fetch general Bachata
+      if (finalPlaylist.length < 60) {
+        const res = await fetch(`/api/training-songs?type=bachata`);
+        const data = await res.json();
+        const generalSongs = data.results.filter(s => s.previewUrl && !finalPlaylist.some(p => p.trackId === s.trackId));
+        // Shuffle and fill
+        const shuffledGeneral = generalSongs.sort(() => Math.random() - 0.5);
+        finalPlaylist.push(...shuffledGeneral.slice(0, 60 - finalPlaylist.length));
+      }
+
+      setSongs(finalPlaylist);
       setStatus('idle');
     } catch (error) {
       console.error('Error fetching songs:', error);
@@ -74,12 +92,11 @@ export default function JackAndJill() {
 
   const resetSession = () => {
     pauseSession();
-    setStatus('category_select');
+    setStatus('ready');
     setTotalEllapsed(0);
     setSongTime(30);
     setCurrentIndex(0);
     setSongs([]);
-    setSelectedCategory(null);
   };
 
   const playSong = (index) => {
@@ -179,7 +196,7 @@ export default function JackAndJill() {
           <div className="training-header">
             <span className="badge">Jack & Jill Training</span>
             <h1>30 Minutes d'Adrénaline</h1>
-            <p>On change de style toutes les 30 secondes. Prêt pour le défi ?</p>
+            <p>Ta playlist est générée en priorité avec tes favoris et les musiques de l'app.</p>
           </div>
 
           <div className="timer-section">
@@ -200,75 +217,81 @@ export default function JackAndJill() {
             </div>
           </div>
 
-          {currentSong && status !== 'idle' && (
+          {currentSong && status !== 'ready' && status !== 'loading' && status !== 'idle' && (
             <div className="current-song-info animate-fade-in">
               <div className="music-icon">🎵</div>
-              <div>
+              <div style={{ flex: 1 }}>
                 <h3>{currentSong.trackName}</h3>
                 <p>{currentSong.artistName}</p>
-                <div style={{ marginTop: '8px' }}>
-                  <span className="badge-style" style={{ 
-                    background: currentSong.danceStyle === 'sensual' ? 'rgba(236, 72, 153, 0.2)' : 
-                                currentSong.danceStyle === 'fusion' ? 'rgba(124, 58, 237, 0.2)' : 
-                                'rgba(250, 204, 21, 0.2)',
-                    color: currentSong.danceStyle === 'sensual' ? '#ec4899' : 
-                           currentSong.danceStyle === 'fusion' ? '#a78bfa' : 
-                           '#facc15',
-                    fontSize: '0.7rem',
-                    padding: '4px 10px',
-                    borderRadius: '8px',
-                    textTransform: 'uppercase',
-                    fontWeight: 700
-                  }}>
-                    {currentSong.danceStyle === 'sensual' ? 'Sensuel' : 'Dominicain'}
-                  </span>
+                <div style={{ marginTop: '8px', display: 'flex', gap: '8px' }}>
+                  {currentSong.isFavorite && (
+                    <span className="badge-style" style={{ 
+                      background: 'rgba(236, 72, 153, 0.2)',
+                      color: '#ec4899',
+                      fontSize: '0.7rem',
+                      padding: '4px 10px',
+                      borderRadius: '8px',
+                      textTransform: 'uppercase',
+                      fontWeight: 700
+                    }}>
+                      ❤️ Favori
+                    </span>
+                  )}
+                  {currentSong.isAppSong && (
+                    <span className="badge-style" style={{ 
+                      background: 'rgba(124, 58, 237, 0.2)',
+                      color: '#a78bfa',
+                      fontSize: '0.7rem',
+                      padding: '4px 10px',
+                      borderRadius: '8px',
+                      textTransform: 'uppercase',
+                      fontWeight: 700
+                    }}>
+                      ✨ App Song
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
           )}
 
           <div className="controls">
-            {status === 'category_select' && (
-              <div className="category-select animate-fade-in">
-                <h2>Choisis ton style d'entraînement</h2>
-                <div className="category-grid">
-                  {Object.entries(categories).map(([key, cat]) => (
-                    <button key={key} className="category-btn" onClick={() => preparePlaylist(key)}>
-                      <span className="cat-name">{cat.name}</span>
-                      <span className="cat-desc">
-                        70% {cat.name} / 30% {key === 'sensual' ? 'Dominicain' : 'Sensuel'}
-                      </span>
-                    </button>
-                  ))}
-                </div>
+            {status === 'ready' && (
+              <div className="ready-state animate-fade-in">
+                <div className="ready-icon">⚡</div>
+                <h3>Prêt pour l'entraînement ?</h3>
+                <p>On change de style toutes les 30 secondes pour te challenger.</p>
+                <button className="btn-primary" onClick={preparePlaylist}>
+                  Préparer ma session
+                </button>
               </div>
             )}
 
             {(status === 'loading') && (
               <div className="loading-state">
                 <div className="spinner"></div>
-                <p>Création de ta playlist {categories[selectedCategory]?.name} personnalisée...</p>
-                <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Récupération des 60 morceaux...</p>
+                <p>Génération de ta playlist personnalisée...</p>
+                <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Nous priorisons tes favoris et les sons de l'application.</p>
               </div>
             )}
             
             {status === 'error' && (
               <div className="error-state">
                 <p>Oups ! Impossible de charger la musique.</p>
-                <button className="btn-secondary" onClick={() => preparePlaylist(selectedCategory)}>Réessayer</button>
-                <button className="btn-ghost" onClick={resetSession}>Changer de style</button>
+                <button className="btn-secondary" onClick={preparePlaylist}>Réessayer</button>
+                <button className="btn-ghost" onClick={resetSession}>Retour</button>
               </div>
             )}
 
             {status === 'idle' && songs.length > 0 && (
               <div className="ready-state animate-fade-in">
-                <div className="ready-icon">⚖️</div>
+                <div className="ready-icon">🔥</div>
                 <h3>Playlist Prête !</h3>
-                <p>60 morceaux de bachata mixés et prêts pour 30 minutes de Jack & Jill.</p>
+                <p>{songs.length} morceaux mixés et prêts pour 30 minutes de Jack & Jill.</p>
                 <button className="btn-primary" onClick={startSession}>
                   C'est parti !
                 </button>
-                <button className="btn-ghost" onClick={resetSession}>Changer de style</button>
+                <button className="btn-ghost" onClick={resetSession}>Recommencer</button>
               </div>
             )}
             {status === 'playing' && (

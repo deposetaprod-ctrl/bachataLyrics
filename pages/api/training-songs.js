@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
-  const { type } = req.query;
+  const { type, term } = req.query;
   
-  // Map to two clear pillars
+  // Map to clear pillars
   const typeSearch = {
     sensual: {
       term: 'bachata sensual prince royce romeo santos aventura',
@@ -10,10 +10,19 @@ export default async function handler(req, res) {
     dominican: {
       term: 'bachata tradicional antony santos raulin rodriguez luis vargas',
       exclude: ['remix', 'sensual', 'dj cat']
+    },
+    bachata: {
+      term: 'bachata',
+      exclude: []
     }
   };
 
-  const config = typeSearch[type] || { term: 'bachata', exclude: [] };
+  let config;
+  if (type === 'search' && term) {
+    config = { term: `bachata ${term}`, exclude: [] };
+  } else {
+    config = typeSearch[type] || typeSearch.bachata;
+  }
 
   try {
     const response = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(config.term)}&media=music&entity=song&limit=200`);
