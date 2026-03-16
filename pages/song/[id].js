@@ -104,7 +104,21 @@ export default function SongPage({ song }) {
                   <span key={tag} className="lyrics-tag">#{tag}</span>
                 ))}
               </div>
-              {song.spotify && (
+              {song.audioUrl && (
+                <div style={{ 
+                  background: 'linear-gradient(135deg, #c026d3, #7c3aed)', 
+                  color: 'white', 
+                  padding: '10px 20px', 
+                  borderRadius: '16px',
+                  fontWeight: 800,
+                  fontSize: '0.9rem',
+                  letterSpacing: '0.05em',
+                  boxShadow: '0 8px 24px rgba(124, 58, 237, 0.3)'
+                }}>
+                  ✨ REMIX EXCLUSIF
+                </div>
+              )}
+              {song.spotify && !song.audioUrl && (
                 <a
                   id="spotify-btn"
                   href={song.spotify}
@@ -118,7 +132,31 @@ export default function SongPage({ song }) {
               )}
             </div>
           </div>
+          
+          {song.audioUrl && (
+            <div className="exclusive-player animate-fade-in" style={{ 
+              marginTop: '40px',
+              padding: '24px',
+              background: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: '24px',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '16px'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ fontSize: '1.5rem' }}>🎧</div>
+                <span style={{ fontWeight: 700, color: 'var(--text-muted)' }}>LECTEUR EXCLUSIF</span>
+              </div>
+              <audio 
+                src={song.audioUrl} 
+                controls 
+                style={{ width: '100%', height: '40px' }}
+              />
+            </div>
+          )}
         </div>
+
 
         {/* ─── DIVIDER ─── */}
         <div className="divider" />

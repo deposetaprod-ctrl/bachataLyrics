@@ -146,6 +146,15 @@ export default function Home() {
             ❤️ Mes Favoris
           </button>
           <button
+            className={`tag-btn ${activeTag === 'remix' ? 'active' : ''}`}
+            onClick={() => {
+              setActiveTag(activeTag === 'remix' ? null : 'remix');
+              setShowFavorites(false);
+            }}
+          >
+            ✨ Mes Remixs
+          </button>
+          <button
             id="tag-all"
             className={`tag-btn ${!activeTag && !showFavorites ? 'active' : ''}`}
             onClick={() => {
@@ -364,10 +373,10 @@ function SongCard({ song, onClick, isFavorite, onToggleFav }) {
 
         <div className="card-footer">
           <div className="card-cta">
-            <span>Voir les paroles</span>
+            <span>{song.audioUrl ? 'Écouter l\'exclu' : 'Voir les paroles'}</span>
             <span>→</span>
           </div>
-          {song.spotify && (
+          {song.spotify && !song.audioUrl && (
             <a
               className="card-spotify"
               href={song.spotify}
@@ -378,6 +387,15 @@ function SongCard({ song, onClick, isFavorite, onToggleFav }) {
             >
               <SpotifyIcon />
             </a>
+          )}
+          {song.audioUrl && (
+            <div 
+              className="card-spotify" 
+              style={{ background: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '0.8rem', width: 'auto', padding: '0 10px' }}
+              title="Exclusivité Bachata Lyrics"
+            >
+              EXCLU
+            </div>
           )}
         </div>
       </div>

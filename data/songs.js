@@ -1837,5 +1837,123 @@ On m'a crié : "Bachatero amateur"
 Ivrogne, disent les mauvaises langues, idiotisé`,
     },
   },
+  {
+    id: "its-you-ali-gatie-remix",
+    title: "It's You (Bachata Remix)",
+    artist: "Ali Gatie",
+    year: 2024,
+    tags: ["remix", "anglais", "exclu"],
+    color: "#0ea5e9",
+    audioUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1773689571/Its_you_bachata_remix_2_zl969w.wav",
+    lyrics: {
+      es: `It's you, it's always you
+If I'm ever gonna fall in love, I know it's gon' be you
+It's you, it's always you
+Met a lot of people, but nobody feels like you
+
+So please don't break my heart, don't tear me apart
+I know how it starts, trust me, I've been broken before
+Don't break me again, I am delicate
+Please don't break my heart, trust me, I've been broken before
+
+I've been broken, yeah, I know how it feels
+To be open and then find out your love isn't real
+I'm still hurting, yeah, I'm hurting inside
+I'm so scared to fall in love, but if it's you, then I'll try
+
+It's you, it's always you
+If I'm ever gonna fall in love, I know it's gon' be you
+It's you, it's always you
+Met a lot of people, but nobody feels like you
+
+So please don't break my heart, don't tear me apart
+I know how it starts, trust me, I've been broken before
+Don't break me again, I am delicate
+Please don't break my heart, trust me, I've been broken before
+
+I know I'm not the best at choosing lovers (oh)
+We both know my past speaks for itself (for itself)
+If you don't think that we're right for each other (baby, no)
+Then please don't let history repeat itself
+
+'Cause I want you, yeah, I want you, yeah
+There's nothing else I want
+'Cause I want you, yeah, I want you, yeah
+And you're the only thing I want
+
+It's you, it's always you
+If I'm ever gonna fall in love, I know it's gon' be you
+It's you, it's always you
+Met a lot of people, but nobody feels like you
+
+So please don't break my heart, don't tear me apart
+I know how it starts, trust me, I've been broken before
+Don't break me again, I am delicate
+Please don't break my heart, trust me, I've been broken before
+
+Baby, I want you, baby, I want you
+Baby, I want you, baby, I want you
+Baby, I want you, baby, I want you
+You, you, 'cause I want you
+Baby, I want you, baby, I want you
+Baby, I want you, baby, I want you
+Baby, I want you, baby, I want you
+You, you`,
+      fr: `C'est toi, c'est toujours toi
+Si jamais je tombe amoureux, je sais que ce sera toi
+C'est toi, c'est toujours toi
+J'ai rencontré beaucoup de monde, mais personne n'est comme toi
+
+Alors s'il te plaît, ne brise pas mon cœur, ne me déchire pas
+Je sais comment ça commence, crois-moi, j'ai déjà été brisé auparavant
+Ne me brise pas encore, je suis délicat
+S'il te plaît, ne brise pas mon cœur, crois-moi, j'ai déjà été brisé auparavant
+
+J'ai été brisé, ouais, je sais ce que ça fait
+De s'ouvrir et de découvrir que ton amour n'est pas réel
+J'ai toujours mal, ouais, j'ai mal à l'intérieur
+J'ai tellement peur de tomber amoureux, mais si c'est toi, alors j'essaierai
+
+C'est toi, c'est toujours toi
+Si jamais je tombe amoureux, je sais que ce sera toi
+C'est toi, c'est toujours toi
+J'ai rencontré beaucoup de monde, mais personne n'est comme toi
+
+Alors s'il te plaît, ne brise pas mon cœur, ne me déchire pas
+Je sais comment ça commence, crois-moi, j'ai déjà été brisé auparavant
+Ne me brise pas encore, je suis délicat
+S'il te plaît, ne brise pas mon cœur, crois-moi, j'ai déjà été brisé auparavant
+
+Je sais que je ne suis pas le meilleur pour choisir mes partenaires (oh)
+Nous savons tous les deux que mon passé parle de lui-même (de lui-même)
+Si tu ne penses pas que nous sommes faits l'un pour l'autre (bébé, non)
+Alors s'il te plaît, ne laisse pas l'histoire se répéter
+
+Car je te veux, ouais, je te veux, ouais
+Il n'y a rien d'autre que je veuille
+Car je te veux, ouais, je te veux, ouais
+Et tu es la seule chose que je veuille
+
+C'est toi, c'est toujours toi
+Si jamais je tombe amoureux, je sais que ce sera toi
+C'est toi, c'est toujours toi
+J'ai rencontré beaucoup de monde, mais personne n'est comme toi
+
+Alors s'il te plaît, ne brise pas mon cœur, ne me déchire pas
+Je sais comment ça commence, crois-moi, j'ai déjà été brisé auparavant
+Ne me brise pas encore, je suis délicat
+S'il te plaît, ne brise pas mon cœur, crois-moi, j'ai déjà été brisé auparavant
+
+Bébé, je te veux, bébé, je te veux
+Bébé, je te veux, bébé, je te veux
+Bébé, je te veux, bébé, je te veux
+Toi, toi, car je te veux
+Bébé, je te veux, bébé, je te veux
+Bébé, je te veux, bébé, je te veux
+Bébé, je te veux, bébé, je te veux
+Toi, toi`,
+    },
+  },
 ];
+
 

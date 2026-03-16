@@ -36,6 +36,21 @@ export default function JackAndJill() {
       // 1. Try to fetch previews for app songs
       for (const appSong of allAppPriority) {
         try {
+          setStatus(`Recherche de "${appSong.title}"...`);
+          
+          if (appSong.audioUrl) {
+            // For exclusive remixes, use the local audio URL directly
+            finalPlaylist.push({
+              trackId: appSong.id, // Assuming appSong.id can be used as trackId
+              trackName: appSong.title,
+              artistName: appSong.artist,
+              previewUrl: appSong.audioUrl,
+              isAppSong: true,
+              isFavorite: savedFavs.includes(appSong.id)
+            });
+            continue;
+          }
+
           const res = await fetch(`/api/training-songs?type=search&term=${encodeURIComponent(appSong.title + ' ' + appSong.artist)}`);
           const data = await res.json();
           // Find the best match
