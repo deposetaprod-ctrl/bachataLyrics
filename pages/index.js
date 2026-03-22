@@ -11,7 +11,7 @@ export default function Home() {
   const [favoriteSongs, setFavoriteSongs] = useState([]);
   const [showFavorites, setShowFavorites] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [suggestionForm, setSuggestionForm] = useState({ title: '', artist: '' });
+  const [suggestionForm, setSuggestionForm] = useState({ personName: '', title: '', artist: '' });
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
 
   useEffect(() => {
@@ -51,7 +51,7 @@ export default function Home() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: 'Suggestion de Son',
+          name: suggestionForm.personName || 'Anonyme',
           email: 'onboarding@resend.dev',
           message: `Nouvelle suggestion de chanson :\n- Titre : ${suggestionForm.title}\n- Artiste : ${suggestionForm.artist}`
         }),
@@ -61,7 +61,7 @@ export default function Home() {
         setTimeout(() => {
           setIsModalOpen(false);
           setStatus('idle');
-          setSuggestionForm({ title: '', artist: '' });
+          setSuggestionForm({ personName: '', title: '', artist: '' });
         }, 2000);
       } else {
         setStatus('error');
@@ -248,6 +248,18 @@ export default function Home() {
             </p>
 
             <form onSubmit={handleSuggestionSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '6px', color: 'var(--text-secondary)' }}>
+                  Ton nom (optionnel)
+                </label>
+                <input
+                  type="text"
+                  value={suggestionForm.personName}
+                  onChange={e => setSuggestionForm({...suggestionForm, personName: e.target.value})}
+                  placeholder="Ex: Maximilien"
+                  style={inputStyle}
+                />
+              </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '6px', color: 'var(--text-secondary)' }}>
                   Titre de la chanson
