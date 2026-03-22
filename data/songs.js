@@ -2063,6 +2063,304 @@ Voilà d'la musique qui fait pom pom pom
 Voilà d'la musique, viens ser-dan, ser-dan`,
     },
   },
+  {
+    id: "sensual-charles-luis",
+    title: "Sensual",
+    artist: "Charles Luis & DJ Tony Pecino",
+    year: 2024,
+    tags: ["sensuel", "romantique", "danse"],
+    color: "#e11d48",
+    spotify: "https://open.spotify.com/search/Sensual%20Charles%20Luis",
+    lyrics: {
+      es: `Mirate
+Tu cuerpo es una obra de arte
+Que bien te ves
+A tus labios quiero acercarme
+No me cansaré de pedirte quédate
+Tú me traes loco estoy rendido a tus pies
+
+Baby are you down for it
+No lo dejes pa' después
+Que se acaba el tiempo de bailar otra vez
+
+Y apúrate
+Quiero verte así
+Bien pegaita a mi
+Hasta que el sol salga
+
+Devórame
+Contigo me quedo aquí
+Por las calles de Madrid
+
+Bailando otra bachata sensual
+Sensual, sensual
+Sensual, sensual
+Bailando otra bachata sensual
+Sensual, sensual
+Sensual, sensual
+
+Báilame
+No hace falta si quiera hablarme
+Sorpréndeme
+No necesitas conquistarme
+No me cansaré de pedirte quédate
+Tú me traes loco estoy rendido a tus pies
+
+Baby are you down for it
+No lo dejes pa' después
+Que se acaba el tiempo de bailar otra vez
+
+Y apúrate
+Quiero verte así
+Bien pegaita a mi
+Hasta que el sol salga
+
+Devórame
+Contigo me quedo aquí
+Por las calles de Madrid
+
+Bailando otra bachata sensual
+Sensual, sensual
+Sensual, sensual
+Bailando otra bachata sensual
+Sensual, sensual
+Sensual, sensual
+
+Y apúrate
+Quiero verte así
+Bien pegaita a mi
+Hasta que el sol salga
+
+Devórame
+Contigo me quedo aquí
+Por las calles de Madrid
+
+Bailando otra bachata sensual
+Sensual, sensual
+Sensual, sensual
+Bailando otra bachata sensual
+Sensual, sensual
+Sensual, sensual`,
+      fr: `Regarde-toi
+Ton corps est une œuvre d'art
+Comme tu es belle
+Je veux m'approcher de tes lèvres
+Je ne me lasserai pas de te demander de rester
+Tu me rends fou, je suis à tes pieds
+
+Bébé es-tu partante
+Ne remets pas ça à plus tard
+Car le temps pour danser encore s'écoule
+
+Et dépêche-toi
+Je veux te voir comme ça
+Bien collée à moi
+Jusqu'à ce que le soleil se lève
+
+Dévore-moi
+Avec toi je reste ici
+Dans les rues de Madrid
+
+En dansant une autre bachata sensuelle
+Sensuelle, sensuelle
+Sensuelle, sensuelle
+En dansant une autre bachata sensuelle
+Sensuelle, sensuelle
+Sensuelle, sensuelle
+
+Danse-moi
+Pas même besoin de me parler
+Surprends-moi
+Tu n'as pas besoin de me conquérir
+Je ne me lasserai pas de te demander de rester
+Tu me rends fou, je suis à tes pieds
+
+Bébé es-tu partante
+Ne remets pas ça à plus tard
+Car le temps pour danser encore s'écoule
+
+Et dépêche-toi
+Je veux te voir comme ça
+Bien collée à moi
+Jusqu'à ce que le soleil se lève
+
+Dévore-moi
+Avec toi je reste ici
+Dans les rues de Madrid
+
+En dansant une autre bachata sensuelle
+Sensuelle, sensuelle
+Sensuelle, sensuelle
+En dansant une autre bachata sensuelle
+Sensuelle, sensuelle
+Sensuelle, sensuelle
+
+Et dépêche-toi
+Je veux te voir comme ça
+Bien collée à moi
+Jusqu'à ce que le soleil se lève
+
+Dévore-moi
+Avec toi je reste ici
+Dans les rues de Madrid
+
+En dansant une autre bachata sensuelle
+Sensuelle, sensuelle
+Sensuelle, sensuelle
+En dansant une autre bachata sensuelle
+Sensuelle, sensuelle
+Sensuelle, sensuelle`,
+    },
+  },
+  {
+    id: "el-papel-pt-2-romeo-santos",
+    title: "El Papel, Pt. 2",
+    artist: "Romeo Santos",
+    year: 2017,
+    tags: ["drama", "mensonges", "classique"],
+    color: "#ca8a04",
+    spotify: "https://open.spotify.com/search/El%20papel%20pt%202%20Romeo%20Santos",
+    lyrics: {
+      es: `Someone believes
+What they choose to believe
+
+Tú me amas?
+Of course I love you baby
+
+Quién es él?
+He's just a friend, you're my only king baby
+
+Anoche cuando yo te hacía el amor no me mirabas a la cara
+Presiento que tu orgasmo fue fingido no digas nada
+Tú conoces mis defectos y me pruebas cada vez que me maltratas
+Me enamoro más de ti como un idiota soy tu títere mi amada
+
+No te exijo honestidad mi petición la hipocresía de ser tu dueño
+Me niego a la realidad hazme creer que soy el hombre de tus sueños
+
+Soy muy débil vulnerable momentáneo en las intimidades
+No realizo esas fantasías sexuales y tus mentiras son mis verdades
+
+Píntame un cuadro y hazme un papel
+Monta un teatro te voy a creer
+
+Miénteme, como lo has hecho en el pasado
+Atrévete, humíllame que eso no es raro
+Sigues siendo la villana en esta obra, tu maldad a mi me fascina
+
+Miénteme, son tus instintos de mujer
+Atrévete, te quiero más cuando eres cruel
+Me enamoro de tus falsos sentimientos, me alimento de mentiras
+
+Píntame un cuadro y hazme un papel
+Monta un teatro te voy a creer
+
+That's the golden touch right there
+I tried to tell'em
+
+Anoche cuando yo te hacía el amor sentí una pasión salvaje
+Susurraste el nombre de otro caballero (gosh), no quiero detalles
+Soy muy débil vulnerable medio soso en las intimidades
+No realizo esas fantasías sexuales y tus mentiras son mis verdades
+
+Píntame un cuadro y hazme un papel
+Monta un teatro te voy a creer
+
+Miénteme, como lo has hecho en el pasado (anda)
+Atrévete, humíllame que eso no es raro
+Sigues siendo la villana en esta obra, tu maldad a mi me fascina
+
+Miénteme, son tus instintos de mujer
+Atrévete, te quiero más cuando eres cruel
+Me enamoro de tus falsos sentimientos, me alimento de mentiras
+
+Píntame un cuadro y hazme un papel
+Monta un teatro te voy a creer
+
+Escucha las palabras, de tu verdadero rey
+So nasty!
+
+Miénteme, hasta el día que quieras hagamos
+Atrévete de ti solo quiero una actuación
+Miénteme, no te atrevas a decir que no mando en tu cama ni en tu alma por favor
+
+Miénteme, todos los días y en cada ocasión
+Atrévete, dime que soy tu negro lindo que no hay otro como yo
+Dale morena te lo pido por el amor de Dios, te lo exige mi corazón
+
+Miénteme
+Ay que feeling mami`,
+      fr: `Quelqu'un croit
+Ce qu'il choisit de croire
+
+Tu m'aimes ?
+Bien sûr que je t'aime bébé
+
+Qui est-il ?
+C'est juste un ami, tu es mon seul roi bébé
+
+Hier soir quand je te faisais l'amour tu ne me regardais pas dans les yeux
+Je pressens que ton orgasme a été simulé ne dis rien
+Tu connais mes défauts et tu me testes à chaque fois que tu me maltraites
+Je tombe encore plus amoureux de toi comme un idiot je suis ta marionnette ma bien-aimée
+
+Je n'exige pas d'honnêteté, ma demande c'est l'hypocrisie d'être à toi
+Je refuse la réalité, fais-moi croire que je suis l'homme de tes rêves
+
+Je suis très faible vulnérable momentané dans l'intimité
+Je ne réalise pas ces fantasmes sexuels et tes mensonges sont mes vérités
+
+Peins-moi un tableau et joue-moi un rôle
+Monte un théâtre je vais te croire
+
+Mens-moi, comme tu l'as fait dans le passé
+Ose, humilie-moi ce n'est pas rare
+Tu restes la méchante dans cette pièce, ta méchanceté me fascine
+
+Mens-moi, ce sont tes instincts de femme
+Ose, je t'aime plus quand tu es cruelle
+Je tombe amoureux de tes faux sentiments, je me nourris de mensonges
+
+Peins-moi un tableau et joue-moi un rôle
+Monte un théâtre je vais te croire
+
+C'est ça la touche en or
+J'ai essayé de leur dire
+
+Hier soir quand je te faisais l'amour j'ai ressenti une passion sauvage
+Tu as murmuré le nom d'un autre gentleman (gosh), je ne veux pas de détails
+Je suis très faible vulnérable un peu fade dans l'intimité
+Je ne réalise pas ces fantasmes sexuels et tes mensonges sont mes vérités
+
+Peins-moi un tableau et joue-moi un rôle
+Monte un théâtre je vais te croire
+
+Mens-moi, comme tu l'as fait dans le passé (allez)
+Ose, humilie-moi ce n'est pas rare
+Tu restes la méchante dans cette pièce, ta méchanceté me fascine
+
+Mens-moi, ce sont tes instincts de femme
+Ose, je t'aime plus quand tu es cruelle
+Je tombe amoureux de tes faux sentiments, je me nourris de mensonges
+
+Peins-moi un tableau et joue-moi un rôle
+Monte un théâtre je vais te croire
+
+Écoute les mots, de ton véritable roi
+So nasty !
+
+Mens-moi, jusqu'au jour où tu voudras qu'on le fasse
+Ose, de toi je veux seulement une performance
+Mens-moi, n'ose pas dire que je ne commande ni dans ton lit ni dans ton âme s'il te plaît
+
+Mens-moi, tous les jours et à chaque occasion
+Ose, dis-moi que je suis ton beau noir qu'il n'y a personne comme moi
+Allez belle brune je te le demande pour l'amour de Dieu, mon cœur l'exige
+
+Mens-moi
+Oh quel feeling mami`,
+    },
+  },
 ];
 
 
