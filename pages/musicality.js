@@ -20,6 +20,7 @@ export default function MusicalityTrainer() {
   const [showFlash, setShowFlash] = useState(null);
   const [remoteUrl, setRemoteUrl] = useState('');
   const [youtubeId, setYoutubeId] = useState('');
+  const [activeMarkerId, setActiveMarkerId] = useState(null);
 
   // -- Spotify Pro States --
   const [clientId, setClientId] = useState('');
@@ -67,6 +68,10 @@ export default function MusicalityTrainer() {
     
     wavesurfer.current.on('ready', () => {
       setIsLoading(false);
+    });
+
+    wavesurfer.current.on('seek', (progress) => {
+      setCurrentTime(wavesurfer.current.getCurrentTime());
     });
 
     wavesurfer.current.on('error', (err) => {
@@ -179,7 +184,15 @@ export default function MusicalityTrainer() {
     setShowFlash(type);
     setTimeout(() => setShowFlash(null), 150);
 
-    const newMarker = { time, type, label, color, id: Date.now() };
+    const newMarker = { 
+      time, 
+      type, 
+      label, 
+      color, 
+      id: Date.now(),
+      note: '',
+      videoUrl: ''
+    };
     const updatedMarkers = [...markers, newMarker].sort((a, b) => a.time - b.time);
     setMarkers(updatedMarkers);
     
@@ -188,6 +201,27 @@ export default function MusicalityTrainer() {
     if (remoteUrl) storageKey = `markers-url-${btoa(remoteUrl).substring(0, 20)}`;
     
     localStorage.setItem(storageKey, JSON.stringify(updatedMarkers));
+    setActiveMarkerId(newMarker.id); // Auto-open for editing
+  };
+
+  const updateMarker = (id, updates) => {
+    const updatedMarkers = markers.map(m => m.id === id ? { ...m, ...updates } : m);
+    setMarkers(updatedMarkers);
+    
+    let storageKey = `markers-${selectedSongId}`;
+    if (localFile) storageKey = `markers-local-${localFile.name}`;
+    if (remoteUrl) storageKey = `markers-url-${btoa(remoteUrl).substring(0, 20)}`;
+    localStorage.setItem(storageKey, JSON.stringify(updatedMarkers));
+  };
+
+  const deleteMarker = (id) => {
+    const updatedMarkers = markers.filter(m => m.id !== id);
+    setMarkers(updatedMarkers);
+    let storageKey = `markers-${selectedSongId}`;
+    if (localFile) storageKey = `markers-local-${localFile.name}`;
+    if (remoteUrl) storageKey = `markers-url-${btoa(remoteUrl).substring(0, 20)}`;
+    localStorage.setItem(storageKey, JSON.stringify(updatedMarkers));
+    setActiveMarkerId(null);
   };
 
   // -- Keyboard Shortcuts for Recording --
@@ -428,7 +462,18 @@ export default function MusicalityTrainer() {
               )}
 
               {spotifyAnalysis && !localFile && !remoteUrl && (
-                <div className="spotify-pseudo-waveform">
+                <div 
+                  className="spotify-pseudo-waveform"
+                  onClick={(e) => {
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const pct = x / rect.width;
+                    const newTime = pct * spotifyAnalysis.track.duration;
+                    setCurrentTime(newTime);
+                    if (spotifyPlayer) spotifyPlayer.seek(newTime * 1000);
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
                   <svg viewBox={`0 0 ${spotifyAnalysis.track.duration * 10} 120`} preserveAspectRatio="none">
                     {spotifyAnalysis.segments.map((seg, i) => (
                       <rect 
@@ -588,12 +633,59 @@ export default function MusicalityTrainer() {
             <div className="markers-list">
               <h3>Marqueurs ({markers.length})</h3>
               <div className="markers-grid">
-                {markers.length === 0 && <p className="empty-msg">Aucun marqueur. Utilise le bouton Enregistrer !</p>}
                 {markers.map(m => (
-                  <div key={m.id} className="marker-item" onClick={() => wavesurfer.current.setTime(m.time)}>
-                    <span className="marker-dot" style={{ backgroundColor: m.color }} />
-                    <span className="marker-time">{Math.floor(m.time / 60)}:{(m.time % 60).toFixed(1).padStart(4, '0')}</span>
-                    <span className="marker-label">{m.label}</span>
+                  <div 
+                    key={m.id} 
+                    className={`marker-item ${activeMarkerId === m.id ? 'active' : ''}`} 
+                    onClick={() => {
+                      if (wavesurfer.current) wavesurfer.current.setTime(m.time);
+                      else {
+                        setCurrentTime(m.time);
+                        if (spotifyPlayer) spotifyPlayer.seek(m.time * 1000);
+                      }
+                      setActiveMarkerId(m.id);
+                    }}
+                  >
+                    <div className="marker-main">
+                      <span className="marker-dot" style={{ backgroundColor: m.color }} />
+                      <span className="marker-time">{Math.floor(m.time / 60)}:{(m.time % 60).toFixed(1).padStart(4, '0')}</span>
+                      <span className="marker-label">{m.label}</span>
+                      {(m.note || m.videoUrl) && (
+                        <div className="marker-badges">
+                          {m.note && <span className="badge">📝</span>}
+                          {m.videoUrl && <span className="badge">🎬</span>}
+                        </div>
+                      )}
+                    </div>
+                    {activeMarkerId === m.id && (
+                      <div className="marker-edit-panel animate-slide-up" onClick={e => e.stopPropagation()}>
+                        <textarea 
+                          placeholder="Ajouter une note (ex: Entrée des bongos)..." 
+                          value={m.note}
+                          onChange={(e) => updateMarker(m.id, { note: e.target.value })}
+                        />
+                        <div className="video-link-row">
+                          <span className="icon">🎬</span>
+                          <input 
+                            type="text" 
+                            placeholder="URL Vidéo (Cloudinary/YouTube)..." 
+                            value={m.videoUrl}
+                            onChange={(e) => updateMarker(m.id, { videoUrl: e.target.value })}
+                          />
+                        </div>
+                        
+                        {m.videoUrl && (
+                          <div className="marker-video-preview">
+                            <VideoPreview url={m.videoUrl} />
+                          </div>
+                        )}
+
+                        <div className="edit-actions">
+                          <button className="btn-delete" onClick={() => deleteMarker(m.id)}>Supprimer</button>
+                          <button className="btn-close" onClick={() => setActiveMarkerId(null)}>Fermer</button>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -605,6 +697,96 @@ export default function MusicalityTrainer() {
       </main>
 
       <style jsx>{`
+        .marker-item.active {
+          border-color: var(--accent);
+          background: rgba(124, 58, 237, 0.1);
+          flex-direction: column;
+          align-items: stretch;
+          height: auto;
+        }
+        .marker-main {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          flex: 1;
+        }
+        .marker-badges {
+          margin-left: auto;
+          display: flex;
+          gap: 4px;
+        }
+        .badge { font-size: 0.9rem; }
+        
+        .marker-edit-panel {
+          margin-top: 16px;
+          padding-top: 16px;
+          border-top: 1px solid rgba(255,255,255,0.1);
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+        .marker-edit-panel textarea {
+          width: 100%;
+          background: rgba(0,0,0,0.3);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          color: white;
+          padding: 12px;
+          font-size: 0.9rem;
+          min-height: 80px;
+          resize: vertical;
+        }
+        .video-link-row {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          background: rgba(0,0,0,0.3);
+          border: 1px solid var(--border);
+          padding: 8px 16px;
+          border-radius: 12px;
+        }
+        .video-link-row input {
+          flex: 1;
+          background: transparent;
+          border: none;
+          color: white;
+          font-size: 0.85rem;
+          outline: none;
+        }
+        .marker-video-preview {
+          border-radius: 12px;
+          overflow: hidden;
+          background: #000;
+          aspect-ratio: 16/9;
+        }
+        .edit-actions {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 8px;
+        }
+        .btn-delete {
+          color: #ef4444;
+          font-size: 0.8rem;
+          font-weight: 700;
+          background: transparent;
+          border: none;
+        }
+        .btn-close {
+          background: var(--accent);
+          color: white;
+          border: none;
+          padding: 6px 16px;
+          border-radius: 8px;
+          font-size: 0.8rem;
+          font-weight: 700;
+        }
+        
+        @keyframes slideUp {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slide-up { animation: slideUp 0.3s ease-out; }
         .musicality-page {
           min-height: 100vh;
           background: var(--bg-primary);
@@ -1045,5 +1227,37 @@ export default function MusicalityTrainer() {
         }
       `}</style>
     </div>
+  );
+}
+
+function VideoPreview({ url }) {
+  if (!url) return null;
+  
+  const isYouTube = url.includes('youtube.com') || url.includes('youtu.be');
+  let youtubeId = '';
+  if (isYouTube) {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    youtubeId = (match && match[2].length === 11) ? match[2] : '';
+  }
+
+  if (isYouTube && youtubeId) {
+    return (
+      <iframe 
+        width="100%" 
+        height="100%" 
+        src={`https://www.youtube.com/embed/${youtubeId}?autoplay=0&controls=1`}
+        frameBorder="0" 
+        allowFullScreen 
+      />
+    );
+  }
+
+  return (
+    <video 
+      src={url} 
+      controls 
+      style={{ width: '100%', height: '100%' }}
+    />
   );
 }
