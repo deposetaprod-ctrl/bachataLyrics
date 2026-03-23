@@ -6,6 +6,9 @@ export default function Document() {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="description" content="Les meilleures paroles de bachata avec traductions françaises. Découvrez, lisez et comprenez les paroles de vos chansons préférées." />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link
