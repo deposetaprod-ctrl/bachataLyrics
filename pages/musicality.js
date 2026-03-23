@@ -28,6 +28,8 @@ export default function MusicalityTrainer() {
   const [spotifyAnalysis, setSpotifyAnalysis] = useState(null);
   const [spotifyPlayer, setSpotifyPlayer] = useState(null);
   const [deviceId, setDeviceId] = useState(null);
+  const [communitySessions, setCommunitySessions] = useState([]);
+  const [showCommunity, setShowCommunity] = useState(false);
 
   // -- Supabase Auth State --
   const [user, setUser] = useState(null);
@@ -270,6 +272,18 @@ export default function MusicalityTrainer() {
     if (user && selectedSongId) loadFromSupabase();
   }, [user, selectedSongId]);
 
+  const fetchCommunitySessions = async () => {
+    if (!supabaseClient || !selectedSongId) return;
+    const { data, error } = await supabaseClient
+      .from('musicality_sessions')
+      .select('*, profiles(username)')
+      .eq('song_id', selectedSongId)
+      .neq('user_id', user?.id || '');
+
+    if (data) setCommunitySessions(data);
+    setShowCommunity(true);
+  };
+
   const updateMarker = (id, updates) => {
     const updatedMarkers = markers.map(m => m.id === id ? { ...m, ...updates } : m);
     setMarkers(updatedMarkers);
@@ -288,6 +302,36 @@ export default function MusicalityTrainer() {
     if (remoteUrl) storageKey = `markers-url-${btoa(remoteUrl).substring(0, 20)}`;
     localStorage.setItem(storageKey, JSON.stringify(updatedMarkers));
     setActiveMarkerId(null);
+  };
+
+  const uploadVideo = async (markerId, file) => {
+    if (!supabaseClient || !user) return;
+    if (file.size > 10 * 1024 * 1024) { // 10MB limit
+      alert("Fichier trop gros ! (Max 10MB)");
+      return;
+    }
+
+    setIsLoading(true);
+    const fileExt = file.name.split('.').pop();
+    const fileName = `${user.id}/${Date.now()}.${fileExt}`;
+    const filePath = `passes/${fileName}`;
+
+    let { error: uploadError } = await supabaseClient.storage
+      .from('pass-videos')
+      .upload(filePath, file);
+
+    if (uploadError) {
+      alert("Erreur upload: " + uploadError.message);
+      setIsLoading(false);
+      return;
+    }
+
+    const { data: { publicUrl } } = supabaseClient.storage
+      .from('pass-videos')
+      .getPublicUrl(filePath);
+
+    updateMarker(markerId, { videoUrl: publicUrl });
+    setIsLoading(false);
   };
 
   // -- Keyboard Shortcuts for Recording --
@@ -503,6 +547,64 @@ export default function MusicalityTrainer() {
                   <option key={song.id} value={song.id}>{song.title} - {song.artist}</option>
                 ))}
               </select>
+              
+              {selectedSongId && (
+                <div className="discovery-actions animate-fade-in">
+                  <button className="btn-community" onClick={fetchCommunitySessions}>
+                    🌏 Voir les analyses de la communauté
+                  </button>
+                </div>
+              )}
+
+              {showCommunity && communitySessions.length > 0 && (
+                <div className="community-overlay glass animate-slide-up">
+                  <div className="overlay-header">
+                    <h4>Analyses partagées 🌏</h4>
+                    <button className="btn-close-small" onClick={() => setShowCommunity(false)}>✕</button>
+                  </div>
+                  <div className="community-list">
+                    {communitySessions.map(sess => (
+                      <div key={sess.id} className="community-item" onClick={() => { setMarkers(sess.markers); setShowCommunity(false); }}>
+                        <span className="user-icon">👤</span>
+                        <div className="item-info">
+                          <span className="username">{sess.profiles?.username || 'Anonyme'}</span>
+                          <span className="meta">{sess.markers.length} marqueurs • {new Date(sess.updated_at).toLocaleDateString()}</span>
+                        </div>
+                        <button className="btn-load-sess">Charger</button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {selectedSongId && (
+                <div className="discovery-actions animate-fade-in">
+                  <button className="btn-community" onClick={fetchCommunitySessions}>
+                    🌏 Voir les analyses de la communauté
+                  </button>
+                </div>
+              )}
+
+              {showCommunity && communitySessions.length > 0 && (
+                <div className="community-overlay glass animate-slide-up">
+                  <div className="overlay-header">
+                    <h4>Analyses partagées 🌏</h4>
+                    <button className="btn-close-small" onClick={() => setShowCommunity(false)}>✕</button>
+                  </div>
+                  <div className="community-list">
+                    {communitySessions.map(sess => (
+                      <div key={sess.id} className="community-item" onClick={() => { setMarkers(sess.markers); setShowCommunity(false); }}>
+                        <span className="user-icon">👤</span>
+                        <div className="item-info">
+                          <span className="username">{sess.profiles?.username || 'Anonyme'}</span>
+                          <span className="meta">{sess.markers.length} marqueurs • {new Date(sess.updated_at).toLocaleDateString()}</span>
+                        </div>
+                        <button className="btn-load-sess">Charger</button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
               
               {!selectedSongId && !remoteUrl && !youtubeId && (
                 <div className="drop-hint animate-fade-in">
@@ -765,6 +867,19 @@ export default function MusicalityTrainer() {
                             value={m.videoUrl}
                             onChange={(e) => updateMarker(m.id, { videoUrl: e.target.value })}
                           />
+                          <button className="btn-upload-small" onClick={() => document.getElementById(`upload-${m.id}`).click()}>
+                            ☁️ Upload
+                          </button>
+                          <input 
+                            id={`upload-${m.id}`}
+                            type="file" 
+                            accept="video/*" 
+                            style={{ display: 'none' }}
+                            onChange={(e) => {
+                              const file = e.target.files[0];
+                              if (file) uploadVideo(m.id, file);
+                            }}
+                          />
                         </div>
                         
                         {m.videoUrl && (
@@ -880,6 +995,115 @@ export default function MusicalityTrainer() {
           to { opacity: 1; transform: translateY(0); }
         }
         .animate-slide-up { animation: slideUp 0.3s ease-out; }
+        
+        .auth-profile { margin-left: 20px; }
+        .user-logged { display: flex; align-items: center; gap: 12px; }
+        .user-name { font-size: 0.85rem; font-weight: 700; color: var(--accent); }
+        .btn-login, .btn-logout {
+          background: rgba(255,255,255,0.05);
+          border: 1px solid var(--border);
+          color: white;
+          padding: 6px 14px;
+          border-radius: 10px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          cursor: pointer;
+        }
+        .btn-login:hover { background: var(--accent); }
+        
+        .btn-upload-small {
+          background: var(--accent);
+          color: white;
+          border: none;
+          padding: 4px 10px;
+          border-radius: 6px;
+          font-size: 0.75rem;
+          font-weight: 700;
+        }
+
+        .discovery-actions { margin-top: 16px; }
+        .btn-community {
+          width: 100%;
+          background: rgba(124, 58, 237, 0.1);
+          border: 1.5px dashed var(--accent);
+          color: var(--accent);
+          padding: 12px;
+          border-radius: 16px;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .btn-community:hover { background: rgba(124, 58, 237, 0.2); transform: translateY(-2px); }
+
+        .community-overlay {
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(10, 10, 10, 0.95);
+          z-index: 100;
+          padding: 24px;
+          border-radius: 24px;
+          display: flex;
+          flex-direction: column;
+        }
+        .overlay-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .community-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+        .community-item {
+          background: rgba(255,255,255,0.05);
+          padding: 16px;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          cursor: pointer;
+          border: 1px solid var(--border);
+        }
+        .community-item:hover { border-color: var(--accent); background: rgba(255,255,255,0.08); }
+        .item-info { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+        .username { font-weight: 800; color: white; }
+        .meta { font-size: 0.75rem; color: var(--text-muted); }
+        .btn-load-sess { background: var(--accent); color: white; border: none; padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; }
+
+        .discovery-actions { margin-top: 16px; }
+        .btn-community {
+          width: 100%;
+          background: rgba(124, 58, 237, 0.1);
+          border: 1.5px dashed var(--accent);
+          color: var(--accent);
+          padding: 12px;
+          border-radius: 16px;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .btn-community:hover { background: rgba(124, 58, 237, 0.2); transform: translateY(-2px); }
+
+        .community-overlay {
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(10, 10, 10, 0.95);
+          z-index: 100;
+          padding: 24px;
+          border-radius: 24px;
+          display: flex;
+          flex-direction: column;
+        }
+        .overlay-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .community-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+        .community-item {
+          background: rgba(255,255,255,0.05);
+          padding: 16px;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          cursor: pointer;
+          border: 1px solid var(--border);
+        }
+        .community-item:hover { border-color: var(--accent); background: rgba(255,255,255,0.08); }
+        .item-info { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+        .username { font-weight: 800; color: white; }
+        .meta { font-size: 0.75rem; color: var(--text-muted); }
+        .btn-load-sess { background: var(--accent); color: white; border: none; padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; }
         .musicality-page {
           min-height: 100vh;
           background: var(--bg-primary);
