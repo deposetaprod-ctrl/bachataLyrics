@@ -1,16 +1,14 @@
-import { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
 import { songs as allSongs } from '../data/songs';
 import MusicalityHUD from '../components/MusicalityHUD';
+import { redirectToAuthCodeFlow, getAccessToken, fetchAudioAnalysis } from '../utils/spotify';
 
 export default function MusicalityTrainer() {
   const router = useRouter();
   const [selectedSongId, setSelectedSongId] = useState('');
   const [localFile, setLocalFile] = useState(null);
-  const [spotifyToken, setSpotifyToken] = useState('');
-  const [spotifyAnalysis, setSpotifyAnalysis] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -18,6 +16,14 @@ export default function MusicalityTrainer() {
   const [upcomingMarker, setUpcomingMarker] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [manualTimer, setManualTimer] = useState(null);
+  const [showFlash, setShowFlash] = useState(null);
+
+  // -- Spotify Pro States --
+  const [clientId, setClientId] = useState('');
+  const [accessToken, setAccessToken] = useState('');
+  const [spotifyAnalysis, setSpotifyAnalysis] = useState(null);
+  const [spotifyPlayer, setSpotifyPlayer] = useState(null);
+  const [deviceId, setDeviceId] = useState(null);
   
   const waveformRef = useRef(null);
   const audioRef = useRef(null);
@@ -66,28 +72,72 @@ export default function MusicalityTrainer() {
     });
   };
 
+  // -- Spotify Player Lifecycle --
+  useEffect(() => {
+    // Handle OAuth Callback
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+    const savedId = localStorage.getItem('spotify_client_id');
+    if (savedId) setClientId(savedId);
+
+    if (code && savedId) {
+      getAccessToken(savedId, code).then(data => {
+        if (data.access_token) {
+          setAccessToken(data.access_token);
+          window.history.replaceState({}, document.title, "/musicality");
+        }
+      });
+    }
+
+    // Load Spotify SDK
+    window.onSpotifyWebPlaybackSDKReady = () => {
+      if (!accessToken) return;
+      
+      const player = new window.Spotify.Player({
+        name: 'Bachata Musicality Trainer',
+        getOAuthToken: cb => { cb(accessToken); },
+        volume: 0.5
+      });
+
+      player.addListener('ready', ({ device_id }) => {
+        console.log('Spotify Player Ready:', device_id);
+        setDeviceId(device_id);
+      });
+
+      player.addListener('player_state_changed', state => {
+        if (!state) return;
+        setIsPlaying(!state.paused);
+        setCurrentTime(state.position / 1000);
+      });
+
+      player.connect();
+      setSpotifyPlayer(player);
+    };
+  }, [accessToken]);
+
   // -- Load Song or Local File --
   useEffect(() => {
-    setSpotifyAnalysis(null);
     if (manualTimer) clearInterval(manualTimer);
     setManualTimer(null);
-    setCurrentTime(0);
+    if (!spotifyPlayer) setCurrentTime(0); // If not Spotify, reset time
+    setIsPlaying(false);
+    setIsRecording(false);
+    setSpotifyAnalysis(null);
+
+    const song = allSongs.find(s => s.id === selectedSongId);
 
     if (localFile && audioRef.current) {
       setIsLoading(true);
       const url = URL.createObjectURL(localFile);
       audioRef.current.src = url;
-      
       const savedMarkers = JSON.parse(localStorage.getItem(`markers-local-${localFile.name}`) || '[]');
       setMarkers(savedMarkers);
-
       if (window.WaveSurfer) {
         initWavesurfer();
         wavesurfer.current.load(url);
       }
       return () => URL.revokeObjectURL(url);
-    } else if (selectedSongId && audioRef.current) {
-      const song = allSongs.find(s => s.id === selectedSongId);
+    } else if (selectedSongId) {
       const savedMarkers = JSON.parse(localStorage.getItem(`markers-${selectedSongId}`) || '[]');
       setMarkers(savedMarkers);
 
@@ -97,34 +147,25 @@ export default function MusicalityTrainer() {
           initWavesurfer();
           wavesurfer.current.load(song.audioUrl);
         }
-      } else if (song && song.spotifyId && spotifyToken) {
-        fetchSpotifyAnalysis(song.spotifyId);
+      } else if (song && song.spotifyId && accessToken) {
+        setIsLoading(true);
+        fetchAudioAnalysis(accessToken, song.spotifyId).then(data => {
+          setSpotifyAnalysis(data);
+          setIsLoading(false);
+        });
       }
     }
-  }, [selectedSongId, localFile, spotifyToken]);
-
-  const fetchSpotifyAnalysis = async (id) => {
-    setIsLoading(true);
-    try {
-      const res = await fetch(`https://api.spotify.com/v1/audio-analysis/${id}`, {
-        headers: { 'Authorization': `Bearer ${spotifyToken}` }
-      });
-      const data = await res.json();
-      if (data.segments) {
-        setSpotifyAnalysis(data);
-      }
-    } catch (err) {
-      console.error('Spotify API Error:', err);
-    }
-    setIsLoading(false);
-  };
+  }, [selectedSongId, localFile, accessToken]);
 
   // -- Keyboard Shortcuts for Recording --
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isRecording) return;
       
-      const time = wavesurfer.current ? wavesurfer.current.getCurrentTime() : currentTime;
+      const time = (wavesurfer.current && wavesurfer.current.getDuration() > 0) 
+        ? wavesurfer.current.getCurrentTime() 
+        : currentTime;
+
       let type = '';
       let label = '';
       let color = '';
@@ -136,6 +177,10 @@ export default function MusicalityTrainer() {
         case 'g': type = 'guira'; label = 'Guira'; color = '#10b981'; break;
         default: return;
       }
+
+      // Visual Flash feedback
+      setShowFlash(type);
+      setTimeout(() => setShowFlash(null), 150);
 
       const newMarker = { time, type, label, color, id: Date.now() };
       const updatedMarkers = [...markers, newMarker].sort((a, b) => a.time - b.time);
@@ -156,14 +201,29 @@ export default function MusicalityTrainer() {
   }, [currentTime, markers]);
 
   const togglePlay = () => {
+    const song = allSongs.find(s => s.id === selectedSongId);
+    
     if (wavesurfer.current && wavesurfer.current.getDuration() > 0) {
       wavesurfer.current.playPause();
+    } else if (spotifyPlayer && deviceId && song?.spotifyId) {
+      // Automatic Spotify Playback via SDK
+      if (isPlaying) {
+        spotifyPlayer.pause();
+      } else {
+        // Start playback on this device
+        fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
+          method: 'PUT',
+          body: JSON.stringify({ uris: [`spotify:track:${song.spotifyId}`], position_ms: currentTime * 1000 }),
+          headers: { 'Authorization': `Bearer ${accessToken}` }
+        });
+      }
     } else {
-      // Manual Sync for Spotify
+      // Manual fallback
       if (isPlaying) {
         if (manualTimer) clearInterval(manualTimer);
         setManualTimer(null);
         setIsPlaying(false);
+        setIsRecording(false);
       } else {
         setIsPlaying(true);
         const start = Date.now() - (currentTime * 1000);
@@ -173,6 +233,12 @@ export default function MusicalityTrainer() {
         setManualTimer(timer);
       }
     }
+  };
+
+  const loginSpotify = () => {
+    if (!clientId) return alert("Veuillez entrer votre Client ID Spotify");
+    localStorage.setItem('spotify_client_id', clientId);
+    redirectToAuthCodeFlow(clientId);
   };
 
   const toggleRecording = () => setIsRecording(!isRecording);
@@ -202,6 +268,9 @@ export default function MusicalityTrainer() {
       <Script 
         src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js" 
         onLoad={initWavesurfer}
+      />
+      <Script 
+        src="https://sdk.scdn.co/spotify-player.js"
       />
 
       <header className="navbar">
@@ -247,9 +316,32 @@ export default function MusicalityTrainer() {
               >
                 <option value="">-- Choisir une chanson --</option>
                 {allSongs.map(song => (
-                  <option key={song.id} value={song.id}>{song.title} - {song.artist} {song.audioUrl ? '✅' : '🔗'}</option>
+                  <option key={song.id} value={song.id}>{song.title} - {song.artist} {song.audioUrl ? ' (Visuel ✅)' : ' (Spotify 🔗)'}</option>
                 ))}
               </select>
+
+              {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && (
+                <div className="spotify-auth-zone glass animate-fade-in">
+                  {!accessToken ? (
+                    <>
+                      <input 
+                        className="token-input" 
+                        placeholder="Ton Spotify Client ID..." 
+                        value={clientId}
+                        onChange={(e) => setClientId(e.target.value)}
+                      />
+                      <button className="btn-spotify" onClick={loginSpotify}>
+                        <span className="icon">🔓</span> Se connecter à Spotify
+                      </button>
+                      <p className="help-text">Nécessaire pour le visuel et la synchronisation automatique.</p>
+                    </>
+                  ) : (
+                    <div className="auth-status">
+                      <span className="status-dot green" /> Spotify Connecté
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           ) : (
             <div className="local-file-info animate-fade-in">
@@ -260,29 +352,18 @@ export default function MusicalityTrainer() {
               </div>
             </div>
           )}
-          
-          {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && !localFile && (
-            <div className="spotify-token-card animate-fade-in">
-              <input 
-                type="text" 
-                placeholder="Coller un Token Spotify pour voir la Waveform..." 
-                value={spotifyToken} 
-                onChange={(e) => setSpotifyToken(e.target.value)}
-                className="token-input"
-              />
-              <p className="token-help">
-                <a href="https://developer.spotify.com/console/get-audio-analysis/" target="_blank" rel="noopener noreferrer">Générer un Token ici</a> (Prendre "Get Token" en haut)
-              </p>
-            </div>
-          )}
         </div>
 
         {(selectedSongId || localFile) && (
           <div className="player-section animate-fade-in glass">
+            {showFlash && (
+              <div className={`screen-flash ${showFlash}`} />
+            )}
+            
             {isLoading && (
               <div className="loading-overlay">
                 <div className="spinner" />
-                <span>Analyse en cours...</span>
+                <span>Chargement...</span>
               </div>
             )}
             
@@ -293,25 +374,26 @@ export default function MusicalityTrainer() {
               
               {spotifyAnalysis && !localFile && (
                 <div className="spotify-pseudo-waveform">
-                  <svg viewBox={`0 0 ${spotifyAnalysis.track.duration * 10} 100`} preserveAspectRatio="none">
+                  <svg viewBox={`0 0 ${spotifyAnalysis.track.duration * 10} 120`} preserveAspectRatio="none">
                     {spotifyAnalysis.segments.map((seg, i) => (
                       <rect 
                         key={i}
                         x={seg.start * 10}
-                        y={50 - (Math.max(0, seg.loudness_max + 60) * 0.8)}
+                        y={60 - (Math.max(0, seg.loudness_max + 60) * 1.0)}
                         width={seg.duration * 10}
-                        height={Math.max(2, (Math.max(0, seg.loudness_max + 60) * 1.6))}
+                        height={Math.max(2, (Math.max(0, seg.loudness_max + 60) * 2.0))}
                         fill={seg.start <= currentTime ? 'var(--accent)' : 'rgba(255,255,255,0.1)'}
+                        opacity={0.8}
                       />
                     ))}
                   </svg>
-                  <div className="pseudo-playhead" style={{ left: `${(currentTime / spotifyAnalysis.track.duration) * 100}%` }} />
+                  <div className="playhead-line" style={{ left: `${(currentTime / spotifyAnalysis.track.duration) * 100}%` }} />
                 </div>
               )}
 
               <div className="markers-layer">
                 {markers.map(marker => {
-                  const duration = wavesurfer.current?.getDuration() || spotifyAnalysis?.track?.duration || 1;
+                  const duration = wavesurfer.current?.getDuration() || spotifyAnalysis?.track?.duration || 300;
                   return (
                     <div 
                       key={marker.id}
@@ -321,7 +403,10 @@ export default function MusicalityTrainer() {
                       }}
                       onClick={() => {
                         if (wavesurfer.current) wavesurfer.current.setTime(marker.time);
-                        else setCurrentTime(marker.time);
+                        else {
+                          setCurrentTime(marker.time);
+                          if (spotifyPlayer) spotifyPlayer.seek(marker.time * 1000);
+                        }
                       }}
                     >
                       <span className="marker-icon">
@@ -336,8 +421,9 @@ export default function MusicalityTrainer() {
               </div>
             </div>
 
-            {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && !localFile && (
+            {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && !localFile && !accessToken && (
               <div className="spotify-embed-container glass">
+                <p className="manual-hint">Connectez Spotify ci-dessus pour activer la Waveform. <br/> Sinon, utilisez le bouton <b>Record</b> manuellement.</p>
                 <iframe 
                   src={`https://open.spotify.com/embed/track/${allSongs.find(s => s.id === selectedSongId).spotifyId}`} 
                   width="100%" 
@@ -345,7 +431,6 @@ export default function MusicalityTrainer() {
                   frameBorder="0" 
                   allow="encrypted-media"
                 />
-                <p className="sync-note">Lance Spotify 👆 puis clique sur <b>Synchroniser</b> 👇 au début du morceau</p>
               </div>
             )}
 
@@ -366,24 +451,27 @@ export default function MusicalityTrainer() {
                 <span className="total"> / {
                   wavesurfer.current?.getDuration() 
                   ? `${Math.floor(wavesurfer.current.getDuration() / 60)}:${(wavesurfer.current.getDuration() % 60).toFixed(0).padStart(2, '0')}` 
-                  : spotifyAnalysis?.track?.duration 
-                  ? `${Math.floor(spotifyAnalysis.track.duration / 60)}:${(spotifyAnalysis.track.duration % 60).toFixed(0).padStart(2, '0')}`
-                  : '0:00'
+                  : 'X:XX'
                 }</span>
               </div>
               
               {!wavesurfer.current?.getDuration() && (
-                <button className="btn-secondary" onClick={() => setCurrentTime(0)}>Rewind</button>
+                <button className="btn-secondary" onClick={() => setCurrentTime(0)}>Zéro</button>
               )}
 
               <div className="spacer" />
 
               <button 
                 className={`btn-record-pill ${isRecording ? 'active' : ''}`} 
-                onClick={toggleRecording}
+                onClick={() => {
+                  if (!isPlaying && !wavesurfer.current?.getDuration()) {
+                    togglePlay();
+                  }
+                  setIsRecording(!isRecording);
+                }}
               >
                 <div className="dot" />
-                {isRecording ? 'Terminer' : (wavesurfer.current?.getDuration() ? 'Enregistrer' : 'Synchroniser')}
+                {isRecording ? 'Stop' : 'Record'}
               </button>
 
               <button className="btn-secondary" onClick={clearMarkers}>Vider</button>
@@ -532,29 +620,101 @@ export default function MusicalityTrainer() {
           transition: border-color 0.2s;
         }
         .song-select:focus { border-color: var(--accent); }
-        .spotify-token-card {
-          margin-top: 12px;
-          text-align: center;
+        .select-wrapper {
+          position: relative;
         }
-        .token-input {
-          width: 100%;
-          background: rgba(168, 85, 247, 0.05);
-          border: 1px dashed var(--accent);
-          padding: 10px 16px;
-          border-radius: 12px;
-          color: white;
-          font-size: 0.8rem;
-          outline: none;
-        }
-        .token-help { font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; }
-        .token-help a { color: var(--accent); text-decoration: underline; }
-        
+
         .player-section {
           padding: 40px;
           border-radius: 40px;
           box-shadow: 0 40px 100px -20px rgba(0,0,0,0.6);
           position: relative;
+          overflow: hidden;
         }
+
+        .screen-flash {
+          position: absolute;
+          inset: 0;
+          z-index: 50;
+          pointer-events: none;
+          opacity: 0;
+          animation: flash 0.15s ease-out;
+        }
+        .screen-flash.bongo { background: rgba(59, 130, 246, 0.4); }
+        .screen-flash.roll { background: rgba(168, 85, 247, 0.4); }
+        .screen-flash.break { background: rgba(239, 68, 68, 0.4); }
+        .screen-flash.guira { background: rgba(16, 185, 129, 0.4); }
+        @keyframes flash { from { opacity: 1; } to { opacity: 0; } }
+        .manual-hint { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; font-weight: 500; }
+
+        .spotify-auth-zone {
+          margin-top: 16px;
+          padding: 16px;
+          border-radius: 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          border: 1px dashed var(--accent);
+        }
+        .btn-spotify {
+          background: #1DB954;
+          color: black;
+          font-weight: 800;
+          padding: 10px;
+          border-radius: 999px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          font-size: 0.9rem;
+        }
+        .token-input {
+          background: rgba(0,0,0,0.3);
+          border: 1px solid var(--border);
+          padding: 8px 12px;
+          border-radius: 8px;
+          color: white;
+          font-size: 0.8rem;
+        }
+        .auth-status { font-size: 0.9rem; font-weight: 700; color: #1DB954; display: flex; align-items: center; gap: 8px; }
+        .status-dot { width: 8px; height: 8px; border-radius: 50%; }
+        .status-dot.green { background: #1DB954; box-shadow: 0 0 10px #1DB954; }
+
+        .spotify-pseudo-waveform {
+          position: relative;
+          width: 100%;
+          height: 120px;
+          background: rgba(0,0,0,0.4);
+          border-radius: 24px;
+          overflow: hidden;
+        }
+        .playhead-line {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background: white;
+          box-shadow: 0 0 15px white;
+          z-index: 5;
+        }
+        .manual-progress {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          background: var(--accent-dim);
+          border-right: 2px solid var(--accent);
+          transition: width 0.05s linear;
+        }
+
+        .spotify-embed-container {
+          padding: 24px;
+          border-radius: 24px;
+          margin-bottom: 32px;
+          text-align: center;
+        }
+        .manual-hint { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; font-weight: 500; }
+
         .loading-overlay {
           position: absolute;
           inset: 0;
