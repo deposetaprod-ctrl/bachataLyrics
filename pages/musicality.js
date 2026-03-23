@@ -18,6 +18,8 @@ export default function MusicalityTrainer() {
   const [isLoading, setIsLoading] = useState(false);
   const [manualTimer, setManualTimer] = useState(null);
   const [showFlash, setShowFlash] = useState(null);
+  const [remoteUrl, setRemoteUrl] = useState('');
+  const [youtubeId, setYoutubeId] = useState('');
 
   // -- Spotify Pro States --
   const [clientId, setClientId] = useState('');
@@ -127,7 +129,16 @@ export default function MusicalityTrainer() {
 
     const song = allSongs.find(s => s.id === selectedSongId);
 
-    if (localFile && audioRef.current) {
+    if (remoteUrl && audioRef.current) {
+      setIsLoading(true);
+      audioRef.current.src = remoteUrl;
+      const savedMarkers = JSON.parse(localStorage.getItem(`markers-url-${btoa(remoteUrl).substring(0, 20)}`) || '[]');
+      setMarkers(savedMarkers);
+      if (window.WaveSurfer) {
+        initWavesurfer();
+        wavesurfer.current.load(remoteUrl);
+      }
+    } else if (localFile && audioRef.current) {
       setIsLoading(true);
       const url = URL.createObjectURL(localFile);
       audioRef.current.src = url;
@@ -156,7 +167,7 @@ export default function MusicalityTrainer() {
         });
       }
     }
-  }, [selectedSongId, localFile, accessToken]);
+  }, [selectedSongId, localFile, remoteUrl, accessToken]);
 
   // -- Keyboard Shortcuts for Recording --
   useEffect(() => {
@@ -187,7 +198,10 @@ export default function MusicalityTrainer() {
       const updatedMarkers = [...markers, newMarker].sort((a, b) => a.time - b.time);
       setMarkers(updatedMarkers);
       
-      const storageKey = localFile ? `markers-local-${localFile.name}` : `markers-${selectedSongId}`;
+      let storageKey = `markers-${selectedSongId}`;
+      if (localFile) storageKey = `markers-local-${localFile.name}`;
+      if (remoteUrl) storageKey = `markers-url-${btoa(remoteUrl).substring(0, 20)}`;
+      
       localStorage.setItem(storageKey, JSON.stringify(updatedMarkers));
     };
 
@@ -253,11 +267,19 @@ export default function MusicalityTrainer() {
   };
 
   const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
+    const file = e.target ? e.target.files[0] : e;
+    if (file && file.type.startsWith('audio/')) {
       setSelectedSongId('');
+      setRemoteUrl('');
+      setYoutubeId('');
       setLocalFile(file);
     }
+  };
+
+  const onDrop = (e) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    handleFileChange(file);
   };
 
   return (
@@ -294,10 +316,42 @@ export default function MusicalityTrainer() {
           <p>Enregistre les instruments en temps réel pour ne plus jamais rater un bongo ou un break.</p>
         </div>
 
-        <div className="song-selection-card glass">
+        <div 
+          className={`song-selection-card glass ${!localFile && !selectedSongId ? 'pulse-border' : ''}`}
+          onDragOver={(e) => e.preventDefault()}
+          onDrop={onDrop}
+        >
           <div className="selection-tabs">
-            <button className={!localFile ? 'active' : ''} onClick={() => setLocalFile(null)}>Bibliothèque</button>
-            <button className={localFile ? 'active' : ''} onClick={() => document.getElementById('file-upload').click()}>Importer MP3</button>
+            <button 
+              className={!localFile && !remoteUrl && !youtubeId ? 'active' : ''} 
+              onClick={() => { setLocalFile(null); setRemoteUrl(''); setYoutubeId(''); }}
+            >
+              🎹 Bibliothèque
+            </button>
+            <button 
+              className={localFile ? 'active' : ''} 
+              onClick={() => document.getElementById('file-upload').click()}
+            >
+              📁 MP3 Local
+            </button>
+            <button 
+              className={remoteUrl ? 'active' : ''} 
+              onClick={() => { 
+                const url = prompt("Colle l'URL directe d'un fichier MP3/WAV :");
+                if (url) { setRemoteUrl(url); setLocalFile(null); setYoutubeId(''); setSelectedSongId(''); }
+              }}
+            >
+              🔗 Lien URL
+            </button>
+            <button 
+              className={youtubeId ? 'active' : ''} 
+              onClick={() => {
+                const id = prompt("Colle l'ID d'une vidéo YouTube (ex: dQw4w9WgXcQ) :");
+                if (id) { setYoutubeId(id); setRemoteUrl(''); setLocalFile(null); setSelectedSongId(''); }
+              }}
+            >
+              📺 YouTube
+            </button>
           </div>
 
           <input 
@@ -315,11 +369,17 @@ export default function MusicalityTrainer() {
                 onChange={(e) => setSelectedSongId(e.target.value)}
                 className="song-select"
               >
-                <option value="">-- Choisir une chanson --</option>
+                <option value="">-- Choisir une chanson ou Glisse un MP3 ici --</option>
                 {allSongs.map(song => (
                   <option key={song.id} value={song.id}>{song.title} - {song.artist} {song.audioUrl ? ' (Visuel ✅)' : ' (Spotify 🔗)'}</option>
                 ))}
               </select>
+              
+              {!selectedSongId && !remoteUrl && !youtubeId && (
+                <div className="drop-hint animate-fade-in">
+                  <span>Ou glisse ton fichier MP3 directement ici 📥</span>
+                </div>
+              )}
 
               {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && (
                 <div className="spotify-auth-zone glass animate-fade-in">
@@ -371,9 +431,18 @@ export default function MusicalityTrainer() {
             <audio ref={audioRef} crossOrigin="anonymous" />
 
             <div className="waveform-wrapper">
-              <div className="waveform-container" ref={waveformRef} style={{ display: spotifyAnalysis && !localFile ? 'none' : 'block' }} />
+              <div className="waveform-container" ref={waveformRef} style={{ display: (spotifyAnalysis || youtubeId) && !localFile && !remoteUrl ? 'none' : 'block' }} />
               
-              {spotifyAnalysis && !localFile && (
+              {youtubeId && !localFile && !remoteUrl && (
+                <div className="placeholder-waveform youtube">
+                  <div className="beat-visual" style={{ animation: isPlaying ? 'pulse 2s infinite' : 'none' }}>
+                    📺 Mode YouTube (Manuel)
+                  </div>
+                  <div className="manual-progress" style={{ width: `${Math.min(100, (currentTime / 300) * 100)}%` }} />
+                </div>
+              )}
+
+              {spotifyAnalysis && !localFile && !remoteUrl && (
                 <div className="spotify-pseudo-waveform">
                   <svg viewBox={`0 0 ${spotifyAnalysis.track.duration * 10} 120`} preserveAspectRatio="none">
                     {spotifyAnalysis.segments.map((seg, i) => (
@@ -422,7 +491,23 @@ export default function MusicalityTrainer() {
               </div>
             </div>
 
-            {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && !localFile && !accessToken && (
+            {youtubeId && !localFile && !remoteUrl && (
+              <div className="spotify-embed-container glass animate-fade-in">
+                <p className="manual-hint">Lance la vidéo YouTube 👆 puis clique sur <b>Record</b> 👇 pour synchroniser ton écoute.</p>
+                <div className="video-responsive">
+                  <iframe 
+                    width="100%" 
+                    height="315" 
+                    src={`https://www.youtube.com/embed/${youtubeId}`} 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            )}
+            {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && !localFile && !remoteUrl && !youtubeId && !accessToken && (
               <div className="spotify-embed-container glass">
                 <p className="manual-hint">Connectez Spotify ci-dessus pour activer la Waveform. <br/> Sinon, utilisez le bouton <b>Record</b> manuellement.</p>
                 <iframe 
@@ -550,6 +635,19 @@ export default function MusicalityTrainer() {
           gap: 20px;
           max-width: 600px;
           margin-inline: auto;
+          transition: all 0.3s;
+          border: 2px solid rgba(255,255,255,0.05);
+        }
+        .song-selection-card.pulse-border {
+          border: 2px dashed var(--accent);
+          background: rgba(168, 85, 247, 0.05);
+        }
+        .drop-hint {
+          text-align: center;
+          margin-top: 12px;
+          font-size: 0.85rem;
+          color: var(--text-muted);
+          font-style: italic;
         }
         .selection-tabs {
           display: flex;
@@ -715,6 +813,21 @@ export default function MusicalityTrainer() {
           text-align: center;
         }
         .manual-hint { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; font-weight: 500; }
+
+        .video-responsive {
+          overflow: hidden;
+          padding-bottom: 56.25%;
+          position: relative;
+          height: 0;
+          border-radius: 16px;
+        }
+        .video-responsive iframe {
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+        }
 
         .loading-overlay {
           position: absolute;
