@@ -63,6 +63,7 @@ export default function Passes() {
             <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/')}>Sons</span>
             <span style={{ cursor: 'pointer', color: 'var(--accent)' }}>Passes</span>
             <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
+            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/musicality')}>Musicalité</span>
           </div>
 
           <div className="search-bar">

@@ -109,6 +109,7 @@ export default function Home() {
             <span style={{ cursor: 'pointer', color: 'var(--accent)' }}>Sons</span>
             <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/passes')}>Passes</span>
             <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
+            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/musicality')}>Musicalité</span>
             <button 
               onClick={() => setIsModalOpen(true)}
               style={{ 

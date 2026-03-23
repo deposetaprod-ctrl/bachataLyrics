@@ -201,7 +201,8 @@ export default function JackAndJill() {
           <div className="nav-links" style={{ display: 'flex', gap: '24px', fontWeight: 600 }}>
             <span style={{ cursor: 'pointer', color: 'var(--text-muted)' }} onClick={() => router.push('/')}>Sons</span>
             <span style={{ cursor: 'pointer', color: 'var(--text-muted)' }} onClick={() => router.push('/passes')}>Passes</span>
-            <span style={{ cursor: 'pointer', color: 'var(--accent)' }}>Jack & Jill</span>
+            <span style={{ cursor: 'pointer', color: 'var(--text-muted)' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
+            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/musicality')}>Musicalité</span>
           </div>
         </div>
       </nav>
