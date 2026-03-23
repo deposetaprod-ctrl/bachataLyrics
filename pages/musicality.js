@@ -8,12 +8,16 @@ import MusicalityHUD from '../components/MusicalityHUD';
 export default function MusicalityTrainer() {
   const router = useRouter();
   const [selectedSongId, setSelectedSongId] = useState('');
+  const [localFile, setLocalFile] = useState(null);
+  const [spotifyToken, setSpotifyToken] = useState('');
+  const [spotifyAnalysis, setSpotifyAnalysis] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
   const [upcomingMarker, setUpcomingMarker] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [manualTimer, setManualTimer] = useState(null);
   
   const waveformRef = useRef(null);
   const audioRef = useRef(null);
@@ -62,31 +66,65 @@ export default function MusicalityTrainer() {
     });
   };
 
-  // -- Load Song --
+  // -- Load Song or Local File --
   useEffect(() => {
-    if (selectedSongId && audioRef.current) {
+    setSpotifyAnalysis(null);
+    if (manualTimer) clearInterval(manualTimer);
+    setManualTimer(null);
+    setCurrentTime(0);
+
+    if (localFile && audioRef.current) {
+      setIsLoading(true);
+      const url = URL.createObjectURL(localFile);
+      audioRef.current.src = url;
+      
+      const savedMarkers = JSON.parse(localStorage.getItem(`markers-local-${localFile.name}`) || '[]');
+      setMarkers(savedMarkers);
+
+      if (window.WaveSurfer) {
+        initWavesurfer();
+        wavesurfer.current.load(url);
+      }
+      return () => URL.revokeObjectURL(url);
+    } else if (selectedSongId && audioRef.current) {
       const song = allSongs.find(s => s.id === selectedSongId);
+      const savedMarkers = JSON.parse(localStorage.getItem(`markers-${selectedSongId}`) || '[]');
+      setMarkers(savedMarkers);
+
       if (song && song.audioUrl) {
         setIsLoading(true);
-        // Load the audio and markers
-        const savedMarkers = JSON.parse(localStorage.getItem(`markers-${selectedSongId}`) || '[]');
-        setMarkers(savedMarkers);
-        
-        // Re-init wavesurfer if needed
         if (window.WaveSurfer) {
           initWavesurfer();
           wavesurfer.current.load(song.audioUrl);
         }
+      } else if (song && song.spotifyId && spotifyToken) {
+        fetchSpotifyAnalysis(song.spotifyId);
       }
     }
-  }, [selectedSongId]);
+  }, [selectedSongId, localFile, spotifyToken]);
+
+  const fetchSpotifyAnalysis = async (id) => {
+    setIsLoading(true);
+    try {
+      const res = await fetch(`https://api.spotify.com/v1/audio-analysis/${id}`, {
+        headers: { 'Authorization': `Bearer ${spotifyToken}` }
+      });
+      const data = await res.json();
+      if (data.segments) {
+        setSpotifyAnalysis(data);
+      }
+    } catch (err) {
+      console.error('Spotify API Error:', err);
+    }
+    setIsLoading(false);
+  };
 
   // -- Keyboard Shortcuts for Recording --
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (!isRecording || !wavesurfer.current) return;
-
-      const time = wavesurfer.current.getCurrentTime();
+      if (!isRecording) return;
+      
+      const time = wavesurfer.current ? wavesurfer.current.getCurrentTime() : currentTime;
       let type = '';
       let label = '';
       let color = '';
@@ -102,12 +140,14 @@ export default function MusicalityTrainer() {
       const newMarker = { time, type, label, color, id: Date.now() };
       const updatedMarkers = [...markers, newMarker].sort((a, b) => a.time - b.time);
       setMarkers(updatedMarkers);
-      localStorage.setItem(`markers-${selectedSongId}`, JSON.stringify(updatedMarkers));
+      
+      const storageKey = localFile ? `markers-local-${localFile.name}` : `markers-${selectedSongId}`;
+      localStorage.setItem(storageKey, JSON.stringify(updatedMarkers));
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isRecording, markers, selectedSongId]);
+  }, [isRecording, markers, selectedSongId, localFile, currentTime]);
 
   // -- Warning System (HUD) --
   useEffect(() => {
@@ -116,8 +156,23 @@ export default function MusicalityTrainer() {
   }, [currentTime, markers]);
 
   const togglePlay = () => {
-    if (!wavesurfer.current) return;
-    wavesurfer.current.playPause();
+    if (wavesurfer.current && wavesurfer.current.getDuration() > 0) {
+      wavesurfer.current.playPause();
+    } else {
+      // Manual Sync for Spotify
+      if (isPlaying) {
+        if (manualTimer) clearInterval(manualTimer);
+        setManualTimer(null);
+        setIsPlaying(false);
+      } else {
+        setIsPlaying(true);
+        const start = Date.now() - (currentTime * 1000);
+        const timer = setInterval(() => {
+          setCurrentTime((Date.now() - start) / 1000);
+        }, 50);
+        setManualTimer(timer);
+      }
+    }
   };
 
   const toggleRecording = () => setIsRecording(!isRecording);
@@ -125,7 +180,16 @@ export default function MusicalityTrainer() {
   const clearMarkers = () => {
     if (confirm('Supprimer tous les marqueurs pour cette chanson ?')) {
       setMarkers([]);
-      localStorage.removeItem(`markers-${selectedSongId}`);
+      const storageKey = localFile ? `markers-local-${localFile.name}` : `markers-${selectedSongId}`;
+      localStorage.removeItem(storageKey);
+    }
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setSelectedSongId('');
+      setLocalFile(file);
     }
   };
 
@@ -161,54 +225,129 @@ export default function MusicalityTrainer() {
         </div>
 
         <div className="song-selection-card glass">
-          <label>Chanson sélectionnée</label>
-          <div className="select-wrapper">
-            <select 
-              value={selectedSongId} 
-              onChange={(e) => setSelectedSongId(e.target.value)}
-              className="song-select"
-            >
-              <option value="">-- Choisir une chanson --</option>
-              {allSongs.filter(s => s.audioUrl).map(song => (
-                <option key={song.id} value={song.id}>{song.title} - {song.artist}</option>
-              ))}
-            </select>
+          <div className="selection-tabs">
+            <button className={!localFile ? 'active' : ''} onClick={() => setLocalFile(null)}>Bibliothèque</button>
+            <button className={localFile ? 'active' : ''} onClick={() => document.getElementById('file-upload').click()}>Importer MP3</button>
           </div>
+
+          <input 
+            id="file-upload" 
+            type="file" 
+            accept="audio/*" 
+            onChange={handleFileChange} 
+            style={{ display: 'none' }} 
+          />
+
+          {!localFile ? (
+            <div className="select-wrapper animate-fade-in">
+              <select 
+                value={selectedSongId} 
+                onChange={(e) => setSelectedSongId(e.target.value)}
+                className="song-select"
+              >
+                <option value="">-- Choisir une chanson --</option>
+                {allSongs.map(song => (
+                  <option key={song.id} value={song.id}>{song.title} - {song.artist} {song.audioUrl ? '✅' : '🔗'}</option>
+                ))}
+              </select>
+            </div>
+          ) : (
+            <div className="local-file-info animate-fade-in">
+              <div className="file-box">
+                <span className="file-icon">📁</span>
+                <span className="file-name">{localFile.name}</span>
+                <button className="change-btn" onClick={() => document.getElementById('file-upload').click()}>Changer</button>
+              </div>
+            </div>
+          )}
+          
+          {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && !localFile && (
+            <div className="spotify-token-card animate-fade-in">
+              <input 
+                type="text" 
+                placeholder="Coller un Token Spotify pour voir la Waveform..." 
+                value={spotifyToken} 
+                onChange={(e) => setSpotifyToken(e.target.value)}
+                className="token-input"
+              />
+              <p className="token-help">
+                <a href="https://developer.spotify.com/console/get-audio-analysis/" target="_blank" rel="noopener noreferrer">Générer un Token ici</a> (Prendre "Get Token" en haut)
+              </p>
+            </div>
+          )}
         </div>
 
-        {selectedSongId && (
+        {(selectedSongId || localFile) && (
           <div className="player-section animate-fade-in glass">
             {isLoading && (
               <div className="loading-overlay">
                 <div className="spinner" />
-                <span>Chargement du son...</span>
+                <span>Analyse en cours...</span>
               </div>
             )}
             
             <audio ref={audioRef} crossOrigin="anonymous" />
 
             <div className="waveform-wrapper">
-              <div className="waveform-container" ref={waveformRef} />
+              <div className="waveform-container" ref={waveformRef} style={{ display: spotifyAnalysis && !localFile ? 'none' : 'block' }} />
+              
+              {spotifyAnalysis && !localFile && (
+                <div className="spotify-pseudo-waveform">
+                  <svg viewBox={`0 0 ${spotifyAnalysis.track.duration * 10} 100`} preserveAspectRatio="none">
+                    {spotifyAnalysis.segments.map((seg, i) => (
+                      <rect 
+                        key={i}
+                        x={seg.start * 10}
+                        y={50 - (Math.max(0, seg.loudness_max + 60) * 0.8)}
+                        width={seg.duration * 10}
+                        height={Math.max(2, (Math.max(0, seg.loudness_max + 60) * 1.6))}
+                        fill={seg.start <= currentTime ? 'var(--accent)' : 'rgba(255,255,255,0.1)'}
+                      />
+                    ))}
+                  </svg>
+                  <div className="pseudo-playhead" style={{ left: `${(currentTime / spotifyAnalysis.track.duration) * 100}%` }} />
+                </div>
+              )}
+
               <div className="markers-layer">
-                {markers.map(marker => (
-                  <div 
-                    key={marker.id}
-                    className={`marker-tip ${marker.type}`}
-                    style={{ 
-                      left: `${(marker.time / (wavesurfer.current?.getDuration() || 1)) * 100}%`
-                    }}
-                    onClick={() => wavesurfer.current.setTime(marker.time)}
-                  >
-                    <span className="marker-icon">
-                      {marker.type === 'bongo' && '🥁'}
-                      {marker.type === 'roll' && '🌀'}
-                      {marker.type === 'break' && '⚡'}
-                      {marker.type === 'guira' && '🥄'}
-                    </span>
-                  </div>
-                ))}
+                {markers.map(marker => {
+                  const duration = wavesurfer.current?.getDuration() || spotifyAnalysis?.track?.duration || 1;
+                  return (
+                    <div 
+                      key={marker.id}
+                      className={`marker-tip ${marker.type}`}
+                      style={{ 
+                        left: `${(marker.time / duration) * 100}%`
+                      }}
+                      onClick={() => {
+                        if (wavesurfer.current) wavesurfer.current.setTime(marker.time);
+                        else setCurrentTime(marker.time);
+                      }}
+                    >
+                      <span className="marker-icon">
+                        {marker.type === 'bongo' && '🥁'}
+                        {marker.type === 'roll' && '🌀'}
+                        {marker.type === 'break' && '⚡'}
+                        {marker.type === 'guira' && '🥄'}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
+
+            {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && !localFile && (
+              <div className="spotify-embed-container glass">
+                <iframe 
+                  src={`https://open.spotify.com/embed/track/${allSongs.find(s => s.id === selectedSongId).spotifyId}`} 
+                  width="100%" 
+                  height="80" 
+                  frameBorder="0" 
+                  allow="encrypted-media"
+                />
+                <p className="sync-note">Lance Spotify 👆 puis clique sur <b>Synchroniser</b> 👇 au début du morceau</p>
+              </div>
+            )}
 
             <div className="controls-row">
               <button 
@@ -224,8 +363,18 @@ export default function MusicalityTrainer() {
               
               <div className="time-display">
                 <span className="current">{Math.floor(currentTime / 60)}:{(currentTime % 60).toFixed(1).padStart(4, '0')}</span>
-                <span className="total"> / {wavesurfer.current ? `${Math.floor(wavesurfer.current.getDuration() / 60)}:${(wavesurfer.current.getDuration() % 60).toFixed(0).padStart(2, '0')}` : '0:00'}</span>
+                <span className="total"> / {
+                  wavesurfer.current?.getDuration() 
+                  ? `${Math.floor(wavesurfer.current.getDuration() / 60)}:${(wavesurfer.current.getDuration() % 60).toFixed(0).padStart(2, '0')}` 
+                  : spotifyAnalysis?.track?.duration 
+                  ? `${Math.floor(spotifyAnalysis.track.duration / 60)}:${(spotifyAnalysis.track.duration % 60).toFixed(0).padStart(2, '0')}`
+                  : '0:00'
+                }</span>
               </div>
+              
+              {!wavesurfer.current?.getDuration() && (
+                <button className="btn-secondary" onClick={() => setCurrentTime(0)}>Rewind</button>
+              )}
 
               <div className="spacer" />
 
@@ -234,7 +383,7 @@ export default function MusicalityTrainer() {
                 onClick={toggleRecording}
               >
                 <div className="dot" />
-                {isRecording ? 'Terminer' : 'Enregistrer'}
+                {isRecording ? 'Terminer' : (wavesurfer.current?.getDuration() ? 'Enregistrer' : 'Synchroniser')}
               </button>
 
               <button className="btn-secondary" onClick={clearMarkers}>Vider</button>
@@ -309,9 +458,52 @@ export default function MusicalityTrainer() {
           margin-bottom: 40px;
           display: flex;
           flex-direction: column;
-          gap: 12px;
-          max-width: 500px;
+          gap: 20px;
+          max-width: 600px;
           margin-inline: auto;
+        }
+        .selection-tabs {
+          display: flex;
+          background: rgba(0,0,0,0.3);
+          padding: 4px;
+          border-radius: 12px;
+          gap: 4px;
+        }
+        .selection-tabs button {
+          flex: 1;
+          padding: 8px;
+          border-radius: 8px;
+          font-weight: 700;
+          font-size: 0.85rem;
+          color: var(--text-muted);
+          transition: all 0.2s;
+        }
+        .selection-tabs button.active {
+          background: var(--accent);
+          color: white;
+        }
+        .local-file-info .file-box {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          background: rgba(255,255,255,0.05);
+          padding: 12px 16px;
+          border-radius: 12px;
+          border: 1px solid var(--border);
+        }
+        .file-name {
+          flex: 1;
+          font-size: 0.9rem;
+          font-weight: 600;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .change-btn {
+          font-size: 0.75rem;
+          font-weight: 700;
+          color: var(--accent);
+          text-decoration: underline;
         }
         .select-wrapper {
           position: relative;
@@ -340,6 +532,22 @@ export default function MusicalityTrainer() {
           transition: border-color 0.2s;
         }
         .song-select:focus { border-color: var(--accent); }
+        .spotify-token-card {
+          margin-top: 12px;
+          text-align: center;
+        }
+        .token-input {
+          width: 100%;
+          background: rgba(168, 85, 247, 0.05);
+          border: 1px dashed var(--accent);
+          padding: 10px 16px;
+          border-radius: 12px;
+          color: white;
+          font-size: 0.8rem;
+          outline: none;
+        }
+        .token-help { font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; }
+        .token-help a { color: var(--accent); text-decoration: underline; }
         
         .player-section {
           padding: 40px;
