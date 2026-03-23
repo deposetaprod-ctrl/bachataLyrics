@@ -169,40 +169,39 @@ export default function MusicalityTrainer() {
     }
   }, [selectedSongId, localFile, remoteUrl, accessToken]);
 
+  // -- Utility for adding markers --
+  const addMarker = (type, label, color) => {
+    const time = (wavesurfer.current && wavesurfer.current.getDuration() > 0) 
+      ? wavesurfer.current.getCurrentTime() 
+      : currentTime;
+
+    // Visual Flash feedback
+    setShowFlash(type);
+    setTimeout(() => setShowFlash(null), 150);
+
+    const newMarker = { time, type, label, color, id: Date.now() };
+    const updatedMarkers = [...markers, newMarker].sort((a, b) => a.time - b.time);
+    setMarkers(updatedMarkers);
+    
+    let storageKey = `markers-${selectedSongId}`;
+    if (localFile) storageKey = `markers-local-${localFile.name}`;
+    if (remoteUrl) storageKey = `markers-url-${btoa(remoteUrl).substring(0, 20)}`;
+    
+    localStorage.setItem(storageKey, JSON.stringify(updatedMarkers));
+  };
+
   // -- Keyboard Shortcuts for Recording --
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isRecording) return;
       
-      const time = (wavesurfer.current && wavesurfer.current.getDuration() > 0) 
-        ? wavesurfer.current.getCurrentTime() 
-        : currentTime;
-
-      let type = '';
-      let label = '';
-      let color = '';
-
       switch (e.key.toLowerCase()) {
-        case 'b': type = 'bongo'; label = 'Bongo'; color = '#3b82f6'; break;
-        case 'r': type = 'roll'; label = 'Bongo Roll'; color = '#a855f7'; break;
-        case 'k': type = 'break'; label = 'Break'; color = '#ef4444'; break;
-        case 'g': type = 'guira'; label = 'Guira'; color = '#10b981'; break;
+        case 'b': addMarker('bongo', 'Bongo', '#3b82f6'); break;
+        case 'r': addMarker('roll', 'Bongo Roll', '#a855f7'); break;
+        case 'k': addMarker('break', 'Break', '#ef4444'); break;
+        case 'g': addMarker('guira', 'Guira', '#10b981'); break;
         default: return;
       }
-
-      // Visual Flash feedback
-      setShowFlash(type);
-      setTimeout(() => setShowFlash(null), 150);
-
-      const newMarker = { time, type, label, color, id: Date.now() };
-      const updatedMarkers = [...markers, newMarker].sort((a, b) => a.time - b.time);
-      setMarkers(updatedMarkers);
-      
-      let storageKey = `markers-${selectedSongId}`;
-      if (localFile) storageKey = `markers-local-${localFile.name}`;
-      if (remoteUrl) storageKey = `markers-url-${btoa(remoteUrl).substring(0, 20)}`;
-      
-      localStorage.setItem(storageKey, JSON.stringify(updatedMarkers));
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -225,11 +224,18 @@ export default function MusicalityTrainer() {
       if (isPlaying) {
         spotifyPlayer.pause();
       } else {
-        // Start playback on this device
-        fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
+        // 1. Transfer Playback to this device first (Critical for sound)
+        fetch(`https://api.spotify.com/v1/me/player`, {
           method: 'PUT',
-          body: JSON.stringify({ uris: [`spotify:track:${song.spotifyId}`], position_ms: currentTime * 1000 }),
+          body: JSON.stringify({ device_ids: [deviceId], play: true }),
           headers: { 'Authorization': `Bearer ${accessToken}` }
+        }).then(() => {
+          // 2. Then play the specific track
+          fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
+            method: 'PUT',
+            body: JSON.stringify({ uris: [`spotify:track:${song.spotifyId}`], position_ms: currentTime * 1000 }),
+            headers: { 'Authorization': `Bearer ${accessToken}` }
+          });
         });
       }
     } else {
@@ -564,11 +570,39 @@ export default function MusicalityTrainer() {
             </div>
 
             {isRecording && (
-              <div className="recording-hint animate-fade-in glass">
-                <div className="hint-item"><span className="key">B</span> Bongo</div>
-                <div className="hint-item"><span className="key">R</span> Roll</div>
-                <div className="hint-item"><span className="key">K</span> Break</div>
-                <div className="hint-item"><span className="key">G</span> Guira</div>
+              <div className="recording-console animate-fade-in glass">
+                <button 
+                  className="instrument-btn bongo" 
+                  onClick={() => addMarker('bongo', 'Bongo', '#3b82f6')}
+                  onTouchStart={(e) => { e.preventDefault(); addMarker('bongo', 'Bongo', '#3b82f6'); }}
+                >
+                  <span className="icon">🥁</span>
+                  <span className="name">Bongo (B)</span>
+                </button>
+                <button 
+                  className="instrument-btn roll" 
+                  onClick={() => addMarker('roll', 'Bongo Roll', '#a855f7')}
+                  onTouchStart={(e) => { e.preventDefault(); addMarker('roll', 'Bongo Roll', '#a855f7'); }}
+                >
+                  <span className="icon">🌀</span>
+                  <span className="name">Roll (R)</span>
+                </button>
+                <button 
+                  className="instrument-btn break" 
+                  onClick={() => addMarker('break', 'Break', '#ef4444')}
+                  onTouchStart={(e) => { e.preventDefault(); addMarker('break', 'Break', '#ef4444'); }}
+                >
+                  <span className="icon">⚡</span>
+                  <span className="name">Break (K)</span>
+                </button>
+                <button 
+                  className="instrument-btn guira" 
+                  onClick={() => addMarker('guira', 'Guira', '#10b981')}
+                  onTouchStart={(e) => { e.preventDefault(); addMarker('guira', 'Guira', '#10b981'); }}
+                >
+                  <span className="icon">🥄</span>
+                  <span className="name">Guira (G)</span>
+                </button>
               </div>
             )}
 
@@ -968,17 +1002,40 @@ export default function MusicalityTrainer() {
           border: 1px solid var(--border);
         }
 
-        .recording-hint {
+        .recording-console {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
           padding: 24px;
           border-radius: 24px;
           margin-bottom: 40px;
-          display: flex;
-          justify-content: center;
-          gap: 32px;
-          flex-wrap: wrap;
+          border: 1px solid var(--accent);
+          background: rgba(124, 58, 237, 0.05);
         }
-        .hint-item { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-secondary); }
-        .key { background: #333; color: white; padding: 4px 10px; border-radius: 8px; font-weight: 900; border-bottom: 3px solid #000; box-shadow: 0 4px 0 rgba(0,0,0,0.5); }
+        .instrument-btn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          padding: 24px;
+          border-radius: 20px;
+          background: rgba(255,255,255,0.05);
+          border: 1.5px solid rgba(255,255,255,0.1);
+          color: white;
+          cursor: pointer;
+          transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          user-select: none;
+          -webkit-tap-highlight-color: transparent;
+        }
+        .instrument-btn:active { transform: scale(0.92); }
+        .instrument-btn .icon { font-size: 2rem; }
+        .instrument-btn .name { font-size: 0.8rem; font-weight: 700; opacity: 0.8; }
+        
+        .instrument-btn.bongo { background: rgba(59, 130, 246, 0.1); border-color: #3b82f6; }
+        .instrument-btn.roll { background: rgba(168, 85, 247, 0.1); border-color: #a855f7; }
+        .instrument-btn.break { background: rgba(239, 68, 68, 0.1); border-color: #ef4444; }
+        .instrument-btn.guira { background: rgba(16, 185, 129, 0.1); border-color: #10b981; }
 
         .markers-list h3 { margin-bottom: 24px; font-size: 1.2rem; color: var(--text-secondary); font-weight: 800; }
         .markers-grid {

@@ -1126,6 +1126,7 @@ Ay, ay, ay`,
     year: 2025,
     tags: ["Dominicaine"],
     color: "#facc15",
+    audioUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1774291698/Romeo_Santos_Prince_Royce_-_Ay_San_Miguel_Lyric_Video_ipw2to.mp3",
     spotify: "https://open.spotify.com/search/Ay!%20San%20Miguel%20Romeo%20Santos%20Prince%20Royce",
     lyrics: {
       es: `[Romeo Santos]
@@ -2509,8 +2510,5 @@ Fais un autre tour, viens avec moi
 Donne-moi du plaisir (punis-moi), deviens sauvage
 Je veux que tu ressentes des frissons`
     }
-  },
+  }
 ];
-
-
-
