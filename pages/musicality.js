@@ -375,9 +375,9 @@ export default function MusicalityTrainer() {
                 onChange={(e) => setSelectedSongId(e.target.value)}
                 className="song-select"
               >
-                <option value="">-- Choisir une chanson ou Glisse un MP3 ici --</option>
-                {allSongs.map(song => (
-                  <option key={song.id} value={song.id}>{song.title} - {song.artist} {song.audioUrl ? ' (Visuel ✅)' : ' (Spotify 🔗)'}</option>
+                <option value="">-- Choisir une chanson --</option>
+                {allSongs.filter(s => s.audioUrl).map(song => (
+                  <option key={song.id} value={song.id}>{song.title} - {song.artist}</option>
                 ))}
               </select>
               
@@ -387,28 +387,7 @@ export default function MusicalityTrainer() {
                 </div>
               )}
 
-              {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && (
-                <div className="spotify-auth-zone glass animate-fade-in">
-                  {!accessToken ? (
-                    <>
-                      <input 
-                        className="token-input" 
-                        placeholder="Ton Spotify Client ID..." 
-                        value={clientId}
-                        onChange={(e) => setClientId(e.target.value)}
-                      />
-                      <button className="btn-spotify" onClick={loginSpotify}>
-                        <span className="icon">🔓</span> Se connecter à Spotify
-                      </button>
-                      <p className="help-text">Nécessaire pour le visuel et la synchronisation automatique.</p>
-                    </>
-                  ) : (
-                    <div className="auth-status">
-                      <span className="status-dot green" /> Spotify Connecté
-                    </div>
-                  )}
-                </div>
-              )}
+              {/* Spotify Auth Zone Removed by request */}
             </div>
           ) : (
             <div className="local-file-info animate-fade-in">
