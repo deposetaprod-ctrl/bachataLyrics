@@ -2385,6 +2385,105 @@ Mens-moi
 Oh quel feeling mami`,
     },
   },
+  {
+    id: "escalofrios-mora",
+    title: "ESCALOFRÍOS",
+    artist: "Mora",
+    year: 2023,
+    tags: ["Influence"],
+    color: "#1e293b",
+    spotify: "https://open.spotify.com/track/5CVMsPYtSJ3l7UxYiI2lt7",
+    culture: {
+      context: "Tiré de l'album 'ESTRELLA' (2023), ce morceau de Mora mélange reggaeton mélancolique et influences urbaines, souvent remixé en Bachata.",
+      meaning: "La chanson parle de l'incapacité à partager l'être aimé ('rien de partagé') et de la douleur de la rupture qui donne des 'frissons'.",
+      artistInfo: "Mora est un artiste portoricain influent, connu pour ses productions visionnaires et ses collaborations avec Bad Bunny.",
+      album: "ESTRELLA"
+    },
+    lyrics: {
+      es: `Cometí mucho' errore', a vece' era muy frío (Muy frío, oh, oh-oh)
+Pero si te veo con él, yo vo'a formar un lío (Baby, vo'a formar un lío)
+
+Porque no quiero nada comparti'o
+Si ere' má' mía que de ese tío, que de ese tío
+Hoy me voy pa' la calle a ver si con otra te olvido
+
+No quiero labio' comparti'o
+El no tenerte me da escalofrío', me da escalofrío'
+Como un loco te busqué, pero ya te había' ido
+
+Yo me paso deseando que tengamo' un reencuentro
+Pero es que no te encuentro
+¿Cómo es que somo' tan iguale' siendo polo' opuesto'?
+Aunque no te escriba, no te suelto
+
+Y si el amor es una guerra, me quedé sin municione'
+Hacerte daño nunca estuvo en mis opcione'
+Fue sin querer, no fueron mis intencione'
+Tú ere's la causante de toa' mis depresione'
+
+Ma', contéstame, dame un chance
+A ver si por fin encuentro el balance
+Entre las droga' y el romance
+Dime si tiene cura este cáncer
+
+Porque no quiero nada comparti'o
+Si ere' má' mía que de ese tío, que de ese tío
+Hoy me voy pa' la calle a ver si con otra te olvido
+
+No quiero labio' comparti'o
+El no tenerte me da escalofrío', me da escalofrío'
+Como un loco te busqué, pero ya te había' ido
+
+Labios compartidos, labios divididos, mi amor
+Yo no puedo compartir tus labios
+Que comparto el engaño y comparto mis días y el dolor
+Ya no puedo compartir tus labios
+Que me parta un rayo
+Que me entierre el olvido, mi amor
+Pero no puedo más compartir tus labios`,
+      fr: `J'ai fait beaucoup d'erreurs, parfois j'étais très froid (Très froid, oh, oh-oh)
+Mais si je te vois avec lui, je vais faire un scandale (Bébé, je vais faire un scandale)
+
+Parce que je ne veux rien de partagé
+Si tu es plus à moi qu'à ce gars, qu'à ce gars
+Aujourd'hui je sors dans la rue pour voir si avec une autre je t'oublie
+
+Je ne veux pas de lèvres partagées
+Ne pas t'avoir me donne des frissons, me donne des frissons
+Comme un fou je t'ai cherchée, mais tu étais déjà partie
+
+Je passe mon temps à souhaiter qu'on se retrouve
+Mais je ne te trouve pas
+Comment se fait-il qu'on soit si semblables en étant des pôles opposés ?
+Même si je ne t'écris pas, je ne te lâche pas
+
+Et si l'amour est une guerre, je n'ai plus de munitions
+Te faire du mal n'a jamais été dans mes options
+C'était sans le vouloir, ce n'étaient pas mes intentions
+Tu es la cause de toutes mes dépressions
+
+Ma, réponds-moi, donne-moi une chance
+Pour voir si je trouve enfin l'équilibre
+Entre la drogue et la romance
+Dis-moi si ce cancer a un remède
+
+Parce que je ne veux rien de partagé
+Si tu es plus à moi qu'à ce gars, qu'à ce gars
+Aujourd'hui je sors dans la rue pour voir si avec une autre je t'oublie
+
+Je ne veux pas de lèvres partagées
+Ne pas t'avoir me donne des frissons, me donne des frissons
+Comme un fou je t'ai cherchée, mais tu étais déjà partie
+
+Lèvres partagées, lèvres divisées, mon amour
+Je ne peux pas partager tes lèvres
+Je partage la tromperie et je partage mes jours et la douleur
+Je ne peux plus partager tes lèvres
+Que la foudre me frappe
+Que l'oubli m'enterre, mon amour
+Mais je ne peux plus partager tes lèvres`
+    }
+  },
 ];
 
 
