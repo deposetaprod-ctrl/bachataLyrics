@@ -9,15 +9,35 @@ export default function Home() {
   const [search, setSearch] = useState('');
   const [activeTag, setActiveTag] = useState(null);
   const [favoriteSongs, setFavoriteSongs] = useState([]);
+  const [masteredSongs, setMasteredSongs] = useState([]);
   const [showFavorites, setShowFavorites] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [suggestionForm, setSuggestionForm] = useState({ personName: '', title: '', artist: '' });
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
+  const [showObjectives, setShowObjectives] = useState(false);
+  const [showDailyNotif, setShowDailyNotif] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem('favSongs');
-    if (saved) setFavoriteSongs(JSON.parse(saved));
+    const savedFavs = localStorage.getItem('favSongs');
+    if (savedFavs) setFavoriteSongs(JSON.parse(savedFavs));
+    
+    const savedMastered = localStorage.getItem('masteredSongs');
+    if (savedMastered) setMasteredSongs(JSON.parse(savedMastered));
+
+    // Daily Notification check
+    const todayStr = new Date().toDateString();
+    const lastNotif = localStorage.getItem('lastDailyNotif');
+    if (lastNotif !== todayStr) {
+      setShowDailyNotif(true);
+      localStorage.setItem('lastDailyNotif', todayStr);
+    }
   }, []);
+
+  // Song of the day logic (deterministic based on date)
+  const today = new Date();
+  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  const dailySongIndex = dateSeed % songs.length;
+  const dailySong = songs[dailySongIndex];
 
   const toggleFav = (id, e) => {
     e.stopPropagation();
@@ -129,7 +149,106 @@ export default function Home() {
           <span>💃</span> Bachata • Paroles bilingues
         </div>
         <h1>Les plus belles paroles<br />de bachata</h1>
-        <p>
+        
+        {/* PROGRESS STATS */}
+        <div 
+          onClick={() => setShowObjectives(true)}
+          style={{ 
+            display: 'flex', 
+            gap: '12px', 
+            marginTop: '24px',
+            padding: '8px 20px',
+            background: 'rgba(255,255,255,0.05)',
+            borderRadius: '999px',
+            width: 'fit-content',
+            fontSize: '0.8rem',
+            fontWeight: 600,
+            border: '1px solid rgba(255,255,255,0.1)',
+            cursor: 'pointer',
+            transition: 'all 0.2s'
+          }}
+          className="hover-scale"
+        >
+          <span style={{ color: 'var(--accent)' }}>🎯 Objectifs :</span>
+          <span>{masteredSongs.length} / {songs.length} maîtrisés</span>
+          <span style={{ marginLeft: '8px', opacity: 0.6 }}>Voir tout →</span>
+        </div>
+
+        {/* DAILY CHALLENGE CARD */}
+        <div 
+          onClick={() => router.push(`/song/${dailySong.id}`)}
+          style={{
+            marginTop: '32px',
+            background: 'linear-gradient(135deg, #1e1b4b, #312e81)',
+            borderRadius: '24px',
+            padding: '32px',
+            border: '1px solid rgba(124, 58, 237, 0.3)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '32px',
+            cursor: 'pointer',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+            position: 'relative',
+            overflow: 'hidden'
+          }}
+          className="hover-scale"
+        >
+          <div style={{
+            position: 'absolute',
+            top: '-20px',
+            right: '-20px',
+            fontSize: '120px',
+            opacity: 0.1,
+            transform: 'rotate(15deg)'
+          }}>🔥</div>
+          
+          <div style={{
+            width: '80px',
+            height: '80px',
+            borderRadius: '20px',
+            background: `linear-gradient(135deg, ${dailySong.color}, #000)`,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '2rem',
+            boxShadow: '0 10px 20px rgba(0,0,0,0.3)',
+            flexShrink: 0
+          }}>
+            🎵
+          </div>
+          
+          <div style={{ flex: 1 }}>
+            <div style={{ 
+              textTransform: 'uppercase', 
+              fontSize: '0.7rem', 
+              fontWeight: 900, 
+              letterSpacing: '0.1em',
+              color: '#a78bfa',
+              marginBottom: '4px'
+            }}>
+              Défi du jour
+            </div>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '4px' }}>{dailySong.title}</h2>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
+              Apprends le vocabulaire et le sens de ce hit de <strong>{dailySong.artist}</strong>
+            </p>
+          </div>
+          
+          <button style={{
+            background: 'white',
+            color: '#1e1b4b',
+            border: 'none',
+            padding: '12px 24px',
+            borderRadius: '12px',
+            fontWeight: 700,
+            fontSize: '0.9rem',
+            cursor: 'pointer'
+          }}>
+            Relever le défi
+          </button>
+        </div>
+
+        <p style={{ marginTop: '32px' }}>
           Retrouve les textes originaux en espagnol avec leur traduction en français,
           côte à côte, pour mieux ressentir chaque chanson.
         </p>
@@ -204,6 +323,112 @@ export default function Home() {
           ))
         )}
       </div>
+
+      {/* ─── OBJECTIVES MODAL ─── */}
+      {showObjectives && (
+        <div 
+          style={{
+            position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', backdropFilter: 'blur(12px)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1100, padding: '24px'
+          }}
+          onClick={() => setShowObjectives(false)}
+        >
+          <div 
+            style={{
+              background: '#0a0a0f', border: '1px solid rgba(255,255,255,0.1)',
+              borderRadius: '32px', padding: '40px', width: '100%', maxWidth: '600px',
+              maxHeight: '80vh', overflowY: 'auto', position: 'relative'
+            }}
+            onClick={e => e.stopPropagation()}
+          >
+            <button onClick={() => setShowObjectives(false)} style={{ position: 'absolute', top: '24px', right: '24px', fontSize: '2rem', color: 'var(--text-muted)' }}>×</button>
+            
+            <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+              <div style={{ fontSize: '4rem', marginBottom: '16px' }}>🏆</div>
+              <h2 style={{ fontSize: '2rem', fontWeight: 800 }}>Mes Objectifs</h2>
+              <p style={{ color: 'var(--text-muted)' }}>Ta progression dans l'apprentissage de la bachata</p>
+              
+              <div style={{ 
+                marginTop: '24px', height: '12px', background: 'rgba(255,255,255,0.05)', 
+                borderRadius: '999px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)'
+              }}>
+                <div style={{ 
+                  width: `${(masteredSongs.length / songs.length) * 100}%`, 
+                  height: '100%', background: 'linear-gradient(90deg, #c026d3, #7c3aed)',
+                  transition: 'width 1s cubic-bezier(0.4, 0, 0.2, 1)'
+                }} />
+              </div>
+              <div style={{ marginTop: '8px', fontSize: '0.85rem', fontWeight: 700, opacity: 0.8 }}>
+                {masteredSongs.length} sur {songs.length} chansons apprises ({Math.round((masteredSongs.length / songs.length) * 100)}%)
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gap: '12px' }}>
+              {songs.map(song => {
+                const isMastered = masteredSongs.includes(song.id);
+                return (
+                  <div 
+                    key={song.id} 
+                    onClick={() => { setShowObjectives(false); router.push(`/song/${song.id}`); }}
+                    style={{
+                      display: 'flex', alignItems: 'center', gap: '16px', padding: '16px',
+                      background: isMastered ? 'rgba(52, 211, 153, 0.05)' : 'rgba(255,255,255,0.02)',
+                      borderRadius: '16px', border: `1px solid ${isMastered ? 'rgba(52, 211, 153, 0.2)' : 'rgba(255,255,255,0.05)'}`,
+                      cursor: 'pointer'
+                    }}
+                    className="hover-scale"
+                  >
+                    <div style={{ fontSize: '1.2rem' }}>{isMastered ? '✅' : '⏳'}</div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontWeight: 700, fontSize: '0.95rem' }}>{song.title}</div>
+                      <div style={{ fontSize: '0.8rem', opacity: 0.6 }}>{song.artist}</div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ─── DAILY NOTIFICATION POPUP ─── */}
+      {showDailyNotif && (
+        <div 
+          style={{
+            position: 'fixed', bottom: '24px', left: '24px', right: '24px', maxWidth: '400px',
+            background: 'linear-gradient(135deg, #1e1b4b, #312e81)',
+            borderRadius: '24px', padding: '24px', border: '1px solid rgba(124, 58, 237, 0.5)',
+            boxShadow: '0 20px 50px rgba(0,0,0,0.5)', zIndex: 2000,
+            display: 'flex', gap: '20px', alignItems: 'center',
+            animation: 'slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1)'
+          }}
+        >
+          <div style={{ fontSize: '2.5rem', flexShrink: 0 }}>🌟</div>
+          <div style={{ flex: 1 }}>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 800, marginBottom: '4px' }}>Nouveau défi prêt !</h3>
+            <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.8)', marginBottom: '12px' }}>
+              Découvre <strong>{dailySong.title}</strong> aujourd'hui et améliore ta culture bachata.
+            </p>
+            <div style={{ display: 'flex', gap: '12px' }}>
+              <button 
+                onClick={() => { setShowDailyNotif(false); router.push(`/song/${dailySong.id}`); }}
+                style={{
+                  background: 'white', color: '#1e1b4b', border: 'none', padding: '8px 16px',
+                  borderRadius: '10px', fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer'
+                }}
+              >
+                C'est parti !
+              </button>
+              <button 
+                onClick={() => setShowDailyNotif(false)}
+                style={{ background: 'transparent', color: 'white', border: 'none', fontSize: '0.8rem', opacity: 0.6, cursor: 'pointer' }}
+              >
+                Plus tard
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ─── FOOTER ─── */}
       <footer className="footer">
@@ -322,8 +547,16 @@ export default function Home() {
       )}
 
       <style jsx global>{`
-        .hover-scale:hover { transform: scale(1.05); }
-        .hover-scale:active { transform: scale(0.95); }
+        .hover-scale:hover { transform: scale(1.02); }
+        .hover-scale:active { transform: scale(0.98); }
+        @keyframes slideInUp {
+          from { transform: translateY(100%); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
       `}</style>
     </>
   );

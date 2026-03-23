@@ -17,10 +17,14 @@ export async function getStaticProps({ params }) {
 export default function SongPage({ song }) {
   const router = useRouter();
   const [favoriteSongs, setFavoriteSongs] = useState([]);
+  const [masteredSongs, setMasteredSongs] = useState([]);
 
   useEffect(() => {
-    const saved = localStorage.getItem('favSongs');
-    if (saved) setFavoriteSongs(JSON.parse(saved));
+    const savedFavs = localStorage.getItem('favSongs');
+    if (savedFavs) setFavoriteSongs(JSON.parse(savedFavs));
+
+    const savedMastered = localStorage.getItem('masteredSongs');
+    if (savedMastered) setMasteredSongs(JSON.parse(savedMastered));
   }, []);
 
   const toggleFav = (id, e) => {
@@ -30,6 +34,19 @@ export default function SongPage({ song }) {
       : [...favoriteSongs, id];
     setFavoriteSongs(newFavs);
     localStorage.setItem('favSongs', JSON.stringify(newFavs));
+  };
+
+  const toggleMastered = (id) => {
+    const isMastered = masteredSongs.includes(id);
+    const newMastered = isMastered
+      ? masteredSongs.filter(m => m !== id)
+      : [...masteredSongs, id];
+    setMasteredSongs(newMastered);
+    localStorage.setItem('masteredSongs', JSON.stringify(newMastered));
+    
+    if (!isMastered) {
+      // Small celebration or feedback can be added here
+    }
   };
 
   if (!song) return null;
@@ -175,6 +192,97 @@ export default function SongPage({ song }) {
               </div>
             );
           })}
+        </div>
+
+        {/* ─── CULTURE & OBJECTIVES ─── */}
+        <div style={{
+          marginTop: '64px',
+          padding: '40px',
+          background: 'rgba(255, 255, 255, 0.03)',
+          borderRadius: '32px',
+          border: '1px solid rgba(255, 255, 255, 0.08)',
+        }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '24px' }}>
+            <div style={{ flex: 1, minWidth: '300px' }}>
+              <h2 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <span style={{ fontSize: '2rem' }}>🌍</span> Culture & Contexte
+              </h2>
+              
+              <div style={{ display: 'grid', gap: '24px' }}>
+                <section>
+                  <h3 style={{ fontSize: '0.9rem', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px', fontWeight: 900 }}>Contexte</h3>
+                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{song.culture?.context || "Une chanson emblématique du répertoire bachata qui continue de faire vibrer les pistes de danse."}</p>
+                </section>
+                
+                <section>
+                  <h3 style={{ fontSize: '0.9rem', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px', fontWeight: 900 }}>Signification</h3>
+                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{song.culture?.meaning || "Les paroles explorent les émotions profondes et les thèmes universels de l'amour et de la passion."}</p>
+                </section>
+                
+                <section>
+                  <h3 style={{ fontSize: '0.9rem', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px', fontWeight: 900 }}>L'Artiste</h3>
+                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{song.culture?.artistInfo || `${song.artist} est une figure majeure de la scène bachata contemporaine.`}</p>
+                </section>
+                
+                {song.culture?.album && (
+                  <section>
+                    <h3 style={{ fontSize: '0.9rem', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px', fontWeight: 900 }}>Album</h3>
+                    <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{song.culture.album}</p>
+                  </section>
+                )}
+              </div>
+            </div>
+
+            <div style={{ 
+              width: '100%', 
+              maxWidth: '300px', 
+              padding: '32px', 
+              background: 'rgba(255,255,255,0.05)', 
+              borderRadius: '24px',
+              border: '1px solid rgba(255,255,255,0.1)',
+              textAlign: 'center'
+            }}>
+              <div style={{ fontSize: '3rem', marginBottom: '16px' }}>🎯</div>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '8px' }}>Ton Objectif</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '24px' }}>
+                Maîtrise les paroles et le sens de cette chanson pour débloquer ta récompense !
+              </p>
+              
+              <button
+                onClick={() => toggleMastered(song.id)}
+                style={{
+                  width: '100%',
+                  padding: '16px',
+                  borderRadius: '16px',
+                  background: masteredSongs.includes(song.id) ? '#34d399' : 'linear-gradient(135deg, #c026d3, #7c3aed)',
+                  color: 'white',
+                  fontWeight: 800,
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                  boxShadow: masteredSongs.includes(song.id) ? '0 10px 20px rgba(52, 211, 153, 0.3)' : '0 10px 20px rgba(124, 58, 237, 0.3)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '10px'
+                }}
+                className="hover-scale"
+              >
+                {masteredSongs.includes(song.id) ? (
+                  <><span>✅</span> Maîtrisée !</>
+                ) : (
+                  <><span>🔥</span> Marquer comme apprise</>
+                )
+                }
+              </button>
+              
+              {masteredSongs.includes(song.id) && (
+                <p style={{ color: '#34d399', fontSize: '0.8rem', fontWeight: 600, marginTop: '16px', animation: 'fadeIn 0.5s ease-out' }}>
+                  Félicitations ! Tu as validé cet objectif.
+                </p>
+              )}
+            </div>
+          </div>
         </div>
 
         {/* ─── FOOTER ─── */}

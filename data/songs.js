@@ -10,6 +10,12 @@ export const songs = [
     tags: ["sensuel", "mélancolie", "distance"],
     color: "#7c3aed",
     spotify: "https://open.spotify.com/track/3dsEINNJ3QjrUl3RkWk6rc",
+    culture: {
+      context: "Sortie en 2023, 'Lejanía' est devenue un hit instantané grâce à son mélange parfait de mélancolie moderne et de Bachata Sensual.",
+      meaning: "La chanson explore la douleur de la distance et les souvenirs qui tournent en boucle (en 'repeat') après une rupture, particulièrement dans un lieu symbolique comme Benidorm.",
+      artistInfo: "Jensen est l'un des nouveaux visages de la Bachata moderne, apportant une touche R&B et urbaine très appréciée en Europe.",
+      album: "Single"
+    },
     lyrics: {
       es: `Me he quedado solo, solo
 En el silencio escucho tu nombre en repeat
@@ -135,6 +141,12 @@ On se retrouvera`,
     tags: ["amour", "apprentissage", "romantique"],
     color: "#dc2626",
     spotify: "https://open.spotify.com/track/3YEJ3gQ4if3MTO9gotBK7z",
+    culture: {
+      context: "Ce titre est une collaboration romantique qui a marqué les clubs de Bachata en 2022.",
+      meaning: "Un aveu sincère d'inexpérience en amour. Le chanteur demande 'une minute' pour apprendre et prouver sa dévotion.",
+      artistInfo: "Imperatore & Alex fusionnent des styles classiques avec des productions modernes pour créer des balades entraînantes.",
+      album: "Los Poderes"
+    },
     lyrics: {
       es: `A ti no te voté
 A ti yo no te miento
@@ -264,6 +276,12 @@ Donne-moi une minute et je te décrocherai le soleil`,
     tags: ["trahison", "regrets", "pardon"],
     color: "#059669",
     spotify: "https://open.spotify.com/track/4ztBYIuncBxGARmctAWZXS",
+    culture: {
+      context: "Mayinbito apporte ici une bachata plus traditionnelle dans sa structure mais très moderne dans son propos.",
+      meaning: "Une demande de pardon après une infidélité. La chanson insiste sur le fait de 'fermer ce chapitre' douloureux pour avancer.",
+      artistInfo: "Mayinbito, surnommé le 'Dueño del movimiento', est connu pour sa voix puissante et ses paroles souvent poignantes.",
+      album: "Dueño del Movimiento"
+    },
     lyrics: {
       es: `Oye, quiero hablar, es tiempo de aclarar
 Sé que falle, mala mía
@@ -351,6 +369,12 @@ Fermons ce chapitre`,
     tags: ["voyage", "nostalgie", "romantique"],
     color: "#3b82f6",
     spotify: "https://open.spotify.com/search/La%20Carretera%20Prince%20Royce",
+    culture: {
+      context: "Un des plus grands succès de Prince Royce, illustrant parfaitement la 'Bachata Pop' mondiale.",
+      meaning: "Un voyage nostalgique sur la 'carretera' (route) où chaque souvenir rappelle un amour perdu.",
+      artistInfo: "Prince Royce est une superstar mondiale, pilier de la bachata moderne aux côtés de Romeo Santos.",
+      album: "FIVE"
+    },
     lyrics: {
       es: `Voy manejando por la noche y pienso en ti
 Y en tantas cosas que no te llegué a decir
