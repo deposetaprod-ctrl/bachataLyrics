@@ -455,7 +455,7 @@ export default function Home() {
                   type="text"
                   value={suggestionForm.personName}
                   onChange={e => setSuggestionForm({...suggestionForm, personName: e.target.value})}
-                  placeholder="Ex: Maximilien"
+                  placeholder="Ex: Paul"
                   style={inputStyle}
                 />
               </div>

@@ -413,25 +413,9 @@ export default function MusicalityTrainer() {
   const clearMarkers = () => {
     if (confirm('Supprimer tous les marqueurs pour cette chanson ?')) {
       setMarkers([]);
-      const storageKey = localFile ? `markers-local-${localFile.name}` : `markers-${selectedSongId}`;
+      const storageKey = `markers-${selectedSongId}`;
       localStorage.removeItem(storageKey);
     }
-  };
-
-  const handleFileChange = (e) => {
-    const file = e.target ? e.target.files[0] : e;
-    if (file && file.type.startsWith('audio/')) {
-      setSelectedSongId('');
-      setRemoteUrl('');
-      setYoutubeId('');
-      setLocalFile(file);
-    }
-  };
-
-  const onDrop = (e) => {
-    e.preventDefault();
-    const file = e.dataTransfer.files[0];
-    handleFileChange(file);
   };
 
   return (
@@ -439,7 +423,6 @@ export default function MusicalityTrainer() {
       <Head>
         <title>Musicality Trainer — Bachata Lyrics</title>
       </Head>
-
       <Script 
         src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" 
         strategy="beforeInteractive"
@@ -459,7 +442,7 @@ export default function MusicalityTrainer() {
       <header className="navbar">
         <div className="navbar-inner">
           <div className="logo" onClick={() => router.push('/')}>
-            <div className="logo-icon">🎶</div>
+            <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
             <span className="logo-text">Musicality</span>
           </div>
           <div className="nav-links">
@@ -504,114 +487,49 @@ export default function MusicalityTrainer() {
           <p>Enregistre les instruments en temps réel pour ne plus jamais rater un bongo ou un break.</p>
         </div>
 
-        <div 
-          className={`song-selection-card glass ${!localFile && !selectedSongId ? 'pulse-border' : ''}`}
-          onDragOver={(e) => e.preventDefault()}
-          onDrop={onDrop}
-        >
-          <div className="selection-tabs">
-            <button 
-              className={!localFile && !remoteUrl && !youtubeId ? 'active' : ''} 
-              onClick={() => { setLocalFile(null); setRemoteUrl(''); setYoutubeId(''); }}
-            >
-              🎹 Bibliothèque
-            </button>
-            <button 
-              className={localFile ? 'active' : ''} 
-              onClick={() => document.getElementById('file-upload').click()}
-            >
-              📁 MP3 Local
-            </button>
-            <button 
-              className={remoteUrl ? 'active' : ''} 
-              onClick={() => { 
-                const url = prompt("Colle l'URL directe d'un fichier MP3/WAV :");
-                if (url) { setRemoteUrl(url); setLocalFile(null); setYoutubeId(''); setSelectedSongId(''); }
-              }}
-            >
-              🔗 Lien URL
-            </button>
-            <button 
-              className={youtubeId ? 'active' : ''} 
-              onClick={() => {
-                const id = prompt("Colle l'ID d'une vidéo YouTube (ex: dQw4w9WgXcQ) :");
-                if (id) { setYoutubeId(id); setRemoteUrl(''); setLocalFile(null); setSelectedSongId(''); }
-              }}
-            >
-              📺 YouTube
-            </button>
-          </div>
-
-          <input 
-            id="file-upload" 
-            type="file" 
-            accept="audio/*" 
-            onChange={handleFileChange} 
-            style={{ display: 'none' }} 
-          />
-
-          {!localFile ? (
-            <div className="select-wrapper animate-fade-in">
-              <select 
-                value={selectedSongId} 
-                onChange={(e) => setSelectedSongId(e.target.value)}
-                className="song-select"
-              >
-                <option value="">-- Choisir une chanson --</option>
-                {allSongs.filter(s => s.audioUrl).map(song => (
-                  <option key={song.id} value={song.id}>{song.title} - {song.artist}</option>
-                ))}
-              </select>
-              
-              {selectedSongId && (
-                <div className="discovery-actions animate-fade-in">
-                  <button className="btn-community" onClick={fetchCommunitySessions}>
-                    🌏 Voir les analyses de la communauté
-                  </button>
-                </div>
-              )}
-
-              {showCommunity && communitySessions.length > 0 && (
-                <div className="community-overlay glass animate-slide-up">
-                  <div className="overlay-header">
-                    <h4>Analyses partagées 🌏</h4>
-                    <button className="btn-close-small" onClick={() => setShowCommunity(false)}>✕</button>
-                  </div>
-                  <div className="community-list">
-                    {communitySessions.map(sess => (
-                      <div key={sess.id} className="community-item" onClick={() => { setMarkers(sess.markers); setShowCommunity(false); }}>
-                        <span className="user-icon">👤</span>
-                        <div className="item-info">
-                          <span className="username">{sess.profiles?.username || 'Anonyme'}</span>
-                          <span className="meta">{sess.markers.length} marqueurs • {new Date(sess.updated_at).toLocaleDateString()}</span>
-                        </div>
-                        <button className="btn-load-sess">Charger</button>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-              
-              {!selectedSongId && !remoteUrl && !youtubeId && (
-                <div className="drop-hint animate-fade-in">
-                  <span>Ou glisse ton fichier MP3 directement ici 📥</span>
-                </div>
-              )}
-
-              {/* Spotify Auth Zone Removed by request */}
+        <div className="song-selection-wrapper">
+          <select 
+            value={selectedSongId} 
+            onChange={(e) => setSelectedSongId(e.target.value)}
+            className="song-select"
+          >
+            <option value="">-- Choisir une chanson --</option>
+            {allSongs.filter(s => s.audioUrl).map(song => (
+              <option key={song.id} value={song.id}>{song.title} - {song.artist}</option>
+            ))}
+          </select>
+          
+          {selectedSongId && (
+            <div className="discovery-actions animate-fade-in">
+              <button className="btn-community" onClick={fetchCommunitySessions}>
+                🌏 Voir les analyses de la communauté
+              </button>
             </div>
-          ) : (
-            <div className="local-file-info animate-fade-in">
-              <div className="file-box">
-                <span className="file-icon">📁</span>
-                <span className="file-name">{localFile.name}</span>
-                <button className="change-btn" onClick={() => document.getElementById('file-upload').click()}>Changer</button>
+          )}
+
+          {showCommunity && communitySessions.length > 0 && (
+            <div className="community-overlay glass animate-slide-up">
+              <div className="overlay-header">
+                <h4>Analyses partagées 🌏</h4>
+                <button className="btn-close-small" onClick={() => setShowCommunity(false)}>✕</button>
+              </div>
+              <div className="community-list">
+                {communitySessions.map(sess => (
+                  <div key={sess.id} className="community-item" onClick={() => { setMarkers(sess.markers); setShowCommunity(false); }}>
+                    <span className="user-icon">👤</span>
+                    <div className="item-info">
+                      <span className="username">{sess.profiles?.username || 'Anonyme'}</span>
+                      <span className="meta">{sess.markers.length} marqueurs • {new Date(sess.updated_at).toLocaleDateString()}</span>
+                    </div>
+                    <button className="btn-load-sess">Charger</button>
+                  </div>
+                ))}
               </div>
             </div>
           )}
         </div>
 
-        {(selectedSongId || localFile) && (
+        {selectedSongId && (
           <div className="player-section animate-fade-in glass">
             {showFlash && (
               <div className={`screen-flash ${showFlash}`} />
@@ -630,7 +548,7 @@ export default function MusicalityTrainer() {
               <div 
                 className={`waveform-container ${isDragging ? 'dragging' : ''}`} 
                 ref={waveformRef} 
-                style={{ display: (spotifyAnalysis || youtubeId) && !localFile && !remoteUrl ? 'none' : 'block' }} 
+                style={{ display: spotifyAnalysis ? 'none' : 'block' }} 
                 onMouseDown={(e) => {
                   if (!wavesurfer.current) return;
                   const rect = e.currentTarget.getBoundingClientRect();
@@ -1537,6 +1455,39 @@ export default function MusicalityTrainer() {
           background: inherit;
           opacity: 0.4;
         }
+        .logo-img {
+          width: 32px;
+          height: 32px;
+          object-fit: contain;
+          border-radius: 8px;
+        }
+        .song-selection-wrapper {
+          max-width: 600px;
+          margin: 0 auto 40px;
+          background: rgba(255,255,255,0.05);
+          padding: 30px;
+          border-radius: 24px;
+          border: 1px solid var(--border);
+        }
+        .song-select {
+          width: 100%;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid var(--border);
+          color: white;
+          padding: 16px;
+          border-radius: 16px;
+          font-size: 1.1rem;
+          font-weight: 700;
+          cursor: pointer;
+          -webkit-appearance: none; /* Remove default arrow for Chrome/Safari */
+          -moz-appearance: none;    /* Remove default arrow for Firefox */
+          appearance: none;         /* Remove default arrow for modern browsers */
+          background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2C197.9L159.3%2C69.2c-4.7-4.7-12.3-4.7-17%2C0L5.4%2C197.9c-4.7%2C4.7-4.7%2C12.3%2C0%2C17l19.8%2C19.8c4.7%2C4.7%2C12.3%2C4.7%2C17%2C0l108.8-108.8l108.8%2C108.8c4.7%2C4.7%2C12.3%2C4.7%2C17%2C0l19.8-19.8C291.7%2C210.2%2C291.7%2C202.6%2C287%2C197.9z%22%2F%3E%3C%2Fsvg%3E');
+          background-repeat: no-repeat;
+          background-position: right 16px center;
+          background-size: 12px;
+          padding-right: 40px; /* Make space for the custom arrow */
+        }
         .marker-tip.bongo { background: #3b82f6; border-color: #60a5fa; box-shadow: 0 8px 16px rgba(59, 130, 246, 0.4); }
         .marker-tip.roll { background: #a855f7; border-color: #c084fc; box-shadow: 0 8px 16px rgba(168, 85, 247, 0.4); }
         .marker-tip.break { background: #ef4444; border-color: #f87171; box-shadow: 0 8px 16px rgba(239, 68, 68, 0.4); }
@@ -1670,6 +1621,7 @@ export default function MusicalityTrainer() {
           .controls-row { justify-content: center; gap: 16px; }
           .time-display { width: 100%; text-align: center; order: -1; }
           .trainer-content { padding-top: 24px; }
+        }
         }
       `}</style>
     </div>
