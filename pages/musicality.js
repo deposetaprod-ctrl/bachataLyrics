@@ -13,13 +13,15 @@ export default function MusicalityTrainer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
   const [upcomingMarker, setUpcomingMarker] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   
   const waveformRef = useRef(null);
+  const audioRef = useRef(null);
   const wavesurfer = useRef(null);
 
   // -- Load Wavesurfer from CDN --
   const initWavesurfer = () => {
-    if (!window.WaveSurfer || !waveformRef.current) return;
+    if (!window.WaveSurfer || !waveformRef.current || !audioRef.current) return;
 
     if (wavesurfer.current) {
       wavesurfer.current.destroy();
@@ -27,15 +29,19 @@ export default function MusicalityTrainer() {
 
     wavesurfer.current = window.WaveSurfer.create({
       container: waveformRef.current,
-      waveColor: '#4f46e5',
-      progressColor: '#a855f7',
+      media: audioRef.current, // Use the actual audio element for better compatibility
+      waveColor: 'rgba(255, 255, 255, 0.1)',
+      progressColor: 'var(--accent)',
       cursorColor: '#fff',
-      barWidth: 2,
-      barRadius: 3,
+      barWidth: 3,
+      barGap: 3,
+      barRadius: 4,
       responsive: true,
       height: 120,
       normalize: true,
-      partialRender: true
+      hideScrollbar: true,
+      interact: true,
+      fillParent: true,
     });
 
     wavesurfer.current.on('audioprocess', () => {
@@ -45,17 +51,32 @@ export default function MusicalityTrainer() {
     wavesurfer.current.on('play', () => setIsPlaying(true));
     wavesurfer.current.on('pause', () => setIsPlaying(false));
     wavesurfer.current.on('finish', () => setIsPlaying(false));
+    
+    wavesurfer.current.on('ready', () => {
+      setIsLoading(false);
+    });
+
+    wavesurfer.current.on('error', (err) => {
+      console.error('Wavesurfer error:', err);
+      setIsLoading(false);
+    });
   };
 
   // -- Load Song --
   useEffect(() => {
-    if (selectedSongId && wavesurfer.current) {
+    if (selectedSongId && audioRef.current) {
       const song = allSongs.find(s => s.id === selectedSongId);
       if (song && song.audioUrl) {
-        wavesurfer.current.load(song.audioUrl);
-        // Load markers from localStorage
+        setIsLoading(true);
+        // Load the audio and markers
         const savedMarkers = JSON.parse(localStorage.getItem(`markers-${selectedSongId}`) || '[]');
         setMarkers(savedMarkers);
+        
+        // Re-init wavesurfer if needed
+        if (window.WaveSurfer) {
+          initWavesurfer();
+          wavesurfer.current.load(song.audioUrl);
+        }
       }
     }
   }, [selectedSongId]);
@@ -94,7 +115,11 @@ export default function MusicalityTrainer() {
     setUpcomingMarker(nextMarker || null);
   }, [currentTime, markers]);
 
-  const togglePlay = () => wavesurfer.current?.playPause();
+  const togglePlay = () => {
+    if (!wavesurfer.current) return;
+    wavesurfer.current.playPause();
+  };
+
   const toggleRecording = () => setIsRecording(!isRecording);
   
   const clearMarkers = () => {
@@ -115,82 +140,119 @@ export default function MusicalityTrainer() {
         onLoad={initWavesurfer}
       />
 
-      <nav className="navbar">
+      <header className="navbar">
         <div className="navbar-inner">
-          <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
+          <div className="logo" onClick={() => router.push('/')}>
             <div className="logo-icon">🎶</div>
-            <span className="logo-text">Musicality Trainer</span>
+            <span className="logo-text">Musicality</span>
           </div>
           <div className="nav-links">
             <span onClick={() => router.push('/')}>Accueil</span>
+            <span onClick={() => router.push('/passes')}>Passes</span>
             <span onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
           </div>
         </div>
-      </nav>
+      </header>
 
       <main className="container trainer-content">
         <div className="trainer-header">
-          <h1>Entraîne ton oreille Musicale</h1>
-          <p>Analyse tes morceaux préférés et marque les bongos, rolls et breaks pour ne plus jamais les rater.</p>
+          <h1>Analyse Musicale</h1>
+          <p>Enregistre les instruments en temps réel pour ne plus jamais rater un bongo ou un break.</p>
         </div>
 
-        <div className="song-selection-card">
-          <label>Choisir une chanson à analyser</label>
-          <select 
-            value={selectedSongId} 
-            onChange={(e) => setSelectedSongId(e.target.value)}
-            className="song-select"
-          >
-            <option value="">-- Sélectionner une chanson --</option>
-            {allSongs.filter(s => s.audioUrl).map(song => (
-              <option key={song.id} value={song.id}>{song.title} - {song.artist}</option>
-            ))}
-          </select>
+        <div className="song-selection-card glass">
+          <label>Chanson sélectionnée</label>
+          <div className="select-wrapper">
+            <select 
+              value={selectedSongId} 
+              onChange={(e) => setSelectedSongId(e.target.value)}
+              className="song-select"
+            >
+              <option value="">-- Choisir une chanson --</option>
+              {allSongs.filter(s => s.audioUrl).map(song => (
+                <option key={song.id} value={song.id}>{song.title} - {song.artist}</option>
+              ))}
+            </select>
+          </div>
         </div>
 
         {selectedSongId && (
-          <div className="player-section animate-fade-in">
-            <div className="waveform-container" ref={waveformRef}>
-              {markers.map(marker => (
-                <div 
-                  key={marker.id}
-                  className="marker-line"
-                  style={{ 
-                    left: `${(marker.time / (wavesurfer.current?.getDuration() || 1)) * 100}%`,
-                    backgroundColor: marker.color 
-                  }}
-                  title={marker.label}
-                />
-              ))}
+          <div className="player-section animate-fade-in glass">
+            {isLoading && (
+              <div className="loading-overlay">
+                <div className="spinner" />
+                <span>Chargement du son...</span>
+              </div>
+            )}
+            
+            <audio ref={audioRef} crossOrigin="anonymous" />
+
+            <div className="waveform-wrapper">
+              <div className="waveform-container" ref={waveformRef} />
+              <div className="markers-layer">
+                {markers.map(marker => (
+                  <div 
+                    key={marker.id}
+                    className={`marker-tip ${marker.type}`}
+                    style={{ 
+                      left: `${(marker.time / (wavesurfer.current?.getDuration() || 1)) * 100}%`
+                    }}
+                    onClick={() => wavesurfer.current.setTime(marker.time)}
+                  >
+                    <span className="marker-icon">
+                      {marker.type === 'bongo' && '🥁'}
+                      {marker.type === 'roll' && '🌀'}
+                      {marker.type === 'break' && '⚡'}
+                      {marker.type === 'guira' && '🥄'}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="controls-row">
-              <button className={`btn-icon ${isPlaying ? 'playing' : ''}`} onClick={togglePlay}>
-                {isPlaying ? '⏸' : '▶️'}
+              <button 
+                className={`btn-play-large ${isPlaying ? 'playing' : ''}`} 
+                onClick={togglePlay}
+              >
+                {isPlaying ? (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" /></svg>
+                ) : (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+                )}
               </button>
               
+              <div className="time-display">
+                <span className="current">{Math.floor(currentTime / 60)}:{(currentTime % 60).toFixed(1).padStart(4, '0')}</span>
+                <span className="total"> / {wavesurfer.current ? `${Math.floor(wavesurfer.current.getDuration() / 60)}:${(wavesurfer.current.getDuration() % 60).toFixed(0).padStart(2, '0')}` : '0:00'}</span>
+              </div>
+
               <div className="spacer" />
 
               <button 
-                className={`btn-record ${isRecording ? 'active' : ''}`} 
+                className={`btn-record-pill ${isRecording ? 'active' : ''}`} 
                 onClick={toggleRecording}
               >
-                {isRecording ? '⏹ Arrêter' : '⏺ Enregistrer'}
+                <div className="dot" />
+                {isRecording ? 'Terminer' : 'Enregistrer'}
               </button>
 
-              <button className="btn-ghost" onClick={clearMarkers}>Effacer tout</button>
+              <button className="btn-secondary" onClick={clearMarkers}>Vider</button>
             </div>
 
             {isRecording && (
-              <div className="recording-hint animate-pulse">
-                Appuie sur : <span><b>B</b> (Bongo)</span> <span><b>R</b> (Roll)</span> <span><b>K</b> (Break)</span> <span><b>G</b> (Guira)</span>
+              <div className="recording-hint animate-fade-in glass">
+                <div className="hint-item"><span className="key">B</span> Bongo</div>
+                <div className="hint-item"><span className="key">R</span> Roll</div>
+                <div className="hint-item"><span className="key">K</span> Break</div>
+                <div className="hint-item"><span className="key">G</span> Guira</div>
               </div>
             )}
 
             <div className="markers-list">
               <h3>Marqueurs ({markers.length})</h3>
               <div className="markers-grid">
-                {markers.length === 0 && <p className="empty-msg">Aucun marqueur pour le moment.</p>}
+                {markers.length === 0 && <p className="empty-msg">Aucun marqueur. Utilise le bouton Enregistrer !</p>}
                 {markers.map(m => (
                   <div key={m.id} className="marker-item" onClick={() => wavesurfer.current.setTime(m.time)}>
                     <span className="marker-dot" style={{ backgroundColor: m.color }} />
@@ -210,10 +272,18 @@ export default function MusicalityTrainer() {
         .musicality-page {
           min-height: 100vh;
           background: var(--bg-primary);
+          color: white;
+        }
+        .glass {
+          background: rgba(255, 255, 255, 0.03);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .trainer-content {
-          padding-top: 48px;
-          padding-bottom: 120px;
+          padding: 48px 24px 120px;
+          max-width: 1000px;
+          margin: 0 auto;
         }
         .trainer-header {
           text-align: center;
@@ -221,141 +291,240 @@ export default function MusicalityTrainer() {
         }
         .trainer-header h1 {
           font-family: 'Playfair Display', serif;
-          font-size: 3rem;
+          font-size: clamp(2.5rem, 8vw, 4rem);
           margin-bottom: 12px;
+          background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
         .trainer-header p {
           color: var(--text-secondary);
           max-width: 600px;
           margin: 0 auto;
+          font-size: 1.1rem;
         }
         .song-selection-card {
-          background: var(--bg-card);
-          padding: 32px;
-          border-radius: var(--radius-lg);
-          border: 1px solid var(--border);
-          max-width: 600px;
-          margin: 0 auto 40px;
+          padding: 24px;
+          border-radius: 24px;
+          margin-bottom: 40px;
           display: flex;
           flex-direction: column;
-          gap: 16px;
+          gap: 12px;
+          max-width: 500px;
+          margin-inline: auto;
+        }
+        .select-wrapper {
+          position: relative;
+        }
+        .select-wrapper::after {
+          content: '▼';
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+          font-size: 0.8rem;
+          color: var(--text-muted);
         }
         .song-select {
           width: 100%;
-          background: var(--bg-primary);
+          background: rgba(0, 0, 0, 0.4);
           border: 1px solid var(--border);
-          padding: 12px 20px;
-          border-radius: var(--radius-md);
+          padding: 16px 24px;
+          border-radius: 16px;
           color: white;
           font-size: 1rem;
           cursor: pointer;
+          appearance: none;
+          outline: none;
+          transition: border-color 0.2s;
         }
+        .song-select:focus { border-color: var(--accent); }
+        
         .player-section {
-          background: var(--bg-card);
           padding: 40px;
-          border-radius: var(--radius-lg);
-          border: 1px solid var(--border);
-          box-shadow: 0 40px 100px -20px rgba(0,0,0,0.5);
+          border-radius: 40px;
+          box-shadow: 0 40px 100px -20px rgba(0,0,0,0.6);
+          position: relative;
+        }
+        .loading-overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(10, 10, 15, 0.8);
+          backdrop-filter: blur(10px);
+          z-index: 100;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          border-radius: 40px;
+        }
+        .spinner {
+          width: 40px;
+          height: 40px;
+          border: 4px solid rgba(255,255,255,0.1);
+          border-top-color: var(--accent);
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .waveform-wrapper {
+          position: relative;
+          background: rgba(0,0,0,0.4);
+          border-radius: 24px;
+          margin-bottom: 40px;
+          padding: 30px 0;
+          border: 1px solid rgba(255,255,255,0.05);
         }
         .waveform-container {
-          position: relative;
-          background: rgba(0,0,0,0.2);
-          border-radius: var(--radius-md);
-          margin-bottom: 32px;
-          overflow: hidden;
-          direction: ltr; /* Ensure wavesurfer draws correctly if LTR */
+          direction: ltr; /* Important for wavesurfer rendering */
         }
-        .marker-line {
+        .markers-layer {
           position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 2px;
-          z-index: 5;
+          inset: 0;
           pointer-events: none;
         }
+        .marker-tip {
+          position: absolute;
+          top: -10px;
+          width: 36px;
+          height: 36px;
+          margin-left: -18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          border: 1.5px solid rgba(255, 255, 255, 0.2);
+          pointer-events: auto;
+          cursor: pointer;
+          transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          z-index: 10;
+        }
+        .marker-tip:hover { transform: scale(1.2) translateY(-4px); z-index: 20; }
+        .marker-tip::after {
+          content: '';
+          position: absolute;
+          top: 36px;
+          left: 50%;
+          width: 2px;
+          height: 144px;
+          background: inherit;
+          opacity: 0.4;
+        }
+        .marker-tip.bongo { background: #3b82f6; border-color: #60a5fa; box-shadow: 0 8px 16px rgba(59, 130, 246, 0.4); }
+        .marker-tip.roll { background: #a855f7; border-color: #c084fc; box-shadow: 0 8px 16px rgba(168, 85, 247, 0.4); }
+        .marker-tip.break { background: #ef4444; border-color: #f87171; box-shadow: 0 8px 16px rgba(239, 68, 68, 0.4); }
+        .marker-tip.guira { background: #10b981; border-color: #34d399; box-shadow: 0 8px 16px rgba(16, 185, 129, 0.4); }
+        
+        .marker-icon { font-size: 1.2rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
+
         .controls-row {
           display: flex;
           align-items: center;
           gap: 24px;
-          margin-bottom: 24px;
+          margin-bottom: 40px;
+          flex-wrap: wrap;
         }
-        .btn-icon {
-          width: 64px;
-          height: 64px;
-          border-radius: 50%;
+        .btn-play-large {
+          width: 72px;
+          height: 72px;
+          border-radius: 24px;
           background: var(--accent);
           color: white;
-          font-size: 1.5rem;
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: transform 0.2s;
+          box-shadow: 0 15px 30px -10px rgba(168, 85, 247, 0.6);
+          transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .btn-icon:hover { transform: scale(1.1); }
-        .spacer { flex: 1; }
-        .btn-record {
+        .btn-play-large:hover { transform: scale(1.08) translateY(-4px); }
+        
+        .time-display {
+          font-family: 'Inter', monospace;
+          font-size: 1.4rem;
+          font-weight: 800;
+          letter-spacing: -0.02em;
+        }
+        .time-display .current { color: white; }
+        .time-display .total { color: var(--text-muted); font-size: 1.1rem; }
+
+        .btn-record-pill {
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 12px;
           background: rgba(255, 255, 255, 0.05);
-          border: 1px solid var(--border);
-          padding: 12px 24px;
-          border-radius: 999px;
+          border: 1.5px solid var(--border);
+          padding: 14px 28px;
+          border-radius: 20px;
           color: white;
-          font-weight: 700;
+          font-weight: 800;
           transition: all 0.2s;
         }
-        .btn-record.active {
-          background: var(--red);
-          border-color: #ff6b6b;
-          animation: pulse 2s infinite;
+        .btn-record-pill.active {
+          background: rgba(239, 68, 68, 0.15);
+          border-color: var(--red);
+          color: var(--red);
+          box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
         }
-        .recording-hint {
-          background: rgba(239, 68, 68, 0.1);
-          border: 1px solid rgba(239, 68, 68, 0.2);
-          padding: 16px;
-          border-radius: 12px;
-          margin-bottom: 32px;
-          text-align: center;
+        .btn-record-pill .dot {
+          width: 10px;
+          height: 10px;
+          background: var(--text-muted);
+          border-radius: 50%;
+        }
+        .btn-record-pill.active .dot { background: var(--red); animation: blink 1s infinite; }
+
+        .btn-secondary {
+          background: rgba(255, 255, 255, 0.05);
           color: var(--text-secondary);
+          padding: 14px 24px;
+          border-radius: 16px;
+          font-weight: 700;
+          border: 1px solid var(--border);
+        }
+
+        .recording-hint {
+          padding: 24px;
+          border-radius: 24px;
+          margin-bottom: 40px;
           display: flex;
           justify-content: center;
-          gap: 20px;
+          gap: 32px;
+          flex-wrap: wrap;
         }
-        .recording-hint span { color: white; }
-        .markers-list h3 { margin-bottom: 16px; }
+        .hint-item { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-secondary); }
+        .key { background: #333; color: white; padding: 4px 10px; border-radius: 8px; font-weight: 900; border-bottom: 3px solid #000; box-shadow: 0 4px 0 rgba(0,0,0,0.5); }
+
+        .markers-list h3 { margin-bottom: 24px; font-size: 1.2rem; color: var(--text-secondary); font-weight: 800; }
         .markers-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-          gap: 12px;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 16px;
         }
         .marker-item {
-          background: var(--bg-secondary);
-          padding: 10px 14px;
-          border-radius: var(--radius-sm);
-          border: 1px solid var(--border);
+          background: rgba(255, 255, 255, 0.04);
+          padding: 16px 20px;
+          border-radius: 20px;
+          border: 1.5px solid var(--border);
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 16px;
           cursor: pointer;
-          transition: border-color 0.2s;
+          transition: all 0.2s;
         }
-        .marker-item:hover { border-color: var(--accent); }
-        .marker-dot { width: 8px; height: 8px; border-radius: 50%; }
-        .marker-time { font-family: monospace; font-size: 0.8rem; }
-        .marker-label { font-size: 0.85rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .empty-msg { color: var(--text-muted); grid-column: 1 / -1; }
+        .marker-item:hover { transform: translateY(-3px); border-color: var(--accent); background: rgba(255, 255, 255, 0.08); }
+        .marker-dot { width: 12px; height: 12px; border-radius: 4px; }
+        .marker-time { font-family: monospace; font-size: 1rem; color: var(--text-muted); font-weight: 700; }
         
-        @keyframes pulse {
-          0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
-          70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
-          100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        @media (max-width: 768px) {
+          .player-section { padding: 24px; }
+          .controls-row { justify-content: center; gap: 16px; }
+          .time-display { width: 100%; text-align: center; order: -1; }
+          .trainer-content { padding-top: 24px; }
         }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in { animation: fadeIn 0.5s ease-out; }
       `}</style>
     </div>
   );

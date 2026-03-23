@@ -105,27 +105,16 @@ export default function Home() {
             <span className="logo-text">Bachata Lyrics</span>
           </div>
 
-          <div className="nav-links" style={{ display: 'flex', gap: '24px', fontWeight: 600 }}>
-            <span style={{ cursor: 'pointer', color: 'var(--accent)' }}>Sons</span>
-            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/passes')}>Passes</span>
-            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
-            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/musicality')}>Musicalité</span>
+          <div className="nav-links">
+            <span style={{ color: 'var(--accent)' }}>Sons</span>
+            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/passes')}>Passes</span>
+            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
+            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/musicality')}>Musicalité</span>
             <button 
               onClick={() => setIsModalOpen(true)}
-              style={{ 
-                background: 'linear-gradient(135deg, #c026d3, #7c3aed)',
-                color: 'white',
-                border: 'none',
-                padding: '6px 14px',
-                borderRadius: '999px',
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                cursor: 'pointer',
-                transition: 'transform 0.2s'
-              }}
-              className="hover-scale"
+              className="btn-add-song"
             >
-              ➕ Ajouter un son
+              ➕ <span>Ajouter un son</span>
             </button>
           </div>
 

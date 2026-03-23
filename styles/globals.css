@@ -122,11 +122,12 @@ body::before {
   width: 34px;
   height: 34px;
   background: linear-gradient(135deg, var(--accent), #ec4899);
-  border-radius: var(--radius-sm);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
 }
 
 .logo-text {
@@ -766,14 +767,81 @@ body::before {
   gap: 24px;
   font-weight: 600;
   font-size: 0.95rem;
+  align-items: center;
 }
 
 .nav-links span {
   transition: color var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .nav-links span:hover {
   color: #fff !important;
+}
+
+/* ─── ADD SONG BUTTON ─── */
+.btn-add-song {
+  background: linear-gradient(135deg, #c026d3, #7c3aed);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  white-space: nowrap;
+}
+
+.btn-add-song:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+}
+
+.btn-add-song:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 900px) {
+  .navbar-inner {
+    height: auto;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .nav-links {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    font-size: 0.85rem;
+  }
+  .search-bar {
+    order: 3;
+    width: 100%;
+    max-width: none;
+  }
+  .logo {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 12px;
+  }
+  .btn-add-song span {
+    display: none;
+  }
+  .btn-add-song {
+    padding: 8px 12px;
+  }
 }
 
 .passe-video-container {

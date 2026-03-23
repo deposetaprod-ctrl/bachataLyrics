@@ -59,11 +59,11 @@ export default function Passes() {
             <span className="logo-text">Bachata Lyrics</span>
           </div>
           
-          <div className="nav-links" style={{ display: 'flex', gap: '24px', fontWeight: 600 }}>
-            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/')}>Sons</span>
-            <span style={{ cursor: 'pointer', color: 'var(--accent)' }}>Passes</span>
-            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
-            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/musicality')}>Musicalité</span>
+          <div className="nav-links">
+            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/')}>Sons</span>
+            <span style={{ color: 'var(--accent)' }}>Passes</span>
+            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
+            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/musicality')}>Musicalité</span>
           </div>
 
           <div className="search-bar">
