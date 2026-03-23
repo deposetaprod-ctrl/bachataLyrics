@@ -137,16 +137,37 @@ export default function SongPage({ song }) {
                 </div>
               )}
               {song.spotify && !song.audioUrl && (
-                <a
-                  id="spotify-btn"
-                  href={song.spotify}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="spotify-listen-btn"
-                >
-                  <SpotifyIcon />
-                  Écouter sur Spotify
-                </a>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <a
+                    id="spotify-btn"
+                    href={song.spotify}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="spotify-listen-btn"
+                  >
+                    <SpotifyIcon />
+                    Écouter sur Spotify
+                  </a>
+                  <button 
+                    onClick={() => document.getElementById('culture-section')?.scrollIntoView({ behavior: 'smooth' })}
+                    style={{
+                      background: 'rgba(255,255,255,0.05)',
+                      border: '1px solid rgba(255,255,255,0.1)',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '12px',
+                      fontSize: '0.85rem',
+                      fontWeight: 600,
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px'
+                    }}
+                    className="hover-scale"
+                  >
+                    💡 En savoir plus
+                  </button>
+                </div>
               )}
             </div>
           </div>
@@ -195,7 +216,7 @@ export default function SongPage({ song }) {
         </div>
 
         {/* ─── CULTURE & OBJECTIVES ─── */}
-        <div style={{
+        <div id="culture-section" style={{
           marginTop: '64px',
           padding: '40px',
           background: 'rgba(255, 255, 255, 0.03)',

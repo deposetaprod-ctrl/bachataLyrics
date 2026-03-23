@@ -181,56 +181,48 @@ export default function Home() {
             marginTop: '32px',
             background: 'linear-gradient(135deg, #1e1b4b, #312e81)',
             borderRadius: '24px',
-            padding: '32px',
+            padding: '24px',
             border: '1px solid rgba(124, 58, 237, 0.3)',
             display: 'flex',
+            flexWrap: 'wrap',
             alignItems: 'center',
-            gap: '32px',
+            gap: '20px',
             cursor: 'pointer',
             boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
             position: 'relative',
             overflow: 'hidden'
           }}
-          className="hover-scale"
+          className="daily-challenge-card hover-scale"
         >
           <div style={{
-            position: 'absolute',
-            top: '-20px',
-            right: '-20px',
-            fontSize: '120px',
-            opacity: 0.1,
-            transform: 'rotate(15deg)'
-          }}>🔥</div>
-          
-          <div style={{
-            width: '80px',
-            height: '80px',
-            borderRadius: '20px',
+            width: '60px',
+            height: '60px',
+            borderRadius: '16px',
             background: `linear-gradient(135deg, ${dailySong.color}, #000)`,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '2rem',
+            fontSize: '1.5rem',
             boxShadow: '0 10px 20px rgba(0,0,0,0.3)',
             flexShrink: 0
           }}>
             🎵
           </div>
           
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: '1 1 200px' }}>
             <div style={{ 
               textTransform: 'uppercase', 
-              fontSize: '0.7rem', 
+              fontSize: '0.65rem', 
               fontWeight: 900, 
               letterSpacing: '0.1em',
               color: '#a78bfa',
-              marginBottom: '4px'
+              marginBottom: '2px'
             }}>
               Défi du jour
             </div>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '4px' }}>{dailySong.title}</h2>
-            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
-              Apprends le vocabulaire et le sens de ce hit de <strong>{dailySong.artist}</strong>
+            <h2 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '2px' }}>{dailySong.title}</h2>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem' }}>
+              Par <strong>{dailySong.artist}</strong>
             </p>
           </div>
           
@@ -238,11 +230,12 @@ export default function Home() {
             background: 'white',
             color: '#1e1b4b',
             border: 'none',
-            padding: '12px 24px',
-            borderRadius: '12px',
+            padding: '10px 20px',
+            borderRadius: '10px',
             fontWeight: 700,
-            fontSize: '0.9rem',
-            cursor: 'pointer'
+            fontSize: '0.85rem',
+            cursor: 'pointer',
+            whiteSpace: 'nowrap'
           }}>
             Relever le défi
           </button>
