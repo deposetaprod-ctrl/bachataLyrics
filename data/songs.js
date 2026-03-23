@@ -2484,6 +2484,131 @@ Que l'oubli m'enterre, mon amour
 Mais je ne peux plus partager tes lèvres`
     }
   },
+  {
+    id: "escalofrios-jensen",
+    title: "Escalofríos",
+    artist: "Jensen & sP Polanco & BCHTA RISING",
+    year: 2025,
+    tags: ["Sensual"],
+    color: "#9333ea",
+    spotify: "https://open.spotify.com/search/Escalofr%C3%ADos%20Jensen%20sP%20Polanco",
+    culture: {
+      context: "Sorti en 2025 sur le projet 'BCHTA RISING, Vol. 2', ce morceau de Jensen confirme son statut de star de la Bachata Sensual moderne.",
+      meaning: "Une chanson rythmée qui parle d'attirance physique intense et de la connexion électrique entre deux personnes sur la piste de danse.",
+      artistInfo: "Jensen est l'un des artistes les plus en vue de la scène Bachata européenne, souvent associé au producteur sP Polanco.",
+      album: "BCHTA RISING, Vol. 2"
+    },
+    lyrics: {
+      es: `Caliente, no das break
+Tú no sigues la ley
+Porque estás como es
+Y te pusiste bella
+En la 4x4
+Llegaron 16
+Y pidieron botellas
+Hey, DJ, dale play
+
+Entre miradas se formó una conexión
+Tú eres mala, me lo advierte la intuición
+Yo estaba buscando en el fondo de la Buchanan's
+Mover el party pa la cama
+Yeah, yeah, yeah, yeah
+Dame, dame, dame, dame, dame, dame
+Lo setie pa que te sientas bien
+Baby, ponte, que yo quiero ver
+
+Quiero ver eso que me tienta
+Dale otra vuelta, vente conmigo
+Démonos castigo, ponte violenta
+Quiero que sientas escalofríos
+
+Hiperactividad como Adderall
+Me saliste cara pero no e' na
+Montada pidiendo velocidad
+Una diabla no le teme a na'
+Con su mirada me dio la verde
+Que nos vayamos pa otro lugar
+
+Pues te llevo para Europa para bailar
+Cómo es las champañas de Moet
+Figurita de Imperial, lo rica que tú te ves
+Tú estás dura, mamá, la disco se va a prender
+Suelta todo eso pa acá, pa pegarnos como es
+Dame, dame, dame, dame, dame, dame
+Lo setie pa que te sientas bien
+Baby, ponte, que yo quiero ver
+
+Quiero ver eso que me tienta
+Dale otra vuelta, vente conmigo
+Démonos castigo, ponte violenta
+Quiero que sientas escalofríos
+
+sP
+It's a problem
+Rising
+Es Jensen
+Hay sol, pero tú sabías
+
+Quiero ver eso que me tienta
+Dale otra vuelta, vente conmigo
+Démonos castigo, ponte violenta
+Quiero que sientas escalofríos`,
+      fr: `Chaud(e), tu ne lâches rien
+Tu ne suis pas la loi
+Parce que tu es au top
+Et tu t'es faite belle
+Dans le 4x4
+Ils sont arrivés à 16
+Et ils ont commandé des bouteilles
+Hé, DJ, lance la musique
+
+Entre nos regards une connexion s'est formée
+Tu es fatale, mon intuition me prévient
+Je cherchais au fond d'une bouteille de Buchanan's
+Déplacer la fête vers le lit
+Yeah, yeah, yeah, yeah
+Donne-moi, donne-moi (x6)
+Je l'ai préparé pour que tu te sentes bien
+Bébé, installe-toi, je veux voir
+
+Je veux voir ce qui me tente
+Fais un autre tour, viens avec moi
+Donne-moi du plaisir (punis-moi), deviens sauvage
+Je veux que tu ressentes des frissons
+
+Hyperactivité comme de l'Adderall
+Tu m'as coûté cher mais ce n'est rien
+Lancée à toute vitesse
+Une diablesse n'a peur de rien
+D'un regard elle m'a donné le feu vert
+Pour qu'on aille ailleurs
+
+Alors je t'emmène en Europe pour danser
+Comment sont les champagnes Moët
+Petite figurine Imperial, tu es si désirable
+Tu es incroyable, chérie, la boîte va s'enflammer
+Lâche tout ça ici, pour qu'on se rapproche vraiment
+Donne-moi, donne-moi (x6)
+Je l'ai préparé pour que tu te sentes bien
+Bébé, installe-toi, je veux voir
+
+Je veux voir ce qui me tente
+Fais un autre tour, viens avec moi
+Donne-moi du plaisir (punis-moi), deviens sauvage
+Je veux que tu ressentes des frissons
+
+sP
+C'est un problème
+Rising
+C'est Jensen
+Il y a du soleil, mais tu le savais déjà
+
+Je veux voir ce qui me tente
+Fais un autre tour, viens avec moi
+Donne-moi du plaisir (punis-moi), deviens sauvage
+Je veux que tu ressentes des frissons`
+    }
+  },
 ];
 
 
