@@ -40,14 +40,15 @@ export default function Contact() {
       <nav className="navbar">
         <div className="navbar-inner">
           <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-            <div className="logo-icon">🎶</div>
-            <span className="logo-text">Bachata Lyrics</span>
+            <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
+            <span className="logo-text">Bachata Flow</span>
           </div>
-          <div className="nav-links" style={{ display: 'flex', gap: '24px', fontWeight: 600, flex: 1, paddingLeft: '40px' }}>
-            <span style={{ cursor: 'pointer', color: 'var(--text-muted)' }} onClick={() => router.push('/')}>Sons</span>
-            <span style={{ cursor: 'pointer', color: 'var(--text-muted)' }} onClick={() => router.push('/passes')}>Passes</span>
-            <span style={{ cursor: 'pointer', color: 'var(--text-muted)', transition: 'color 0.2s' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
-            <span style={{ cursor: 'pointer', color: 'var(--accent)' }}>Contact</span>
+          <div className="nav-links">
+            <span onClick={() => router.push('/')}>Sons</span>
+            <span onClick={() => router.push('/passes')}>Passes</span>
+            <span onClick={() => router.push('/musicality')}>Musicalité</span>
+            <span onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
+            <span style={{ color: 'var(--accent)' }}>Contact</span>
           </div>
         </div>
       </nav>

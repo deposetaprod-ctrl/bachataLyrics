@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Script from 'next/script';
 import { songs } from '../data/songs';
 import { SpotifyIcon } from '../components/SpotifyIcon';
 
@@ -16,6 +17,11 @@ export default function Home() {
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
   const [showObjectives, setShowObjectives] = useState(false);
   const [showDailyNotif, setShowDailyNotif] = useState(false);
+  const [user, setUser] = useState(null);
+  const [supabaseClient, setSupabaseClient] = useState(null);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [loginForm, setLoginForm] = useState({ email: '', password: '' });
+  const [isAuthLoading, setIsAuthLoading] = useState(false);
 
   useEffect(() => {
     const savedFavs = localStorage.getItem('favSongs');
@@ -30,6 +36,22 @@ export default function Home() {
     if (lastNotif !== todayStr) {
       setShowDailyNotif(true);
       localStorage.setItem('lastDailyNotif', todayStr);
+    }
+    // Supabase Init
+    if (typeof window !== 'undefined' && window.supabase) {
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+      if (supabaseUrl && supabaseKey) {
+        const client = window.supabase.createClient(supabaseUrl, supabaseKey);
+        setSupabaseClient(client);
+        client.auth.getSession().then(({ data: { session } }) => {
+          setUser(session?.user ?? null);
+        });
+        const { data: { subscription } } = client.auth.onAuthStateChange((_event, session) => {
+          setUser(session?.user ?? null);
+        });
+        return () => subscription.unsubscribe();
+      }
     }
   }, []);
 
@@ -96,26 +118,47 @@ export default function Home() {
       <Head>
         <title>Bachata Lyrics — Les plus belles paroles en français</title>
       </Head>
+      <Script 
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" 
+        strategy="afterInteractive"
+        onLoad={() => {
+          const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+          const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+          if (supabaseUrl && supabaseKey) {
+            const client = window.supabase.createClient(supabaseUrl, supabaseKey);
+            setSupabaseClient(client);
+          }
+        }}
+      />
 
       {/* ─── NAVBAR ─── */}
       <nav className="navbar">
         <div className="navbar-inner">
-          <div className="logo">
-            <div className="logo-icon">🎶</div>
-            <span className="logo-text">Bachata Lyrics</span>
+          <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
+            <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
+            <span className="logo-text">Bachata Flow</span>
           </div>
-
+ 
           <div className="nav-links">
             <span style={{ color: 'var(--accent)' }}>Sons</span>
-            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/passes')}>Passes</span>
-            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
-            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/musicality')}>Musicalité</span>
-            <button 
-              onClick={() => setIsModalOpen(true)}
-              className="btn-add-song"
-            >
-              ➕ <span>Ajouter un son</span>
-            </button>
+            <span onClick={() => router.push('/passes')}>Passes</span>
+            <span onClick={() => router.push('/musicality')}>Musicalité</span>
+            <span onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
+            
+            <div className="auth-profile">
+              {user ? (
+                <div className="user-logged animate-fade-in">
+                  <span className="user-name">👤 {user.email?.split('@')[0]}</span>
+                  <button className="btn-logout" onClick={() => supabaseClient.auth.signOut()}>
+                    Déconnexion
+                  </button>
+                </div>
+              ) : (
+                <button className="btn-login" onClick={() => setShowLoginModal(true)}>
+                  Connexion
+                </button>
+              )}
+            </div>
           </div>
 
           <div className="search-bar">
@@ -132,6 +175,41 @@ export default function Home() {
           <div className="song-count">{filtered.length} son{filtered.length !== 1 ? 's' : ''}</div>
         </div>
       </nav>
+
+      {showLoginModal && (
+        <div className="login-modal-overlay animate-fade-in" onClick={() => setShowLoginModal(false)}>
+          <div className="login-modal glass animate-slide-up" onClick={e => e.stopPropagation()}>
+            <h3>Connexion 🔐</h3>
+            <div className="login-inputs">
+              <input 
+                type="email" 
+                placeholder="Email" 
+                value={loginForm.email}
+                onChange={e => setLoginForm({...loginForm, email: e.target.value})}
+              />
+              <input 
+                type="password" 
+                placeholder="Mot de passe" 
+                value={loginForm.password}
+                onChange={e => setLoginForm({...loginForm, password: e.target.value})}
+              />
+            </div>
+            <button className="btn-login-submit" onClick={async () => {
+              setIsAuthLoading(true);
+              const { error } = await supabaseClient.auth.signInWithPassword(loginForm);
+              setIsAuthLoading(false);
+              if (error) alert("Erreur: " + error.message);
+              else {
+                setShowLoginModal(false);
+                setLoginForm({ email: '', password: '' });
+              }
+            }}>
+              {isAuthLoading ? 'Chargement...' : 'Se connecter'}
+            </button>
+            <button className="btn-close-modal" onClick={() => setShowLoginModal(false)}>Fermer</button>
+          </div>
+        </div>
+      )}
 
       {/* ─── HERO ─── */}
       <section className="hero">

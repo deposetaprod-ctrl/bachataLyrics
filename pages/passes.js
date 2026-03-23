@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { passes } from '../data/passes';
 
@@ -9,10 +9,32 @@ export default function Passes() {
   const [activeTag, setActiveTag] = useState(null);
   const [favoritePasses, setFavoritePasses] = useState([]);
   const [showFavorites, setShowFavorites] = useState(false);
+  const [user, setUser] = useState(null);
+  const [supabaseClient, setSupabaseClient] = useState(null);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [loginForm, setLoginForm] = useState({ email: '', password: '' });
+  const [isAuthLoading, setIsAuthLoading] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem('favPasses');
     if (saved) setFavoritePasses(JSON.parse(saved));
+
+    // Supabase Init
+    if (typeof window !== 'undefined' && window.supabase) {
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+      if (supabaseUrl && supabaseKey) {
+        const client = window.supabase.createClient(supabaseUrl, supabaseKey);
+        setSupabaseClient(client);
+        client.auth.getSession().then(({ data: { session } }) => {
+          setUser(session?.user ?? null);
+        });
+        const { data: { subscription } } = client.auth.onAuthStateChange((_event, session) => {
+          setUser(session?.user ?? null);
+        });
+        return () => subscription.unsubscribe();
+      }
+    }
   }, []);
 
   const toggleFav = (id, e) => {
@@ -42,7 +64,7 @@ export default function Passes() {
   return (
     <>
       <Head>
-        <title>Bachata Lyrics — Passes & Mouvements</title>
+        <title>Passes & Mouvements — Bachata Flow</title>
         <style dangerouslySetInnerHTML={{ __html: `
           .passe-video-container { position: relative; width: 100%; aspect-ratio: 4/5; background: #000; overflow: hidden; border-bottom: 1px solid var(--border); }
           .passe-video { width: 100%; height: 100%; object-fit: contain; display: block; }
@@ -51,34 +73,97 @@ export default function Passes() {
         `}} />
       </Head>
 
+      <Script 
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" 
+        strategy="afterInteractive"
+        onLoad={() => {
+          const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+          const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+          if (supabaseUrl && supabaseKey) {
+            const client = window.supabase.createClient(supabaseUrl, supabaseKey);
+            setSupabaseClient(client);
+          }
+        }}
+      />
+
       {/* ─── NAVBAR ─── */}
       <nav className="navbar">
         <div className="navbar-inner">
           <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-            <div className="logo-icon">🎶</div>
-            <span className="logo-text">Bachata Lyrics</span>
+            <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
+            <span className="logo-text">Bachata Flow</span>
           </div>
-          
+ 
           <div className="nav-links">
-            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/')}>Sons</span>
+            <span onClick={() => router.push('/')}>Sons</span>
             <span style={{ color: 'var(--accent)' }}>Passes</span>
-            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
-            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/musicality')}>Musicalité</span>
+            <span onClick={() => router.push('/musicality')}>Musicalité</span>
+            <span onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
+            
+            <div className="auth-profile">
+              {user ? (
+                <div className="user-logged animate-fade-in">
+                  <span className="user-name">👤 {user.email?.split('@')[0]}</span>
+                  <button className="btn-logout" onClick={() => supabaseClient.auth.signOut()}>
+                    Déconnexion
+                  </button>
+                </div>
+              ) : (
+                <button className="btn-login" onClick={() => setShowLoginModal(true)}>
+                  Connexion
+                </button>
+              )}
+            </div>
           </div>
-
-          <div className="search-bar">
-            <span className="search-icon">🔍</span>
-            <input
-              type="text"
-              placeholder="Rechercher une passe, un style..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
-
-          <div className="song-count">{filtered.length} passe{filtered.length !== 1 ? 's' : ''}</div>
         </div>
+
+        <div className="search-bar">
+          <span className="search-icon">🔍</span>
+          <input
+            type="text"
+            placeholder="Rechercher une passe, un style..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+
+        <div className="song-count">{filtered.length} passe{filtered.length !== 1 ? 's' : ''}</div>
       </nav>
+
+      {showLoginModal && (
+        <div className="login-modal-overlay animate-fade-in" onClick={() => setShowLoginModal(false)}>
+          <div className="login-modal glass animate-slide-up" onClick={e => e.stopPropagation()}>
+            <h3>Connexion 🔐</h3>
+            <div className="login-inputs">
+              <input 
+                type="email" 
+                placeholder="Email" 
+                value={loginForm.email}
+                onChange={e => setLoginForm({...loginForm, email: e.target.value})}
+              />
+              <input 
+                type="password" 
+                placeholder="Mot de passe" 
+                value={loginForm.password}
+                onChange={e => setLoginForm({...loginForm, password: e.target.value})}
+              />
+            </div>
+            <button className="btn-login-submit" onClick={async () => {
+              setIsAuthLoading(true);
+              const { error } = await supabaseClient.auth.signInWithPassword(loginForm);
+              setIsAuthLoading(false);
+              if (error) alert("Erreur: " + error.message);
+              else {
+                setShowLoginModal(false);
+                setLoginForm({ email: '', password: '' });
+              }
+            }}>
+              {isAuthLoading ? 'Chargement...' : 'Se connecter'}
+            </button>
+            <button className="btn-close-modal" onClick={() => setShowLoginModal(false)}>Fermer</button>
+          </div>
+        </div>
+      )}
 
       {/* ─── HERO ─── */}
       <section className="hero" style={{ paddingBottom: '32px' }}>

@@ -35,6 +35,8 @@ export default function MusicalityTrainer() {
   const [supabaseClient, setSupabaseClient] = useState(null);
   const [isAuthLoading, setIsAuthLoading] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [loginForm, setLoginForm] = useState({ email: '', password: '' });
   const videoInputRef = useRef(null);
 
   useEffect(() => {
@@ -456,27 +458,55 @@ export default function MusicalityTrainer() {
                   <span className="user-name">👤 {user.email?.split('@')[0]}</span>
                   <button className="btn-logout" onClick={() => {
                     setIsAuthLoading(true);
-                    supabaseClient.auth.signOut().then(() => setIsAuthLoading(false));
+                    supabaseClient.auth.signOut().then(() => {
+                       setIsAuthLoading(false);
+                       setUser(null);
+                    });
                   }}>
                     {isAuthLoading ? '...' : 'Déconnexion'}
                   </button>
                 </div>
               ) : (
-                <button className="btn-login" onClick={async () => {
-                  const email = prompt("Email :");
-                  const password = prompt("Mot de passe :");
-                  if (email && password) {
-                    setIsAuthLoading(true);
-                    const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
-                    setIsAuthLoading(false);
-                    if (error) alert("Erreur: " + error.message);
-                    else alert("Bienvenue ! 👋");
-                  }
-                }}>
-                  {isAuthLoading ? 'Connexion en cours...' : 'Connexion'}
+                <button className="btn-login" onClick={() => setShowLoginModal(true)}>
+                  Connexion
                 </button>
               )}
             </div>
+
+            {showLoginModal && (
+              <div className="login-modal-overlay animate-fade-in" onClick={() => setShowLoginModal(false)}>
+                <div className="login-modal glass animate-slide-up" onClick={e => e.stopPropagation()}>
+                  <h3>Connexion 🔐</h3>
+                  <div className="login-inputs">
+                    <input 
+                      type="email" 
+                      placeholder="Email" 
+                      value={loginForm.email}
+                      onChange={e => setLoginForm({...loginForm, email: e.target.value})}
+                    />
+                    <input 
+                      type="password" 
+                      placeholder="Mot de passe" 
+                      value={loginForm.password}
+                      onChange={e => setLoginForm({...loginForm, password: e.target.value})}
+                    />
+                  </div>
+                  <button className="btn-login-submit" onClick={async () => {
+                    setIsAuthLoading(true);
+                    const { error } = await supabaseClient.auth.signInWithPassword(loginForm);
+                    setIsAuthLoading(false);
+                    if (error) alert("Erreur: " + error.message);
+                    else {
+                      setShowLoginModal(false);
+                      setLoginForm({ email: '', password: '' });
+                    }
+                  }}>
+                    {isAuthLoading ? 'Chargement...' : 'Se connecter'}
+                  </button>
+                  <button className="btn-close-modal" onClick={() => setShowLoginModal(false)}>Fermer</button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </header>
@@ -1455,12 +1485,7 @@ export default function MusicalityTrainer() {
           background: inherit;
           opacity: 0.4;
         }
-        .logo-img {
-          width: 32px;
-          height: 32px;
-          object-fit: contain;
-          border-radius: 8px;
-        }
+        
         .song-selection-wrapper {
           max-width: 600px;
           margin: 0 auto 40px;
