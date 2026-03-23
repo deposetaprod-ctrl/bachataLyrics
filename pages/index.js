@@ -258,15 +258,6 @@ export default function Home() {
             ❤️ Mes Favoris
           </button>
           <button
-            className={`tag-btn ${activeTag === 'remix' ? 'active' : ''}`}
-            onClick={() => {
-              setActiveTag(activeTag === 'remix' ? null : 'remix');
-              setShowFavorites(false);
-            }}
-          >
-            ✨ Mes Remixs
-          </button>
-          <button
             id="tag-all"
             className={`tag-btn ${!activeTag && !showFavorites ? 'active' : ''}`}
             onClick={() => {
@@ -276,7 +267,7 @@ export default function Home() {
           >
             Tout voir
           </button>
-          {allTags.map((tag) => (
+          {['Dominicaine', 'Sensual', 'Influence', 'Mixte'].map((tag) => (
             <button
               id={`tag-${tag}`}
               key={tag}

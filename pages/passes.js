@@ -109,7 +109,7 @@ export default function Passes() {
           >
             Tout voir
           </button>
-          {allTags.map((tag) => (
+          {['Dominicaine', 'Sensual', 'Influence', 'Mixte'].map((tag) => (
             <button
               key={tag}
               className={`tag-btn ${activeTag === tag ? 'active' : ''}`}
