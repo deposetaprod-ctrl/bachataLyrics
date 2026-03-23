@@ -28,6 +28,30 @@ export default function MusicalityTrainer() {
   const [spotifyAnalysis, setSpotifyAnalysis] = useState(null);
   const [spotifyPlayer, setSpotifyPlayer] = useState(null);
   const [deviceId, setDeviceId] = useState(null);
+
+  // -- Supabase Auth State --
+  const [user, setUser] = useState(null);
+  const [supabaseClient, setSupabaseClient] = useState(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.supabase) {
+      const client = window.supabase.createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL || 'YOUR_SUPABASE_URL',
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'YOUR_SUPABASE_ANON_KEY'
+      );
+      setSupabaseClient(client);
+
+      client.auth.getSession().then(({ data: { session } }) => {
+        setUser(session?.user ?? null);
+      });
+
+      const { data: { subscription } } = client.auth.onAuthStateChange((_event, session) => {
+        setUser(session?.user ?? null);
+      });
+
+      return () => subscription.unsubscribe();
+    }
+  }, []);
   
   const waveformRef = useRef(null);
   const audioRef = useRef(null);
@@ -204,6 +228,48 @@ export default function MusicalityTrainer() {
     setActiveMarkerId(newMarker.id); // Auto-open for editing
   };
 
+  const saveToSupabase = async () => {
+    if (!supabaseClient || !user) {
+      alert("Connecte-toi pour sauvegarder dans le cloud !");
+      return;
+    }
+    
+    setIsLoading(true);
+    const sessionData = {
+      user_id: user.id,
+      song_id: selectedSongId || 'local-' + (localFile?.name || 'unknown'),
+      markers: markers,
+      updated_at: new Date().toISOString()
+    };
+
+    const { error } = await supabaseClient
+      .from('musicality_sessions')
+      .upsert(sessionData, { onConflict: 'user_id, song_id' });
+
+    setIsLoading(false);
+    if (error) alert("Erreur de sauvegarde : " + error.message);
+    else alert("Analyse sauvegardée dans ton catalogue ! ✅");
+  };
+
+  const loadFromSupabase = async () => {
+    if (!supabaseClient || !user || !selectedSongId) return;
+    
+    const { data, error } = await supabaseClient
+      .from('musicality_sessions')
+      .select('markers')
+      .eq('user_id', user.id)
+      .eq('song_id', selectedSongId)
+      .single();
+
+    if (data && data.markers) {
+      setMarkers(data.markers);
+    }
+  };
+
+  useEffect(() => {
+    if (user && selectedSongId) loadFromSupabase();
+  }, [user, selectedSongId]);
+
   const updateMarker = (id, updates) => {
     const updatedMarkers = markers.map(m => m.id === id ? { ...m, ...updates } : m);
     setMarkers(updatedMarkers);
@@ -329,7 +395,15 @@ export default function MusicalityTrainer() {
       </Head>
 
       <Script 
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" 
+        strategy="beforeInteractive"
+        onLoad={() => {
+          console.log('Supabase SDK Loaded');
+        }}
+      />
+      <Script 
         src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js" 
+        strategy="beforeInteractive" 
         onLoad={initWavesurfer}
       />
       <Script 
@@ -346,6 +420,21 @@ export default function MusicalityTrainer() {
             <span onClick={() => router.push('/')}>Accueil</span>
             <span onClick={() => router.push('/passes')}>Passes</span>
             <span onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
+            
+            <div className="auth-profile">
+              {user ? (
+                <div className="user-logged">
+                  <span className="user-name">👤 {user.email?.split('@')[0]}</span>
+                  <button className="btn-logout" onClick={() => supabaseClient.auth.signOut()}>Déconnexion</button>
+                </div>
+              ) : (
+                <button className="btn-login" onClick={() => {
+                  const email = prompt("Email :");
+                  const password = prompt("Mot de passe :");
+                  if (email && password) supabaseClient.auth.signInWithPassword({ email, password });
+                }}>Connexion</button>
+              )}
+            </div>
           </div>
         </div>
       </header>
@@ -590,7 +679,11 @@ export default function MusicalityTrainer() {
                 {isRecording ? 'Stop' : 'Record'}
               </button>
 
-              <button className="btn-secondary" onClick={clearMarkers}>Vider</button>
+              <button className="btn-secondary" onClick={saveToSupabase} disabled={!user}>
+                💾 {user ? 'Sauvegarder Cloud' : 'Connecte-toi pour sauver'}
+              </button>
+              
+              <button className="btn-secondary" onClick={clearMarkers}>Vider local</button>
             </div>
 
             {isRecording && (
