@@ -627,14 +627,59 @@ export default function MusicalityTrainer() {
             <audio ref={audioRef} crossOrigin="anonymous" />
 
             <div className="waveform-wrapper">
-              <div className="waveform-container" ref={waveformRef} style={{ display: (spotifyAnalysis || youtubeId) && !localFile && !remoteUrl ? 'none' : 'block' }} />
+              <div 
+                className={`waveform-container ${isDragging ? 'dragging' : ''}`} 
+                ref={waveformRef} 
+                style={{ display: (spotifyAnalysis || youtubeId) && !localFile && !remoteUrl ? 'none' : 'block' }} 
+                onMouseDown={(e) => {
+                  if (!wavesurfer.current) return;
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const moveHandler = (moveEvent) => {
+                    const newX = moveEvent.clientX - rect.left;
+                    const pct = Math.max(0, Math.min(1, newX / rect.width));
+                    wavesurfer.current.seekTo(pct);
+                  };
+                  const upHandler = () => {
+                    setIsDragging(false);
+                    window.removeEventListener('mousemove', moveHandler);
+                    window.removeEventListener('mouseup', upHandler);
+                  };
+                  setIsDragging(true);
+                  window.addEventListener('mousemove', moveHandler);
+                  window.addEventListener('mouseup', upHandler);
+                  moveHandler(e);
+                }}
+              />
               
               {youtubeId && !localFile && !remoteUrl && (
                 <div className="placeholder-waveform youtube">
                   <div className="beat-visual" style={{ animation: isPlaying ? 'pulse 2s infinite' : 'none' }}>
                     📺 Mode YouTube (Manuel)
                   </div>
-                  <div className="manual-progress" style={{ width: `${Math.min(100, (currentTime / 300) * 100)}%` }} />
+                  <div 
+                    className={`manual-waveform ${isDragging ? 'dragging' : ''}`}
+                    onMouseDown={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      const moveHandler = (moveEvent) => {
+                        const newX = moveEvent.clientX - rect.left;
+                        const pct = Math.max(0, Math.min(1, newX / rect.width));
+                        setCurrentTime(pct * 300); // 5 min max for manual
+                      };
+                      const upHandler = () => {
+                        setIsDragging(false);
+                        window.removeEventListener('mousemove', moveHandler);
+                        window.removeEventListener('mouseup', upHandler);
+                      };
+                      setIsDragging(true);
+                      window.addEventListener('mousemove', moveHandler);
+                      window.addEventListener('mouseup', upHandler);
+                      moveHandler(e);
+                    }}
+                  >
+                    <div className="manual-progress" style={{ width: `${Math.min(100, (currentTime / 300) * 100)}%` }}>
+                      <div className={`playhead ${isDragging ? 'active' : ''}`} />
+                    </div>
+                  </div>
                 </div>
               )}
 
@@ -650,6 +695,7 @@ export default function MusicalityTrainer() {
                       setCurrentTime(newTime);
                     };
                     const upHandler = (upEvent) => {
+                      setIsDragging(false);
                       const newX = upEvent.clientX - rect.left;
                       const pct = Math.max(0, Math.min(1, newX / rect.width));
                       const newTime = pct * spotifyAnalysis.track.duration;
@@ -657,13 +703,14 @@ export default function MusicalityTrainer() {
                       window.removeEventListener('mousemove', moveHandler);
                       window.removeEventListener('mouseup', upHandler);
                     };
+                    setIsDragging(true);
                     window.addEventListener('mousemove', moveHandler);
                     window.addEventListener('mouseup', upHandler);
-                    // Initial movement
                     moveHandler(e);
                   }}
-                  style={{ cursor: 'ew-resize' }}
+                  style={{ cursor: isDragging ? 'grabbing' : 'ew-resize' }}
                 >
+                  <div className={`spotify-playhead ${isDragging ? 'active' : ''}`} style={{ left: `${(currentTime / spotifyAnalysis.track.duration) * 100}%` }} />
                   <svg viewBox={`0 0 ${spotifyAnalysis.track.duration * 10} 120`} preserveAspectRatio="none">
                     {spotifyAnalysis.segments.map((seg, i) => (
                       <rect 
@@ -677,7 +724,6 @@ export default function MusicalityTrainer() {
                       />
                     ))}
                   </svg>
-                  <div className="playhead-line" style={{ left: `${(currentTime / spotifyAnalysis.track.duration) * 100}%` }} />
                 </div>
               )}
 
@@ -1314,7 +1360,59 @@ export default function MusicalityTrainer() {
         .auth-status { font-size: 0.9rem; font-weight: 700; color: #1DB954; display: flex; align-items: center; gap: 8px; }
         .status-dot { width: 8px; height: 8px; border-radius: 50%; }
         .status-dot.green { background: #1DB954; box-shadow: 0 0 10px #1DB954; }
-
+        .spotify-pseudo-waveform {
+          position: relative;
+          height: 120px;
+          background: rgba(0,0,0,0.2);
+          border-radius: 12px;
+          overflow: hidden;
+          margin-bottom: 40px;
+          border: 1px solid var(--border);
+        }
+        .spotify-playhead {
+          position: absolute;
+          top: 0; bottom: 0;
+          width: 2px;
+          background: white;
+          z-index: 10;
+          transition: transform 0.1s ease, width 0.1s ease;
+          pointer-events: none;
+        }
+        .spotify-playhead.active {
+          width: 4px;
+          background: var(--accent);
+          transform: scaleY(1.1);
+          box-shadow: 0 0 15px var(--accent);
+        }
+        
+        .manual-waveform {
+          height: 8px;
+          background: rgba(255,255,255,0.1);
+          border-radius: 4px;
+          position: relative;
+          cursor: ew-resize;
+        }
+        .manual-progress {
+          height: 100%;
+          background: var(--accent);
+          border-radius: 4px;
+          position: relative;
+        }
+        .playhead {
+          position: absolute;
+          right: -6px; top: -10px;
+          width: 14px; height: 14px;
+          background: white;
+          border-radius: 50%;
+          border: 2px solid var(--accent);
+          box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+          transition: transform 0.2s;
+        }
+        .playhead.active {
+          transform: scale(1.5);
+          background: var(--accent);
+          border-color: white;
+        }
         .spotify-pseudo-waveform {
           position: relative;
           width: 100%;
@@ -1421,7 +1519,14 @@ export default function MusicalityTrainer() {
           transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           z-index: 10;
         }
-        .marker-tip:hover { transform: scale(1.2) translateY(-4px); z-index: 20; }
+        .waveform-container {
+          cursor: ew-resize;
+          transition: transform 0.2s;
+        }
+        .waveform-container.dragging {
+          transform: scaleY(1.05);
+          filter: brightness(1.2);
+        }
         .marker-tip::after {
           content: '';
           position: absolute;
