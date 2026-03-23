@@ -467,9 +467,9 @@ export default function MusicalityTrainer() {
                   </button>
                 </div>
               ) : (
-                <button className="btn-login" onClick={() => setShowLoginModal(true)}>
-                  Connexion
-                </button>
+                <button className="btn-secondary" onClick={() => setShowLoginModal(true)}>
+                      Connecte-toi pour sauvegarder
+                    </button>
               )}
             </div>
 
@@ -762,23 +762,20 @@ export default function MusicalityTrainer() {
               <div className="spacer" />
 
               <button 
-                className={`btn-record-pill ${isRecording ? 'active' : ''}`} 
-                onClick={() => {
-                  if (!isPlaying && !wavesurfer.current?.getDuration()) {
-                    togglePlay();
-                  }
-                  setIsRecording(!isRecording);
-                }}
+                className={`btn-record-pill ${isRecording ? 'active' : ''}`}
+                onClick={toggleRecording}
               >
-                <div className="dot" />
-                {isRecording ? 'Stop' : 'Record'}
+                <span className="dot" />
+                {isRecording ? 'Enregistrement...' : 'Ajouter un curseur'}
               </button>
 
               <button className="btn-secondary" onClick={saveToSupabase} disabled={!user}>
                 💾 {user ? 'Sauvegarder Cloud' : 'Connecte-toi pour sauver'}
               </button>
               
-              <button className="btn-secondary" onClick={clearMarkers}>Vider local</button>
+              <button className="btn-secondary" onClick={clearMarkers}>
+                    Supprimer tous les marqueurs
+                  </button>
             </div>
 
             {isRecording && (
