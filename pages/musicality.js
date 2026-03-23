@@ -31,9 +31,11 @@ export default function MusicalityTrainer() {
   const [communitySessions, setCommunitySessions] = useState([]);
   const [showCommunity, setShowCommunity] = useState(false);
 
-  // -- Supabase Auth State --
   const [user, setUser] = useState(null);
   const [supabaseClient, setSupabaseClient] = useState(null);
+  const [isAuthLoading, setIsAuthLoading] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const videoInputRef = useRef(null);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.supabase) {
@@ -467,16 +469,29 @@ export default function MusicalityTrainer() {
             
             <div className="auth-profile">
               {user ? (
-                <div className="user-logged">
+                <div className="user-logged animate-fade-in">
                   <span className="user-name">👤 {user.email?.split('@')[0]}</span>
-                  <button className="btn-logout" onClick={() => supabaseClient.auth.signOut()}>Déconnexion</button>
+                  <button className="btn-logout" onClick={() => {
+                    setIsAuthLoading(true);
+                    supabaseClient.auth.signOut().then(() => setIsAuthLoading(false));
+                  }}>
+                    {isAuthLoading ? '...' : 'Déconnexion'}
+                  </button>
                 </div>
               ) : (
-                <button className="btn-login" onClick={() => {
+                <button className="btn-login" onClick={async () => {
                   const email = prompt("Email :");
                   const password = prompt("Mot de passe :");
-                  if (email && password) supabaseClient.auth.signInWithPassword({ email, password });
-                }}>Connexion</button>
+                  if (email && password) {
+                    setIsAuthLoading(true);
+                    const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
+                    setIsAuthLoading(false);
+                    if (error) alert("Erreur: " + error.message);
+                    else alert("Bienvenue ! 👋");
+                  }
+                }}>
+                  {isAuthLoading ? 'Connexion en cours...' : 'Connexion'}
+                </button>
               )}
             </div>
           </div>
@@ -577,35 +592,6 @@ export default function MusicalityTrainer() {
                 </div>
               )}
               
-              {selectedSongId && (
-                <div className="discovery-actions animate-fade-in">
-                  <button className="btn-community" onClick={fetchCommunitySessions}>
-                    🌏 Voir les analyses de la communauté
-                  </button>
-                </div>
-              )}
-
-              {showCommunity && communitySessions.length > 0 && (
-                <div className="community-overlay glass animate-slide-up">
-                  <div className="overlay-header">
-                    <h4>Analyses partagées 🌏</h4>
-                    <button className="btn-close-small" onClick={() => setShowCommunity(false)}>✕</button>
-                  </div>
-                  <div className="community-list">
-                    {communitySessions.map(sess => (
-                      <div key={sess.id} className="community-item" onClick={() => { setMarkers(sess.markers); setShowCommunity(false); }}>
-                        <span className="user-icon">👤</span>
-                        <div className="item-info">
-                          <span className="username">{sess.profiles?.username || 'Anonyme'}</span>
-                          <span className="meta">{sess.markers.length} marqueurs • {new Date(sess.updated_at).toLocaleDateString()}</span>
-                        </div>
-                        <button className="btn-load-sess">Charger</button>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-              
               {!selectedSongId && !remoteUrl && !youtubeId && (
                 <div className="drop-hint animate-fade-in">
                   <span>Ou glisse ton fichier MP3 directement ici 📥</span>
@@ -655,15 +641,28 @@ export default function MusicalityTrainer() {
               {spotifyAnalysis && !localFile && !remoteUrl && (
                 <div 
                   className="spotify-pseudo-waveform"
-                  onClick={(e) => {
+                  onMouseDown={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const pct = x / rect.width;
-                    const newTime = pct * spotifyAnalysis.track.duration;
-                    setCurrentTime(newTime);
-                    if (spotifyPlayer) spotifyPlayer.seek(newTime * 1000);
+                    const moveHandler = (moveEvent) => {
+                      const newX = moveEvent.clientX - rect.left;
+                      const pct = Math.max(0, Math.min(1, newX / rect.width));
+                      const newTime = pct * spotifyAnalysis.track.duration;
+                      setCurrentTime(newTime);
+                    };
+                    const upHandler = (upEvent) => {
+                      const newX = upEvent.clientX - rect.left;
+                      const pct = Math.max(0, Math.min(1, newX / rect.width));
+                      const newTime = pct * spotifyAnalysis.track.duration;
+                      if (spotifyPlayer) spotifyPlayer.seek(newTime * 1000);
+                      window.removeEventListener('mousemove', moveHandler);
+                      window.removeEventListener('mouseup', upHandler);
+                    };
+                    window.addEventListener('mousemove', moveHandler);
+                    window.addEventListener('mouseup', upHandler);
+                    // Initial movement
+                    moveHandler(e);
                   }}
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: 'ew-resize' }}
                 >
                   <svg viewBox={`0 0 ${spotifyAnalysis.track.duration * 10} 120`} preserveAspectRatio="none">
                     {spotifyAnalysis.segments.map((seg, i) => (
@@ -859,26 +858,31 @@ export default function MusicalityTrainer() {
                           value={m.note}
                           onChange={(e) => updateMarker(m.id, { note: e.target.value })}
                         />
-                        <div className="video-link-row">
-                          <span className="icon">🎬</span>
-                          <input 
-                            type="text" 
-                            placeholder="URL Vidéo (Cloudinary/YouTube)..." 
-                            value={m.videoUrl}
-                            onChange={(e) => updateMarker(m.id, { videoUrl: e.target.value })}
-                          />
-                          <button className="btn-upload-small" onClick={() => document.getElementById(`upload-${m.id}`).click()}>
-                            ☁️ Upload
+                        
+                        <div className="upload-section">
+                          <button className="btn-upload-primary" onClick={() => videoInputRef.current.click()}>
+                            📹 Filmer ou Uploader une passe
                           </button>
                           <input 
-                            id={`upload-${m.id}`}
+                            ref={videoInputRef}
                             type="file" 
                             accept="video/*" 
+                            capture="environment"
                             style={{ display: 'none' }}
                             onChange={(e) => {
                               const file = e.target.files[0];
                               if (file) uploadVideo(m.id, file);
                             }}
+                          />
+                        </div>
+
+                        <div className="video-link-row secondary">
+                          <span className="icon">🔗</span>
+                          <input 
+                            type="text" 
+                            placeholder="Ou colle une URL directement..." 
+                            value={m.videoUrl}
+                            onChange={(e) => updateMarker(m.id, { videoUrl: e.target.value })}
                           />
                         </div>
                         
@@ -1020,6 +1024,26 @@ export default function MusicalityTrainer() {
           font-size: 0.75rem;
           font-weight: 700;
         }
+        
+        .upload-section { margin-bottom: 8px; }
+        .btn-upload-primary {
+          width: 100%;
+          background: linear-gradient(135deg, var(--accent), #7c3aed);
+          color: white;
+          border: none;
+          padding: 14px;
+          border-radius: 12px;
+          font-weight: 800;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          cursor: pointer;
+          box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+          transition: all 0.2s;
+        }
+        .btn-upload-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4); }
+        .btn-upload-primary:active { transform: scale(0.98); }
 
         .discovery-actions { margin-top: 16px; }
         .btn-community {
