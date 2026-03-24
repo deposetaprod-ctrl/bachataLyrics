@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Script from 'next/script';
 import { songs as allSongs } from '../data/songs';
 import MusicalityHUD from '../components/MusicalityHUD';
+import AuthModal from '../components/AuthModal';
 import { redirectToAuthCodeFlow, getAccessToken, fetchAudioAnalysis } from '../utils/spotify';
 
 export default function MusicalityTrainer() {
@@ -36,7 +37,6 @@ export default function MusicalityTrainer() {
   const [isAuthLoading, setIsAuthLoading] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
-  const [loginForm, setLoginForm] = useState({ email: '', password: '' });
   const videoInputRef = useRef(null);
 
   useEffect(() => {
@@ -423,7 +423,7 @@ export default function MusicalityTrainer() {
   return (
     <div className="musicality-page">
       <Head>
-        <title>Musicality Trainer — Bachata Lyrics</title>
+        <title>Musicality Trainer — Bachata Flow</title>
       </Head>
       <Script 
         src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" 
@@ -445,7 +445,7 @@ export default function MusicalityTrainer() {
         <div className="navbar-inner">
           <div className="logo" onClick={() => router.push('/')}>
             <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
-            <span className="logo-text">Musicality</span>
+            <span className="logo-text">Bachata Flow</span>
           </div>
           <div className="nav-links">
             <span onClick={() => router.push('/')}>Accueil</span>
@@ -467,46 +467,17 @@ export default function MusicalityTrainer() {
                   </button>
                 </div>
               ) : (
-                <button className="btn-secondary" onClick={() => setShowLoginModal(true)}>
-                      Connecte-toi pour sauvegarder
-                    </button>
+                <button className="btn-login" onClick={() => setShowLoginModal(true)}>
+                  Connexion / S'inscrire
+                </button>
               )}
             </div>
 
-            {showLoginModal && (
-              <div className="login-modal-overlay animate-fade-in" onClick={() => setShowLoginModal(false)}>
-                <div className="login-modal glass animate-slide-up" onClick={e => e.stopPropagation()}>
-                  <h3>Connexion 🔐</h3>
-                  <div className="login-inputs">
-                    <input 
-                      type="email" 
-                      placeholder="Email" 
-                      value={loginForm.email}
-                      onChange={e => setLoginForm({...loginForm, email: e.target.value})}
-                    />
-                    <input 
-                      type="password" 
-                      placeholder="Mot de passe" 
-                      value={loginForm.password}
-                      onChange={e => setLoginForm({...loginForm, password: e.target.value})}
-                    />
-                  </div>
-                  <button className="btn-login-submit" onClick={async () => {
-                    setIsAuthLoading(true);
-                    const { error } = await supabaseClient.auth.signInWithPassword(loginForm);
-                    setIsAuthLoading(false);
-                    if (error) alert("Erreur: " + error.message);
-                    else {
-                      setShowLoginModal(false);
-                      setLoginForm({ email: '', password: '' });
-                    }
-                  }}>
-                    {isAuthLoading ? 'Chargement...' : 'Se connecter'}
-                  </button>
-                  <button className="btn-close-modal" onClick={() => setShowLoginModal(false)}>Fermer</button>
-                </div>
-              </div>
-            )}
+          <AuthModal
+            isOpen={showLoginModal}
+            onClose={() => setShowLoginModal(false)}
+            supabaseClient={supabaseClient}
+          />
           </div>
         </div>
       </header>
@@ -518,17 +489,76 @@ export default function MusicalityTrainer() {
         </div>
 
         <div className="song-selection-wrapper">
-          <select 
-            value={selectedSongId} 
-            onChange={(e) => setSelectedSongId(e.target.value)}
-            className="song-select"
-          >
-            <option value="">-- Choisir une chanson --</option>
-            {allSongs.filter(s => s.audioUrl).map(song => (
-              <option key={song.id} value={song.id}>{song.title} - {song.artist}</option>
-            ))}
-          </select>
-          
+          <div className="source-section glass">
+            <div className="source-header">
+              <span className="source-icon">🎵</span>
+              <div>
+                <h3 className="source-title">Choisir une source audio</h3>
+                <p className="source-subtitle">Catalogue Bachata Flow, fichier local ou URL distante</p>
+              </div>
+            </div>
+
+            <select 
+              value={selectedSongId} 
+              onChange={(e) => setSelectedSongId(e.target.value)}
+              className="song-select"
+            >
+              <option value="">-- Choisir dans le catalogue --</option>
+              {allSongs.filter(s => s.audioUrl).map(song => (
+                <option key={song.id} value={song.id}>{song.title} \u2014 {song.artist}</option>
+              ))}
+            </select>
+
+            <div className="source-divider"><span>ou</span></div>
+
+            <div className="source-alt-row">
+              <label className="source-alt-btn" title="Importer un fichier MP3 / WAV / M4A">
+                <span>📂</span>
+                <span>{localFile ? localFile.name : 'Fichier local'}</span>
+                <input
+                  type="file"
+                  accept="audio/*"
+                  style={{ display: 'none' }}
+                  onChange={e => { setLocalFile(e.target.files[0]); setSelectedSongId(''); setRemoteUrl(''); }}
+                />
+              </label>
+              <div className="source-url-input">
+                <span>🔗</span>
+                <input
+                  type="url"
+                  placeholder="URL audio distante (mp3, m4a…)"
+                  value={remoteUrl}
+                  onChange={e => { setRemoteUrl(e.target.value); setSelectedSongId(''); setLocalFile(null); }}
+                />
+              </div>
+            </div>
+          </div>
+
+          {!selectedSongId && !localFile && !remoteUrl && (
+            <div className="empty-state animate-fade-in">
+              <div className="empty-state-icon">🥁</div>
+              <h3>Comment ça marche ?</h3>
+              <div className="empty-how-grid">
+                <div className="how-step">
+                  <span className="step-num">1</span>
+                  <span>Choisis une chanson ci-dessus (catalogue, fichier ou URL)</span>
+                </div>
+                <div className="how-step">
+                  <span className="step-num">2</span>
+                  <span>Clique sur <b>Record</b> pour commencer à marquer les instruments</span>
+                </div>
+                <div className="how-step">
+                  <span className="step-num">3</span>
+                  <span>Utilise les boutons ou les raccourcis clavier&nbsp;: <b>B</b>&nbsp;Bongo · <b>R</b>&nbsp;Roll · <b>K</b>&nbsp;Break · <b>G</b>&nbsp;Guira</span>
+                </div>
+                <div className="how-step">
+                  <span className="step-num">4</span>
+                  <span>Connecte-toi pour sauvegarder tes analyses dans le cloud ☁️</span>
+                </div>
+              </div>
+            </div>
+          )}
+
           {selectedSongId && (
             <div className="discovery-actions animate-fade-in">
               <button className="btn-community" onClick={fetchCommunitySessions}>
@@ -1000,7 +1030,149 @@ export default function MusicalityTrainer() {
           to { opacity: 1; transform: translateY(0); }
         }
         .animate-slide-up { animation: slideUp 0.3s ease-out; }
-        
+
+        /* Source Section */
+        .source-section {
+          border-radius: 24px;
+          padding: 24px;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          max-width: 640px;
+          margin-inline: auto;
+        }
+        .source-header {
+          display: flex;
+          align-items: flex-start;
+          gap: 14px;
+        }
+        .source-icon { font-size: 1.8rem; line-height: 1; }
+        .source-title {
+          font-size: 1rem;
+          font-weight: 800;
+          color: white;
+          margin: 0 0 4px;
+        }
+        .source-subtitle {
+          font-size: 0.78rem;
+          color: rgba(255,255,255,0.45);
+          margin: 0;
+        }
+        .source-divider {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          color: rgba(255,255,255,0.2);
+          font-size: 0.75rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+        }
+        .source-divider::before, .source-divider::after {
+          content: '';
+          flex: 1;
+          height: 1px;
+          background: rgba(255,255,255,0.08);
+        }
+        .source-alt-row {
+          display: flex;
+          gap: 10px;
+        }
+        .source-alt-btn {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 10px 16px;
+          background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(255,255,255,0.1);
+          border-radius: 12px;
+          color: rgba(255,255,255,0.7);
+          font-size: 0.82rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        .source-alt-btn:hover {
+          border-color: var(--accent);
+          color: white;
+          background: rgba(124,58,237,0.1);
+        }
+        .source-url-input {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          flex: 1;
+          padding: 10px 16px;
+          background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(255,255,255,0.1);
+          border-radius: 12px;
+          transition: border-color 0.2s;
+        }
+        .source-url-input:focus-within {
+          border-color: rgba(124,58,237,0.5);
+        }
+        .source-url-input input {
+          flex: 1;
+          background: transparent;
+          border: none;
+          outline: none;
+          color: white;
+          font-size: 0.82rem;
+        }
+        .source-url-input input::placeholder { color: rgba(255,255,255,0.3); }
+
+        /* Empty State */
+        .empty-state {
+          text-align: center;
+          padding: 40px 24px;
+          max-width: 640px;
+          margin: 0 auto;
+        }
+        .empty-state-icon { font-size: 3.5rem; margin-bottom: 16px; }
+        .empty-state h3 {
+          font-size: 1.3rem;
+          font-weight: 800;
+          margin: 0 0 24px;
+        }
+        .empty-how-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+          text-align: left;
+        }
+        @media (max-width: 500px) {
+          .empty-how-grid { grid-template-columns: 1fr; }
+          .source-alt-row { flex-direction: column; }
+        }
+        .how-step {
+          display: flex;
+          gap: 12px;
+          align-items: flex-start;
+          padding: 16px;
+          background: rgba(255,255,255,0.03);
+          border: 1px solid rgba(255,255,255,0.07);
+          border-radius: 16px;
+          font-size: 0.85rem;
+          color: rgba(255,255,255,0.7);
+          line-height: 1.5;
+        }
+        .step-num {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #7c3aed, #c026d3);
+          color: white;
+          font-size: 0.75rem;
+          font-weight: 900;
+          flex-shrink: 0;
+        }
+
         .auth-profile { margin-left: 20px; }
         .user-logged { display: flex; align-items: center; gap: 12px; }
         .user-name { font-size: 0.85rem; font-weight: 700; color: var(--accent); }

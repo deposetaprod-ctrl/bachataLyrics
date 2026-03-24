@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { passes } from '../data/passes';
+import AuthModal from '../components/AuthModal';
 
 export default function Passes() {
   const router = useRouter();
@@ -13,8 +14,6 @@ export default function Passes() {
   const [user, setUser] = useState(null);
   const [supabaseClient, setSupabaseClient] = useState(null);
   const [showLoginModal, setShowLoginModal] = useState(false);
-  const [loginForm, setLoginForm] = useState({ email: '', password: '' });
-  const [isAuthLoading, setIsAuthLoading] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem('favPasses');
@@ -111,7 +110,7 @@ export default function Passes() {
                 </div>
               ) : (
                 <button className="btn-login" onClick={() => setShowLoginModal(true)}>
-                  Connexion
+                  Connexion / S'inscrire
                 </button>
               )}
             </div>
@@ -131,40 +130,11 @@ export default function Passes() {
         <div className="song-count">{filtered.length} passe{filtered.length !== 1 ? 's' : ''}</div>
       </nav>
 
-      {showLoginModal && (
-        <div className="login-modal-overlay animate-fade-in" onClick={() => setShowLoginModal(false)}>
-          <div className="login-modal glass animate-slide-up" onClick={e => e.stopPropagation()}>
-            <h3>Connexion 🔐</h3>
-            <div className="login-inputs">
-              <input 
-                type="email" 
-                placeholder="Email" 
-                value={loginForm.email}
-                onChange={e => setLoginForm({...loginForm, email: e.target.value})}
-              />
-              <input 
-                type="password" 
-                placeholder="Mot de passe" 
-                value={loginForm.password}
-                onChange={e => setLoginForm({...loginForm, password: e.target.value})}
-              />
-            </div>
-            <button className="btn-login-submit" onClick={async () => {
-              setIsAuthLoading(true);
-              const { error } = await supabaseClient.auth.signInWithPassword(loginForm);
-              setIsAuthLoading(false);
-              if (error) alert("Erreur: " + error.message);
-              else {
-                setShowLoginModal(false);
-                setLoginForm({ email: '', password: '' });
-              }
-            }}>
-              {isAuthLoading ? 'Chargement...' : 'Se connecter'}
-            </button>
-            <button className="btn-close-modal" onClick={() => setShowLoginModal(false)}>Fermer</button>
-          </div>
-        </div>
-      )}
+      <AuthModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+        supabaseClient={supabaseClient}
+      />
 
       {/* ─── HERO ─── */}
       <section className="hero" style={{ paddingBottom: '32px' }}>

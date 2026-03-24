@@ -5,17 +5,31 @@ export default function Document() {
     <Html lang="fr">
       <Head>
         <meta charSet="UTF-8" />
-        <meta name="description" content="Les meilleures paroles de bachata avec traductions françaises. Découvrez, lisez et comprenez les paroles de vos chansons préférées." />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="description" content="Bachata Flow — Paroles de bachata bilingues (espagnol / français), analyse musicale et progression de danse. L'app des passionnés de bachata." />
+        <meta name="theme-color" content="#0a0a0f" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+
+        {/* Favicon — vrai logo */}
+        <link rel="icon" type="image/png" href="/LOGO_PWA.PNG" />
+        <link rel="apple-touch-icon" href="/LOGO_PWA.PNG" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Bachata Flow" />
+        <meta property="og:title" content="Bachata Flow — Paroles de Bachata en Français" />
+        <meta property="og:description" content="Découvrez les plus belles paroles de bachata traduites en français, entraînez votre oreille musicale et progressez en danse." />
+        <meta property="og:image" content="/LOGO_PWA.PNG" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Bachata Flow" />
+        <meta name="twitter:description" content="Paroles de bachata bilingues + Musicality Trainer pour les danseurs." />
+
+        {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎶</text></svg>" />
       </Head>
       <body>
         <Main />
