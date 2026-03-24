@@ -762,20 +762,30 @@ export default function MusicalityTrainer() {
               <div className="spacer" />
 
               <button 
-                className={`btn-record-pill ${isRecording ? 'active' : ''}`}
+                className={`btn-icon-pill ${isRecording ? 'active' : ''}`}
                 onClick={toggleRecording}
+                title={isRecording ? 'Arrêter l\'enregistrement' : 'Ajouter un marqueur (+)'}
               >
                 <span className="dot" />
-                {isRecording ? 'Enregistrement...' : 'Ajouter un curseur'}
+                <span className="btn-text">{isRecording ? 'Enregistrement...' : '+'}</span>
               </button>
 
-              <button className="btn-secondary" onClick={saveToSupabase} disabled={!user}>
-                💾 {user ? 'Sauvegarder Cloud' : 'Connecte-toi pour sauver'}
+              <button 
+                className="btn-icon-secondary" 
+                onClick={user ? saveToSupabase : () => setShowLoginModal(true)}
+                disabled={isAuthLoading}
+                title={user ? 'Sauvegarder dans le Cloud' : 'Se connecter pour sauvegarder'}
+              >
+                {user ? '☁️' : '👤'}
               </button>
               
-              <button className="btn-secondary" onClick={clearMarkers}>
-                    Supprimer tous les marqueurs
-                  </button>
+              <button 
+                className="btn-icon-secondary" 
+                onClick={clearMarkers}
+                title="Supprimer tous les marqueurs"
+              >
+                🗑️
+              </button>
             </div>
 
             {isRecording && (
@@ -1547,40 +1557,57 @@ export default function MusicalityTrainer() {
         .time-display .current { color: white; }
         .time-display .total { color: var(--text-muted); font-size: 1.1rem; }
 
-        .btn-record-pill {
+        .btn-icon-pill {
           display: flex;
           align-items: center;
           gap: 12px;
           background: rgba(255, 255, 255, 0.05);
           border: 1.5px solid var(--border);
-          padding: 14px 28px;
-          border-radius: 20px;
+          padding: 12px 24px;
+          border-radius: 999px;
           color: white;
           font-weight: 800;
           transition: all 0.2s;
+          cursor: pointer;
         }
-        .btn-record-pill.active {
+        .btn-icon-pill.active {
           background: rgba(239, 68, 68, 0.15);
           border-color: var(--red);
           color: var(--red);
           box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+          padding-right: 28px;
         }
-        .btn-record-pill .dot {
-          width: 10px;
-          height: 10px;
+        .btn-icon-pill .dot {
+          width: 8px;
+          height: 8px;
           background: var(--text-muted);
           border-radius: 50%;
         }
-        .btn-record-pill.active .dot { background: var(--red); animation: blink 1s infinite; }
+        .btn-icon-pill.active .dot { background: var(--red); animation: blink 1s infinite; }
+        .btn-icon-pill .btn-text { font-size: 1.2rem; }
+        .btn-icon-pill.active .btn-text { font-size: 0.9rem; }
 
-        .btn-secondary {
+        .btn-icon-secondary {
           background: rgba(255, 255, 255, 0.05);
-          color: var(--text-secondary);
-          padding: 14px 24px;
-          border-radius: 16px;
-          font-weight: 700;
+          color: white;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.2rem;
           border: 1px solid var(--border);
+          transition: all 0.2s;
+          cursor: pointer;
+          flex-shrink: 0;
         }
+        .btn-icon-secondary:hover:not(:disabled) {
+          background: rgba(255, 255, 255, 0.1);
+          border-color: var(--accent);
+          transform: translateY(-2px);
+        }
+        .btn-icon-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
 
         .recording-console {
           display: grid;
@@ -1639,10 +1666,13 @@ export default function MusicalityTrainer() {
         .marker-time { font-family: monospace; font-size: 1rem; color: var(--text-muted); font-weight: 700; }
         
         @media (max-width: 768px) {
-          .player-section { padding: 24px; }
-          .controls-row { justify-content: center; gap: 16px; }
-          .time-display { width: 100%; text-align: center; order: -1; }
-          .trainer-content { padding-top: 24px; }
+          .player-section { padding: 20px; }
+          .controls-row { justify-content: center; gap: 12px; margin-bottom: 24px; }
+          .time-display { width: 100%; text-align: center; order: -1; margin-bottom: 8px; font-size: 1.2rem; }
+          .btn-play-large { width: 60px; height: 60px; border-radius: 20px; }
+          .btn-icon-pill { padding: 10px 20px; }
+          .btn-icon-secondary { width: 44px; height: 44px; font-size: 1.1rem; }
+          .trainer-content { padding-top: 16px; }
         }
         }
       `}</style>
