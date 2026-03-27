@@ -305,7 +305,7 @@ export default function Home() {
           >
             Tout voir
           </button>
-          {['Dominicaine', 'Sensual', 'Influence', 'Mixte'].map((tag) => (
+          {['Dominicaine', 'Sensual', 'Influence', 'Mixte', 'Salsa', 'Tropical'].map((tag) => (
             <button
               id={`tag-${tag}`}
               key={tag}

@@ -2510,5 +2510,123 @@ Fais un autre tour, viens avec moi
 Donne-moi du plaisir (punis-moi), deviens sauvage
 Je veux que tu ressentes des frissons`
     }
+  },
+  {
+    id: "no-soy-opcion-johnny-sky",
+    title: "No Soy Opción",
+    artist: "Johnny Sky",
+    year: 2026,
+    tags: ["Salsa", "Tropical"],
+    color: "#ea580c",
+    spotify: "https://open.spotify.com/search/No%20Soy%20Opci%C3%B3n%20Johnny%20Sky",
+    culture: {
+      context: "Sortie le 5 mars 2026, cette chanson de Johnny Sky marque son retour avec un son Salsa moderne et percutant.",
+      meaning: "Une mise au point claire sur les limites de l'amour : ne pas être une simple option ou un plan B quand l'autre est indécis.",
+      artistInfo: "Johnny Sky est une figure montante de la musique tropicale, connu pour sa voix puissante et son style polyvalent entre Bachata et Salsa.",
+      album: "No Soy Opción - Single",
+      bpm: 173
+    },
+    lyrics: {
+      es: `Dices te amo muy fácil
+Pero nunca estás aquí
+Me prometes mil choses
+Y mañana no hay de ti
+No me confundas
+Con tu indecisión
+Si esto es amor
+No duele así, no
+
+Cómo dices que me amas?
+Y juegas con mi tiempo así?
+Me miras fijo, no haces nada
+Tienes que estar fuera de ti
+
+Cómo dices que me amas?
+Si no estás cuando es por mí?
+Palabras lindas, cero acciones
+Eso no es amor pa’ mí
+
+Perdiendo mi tiempo
+Fuera de ti
+Yeah
+
+Say you love me but you moving slow
+All these words, nothing you show
+Hit my line when you feeling low
+Then you vanish, yeah you go ghost
+
+I don’t chase, I don’t wait around
+If it’s real, let me feel it now
+Too solid for the back and forth
+Say it straight or close the door
+
+No soy opción
+Ni plan B
+Si no es de frente
+Déjame ir
+
+Cómo dices que me amas?
+Y juegas con mi tiempo así?
+Me miras fijo, no haces nada
+Tienes que estar fuera de ti
+
+Cómo dices que me amas?
+Si no estás cuando es por mí?
+Palabras lindas, cero acciones
+Eso no es amor pa’ mí
+
+La visión se aclaró
+Ya entendí`,
+      fr: `Tu dis "je t'aime" si facilement
+Mais tu n'es jamais là
+Tu me promets mille choses
+Et demain, plus de nouvelles de toi
+Ne me confonds pas
+Avec ton indécision
+Si c'est ça l'amour
+Ça ne fait pas mal comme ça, non
+
+Comment peux-tu dire que tu m'aimes ?
+Et jouer ainsi avec mon temps ?
+Tu me regardes fixement, tu ne fais rien
+Tu dois être hors de toi
+
+Comment peux-tu dire que tu m'aimes ?
+Si tu n'es pas là quand j'ai besoin de toi ?
+De belles paroles, aucune action
+Ce n'est pas de l'amour pour moi
+
+Je perds mon temps
+Hors de toi
+Yeah
+
+Tu dis que tu m'aimes mais tu traînes
+Toutes ces paroles, tu ne montres rien
+Tu m'appelles quand tu te sens seule
+Puis tu disparais, tu fais le mort
+
+Je ne chasse pas, je n'attends pas
+Si c'est réel, fais-le moi sentir maintenant
+Trop solide pour faire des allers-retours
+Dis-le franchement ou ferme la porte
+
+Je ne suis pas une option
+Ni un plan B
+Si ce n'est pas face à face
+Laisse-moi partir
+
+Comment peux-tu dire que tu m'aimes ?
+Et jouer ainsi avec mon temps ?
+Tu me regardes fixement, tu ne fais rien
+Tu dois être hors de toi
+
+Comment peux-tu dire que tu m'aimes ?
+Si tu n'es pas là quand j'ai besoin de toi ?
+De belles paroles, aucune action
+Ce n'est pas de l'amour pour moi
+
+La vision s'est éclaircie
+J'ai compris`
+    },
   }
 ];
