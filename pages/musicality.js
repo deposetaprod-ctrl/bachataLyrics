@@ -161,17 +161,34 @@ export default function MusicalityTrainer() {
     setIsPlaying(false);
     setIsRecording(false);
     setSpotifyAnalysis(null);
+    setYoutubeId('');
 
     const song = allSongs.find(s => s.id === selectedSongId);
 
-    if (remoteUrl && audioRef.current) {
-      setIsLoading(true);
-      audioRef.current.src = remoteUrl;
-      const savedMarkers = JSON.parse(localStorage.getItem(`markers-url-${btoa(remoteUrl).substring(0, 20)}`) || '[]');
-      setMarkers(savedMarkers);
-      if (window.WaveSurfer) {
-        initWavesurfer();
-        wavesurfer.current.load(remoteUrl);
+    // YouTube URL Regex
+    const extractYoutubeId = (url) => {
+      const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i;
+      const match = url.match(regex);
+      return match ? match[1] : null;
+    };
+
+    if (remoteUrl) {
+      const ytId = extractYoutubeId(remoteUrl);
+      if (ytId) {
+        setYoutubeId(ytId);
+        setIsLoading(false);
+        const savedMarkers = JSON.parse(localStorage.getItem(`markers-yt-${ytId}`) || '[]');
+        setMarkers(savedMarkers);
+        if (audioRef.current) audioRef.current.src = '';
+      } else if (audioRef.current) {
+        setIsLoading(true);
+        audioRef.current.src = remoteUrl;
+        const savedMarkers = JSON.parse(localStorage.getItem(`markers-url-${btoa(remoteUrl).substring(0, 20)}`) || '[]');
+        setMarkers(savedMarkers);
+        if (window.WaveSurfer) {
+          initWavesurfer();
+          wavesurfer.current.load(remoteUrl);
+        }
       }
     } else if (localFile && audioRef.current) {
       setIsLoading(true);
@@ -630,38 +647,56 @@ export default function MusicalityTrainer() {
               />
               
               {youtubeId && !localFile && !remoteUrl && (
-                <div className="placeholder-waveform youtube">
-                  <div className="beat-visual" style={{ animation: isPlaying ? 'pulse 2s infinite' : 'none' }}>
-                    📺 Mode YouTube (Manuel)
+                <div 
+                  className="spotify-pseudo-waveform"
+                  style={{ cursor: isDragging ? 'grabbing' : 'ew-resize' }}
+                  onMouseDown={(e) => {
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    const moveHandler = (moveEvent) => {
+                      const newX = moveEvent.clientX - rect.left;
+                      const pct = Math.max(0, Math.min(1, newX / rect.width));
+                      setCurrentTime(pct * 300); // Default to 5 mins max for manual
+                    };
+                    const upHandler = (upEvent) => {
+                      setIsDragging(false);
+                      const newX = upEvent.clientX - rect.left;
+                      const pct = Math.max(0, Math.min(1, newX / rect.width));
+                      setCurrentTime(pct * 300);
+                      window.removeEventListener('mousemove', moveHandler);
+                      window.removeEventListener('mouseup', upHandler);
+                    };
+                    setIsDragging(true);
+                    window.addEventListener('mousemove', moveHandler);
+                    window.addEventListener('mouseup', upHandler);
+                    moveHandler(e);
+                  }}
+                >
+                  <div className="youtube-overlay-text" style={{ position: 'absolute', top: '10px', left: '16px', zIndex: 20, fontSize: '0.8rem', color: 'rgba(255,255,255,0.7)', fontWeight: 600 }}>
+                    📺 Mode YouTube (Avance pour synchroniser avec la vidéo)
                   </div>
-                  <div 
-                    className={`manual-waveform ${isDragging ? 'dragging' : ''}`}
-                    onMouseDown={(e) => {
-                      const rect = e.currentTarget.getBoundingClientRect();
-                      const moveHandler = (moveEvent) => {
-                        const newX = moveEvent.clientX - rect.left;
-                        const pct = Math.max(0, Math.min(1, newX / rect.width));
-                        setCurrentTime(pct * 300); // 5 min max for manual
-                      };
-                      const upHandler = () => {
-                        setIsDragging(false);
-                        window.removeEventListener('mousemove', moveHandler);
-                        window.removeEventListener('mouseup', upHandler);
-                      };
-                      setIsDragging(true);
-                      window.addEventListener('mousemove', moveHandler);
-                      window.addEventListener('mouseup', upHandler);
-                      moveHandler(e);
-                    }}
-                  >
-                    <div className="manual-progress" style={{ width: `${Math.min(100, (currentTime / 300) * 100)}%` }}>
-                      <div className={`playhead ${isDragging ? 'active' : ''}`} />
-                    </div>
-                  </div>
+                  <div className={`spotify-playhead ${isDragging ? 'active' : ''}`} style={{ left: `${(currentTime / 300) * 100}%` }} />
+                  <svg viewBox={`0 0 3000 120`} preserveAspectRatio="none" style={{ width: '100%', height: '100%' }}>
+                    {/* Generate a fake waveform pattern for visual feedback */}
+                    {Array.from({ length: 100 }).map((_, i) => {
+                      const waveHeight = 20 + Math.sin(i * 0.5) * 40 + Math.random() * 20;
+                      return (
+                        <rect 
+                          key={i}
+                          x={i * 30}
+                          y={60 - waveHeight / 2}
+                          width={15}
+                          height={waveHeight}
+                          fill={i * 3 <= currentTime ? 'var(--accent)' : 'rgba(255,255,255,0.1)'}
+                          opacity={0.8}
+                          rx={4}
+                        />
+                      );
+                    })}
+                  </svg>
                 </div>
               )}
 
-              {spotifyAnalysis && !localFile && !remoteUrl && (
+              {spotifyAnalysis && !localFile && !remoteUrl && !youtubeId && (
                 <div 
                   className="spotify-pseudo-waveform"
                   onMouseDown={(e) => {
