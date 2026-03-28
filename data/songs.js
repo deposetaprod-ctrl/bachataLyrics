@@ -2628,5 +2628,563 @@ Ce n'est pas de l'amour pour moi
 La vision s'est éclaircie
 J'ai compris`
     },
+  },
+  {
+    id: "tas-bella-reggi-autentico",
+    title: "Tas Bella",
+    artist: "Reggi El Autentico",
+    year: 2021,
+    tags: ["Urbano"],
+    color: "#f43f5e",
+    culture: {
+      context: "Un hit urbain de 2021 qui mélange reggaeton et sonorités modernes.",
+      meaning: "Une ode à l'indépendance féminine après une rupture. La protagoniste se sent belle, s'amuse et oublie son passé.",
+      artistInfo: "Reggi El Autentico est un producteur et chanteur vénézuélien reconnu pour ses collaborations avec les plus grands noms du reggaeton.",
+      album: "ESELA"
+    },
+    lyrics: {
+      es: `Ah-eh-ah
+Ah-eh-ah
+Uh, ah-eh-ah
+Uh, ah-eh-ah
+Ah-eh-yah
+Ah-eh-yah
+
+Hoy la van a buscar
+Y se va, por ahí (ey)
+Hoy se va a emborrachar
+Al tequila dijo si (ey)
+Ay que alguien le avise al novio (wuh)
+Que ahora se convirtió en exnovio (yeah)
+Ésta noche vino a olvidarlo
+Y no se va a arrepentir
+
+Ya dijo que está soltera
+Se vistió y le dijeron 'tas bella
+Y ella sonrió porque está soltera
+Se vistió y le dijeron 'tas bella
+Y empezó a bailar
+
+Le pusieron vibe
+Un Reggaeton, J Balvin & Sky (ah)
+En modo avión le quitó el wifi
+Lo bloqueó en el Insta' y le dijo bye
+Ella, unos messages le vio
+Ya se jodió ése cabrón
+Que no venga a pedir perdón
+Ay que le pongan su canción
+Que la amiga ya le prendió un blunt
+
+Bien fresita, pero fuma (ey)
+Pide champagne después de la una (ey)
+Ponle Hawaii, la de Maluma (ey)
+Tiene piquete como ninguna
+Bien Fresita, pero fuma
+Pide champagne después de la una
+Ponle Hawaii, la de Maluma (ey) yeah
+
+Ya dijo que está soltera
+Se vistió y le dijeron 'tas bella
+Y ella sonrió porque está (ey) soltera
+Se vistió y le dijeron (mami) 'tas bella
+Y empezó a bailar (yeh)
+
+Mañana quiere ir pa'l bote
+Pa' que el sol ese cuerpito lo azote
+Con dembow quiere que todos noten (ey)
+Que anda soltera alofoke
+
+Bien fresita, pero fuma (ey)
+Pide champagne después de la una (ey)
+Ponle Hawaii, la de Maluma (ey)
+Tiene piquete como ninguna
+Bien Fresita (ey) pero fuma
+Pide champagne después de la una (ey)
+Ponle Hawaii, la de Maluma (ey), yeah
+
+Ya dijo que está soltera
+Se vistió y le dijeron 'tas bella
+Y ella sonrió porque está (ey) soltera
+Se vistió y le dijeron (mami) 'tas bella
+Y empezó a bailar
+
+Díselo
+Díselo
+Es El Autentico
+Reggi El Autentico
+
+Ey
+Bien fresita pero fuma
+Baila dembow, mírame la luna
+Bien fresita pero fuma
+Bien fresita pero fuma
+Yeh, yeh`,
+      fr: `Ah-eh-ah
+Ah-eh-ah
+Uh, ah-eh-ah
+Uh, ah-eh-ah
+Ah-eh-yah
+Ah-eh-yah
+
+Aujourd'hui ils vont la chercher
+Et elle s'en va, par là (ey)
+Aujourd'hui elle va s'enivrer
+Au tequila elle a dit oui (ey)
+Que quelqu'un prévienne le copain (wuh)
+Qu'il est maintenant devenu l'ex (yeah)
+Ce soir elle est venue l'oublier
+Et elle ne va pas le regretter
+
+Elle a déjà dit qu'elle était célibataire
+Elle s'est habillée et on lui a dit "t'es belle"
+Et elle a souri parce qu'elle est célibataire
+Elle s'est habillée et on lui a dit "t'es belle"
+Et elle a commencé à danser
+
+Ils ont mis l'ambiance
+Un Reggaeton, J Balvin & Sky (ah)
+En mode avion elle a coupé le wifi
+Elle l'a bloqué sur Insta' et lui a dit bye
+Elle a vu quelques messages
+Ce salaud est déjà foutu
+Qu'il ne vienne pas demander pardon
+Qu'on lui mette sa chanson
+Sa copine lui a déjà allumé un joint
+
+Très chic, mais elle fume (ey)
+Elle demande du champagne après une heure (ey)
+Mets Hawaii, celle de Maluma (ey)
+Elle a du style comme aucune autre
+Très chic, mais elle fume
+Elle demande du champagne après une heure
+Mets Hawaii, celle de Maluma (ey) yeah
+
+Elle a déjà dit qu'elle était célibataire
+Elle s'est habillée et on lui a dit "t'es belle"
+Et elle a souri parce qu'elle est (ey) célibataire
+Elle s'est habillée et on lui a dit (mami) "t'es belle"
+Et elle a commencé à danser (yeh)
+
+Demain elle veut aller sur le bateau
+Pour que le soleil chauffe ce petit corps
+Avec du dembow elle veut que tous remarquent (ey)
+Qu'elle est célibataire branchée
+
+Très chic, mais elle fume (ey)
+Elle demande du champagne après une heure (ey)
+Mets Hawaii, celle de Maluma (ey)
+Elle a du style comme aucune autre
+Très chic (ey) mais elle fume
+Elle demande du champagne après une heure (ey)
+Mets Hawaii, celle de Maluma (ey), yeah
+
+Elle a déjà dit qu'elle était célibataire
+Elle s'est habillée et on lui a dit "t'es belle"
+Et elle a souri parce qu'elle est (ey) célibataire
+Elle s'est habillée et on lui a dit (mami) "t'es belle"
+Et elle a commencé à danser
+
+Dis-lui
+Dis-lui
+C'est l'Authentique
+Reggi L'Authentique
+
+Ey
+Très chic mais elle fume
+Danse le dembow, regarde la lune
+Très chic mais elle fume
+Très chic mais elle fume
+Yeh, yeh`
+    }
+  },
+  {
+    id: "30-minutos-johnny-sky",
+    title: "30 Minutos",
+    artist: "Johnny Sky",
+    year: 2025,
+    tags: ["Sensual"],
+    color: "#0369a1",
+    culture: {
+      context: "Un des nouveaux titres de Johnny Sky en 2025, confirmant son statut d'icône de la Bachata Sensual.",
+      meaning: "L'histoire d'un coup de foudre instantané. 30 minutes ont suffi pour tomber amoureux et vouloir changer sa vie.",
+      artistInfo: "Johnny Sky est célèbre pour ses mélodies douces et sa voix de ténor qui s'adapte parfaitement à la bachata moderne.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Una noche contigo
+Las botellas se acaban
+Voy directo a tus labios
+Más tarde a hacer el amor
+Te llamo mañana
+Por si recuerdas mi nombre
+Cuando lo hicimos en Santiago
+Y después más rico en New York
+
+I need your love
+Que me está pasando
+No puedo controlar las ganas de llamarte
+I need your love
+Yo no puedo olvidarme
+Si no es contigo me muero
+Si estoy soltero es peor
+
+No hay forma de imaginarme
+Que dure más de una noche
+Un trago y 30 minutos
+Yo tardé en enamorarme
+Una bachata y un bolero
+Lo que escucho pa esperarte
+Y lo que quiero es contarte
+Que contigo sentí cosas
+Cayeron las copas
+La memoria perdí
+Ahora solo tu cuerpo
+Quiero volver a sentir
+
+Keep saying "dont fall for me"
+But i can't leave
+Got caught in your arms
+Y no quiero salir
+You told me be careful cuidado
+Esta noche olvidamos el pasado
+No quiero estar equivocado
+Después nos quedamos callados
+Se que quieres, puedes, tienes ganas
+Vente, vente, a mi cama
+So special el tiempo que paso contigo
+No veo la hora de ser tu marido
+
+No hay forma de imaginarme
+Que dure más de una noche
+Un trago y 30 minutos
+Yo tardé en enamorarme
+Una bachata y un bolero
+Lo que escucho pa esperarte
+Y lo que quiero es contarte
+Que contigo sentí cosas
+Cayeron las copas
+La memoria perdí
+Ahora solo tu cuerpo
+Quiero volver a sentir
+
+So many nights waiting without your love
+Baby please don't go
+I need you so much
+Baby can't you see
+
+I need your love
+Que me está pasando
+No puedo controlar las ganas de llamarte
+I need your love
+Yo no puedo olvidarme
+Si no es contigo me muero
+Si estoy soltero es peor
+
+No hay forma de imaginarme
+Que dure más de una noche
+Un trago y 30 minutos
+Yo tardé en enamorarme
+Una bachata y un bolero
+Lo que escucho pa esperarte
+Y lo que quiero es contarte
+Que contigo sentí cosas
+Cayeron las copas
+La memoria perdí
+Ahora solo tu cuerpo
+Quiero volver a sentir`,
+      fr: `Une nuit avec toi
+Les bouteilles s'épuisent
+Je vais direct à tes lèvres
+Plus tard pour faire l'amour
+Je t'appelle demain
+Au cas où tu te souviendrais de mon nom
+Quand on l'a fait à Santiago
+Et après c'était encore mieux à New York
+
+J'ai besoin de ton amour
+Qu'est-ce qui m'arrive
+Je ne peux pas contrôler l'envie de t'appeler
+J'ai besoin de ton amour
+Je ne peux pas oublier
+Si ce n'est pas avec toi je meurs
+Si je suis célibataire c'est pire
+
+Il n'y a pas moyen de m'imaginer
+Que ça dure plus d'une nuit
+Un verre et 30 minutes
+Il m'a fallu du temps pour tomber amoureux
+Une bachata et un boléro
+Ce que j'écoute pour t'attendre
+Et ce que je veux c'est te raconter
+Qu'avec toi j'ai ressenti des choses
+Les verres sont tombés
+J'ai perdu la mémoire
+Maintenant seul ton corps
+Je veux le ressentir à nouveau
+
+Continue de dire "ne tombe pas amoureux de moi"
+Mais je ne peux pas partir
+Je suis pris dans tes bras
+Et je ne veux pas en sortir
+Tu m'as dit de faire attention
+Ce soir on oublie le passé
+Je ne veux pas me tromper
+Ensuite nous restons silencieux
+Je sais que tu veux, tu peux, tu en as envie
+Viens, viens dans mon lit
+Si spécial le temps que je passe avec toi
+Je n'ai pas hâte de voir l'heure d'être ton mari
+
+Il n'y a pas moyen de m'imaginer
+Que ça dure plus d'une nuit
+Un verre et 30 minutes
+Il m'a fallu du temps pour tomber amoureux
+Une bachata et un boléro
+Ce que j'écoute pour t'attendre
+Et ce que je veux c'est te raconter
+Qu'avec toi j'ai ressenti des choses
+Les verres sont tombés
+J'ai perdu la mémoire
+Maintenant seul ton corps
+Je veux le ressentir à nouveau
+
+Tant de nuits à attendre sans ton amour
+Bébé s'il te plaît ne pars pas
+J'ai tellement besoin de toi
+Bébé ne vois-tu pas
+
+J'ai besoin de ton amour
+Qu'est-ce qui m'arrive
+Je ne peux pas contrôler l'envie de t'appeler
+J'ai besoin de ton amour
+Je ne peux pas oublier
+Si ce n'est pas avec toi je meurs
+Si je suis célibataire c'est pire
+
+Il n'y a pas moyen de m'imaginer
+Que ça dure plus d'une nuit
+Un verre et 30 minutes
+Il m'a fallu du temps pour tomber amoureux
+Une bachata et un boléro
+Ce que j'écoute pour t'attendre
+Et ce que je veux c'est te raconter
+Qu'avec toi j'ai ressenti des choses
+Les verres sont tombés
+J'ai perdu la mémoire
+Maintenant seul ton corps
+Je veux le ressentir à nouveau`
+    }
+  },
+  {
+    id: "fanatico-de-ti-dani-j",
+    title: "Fanático de Ti",
+    artist: "Dani J",
+    year: 2010,
+    tags: ["Romantique", "Sensual"],
+    color: "#be185d",
+    culture: {
+      context: "Une chanson emblématique de Dani J qui a traversé les années pour devenir un classique des soirées Bachata.",
+      meaning: "Une déclaration d'amour absolue. Le chanteur se décrit comme un 'fanatique', quelqu'un qui admire chaque détail de l'autre.",
+      artistInfo: "Dani J est l'un des artistes de bachata les plus populaires en Europe, connu pour ses reprises et ses compositions originales romantiques.",
+      album: "Best of Dani J"
+    },
+    lyrics: {
+      es: `No sabría encontrar tus defectos si es que los tienes
+Yo diría que es imposible hallar a otra igual a ti
+He llegado a sospechar que no seas real
+De tanto como significas para mí
+Eres la dosis de azúcar en mi café
+El placer de un cigarro después de comer
+Que acaba con mi mal humor
+Con la facilidad
+Con que se limpia el vaho del cristal
+Contigo es sencillo ser feliz
+Porque lo eres todo para mí
+Por eso es que yo soy fanático de ti
+Contigo es sencillo ser feliz
+Porque lo eres todo para mí
+Por eso es que yo soy fanático de ti
+Fanático de ti
+No sabría qué hacer con mi vida si te perdiera
+Qué sería sentirme desnudo y no tener con qué vestir
+He llegado a sospechar que no seas real
+De tanto como significas para mí
+La que convierte mis sueños en realidad
+La que me hace reír cuando toca llorar
+Eres la más fiel expresión que encierra el verbo amar
+Tú eres mi complemento ideal
+Contigo es sencillo ser feliz
+Porque lo eres todo para mí
+Por eso es que yo soy fanático de ti
+Contigo es sencillo ser feliz
+Porque lo eres todo para mí
+Por eso es que yo soy fanático de ti
+Fanático de ti
+Contigo es sencillo ser feliz
+Porque lo eres todo para mí
+Por eso es que yo soy fanático de ti
+Contigo es sencillo ser feliz
+Porque lo eres todo para mí
+Por eso es que yo soy fanático de ti
+Fanático de ti
+Contigo es sencillo ser feliz
+Porque lo eres todo para mí
+Por eso es que yo soy fanático de ti
+Contigo es sencillo ser feliz
+Porque lo eres todo para mí
+Por eso es que yo soy fanático de ti
+Fanático de ti`,
+      fr: `Je ne saurais pas trouver tes défauts si tu en as
+Je dirais qu'il est impossible d'en trouver une autre comme toi
+J'en suis venu à soupçonner que tu n'es pas réelle
+Tant tu comptes pour moi
+Tu es la dose de sucre dans mon café
+Le plaisir d'une cigarette après manger
+Qui met fin à ma mauvaise humeur
+Avec la facilité
+Avec laquelle on essuie la buée sur le verre
+Avec toi c'est simple d'être heureux
+Parce que tu es tout pour moi
+C'est pour ça que je suis fan de toi
+Avec toi c'est simple d'être heureux
+Parce que tu es tout pour moi
+C'est pour ça que je suis fan de toi
+Fan de toi
+Je ne saurais pas quoi faire de ma vie si je te perdais
+Ce que ce serait de me sentir nu et sans rien pour m'habiller
+J'en suis venu à soupçonner que tu n'es pas réelle
+Tant tu comptes pour moi
+Celle qui transforme mes rêves en réalité
+Celle qui me fait rire quand il faut pleurer
+Tu es la plus fidèle expression du verbe aimer
+Tu es mon complément idéal
+Avec toi c'est simple d'être heureux
+Parce que tu es tout pour moi
+C'est pour ça que je suis fan de toi
+Avec toi c'est simple d'être heureux
+Parce que tu es tout pour moi
+C'est pour ça que je suis fan de toi
+Fan de toi
+Avec toi c'est simple d'être heureux
+Parce que tu es tout pour moi
+C'est pour ça que je suis fan de toi
+Avec toi c'est simple d'être heureux
+Parce que tu es tout pour moi
+C'est pour ça que je suis fan de toi
+Fan de toi
+Avec toi c'est simple d'être heureux
+Parce que tu es tout pour moi
+C'est pour ça que je suis fan de toi
+Avec toi c'est simple d'être heureux
+Parce que tu es tout pour moi
+C'est pour ça que je suis fan de toi
+Fan de toi`
+    }
+  },
+  {
+    id: "dos-locos-alexandra",
+    title: "Dos Locos",
+    artist: "Monchy & Alexandra",
+    year: 2003,
+    tags: ["Classique", "Dominicaine"],
+    color: "#059669",
+    culture: {
+      context: "Considéré comme l'un des plus grands classiques de la bachata moderne, 'Dos Locos' a propulsé le duo Monchy & Alexandra sur la scène internationale.",
+      meaning: "Deux amants pris dans des relations différentes mais qui ne peuvent s'empêcher de s'aimer et de penser l'un à l'autre.",
+      artistInfo: "Monchy & Alexandra ont été le duo le plus emblématique de la bachata des années 2000, mêlant romantisme et mélodies accrocheuses.",
+      album: "Confesiones"
+    },
+    lyrics: {
+      es: `Que tontos, que locos somos tu y yo
+Estando con otros y amándonos
+Que tontos, que locos somos tu y yo
+Estando con otros y aun amándonos
+El tiempo no ha logrado que te olvide
+No ha borrado las huellas de tu amor
+Todavía siento el sabor de tus besos en mi boca
+Todavía siento tus manos acariciándome la piel
+Y yo no quiero seguir así
+Estando con ella y pensando en ti
+Que tontos, que locos somos tu y yo
+Estando con otros y amándonos
+Que tontos, que locos somos tu y yo
+Estando con otros y aun amándonos
+Yo estoy loco por buscarte
+Loco por besarte
+Tonto por dejarte
+Tu sin olvidarme
+No lo quieres a el
+Ni tampoco yo a ella
+En tu cuerpo de mi quedan huellas
+Todavía sientes lo mismo que yo siento
+Sin tu boca no soy un hombre contento
+Que mi corazón decida
+Serás la dueña de mi vida
+Dime porque no te tengo
+A mi me esta pasando igual
+No dejo de pensar en ti
+El día que me levanto
+Contigo en la cabeza
+Lo llamo por tu nombre
+Que tontos, que locos somos tu y yo
+Estando con otros y amándonos
+Que tontos, que locos somos tu y yo
+Estando con otros y aun amándonos
+El tiempo no ha logrado que te olvide
+No ha borrado las huellas de tu amor
+Todavía siento el sabor de tus besos en mi boca
+Todavía siento tus manos acariciándome la piel
+Y yo no quiero seguir así
+Estando con ella y pensando en ti
+Que tontos, que locos somos tu y yo
+Estando con otros y amándonos
+Que tontos, que locos somos tu y yo
+Estando con otros y aun amándonos`,
+      fr: `Quels idiots, quels fous nous sommes toi et moi
+Étant avec d'autres et nous aimant
+Quels idiots, quels fous nous sommes toi et moi
+Étant avec d'autres et nous aimant encore
+Le temps n'a pas réussi à me faire t'oublier
+Il n'a pas effacé les traces de ton amour
+Je sens encore le goût de tes baisers dans ma bouche
+Je sens encore tes mains carressant ma peau
+Et je ne veux pas continuer ainsi
+Étant avec elle et pensant à toi
+Quels idiots, quels fous nous sommes toi et moi
+Étant avec d'autres et nous aimant
+Quels idiots, quels fous nous sommes toi et moi
+Étant avec d'autres et nous aimant encore
+Je suis fou de te chercher
+Fou de t'embrasser
+Idiot de t'avoir quittée
+Toi sans m'oublier
+Tu ne l'aimes pas lui
+Ni moi elle non plus
+Sur ton corps de moi il reste des traces
+Tu ressens encore la même chose que moi
+Sans ta bouche je ne suis pas un homme heureux
+Que mon cœur décide
+Tu seras la maîtresse de ma vie
+Dis-moi pourquoi je ne t'ai pas
+Ça m'arrive la même chose
+Je n'arrête pas de penser à toi
+Le jour où je me lève
+Avec toi dans la tête
+Je l'appelle par ton nom
+Quels idiots, quels fous nous sommes toi et moi
+Étant avec d'autres et nous aimant
+Quels idiots, quels fous nous sommes toi et moi
+Étant avec d'autres et nous aimant encore
+Le temps n'a pas réussi à me faire t'oublier
+Il n'a pas effacé les traces de ton amour
+Je sens encore le goût de tes baisers dans ma bouche
+Je sens encore tes mains carressant ma peau
+Et je ne veux pas continuer ainsi
+Étant avec elle et pensant à toi
+Quels idiots, quels fous nous sommes toi et moi
+Étant avec d'autres et nous aimant
+Quels idiots, quels fous nous sommes toi et moi
+Étant avec d'autres et nous aimant encore`
+    }
   }
 ];
