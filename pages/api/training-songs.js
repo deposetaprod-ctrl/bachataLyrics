@@ -12,7 +12,11 @@ export default async function handler(req, res) {
       exclude: ['remix', 'sensual', 'dj cat']
     },
     bachata: {
-      term: 'bachata',
+      term: 'bachata romantica moderna',
+      exclude: []
+    },
+    bachazouk: {
+      term: 'bachazouk zouk remix bachata',
       exclude: []
     }
   };

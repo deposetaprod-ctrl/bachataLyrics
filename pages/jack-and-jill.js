@@ -29,60 +29,75 @@ export default function JackAndJill() {
       const savedFavs = JSON.parse(localStorage.getItem('favSongs') || '[]');
       const appSongs = require('../data/songs').songs;
       
-      // Separate app songs into favorites and others
-      const priorityAppSongs = appSongs.filter(s => savedFavs.includes(s.id));
-      const otherAppSongs = appSongs.filter(s => !savedFavs.includes(s.id));
-      
-      // Final priority list: favorites first, then other app songs
-      const allAppPriority = [...priorityAppSongs, ...otherAppSongs];
-      
       let finalPlaylist = [];
 
-      // 1. Try to fetch previews for app songs
-      for (const appSong of allAppPriority) {
-        try {
-          setStatus(`Recherche de "${appSong.title}"...`);
-          
-          if (appSong.audioUrl) {
-            // For exclusive remixes, use the local audio URL directly
+      // Helper to add songs uniquely
+      const addSongs = (newSongs, isApp = false) => {
+        newSongs.forEach(s => {
+          if (!finalPlaylist.some(p => p.trackId === s.trackId || (p.trackName === s.trackName && p.artistName === s.artistName))) {
             finalPlaylist.push({
-              trackId: appSong.id, // Assuming appSong.id can be used as trackId
-              trackName: appSong.title,
-              artistName: appSong.artist,
-              previewUrl: appSong.audioUrl,
-              isAppSong: true,
-              isFavorite: savedFavs.includes(appSong.id)
+              ...s,
+              isAppSong: isApp,
+              isFavorite: savedFavs.includes(s.trackId || s.id)
             });
-            continue;
           }
+        });
+      };
 
-          const res = await fetch(`/api/training-songs?type=search&term=${encodeURIComponent(appSong.title + ' ' + appSong.artist)}`);
+      // 1. Add all App Songs (we'll shuffle them later)
+      setStatus('Chargement des sons de l\'application...');
+      const appSongsFormatted = appSongs.map(s => ({
+        trackId: s.id,
+        trackName: s.title,
+        artistName: s.artist,
+        previewUrl: s.audioUrl, // Might be undefined, we'll search if so
+        id: s.id
+      }));
+
+      // Search for previews if missing
+      for (let i = 0; i < appSongsFormatted.length; i++) {
+        const s = appSongsFormatted[i];
+        if (!s.previewUrl) {
+          setStatus(`Recherche de "${s.trackName}" (${i+1}/${appSongsFormatted.length})...`);
+          try {
+            const res = await fetch(`/api/training-songs?type=search&term=${encodeURIComponent(s.trackName + ' ' + s.artistName)}`);
+            const data = await res.json();
+            const match = data.results?.[0];
+            if (match?.previewUrl) {
+              s.previewUrl = match.previewUrl;
+              s.trackId = match.trackId;
+            }
+          } catch (e) {
+            console.error("Error searching for", s.trackName, e);
+          }
+        }
+      }
+      addSongs(appSongsFormatted.filter(s => s.previewUrl), true);
+
+      // 2. Fetch from various categories to ensure variety
+      const categories = ['sensual', 'dominican', 'bachazouk', 'bachata'];
+      for (const cat of categories) {
+        if (finalPlaylist.length >= 80) break;
+        setStatus(`Extraction de Bachata ${cat}...`);
+        try {
+          const res = await fetch(`/api/training-songs?type=${cat}`);
           const data = await res.json();
-          // Find the best match
-          const match = data.results.find(s => 
-            s.trackName.toLowerCase().includes(appSong.title.toLowerCase()) ||
-            s.artistName.toLowerCase().includes(appSong.artist.toLowerCase())
-          );
-          if (match && match.previewUrl) {
-            finalPlaylist.push({ ...match, isAppSong: true, isFavorite: savedFavs.includes(appSong.id) });
+          if (data.results) {
+            addSongs(data.results);
           }
         } catch (e) {
-          console.error("Error fetching preview for", appSong.title, e);
+          console.error("Error fetching cat", cat, e);
         }
-        if (finalPlaylist.length >= 60) break;
       }
 
-      // 2. If we need more songs, fetch general Bachata
-      if (finalPlaylist.length < 60) {
-        const res = await fetch(`/api/training-songs?type=bachata`);
-        const data = await res.json();
-        const generalSongs = data.results.filter(s => s.previewUrl && !finalPlaylist.some(p => p.trackId === s.trackId));
-        // Shuffle and fill
-        const shuffledGeneral = generalSongs.sort(() => Math.random() - 0.5);
-        finalPlaylist.push(...shuffledGeneral.slice(0, 60 - finalPlaylist.length));
+      // 3. FULL SHUFFLE (Fisher-Yates)
+      setStatus('Mixage de la playlist...');
+      for (let i = finalPlaylist.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [finalPlaylist[i], finalPlaylist[j]] = [finalPlaylist[j], finalPlaylist[i]];
       }
 
-      setSongs(finalPlaylist);
+      setSongs(finalPlaylist.slice(0, 100)); // Keep up to 100 songs
       setStatus('idle');
     } catch (error) {
       console.error('Error fetching songs:', error);
@@ -339,11 +354,22 @@ export default function JackAndJill() {
               </div>
             )}
 
-            {(status === 'loading') && (
-              <div className="loading-state">
+            {(status !== 'ready' && status !== 'idle' && status !== 'playing' && status !== 'paused' && status !== 'finished' && status !== 'error') && (
+              <div className="loading-state animate-fade-in">
                 <div className="spinner"></div>
-                <p>Génération de ta playlist personnalisée...</p>
-                <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Nous priorisons tes favoris et les sons de l'application.</p>
+                <p>{status === 'loading' ? 'Génération de ta playlist personnalisée...' : status}</p>
+                <div style={{ marginTop: '12px' }}>
+                  <span className="badge-style" style={{ 
+                    background: 'rgba(250, 204, 21, 0.1)',
+                    color: '#facc15',
+                    fontSize: '0.8rem',
+                    padding: '6px 12px',
+                    borderRadius: '999px',
+                    border: '1px solid rgba(250, 204, 21, 0.2)'
+                  }}>
+                    {songs.length} sons trouvés
+                  </span>
+                </div>
               </div>
             )}
             
