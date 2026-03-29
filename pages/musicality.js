@@ -246,6 +246,7 @@ export default function MusicalityTrainer() {
       const ytId = extractYoutubeId(remoteUrl);
       if (ytId) {
         setYoutubeId(ytId);
+        setRemoteUrl(''); // Clear remoteUrl to render YouTube player instead of audio player !!
         setIsLoading(false);
         const savedMarkers = JSON.parse(localStorage.getItem(`markers-yt-${ytId}`) || '[]');
         setMarkers(savedMarkers);
@@ -619,7 +620,7 @@ export default function MusicalityTrainer() {
                 <span>🔗</span>
                 <input
                   type="url"
-                  placeholder="URL audio distante (mp3, m4a…)"
+                  placeholder="Lien YouTube ou URL audio (mp3...)"
                   value={remoteUrl}
                   onChange={e => { setRemoteUrl(e.target.value); setSelectedSongId(''); setLocalFile(null); }}
                 />
@@ -627,14 +628,14 @@ export default function MusicalityTrainer() {
             </div>
           </div>
 
-          {!selectedSongId && !localFile && !remoteUrl && (
+          {!selectedSongId && !localFile && !remoteUrl && !youtubeId && (
             <div className="empty-state animate-fade-in">
               <div className="empty-state-icon">🥁</div>
               <h3>Comment ça marche ?</h3>
               <div className="empty-how-grid">
                 <div className="how-step">
                   <span className="step-num">1</span>
-                  <span>Choisis une chanson ci-dessus (catalogue, fichier ou URL)</span>
+                  <span>Choisis une chanson (catalogue, ou <b>colle un lien YouTube</b>)</span>
                 </div>
                 <div className="how-step">
                   <span className="step-num">2</span>
