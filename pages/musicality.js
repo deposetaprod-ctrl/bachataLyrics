@@ -2,11 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
-import { songs as allSongs } from '../data/songs';
 import MusicalityHUD from '../components/MusicalityHUD';
 import AuthModal from '../components/AuthModal';
-import { redirectToAuthCodeFlow, getAccessToken, fetchAudioAnalysis } from '../utils/spotify';
-
 export default function MusicalityTrainer() {
   const router = useRouter();
   const [markers, setMarkers] = useState([]);
@@ -271,17 +268,7 @@ export default function MusicalityTrainer() {
     if (user && youtubeId) loadFromSupabase();
   }, [user, youtubeId]);
 
-  const fetchCommunitySessions = async () => {
-    if (!supabaseClient || !selectedSongId) return;
-    const { data, error } = await supabaseClient
-      .from('musicality_sessions')
-      .select('*, profiles(username)')
-      .eq('song_id', selectedSongId)
-      .neq('user_id', user?.id || '');
 
-    if (data) setCommunitySessions(data);
-    setShowCommunity(true);
-  };
 
   const updateMarker = (id, updates) => {
     const updatedMarkers = markers.map(m => m.id === id ? { ...m, ...updates } : m);
@@ -381,11 +368,7 @@ export default function MusicalityTrainer() {
     }
   };
 
-  const loginSpotify = () => {
-    if (!clientId) return alert("Veuillez entrer votre Client ID Spotify");
-    localStorage.setItem('spotify_client_id', clientId);
-    redirectToAuthCodeFlow(clientId);
-  };
+
 
   const toggleRecording = () => setIsRecording(!isRecording);
   
@@ -415,9 +398,7 @@ export default function MusicalityTrainer() {
         strategy="beforeInteractive" 
         onLoad={initWavesurfer}
       />
-      <Script 
-        src="https://sdk.scdn.co/spotify-player.js"
-      />
+
 
       <header className="navbar">
         <div className="navbar-inner">
@@ -484,8 +465,6 @@ export default function MusicalityTrainer() {
                 value={remoteUrl}
                 onChange={e => { 
                   setRemoteUrl(e.target.value); 
-                  setSelectedSongId(''); 
-                  setLocalFile(null); 
                 }}
                 style={{ 
                   width: '100%', 
@@ -528,7 +507,7 @@ export default function MusicalityTrainer() {
 
         </div>
 
-        {selectedSongId && (
+        {youtubeId && (
           <div className="player-section animate-fade-in glass">
             {showFlash && (
               <div className={`screen-flash ${showFlash}`} />
@@ -606,53 +585,11 @@ export default function MusicalityTrainer() {
                 </div>
               )}
 
-              {spotifyAnalysis && !localFile && !remoteUrl && !youtubeId && (
-                <div 
-                  className="spotify-pseudo-waveform"
-                  onMouseDown={(e) => {
-                    const rect = e.currentTarget.getBoundingClientRect();
-                    const moveHandler = (moveEvent) => {
-                      const newX = moveEvent.clientX - rect.left;
-                      const pct = Math.max(0, Math.min(1, newX / rect.width));
-                      const newTime = pct * spotifyAnalysis.track.duration;
-                      setCurrentTime(newTime);
-                    };
-                    const upHandler = (upEvent) => {
-                      setIsDragging(false);
-                      const newX = upEvent.clientX - rect.left;
-                      const pct = Math.max(0, Math.min(1, newX / rect.width));
-                      const newTime = pct * spotifyAnalysis.track.duration;
-                      if (spotifyPlayer) spotifyPlayer.seek(newTime * 1000);
-                      window.removeEventListener('mousemove', moveHandler);
-                      window.removeEventListener('mouseup', upHandler);
-                    };
-                    setIsDragging(true);
-                    window.addEventListener('mousemove', moveHandler);
-                    window.addEventListener('mouseup', upHandler);
-                    moveHandler(e);
-                  }}
-                  style={{ cursor: isDragging ? 'grabbing' : 'ew-resize' }}
-                >
-                  <div className={`spotify-playhead ${isDragging ? 'active' : ''}`} style={{ left: `${(currentTime / spotifyAnalysis.track.duration) * 100}%` }} />
-                  <svg viewBox={`0 0 ${spotifyAnalysis.track.duration * 10} 120`} preserveAspectRatio="none">
-                    {spotifyAnalysis.segments.map((seg, i) => (
-                      <rect 
-                        key={i}
-                        x={seg.start * 10}
-                        y={60 - (Math.max(0, seg.loudness_max + 60) * 1.0)}
-                        width={seg.duration * 10}
-                        height={Math.max(2, (Math.max(0, seg.loudness_max + 60) * 2.0))}
-                        fill={seg.start <= currentTime ? 'var(--accent)' : 'rgba(255,255,255,0.1)'}
-                        opacity={0.8}
-                      />
-                    ))}
-                  </svg>
-                </div>
-              )}
+
 
               <div className="markers-layer">
                 {markers.map(marker => {
-                  const duration = wavesurfer.current?.getDuration() || spotifyAnalysis?.track?.duration || youtubePlayer?.getDuration() || 300;
+                  const duration = wavesurfer.current?.getDuration() || youtubePlayer?.getDuration() || 300;
                   return (
                     <div 
                       key={marker.id}
@@ -665,9 +602,6 @@ export default function MusicalityTrainer() {
                         else if (youtubePlayer) {
                           setCurrentTime(marker.time);
                           youtubePlayer.seekTo(marker.time, true);
-                        } else {
-                          setCurrentTime(marker.time);
-                          if (spotifyPlayer) spotifyPlayer.seek(marker.time * 1000);
                         }
                       }}
                     >
@@ -683,25 +617,12 @@ export default function MusicalityTrainer() {
               </div>
             </div>
 
-            {youtubeId && !localFile && !remoteUrl && (
+            {youtubeId && !remoteUrl && (
               <div className="spotify-embed-container glass animate-fade-in" style={{ display: youtubePlayer ? 'none' : 'block' }}>
-                {/* Fallback frame before API initializes, though API should take over */}
                 <p className="manual-hint">Lance la vidéo YouTube 👆 puis clique sur <b>Record</b> 👇 pour synchroniser ton écoute.</p>
               </div>
             )}
-            <div id="youtube-player-container" style={{ display: youtubePlayer && youtubeId && !localFile && !remoteUrl ? 'block' : 'none', borderRadius: '16px', overflow: 'hidden', marginBottom: '32px' }}></div>
-            {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && !localFile && !remoteUrl && !youtubeId && !accessToken && (
-              <div className="spotify-embed-container glass">
-                <p className="manual-hint">Connectez Spotify ci-dessus pour activer la Waveform. <br/> Sinon, utilisez le bouton <b>Record</b> manuellement.</p>
-                <iframe 
-                  src={`https://open.spotify.com/embed/track/${allSongs.find(s => s.id === selectedSongId).spotifyId}`} 
-                  width="100%" 
-                  height="80" 
-                  frameBorder="0" 
-                  allow="encrypted-media"
-                />
-              </div>
-            )}
+            <div id="youtube-player-container" style={{ display: youtubePlayer && youtubeId && !remoteUrl ? 'block' : 'none', borderRadius: '16px', overflow: 'hidden', marginBottom: '32px' }}></div>
 
             <div className="controls-row">
               <button 
@@ -803,9 +724,9 @@ export default function MusicalityTrainer() {
                     className={`marker-item ${activeMarkerId === m.id ? 'active' : ''}`} 
                     onClick={() => {
                       if (wavesurfer.current) wavesurfer.current.setTime(m.time);
-                      else {
+                      else if (youtubePlayer) {
                         setCurrentTime(m.time);
-                        if (spotifyPlayer) spotifyPlayer.seek(m.time * 1000);
+                        youtubePlayer.seekTo(m.time, true);
                       }
                       setActiveMarkerId(m.id);
                     }}
