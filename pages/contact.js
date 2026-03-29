@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Navbar from '../components/Navbar';
 
 export default function Contact() {
   const router = useRouter();
@@ -36,22 +37,7 @@ export default function Contact() {
         <meta name="description" content="Envoie-nous un message !" />
       </Head>
 
-      {/* NAVBAR */}
-      <nav className="navbar">
-        <div className="navbar-inner">
-          <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-            <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
-            <span className="logo-text">Bachata Flow</span>
-          </div>
-          <div className="nav-links">
-            <span onClick={() => router.push('/')}>Sons</span>
-            <span onClick={() => router.push('/passes')}>Passes</span>
-            <span onClick={() => router.push('/musicality')}>Musicalité</span>
-            <span onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
-            <span style={{ color: 'var(--accent)' }}>Contact</span>
-          </div>
-        </div>
-      </nav>
+      <Navbar onLoginClick={() => router.push('/')} />
 
       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '80px 24px' }}>
         <div style={{ width: '100%', maxWidth: '560px' }}>

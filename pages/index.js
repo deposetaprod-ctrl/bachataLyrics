@@ -5,6 +5,7 @@ import Script from 'next/script';
 import { songs } from '../data/songs';
 import { SpotifyIcon } from '../components/SpotifyIcon';
 import AuthModal from '../components/AuthModal';
+import Navbar from '../components/Navbar';
 
 export default function Home() {
   const router = useRouter();
@@ -131,49 +132,27 @@ export default function Home() {
       />
 
       {/* ─── NAVBAR ─── */}
-      <nav className="navbar">
-        <div className="navbar-inner">
-          <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-            <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
-            <span className="logo-text">Bachata Flow</span>
-          </div>
- 
-          <div className="nav-links">
-            <span style={{ color: 'var(--accent)' }}>Sons</span>
-            <span onClick={() => router.push('/passes')}>Passes</span>
-            <span onClick={() => router.push('/musicality')}>Musicalité</span>
-            <span onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
-            
-            <div className="auth-profile">
-              {user ? (
-                <div className="user-logged animate-fade-in">
-                  <span className="user-name">👤 {user.email?.split('@')[0]}</span>
-                  <button className="btn-logout" onClick={() => supabaseClient.auth.signOut()}>
-                    Déconnexion
-                  </button>
-                </div>
-              ) : (
-                <button className="btn-login" onClick={() => setShowLoginModal(true)}>
-                  Connexion / S'inscrire
-                </button>
-              )}
-            </div>
-          </div>
-
-          <div className="search-bar">
-            <span className="search-icon">🔍</span>
-            <input
-              id="search-input"
-              type="text"
-              placeholder="Rechercher un titre, artiste..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
-
-          <div className="song-count">{filtered.length} son{filtered.length !== 1 ? 's' : ''}</div>
+      <Navbar 
+        user={user} 
+        supabaseClient={supabaseClient} 
+        onLoginClick={() => setShowLoginModal(true)} 
+        activePage="home"
+      >
+        <div className="search-bar">
+          <span className="search-icon">🔍</span>
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Rechercher un titre, artiste..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </div>
-      </nav>
+
+        <div className="song-count" style={{ marginLeft: '16px' }}>
+          {filtered.length} son{filtered.length !== 1 ? 's' : ''}
+        </div>
+      </Navbar>
 
       <AuthModal
         isOpen={showLoginModal}

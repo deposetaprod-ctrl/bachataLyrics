@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { songs } from '../../data/songs';
 import { SpotifyIcon } from '../../components/SpotifyIcon';
+import Navbar from '../../components/Navbar';
 
 export async function getStaticPaths() {
   const paths = songs.map((s) => ({ params: { id: s.id } }));
@@ -61,22 +62,7 @@ export default function SongPage({ song }) {
         />
       </Head>
 
-      {/* ─── NAVBAR ─── */}
-      <nav className="navbar">
-        <div className="navbar-inner">
-          <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-            <div className="logo-icon">🎶</div>
-            <span className="logo-text">Bachata Lyrics</span>
-          </div>
-          
-          <div className="nav-links">
-            <span style={{ color: 'var(--accent)' }} onClick={() => router.push('/')}>Sons</span>
-            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/passes')}>Passes</span>
-            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
-            <span style={{ color: 'var(--text-muted)' }} onClick={() => router.push('/musicality')}>Musicalité</span>
-          </div>
-        </div>
-      </nav>
+      <Navbar activePage="home" onLoginClick={() => router.push('/')} />
 
       <div className="lyrics-page">
         {/* ─── HEADER ─── */}

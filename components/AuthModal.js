@@ -62,15 +62,23 @@ export default function AuthModal({ isOpen, onClose, supabaseClient, onSuccess }
     if (form.password !== form.confirmPassword) return setError('Les mots de passe ne correspondent pas.');
     setIsLoading(true);
     setError('');
-    const { error } = await supabaseClient.auth.signUp({
+    const { data, error } = await supabaseClient.auth.signUp({
       email: form.email,
       password: form.password,
+      options: {
+        emailRedirectTo: window.location.origin,
+      }
     });
     setIsLoading(false);
     if (error) {
       setError(error.message);
     } else {
-      setSuccessMsg('✅ Compte créé ! Vérifie ta boîte mail pour confirmer ton adresse.');
+      if (data?.session) {
+        handleClose();
+        if (onSuccess) onSuccess();
+      } else {
+        setSuccessMsg('✅ Compte créé ! Vérifie ta boîte mail pour confirmer ton adresse.');
+      }
     }
   };
 

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import AuthModal from '../components/AuthModal';
+import Navbar from '../components/Navbar';
 
 export default function JackAndJill() {
   const router = useRouter();
@@ -240,38 +241,12 @@ export default function JackAndJill() {
           }
         }}
       />
-      {/* ─── NAVBAR ─── */}
-      <nav className="navbar">
-        <div className="navbar-inner">
-          <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-            <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
-            <span className="logo-text">Bachata Flow</span>
-          </div>
- 
-          <div className="nav-links">
-            <span onClick={() => router.push('/')}>Sons</span>
-            <span onClick={() => router.push('/passes')}>Passes</span>
-            <span onClick={() => router.push('/musicality')}>Musicalité</span>
-            <span style={{ color: 'var(--accent)' }}>Jack & Jill</span>
-            
-            <div className="auth-profile">
-              {user ? (
-                <div className="user-logged animate-fade-in">
-                  <span className="user-name">👤 {user.email?.split('@')[0]}</span>
-                  <button className="btn-logout" onClick={() => supabaseClient.auth.signOut()}>
-                    Déconnexion
-                  </button>
-                </div>
-              ) : (
-                <button className="btn-login" onClick={() => setShowLoginModal(true)}>
-                  Connexion / S'inscrire
-                </button>
-              )}
-            </div>
-          </div>
-        </div>
-      </nav>
-
+      <Navbar 
+        user={user} 
+        supabaseClient={supabaseClient} 
+        onLoginClick={() => setShowLoginModal(true)} 
+        activePage="jnj"
+      />
       <AuthModal
         isOpen={showLoginModal}
         onClose={() => setShowLoginModal(false)}

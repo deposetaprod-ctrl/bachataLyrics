@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Script from 'next/script';
 import MusicalityHUD from '../components/MusicalityHUD';
 import AuthModal from '../components/AuthModal';
+import Navbar from '../components/Navbar';
 export default function MusicalityTrainer() {
   const router = useRouter();
   const [markers, setMarkers] = useState([]);
@@ -398,47 +399,17 @@ export default function MusicalityTrainer() {
         onLoad={initWavesurfer}
       />
 
-
-      <header className="navbar">
-        <div className="navbar-inner">
-          <div className="logo" onClick={() => router.push('/')}>
-            <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
-            <span className="logo-text">Bachata Flow</span>
-          </div>
-          <div className="nav-links">
-            <span onClick={() => router.push('/')}>Accueil</span>
-            <span onClick={() => router.push('/passes')}>Passes</span>
-            <span onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
-            
-            <div className="auth-profile">
-              {user ? (
-                <div className="user-logged animate-fade-in">
-                  <span className="user-name">👤 {user.email?.split('@')[0]}</span>
-                  <button className="btn-logout" onClick={() => {
-                    setIsAuthLoading(true);
-                    supabaseClient.auth.signOut().then(() => {
-                       setIsAuthLoading(false);
-                       setUser(null);
-                    });
-                  }}>
-                    {isAuthLoading ? '...' : 'Déconnexion'}
-                  </button>
-                </div>
-              ) : (
-                <button className="btn-login" onClick={() => setShowLoginModal(true)}>
-                  Connexion / S'inscrire
-                </button>
-              )}
-            </div>
-
-          <AuthModal
-            isOpen={showLoginModal}
-            onClose={() => setShowLoginModal(false)}
-            supabaseClient={supabaseClient}
-          />
-          </div>
-        </div>
-      </header>
+      <Navbar 
+        user={user} 
+        supabaseClient={supabaseClient} 
+        onLoginClick={() => setShowLoginModal(true)} 
+        activePage="musicality"
+      />
+      <AuthModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+        supabaseClient={supabaseClient}
+      />
 
       <main className="container trainer-content">
         <div className="trainer-header">
@@ -449,7 +420,12 @@ export default function MusicalityTrainer() {
         <div className="song-selection-wrapper">
           <div className="source-section glass" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
             <div className="source-header" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>
-              <span className="source-icon" style={{ fontSize: '2.5rem' }}>📺</span>
+              <span className="source-icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(167, 139, 250, 0.1)', padding: '16px', borderRadius: '50%', color: '#a78bfa' }}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+              </span>
               <div>
                 <h3 className="source-title" style={{ fontSize: '1.5rem' }}>Coller un lien YouTube</h3>
                 <p className="source-subtitle">Copie-colle le lien de la musique ou de la vidéo de danse</p>
@@ -559,9 +535,7 @@ export default function MusicalityTrainer() {
                     moveHandler(e);
                   }}
                 >
-                  <div className="youtube-overlay-text" style={{ position: 'absolute', top: '10px', left: '16px', zIndex: 20, fontSize: '0.8rem', color: 'rgba(255,255,255,0.7)', fontWeight: 600 }}>
-                    📺 Mode YouTube (Avance pour synchroniser avec la vidéo)
-                  </div>
+
                   <div className={`spotify-playhead ${isDragging ? 'active' : ''}`} style={{ left: `${(currentTime / (youtubePlayer?.getDuration() || 300)) * 100}%` }} />
                   <svg viewBox={`0 0 3000 120`} preserveAspectRatio="none" style={{ width: '100%', height: '100%' }}>
                     {/* Generate a fake waveform pattern for visual feedback */}

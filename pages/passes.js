@@ -4,6 +4,7 @@ import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { passes } from '../data/passes';
 import AuthModal from '../components/AuthModal';
+import Navbar from '../components/Navbar';
 
 export default function Passes() {
   const router = useRouter();
@@ -86,37 +87,12 @@ export default function Passes() {
         }}
       />
 
-      {/* ─── NAVBAR ─── */}
-      <nav className="navbar">
-        <div className="navbar-inner">
-          <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-            <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
-            <span className="logo-text">Bachata Flow</span>
-          </div>
- 
-          <div className="nav-links">
-            <span onClick={() => router.push('/')}>Sons</span>
-            <span style={{ color: 'var(--accent)' }}>Passes</span>
-            <span onClick={() => router.push('/musicality')}>Musicalité</span>
-            <span onClick={() => router.push('/jack-and-jill')}>Jack & Jill</span>
-            
-            <div className="auth-profile">
-              {user ? (
-                <div className="user-logged animate-fade-in">
-                  <span className="user-name">👤 {user.email?.split('@')[0]}</span>
-                  <button className="btn-logout" onClick={() => supabaseClient.auth.signOut()}>
-                    Déconnexion
-                  </button>
-                </div>
-              ) : (
-                <button className="btn-login" onClick={() => setShowLoginModal(true)}>
-                  Connexion / S'inscrire
-                </button>
-              )}
-            </div>
-          </div>
-        </div>
-
+      <Navbar 
+        user={user} 
+        supabaseClient={supabaseClient} 
+        onLoginClick={() => setShowLoginModal(true)} 
+        activePage="passes"
+      >
         <div className="search-bar">
           <span className="search-icon">🔍</span>
           <input
@@ -127,8 +103,10 @@ export default function Passes() {
           />
         </div>
 
-        <div className="song-count">{filtered.length} passe{filtered.length !== 1 ? 's' : ''}</div>
-      </nav>
+        <div className="song-count" style={{ marginLeft: '16px' }}>
+          {filtered.length} passe{filtered.length !== 1 ? 's' : ''}
+        </div>
+      </Navbar>
 
       <AuthModal
         isOpen={showLoginModal}
