@@ -1,7 +1,113 @@
-// Data file for all Bachata songs
-// Each song has: id, title, artist, year, tags, cover color, lyrics (es + fr)
-
 export const songs = [
+  {
+    id: "mil-preguntas-marina-reche",
+    title: "Mil preguntas",
+    artist: "Marina Reche",
+    year: 2023,
+    tags: ["Sensual"],
+    color: "#6366f1",
+    spotify: "https://open.spotify.com/track/6gUqF5p6nK8F6uC7n81rFq",
+    culture: {
+      context: "Sortie fin 2023, 'Mil preguntas' est un morceau poignant qui explore la trahison et la rupture avec une voix soul unique.",
+      meaning: "La chanson décrit la douleur de découvrir une infidélité (les deux verres sur la table de nuit) et le silence assourdissant qui suit une relation passionnée.",
+      artistInfo: "Marina Reche est une artiste espagnole montante, connue pour sa capacité à transmettre des émotions brutes à travers des ballades modernes.",
+      album: "Oscuridad"
+    },
+    lyrics: {
+      es: `¿Cómo te va con ella?
+Que linda la foto, conozco ese bar
+Dónde estuvimos hace siete días
+Y reíamos bailando un vals
+¿Cómo una persona puede cambiar tanto en menos de un compás?
+De llorar borrachos y decir "te amo", a ni siquiera hablar
+
+Tengo mil preguntas y ni una disculpa
+A ver si una de ellas viéndome de frente puedes contestar
+
+¿Por qué había dos vasos en la mesa de noche?
+Si yo ni quiera dormí en la casa anoche
+Es evidente, se te nota en la piel, tienes rastros de ayer, ih-eh-eh
+¿Por qué no te atreves a mirarme sin culpa?
+Si tú preferiste hacer mi cama la suya
+Es evidente que me cuesta creer
+Pienso tanto el por qué, ih-eh-eh, eh-eh-eh
+
+Ya no cierro la puerta, si tú me recuerdas que todo se va
+Y aun así respiro si lo pienso en frío, esperando que no sea verdad
+Has convertido en piedra una casa sin pena y en oscuridad
+Un cuarto vacío, que ya no es el mismo desde que lo llenas con alguien más
+
+Tengo mil preguntas y ni una disculpa
+A ver si una de ellas viéndome de frente puedes contestar
+
+¿Por qué había dos vasos en la mesa de noche?
+Si yo ni quiera dormí en la casa anoche
+Es evidente, se te nota en la piel, tienes rastros de ayer, ih-eh-eh
+¿Por qué no te atreves a mirarme sin culpa?
+Si tú preferiste hacer mi cama la suya
+Es evidente que me cuesta creer
+Pienso tanto el por qué, ih-eh-eh, eh-eh-eh
+
+No sé cómo hacer de tripas corazón
+Dime qué hay peor que la decepción
+Y de qué sirvió si no fue por amor
+Lo rompiste todo por una ilusión
+
+¿Por qué había dos vasos en la mesa de noche?
+Si yo ni quiera dormí en la casa anoche
+Es evidente, se te nota en la piel, tienes rastros de ayer, ih-eh-eh
+¿Por qué no te atreves a mirarme sin culpa?
+Si tú preferiste hacer mi cama la suya
+Es evidente que me cuesta creer
+Pienso tanto el por qué, ih-eh-eh, eh-eh-eh`,
+      fr: `Comment ça se passe avec elle ?
+Quelle jolie photo, je connais ce bar
+Où nous étions il y a sept jours
+Et nous riions en dansant une valse
+Comment une personne peut-elle changer autant en moins d'un temps ?
+De pleurer ivres et de se dire "je t'aime", à ne même plus se parler
+
+J'ai mille questions et pas une seule excuse
+Voyons si, en me regardant en face, tu peux répondre à l'un d'elles
+
+Pourquoi y avait-il deux verres sur la table de nuit ?
+Si je n'ai même pas dormi dans la maison hier soir
+C'est évident, ça se voit sur ta peau, tu as des traces d'hier, ih-eh-eh
+Pourquoi n'oses-tu pas me regarder sans culpabilité ?
+Si tu as préféré faire de mon lit le sien
+C'est évident que j'ai du mal à croire
+Je pense tellement au pourquoi, ih-eh-eh, eh-eh-eh
+
+Je ne ferme plus la porte, si tu me rappelles que tout s'en va
+Et même comme ça, je respire si j'y pense à froid, espérant que ce ne soit pas vrai
+Tu as transformé en pierre une maison sans peine et dans l'obscurité
+Une chambre vide, qui n'est plus la même depuis que tu la remplis avec quelqu'un d'autre
+
+J'ai mille questions et pas une seule excuse
+Voyons si, en me regardant en face, tu peux répondre à l'un d'elles
+
+Pourquoi y avait-il deux verres sur la table de nuit ?
+Si je n'ai même pas dormi dans la maison hier soir
+C'est évident, ça se voit sur ta peau, tu as des traces d'hier, ih-eh-eh
+Pourquoi n'oses-tu pas me regarder sans culpabilité ?
+Si tu as préféré faire de mon lit le sien
+C'est évident que j'ai du mal à croire
+Je pense tellement au pourquoi, ih-eh-eh, eh-eh-eh
+
+Je ne sais pas comment prendre mon courage à deux mains
+Dis-moi ce qui est pire que la déception
+Et à quoi cela a-t-il servi si ce n'était pas par amour ?
+Tu as tout brisé pour une illusion
+
+Pourquoi y avait-il deux verres sur la table de nuit ?
+Si je n'ai même pas dormi dans la maison hier soir
+C'est évident, ça se voit sur ta peau, tu as des traces d'hier, ih-eh-eh
+Pourquoi n'oses-tu pas me regarder sans culpabilité ?
+Si tu as préféré faire de mon lit le sien
+C'est évident que j'ai du mal à croire
+Je pense tellement au pourquoi, ih-eh-eh, eh-eh-eh`
+    }
+  },
   {
     id: "lejania-jensen",
     title: "Lejanía",
