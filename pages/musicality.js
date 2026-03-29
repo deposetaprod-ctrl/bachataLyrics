@@ -110,6 +110,76 @@ export default function MusicalityTrainer() {
     });
   };
 
+  const [youtubePlayer, setYoutubePlayer] = useState(null);
+  const ytTimerRef = useRef(null);
+
+  // -- YouTube IFrame API Initialization --
+  useEffect(() => {
+    if (!youtubeId) {
+      if (youtubePlayer) {
+        youtubePlayer.destroy();
+        setYoutubePlayer(null);
+      }
+      return;
+    }
+
+    const initYT = () => {
+      if (youtubePlayer) {
+        youtubePlayer.destroy();
+      }
+      const player = new window.YT.Player('youtube-player-container', {
+        height: '315',
+        width: '100%',
+        videoId: youtubeId,
+        playerVars: {
+          controls: 0, // Hide default controls for custom UI sync
+          disablekb: 1,
+          fs: 0,
+          rel: 0,
+          modestbranding: 1
+        },
+        events: {
+          onReady: (event) => {
+            setYoutubePlayer(event.target);
+            setIsLoading(false);
+          },
+          onStateChange: (event) => {
+            if (event.data === window.YT.PlayerState.PLAYING) {
+              setIsPlaying(true);
+              // Start sync timer
+              if (ytTimerRef.current) clearInterval(ytTimerRef.current);
+              ytTimerRef.current = setInterval(() => {
+                if (event.target && event.target.getCurrentTime) {
+                  setCurrentTime(event.target.getCurrentTime());
+                }
+              }, 50);
+            } else {
+              setIsPlaying(false);
+              if (ytTimerRef.current) clearInterval(ytTimerRef.current);
+              if (event.target && event.target.getCurrentTime) {
+                setCurrentTime(event.target.getCurrentTime());
+              }
+            }
+          }
+        }
+      });
+    };
+
+    if (!window.YT) {
+      const tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      window.onYouTubeIframeAPIReady = initYT;
+    } else {
+      initYT();
+    }
+
+    return () => {
+      if (ytTimerRef.current) clearInterval(ytTimerRef.current);
+    };
+  }, [youtubeId]);
+
   // -- Spotify Player Lifecycle --
   useEffect(() => {
     // Handle OAuth Callback
@@ -384,6 +454,12 @@ export default function MusicalityTrainer() {
     
     if (wavesurfer.current && wavesurfer.current.getDuration() > 0) {
       wavesurfer.current.playPause();
+    } else if (youtubePlayer && youtubeId) {
+      if (isPlaying) {
+        youtubePlayer.pauseVideo();
+      } else {
+        youtubePlayer.playVideo();
+      }
     } else if (spotifyPlayer && deviceId && song?.spotifyId) {
       // Automatic Spotify Playback via SDK
       if (isPlaying) {
@@ -655,13 +731,19 @@ export default function MusicalityTrainer() {
                     const moveHandler = (moveEvent) => {
                       const newX = moveEvent.clientX - rect.left;
                       const pct = Math.max(0, Math.min(1, newX / rect.width));
-                      setCurrentTime(pct * 300); // Default to 5 mins max for manual
+                      const duration = youtubePlayer?.getDuration() || 300;
+                      setCurrentTime(pct * duration);
                     };
                     const upHandler = (upEvent) => {
                       setIsDragging(false);
                       const newX = upEvent.clientX - rect.left;
                       const pct = Math.max(0, Math.min(1, newX / rect.width));
-                      setCurrentTime(pct * 300);
+                      const duration = youtubePlayer?.getDuration() || 300;
+                      const newTime = pct * duration;
+                      setCurrentTime(newTime);
+                      if (youtubePlayer && youtubePlayer.seekTo) {
+                        youtubePlayer.seekTo(newTime, true);
+                      }
                       window.removeEventListener('mousemove', moveHandler);
                       window.removeEventListener('mouseup', upHandler);
                     };
@@ -674,7 +756,7 @@ export default function MusicalityTrainer() {
                   <div className="youtube-overlay-text" style={{ position: 'absolute', top: '10px', left: '16px', zIndex: 20, fontSize: '0.8rem', color: 'rgba(255,255,255,0.7)', fontWeight: 600 }}>
                     📺 Mode YouTube (Avance pour synchroniser avec la vidéo)
                   </div>
-                  <div className={`spotify-playhead ${isDragging ? 'active' : ''}`} style={{ left: `${(currentTime / 300) * 100}%` }} />
+                  <div className={`spotify-playhead ${isDragging ? 'active' : ''}`} style={{ left: `${(currentTime / (youtubePlayer?.getDuration() || 300)) * 100}%` }} />
                   <svg viewBox={`0 0 3000 120`} preserveAspectRatio="none" style={{ width: '100%', height: '100%' }}>
                     {/* Generate a fake waveform pattern for visual feedback */}
                     {Array.from({ length: 100 }).map((_, i) => {
@@ -686,7 +768,7 @@ export default function MusicalityTrainer() {
                           y={60 - waveHeight / 2}
                           width={15}
                           height={waveHeight}
-                          fill={i * 3 <= currentTime ? 'var(--accent)' : 'rgba(255,255,255,0.1)'}
+                          fill={i * 30 * (youtubePlayer?.getDuration() || 300) / 3000 <= currentTime ? 'var(--accent)' : 'rgba(255,255,255,0.1)'}
                           opacity={0.8}
                           rx={4}
                         />
@@ -742,7 +824,7 @@ export default function MusicalityTrainer() {
 
               <div className="markers-layer">
                 {markers.map(marker => {
-                  const duration = wavesurfer.current?.getDuration() || spotifyAnalysis?.track?.duration || 300;
+                  const duration = wavesurfer.current?.getDuration() || spotifyAnalysis?.track?.duration || youtubePlayer?.getDuration() || 300;
                   return (
                     <div 
                       key={marker.id}
@@ -752,7 +834,10 @@ export default function MusicalityTrainer() {
                       }}
                       onClick={() => {
                         if (wavesurfer.current) wavesurfer.current.setTime(marker.time);
-                        else {
+                        else if (youtubePlayer) {
+                          setCurrentTime(marker.time);
+                          youtubePlayer.seekTo(marker.time, true);
+                        } else {
                           setCurrentTime(marker.time);
                           if (spotifyPlayer) spotifyPlayer.seek(marker.time * 1000);
                         }
@@ -771,21 +856,12 @@ export default function MusicalityTrainer() {
             </div>
 
             {youtubeId && !localFile && !remoteUrl && (
-              <div className="spotify-embed-container glass animate-fade-in">
+              <div className="spotify-embed-container glass animate-fade-in" style={{ display: youtubePlayer ? 'none' : 'block' }}>
+                {/* Fallback frame before API initializes, though API should take over */}
                 <p className="manual-hint">Lance la vidéo YouTube 👆 puis clique sur <b>Record</b> 👇 pour synchroniser ton écoute.</p>
-                <div className="video-responsive">
-                  <iframe 
-                    width="100%" 
-                    height="315" 
-                    src={`https://www.youtube.com/embed/${youtubeId}`} 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen
-                  />
-                </div>
               </div>
             )}
+            <div id="youtube-player-container" style={{ display: youtubePlayer && youtubeId && !localFile && !remoteUrl ? 'block' : 'none', borderRadius: '16px', overflow: 'hidden', marginBottom: '32px' }}></div>
             {selectedSongId && !allSongs.find(s => s.id === selectedSongId).audioUrl && !localFile && !remoteUrl && !youtubeId && !accessToken && (
               <div className="spotify-embed-container glass">
                 <p className="manual-hint">Connectez Spotify ci-dessus pour activer la Waveform. <br/> Sinon, utilisez le bouton <b>Record</b> manuellement.</p>
