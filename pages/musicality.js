@@ -9,8 +9,6 @@ import { redirectToAuthCodeFlow, getAccessToken, fetchAudioAnalysis } from '../u
 
 export default function MusicalityTrainer() {
   const router = useRouter();
-  const [selectedSongId, setSelectedSongId] = useState('');
-  const [localFile, setLocalFile] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -22,15 +20,6 @@ export default function MusicalityTrainer() {
   const [remoteUrl, setRemoteUrl] = useState('');
   const [youtubeId, setYoutubeId] = useState('');
   const [activeMarkerId, setActiveMarkerId] = useState(null);
-
-  // -- Spotify Pro States --
-  const [clientId, setClientId] = useState('');
-  const [accessToken, setAccessToken] = useState('');
-  const [spotifyAnalysis, setSpotifyAnalysis] = useState(null);
-  const [spotifyPlayer, setSpotifyPlayer] = useState(null);
-  const [deviceId, setDeviceId] = useState(null);
-  const [communitySessions, setCommunitySessions] = useState([]);
-  const [showCommunity, setShowCommunity] = useState(false);
 
   const [user, setUser] = useState(null);
   const [supabaseClient, setSupabaseClient] = useState(null);
@@ -180,60 +169,16 @@ export default function MusicalityTrainer() {
     };
   }, [youtubeId]);
 
-  // -- Spotify Player Lifecycle --
-  useEffect(() => {
-    // Handle OAuth Callback
-    const urlParams = new URLSearchParams(window.location.search);
-    const code = urlParams.get('code');
-    const savedId = localStorage.getItem('spotify_client_id');
-    if (savedId) setClientId(savedId);
 
-    if (code && savedId) {
-      getAccessToken(savedId, code).then(data => {
-        if (data.access_token) {
-          setAccessToken(data.access_token);
-          window.history.replaceState({}, document.title, "/musicality");
-        }
-      });
-    }
 
-    // Load Spotify SDK
-    window.onSpotifyWebPlaybackSDKReady = () => {
-      if (!accessToken) return;
-      
-      const player = new window.Spotify.Player({
-        name: 'Bachata Musicality Trainer',
-        getOAuthToken: cb => { cb(accessToken); },
-        volume: 0.5
-      });
-
-      player.addListener('ready', ({ device_id }) => {
-        console.log('Spotify Player Ready:', device_id);
-        setDeviceId(device_id);
-      });
-
-      player.addListener('player_state_changed', state => {
-        if (!state) return;
-        setIsPlaying(!state.paused);
-        setCurrentTime(state.position / 1000);
-      });
-
-      player.connect();
-      setSpotifyPlayer(player);
-    };
-  }, [accessToken]);
-
-  // -- Load Song or Local File --
+  // -- Load Remote URL / YouTube --
   useEffect(() => {
     if (manualTimer) clearInterval(manualTimer);
     setManualTimer(null);
-    if (!spotifyPlayer) setCurrentTime(0); // If not Spotify, reset time
+    setCurrentTime(0);
     setIsPlaying(false);
     setIsRecording(false);
-    setSpotifyAnalysis(null);
     setYoutubeId('');
-
-    const song = allSongs.find(s => s.id === selectedSongId);
 
     // YouTube URL Regex
     const extractYoutubeId = (url) => {
@@ -251,46 +196,9 @@ export default function MusicalityTrainer() {
         const savedMarkers = JSON.parse(localStorage.getItem(`markers-yt-${ytId}`) || '[]');
         setMarkers(savedMarkers);
         if (audioRef.current) audioRef.current.src = '';
-      } else if (audioRef.current) {
-        setIsLoading(true);
-        audioRef.current.src = remoteUrl;
-        const savedMarkers = JSON.parse(localStorage.getItem(`markers-url-${btoa(remoteUrl).substring(0, 20)}`) || '[]');
-        setMarkers(savedMarkers);
-        if (window.WaveSurfer) {
-          initWavesurfer();
-          wavesurfer.current.load(remoteUrl);
-        }
-      }
-    } else if (localFile && audioRef.current) {
-      setIsLoading(true);
-      const url = URL.createObjectURL(localFile);
-      audioRef.current.src = url;
-      const savedMarkers = JSON.parse(localStorage.getItem(`markers-local-${localFile.name}`) || '[]');
-      setMarkers(savedMarkers);
-      if (window.WaveSurfer) {
-        initWavesurfer();
-        wavesurfer.current.load(url);
-      }
-      return () => URL.revokeObjectURL(url);
-    } else if (selectedSongId) {
-      const savedMarkers = JSON.parse(localStorage.getItem(`markers-${selectedSongId}`) || '[]');
-      setMarkers(savedMarkers);
-
-      if (song && song.audioUrl) {
-        setIsLoading(true);
-        if (window.WaveSurfer) {
-          initWavesurfer();
-          wavesurfer.current.load(song.audioUrl);
-        }
-      } else if (song && song.spotifyId && accessToken) {
-        setIsLoading(true);
-        fetchAudioAnalysis(accessToken, song.spotifyId).then(data => {
-          setSpotifyAnalysis(data);
-          setIsLoading(false);
-        });
       }
     }
-  }, [selectedSongId, localFile, remoteUrl, accessToken]);
+  }, [remoteUrl]);
 
   // -- Utility for adding markers --
   const addMarker = (type, label, color) => {
@@ -314,11 +222,10 @@ export default function MusicalityTrainer() {
     const updatedMarkers = [...markers, newMarker].sort((a, b) => a.time - b.time);
     setMarkers(updatedMarkers);
     
-    let storageKey = `markers-${selectedSongId}`;
-    if (localFile) storageKey = `markers-local-${localFile.name}`;
-    if (remoteUrl) storageKey = `markers-url-${btoa(remoteUrl).substring(0, 20)}`;
+    if (youtubeId) {
+      localStorage.setItem(`markers-yt-${youtubeId}`, JSON.stringify(updatedMarkers));
+    }
     
-    localStorage.setItem(storageKey, JSON.stringify(updatedMarkers));
     setActiveMarkerId(newMarker.id); // Auto-open for editing
   };
 
@@ -331,7 +238,7 @@ export default function MusicalityTrainer() {
     setIsLoading(true);
     const sessionData = {
       user_id: user.id,
-      song_id: selectedSongId || 'local-' + (localFile?.name || 'unknown'),
+      song_id: 'yt-' + youtubeId,
       markers: markers,
       updated_at: new Date().toISOString()
     };
@@ -346,13 +253,13 @@ export default function MusicalityTrainer() {
   };
 
   const loadFromSupabase = async () => {
-    if (!supabaseClient || !user || !selectedSongId) return;
+    if (!supabaseClient || !user || !youtubeId) return;
     
     const { data, error } = await supabaseClient
       .from('musicality_sessions')
       .select('markers')
       .eq('user_id', user.id)
-      .eq('song_id', selectedSongId)
+      .eq('song_id', 'yt-' + youtubeId)
       .single();
 
     if (data && data.markers) {
@@ -361,8 +268,8 @@ export default function MusicalityTrainer() {
   };
 
   useEffect(() => {
-    if (user && selectedSongId) loadFromSupabase();
-  }, [user, selectedSongId]);
+    if (user && youtubeId) loadFromSupabase();
+  }, [user, youtubeId]);
 
   const fetchCommunitySessions = async () => {
     if (!supabaseClient || !selectedSongId) return;
@@ -379,20 +286,17 @@ export default function MusicalityTrainer() {
   const updateMarker = (id, updates) => {
     const updatedMarkers = markers.map(m => m.id === id ? { ...m, ...updates } : m);
     setMarkers(updatedMarkers);
-    
-    let storageKey = `markers-${selectedSongId}`;
-    if (localFile) storageKey = `markers-local-${localFile.name}`;
-    if (remoteUrl) storageKey = `markers-url-${btoa(remoteUrl).substring(0, 20)}`;
-    localStorage.setItem(storageKey, JSON.stringify(updatedMarkers));
+    if (youtubeId) {
+      localStorage.setItem(`markers-yt-${youtubeId}`, JSON.stringify(updatedMarkers));
+    }
   };
 
   const deleteMarker = (id) => {
     const updatedMarkers = markers.filter(m => m.id !== id);
     setMarkers(updatedMarkers);
-    let storageKey = `markers-${selectedSongId}`;
-    if (localFile) storageKey = `markers-local-${localFile.name}`;
-    if (remoteUrl) storageKey = `markers-url-${btoa(remoteUrl).substring(0, 20)}`;
-    localStorage.setItem(storageKey, JSON.stringify(updatedMarkers));
+    if (youtubeId) {
+      localStorage.setItem(`markers-yt-${youtubeId}`, JSON.stringify(updatedMarkers));
+    }
     setActiveMarkerId(null);
   };
 
@@ -442,7 +346,7 @@ export default function MusicalityTrainer() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isRecording, markers, selectedSongId, localFile, currentTime]);
+  }, [isRecording, markers, youtubeId, currentTime]);
 
   // -- Warning System (HUD) --
   useEffect(() => {
@@ -451,8 +355,6 @@ export default function MusicalityTrainer() {
   }, [currentTime, markers]);
 
   const togglePlay = () => {
-    const song = allSongs.find(s => s.id === selectedSongId);
-    
     if (wavesurfer.current && wavesurfer.current.getDuration() > 0) {
       wavesurfer.current.playPause();
     } else if (youtubePlayer && youtubeId) {
@@ -460,25 +362,6 @@ export default function MusicalityTrainer() {
         youtubePlayer.pauseVideo();
       } else {
         youtubePlayer.playVideo();
-      }
-    } else if (spotifyPlayer && deviceId && song?.spotifyId) {
-      // Automatic Spotify Playback via SDK
-      if (isPlaying) {
-        spotifyPlayer.pause();
-      } else {
-        // 1. Transfer Playback to this device first (Critical for sound)
-        fetch(`https://api.spotify.com/v1/me/player`, {
-          method: 'PUT',
-          body: JSON.stringify({ device_ids: [deviceId], play: true }),
-          headers: { 'Authorization': `Bearer ${accessToken}` }
-        }).then(() => {
-          // 2. Then play the specific track
-          fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
-            method: 'PUT',
-            body: JSON.stringify({ uris: [`spotify:track:${song.spotifyId}`], position_ms: currentTime * 1000 }),
-            headers: { 'Authorization': `Bearer ${accessToken}` }
-          });
-        });
       }
     } else {
       // Manual fallback
@@ -509,8 +392,9 @@ export default function MusicalityTrainer() {
   const clearMarkers = () => {
     if (confirm('Supprimer tous les marqueurs pour cette chanson ?')) {
       setMarkers([]);
-      const storageKey = `markers-${selectedSongId}`;
-      localStorage.removeItem(storageKey);
+      if (youtubeId) {
+        localStorage.removeItem(`markers-yt-${youtubeId}`);
+      }
     }
   };
 
@@ -583,59 +467,47 @@ export default function MusicalityTrainer() {
         </div>
 
         <div className="song-selection-wrapper">
-          <div className="source-section glass">
-            <div className="source-header">
-              <span className="source-icon">🎵</span>
+          <div className="source-section glass" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
+            <div className="source-header" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>
+              <span className="source-icon" style={{ fontSize: '2.5rem' }}>📺</span>
               <div>
-                <h3 className="source-title">Choisir une source audio</h3>
-                <p className="source-subtitle">Catalogue Bachata Flow, fichier local ou URL distante</p>
+                <h3 className="source-title" style={{ fontSize: '1.5rem' }}>Coller un lien YouTube</h3>
+                <p className="source-subtitle">Copie-colle le lien de la musique ou de la vidéo de danse</p>
               </div>
             </div>
 
-            <select 
-              value={selectedSongId} 
-              onChange={(e) => setSelectedSongId(e.target.value)}
-              className="song-select"
-            >
-              <option value="">-- Choisir dans le catalogue --</option>
-              {allSongs.filter(s => s.audioUrl).map(song => (
-                <option key={song.id} value={song.id}>{song.title} \u2014 {song.artist}</option>
-              ))}
-            </select>
-
-            <div className="source-divider"><span>ou</span></div>
-
-            <div className="source-alt-row">
-              <label className="source-alt-btn" title="Importer un fichier MP3 / WAV / M4A">
-                <span>📂</span>
-                <span>{localFile ? localFile.name : 'Fichier local'}</span>
-                <input
-                  type="file"
-                  accept="audio/*"
-                  style={{ display: 'none' }}
-                  onChange={e => { setLocalFile(e.target.files[0]); setSelectedSongId(''); setRemoteUrl(''); }}
-                />
-              </label>
-              <div className="source-url-input">
-                <span>🔗</span>
-                <input
-                  type="url"
-                  placeholder="Lien YouTube ou URL audio (mp3...)"
-                  value={remoteUrl}
-                  onChange={e => { setRemoteUrl(e.target.value); setSelectedSongId(''); setLocalFile(null); }}
-                />
-              </div>
+            <div className="source-url-input" style={{ width: '100%', maxWidth: '100%', padding: '0.5rem' }}>
+              <span style={{ fontSize: '1.5rem', marginRight: '0.5rem' }}>🔗</span>
+              <input
+                type="url"
+                placeholder="https://www.youtube.com/watch?v=..."
+                value={remoteUrl}
+                onChange={e => { 
+                  setRemoteUrl(e.target.value); 
+                  setSelectedSongId(''); 
+                  setLocalFile(null); 
+                }}
+                style={{ 
+                  width: '100%', 
+                  padding: '1rem', 
+                  fontSize: '1.1rem', 
+                  borderRadius: '12px', 
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  background: 'rgba(0,0,0,0.5)',
+                  color: 'white'
+                }}
+              />
             </div>
           </div>
 
-          {!selectedSongId && !localFile && !remoteUrl && !youtubeId && (
+          {!remoteUrl && !youtubeId && (
             <div className="empty-state animate-fade-in">
               <div className="empty-state-icon">🥁</div>
               <h3>Comment ça marche ?</h3>
               <div className="empty-how-grid">
                 <div className="how-step">
                   <span className="step-num">1</span>
-                  <span>Choisis une chanson (catalogue, ou <b>colle un lien YouTube</b>)</span>
+                  <span>Copie le lien de ta vidéo YouTube préférée et <b>colle le ci-dessus</b></span>
                 </div>
                 <div className="how-step">
                   <span className="step-num">2</span>
@@ -653,34 +525,7 @@ export default function MusicalityTrainer() {
             </div>
           )}
 
-          {selectedSongId && (
-            <div className="discovery-actions animate-fade-in">
-              <button className="btn-community" onClick={fetchCommunitySessions}>
-                🌏 Voir les analyses de la communauté
-              </button>
-            </div>
-          )}
 
-          {showCommunity && communitySessions.length > 0 && (
-            <div className="community-overlay glass animate-slide-up">
-              <div className="overlay-header">
-                <h4>Analyses partagées 🌏</h4>
-                <button className="btn-close-small" onClick={() => setShowCommunity(false)}>✕</button>
-              </div>
-              <div className="community-list">
-                {communitySessions.map(sess => (
-                  <div key={sess.id} className="community-item" onClick={() => { setMarkers(sess.markers); setShowCommunity(false); }}>
-                    <span className="user-icon">👤</span>
-                    <div className="item-info">
-                      <span className="username">{sess.profiles?.username || 'Anonyme'}</span>
-                      <span className="meta">{sess.markers.length} marqueurs • {new Date(sess.updated_at).toLocaleDateString()}</span>
-                    </div>
-                    <button className="btn-load-sess">Charger</button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
 
         {selectedSongId && (
@@ -702,28 +547,10 @@ export default function MusicalityTrainer() {
               <div 
                 className={`waveform-container ${isDragging ? 'dragging' : ''}`} 
                 ref={waveformRef} 
-                style={{ display: spotifyAnalysis ? 'none' : 'block' }} 
-                onMouseDown={(e) => {
-                  if (!wavesurfer.current) return;
-                  const rect = e.currentTarget.getBoundingClientRect();
-                  const moveHandler = (moveEvent) => {
-                    const newX = moveEvent.clientX - rect.left;
-                    const pct = Math.max(0, Math.min(1, newX / rect.width));
-                    wavesurfer.current.seekTo(pct);
-                  };
-                  const upHandler = () => {
-                    setIsDragging(false);
-                    window.removeEventListener('mousemove', moveHandler);
-                    window.removeEventListener('mouseup', upHandler);
-                  };
-                  setIsDragging(true);
-                  window.addEventListener('mousemove', moveHandler);
-                  window.addEventListener('mouseup', upHandler);
-                  moveHandler(e);
-                }}
+                style={{ display: 'none' }} 
               />
               
-              {youtubeId && !localFile && !remoteUrl && (
+              {youtubeId && !remoteUrl && (
                 <div 
                   className="spotify-pseudo-waveform"
                   style={{ cursor: isDragging ? 'grabbing' : 'ew-resize' }}
