@@ -188,7 +188,6 @@ export default function MusicalityTrainer() {
       const ytId = extractYoutubeId(remoteUrl);
       if (ytId) {
         setYoutubeId(ytId);
-        setRemoteUrl(''); // Clear remoteUrl to render YouTube player instead of audio player !!
         setIsLoading(false);
         const savedMarkers = JSON.parse(localStorage.getItem(`markers-yt-${ytId}`) || '[]');
         setMarkers(savedMarkers);
@@ -479,7 +478,7 @@ export default function MusicalityTrainer() {
             </div>
           </div>
 
-          {!remoteUrl && !youtubeId && (
+          {!youtubeId && (
             <div className="empty-state animate-fade-in">
               <div className="empty-state-icon">🥁</div>
               <h3>Comment ça marche ?</h3>
@@ -529,7 +528,7 @@ export default function MusicalityTrainer() {
                 style={{ display: 'none' }} 
               />
               
-              {youtubeId && !remoteUrl && (
+              {youtubeId && (
                 <div 
                   className="spotify-pseudo-waveform"
                   style={{ cursor: isDragging ? 'grabbing' : 'ew-resize' }}
@@ -617,12 +616,12 @@ export default function MusicalityTrainer() {
               </div>
             </div>
 
-            {youtubeId && !remoteUrl && (
+            {youtubeId && (
               <div className="spotify-embed-container glass animate-fade-in" style={{ display: youtubePlayer ? 'none' : 'block' }}>
                 <p className="manual-hint">Lance la vidéo YouTube 👆 puis clique sur <b>Record</b> 👇 pour synchroniser ton écoute.</p>
               </div>
             )}
-            <div id="youtube-player-container" style={{ display: youtubePlayer && youtubeId && !remoteUrl ? 'block' : 'none', borderRadius: '16px', overflow: 'hidden', marginBottom: '32px' }}></div>
+            <div id="youtube-player-container" style={{ display: youtubePlayer && youtubeId ? 'block' : 'none', borderRadius: '16px', overflow: 'hidden', marginBottom: '32px' }}></div>
 
             <div className="controls-row">
               <button 
