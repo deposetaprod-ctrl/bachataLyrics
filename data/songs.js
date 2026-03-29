@@ -2636,6 +2636,7 @@ J'ai compris`
     year: 2021,
     tags: ["Urbano"],
     color: "#f43f5e",
+    spotify: "https://open.spotify.com/track/4r8fW2K6j2Zk9yM1uJv5Qy",
     culture: {
       context: "Un hit urbain de 2021 qui mélange reggaeton et sonorités modernes.",
       meaning: "Une ode à l'indépendance féminine après une rupture. La protagoniste se sent belle, s'amuse et oublie son passé.",
@@ -2804,6 +2805,7 @@ Yeh, yeh`
     year: 2025,
     tags: ["Sensual"],
     color: "#0369a1",
+    spotify: "https://open.spotify.com/track/629H135011707018302307",
     culture: {
       context: "Un des nouveaux titres de Johnny Sky en 2025, confirmant son statut d'icône de la Bachata Sensual.",
       meaning: "L'histoire d'un coup de foudre instantané. 30 minutes ont suffi pour tomber amoureux et vouloir changer sa vie.",
@@ -2919,21 +2921,21 @@ Et ce que je veux c'est te raconter
 Qu'avec toi j'ai ressenti des choses
 Les verres sont tombés
 J'ai perdu la mémoire
-Maintenant seul ton corps
-Je veux le ressentir à nouveau
+Maintenant seulement ton corps
+Je veux ressentir à nouveau
 
 Continue de dire "ne tombe pas amoureux de moi"
 Mais je ne peux pas partir
-Je suis pris dans tes bras
-Et je ne veux pas en sortir
-Tu m'as dit de faire attention
-Ce soir on oublie le passé
+Pris dans tes bras
+Et je ne veux pas sortir
+Tu m'as dit fais attention, prends garde
+Ce soir nous oublions le passé
 Je ne veux pas me tromper
-Ensuite nous restons silencieux
+Après nous restons silencieux
 Je sais que tu veux, tu peux, tu en as envie
-Viens, viens dans mon lit
+Viens, viens, dans mon lit
 Si spécial le temps que je passe avec toi
-Je n'ai pas hâte de voir l'heure d'être ton mari
+Je ne vois pas l'heure de devenir ton mari
 
 Il n'y a pas moyen de m'imaginer
 Que ça dure plus d'une nuit
@@ -2945,8 +2947,8 @@ Et ce que je veux c'est te raconter
 Qu'avec toi j'ai ressenti des choses
 Les verres sont tombés
 J'ai perdu la mémoire
-Maintenant seul ton corps
-Je veux le ressentir à nouveau
+Maintenant seulement ton corps
+Je veux ressentir à nouveau
 
 Tant de nuits à attendre sans ton amour
 Bébé s'il te plaît ne pars pas
@@ -2971,8 +2973,8 @@ Et ce que je veux c'est te raconter
 Qu'avec toi j'ai ressenti des choses
 Les verres sont tombés
 J'ai perdu la mémoire
-Maintenant seul ton corps
-Je veux le ressentir à nouveau`
+Maintenant seulement ton corps
+Je veux ressentir à nouveau`
     }
   },
   {
@@ -2982,6 +2984,7 @@ Je veux le ressentir à nouveau`
     year: 2010,
     tags: ["Romantique", "Sensual"],
     color: "#be185d",
+    spotify: "https://open.spotify.com/search/Dani%20J%20Fan%C3%A1tico%20de%20Ti",
     culture: {
       context: "Une chanson emblématique de Dani J qui a traversé les années pour devenir un classique des soirées Bachata.",
       meaning: "Une déclaration d'amour absolue. Le chanteur se décrit comme un 'fanatique', quelqu'un qui admire chaque détail de l'autre.",
@@ -3082,12 +3085,140 @@ Fan de toi`
     }
   },
   {
+    id: "fanatico-dani-j",
+    title: "Fanático",
+    artist: "Dani J",
+    year: 2026,
+    tags: ["Romantique", "Sensual"],
+    color: "#be185d",
+    spotify: "https://open.spotify.com/search/Dani%20J%20Fan%C3%A1tico",
+    culture: {
+      context: "Sorti en mars 2026, ce titre de Dani J est devenu instantanément un hit sur la scène Bachata mondiale.",
+      meaning: "Une chanson qui parle d'une obsession amoureuse irrésistible, où le protagoniste se sent 'fanatique' de l'autre point de ne plus pouvoir contrôler ses émotions.",
+      artistInfo: "Dani J continue de dominer la scène Bachata européenne avec son style romantique et ses productions léchées.",
+      album: "Fanático - Single"
+    },
+    lyrics: {
+      es: `Cómo duele estar tan cerca de tu boca,
+la impaciencia ya se apodera de mí.
+Los minutos son cadenas,
+el reloj ya me condena,
+es tan fuerte que no puedo ni dormir.
+
+Me dejaste sobredosis de tu fuego,
+una adrenalina que quiere salir.
+He inventado mil caminos,
+mil placeres clandestinos,
+y es mi mente la que solo piensa en ti.
+
+¿Qué hago yo con estas ganas que me queman
+si tu amor ya se rindió y yo sigo en pie?
+
+Ahora de ti soy fanático,
+¿y qué hago yo?
+Ando perdido, bebiendo sin control.
+Mándame tú la señal
+y completamos la misión.
+
+Ahora de ti soy fanático,
+¿y qué hago yo?
+Por más que bebo no se apaga el dolor.
+Mándame tú la señal
+y completamos la misión.
+
+Permíteme en el cuerpo a cuerpo
+una bachata,
+y la bailamos hasta fundirnos piel con piel.
+Que no hay guerras sin locura
+ni batallas que perduran,
+las victorias no se ganan sin perder.
+
+Yo me rindo a tus señales,
+a tus besos inmortales,
+haz de mí lo que tú quieras, pero ven.
+
+Ahora de ti soy fanático,
+¿y qué hago yo?
+Ando perdido, bebiendo sin control.
+Mándame tú la señal
+y completamos la misión.
+
+Ahora de ti soy fanático,
+¿y qué hago yo?
+Por más que bebo no se apaga el dolor.
+Mándame tú la señal
+y completamos la misión.
+
+Ahora de ti soy fanático,
+se está volviendo tan ilógico,
+voy en piloto automático.
+Ahora de ti soy fanático…
+Fanático, yeah.`,
+      fr: `Comme il est douloureux d'être si proche de ta bouche,
+l'impatience s'empare déjà de moi.
+Les minutes sont des chaînes,
+l'horloge me condamne déjà,
+c'est si fort que je ne peux même pas dormir.
+
+Tu m'as laissé une overdose de ton feu,
+une adrénaline qui veut sortir.
+J'ai inventé mille chemins,
+mille plaisirs clandestins,
+et c'est mon esprit qui ne pense qu'à toi.
+
+Que fais-je de ces envies qui me brûlent
+si ton amour a déjà abandonné et que je tiens toujours bon ?
+
+Maintenant je suis fan de toi,
+et que fais-je ?
+Je suis perdu, buvant sans contrôle.
+Envoie-moi le signal
+et nous accomplirons la mission.
+
+Maintenant je suis fan de toi,
+et que fais-je ?
+Même si je bois, la douleur ne s'apaise pas.
+Envoie-moi le signal
+et nous accomplirons la mission.
+
+Permets-moi dans le corps à corps
+une bachata,
+et nous la danserons jusqu'à fusionner peau contre peau.
+Car il n'y a pas de guerres sans folie
+ni de batailles qui durent,
+les victoires ne se gagnent pas sans perdre.
+
+Je me rends à tes signaux,
+à tes baisers immortels,
+fais de moi ce que tu veux, mais viens.
+
+Maintenant je suis fan de toi,
+et que fais-je ?
+Je suis perdu, buvant sans contrôle.
+Envoie-moi le signal
+et nous accomplirons la mission.
+
+Maintenant je suis fan de toi,
+et que fais-je ?
+Même si je bois, la douleur ne s'apaise pas.
+Envoie-moi le signal
+et nous accomplirons la mission.
+
+Maintenant je suis fan de toi,
+ça devient tellement illogique,
+je suis en pilote automatique.
+Maintenant je suis fan de toi...
+Fanatique, ouais.`
+    }
+  },
+  {
     id: "dos-locos-alexandra",
     title: "Dos Locos",
     artist: "Monchy & Alexandra",
     year: 2003,
     tags: ["Classique", "Dominicaine"],
     color: "#059669",
+    spotify: "https://open.spotify.com/track/6gN0p251P2r7r73n3X3WJv",
     culture: {
       context: "Considéré comme l'un des plus grands classiques de la bachata moderne, 'Dos Locos' a propulsé le duo Monchy & Alexandra sur la scène internationale.",
       meaning: "Deux amants pris dans des relations différentes mais qui ne peuvent s'empêcher de s'aimer et de penser l'un à l'autre.",
