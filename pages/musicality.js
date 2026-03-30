@@ -18,6 +18,7 @@ export default function MusicalityTrainer() {
   const [remoteUrl, setRemoteUrl] = useState('');
   const [youtubeId, setYoutubeId] = useState('');
   const [activeMarkerId, setActiveMarkerId] = useState(null);
+  const [recentLinks, setRecentLinks] = useState([]);
 
   const [user, setUser] = useState(null);
   const [supabaseClient, setSupabaseClient] = useState(null);
@@ -193,9 +194,22 @@ export default function MusicalityTrainer() {
         const savedMarkers = JSON.parse(localStorage.getItem(`markers-yt-${ytId}`) || '[]');
         setMarkers(savedMarkers);
         if (audioRef.current) audioRef.current.src = '';
+
+        // Save to history
+        setRecentLinks(prev => {
+          const newLinks = [remoteUrl, ...prev.filter(link => link !== remoteUrl)].slice(0, 5);
+          localStorage.setItem('recent-yt-links', JSON.stringify(newLinks));
+          return newLinks;
+        });
       }
     }
   }, [remoteUrl]);
+
+  // Load history on mount
+  useEffect(() => {
+    const savedLinks = JSON.parse(localStorage.getItem('recent-yt-links') || '[]');
+    setRecentLinks(savedLinks);
+  }, []);
 
   // -- Utility for adding markers --
   const addMarker = (type, label, color) => {
@@ -288,13 +302,24 @@ export default function MusicalityTrainer() {
   };
 
   const uploadVideo = async (markerId, file) => {
-    if (!supabaseClient || !user) return;
     if (file.size > 10 * 1024 * 1024) { // 10MB limit
       alert("Fichier trop gros ! (Max 10MB)");
       return;
     }
 
+    // 1. Immediate local preview (works without auth)
+    const localPreviewUrl = URL.createObjectURL(file);
+    updateMarker(markerId, { videoUrl: localPreviewUrl, uploadStatus: 'local' });
+
+    // 2. If no user/supabase, stop here - the local preview will work for the session
+    if (!supabaseClient || !user) {
+      return;
+    }
+
+    // 3. Authenticated upload
     setIsLoading(true);
+    updateMarker(markerId, { uploadStatus: 'uploading' });
+    
     const fileExt = file.name.split('.').pop();
     const fileName = `${user.id}/${Date.now()}.${fileExt}`;
     const filePath = `passes/${fileName}`;
@@ -306,6 +331,7 @@ export default function MusicalityTrainer() {
     if (uploadError) {
       alert("Erreur upload: " + uploadError.message);
       setIsLoading(false);
+      updateMarker(markerId, { uploadStatus: 'error' });
       return;
     }
 
@@ -313,7 +339,7 @@ export default function MusicalityTrainer() {
       .from('pass-videos')
       .getPublicUrl(filePath);
 
-    updateMarker(markerId, { videoUrl: publicUrl });
+    updateMarker(markerId, { videoUrl: publicUrl, uploadStatus: 'uploaded' });
     setIsLoading(false);
   };
 
@@ -455,6 +481,38 @@ export default function MusicalityTrainer() {
                 }}
               />
             </div>
+            
+            {recentLinks.length > 0 && !youtubeId && (
+              <div className="recent-links-section" style={{ marginTop: '1.5rem', textAlign: 'left' }}>
+                <h4 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '8px', paddingLeft: '8px' }}>Dernières sessions</h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {recentLinks.map((link, idx) => (
+                    <button 
+                      key={idx}
+                      onClick={() => setRemoteUrl(link)}
+                      style={{
+                        background: 'rgba(255,255,255,0.05)',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        padding: '12px 16px',
+                        borderRadius: '12px',
+                        color: 'white',
+                        textAlign: 'left',
+                        fontSize: '0.9rem',
+                        cursor: 'pointer',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        transition: 'background 0.2s'
+                      }}
+                      onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+                      onMouseOut={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
+                    >
+                      ▶️ {link}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {!youtubeId && (
@@ -809,11 +867,11 @@ export default function MusicalityTrainer() {
         
         .marker-edit-panel {
           margin-top: 16px;
-          padding-top: 16px;
+          padding: 16px 20px 20px 20px;
           border-top: 1px solid rgba(255,255,255,0.1);
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 16px;
         }
         .marker-edit-panel textarea {
           width: 100%;
@@ -832,7 +890,7 @@ export default function MusicalityTrainer() {
           gap: 12px;
           background: rgba(0,0,0,0.3);
           border: 1px solid var(--border);
-          padding: 8px 16px;
+          padding: 10px 16px;
           border-radius: 12px;
         }
         .video-link-row input {
@@ -848,28 +906,45 @@ export default function MusicalityTrainer() {
           overflow: hidden;
           background: #000;
           aspect-ratio: 16/9;
+          margin-top: 4px;
         }
         .edit-actions {
           display: flex;
           justify-content: space-between;
           align-items: center;
           margin-top: 8px;
+          padding-top: 16px;
+          border-top: 1px dashed rgba(255,255,255,0.1);
         }
         .btn-delete {
           color: #ef4444;
-          font-size: 0.8rem;
+          font-size: 0.85rem;
           font-weight: 700;
-          background: transparent;
-          border: none;
+          background: rgba(239, 68, 68, 0.1);
+          border: 1px solid rgba(239, 68, 68, 0.2);
+          padding: 8px 16px;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .btn-delete:hover {
+          background: rgba(239, 68, 68, 0.2);
         }
         .btn-close {
           background: var(--accent);
           color: white;
           border: none;
-          padding: 6px 16px;
-          border-radius: 8px;
-          font-size: 0.8rem;
+          padding: 8px 20px;
+          border-radius: 10px;
+          font-size: 0.85rem;
           font-weight: 700;
+          cursor: pointer;
+          transition: all 0.2s;
+          box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+        .btn-close:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px rgba(124, 58, 237, 0.4);
         }
         
         @keyframes slideUp {
