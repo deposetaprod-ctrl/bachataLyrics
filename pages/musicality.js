@@ -558,8 +558,6 @@ export default function MusicalityTrainer() {
                 </div>
               )}
 
-
-
               <div className="markers-layer">
                 {markers.map(marker => {
                   const duration = wavesurfer.current?.getDuration() || youtubePlayer?.getDuration() || 300;
@@ -583,12 +581,65 @@ export default function MusicalityTrainer() {
                         {marker.type === 'roll' && '🌀'}
                         {marker.type === 'break' && '⚡'}
                         {marker.type === 'guira' && '🥄'}
+                        {marker.type === 'custom' && '📝'}
                       </span>
                     </div>
                   );
                 })}
               </div>
             </div>
+
+            {isRecording && (
+              <div className="recording-console animate-fade-in glass">
+                <button 
+                  className="instrument-btn bongo" 
+                  onClick={() => addMarker('bongo', 'Bongo', '#3b82f6')}
+                  onTouchStart={(e) => { e.preventDefault(); addMarker('bongo', 'Bongo', '#3b82f6'); }}
+                >
+                  <span className="icon">🥁</span>
+                  <span className="name">Bongo (B)</span>
+                </button>
+                <button 
+                  className="instrument-btn roll" 
+                  onClick={() => addMarker('roll', 'Bongo Roll', '#a855f7')}
+                  onTouchStart={(e) => { e.preventDefault(); addMarker('roll', 'Bongo Roll', '#a855f7'); }}
+                >
+                  <span className="icon">🌀</span>
+                  <span className="name">Roll (R)</span>
+                </button>
+                <button 
+                  className="instrument-btn break" 
+                  onClick={() => addMarker('break', 'Break', '#ef4444')}
+                  onTouchStart={(e) => { e.preventDefault(); addMarker('break', 'Break', '#ef4444'); }}
+                >
+                  <span className="icon">⚡</span>
+                  <span className="name">Break (K)</span>
+                </button>
+                <button 
+                  className="instrument-btn guira" 
+                  onClick={() => addMarker('guira', 'Guira', '#10b981')}
+                  onTouchStart={(e) => { e.preventDefault(); addMarker('guira', 'Guira', '#10b981'); }}
+                >
+                  <span className="icon">🥄</span>
+                  <span className="name">Guira (G)</span>
+                </button>
+                <button 
+                  className="instrument-btn custom-marker" 
+                  onClick={() => {
+                    const label = prompt('Nom du marqueur ?');
+                    if (label) addMarker('custom', label, '#f59e0b');
+                  }}
+                  onTouchStart={(e) => {
+                    e.preventDefault();
+                    const label = prompt('Nom du marqueur ?');
+                    if (label) addMarker('custom', label, '#f59e0b');
+                  }}
+                >
+                  <span className="icon">➕</span>
+                  <span className="name">Custom</span>
+                </button>
+              </div>
+            )}
 
             {youtubeId && (
               <div className="spotify-embed-container glass animate-fade-in" style={{ display: youtubePlayer ? 'none' : 'block' }}>
@@ -650,43 +701,6 @@ export default function MusicalityTrainer() {
                 🗑️
               </button>
             </div>
-
-            {isRecording && (
-              <div className="recording-console animate-fade-in glass">
-                <button 
-                  className="instrument-btn bongo" 
-                  onClick={() => addMarker('bongo', 'Bongo', '#3b82f6')}
-                  onTouchStart={(e) => { e.preventDefault(); addMarker('bongo', 'Bongo', '#3b82f6'); }}
-                >
-                  <span className="icon">🥁</span>
-                  <span className="name">Bongo (B)</span>
-                </button>
-                <button 
-                  className="instrument-btn roll" 
-                  onClick={() => addMarker('roll', 'Bongo Roll', '#a855f7')}
-                  onTouchStart={(e) => { e.preventDefault(); addMarker('roll', 'Bongo Roll', '#a855f7'); }}
-                >
-                  <span className="icon">🌀</span>
-                  <span className="name">Roll (R)</span>
-                </button>
-                <button 
-                  className="instrument-btn break" 
-                  onClick={() => addMarker('break', 'Break', '#ef4444')}
-                  onTouchStart={(e) => { e.preventDefault(); addMarker('break', 'Break', '#ef4444'); }}
-                >
-                  <span className="icon">⚡</span>
-                  <span className="name">Break (K)</span>
-                </button>
-                <button 
-                  className="instrument-btn guira" 
-                  onClick={() => addMarker('guira', 'Guira', '#10b981')}
-                  onTouchStart={(e) => { e.preventDefault(); addMarker('guira', 'Guira', '#10b981'); }}
-                >
-                  <span className="icon">🥄</span>
-                  <span className="name">Guira (G)</span>
-                </button>
-              </div>
-            )}
 
             <div className="markers-list">
               <h3>Marqueurs ({markers.length})</h3>
@@ -1615,22 +1629,27 @@ export default function MusicalityTrainer() {
         .btn-icon-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
 
         .recording-console {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 16px;
-          padding: 24px;
+          display: flex;
+          gap: 12px;
+          padding: 16px;
           border-radius: 24px;
-          margin-bottom: 40px;
+          margin-bottom: 24px;
           border: 1px solid var(--accent);
           background: rgba(124, 58, 237, 0.05);
+          overflow-x: auto;
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE/Edge */
+        }
+        .recording-console::-webkit-scrollbar {
+          display: none; /* Chrome/Safari */
         }
         .instrument-btn {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          gap: 12px;
-          padding: 24px;
+          gap: 8px;
+          padding: 16px;
           border-radius: 20px;
           background: rgba(255,255,255,0.05);
           border: 1.5px solid rgba(255,255,255,0.1);
@@ -1639,15 +1658,18 @@ export default function MusicalityTrainer() {
           transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           user-select: none;
           -webkit-tap-highlight-color: transparent;
+          flex: 1 0 auto; /* Ensure they don't shrink too much */
+          min-width: 90px;
         }
         .instrument-btn:active { transform: scale(0.92); }
-        .instrument-btn .icon { font-size: 2rem; }
-        .instrument-btn .name { font-size: 0.8rem; font-weight: 700; opacity: 0.8; }
+        .instrument-btn .icon { font-size: 1.8rem; }
+        .instrument-btn .name { font-size: 0.75rem; font-weight: 700; opacity: 0.8; white-space: nowrap; }
         
         .instrument-btn.bongo { background: rgba(59, 130, 246, 0.1); border-color: #3b82f6; }
         .instrument-btn.roll { background: rgba(168, 85, 247, 0.1); border-color: #a855f7; }
         .instrument-btn.break { background: rgba(239, 68, 68, 0.1); border-color: #ef4444; }
         .instrument-btn.guira { background: rgba(16, 185, 129, 0.1); border-color: #10b981; }
+        .instrument-btn.custom-marker { background: rgba(245, 158, 11, 0.1); border-color: #f59e0b; }
 
         .markers-list h3 { margin-bottom: 24px; font-size: 1.2rem; color: var(--text-secondary); font-weight: 800; }
         .markers-grid {
@@ -1678,6 +1700,10 @@ export default function MusicalityTrainer() {
           .btn-icon-pill { padding: 10px 20px; }
           .btn-icon-secondary { width: 44px; height: 44px; font-size: 1.1rem; }
           .trainer-content { padding-top: 16px; }
+          .recording-console { padding: 12px; border-radius: 16px; }
+          .instrument-btn { padding: 12px; min-width: 75px; border-radius: 16px; gap: 4px; }
+          .instrument-btn .icon { font-size: 1.5rem; }
+          .instrument-btn .name { font-size: 0.7rem; }
         }
         }
       `}</style>

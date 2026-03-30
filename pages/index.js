@@ -136,6 +136,7 @@ export default function Home() {
         user={user} 
         supabaseClient={supabaseClient} 
         onLoginClick={() => setShowLoginModal(true)} 
+        onSuggestClick={() => setIsModalOpen(true)}
         activePage="home"
       >
         <div className="search-bar">
@@ -148,6 +149,13 @@ export default function Home() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
+
+        <button 
+          onClick={() => setIsModalOpen(true)}
+          className="btn-suggest-navbar hover-scale desktop-only"
+        >
+          ✨ Proposer un son
+        </button>
 
         <div className="song-count" style={{ marginLeft: '16px' }}>
           {filtered.length} son{filtered.length !== 1 ? 's' : ''}
@@ -550,6 +558,28 @@ export default function Home() {
       <style jsx global>{`
         .hover-scale:hover { transform: scale(1.02); }
         .hover-scale:active { transform: scale(0.98); }
+        
+        .btn-suggest-navbar {
+          background: linear-gradient(135deg, #c026d3, #7c3aed);
+          color: white;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 12px;
+          font-size: 0.85rem;
+          font-weight: 700;
+          cursor: pointer;
+          box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+          margin-left: 16px;
+          white-space: nowrap;
+          transition: all 0.2s;
+        }
+
+        @media (max-width: 900px) {
+          .desktop-only {
+            display: none !important;
+          }
+        }
+
         @keyframes slideInUp {
           from { transform: translateY(100%); opacity: 0; }
           to { transform: translateY(0); opacity: 1; }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
-export default function Navbar({ user, supabaseClient, onLoginClick, activePage = 'home', children }) {
+export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestClick, activePage = 'home', children }) {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -89,6 +89,19 @@ export default function Navbar({ user, supabaseClient, onLoginClick, activePage 
             <button onClick={() => { setMobileMenuOpen(false); router.push('/musicality'); }} className={activePage === 'musicality' ? 'active' : ''}>🥁 Musicalité</button>
             <button onClick={() => { setMobileMenuOpen(false); router.push('/jack-and-jill'); }} className={activePage === 'jnj' ? 'active' : ''}>🏆 Jack & Jill</button>
             
+            {onSuggestClick && (
+              <button 
+                onClick={() => { setMobileMenuOpen(false); onSuggestClick(); }}
+                style={{ 
+                  background: 'linear-gradient(135deg, #c026d3, #7c3aed)',
+                  color: 'white',
+                  marginTop: '8px'
+                }}
+              >
+                ✨ Proposer un son
+              </button>
+            )}
+
             <div className="mobile-auth-section">
               {user ? (
                 <>
