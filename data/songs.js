@@ -3514,6 +3514,168 @@ Danse-la là
 Five Bro' Music
 Israel palma, ton fils`
     }
+  },
+  {
+    id: "lokita-por-mi-prince-royce-romeo-santos",
+    title: "Lokita Por Mí",
+    artist: "Prince Royce & Romeo Santos",
+    year: 2025,
+    tags: ["Sensual", "Classique"],
+    color: "#f59e0b",
+    spotify: "https://open.spotify.com/track/2aG4AXf3TUtlmk4s9BLYDi",
+    culture: {
+      context: "Une collaboration historique en 2025 entre les deux rois de la Bachata, Prince Royce et Romeo Santos, marquant une nouvelle ère pour le genre.",
+      meaning: "La chanson explore une relation passionnelle et 'toxique' avec humour, où les deux artistes célèbrent les défauts et la 'folie' de leur partenaire.",
+      artistInfo: "La réunion de Prince Royce (The Prince) et Romeo Santos (The King) est l'événement majeur de la bachata moderne de cette décennie.",
+      album: "Royalty - Single"
+    },
+    lyrics: {
+      es: `Royce
+Listen
+De todas las dementes en mi vida
+Tú eres la loca que más he amado
+Tus defectos se me hacen perfectos
+Me han enamorado
+No te dejo de adorar
+Aunque fastidies y me enojas
+Relaciones sin problemas
+Nadie vive esa historia
+Y todas tus facetas no pueden ser euforia
+Loquita por mí
+Pon mi cariño en la balanza
+Y toneladas de piedras
+Nada tiene más peso a como quiero a mi morena
+Mi tóxica maniática de tierno corazón
+Loquita por mí
+Y te amo
+Terca, paranoica, sarcástica, nerviosa, media loca
+But you're my crazy bitch
+Yo te amo
+Así peleona, posesiva y celosa, vanidosa
+Baby, así yo te quiero
+Terca, paranoica, sarcástica, nerviosa, media loca
+But you're my crazy bitch
+Yo te amo así
+Peleona, posesiva y celosa, vanidosa
+Loquita te quiero
+Hey
+I know what you like
+Es el chico de las poesías
+Tienes un delirio de bichota
+Y me tienes controlado
+Mi loca, tú eres mi propia Shakira
+Facturando y nunca llorando
+No te dejo de adorar
+Aunque fastidies y me enojas
+Relaciones sin problemas
+Nadie vive esa historia
+Todas tus facetas no pueden ser euforia
+Loquita por mí
+Pon mi cariño en la balanza
+Y toneladas de piedras
+Nada tiene más peso a como quiero a mi morena
+Mi tóxica maniática de tierno corazón
+Loquita por mí
+Y te amo
+Terca, paranoica, sarcástica, nerviosa, media loca
+You're my crazy bitch
+Yo te amo así
+Peleona, posesiva y celosa, vanidosa
+Baby, así yo te quiero
+Terca, paranoica, sarcástica, nerviosa, media loca
+But you're my crazy bitch
+Yo te amo así
+Peleona, posesiva y celosa, vanidosa
+Mm, loquita te quiero
+Ladies, you already know
+Delulu
+This is Royalty
+Mi amor, tú dice que yo soy loca
+Pero más loco eres tú que estás conmigo, ja
+Y te amo
+Terca, paranoica, sarcástica, nerviosa, media loca
+But you're my crazy bitch
+Yo te amo así
+Peleona, posesiva y celosa, vanidosa
+Baby, así yo te quiero
+Terca, paranoica, sarcástica, nerviosa, media loca
+But you're my crazy bitch
+Yo te amo así
+Peleona, posesiva y celosa, vanidosa
+Loquita te quiero`,
+      fr: `Royce
+Écoute
+De toutes les démentes dans ma vie
+Tu es la folle que j'ai le plus aimée
+Tes défauts me semblent parfaits
+Ils m'ont fait tomber amoureux
+Je ne cesse de t'adorer
+Même quand tu m'agaces et me fâches
+Personne ne vit une histoire sans problèmes
+Et toutes tes facettes ne peuvent pas être de l'euphorie
+Folle de moi
+Mets mon affection dans la balance
+Et des tonnes de pierres
+Rien n'a plus de poids que l'amour que j'ai pour ma brune
+Ma maudite maniaque au cœur tendre
+Folle de moi
+Et je t'aime
+Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
+Mais tu es ma "crazy bitch"
+Je t'aime ainsi
+Querelleuse, possessive et jalouse, vaniteuse
+Bébé, je t'aime ainsi
+Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
+Mais tu es ma "crazy bitch"
+Je t'aime ainsi
+Querelleuse, possessive et jalouse, vaniteuse
+Folle, je t'aime
+Hey
+Je sais ce que tu aimes
+C'est le garçon des poésies
+Tu as un délire de "bichota"
+Et tu me contrôles
+Ma folle, tu es ma propre Shakira
+Facturant et ne pleurant jamais
+Je ne cesse de t'adorer
+Même quand tu m'agaces et me fâches
+Personne ne vit une histoire sans problèmes
+Toutes tes facettes ne peuvent pas être de l'euphorie
+Folle de moi
+Mets mon affection dans la balance
+Et des tonnes de pierres
+Rien n'a plus de poids que l'amour que j'ai pour ma brune
+Ma maudite maniaque au cœur tendre
+Folle de moi
+Et je t'aime
+Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
+Tu es ma "crazy bitch"
+Je t'aime ainsi
+Querelleuse, possessive et jalouse, vaniteuse
+Bébé, je t'aime ainsi
+Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
+Mais tu es ma "crazy bitch"
+Je t'aime ainsi
+Querelleuse, possessive et jalouse, vaniteuse
+Mm, folle je t'aime
+Mesdames, vous le savez déjà
+Delulu
+C'est la Royauté
+Mon amour, tu dis que je suis folle
+Mais c'est toi qui es le plus fou d'être avec moi, ja
+Et je t'aime
+Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
+Mais tu es ma "crazy bitch"
+Je t'aime ainsi
+Querelleuse, possessive et jalouse, vaniteuse
+Bébé, je t'aime ainsi
+Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
+Mais tu es ma "crazy bitch"
+Je t'aime ainsi
+Querelleuse, possessive et jalouse, vaniteuse
+Folle, je t'aime`
+    }
   }
 ];
+
 
