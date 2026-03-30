@@ -3272,7 +3272,7 @@ Quels idiots, quels fous nous sommes toi et moi
     year: 2014,
     tags: ["Sensual", "Classique"],
     color: "#9333ea",
-    spotify: "https://open.spotify.com/track/6290sV9c84964i30G0XU5Z",
+    spotify: "https://open.spotify.com/track/6Uo1wU1Hw3OQ8020h3j3Tj",
     culture: {
       context: "Considérée comme l'une des chansons de bachata les plus emblématiques de tous les temps, 'Propuesta Indecente' a fusionné le tango argentin avec la bachata moderne.",
       meaning: "La chanson raconte une tentative de séduction audacieuse lors d'une soirée, où le protagoniste propose une 'proposition indécente' à une femme déjà accompagnée.",
@@ -3401,7 +3401,7 @@ Moi et vous (Vous)`
     year: 2024,
     tags: ["Dominicaine", "Moderne"],
     color: "#10b981",
-    spotify: "https://open.spotify.com/track/62g1K6fL6o38XmHj9Vp4pP",
+    spotify: "https://open.spotify.com/track/46y0lXn5T2R5y6D27zF8fR",
     culture: {
       context: "Un titre récent de Mayinbito qui célèbre la femme dominicaine à travers un mélange de rythmes urbains et de bachata traditionnelle.",
       meaning: "Une chanson qui décrit une femme exceptionnelle, la 'crème de la crème', à qui le chanteur promet un royaume et une passion éternelle.",
@@ -3605,75 +3605,77 @@ Peleona, posesiva y celosa, vanidosa
 Loquita te quiero`,
       fr: `Royce
 Écoute
-De toutes les démentes dans ma vie
-Tu es la folle que j'ai le plus aimée
+De toutes les folles dans ma vie
+Tu es la dingue que j'ai le plus aimée
 Tes défauts me semblent parfaits
 Ils m'ont fait tomber amoureux
 Je ne cesse de t'adorer
-Même quand tu m'agaces et me fâches
-Personne ne vit une histoire sans problèmes
-Et toutes tes facettes ne peuvent pas être de l'euphorie
+Même quand tu m'embêtes et m'énerves
+Des relations sans problèmes
+Personne ne vit cette histoire
+Et toutes tes facettes ne peuvent pas être euphorie
 Folle de moi
 Mets mon affection dans la balance
 Et des tonnes de pierres
-Rien n'a plus de poids que l'amour que j'ai pour ma brune
-Ma maudite maniaque au cœur tendre
+Rien n'a plus de poids que l'amour pour ma brune
+Ma toxique maniaque au cœur tendre
 Folle de moi
 Et je t'aime
 Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
 Mais tu es ma "crazy bitch"
-Je t'aime ainsi
-Querelleuse, possessive et jalouse, vaniteuse
-Bébé, je t'aime ainsi
+Je t'aime
+D'autant plus qu'elle est bagarreuse, possessive et jalouse, vaniteuse
+Bébé, c'est comme ça que je t'aime
 Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
 Mais tu es ma "crazy bitch"
-Je t'aime ainsi
-Querelleuse, possessive et jalouse, vaniteuse
-Folle, je t'aime
+Je t'aime comme ça
+Bagarreuse, possessive et jalouse, vaniteuse
+Folle je t'aime
 Hey
 Je sais ce que tu aimes
 C'est le garçon des poésies
 Tu as un délire de "bichota"
-Et tu me contrôles
+Et tu m'as sous contrôle
 Ma folle, tu es ma propre Shakira
 Facturant et ne pleurant jamais
 Je ne cesse de t'adorer
-Même quand tu m'agaces et me fâches
-Personne ne vit une histoire sans problèmes
-Toutes tes facettes ne peuvent pas être de l'euphorie
+Même quand tu m'embêtes et m'énerves
+Des relations sans problèmes
+Personne ne vit cette histoire
+Toutes tes facettes ne peuvent pas être euphorie
 Folle de moi
 Mets mon affection dans la balance
 Et des tonnes de pierres
-Rien n'a plus de poids que l'amour que j'ai pour ma brune
-Ma maudite maniaque au cœur tendre
+Rien n'a plus de poids que l'amour pour ma brune
+Ma toxique maniaque au cœur tendre
 Folle de moi
 Et je t'aime
 Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
 Tu es ma "crazy bitch"
-Je t'aime ainsi
-Querelleuse, possessive et jalouse, vaniteuse
-Bébé, je t'aime ainsi
+Je t'aime comme ça
+Bagarreuse, possessive et jalouse, vaniteuse
+Bébé, c'est comme ça que je t'aime
 Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
 Mais tu es ma "crazy bitch"
-Je t'aime ainsi
-Querelleuse, possessive et jalouse, vaniteuse
+Je t'aime comme ça
+Bagarreuse, possessive et jalouse, vaniteuse
 Mm, folle je t'aime
 Mesdames, vous le savez déjà
 Delulu
 C'est la Royauté
 Mon amour, tu dis que je suis folle
-Mais c'est toi qui es le plus fou d'être avec moi, ja
+Mais c'est toi qui es le plus fou d'être avec moi, ha
 Et je t'aime
 Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
 Mais tu es ma "crazy bitch"
-Je t'aime ainsi
-Querelleuse, possessive et jalouse, vaniteuse
-Bébé, je t'aime ainsi
+Je t'aime comme ça
+Bagarreuse, possessive et jalouse, vaniteuse
+Bébé, c'est comme ça que je t'aime
 Têtue, paranoïaque, sarcastique, nerveuse, à moitié folle
 Mais tu es ma "crazy bitch"
-Je t'aime ainsi
-Querelleuse, possessive et jalouse, vaniteuse
-Folle, je t'aime`
+Je t'aime comme ça
+Bagarreuse, possessive et jalouse, vaniteuse
+Folle je t'aime`
     }
   }
 ];

@@ -19,6 +19,8 @@ export default function MusicalityTrainer() {
   const [youtubeId, setYoutubeId] = useState('');
   const [activeMarkerId, setActiveMarkerId] = useState(null);
   const [recentLinks, setRecentLinks] = useState([]);
+  const [userSessions, setUserSessions] = useState([]);
+  const [sessionTitle, setSessionTitle] = useState('');
 
   const [user, setUser] = useState(null);
   const [supabaseClient, setSupabaseClient] = useState(null);
@@ -240,6 +242,22 @@ export default function MusicalityTrainer() {
     setActiveMarkerId(newMarker.id); // Auto-open for editing
   };
 
+  const fetchUserSessions = async () => {
+    if (!supabaseClient || !user) return;
+    const { data, error } = await supabaseClient
+      .from('musicality_sessions')
+      .select('song_id, title, url, updated_at')
+      .eq('user_id', user.id)
+      .order('updated_at', { ascending: false })
+      .limit(5);
+
+    if (data) setUserSessions(data);
+  };
+
+  useEffect(() => {
+    if (user) fetchUserSessions();
+  }, [user]);
+
   const saveToSupabase = async () => {
     if (!supabaseClient || !user) {
       alert("Connecte-toi pour sauvegarder dans le cloud !");
@@ -251,6 +269,8 @@ export default function MusicalityTrainer() {
       user_id: user.id,
       song_id: 'yt-' + youtubeId,
       markers: markers,
+      title: sessionTitle || `Session - ${new Date().toLocaleDateString()}`,
+      url: remoteUrl,
       updated_at: new Date().toISOString()
     };
 
@@ -260,7 +280,10 @@ export default function MusicalityTrainer() {
 
     setIsLoading(false);
     if (error) alert("Erreur de sauvegarde : " + error.message);
-    else alert("Analyse sauvegardée dans ton catalogue ! ✅");
+    else {
+      alert("Analyse sauvegardée dans ton catalogue ! ✅");
+      fetchUserSessions();
+    }
   };
 
   const loadFromSupabase = async () => {
@@ -268,13 +291,14 @@ export default function MusicalityTrainer() {
     
     const { data, error } = await supabaseClient
       .from('musicality_sessions')
-      .select('markers')
+      .select('markers, title')
       .eq('user_id', user.id)
       .eq('song_id', 'yt-' + youtubeId)
       .single();
 
-    if (data && data.markers) {
-      setMarkers(data.markers);
+    if (data) {
+      if (data.markers) setMarkers(data.markers);
+      if (data.title) setSessionTitle(data.title);
     }
   };
 
@@ -410,6 +434,23 @@ export default function MusicalityTrainer() {
     }
   };
 
+  const recentButtonStyle = {
+    background: 'rgba(255,255,255,0.05)',
+    border: '1px solid rgba(255,255,255,0.1)',
+    padding: '12px 16px',
+    borderRadius: '12px',
+    color: 'white',
+    textAlign: 'left',
+    fontSize: '0.9rem',
+    cursor: 'pointer',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    transition: 'background 0.2s'
+  };
+  const recentButtonHover = (e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+  const recentButtonNormal = (e) => e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+
   return (
     <div className="musicality-page">
       <Head>
@@ -461,55 +502,87 @@ export default function MusicalityTrainer() {
               </div>
             </div>
 
-            <div className="source-url-input" style={{ width: '100%', maxWidth: '100%', padding: '0.5rem' }}>
-              <span style={{ fontSize: '1.5rem', marginRight: '0.5rem' }}>🔗</span>
-              <input
-                type="url"
-                placeholder="https://www.youtube.com/watch?v=..."
-                value={remoteUrl}
-                onChange={e => { 
-                  setRemoteUrl(e.target.value); 
-                }}
-                style={{ 
-                  width: '100%', 
-                  padding: '1rem', 
-                  fontSize: '1.1rem', 
-                  borderRadius: '12px', 
-                  border: '1px solid rgba(255,255,255,0.2)',
-                  background: 'rgba(0,0,0,0.5)',
-                  color: 'white'
-                }}
-              />
+            <div className="source-url-input" style={{ width: '100%', maxWidth: '100%', padding: '0.5rem', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ fontSize: '1.5rem' }}>🔗</span>
+                <input
+                  type="url"
+                  placeholder="https://www.youtube.com/watch?v=..."
+                  value={remoteUrl}
+                  onChange={e => { 
+                    setRemoteUrl(e.target.value); 
+                  }}
+                  style={{ 
+                    flex: 1,
+                    padding: '1rem', 
+                    fontSize: '1.1rem', 
+                    borderRadius: '12px', 
+                    border: '1px solid rgba(255,255,255,0.2)',
+                    background: 'rgba(0,0,0,0.5)',
+                    color: 'white'
+                  }}
+                />
+              </div>
+              
+              {youtubeId && (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ fontSize: '1.5rem' }}>🔖</span>
+                  <input
+                    type="text"
+                    placeholder="Nom de la session (ex: Intro Guitare Mike)..."
+                    value={sessionTitle}
+                    onChange={e => setSessionTitle(e.target.value)}
+                    style={{ 
+                      flex: 1,
+                      padding: '0.8rem 1rem', 
+                      fontSize: '0.95rem', 
+                      borderRadius: '12px', 
+                      border: '1px solid var(--accent-dim)',
+                      background: 'rgba(124, 58, 237, 0.05)',
+                      color: 'white'
+                    }}
+                  />
+                </div>
+              )}
             </div>
             
-            {recentLinks.length > 0 && !youtubeId && (
+            {((user && userSessions.length > 0) || (!user && recentLinks.length > 0)) && !youtubeId && (
               <div className="recent-links-section" style={{ marginTop: '1.5rem', textAlign: 'left' }}>
-                <h4 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '8px', paddingLeft: '8px' }}>Dernières sessions</h4>
+                <h4 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '8px', paddingLeft: '8px' }}>
+                  {user ? 'Tes dernières sessions (Cloud)' : 'Dernières sessions (Local)'}
+                </h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  {recentLinks.map((link, idx) => (
-                    <button 
-                      key={idx}
-                      onClick={() => setRemoteUrl(link)}
-                      style={{
-                        background: 'rgba(255,255,255,0.05)',
-                        border: '1px solid rgba(255,255,255,0.1)',
-                        padding: '12px 16px',
-                        borderRadius: '12px',
-                        color: 'white',
-                        textAlign: 'left',
-                        fontSize: '0.9rem',
-                        cursor: 'pointer',
-                        whiteSpace: 'nowrap',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        transition: 'background 0.2s'
-                      }}
-                      onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
-                      onMouseOut={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
-                    >
-                      ▶️ {link}
-                    </button>
-                  ))}
+                  {user ? (
+                    userSessions.map((session, idx) => (
+                      <button 
+                        key={idx}
+                        onClick={() => {
+                          setRemoteUrl(session.url);
+                          setSessionTitle(session.title);
+                        }}
+                        style={recentButtonStyle}
+                        onMouseOver={recentButtonHover}
+                        onMouseOut={recentButtonNormal}
+                      >
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+                          <span style={{ fontWeight: 700 }}>🎬 {session.title || 'Sans titre'}</span>
+                          <span style={{ fontSize: '0.75rem', opacity: 0.5 }}>{new Date(session.updated_at).toLocaleDateString()}</span>
+                        </div>
+                      </button>
+                    ))
+                  ) : (
+                    recentLinks.map((link, idx) => (
+                      <button 
+                        key={idx}
+                        onClick={() => setRemoteUrl(link)}
+                        style={recentButtonStyle}
+                        onMouseOver={recentButtonHover}
+                        onMouseOut={recentButtonNormal}
+                      >
+                        🔗 {link}
+                      </button>
+                    ))
+                  )}
                 </div>
               </div>
             )}
@@ -530,7 +603,7 @@ export default function MusicalityTrainer() {
                 </div>
                 <div className="how-step">
                   <span className="step-num">3</span>
-                  <span>Utilise les boutons ou les raccourcis clavier&nbsp;: <b>B</b>&nbsp;Bongo · <b>R</b>&nbsp;Roll · <b>K</b>&nbsp;Break · <b>G</b>&nbsp;Guira</span>
+                  <span>Utilise les boutons pour identifier les <b>instruments</b> et les <b>variations</b></span>
                 </div>
                 <div className="how-step">
                   <span className="step-num">4</span>
@@ -657,28 +730,28 @@ export default function MusicalityTrainer() {
                     onClick={() => addMarker('bongo', 'Bongo', '#3b82f6')}
                   >
                     <span className="icon">🥁</span>
-                    <span className="name">Bongo (B)</span>
+                    <span className="name">Bongo</span>
                   </button>
                   <button 
                     className="instrument-btn roll" 
                     onClick={() => addMarker('roll', 'Bongo Roll', '#a855f7')}
                   >
                     <span className="icon">🌀</span>
-                    <span className="name">Roll (R)</span>
+                    <span className="name">Roll</span>
                   </button>
                   <button 
                     className="instrument-btn break" 
                     onClick={() => addMarker('break', 'Break', '#ef4444')}
                   >
                     <span className="icon">⚡</span>
-                    <span className="name">Break (K)</span>
+                    <span className="name">Break</span>
                   </button>
                   <button 
                     className="instrument-btn guira" 
                     onClick={() => addMarker('guira', 'Guira', '#10b981')}
                   >
                     <span className="icon">🥄</span>
-                    <span className="name">Guira (G)</span>
+                    <span className="name">Guira</span>
                   </button>
                   <button 
                     className="instrument-btn custom-marker" 
