@@ -816,7 +816,7 @@ export default function MusicalityTrainer() {
                           <span className="icon">🔗</span>
                           <input 
                             type="text" 
-                            placeholder="Ou colle une URL directement..." 
+                            placeholder="Lien YouTube..." 
                             value={m.videoUrl}
                             onChange={(e) => updateMarker(m.id, { videoUrl: e.target.value })}
                           />
@@ -829,8 +829,7 @@ export default function MusicalityTrainer() {
                         )}
 
                         <div className="edit-actions">
-                          <button className="btn-delete" onClick={() => deleteMarker(m.id)}>Supprimer</button>
-                          <button className="btn-close" onClick={() => setActiveMarkerId(null)}>Fermer</button>
+                          <button className="btn-close" onClick={() => setActiveMarkerId(null)}>OK</button>
                         </div>
                       </div>
                     )}
@@ -910,41 +909,27 @@ export default function MusicalityTrainer() {
         }
         .edit-actions {
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-end;
           align-items: center;
-          margin-top: 8px;
-          padding-top: 16px;
-          border-top: 1px dashed rgba(255,255,255,0.1);
-        }
-        .btn-delete {
-          color: #ef4444;
-          font-size: 0.85rem;
-          font-weight: 700;
-          background: rgba(239, 68, 68, 0.1);
-          border: 1px solid rgba(239, 68, 68, 0.2);
-          padding: 8px 16px;
-          border-radius: 10px;
-          cursor: pointer;
-          transition: all 0.2s;
-        }
-        .btn-delete:hover {
-          background: rgba(239, 68, 68, 0.2);
+          margin-top: 4px;
+          padding-top: 12px;
+          border-top: 1px dashed rgba(255,255,255,0.08);
         }
         .btn-close {
-          background: var(--accent);
+          background: rgba(255, 255, 255, 0.1);
           color: white;
-          border: none;
-          padding: 8px 20px;
-          border-radius: 10px;
-          font-size: 0.85rem;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 6px 16px;
+          border-radius: 8px;
+          font-size: 0.75rem;
           font-weight: 700;
           cursor: pointer;
           transition: all 0.2s;
-          box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
         }
         .btn-close:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 16px rgba(124, 58, 237, 0.4);
+          background: var(--accent);
+          border-color: var(--accent);
+          transform: translateY(-1px);
         }
         
         @keyframes slideUp {
