@@ -703,25 +703,32 @@ export default function MusicalityTrainer() {
                       setActiveMarkerId(m.id);
                     }}
                   >
-                    <div className="marker-main">
-                      <span className="marker-dot" style={{ backgroundColor: m.color }} />
-                      <span className="marker-time">{Math.floor(m.time / 60)}:{(m.time % 60).toFixed(1).padStart(4, '0')}</span>
-                      <span className="marker-label">{m.label}</span>
-                      <div className="spacer" style={{ flex: 1 }} />
-                      {(m.note || m.videoUrl) && (
-                        <div className="marker-badges">
-                          {m.note && <span className="badge">📝</span>}
-                          {m.videoUrl && <span className="badge">🎬</span>}
+                    <div className="marker-header">
+                      <div className="marker-meta">
+                        <span className="marker-time">{Math.floor(m.time / 60)}:{(m.time % 60).toFixed(1).padStart(4, '0')}</span>
+                        <div className="marker-label-row">
+                          <span className="marker-dot" style={{ backgroundColor: m.color }} />
+                          <span className="marker-label">{m.label}</span>
                         </div>
-                      )}
-                      <button 
-                        className="marker-delete-btn" 
-                        onClick={(e) => { e.stopPropagation(); deleteMarker(m.id); }}
-                        title="Supprimer"
-                      >
-                        ×
-                      </button>
+                      </div>
+                      
+                      <div className="marker-actions-small">
+                        {(m.note || m.videoUrl) && (
+                          <div className="marker-badges">
+                            {m.note && <span className="badge">📝</span>}
+                            {m.videoUrl && <span className="badge">🎬</span>}
+                          </div>
+                        )}
+                        <button 
+                          className="marker-delete-btn" 
+                          onClick={(e) => { e.stopPropagation(); deleteMarker(m.id); }}
+                          title="Supprimer"
+                        >
+                          ×
+                        </button>
+                      </div>
                     </div>
+
                     {activeMarkerId === m.id && (
                       <div className="marker-edit-panel animate-slide-up" onClick={e => e.stopPropagation()}>
                         <textarea 
@@ -1671,30 +1678,108 @@ export default function MusicalityTrainer() {
           gap: 16px;
         }
         .marker-item {
-          background: rgba(255, 255, 255, 0.04);
-          padding: 16px 20px;
+          background: rgba(255, 255, 255, 0.03);
+          padding: 0;
           border-radius: 20px;
-          border: 1.5px solid var(--border);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+          overflow: hidden;
+          height: fit-content;
+        }
+        .marker-item:hover { 
+          transform: translateY(-3px); 
+          border-color: rgba(255, 255, 255, 0.3); 
+          background: rgba(255, 255, 255, 0.07); 
+          box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+        }
+        .marker-item.active {
+          border-color: var(--accent);
+          background: rgba(124, 58, 237, 0.06);
+          box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+        }
+        
+        .marker-header {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          padding: 16px 20px;
+          width: 100%;
+        }
+        
+        .marker-meta {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          flex: 1;
+          min-width: 0;
+        }
+        
+        .marker-time { 
+          font-family: 'JetBrains Mono', monospace; 
+          font-size: 0.8rem; 
+          color: var(--text-muted); 
+          font-weight: 700; 
+          letter-spacing: 0.05em;
+        }
+        
+        .marker-label-row {
           display: flex;
           align-items: center;
-          gap: 16px;
+          gap: 8px;
+          width: 100%;
+        }
+        
+        .marker-dot { 
+          width: 8px; 
+          height: 8px; 
+          border-radius: 50%; 
+          flex-shrink: 0;
+        }
+        
+        .marker-label { 
+          font-size: 1rem; 
+          font-weight: 600; 
+          color: white;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        
+        .marker-actions-small {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-left: 12px;
+        }
+        
+        .marker-badges {
+          display: flex;
+          gap: 4px;
+        }
+        
+        .marker-delete-btn {
+          width: 28px;
+          height: 28px;
+          border-radius: 8px;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          color: rgba(255, 255, 255, 0.4);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.2rem;
+          line-height: 1;
           cursor: pointer;
           transition: all 0.2s;
         }
-        .marker-item:hover { transform: translateY(-3px); border-color: var(--accent); background: rgba(255, 255, 255, 0.08); }
-        .marker-dot { width: 12px; height: 12px; border-radius: 4px; }
-        .marker-time { font-family: monospace; font-size: 1rem; color: var(--text-muted); font-weight: 700; }
-        .marker-delete-btn {
-          background: transparent;
-          border: none;
-          color: rgba(255,255,255,0.3);
-          font-size: 1.5rem;
-          line-height: 1;
-          cursor: pointer;
-          padding: 0 8px;
-          transition: color 0.2s;
+        .marker-delete-btn:hover { 
+          background: rgba(239, 68, 68, 0.15); 
+          border-color: rgba(239, 68, 68, 0.5);
+          color: #ef4444; 
         }
-        .marker-delete-btn:hover { color: #ef4444; }
         
         @media (max-width: 768px) {
           .player-section { padding: 20px; }

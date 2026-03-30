@@ -3019,59 +3019,7 @@ Si je suis célibataire c'est pire
 
 Il n'y a pas moyen de m'imaginer
 Que ça dure plus d'une nuit
-Un verre et 30 minutes
-Il m'a fallu du temps pour tomber amoureux
-Une bachata et un boléro
-Ce que j'écoute pour t'attendre
-Et ce que je veux c'est te raconter
-Qu'avec toi j'ai ressenti des choses
-Les verres sont tombés
-J'ai perdu la mémoire
-Maintenant seulement ton corps
-Je veux ressentir à nouveau
-
-Continue de dire "ne tombe pas amoureux de moi"
-Mais je ne peux pas partir
-Pris dans tes bras
-Et je ne veux pas sortir
-Tu m'as dit fais attention, prends garde
-Ce soir nous oublions le passé
-Je ne veux pas me tromper
-Après nous restons silencieux
-Je sais que tu veux, tu peux, tu en as envie
-Viens, viens, dans mon lit
-Si spécial le temps que je passe avec toi
-Je ne vois pas l'heure de devenir ton mari
-
-Il n'y a pas moyen de m'imaginer
-Que ça dure plus d'une nuit
-Un verre et 30 minutes
-Il m'a fallu du temps pour tomber amoureux
-Une bachata et un boléro
-Ce que j'écoute pour t'attendre
-Et ce que je veux c'est te raconter
-Qu'avec toi j'ai ressenti des choses
-Les verres sont tombés
-J'ai perdu la mémoire
-Maintenant seulement ton corps
-Je veux ressentir à nouveau
-
-Tant de nuits à attendre sans ton amour
-Bébé s'il te plaît ne pars pas
-J'ai tellement besoin de toi
-Bébé ne vois-tu pas
-
-J'ai besoin de ton amour
-Qu'est-ce qui m'arrive
-Je ne peux pas contrôler l'envie de t'appeler
-J'ai besoin de ton amour
-Je ne peux pas oublier
-Si ce n'est pas avec toi je meurs
-Si je suis célibataire c'est pire
-
-Il n'y a pas moyen de m'imaginer
-Que ça dure plus d'une nuit
-Un verre et 30 minutes
+Un trago y 30 minutos
 Il m'a fallu du temps pour tomber amoureux
 Une bachata et un boléro
 Ce que j'écoute pour t'attendre
@@ -3081,113 +3029,6 @@ Les verres sont tombés
 J'ai perdu la mémoire
 Maintenant seulement ton corps
 Je veux ressentir à nouveau`
-    }
-  },
-  {
-    id: "fanatico-de-ti-dani-j",
-    title: "Fanático de Ti",
-    artist: "Dani J",
-    year: 2010,
-    tags: ["Romantique", "Sensual"],
-    color: "#be185d",
-    spotify: "https://open.spotify.com/search/Dani%20J%20Fan%C3%A1tico%20de%20Ti",
-    culture: {
-      context: "Une chanson emblématique de Dani J qui a traversé les années pour devenir un classique des soirées Bachata.",
-      meaning: "Une déclaration d'amour absolue. Le chanteur se décrit comme un 'fanatique', quelqu'un qui admire chaque détail de l'autre.",
-      artistInfo: "Dani J est l'un des artistes de bachata les plus populaires en Europe, connu pour ses reprises et ses compositions originales romantiques.",
-      album: "Best of Dani J"
-    },
-    lyrics: {
-      es: `No sabría encontrar tus defectos si es que los tienes
-Yo diría que es imposible hallar a otra igual a ti
-He llegado a sospechar que no seas real
-De tanto como significas para mí
-Eres la dosis de azúcar en mi café
-El placer de un cigarro después de comer
-Que acaba con mi mal humor
-Con la facilidad
-Con que se limpia el vaho del cristal
-Contigo es sencillo ser feliz
-Porque lo eres todo para mí
-Por eso es que yo soy fanático de ti
-Contigo es sencillo ser feliz
-Porque lo eres todo para mí
-Por eso es que yo soy fanático de ti
-Fanático de ti
-No sabría qué hacer con mi vida si te perdiera
-Qué sería sentirme desnudo y no tener con qué vestir
-He llegado a sospechar que no seas real
-De tanto como significas para mí
-La que convierte mis sueños en realidad
-La que me hace reír cuando toca llorar
-Eres la más fiel expresión que encierra el verbo amar
-Tú eres mi complemento ideal
-Contigo es sencillo ser feliz
-Porque lo eres todo para mí
-Por eso es que yo soy fanático de ti
-Contigo es sencillo ser feliz
-Porque lo eres todo para mí
-Por eso es que yo soy fanático de ti
-Fanático de ti
-Contigo es sencillo ser feliz
-Porque lo eres todo para mí
-Por eso es que yo soy fanático de ti
-Contigo es sencillo ser feliz
-Porque lo eres todo para mí
-Por eso es que yo soy fanático de ti
-Fanático de ti
-Contigo es sencillo ser feliz
-Porque lo eres todo para mí
-Por eso es que yo soy fanático de ti
-Contigo es sencillo ser feliz
-Porque lo eres todo para mí
-Por eso es que yo soy fanático de ti
-Fanático de ti`,
-      fr: `Je ne saurais pas trouver tes défauts si tu en as
-Je dirais qu'il est impossible d'en trouver une autre comme toi
-J'en suis venu à soupçonner que tu n'es pas réelle
-Tant tu comptes pour moi
-Tu es la dose de sucre dans mon café
-Le plaisir d'une cigarette après manger
-Qui met fin à ma mauvaise humeur
-Avec la facilité
-Avec laquelle on essuie la buée sur le verre
-Avec toi c'est simple d'être heureux
-Parce que tu es tout pour moi
-C'est pour ça que je suis fan de toi
-Avec toi c'est simple d'être heureux
-Parce que tu es tout pour moi
-C'est pour ça que je suis fan de toi
-Fan de toi
-Je ne saurais pas quoi faire de ma vie si je te perdais
-Ce que ce serait de me sentir nu et sans rien pour m'habiller
-J'en suis venu à soupçonner que tu n'es pas réelle
-Tant tu comptes pour moi
-Celle qui transforme mes rêves en réalité
-Celle qui me fait rire quand il faut pleurer
-Tu es la plus fidèle expression du verbe aimer
-Tu es mon complément idéal
-Avec toi c'est simple d'être heureux
-Parce que tu es tout pour moi
-C'est pour ça que je suis fan de toi
-Avec toi c'est simple d'être heureux
-Parce que tu es tout pour moi
-C'est pour ça que je suis fan de toi
-Fan de toi
-Avec toi c'est simple d'être heureux
-Parce que tu es tout pour moi
-C'est pour ça que je suis fan de toi
-Avec toi c'est simple d'être heureux
-Parce que tu es tout pour moi
-C'est pour ça que je suis fan de toi
-Fan de toi
-Avec toi c'est simple d'être heureux
-Parce que tu es tout pour moi
-C'est pour ça que je suis fan de toi
-Avec toi c'est simple d'être heureux
-Parce que tu es tout pour moi
-C'est pour ça que je suis fan de toi
-Fan de toi`
     }
   },
   {
@@ -3423,5 +3264,256 @@ Quels idiots, quels fous nous sommes toi et moi
 Quels idiots, quels fous nous sommes toi et moi
 Étant avec d'autres et nous aimant encore`
     }
+  },
+  {
+    id: "propuesta-indecente-romeo-santos",
+    title: "Propuesta Indecente",
+    artist: "Romeo Santos",
+    year: 2014,
+    tags: ["Sensual", "Classique"],
+    color: "#9333ea",
+    spotify: "https://open.spotify.com/track/6290sV9c84964i30G0XU5Z",
+    culture: {
+      context: "Considérée comme l'une des chansons de bachata les plus emblématiques de tous les temps, 'Propuesta Indecente' a fusionné le tango argentin avec la bachata moderne.",
+      meaning: "La chanson raconte une tentative de séduction audacieuse lors d'une soirée, où le protagoniste propose une 'proposition indécente' à une femme déjà accompagnée.",
+      artistInfo: "Romeo Santos, surnommé 'El Rey de la Bachata', est l'ancien leader du groupe Aventura et l'artiste qui a mondialisé le genre.",
+      album: "Fórmula, Vol. 2"
+    },
+    lyrics: {
+      es: `Hola
+Me llaman Romeo
+Es un placer conocerla
+Qué bien te ves
+Te adelanto, no me importa quién sea él
+Dígame usted
+Si ha hecho algo travieso alguna vez
+Una aventura es más divertida
+Si huele a peligro
+Si te invito a una copa y me acerco a tu boca
+Si te robo un besito, a ver, ¿te enojas conmigo?
+¿Qué dirías si esta noche te seduzco en mi coche?
+Que se empañen los vidrios y la regla es que goces
+Si te falto el respeto y luego culpo al alcohol
+Si levanto tu falda, ¿me darías el derecho
+A medir tu sensatez?
+Poner en juego tu cuerpo
+Si te parece prudente
+Esta propuesta indecente
+A ver, a ver
+Permíteme apreciar tu desnudez (take it off)
+Relájate
+Que este Martini calmará tu timidez (don't be shy)
+Y una aventura es más divertida
+Si huele a peligro
+Si te invito a una copa y me acerco a tu boca
+Si te robo un besito, a ver, ¿te enojas conmigo?
+¿Qué dirías si esta noche te seduzco en mi coche?
+Que se empañen los vidrios y la regla es que goces
+Si te falto el respeto y luego culpo al alcohol
+Si levanto tu falda, ¿me darías el derecho
+A medir tu sensatez?
+Poner en juego tu cuerpo
+Si te parece prudente
+Esta propuesta indecente
+I'm back
+It feels good to be king
+Gostoso
+Hey
+Listen
+I know what you like
+How 'bout if you and I, me and you
+¿Bailamos bachata?
+Y luego you and I, me and you
+¿Terminamo' en la cama? (Que rico)
+How 'bout if you and I, me and you
+¿Bailamos bachata? (Ay bailamos bachata)
+Y luego you and I, me and you
+¿Terminamo' en la cama? (Terminamos en la cama)
+How bout if you and I (You and I)
+Me and you (Me and you)
+You and I (You and I)
+Me and you (You)
+You and I (You and I)
+Me and you (I'm a badboy)
+Me and you (You)`,
+      fr: `Bonjour
+On m'appelle Romeo
+C'est un plaisir de vous rencontrer
+Comme vous êtes belle
+Je vous préviens, peu m'importe qui il est
+Dites-moi
+Si vous avez déjà fait quelque chose de coquin
+Une aventure est plus amusante
+Si elle sent le danger
+Si je vous invite à boire un verre et m'approche de votre bouche
+Si je vous vole un petit baiser, voyons, vous fâcheriez-vous contre moi ?
+Que diriez-vous si ce soir je vous séduisais dans ma voiture ?
+Que les vitres s'embuent et la règle est que vous preniez du plaisir
+Si je vous manque de respect et qu'ensuite j'en accuse l'alcool
+Si je lève votre jupe, me donneriez-vous le droit
+À mesurer votre bon sens ?
+Mettre en jeu votre corps
+Si cela vous semble prudent
+Cette proposition indécente
+Voyons, voyons
+Laissez-moi apprécier votre nudité (enlevez tout)
+Détendez-vous
+Ce Martini calmar t votre timidité (ne soyez pas timide)
+Et une aventure est plus amusante
+Si elle sent le danger
+Si je vous invite à boire un verre et m'approche de votre bouche
+Si je vous vole un petit baiser, voyons, vous fâcheriez-vous contre moi ?
+Que diriez-vous si ce soir je vous séduisais dans ma voiture ?
+Que les vitres s'embuent et la règle est que vous preniez du plaisir
+Si je vous manque de respect et qu'ensuite j'en accuse l'alcool
+Si je lève votre jupe, me donneriez-vous le droit
+À mesurer votre bon sens ?
+Mettre en jeu votre corps
+Si cela vous semble prudent
+Cette proposition indécente
+Je suis de retour
+Ça fait du bien d'être roi
+Délicieux
+Hey
+Écoutez
+Je sais ce que vous aimez
+Et si vous et moi, moi et vous
+Dansions la bachata ?
+Et qu'ensuite vous et moi, moi et vous
+Finissions au lit ? (Comme c'est bon)
+Et si vous et moi, moi et vous
+Dansions la bachata ? (Oh on danse la bachata)
+Et qu'ensuite vous et moi, moi et vous
+Finissions au lit ? (On finit au lit)
+Et si vous et moi (Vous et moi)
+Moi et vous (Moi et vous)
+Vous et moi (Vous et moi)
+Moi et vous (Vous)
+Vous et moi (Vous et moi)
+Moi et vous (Je suis un mauvais garçon)
+Moi et vous (Vous)`
+    }
+  },
+  {
+    id: "creme-de-la-creme-mayinbito",
+    title: "Crème De La Crème",
+    artist: "Mayinbito",
+    year: 2024,
+    tags: ["Dominicaine", "Moderne"],
+    color: "#10b981",
+    spotify: "https://open.spotify.com/track/62g1K6fL6o38XmHj9Vp4pP",
+    culture: {
+      context: "Un titre récent de Mayinbito qui célèbre la femme dominicaine à travers un mélange de rythmes urbains et de bachata traditionnelle.",
+      meaning: "Une chanson qui décrit une femme exceptionnelle, la 'crème de la crème', à qui le chanteur promet un royaume et une passion éternelle.",
+      artistInfo: "Mayinbito, 'El Dueño del Movimiento', est connu pour son énergie communicative et ses productions qui font bouger les clubs.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Mayinbito
+El dueño del movimiento
+Han pasado meses
+La vibra se siente
+Cuando estoy contigo
+Una novela de amor se convierte
+Poderosa y decente
+Pero con la sangre ardiente
+Amaneces hablando conmigo
+Me encuentro con deseo de siempre querer entretenerte
+Piel de canela
+Toda una dominicana
+Alegre y picante en la cama
+Ya es tiempo de decirlo
+Yo te quiero conmigo
+Yo quiero que tú seas mi mujer
+Crème de la Crème
+Como tú no existe mujer
+Te enseñaré lo que realmente es querer
+Un reinado te vo'a ofrecer
+Tú y yo seremos un poder
+Crème de la Crème
+Como tú no existe mujer
+Te enseñaré lo que realmente es querer
+Un reinado te vo'a ofrecer
+Tú y yo seremos un poder
+Je, je, oye, Dj Smurf, Alsi, Jendry
+Destápense esa botellita y dense este traguito conmigo, hombre'
+Salud
+Arreglada to el tiempo
+No tiene que ver que pa dónde e'
+Siempre, mami, lista pa romper
+Es de cintura apretadita, culo grande, paradita
+Mi amor té estas entera no hace falta que te digan
+Y lo rico que se siente estar contigo, sudaditos
+Ya es tiempo de decirlo
+Yo te quiero conmigo
+Yo quiero que tú seas mi mujer
+Crème de la Crème
+Como tú no existe mujer
+Te enseñaré lo que realmente es querer
+Un reinado te vo'a ofrecer
+Tú y yo seremos un poder
+Crème de la Crème
+Como tú no existe mujer
+Te enseñaré lo que realmente es querer
+Un reinado te vo'a ofrecer
+Tú y yo seremos un poder
+Hey, yo', Mike
+Báilalo ahí
+Five Bro' Music
+Israel palma, tu hijo`,
+      fr: `Mayinbito
+Le maître du mouvement
+Des mois ont passé
+On sent la vibration
+Quand je suis avec toi
+Ça se transforme en roman d'amour
+Puissante et décente
+Mais avec le sang brûlant
+Tu te réveilles en parlant avec moi
+J'ai toujours envie de te divertir
+Peau cannelle
+Toute une dominicaine
+Joyeuse et pimentée au lit
+Il est temps de le dire
+Je te veux avec moi
+Je veux que tu sois ma femme
+Crème de la Crème
+Comme toi il n'existe aucune femme
+Je t'apprendrai ce que c'est vraiment qu'aimer
+Je vais t'offrir un royaume
+Toi et moi serons un pouvoir
+Crème de la Crème
+Comme toi il n'existe aucune femme
+Je t'apprendrai ce que c'est vraiment qu'aimer
+Je vais t'offrir un royaume
+Toi et moi serons un pouvoir
+Hé hé, écoute, Dj Smurf, Alsi, Jendry
+Débouchons cette petite bouteille et buvez ce petit coup avec moi, les gars
+Santé
+Toujours apprêtée
+Peu importe où c'est
+Toujours, chérie, prête à tout déchirer
+Taille fine, de jolies formes
+Mon amour tu es entière pas besoin qu'on te le dise
+Et comme c'est bon d'être avec toi, tout en sueur
+Il est temps de le dire
+Je te veux avec moi
+Je veux que tu sois ma femme
+Crème de la Crème
+Comme toi il n'existe aucune femme
+Je t'apprendrai ce que c'est vraiment qu'aimer
+Je vais t'offrir un royaume
+Toi et moi serons un pouvoir
+Crème de la Crème
+Comme toi il n'existe aucune femme
+Je t'apprendrai ce que c'est vraiment qu'aimer
+Je vais t'offrir un royaume
+Toi et moi serons un pouvoir
+Hé, yo, Mike
+Danse-la là
+Five Bro' Music
+Israel palma, ton fils`
+    }
   }
 ];
+
