@@ -344,11 +344,13 @@ export default function MusicalityTrainer() {
   const togglePlay = () => {
     if (wavesurfer.current && wavesurfer.current.getDuration() > 0) {
       wavesurfer.current.playPause();
+      if (!isPlaying) setIsRecording(true);
     } else if (youtubePlayer && youtubeId) {
       if (isPlaying) {
         youtubePlayer.pauseVideo();
       } else {
         youtubePlayer.playVideo();
+        setIsRecording(true);
       }
     } else {
       // Manual fallback
@@ -359,6 +361,7 @@ export default function MusicalityTrainer() {
         setIsRecording(false);
       } else {
         setIsPlaying(true);
+        setIsRecording(true);
         const start = Date.now() - (currentTime * 1000);
         const timer = setInterval(() => {
           setCurrentTime((Date.now() - start) / 1000);
@@ -589,61 +592,52 @@ export default function MusicalityTrainer() {
               </div>
             </div>
 
-            {isRecording && (
-              <div className="recording-console animate-fade-in glass">
-                <button 
-                  className="instrument-btn bongo" 
-                  onClick={() => addMarker('bongo', 'Bongo', '#3b82f6')}
-                  onTouchStart={(e) => { e.preventDefault(); addMarker('bongo', 'Bongo', '#3b82f6'); }}
-                >
-                  <span className="icon">🥁</span>
-                  <span className="name">Bongo (B)</span>
-                </button>
-                <button 
-                  className="instrument-btn roll" 
-                  onClick={() => addMarker('roll', 'Bongo Roll', '#a855f7')}
-                  onTouchStart={(e) => { e.preventDefault(); addMarker('roll', 'Bongo Roll', '#a855f7'); }}
-                >
-                  <span className="icon">🌀</span>
-                  <span className="name">Roll (R)</span>
-                </button>
-                <button 
-                  className="instrument-btn break" 
-                  onClick={() => addMarker('break', 'Break', '#ef4444')}
-                  onTouchStart={(e) => { e.preventDefault(); addMarker('break', 'Break', '#ef4444'); }}
-                >
-                  <span className="icon">⚡</span>
-                  <span className="name">Break (K)</span>
-                </button>
-                <button 
-                  className="instrument-btn guira" 
-                  onClick={() => addMarker('guira', 'Guira', '#10b981')}
-                  onTouchStart={(e) => { e.preventDefault(); addMarker('guira', 'Guira', '#10b981'); }}
-                >
-                  <span className="icon">🥄</span>
-                  <span className="name">Guira (G)</span>
-                </button>
-                <button 
-                  className="instrument-btn custom-marker" 
-                  onClick={() => {
-                    const label = prompt('Nom du marqueur ?');
-                    if (label) addMarker('custom', label, '#f59e0b');
-                  }}
-                  onTouchStart={(e) => {
-                    e.preventDefault();
-                    const label = prompt('Nom du marqueur ?');
-                    if (label) addMarker('custom', label, '#f59e0b');
-                  }}
-                >
-                  <span className="icon">➕</span>
-                  <span className="name">Custom</span>
-                </button>
-              </div>
-            )}
+              {(wavesurfer.current?.getDuration() > 0 || youtubeId || manualTimer) && (
+                <div className="recording-console animate-fade-in glass">
+                  <button 
+                    className="instrument-btn bongo" 
+                    onClick={() => addMarker('bongo', 'Bongo', '#3b82f6')}
+                  >
+                    <span className="icon">🥁</span>
+                    <span className="name">Bongo (B)</span>
+                  </button>
+                  <button 
+                    className="instrument-btn roll" 
+                    onClick={() => addMarker('roll', 'Bongo Roll', '#a855f7')}
+                  >
+                    <span className="icon">🌀</span>
+                    <span className="name">Roll (R)</span>
+                  </button>
+                  <button 
+                    className="instrument-btn break" 
+                    onClick={() => addMarker('break', 'Break', '#ef4444')}
+                  >
+                    <span className="icon">⚡</span>
+                    <span className="name">Break (K)</span>
+                  </button>
+                  <button 
+                    className="instrument-btn guira" 
+                    onClick={() => addMarker('guira', 'Guira', '#10b981')}
+                  >
+                    <span className="icon">🥄</span>
+                    <span className="name">Guira (G)</span>
+                  </button>
+                  <button 
+                    className="instrument-btn custom-marker" 
+                    onClick={() => {
+                      const label = prompt('Nom du marqueur ?');
+                      if (label) addMarker('custom', label, '#f59e0b');
+                    }}
+                  >
+                    <span className="icon">➕</span>
+                    <span className="name">Custom</span>
+                  </button>
+                </div>
+              )}
 
             {youtubeId && (
               <div className="spotify-embed-container glass animate-fade-in" style={{ display: youtubePlayer ? 'none' : 'block' }}>
-                <p className="manual-hint">Lance la vidéo YouTube 👆 puis clique sur <b>Record</b> 👇 pour synchroniser ton écoute.</p>
+                <p className="manual-hint">Lance la vidéo YouTube 👆 pour synchroniser ton écoute.</p>
               </div>
             )}
             <div id="youtube-player-container" style={{ display: youtubePlayer && youtubeId ? 'block' : 'none', borderRadius: '16px', overflow: 'hidden', marginBottom: '32px' }}></div>
@@ -673,16 +667,7 @@ export default function MusicalityTrainer() {
                 <button className="btn-secondary" onClick={() => setCurrentTime(0)}>Zéro</button>
               )}
 
-              <div className="spacer" />
-
-              <button 
-                className={`btn-icon-pill ${isRecording ? 'active' : ''}`}
-                onClick={toggleRecording}
-                title={isRecording ? 'Arrêter l\'enregistrement' : 'Ajouter un marqueur (+)'}
-              >
-                <span className="dot" />
-                <span className="btn-text">{isRecording ? 'Enregistrement...' : '+'}</span>
-              </button>
+                <div className="spacer" />
 
               <button 
                 className="btn-icon-secondary" 
@@ -722,12 +707,20 @@ export default function MusicalityTrainer() {
                       <span className="marker-dot" style={{ backgroundColor: m.color }} />
                       <span className="marker-time">{Math.floor(m.time / 60)}:{(m.time % 60).toFixed(1).padStart(4, '0')}</span>
                       <span className="marker-label">{m.label}</span>
+                      <div className="spacer" style={{ flex: 1 }} />
                       {(m.note || m.videoUrl) && (
                         <div className="marker-badges">
                           {m.note && <span className="badge">📝</span>}
                           {m.videoUrl && <span className="badge">🎬</span>}
                         </div>
                       )}
+                      <button 
+                        className="marker-delete-btn" 
+                        onClick={(e) => { e.stopPropagation(); deleteMarker(m.id); }}
+                        title="Supprimer"
+                      >
+                        ×
+                      </button>
                     </div>
                     {activeMarkerId === m.id && (
                       <div className="marker-edit-panel animate-slide-up" onClick={e => e.stopPropagation()}>
@@ -1691,6 +1684,17 @@ export default function MusicalityTrainer() {
         .marker-item:hover { transform: translateY(-3px); border-color: var(--accent); background: rgba(255, 255, 255, 0.08); }
         .marker-dot { width: 12px; height: 12px; border-radius: 4px; }
         .marker-time { font-family: monospace; font-size: 1rem; color: var(--text-muted); font-weight: 700; }
+        .marker-delete-btn {
+          background: transparent;
+          border: none;
+          color: rgba(255,255,255,0.3);
+          font-size: 1.5rem;
+          line-height: 1;
+          cursor: pointer;
+          padding: 0 8px;
+          transition: color 0.2s;
+        }
+        .marker-delete-btn:hover { color: #ef4444; }
         
         @media (max-width: 768px) {
           .player-section { padding: 20px; }
