@@ -4411,5 +4411,1216 @@ Prenons le premier avion
 En direction du bonheur
 Le bonheur, pour moi, c'est toi.`
     }
+  },
+  {
+    id: "barcelona-charles-luis-dimelo-cupido-dj-husky",
+    title: "BARCELONA",
+    artist: "Charles Luis, Dimelo Cupido & DJ Husky",
+    year: 2026,
+    tags: ["Moderne", "Urbaine"],
+    color: "#2563eb",
+    spotify: "https://open.spotify.com/search/Charles%20Luis%20BARCELONA",
+    culture: {
+      context: "Une bachata urbaine moderne sortie début 2026, capturant l'ambiance nocturne de Barcelone.",
+      meaning: "Le souvenir d'une rencontre intense et passionnée lors d'une nuit à Barcelone, et le désir de raviver cette flamme.",
+      artistInfo: "Charles Luis, en collaboration avec Dímelo Cupido et DJ Husky, redéfinit la bachata moderne avec des influences urbaines et électroniques.",
+      album: "Barcelona (Single)"
+    },
+    lyrics: {
+      es: `Que extraño verte por aquí
+Solita como siempre
+A to' mis santos le pedí
+Para volver a verte
+Aún tengo el selfie que subiste a tu Instagram
+Y como ahora que nos vimos
+Me vas a ignorar
+
+Dime si te acuerdas
+De aquella noche en Barcelona
+Bachatica buena
+Y tú seguías bailando sola
+Te me acerqué y te dije vámonos
+Rompámonos, matémonos
+Dime si te acuerdas
+O te refresco la memoria
+
+Baby, you know what it is
+Charles Luis
+Dímelo Cupido
+Rómpela, Husky
+
+Ahora no te acuerdas, mamá, cuando dormiste en mi cama
+De Barcelona a La Habana, todo en un fin de semana
+Toa' la noche dando
+Porque las penas se te iban bailando
+
+Aún tengo el selfie que subiste a tu Instagram
+Y como ahora que nos vimos
+Me vas a ignorar
+
+Dime si te acuerdas
+De aquella noche en Barcelona
+Bachatica buena
+Y tú seguías bailando sola
+Te me acerqué y te dije vámonos
+Rompámonos, matémonos
+Dime si te acuerdas
+O te refresco la memoria
+
+Dime si te acuerdas
+De aquella noche en Barcelona (Barcelona)
+Y tú seguías bailando sola
+Te me acerqué y te dije vámonos
+Rompámonos, matémonos
+Dime si te acuerdas
+O te refresco la memoria
+
+Dime si te acuerdas
+De aquella noche en Barcelona`,
+      fr: `C'est étrange de te voir par ici
+Toute seule comme d'habitude
+J'ai prié tous mes saints
+Pour te revoir
+J'ai encore le selfie que tu as posté sur Instagram
+Et maintenant que nous nous sommes vus
+Tu vas m'ignorer ?
+
+Dis-moi si tu te souviens
+De cette nuit-là à Barcelone
+Une bonne petite bachata
+Et tu continuais à danser seule
+Je m'suis approché et je t'ai dit "allons-nous en"
+Donnons tout, brûlons de passion
+Dis-moi si tu te souviens
+Ou si je te rafraîchis la mémoire
+
+Bébé, tu sais ce qu'il en est
+Charles Luis
+Dímelo Cupido
+Casse tout, Husky !
+
+Maintenant tu ne te souviens plus, maman, quand tu as dormi dans mon lit
+De Barcelone à La Havane, tout en un week-end
+Toute la nuit à se donner
+Parce que tes peines s'en allaient en dansant
+
+J'ai encore le selfie que tu as posté sur Instagram
+Et maintenant que nous nous sommes vus
+Tu vas m'ignorer ?
+
+Dis-moi si tu te souviens
+De cette nuit-là à Barcelone
+Une bonne petite bachata
+Et tu continuais à danser seule
+Je m'suis approché et je t'ai dit "allons-nous en"
+Donnons tout, brûlons de passion
+Dis-moi si tu te souviens
+Ou si je te rafraîchis la mémoire
+
+Dis-moi si tu te souviens
+De cette nuit-là à Barcelone (Barcelone)
+Et tu continuais à danser seule
+Je m'suis approché et je t'ai dit "allons-nous en"
+Donnons tout, brûlons de passion
+Dis-moi si tu te souviens
+Ou si je te rafraîchis la mémoire
+
+Dis-moi si tu te souviens
+De cette nuit-là à Barcelone`
+    }
+  },
+  {
+    id: "oxigeno-shama-dimelo-cupido-dj-husky",
+    title: "OXIGENO",
+    artist: "SHAMA, Dimelo Cupido & DJ Husky",
+    year: 2026,
+    tags: ["Moderne", "Urbaine"],
+    color: "#10b981",
+    spotify: "https://open.spotify.com/search/SHAMA%20OXIGENO",
+    culture: {
+      context: "Une bachata contemporaine de 2026 explorant la renaissance émotionnelle.",
+      meaning: "L'autre est comparé à l'oxygène nécessaire pour survivre après une période de solitude ou de 'désert' affectif.",
+      artistInfo: "SHAMA s'associe à Dímelo Cupido pour créer des sons de bachata atmosphériques et profonds.",
+      album: "Oxigeno (Single)"
+    },
+    lyrics: {
+      es: `Bendito el día que
+Pasaste por mi lado y te miré
+Un siglo buscándote
+Y en medio de la nada te encontré
+Escribí mil canciones y las borré
+Con insomnio de amor al fin me quedé
+Me cansé de esperar a quien no vuelve
+Escalé el volcán, y me quemé los pies
+
+Y fui buscando arena en el desierto
+Con tantas ganas de soñar despierto
+Llegaste tú y la luz encendió
+Solo tú para respirar
+
+Y fui buscando arena en el desierto
+Con tantas ganas de soñar despierto
+Llegaste tú y mi vida cambió
+Solo tú para devolverme el oxígeno
+
+Buscando un placer que no había sentido
+Tocó pedir perdón, yo que perdón no pido
+Como Adán persiguiendo aquel fruto prohibido
+Creí que estaba viviendo, más no había vivido
+
+Y yo que en el amor no creía
+Como vagabundo pasaba el día, ma
+Me fui pa el extremo, viviendo la vida sin freno
+Nunca pensé que iba a entregarme de nuevo
+Me llegó el antídoto pa mi veneno
+
+Y fui buscando arena en el desierto
+Con tantas ganas de soñar despierto
+Llegaste tú y la luz encendió
+Solo tú para respirar
+
+Y fui buscando arena en el desierto
+Con tantas ganas de soñar despierto
+Llegaste tú, y mi vida cambió
+Solo tú para devolverme el oxígeno
+
+Quien toca fondo solo puede salir a flote
+Dímelo Cupido
+DJ Husky
+We did it again
+SHAMA
+
+Y fui buscando arena en el desierto
+Con tantas ganas de soñar despierto
+Llegaste tú y la luz encendió
+Solo tú para respirar
+
+Llegaste tú, y mi vida cambió
+Solo tú para devolverme el oxígeno`,
+      fr: `Béni soit le jour où
+Tu es passée à mes côtés et je t'ai regardée
+Un siècle à te chercher
+Et au milieu de nulle part je t'ai trouvée
+J'ai écrit mille chansons et je les ai effacées
+Avec une insomnie d'amour je suis finalement resté
+Je me suis lassé d'attendre celle qui ne revient pas
+J'ai gravi le volcan, et je me suis brûlé les pieds
+
+Et j'allais cherchant du sable dans le désert
+Avec tant d'envie de rêver éveillé
+Tu es arrivée et la lumière s'est allumée
+Toi seule pour respirer
+
+Et j'allais cherchant du sable dans le désert
+Avec tant d'envie de rêver éveillé
+Tu es arrivée et ma vie a changé
+Toi seule pour me rendre l'oxygène
+
+Cherchant un plaisir que je n'avais pas ressenti
+Il a fallu demander pardon, moi qui ne demande pas pardon
+Comme Adam poursuivant ce fruit défendu
+Je croyais que je vivais, mais je n'avais pas vécu
+
+Et moi qui ne croyais plus en l'amour
+Comme un vagabond je passais mes journées, ma
+Je suis allé à l'extrême, vivant ma vie sans freins
+Je n'aurais jamais pensé que je m'abandonnerais à nouveau
+L'antidote pour mon venin est arrivé
+
+Et j'allais cherchant du sable dans le désert
+Avec tant d'envie de rêver éveillé
+Tu es arrivée et la lumière s'est allumée
+Toi seule pour respirer
+
+Et j'allais cherchant du sable dans le désert
+Avec tant d'envie de rêver éveillé
+Tu es arrivée et ma vie a changé
+Toi seule pour me rendre l'oxygène
+
+Celui qui touche le fond ne peut que remonter à la surface
+Dímelo Cupido
+DJ Husky
+Nous l'avons refait
+SHAMA
+
+Et j'allais cherchant du sable dans le désert
+Avec tant d'envie de rêver éveillé
+Tu es arrivée et la lumière s'est allumée
+Toi seule pour respirer
+
+Tu es arrivée et ma vie a changé
+Toi seule pour me rendre l'oxygène`
+    }
+  },
+  {
+    id: "te-sigo-extranando-karlos-rose-sp-polanco",
+    title: "Te Sigo Extrañando",
+    artist: "Karlos Rosé & sP Polanco",
+    year: 2026,
+    tags: ["Moderne", "Nostalgie"],
+    color: "#ef4444",
+    spotify: "https://open.spotify.com/search/Karlos%20Rose%20Te%20Sigo%20Extranando",
+    culture: {
+      context: "Une réinterprétation moderne du classique 'Te Extraño' du groupe Xtreme, produite par sP Polanco pour rendre hommage à l'ère dorée de la bachata urbaine.",
+      meaning: "Une expression de manque persistant et de nostalgie, utilisant la métaphore de la prison pour décrire l'emprise d'un amour passé.",
+      artistInfo: "Karlos Rosé est une figure majeure de la bachata urbaine moderne, réputé pour sa voix soyeuse et ses mélodies mélancoliques.",
+      album: "Te Sigo Extrañando (Single)"
+    },
+    lyrics: {
+      es: `Cuánto te extraño
+¿Cómo olvidar un amor así?
+Mirando tu retrato
+Me entran las ganas de tenerte aquí
+
+Pa decirte: "Mami, no me hagas eso
+Que me siento preso
+Tu cuerpo es la prisión"
+
+No hay manera de olvidarte
+Y si la hubiera, como quiera quiero recordarte
+Ponte al día en este caso, baby, dame un chance
+Pa demostrarte de lo que juntos somos capaces
+
+Y cuando tú me miras
+Parece un sueño, parece mentira
+Tus ojos cuentan una historia repetida
+Que hoy lo nuestro no se quede en fantasía
+
+Te quiero aquí
+Pa decirte: "Mami, no me hagas eso
+Que me siento preso
+Tu cuerpo es la prisión"
+
+Vuelvo y te repito: "Mami, no me hagas eso
+Sabes que te quiero
+Con todo el corazón"
+
+SP, it's a problem
+Karlos Rosé
+Game changers
+
+Te noto solita y prendida
+Te invito a entregarte a la intimidad
+De hace un rato te tengo en la mira
+Eres 4K, tú eres calidad
+
+Qué habilidad tú tienes pa brillar
+Tú eres una estrella fugaz
+Pero te voy a llegar
+
+Si tú me miras
+Parece un sueño, parece mentira
+Tus ojos cuentan una historia repetida
+Que hoy lo nuestro no se quede en fantasía
+
+Te quiero aquí
+Pa decirte: "Mami, no me hagas eso
+Que me siento preso
+Tu cuerpo es la prisión"
+
+Vuelvo y te repito: "Mami, no me hagas eso
+Sabes que te quiero
+Con todo el corazón"
+
+Oh you different, ha, ha, ha, ha
+I like that`,
+      fr: `Combien tu me manques
+Comment oublier un amour pareil ?
+En regardant ton portrait
+J'ai tellement envie de t'avoir ici
+
+Pour te dire : "Mami, ne me fais pas ça
+Car je me sens prisonnier
+Ton corps est ma prison"
+
+Il n'y a aucun moyen de t'oublier
+Et s'il y en avait un, je voudrais quand même me souvenir de toi
+Mets-toi à la page dans cette histoire, bébé, donne-moi une chance
+Pour te montrer de quoi nous sommes capables ensemble
+
+Et quand tu me regardes
+On dirait un rêve, on dirait un mensonge
+Tes yeux racontent une histoire répétée
+Que ce qu'il y a entre nous ne reste pas un fantasme aujourd'hui
+
+Je te veux ici
+Pour te dire : "Mami, ne me fais pas ça
+Car je me sens prisonnier
+Ton corps est ma prison"
+
+Je te le répète : "Mami, ne me fais pas ça
+Tu sais que je t'aime
+De tout mon cœur"
+
+SP, c'est un problème
+Karlos Rosé
+Ceux qui changent la donne
+
+Je te vois seule et allumée
+Je t'invite à t'abandonner à l'intimité
+Ça fait un moment que je t'ai dans le viseur
+Tu es en 4K, tu es la qualité même
+
+Quelle habileté tu as pour briller
+Tu es une étoile filante
+Mais je vais t'atteindre
+
+Si tu me regardes
+On dirait un rêve, on dirait un mensonge
+Tes yeux racontent une histoire répétée
+Que ce qu'il y a entre nous ne reste pas un fantasme aujourd'hui
+
+Je te veux ici
+Pour te dire : "Mami, ne me fais pas ça
+Car je me sens prisonnier
+Ton corps est ma prison"
+
+Je te le répète : "Mami, ne me fais pas ça
+Tu sais que je t'aime
+De tout mon cœur"
+
+Oh tu es différente, ha, ha, ha, ha
+J'aime ça`
+    }
+  },
+  {
+    id: "estocolmo-romeo-santos-prince-royce",
+    title: "Estocolmo",
+    artist: "Romeo Santos & Prince Royce",
+    year: 2025,
+    tags: ["Moderne", "Duo", "Sensual"],
+    color: "#5b21b6",
+    spotify: "https://open.spotify.com/search/Romeo%20Santos%20Prince%20Royce%20Estocolmo",
+    culture: {
+      context: "Un titre majeur de l'album collaboratif surprise 'Better Late Than Never' (2025) réunissant les deux piliers de la bachata moderne.",
+      meaning: "Une métaphore dramatique utilisant le syndrome de Stockholm pour illustrer une relation où la femme semble captive, tandis que le narrateur se voit comme son libérateur.",
+      artistInfo: "La collaboration historique entre Romeo Santos et Prince Royce sur un album complet marque un tournant majeur pour le genre bachata au niveau mondial.",
+      album: "Better Late Than Never"
+    },
+    lyrics: {
+      es: `Te esperé en las escaleras de tu casa
+Y brillaste por tu ausencia
+Me fui sin mi pertenencia
+Mañana pienso volver
+Dile a tu secuestrador que se prepare
+Aunque tú misma lo ayudes
+Su fechoría no queda impune
+Amor, te tiene de rehén
+
+Si le apetece, te hace suya; es el colmo
+Duele menos si estás pensando en mí
+Si padeces síndrome de Estocolmo
+Tumbo la puerta, aquí se va a pelear por ti
+
+9-1-1, what's your emergency?
+Yeah, there's a, there's an intruder in my house
+You need to send someone over immediately
+
+Que él te vea desnuda
+Considero ilegal
+Un extraño goza tu intimidad
+Te ha robado un millón de besos
+Deberían meterlo preso
+Y el delito de quererme borrar
+
+Me trepo en el balcón
+Baby, vamos, despierta
+Si se cree un león
+Ni le temo en su selva
+Entro a la habitación
+Que no juegue al valiente
+Y si caigo en prisión
+Somos dos delincuentes
+
+Ya already know
+¿Y le gusta mi bachata, amiguita?
+Ajá
+
+En guerra avisada no muere soldado
+Esto ya es un compromiso
+Se aproxima su conflicto
+Yo no sé lo que es perder
+
+Si le apetece, te hace suya; es el colmo
+Duele menos si estás pensando en mí
+Si padeces síndrome de Estocolmo
+Tumbo la puerta, aquí se va a pelear por ti
+
+Stop!
+Come on, bae, get dressed, vámono
+You, what you doing? Get out of my house right now
+You little playboy, shut up, man, you doin' too much
+Oh, this motherfucker crazy
+
+Que él te vea desnuda
+Considero ilegal
+Un extraño goza tu intimidad
+Te ha robado un millón de besos
+Deberían meterlo preso
+Y el delito de quererme borrar
+
+Me trepo en el balcón
+Baby, vamos, despierta
+Si se cree un león
+Ni le temo en su selva
+Entro a la habitación
+Que no juegue al valiente
+Y si caigo en prisión
+Somos dos delincuentes
+
+Yeah
+Por ti
+Enfrento a cualquier adversario
+No importando la situación, la condición
+Me convierto en un bandido
+En un loco
+Ain't that feel loved?`,
+      fr: `Je t'ai attendue sur les escaliers de ta maison
+Et tu as brillé par ton absence
+Je suis parti sans mes affaires
+Je compte revenir demain
+Dis à ton ravisseur de se préparer
+Même si tu l'aides toi-même
+Son méfait ne restera pas impuni
+Mon amour, il te tient en otage
+
+S'il en a envie, il te possède ; c'est le comble
+Ça fait moins mal si tu penses à moi
+Si tu souffres du syndrome de Stockholm
+Je défonce la porte, ici on va se battre pour toi
+
+9-1-1, quelle est votre urgence ?
+Ouais, il y a... il y a un intrus dans ma maison
+Vous devez envoyer quelqu'un immédiatement
+
+Qu'il te voie nue
+Je considère cela illégal
+Un étranger profite de ton intimité
+Il t'a volé un million de baisers
+Ils devraient le mettre en prison
+Et le crime de vouloir m'effacer
+
+Je grimpe au balcon
+Bébé, allez, réveille-toi
+S'il se prend pour un lion
+Je n'ai même pas peur de lui dans sa jungle
+J'entre dans la chambre
+Qu'il ne joue pas au brave
+Et si je tombe en prison
+Nous serons deux délinquants
+
+Tu sais déjà
+Et tu aimes ma bachata, petite amie ?
+Aha
+
+À la guerre comme à la guerre
+C'est désormais un engagement
+Son conflit approche
+Je ne sais pas ce que c'est que de perdre
+
+S'il en a envie, il te possède; c'est le comble
+Ça fait moins mal si tu penses à moi
+Si tu souffres du syndrome de Stockholm
+Je défonce la porte, ici on va se battre pour toi
+
+Arrête !
+Allez bébé, habille-toi, on s'en va
+Toi, qu'est-ce que tu fais ? Sors de chez moi tout de suite !
+Petit playboy, tais-toi, mec, t'en fais trop
+Oh, ce mec est fou !
+
+Qu'il te voie nue
+Je considère cela illégal
+Un étranger profite de ton intimité
+Il t'a volé un million de baisers
+Ils devraient le mettre en prison
+Et le crime de vouloir m'effacer
+
+Je grimpe au balcon
+Bébé, allez, réveille-toi
+S'il se prend pour un lion
+Je n'ai même pas peur de lui dans sa jungle
+J'entre dans la chambre
+Qu'il ne joue pas au brave
+Et si je tombe en prison
+Nous serons deux délinquants
+
+Ouais
+Pour toi
+J'affronte n'importe quel adversaire
+Peu importe la situation, la condition
+Je me transforme en bandit
+En fou
+N'est-ce pas ça, se sentir aimé ?`
+    }
+  },
+  {
+    id: "una-noche-dj-husky-shama-dimelo-cupido",
+    title: "UNA NOCHE",
+    artist: "DJ Husky, SHAMA & Dimelo Cupido",
+    year: 2025,
+    tags: ["Moderne", "Sensual"],
+    color: "#f59e0b",
+    spotify: "https://open.spotify.com/search/DJ%20Husky%20SHAMA%20UNA%20NOCHE",
+    culture: {
+      context: "Un titre de bachata moderne sorti en 2025, caractéristique du style 'sensual' qui domine les pistes de danse européennes.",
+      meaning: "Une chanson centrée sur le désir et l'attraction physique immédiate, utilisant la danse comme prélude à une nuit passionnée.",
+      artistInfo: "DJ Husky et Dímelo Cupido sont des architectes sonores majeurs de la bachata contemporaine, ici associés à la voix de SHAMA.",
+      album: "Una Noche (Single)"
+    },
+    lyrics: {
+      es: `(Ah-ah-ah)
+(Y que pase lo que pase)
+(Solo dime, por favor)
+
+Ay, ¿cómo lo hace'?
+Con tus caderas 'tás buscando que pase
+Dame la mano y que pase lo que pase
+Tienes la habilidad de llevarme a donde vas
+Pa' hacerme llegar a la' altura' como nadie más
+
+(SHAMA)
+
+Ven, dame una noche, una noche de calor
+Con tu cuerpo encantador
+Pa' que te lleves mi olor
+Si no me conoces, soy tu próximo amor
+De la noche, el ganador
+Solo dime, por favor
+
+Ay, ¿cómo lo hace'?
+Con tus caderas 'tás buscando que pase
+Dame la mano y que pase lo que pase
+Tienes la habilidad de llevarme a donde vas
+Pa' hacerme llegar a la' altura' como nadie más
+
+Llevo días perdido en ti
+Desde ese día que te vi
+No sabías que querías y yo tampoco
+Ante' di mucho y devolvieron poco
+Y ahora que te conocí
+Encontré to' lo que quería
+Dime tú si te atrevería'
+
+Pa' que me des la fórmula
+Dame los secretos de tu cuerpo, los puedo guardar
+Algo te distingue, tú no eres regular
+No tienes idea cuánto quiero tus besos, besos, besos
+
+Ven, dame una noche, una noche de calor
+Con tu cuerpo encantador
+Pa' que te lleves mi olor
+Si no me conoces, soy tu próximo amor
+De la noche, el ganador
+Solo dime, por favor
+
+Ay, ¿cómo lo hace'?
+Con tus caderas 'tás buscando que pase
+Dame la mano y que pase lo que pase
+Tienes la habilidad de llevarme a donde vas
+Pa' hacerme llegar a la' altura' como nadie más
+
+(Poniendo su magia)
+(Dímelo Cupido)
+(Dj Husky)
+(Pega'itos mejor nos vemos)
+
+(Ay, dame una noche)
+(Y que pase lo que pase)
+(Ven, que te invito una noche por la ciudad)
+(Y que pase lo que pase)
+(Y que sea espectacular)`,
+      fr: `(Ah-ah-ah)
+(Et advienne que pourra)
+(Dis-le moi seulement, s'il te plaît)
+
+Dis-moi, comment fais-tu ?
+Avec tes hanches, tu cherches à ce qu'il se passe quelque chose
+Donne-moi la main et advienne que pourra
+Tu as ce talent de m'emmener où tu vas
+Pour m'élever vers les sommets comme personne d'autre
+
+(SHAMA)
+
+Viens, donne-moi une nuit, une nuit de chaleur
+Avec ton corps enchanteur
+Pour que tu emportes mon parfum
+Si tu ne me connais pas encore, je suis ton prochain amour
+Le vainqueur de la nuit
+Dis-le moi seulement, s'il te plaît
+
+Dis-moi, comment fais-tu ?
+Avec tes hanches, tu cherches à ce qu'il se passe quelque chose
+Donne-moi la main et advienne que pourra
+Tu as ce talent de m'emmener où tu vas
+Pour m'élever vers les sommets comme personne d'autre
+
+Je suis perdu en toi depuis des jours
+Depuis ce jour où je t'ai vue
+Tu ne savais pas ce que tu voulais et moi non plus
+Avant je donnais beaucoup et je recevais peu
+Et maintenant que je t'ai rencontrée
+J'ai trouvé tout ce que je voulais
+Dis-moi si tu oserais
+
+Pour que tu me donnes la formule
+Donne-moi les secrets de ton corps, je saurai les garder
+Quelque chose te distingue, tu n'es pas ordinaire
+Tu n'imagines pas à quel point je veux tes baisers, baisers, baisers
+
+Viens, donne-moi une nuit, une nuit de chaleur
+Avec ton corps enchanteur
+Pour que tu emportes mon parfum
+Si tu ne me connais pas encore, je suis ton prochain amour
+Le vainqueur de la nuit
+Dis-le moi seulement, s'il te plaît
+
+Dis-moi, comment fais-tu ?
+Avec tes hanches, tu cherches à ce qu'il se passe quelque chose
+Donne-moi la main et advienne que pourra
+Tu as ce talent de m'emmener où tu vas
+Pour m'élever vers les sommets comme personne d'autre
+
+(En y mettant sa magie)
+(Dímelo Cupido)
+(Dj Husky)
+(On se verra mieux tout proches l'un de l'autre)
+
+(Oh, donne-moi une nuit)
+(Et advienne que pourra)
+(Viens, je t'invite pour une nuit en ville)
+(Et advienne que pourra)
+(Et que ce soit spectaculaire)`
+    }
+  },
+  {
+    id: "arjona-jensen-montelier",
+    title: "Arjona",
+    artist: "Jensen & Montelier",
+    year: 2025,
+    tags: ["Moderne", "Sentiment"],
+    color: "#4b5563",
+    spotify: "https://open.spotify.com/search/Jensen%20Montelier%20Arjona",
+    culture: {
+      context: "Une bachata contemporaine de 2025 qui rend hommage à Ricardo Arjona, le maître des ballades sentimentales latino-américaines.",
+      meaning: "La chanson explore les remèdes désespérés pour oublier un amour envahissant : l'alcool, les fêtes avec des inconnus, et les chansons tristes d'Arjona.",
+      artistInfo: "Jensen et Montelier représentent la nouvelle vague de la bachata urbaine, alliant émotion brute et rythmes modernes produits par sP Polanco.",
+      album: "Arjona (Single)"
+    },
+    lyrics: {
+      es: `Ya entregué la llave al condominio
+Y cambié los planes de este domingo
+Eres la canción que yo no quiero escuchar
+La que todos ponen
+La que todos quieren bailar
+
+Como una deuda que no puedo pagar
+Siempre en mi cabeza, no te puedo sacar
+
+Necesito un abogado o un tequila en un bar
+Una canción de Arjona, alguien con quien hablar
+Un karaoke borracho para desafinar
+Que se rompa el celular pa no volverte a llamar
+
+Pa no volverte a llamar
+Pa no volverte a llamar
+Pa no volverte a llamar
+Pa no volverte a llamar
+
+Yo necesito
+Una fiesta con extraños aunque me parezca frío
+Que se rompa el GPS para no volver contigo
+Yo necesito un cigarro, un reguetón vulgar
+Un par de excusas baratas pa no contestar
+Un beso de otra boca pa disimular
+Y un consejo de mi ex aunque me cueste escucharte
+
+Como una deuda que no puedo pagar
+Siempre en mi cabeza, no te puedo sacar
+
+Necesito un abogado o un tequila en un bar
+Una canción de Arjona, alguien con quien hablar
+Un karaoke borracho para desafinar
+Que se rompa el celular pa no volverte a llamar
+
+Pa no volverte a llamar, ay, ah
+Pa no volverte a llamar, ay, ay, ay
+Pa no volverte a llamar, ay, ah
+Pa no volverte a llamar, ay, ay, ay
+
+Jensen
+¿Quién más? Tu Montelier
+SP, it's a problem
+
+Ay, shorty, pero tú sabías
+Esto es una bachata con sentimiento
+Dímelo, Jensen
+
+¿Cómo deshacerme de ti si no te tengo?
+¿Y cómo te olvido, yeah, si en mis sueños te sigo?
+De noche y todas las veces
+Prometiste un amor que envejece
+Me quedé como el número trece, qué mala suerte
+Y me tocó perder
+
+Me tocará esperar
+Para la próxima
+Que tocará amar
+Sigo aquí sin saber
+Pensando dónde estás
+
+Sé que no volverás y por eso
+
+Necesito un abogado o un tequila en un bar
+Una canción de Arjona, alguien con quien hablar
+Un karaoke borracho para desafinar
+Que se rompa el celular pa no volverte a llamar
+
+Pa no volverte a llamar
+Pa no volverte a llamar, ay, ay, ay
+Pa no volverte a llamar
+Pa no volverte a llamar, ay, ay, ay`,
+      fr: `J'ai déjà rendu les clés de l'appartement
+Et j'ai changé mes plans pour ce dimanche
+Tu es la chanson que je ne veux pas entendre
+Celle que tout le monde passe
+Celle sur laquelle tout le monde veut danser
+
+Comme une dette que je ne peux pas payer
+Toujours dans ma tête, je ne peux pas t'en sortir
+
+J'ai besoin d'un avocat ou d'un tequila dans un bar
+D'une chanson d'Arjona, de quelqu'un avec qui parler
+Un karaoké ivre pour chanter faux
+Que mon téléphone se casse pour ne plus te rappeler
+
+Pour ne plus te rappeler
+Pour ne plus te rappeler
+Pour ne plus te rappeler
+Pour ne plus te rappeler
+
+J'ai besoin
+D'une fête avec des inconnus même si ça me semble froid
+Que le GPS tombe en panne pour ne pas revenir vers toi
+J'ai besoin d'une cigarette, d'un reggaeton vulgaire
+De quelques excuses bidon pour ne pas répondre
+Un baiser d'une autre bouche pour faire semblant
+Et un conseil de mon ex même s'il m'en coûte de t'écouter
+
+Comme une dette que je ne peux pas payer
+Toujours dans ma tête, je ne peux pas t'en sortir
+
+J'ai besoin d'un avocat ou d'un tequila dans un bar
+D'une chanson d'Arjona, de quelqu'un avec qui parler
+Un karaoké ivre pour chanter faux
+Que mon téléphone se casse pour ne plus te rappeler
+
+Pour ne plus te rappeler, ay, ah
+Pour ne plus te rappeler, ay, ay, ay
+Pour ne plus te rappeler, ay, ah
+Pour ne plus te rappeler, ay, ay, ay
+
+Jensen
+Qui d'autre ? Ton Montelier
+SP, c'est un problème
+
+Ay, shorty, mais tu le savais
+C'est une bachata avec du sentiment
+Dis-le moi, Jensen
+
+Comment me débarrasser de toi si je ne te possède pas ?
+Et comment t'oublier, ouais, si je te suis dans mes rêves ?
+La nuit et à chaque instant
+Tu avais promis un amour qui dure toujours
+Je suis resté comme le numéro treize, quelle malchance
+Et c'est moi qui ai dû perdre
+
+Je devrai attendre
+La prochaine fois
+Qu'il faudra aimer
+Je suis toujours là sans savoir
+Pensant à où tu es
+
+Je sais que tu ne reviendras pas et c'est pour ça
+
+J'ai besoin d'un avocat ou d'un tequila dans un bar
+D'une chanson d'Arjona, de quelqu'un avec qui parler
+Un karaoké ivre pour chanter faux
+Que mon téléphone se casse pour ne plus te rappeler
+
+Pour ne plus te rappeler
+Pour ne plus te rappeler, ay, ay, ay
+Pour ne plus te rappeler
+Pour ne plus te rappeler, ay, ay, ay`
+    }
+  },
+  {
+    id: "bailame-charles-luis-dimelo-cupido-dj-husky",
+    title: "BAILAME",
+    artist: "Charles Luis, Dimelo Cupido & DJ Husky",
+    year: 2025,
+    tags: ["Moderne", "Romantique"],
+    color: "#3b82f6",
+    spotify: "https://open.spotify.com/search/Charles%20Luis%20BAILAME",
+    culture: {
+      context: "Une bachata romantique et moderne de 2025, imprégnée d'une atmosphère hivernale et mélancolique.",
+      meaning: "Une ode à l'instant présent, où la danse devient un refuge contre le froid et l'incertitude du futur ('après février je ne te reverrai plus').",
+      artistInfo: "Charles Luis continue de définir la bachata moderne avec l'équipe de production Dímelo Cupido & DJ Husky, mêlant sentiments classiques et sons urbains.",
+      album: "Bailame (Single)"
+    },
+    lyrics: {
+      es: `Sucedió
+Me miraste
+Y todo empezó
+Mi mundo giró
+Y de pensarte
+No dejo desde el último adiós
+
+Los minutos y las horas pasan sin demora y no sé si juegan
+A nuestro favor
+Pues lo que más quiero ahora es que bailemos toda la noche y olvidar
+Que saldrá el sol
+
+Báilame como gotas de lluvia de febrero (gotas de lluvia)
+Báilame como la brisa en este frío invierno (como la brisa)
+Tú y yo y nadie más, una oportunidad
+No la dejemos escapar
+
+Báilame como gotas de lluvia de febrero (gotas de lluvia)
+
+You know what it is, baby
+Charles Luis
+Dímelo, Cupido
+Rómpela, Husky
+This is real love
+
+Sucedió
+Tu cuerpo es arte y me hipnotizó
+Juro a Dios
+Amarte y no es una obsesión
+
+Los minutos y las horas pasan sin demora y no sé si juegan
+A nuestro favor
+Pues lo que más quiero ahora es que bailemos toda la noche y olvidar
+Que saldrá el sol
+
+Báilame como gotas de lluvia de febrero (gotas de lluvia)
+Báilame como la brisa en este frío invierno (como la brisa)
+Tú y yo y nadie más, una oportunidad
+No la dejemos escapar
+
+Báilame como gotas de lluvia de febrero (gotas de lluvia)
+
+Báilame como gotas de lluvia de febrero
+Báilame como la brisa en este frío invierno
+Tú y yo y nadie más, una oportunidad
+No la dejemos escapar
+
+Báilame como gotas de lluvia de febrero
+Porque después de febrero no te vuelvo a ver
+Gotas de lluvia`,
+      fr: `C'est arrivé
+Tu m'as regardé
+Et tout a commencé
+Mon monde a tourné
+Et je ne cesse de penser à toi
+Depuis le dernier adieu
+
+Les minutes et les heures passent sans attendre et je ne sais pas si elles jouent
+En notre faveur
+Car ce que je veux le plus maintenant, c'est que nous dansions toute la nuit et oublier
+Que le soleil se lèvera
+
+Danse pour moi comme les gouttes de pluie de février (gouttes de pluie)
+Danse pour moi comme la brise dans cet hiver froid (comme la brise)
+Toi et moi et personne d'autre, une opportunité
+Ne la laissons pas s'échapper
+
+Danse pour moi comme les gouttes de pluie de février (gouttes de pluie)
+
+Tu sais ce qu'il en est, bébé
+Charles Luis
+Dímelo, Cupido
+Casse tout, Husky !
+C'est ça, le vrai amour
+
+C'est arrivé
+Ton corps est une œuvre d'art et m'a hypnotisé
+Je jure devant Dieu
+De t'aimer, et ce n'est pas une obsession
+
+Les minutes et les heures passent sans attendre et je ne sais pas si elles jouent
+En notre faveur
+Car ce que je veux le plus maintenant, c'est que nous dansions toute la nuit et oublier
+Que le soleil se lèvera
+
+Danse pour moi comme les gouttes de pluie de février (gouttes de pluie)
+Danse pour moi comme la brise dans cet hiver froid (comme la brise)
+Toi et moi et personne d'autre, une opportunité
+Ne la laissons pas s'échapper
+
+Danse pour moi comme les gouttes de pluie de février (gouttes de pluie)
+
+Danse pour moi comme les gouttes de pluie de février
+Danse pour moi comme la brise dans cet hiver froid
+Toi et moi et personne d'autre, une opportunité
+Ne la laissons pas s'échapper
+
+Danse pour moi comme les gouttes de pluie de février
+Parce qu'après février, je ne te reverrai plus
+Gouttes de pluie`
+    }
+  },
+  {
+    id: "mas-bella-jalil-lopez",
+    title: "Mas Bella",
+    artist: "Jalil Lopez",
+    year: 2026,
+    tags: ["Moderne", "Empowerment"],
+    color: "#ec4899",
+    spotify: "https://open.spotify.com/search/Jalil%20Lopez%20Mas%20Bella",
+    culture: {
+      context: "Une bachata moderne de 2026 qui célèbre la résilience et la transformation personnelle après une rupture difficile.",
+      meaning: "Le morceau raconte comment une femme, après avoir été trompée et brisée, retrouve son éclat et son indépendance. Le titre 'Plus belle' symbolise sa revanche sur la douleur.",
+      artistInfo: "Jalil Lopez s'impose sur la scène bachata urbaine avec des textes centrés sur les relations modernes et l'empowerment.",
+      album: "Mas Bella (Single)"
+    },
+    lyrics: {
+      es: `Anda dolida
+Por uno que le dijo mentiras
+Uno le tira
+Y te deja con las ganas que te escriba
+
+Ese man la abandonó
+No supo amarla cómo se necesitaba
+Quizás por otra la dejó
+Ahora sale cada fin de semana
+Y no le baja
+
+Se puso más bella
+Salió pa la calle con el cora en candela
+No se gana con cuentos ni comprando lo que sea
+Nadie le llega, ella no se deja
+Él la dañó y ahora se puso más bella
+
+Salió pa la calle cpn el cora en candela
+No se gana con cuentos ni comprando lo que sea
+Ella no se deja, nadie le llega
+
+Él la dañó y ahora se puso más-
+Más bella
+Dice que no cree en el amor
+Por el que la jodió
+Ahora tiene el alma en candado
+Por culpa de ese cabrón
+
+Ese man la abandonó
+
+No supo amarla cómo se necesitaba
+Quizás por otra la dejó
+Ahora sale cada fin de semana
+Y no le baja
+
+Se puso más bella
+Salió pa la calle con el cora en candela
+No se gana con cuentos ni comprando lo que sea
+Nadie le llega, ella no se deja
+Él la dañó y ahora se puso más bella
+
+Salió pa la calle cpn el cora en candela
+No se gana con cuentos ni comprando lo que sea
+Ella no se deja, nadie le llega
+
+Él la dañó
+Se puso más bella
+Ella no se deja
+
+Joeylyto
+(Y no le baja)
+We got one bro
+
+Dice que no cree en el amor
+Por el que la jodió`,
+      fr: `Elle est blessée
+Par quelqu'un qui lui a menti
+On la courtise
+Mais elle te laisse avec l'envie qu'elle t'écrive
+
+Cet homme l'a abandonnée
+Il n'a pas su l'aimer comme il le fallait
+Peut-être l'a-t-il quittée pour une autre
+Maintenant elle sort tous les week-ends
+Et elle ne s'arrête pas
+
+Elle s'est faite plus belle
+Elle est sortie dans la rue avec le cœur en feu
+On ne la gagne pas avec des histoires ni en lui achetant n'importe quoi
+Personne ne lui arrive à la cheville, elle ne se laisse pas faire
+Il lui a fait du mal et maintenant elle s'est faite plus belle
+
+Elle est sortie dans la rue avec le cœur en feu
+On ne la gagne pas avec des histoires ni en lui achetant n'importe quoi
+Elle ne se laisse pas faire, personne ne lui arrive à la cheville
+
+Il lui a fait du mal et maintenant elle s'est faite...
+Plus belle
+Elle dit qu'elle ne croit plus en l'amour
+À cause de celui qui l'a bousillée
+Maintenant elle a mis un cadenas sur son âme
+Par la faute de ce salaud
+
+Cet homme l'a abandonnée
+
+Il n'a pas su l'aimer comme il le fallait
+Peut-être l'a-t-il quittée pour une autre
+Maintenant elle sort tous les week-ends
+Et elle ne s'arrête pas
+
+Elle s'est faite plus belle
+Elle est sortie dans la rue avec le cœur en feu
+On ne la gagne pas avec des histoires ni en lui achetant n'importe quoi
+Personne ne lui arrive à la cheville, elle ne se laisse pas faire
+Il lui a fait du mal et maintenant elle s'est faite plus belle
+
+Elle est sortie dans la rue avec le cœur en feu
+On ne la gagne pas avec des histoires ni en lui achetant n'importe quoi
+Elle ne se laisse pas faire, personne ne lui arrive à la cheville
+
+Il lui a fait du mal
+Elle s'est faite plus belle
+Elle ne se laisse pas faire
+
+Joeylyto
+(Et elle ne s'arrête pas)
+On en a une, mon frère
+
+Elle dit qu'elle ne croit plus en l'amour
+À cause de celui qui l'a bousillée`
+    }
+  },
+  {
+    id: "noche-de-sexo-karlos-rose-dimelo-cupido-dj-husky",
+    title: "NOCHE DE SEXO",
+    artist: "Karlos Rosé, Dimelo Cupido & DJ Husky",
+    year: 2024,
+    tags: ["Moderne", "Urbaine", "Sensual"],
+    color: "#1f2937",
+    spotify: "https://open.spotify.com/search/Karlos%20Rose%20NOCHE%20DE%20SEXO",
+    culture: {
+      context: "Une adaptation bachata audacieuse du classique reggaeton de Wisin & Yandel, produite par le trio Cupido/Husky/Rosé en 2024.",
+      meaning: "Une ode directe à la passion physique et aux rencontres nocturnes, transposant l'énergie du reggaeton dans l'univers sensuel de la bachata urbaine.",
+      artistInfo: "Karlos Rosé est passé maître dans l'art de transformer des tubes urbains en perles de bachata, portées par sa voix unique et smooth.",
+      album: "Noche de Sexo (Single)"
+    },
+    lyrics: {
+      es: `Déjame subir, que son las tres
+Me tienes pensando en ti desde ayer
+Permíteme quitarte el estrés
+Arrancarte ese vestido apretao
+Poder sentir tu respiro bien agitao
+Sé que te gusta lo oscuro, y yo aseguro
+Voy apagando las luces guillao
+
+Porque esta noche es noche de sexo
+Baby, yo conozco el proceso
+De darte placer en exceso y todo eso
+Y comerme hasta los huesos
+
+Que esta noche es noche de sexo
+Baby, yo conozco el proceso
+De darte placer en exceso y todo eso
+Y comerme hasta los huesos
+
+Comerme hasta los huesos
+
+Y aunque tú y yo nunca fuimos nada
+Tu cuerpo sigue buscando el mío, pero yo
+Sé que te gusta lo oscuro, y yo aseguro
+Voy apagando las luces guillao
+
+Porque esta noche es noche de sexo
+Baby, yo conozco el proceso
+De darte placer en exceso y todo eso
+Y comerme hasta los huesos
+
+Porque esta noche es noche de sexo
+Baby, yo conozco el proceso
+De darte placer en exceso y todo eso
+Y comerme hasta los huesos
+
+Dímelo, Cupido
+DJ Husky
+Karlos Rosé
+Tu negro, mami
+
+Arrancarte ese vestido apretao
+Poder sentir tu respiro bien agitao
+Sé que te gusta lo oscuro, y yo aseguro
+Voy apagando las luces guillao
+
+Porque esta noche es noche de sexo
+Baby, yo conozco el proceso
+De darte placer en exceso y todo eso
+Y comerme hasta los huesos
+
+Esta noche es noche de sexo
+Baby, yo conozco el proceso
+De darte placer en exceso y todo eso
+Y comerme hasta los huesos`,
+      fr: `Laisse-moi monter, il est trois heures
+Tu me fais penser à toi depuis hier
+Permets-moi de t'enlever ton stress
+De t'arracher cette robe moulante
+De sentir ton souffle bien agité
+Je sais que tu aimes l'obscurité, et je t'assure
+Que je vais éteindre les lumières discrètement
+
+Car cette nuit est une nuit de sexe
+Bébé, je connais le processus
+Pour te donner du plaisir en excès et tout le reste
+Et te dévorer jusqu'aux os
+
+Car cette nuit est une nuit de sexe
+Bébé, je connais le processus
+Pour te donner du plaisir en excès et tout le reste
+Et te dévorer jusqu'aux os
+
+Te dévorer jusqu'aux os
+
+Et même si toi et moi n'avons jamais rien été l'un pour l'autre
+Ton corps continue de chercher le mien, mais moi...
+Je sais que tu aimes l'obscurité, et je t'assure
+Que je vais éteindre les lumières discrètement
+
+Car cette nuit est une nuit de sexe
+Bébé, je connais le processus
+Pour te donner du plaisir en excès et tout le reste
+Et te dévorer jusqu'aux os
+
+Car cette nuit est une nuit de sexe
+Bébé, je connais le processus
+Pour te donner du plaisir en excès et tout le reste
+Et te dévorer jusqu'aux os
+
+Dis-le moi, Cupido
+DJ Husky
+Karlos Rosé
+Ton "negro", mami
+
+T'arracher cette robe moulante
+Sentir ton souffle bien agité
+Je sais que tu aimes l'obscurité, et je t'assure
+Que je vais éteindre les lumières discrètement
+
+Car cette nuit est une nuit de sexe
+Bébé, je connais le processus
+Pour te donner du plaisir en excès et tout le reste
+Et te dévorer jusqu'aux os
+
+Cette nuit est une nuit de sexe
+Bébé, je connais le processus
+Pour te donner du plaisir en excès et tout le reste
+Et te dévorer jusqu'aux os`
+    }
   }
 ]
