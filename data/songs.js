@@ -6,7 +6,7 @@ export const songs = [
     year: 2023,
     tags: ["Sensual"],
     color: "#6366f1",
-    spotify: "https://open.spotify.com/track/6gUqF5p6nK8F6uC7n81rFq",
+    spotify: "https://open.spotify.com/search/Mil%20preguntas%20Marina%20Reche",
     culture: {
       context: "Sortie fin 2023, 'Mil preguntas' est un morceau poignant qui explore la trahison et la rupture avec une voix soul unique.",
       meaning: "La chanson décrit la douleur de découvrir une infidélité (les deux verres sur la table de nuit) et le silence assourdissant qui suit une relation passionnée.",
@@ -115,7 +115,7 @@ Je pense tellement au pourquoi, ih-eh-eh, eh-eh-eh`
     year: 2023,
     tags: ["Sensual"],
     color: "#7c3aed",
-    spotify: "https://open.spotify.com/track/3dsEINNJ3QjrUl3RkWk6rc",
+    spotify: "https://open.spotify.com/search/Lejania%20Jensen",
     culture: {
       context: "Sortie en 2023, 'Lejanía' est devenue un hit instantané grâce à son mélange parfait de mélancolie moderne et de Bachata Sensual.",
       meaning: "La chanson explore la douleur de la distance et les souvenirs qui tournent en boucle (en 'repeat') après une rupture, particulièrement dans un lieu symbolique comme Benidorm.",
@@ -246,7 +246,7 @@ On se retrouvera`,
     year: 2022,
     tags: ["Sensual"],
     color: "#dc2626",
-    spotify: "https://open.spotify.com/track/3YEJ3gQ4if3MTO9gotBK7z",
+    spotify: "https://open.spotify.com/search/Dame%20un%20Minuto%20Imperatore%20Alex",
     culture: {
       context: "Ce titre est une collaboration romantique qui a marqué les clubs de Bachata en 2022.",
       meaning: "Un aveu sincère d'inexpérience en amour. Le chanteur demande 'une minute' pour apprendre et prouver sa dévotion.",
@@ -381,7 +381,7 @@ Donne-moi une minute et je te décrocherai le soleil`,
     year: 2023,
     tags: ["Dominicaine"],
     color: "#059669",
-    spotify: "https://open.spotify.com/track/4ztBYIuncBxGARmctAWZXS",
+    spotify: "https://open.spotify.com/search/Cerremos%20ese%20Capitulo%20Mayinbito",
     culture: {
       context: "Mayinbito apporte ici une bachata plus traditionnelle dans sa structure mais très moderne dans son propos.",
       meaning: "Une demande de pardon après une infidélité. La chanson insiste sur le fait de 'fermer ce chapitre' douloureux pour avancer.",
@@ -2742,7 +2742,7 @@ J'ai compris`
     year: 2021,
     tags: ["Urbano"],
     color: "#f43f5e",
-    spotify: "https://open.spotify.com/track/4r8fW2K6j2Zk9yM1uJv5Qy",
+    spotify: "https://open.spotify.com/search/30%20Minutos%20Johnny%20Sky",
     culture: {
       context: "Un hit urbain de 2021 qui mélange reggaeton et sonorités modernes.",
       meaning: "Une ode à l'indépendance féminine après une rupture. La protagoniste se sent belle, s'amuse et oublie son passé.",
@@ -2911,7 +2911,7 @@ Yeh, yeh`
     year: 2025,
     tags: ["Sensual"],
     color: "#0369a1",
-    spotify: "https://open.spotify.com/track/629H135011707018302307",
+    spotify: "https://open.spotify.com/search/Quitemonos%20La%20Ropa%20Dani%20J",
     culture: {
       context: "Un des nouveaux titres de Johnny Sky en 2025, confirmant son statut d'icône de la Bachata Sensual.",
       meaning: "L'histoire d'un coup de foudre instantané. 30 minutes ont suffi pour tomber amoureux et vouloir changer sa vie.",
@@ -3165,7 +3165,7 @@ Fanatique, ouais.`
     year: 2003,
     tags: ["Classique", "Dominicaine"],
     color: "#059669",
-    spotify: "https://open.spotify.com/track/6gN0p251P2r7r73n3X3WJv",
+    spotify: "https://open.spotify.com/search/Propuesta%20Indecente%20Romeo%20Santos",
     culture: {
       context: "Considéré comme l'un des plus grands classiques de la bachata moderne, 'Dos Locos' a propulsé le duo Monchy & Alexandra sur la scène internationale.",
       meaning: "Deux amants pris dans des relations différentes mais qui ne peuvent s'empêcher de s'aimer et de penser l'un à l'autre.",
@@ -3272,7 +3272,7 @@ Quels idiots, quels fous nous sommes toi et moi
     year: 2014,
     tags: ["Sensual", "Classique"],
     color: "#9333ea",
-    spotify: "https://open.spotify.com/track/6Uo1wU1Hw3OQ8020h3j3Tj",
+    spotify: "https://open.spotify.com/search/Creme%20De%20La%20Creme%20Mayinbito",
     culture: {
       context: "Considérée comme l'une des chansons de bachata les plus emblématiques de tous les temps, 'Propuesta Indecente' a fusionné le tango argentin avec la bachata moderne.",
       meaning: "La chanson raconte une tentative de séduction audacieuse lors d'une soirée, où le protagoniste propose une 'proposition indécente' à une femme déjà accompagnée.",
@@ -3401,7 +3401,7 @@ Moi et vous (Vous)`
     year: 2024,
     tags: ["Dominicaine", "Moderne"],
     color: "#10b981",
-    spotify: "https://open.spotify.com/track/46y0lXn5T2R5y6D27zF8fR",
+    spotify: "https://open.spotify.com/search/Lokita%20Por%20Mi%20Prince%20Royce%20Romeo%20Santos",
     culture: {
       context: "Un titre récent de Mayinbito qui célèbre la femme dominicaine à travers un mélange de rythmes urbains et de bachata traditionnelle.",
       meaning: "Une chanson qui décrit une femme exceptionnelle, la 'crème de la crème', à qui le chanteur promet un royaume et une passion éternelle.",
@@ -3522,7 +3522,7 @@ Israel palma, ton fils`
     year: 2025,
     tags: ["Sensual", "Classique"],
     color: "#f59e0b",
-    spotify: "https://open.spotify.com/track/2aG4AXf3TUtlmk4s9BLYDi",
+    spotify: "https://open.spotify.com/search/Fanatico%20Dani%20J",
     culture: {
       context: "Une collaboration historique en 2025 entre les deux rois de la Bachata, Prince Royce et Romeo Santos, marquant une nouvelle ère pour le genre.",
       meaning: "La chanson explore une relation passionnelle et 'toxique' avec humour, où les deux artistes célèbrent les défauts et la 'folie' de leur partenaire.",
@@ -3685,7 +3685,7 @@ Folle je t'aime`
     year: 2002,
     tags: ["Classique", "Sentimentale"],
     color: "#3b82f6",
-    spotify: "https://open.spotify.com/track/6M7rQ9p3hH81d6k1h7M2sD",
+    spotify: "https://open.spotify.com/search/Nada%20de%20Nada%20Frank%20Reyes",
     culture: {
       context: "L'un des plus grands succès de Frank Reyes, 'El Príncipe de la Bachata', sorti en 2002 sur l'album 'Déjame Entrar en Ti'.",
       meaning: "Une chanson de désespoir et de fierté retrouvée, où l'artiste exprime qu'il ne reste plus rien d'un amour passé après avoir trop attendu.",
@@ -3734,7 +3734,7 @@ Même pas une trace de combien je t'aimais`
     year: 1998,
     tags: ["Classique", "Danse"],
     color: "#ef4444",
-    spotify: "https://open.spotify.com/track/622P6s3g6W4P6Vv8n5G9eO",
+    spotify: "https://open.spotify.com/search/Quizas%20Si%20Quizas%20No%20Los%20Toros%20Band",
     culture: {
       context: "Une bachata iconique interprétée par Hector Acosta 'El Torito' avec Los Toros Band à la fin des années 90.",
       meaning: "Une chanson sur l'incertitude amoureuse et la trahison, où le chanteur supplie sa bien-aimée de ne pas l'abandonner malgré le doute.",
@@ -3799,7 +3799,7 @@ Je te supplie, tu es ma vie, ne m'abandonne pas !`
     year: 2001,
     tags: ["Classique", "Mélancolique"],
     color: "#6b7280",
-    spotify: "https://open.spotify.com/track/4jVn8Pj12W3T4t8yS75F8b",
+    spotify: "https://open.spotify.com/search/Llora%20Alma%20Mia%20Yoskar%20Sarante",
     culture: {
       context: "L'un des titres les plus célèbres de Yoskar Sarante, figure majeure de la 'Bachata Rosa' et sentimentale.",
       meaning: "Une expression profonde de la douleur après un abandon soudain et inexpliqué, où l'âme 'pleure jusqu'à la dernière goutte'.",
@@ -3856,7 +3856,7 @@ En emportant tout mon amour`
     year: 2000,
     tags: ["Classique", "Sentimentale"],
     color: "#fbbf24",
-    spotify: "https://open.spotify.com/track/6gVb18mR5X2Vd9Uj38rS94",
+    spotify: "https://open.spotify.com/search/Que%20Vuelva%20Alex%20Bueno",
     culture: {
       context: "Alex Bueno a marqué le passage au nouveau millénaire avec cet album 'Corazón Duro', consolidant sa place de maître du romantisme.",
       meaning: "Un appel désespéré au retour de l'être aimé, demandant à une amie commune de lui dire qu'il ne supporte plus la solitude.",
@@ -3927,7 +3927,7 @@ Arriver si elle ne revient pas`
     year: 2002,
     tags: ["Classique", "Duo"],
     color: "#db2777",
-    spotify: "https://open.spotify.com/track/1Lq087Fw1yY7l8uH4rP4C0",
+    spotify: "https://open.spotify.com/search/Ciego%20de%20Amor%20Anthony%20Santos",
     culture: {
       context: "Une collaboration légendaire entre Anthony Santos (Le Mayimbe) et Aventura (Le groupe qui a révolutionné la bachata urbaine).",
       meaning: "Un dialogue entre un père et son fils sur une trahison amoureuse, où le père refuse de croire aux infidélités de sa bien-aimée car il est 'aveugle d'amour'.",
@@ -4010,7 +4010,7 @@ Mais en ce moment, je suis trop aveugle d'amour`
     year: 1999,
     tags: ["Classique", "Danse"],
     color: "#0d9488",
-    spotify: "https://open.spotify.com/track/62e21bYt33a5h4b75P2P5c",
+    spotify: "https://open.spotify.com/search/Hoja%20en%20Blanco%20Monchy%20Alexandra",
     culture: {
       context: "Le morceau qui a lancé la carrière internationale de Monchy & Alexandra, devenant un hymne de la bachata moderne.",
       meaning: "Une chanson sur un amour d'enfance rompu par la distance, où une 'feuille blanche' symbolise le silence et l'oubli forcé.",
@@ -4081,7 +4081,7 @@ Comment peux-tu demander si je t'aime encore ?`
     year: 1999,
     tags: ["Classique", "Sentimentale"],
     color: "#4f46e5",
-    spotify: "https://open.spotify.com/track/105t5uR4P0d8M8d6y5sQ1K",
+    spotify: "https://open.spotify.com/search/Manana%20en%20Tu%20Olvido%20Zacarias%20Ferreira",
     culture: {
       context: "Une pièce maîtresse de Zacarías Ferreira, 'La Voz de la Ternura', sortie à la fin des années 90.",
       meaning: "Une chanson poignante sur l'imminence d'une rupture, où l'artiste redoute le lendemain qui sera marqué par l'oubli de celle qu'il aime.",
@@ -4148,7 +4148,7 @@ que sans toi, je pourrais mourir`
     year: 1996,
     tags: ["Classique", "Mélancolique"],
     color: "#b91c1c",
-    spotify: "https://open.spotify.com/track/0x91J62P8oN7H4L7yE01sD",
+    spotify: "https://open.spotify.com/search/Volvio%20el%20Dolor%20Luis%20Vargas",
     culture: {
       context: "Luis Vargas, 'El Rey Supremo', exprime ici toute la rudesse et la passion de la bachata traditionnelle des années 90.",
       meaning: "L'histoire d'une trahison découverte par une lettre, où la douleur revient pour hanter l'artiste après avoir cru qu'il l'avait vaincue.",
@@ -4207,7 +4207,7 @@ N'aie jamais l'idée de faire ce que tu m'as fait à moi aussi`
     year: 2003,
     tags: ["Classique", "Danse"],
     color: "#ea580c",
-    spotify: "https://open.spotify.com/track/0cW5q762jP5kR1w2WjJd0T",
+    spotify: "https://open.spotify.com/search/Intentalo%20Tu%20Joe%20Veras",
     culture: {
       context: "Joe Veras 'El Hombre de tu Vida' a marqué l'année 2003 avec cet hymne romantique.",
       meaning: "Un immense défi lancé à celle qui veut rompre : le chanteur lui demande d'essayer elle-même de l'oublier, car pour lui c'est impossible.",
@@ -4262,7 +4262,7 @@ Essaie donc toi`
     year: 1994,
     tags: ["Classique", "Passion"],
     color: "#dc2626",
-    spotify: "https://open.spotify.com/track/5u0w3D5d5u1t5K6W4H8K6y",
+    spotify: "https://open.spotify.com/search/Medicina%20de%20Amor%20Raulin%20Rodriguez",
     culture: {
       context: "L'un des plus grands succès de Raulín Rodríguez, dit 'El Cacique', au début des années 90.",
       meaning: "Une métaphore puissante où l'amour est décrit comme une maladie (un 'cancer d'amour') dont seule la femme aimée détient le remède.",
@@ -4321,7 +4321,7 @@ Une femme qui a détruit mon âme, ma vie`
     year: 2004,
     tags: ["Classique", "Élégant"],
     color: "#1e40af",
-    spotify: "https://open.spotify.com/track/6g0S5B0p09D4sN5M8eKz1k",
+    spotify: "https://open.spotify.com/search/Si%20Algun%20Dia%20la%20Ves%20Sergio%20Vargas",
     culture: {
       context: "Sergio Vargas, 'El Negrito de Villa', apporte son élégance vocale à ce titre romantique des années 2000.",
       meaning: "Un message confié à un voyageur, demandant de raconter comment va celle qui est partie, tout en espérant qu'elle n'ait pas oublié ses délires.",
@@ -4374,7 +4374,7 @@ Si tu la vois perdue, dis-lui de changer de vie`
     year: 1998,
     tags: ["Classique", "Duo"],
     color: "#15803d",
-    spotify: "https://open.spotify.com/track/7p5G4w8DovWq4m0Yv8XlJq",
+    spotify: "https://open.spotify.com/search/Piensa%20en%20Mi%20Junior%20Jorge",
     culture: {
       context: "Le duo Junior & Jorge a marqué les années 90 avec des harmonies vocales impeccables, comme sur ce titre 'Piensa en Mí'.",
       meaning: "Une invitation directe à oublier un amant décevant pour se tourner vers celui qui l'aime vraiment, avec des envies de voyage et de bonheur.",
