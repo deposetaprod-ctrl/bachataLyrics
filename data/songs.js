@@ -3677,7 +3677,739 @@ Je t'aime comme ça
 Bagarreuse, possessive et jalouse, vaniteuse
 Folle je t'aime`
     }
+  },
+  {
+    id: "nada-de-nada-frank-reyes",
+    title: "Nada de Nada",
+    artist: "Frank Reyes",
+    year: 2002,
+    tags: ["Classique", "Sentimentale"],
+    color: "#3b82f6",
+    spotify: "https://open.spotify.com/track/6M7rQ9p3hH81d6k1h7M2sD",
+    culture: {
+      context: "L'un des plus grands succès de Frank Reyes, 'El Príncipe de la Bachata', sorti en 2002 sur l'album 'Déjame Entrar en Ti'.",
+      meaning: "Une chanson de désespoir et de fierté retrouvée, où l'artiste exprime qu'il ne reste plus rien d'un amour passé après avoir trop attendu.",
+      artistInfo: "Frank Reyes est une figure emblématique de la bachata moderne, connu pour sa voix mélodieuse et ses thèmes romantiques.",
+      album: "Déjame Entrar en Ti"
+    },
+    lyrics: {
+      es: `Tú fuiste para mí, en esta vida todo
+Mi razón de vivir, y me dejaste solo
+Solo pensaste en ti, cuando más yo te amaba
+No me importo sufrir, aún así te esperaba
+Me cansé de esperarte, a que te decidieras
+Lo decidiste tarde, y ya ves lo que queda
+En mí no queda nada, nada de nada
+Ni siquiera una huella de cuánto te amaba
+Me cansé de rogarte que volvieras conmigo
+Pero lo hiciste tarde, y ya no soy el mismo
+Te creíste que eras la dueña del mundo
+Y me pusiste a prueba pisoteando mi orgullo
+Te creíste reina en mi corazón
+Y ahora nada queda de aquel amor
+De ti no queda nada, nada, nada
+Ni siquiera una huella de cuanto te amaba`,
+      fr: `Tu étais tout pour moi, dans cette vie
+Ma raison de vivre, et tu m'as laissé seul
+Tu n'as pensé qu'à toi, quand je t'aimais le plus
+Je me suis foutu de souffrir, pourtant je t'attendais
+Je me suis lassé de t'attendre, que tu te décides
+Tu l'as décidé trop tard, et tu vois ce qu'il reste
+En moi, il ne reste rien, rien de rien
+Même pas une trace de combien je t'aimais
+Je me suis lassé de te supplier de revenir avec moi
+Mais tu l'as fait trop tard, et je ne suis plus le même
+Tu croyais être la maîtresse du monde
+Et tu m'as mis à l'épreuve en piétinant mon orgueil
+Tu croyais être la reine de mon cœur
+Et maintenant, il ne reste rien de cet amour
+De toi, il ne reste rien, rien, rien
+Même pas une trace de combien je t'aimais`
+    }
+  },
+  {
+    id: "quizas-si-quizas-no-los-toros-band",
+    title: "Quizás Sí, Quizás No",
+    artist: "Los Toros Band",
+    year: 1998,
+    tags: ["Classique", "Danse"],
+    color: "#ef4444",
+    spotify: "https://open.spotify.com/track/622P6s3g6W4P6Vv8n5G9eO",
+    culture: {
+      context: "Une bachata iconique interprétée par Hector Acosta 'El Torito' avec Los Toros Band à la fin des années 90.",
+      meaning: "Une chanson sur l'incertitude amoureuse et la trahison, où le chanteur supplie sa bien-aimée de ne pas l'abandonner malgré le doute.",
+      artistInfo: "Hector Acosta est l'une des voix les plus puissantes de la République Dominicaine, brillant aussi bien en bachata qu'en merengue.",
+      album: "De Fiesta"
+    },
+    lyrics: {
+      es: `Me dirá, "basta ya"
+Y se irá de mi lado
+Yo la vi junto a él
+Comprendí que había perdido
+Sus ojos me gritaban que la amaba
+Como hace mucho que lo hace conmigo
+Me mira hoy con pena porque sabe
+Que la amo locamente como ayer
+Recuerdo aquella luna en su cuarto
+El viento acariciándole la cara
+Cuando éramos felices de estar juntos
+Y ahora otros sueños nos separan
+
+Lloraré, quizás sí, quizás no
+Si no lloras tú
+Escribiré, quizás sí, quizás no
+Si me escribes tú
+Miénteme, no me importa creer
+Lo que digas tú
+Olvidaré, yo no te he visto con él
+Si lo juras tú
+
+Bachatéame mamá, como a Dios mismo (¡Ay mamá!)
+Te estoy rogando, tú eres mi vida, ¡no me abandones!`,
+      fr: `Elle me dira : "Ça suffit"
+Et elle partira de mes côtés
+Je l'ai vue avec lui
+J'ai compris que j'avais perdu
+Ses yeux me criaient qu'elle l'aimait
+Comme elle le fait depuis longtemps avec moi
+Elle me regarde aujourd'hui avec peine parce qu'elle sait
+Que je l'aime follement comme hier
+Je me souviens de cette lune dans sa chambre
+Le vent caressant son visage
+Quand nous était heureux d'être ensemble
+Et maintenant d'autres rêves nous séparent
+
+Je pleurerai, peut-être que oui, peut-être que non
+Si tu ne pleures pas
+J'écrirai, peut-être que oui, peut-être que non
+Si tu m'écris
+Mens-moi, peu m'importe de croire
+Ce que tu dis
+J'oublierai, je ne t'ai pas vue avec lui
+Si tu le jures
+
+Fais-moi danser la bachata maman, comme à Dieu lui-même (Oh maman !)
+Je te supplie, tu es ma vie, ne m'abandonne pas !`
+    }
+  },
+  {
+    id: "llora-alma-mia-yoskar-sarante",
+    title: "Llora Alma Mía",
+    artist: "Yoskar Sarante",
+    year: 2001,
+    tags: ["Classique", "Mélancolique"],
+    color: "#6b7280",
+    spotify: "https://open.spotify.com/track/4jVn8Pj12W3T4t8yS75F8b",
+    culture: {
+      context: "L'un des titres les plus célèbres de Yoskar Sarante, figure majeure de la 'Bachata Rosa' et sentimentale.",
+      meaning: "Une expression profonde de la douleur après un abandon soudain et inexpliqué, où l'âme 'pleure jusqu'à la dernière goutte'.",
+      artistInfo: "Yoskar Sarante était surnommé 'El Más Noble', connu pour sa capacité à transmettre une émotion brute à chaque note.",
+      album: "Llora Alma Mía"
+    },
+    lyrics: {
+      es: `Con razón llora el alma mía
+ha recibido un golpe de dolor
+yo que estaba tan ilusionado
+entregado a una inmensa pasión
+Y me han dejado tan solito
+sin darme una explicación
+es por eso que lloro de impotencia
+ahogado en un llanto de dolor
+
+Llora alma mía, llora alma mía
+llora hasta que quede
+una gota de dolor
+Llora alma mía, llora alma mía
+sangra por mis venas
+el veneno de su adiós
+
+Yo te doy mi consentimiento
+para que olvides esa ingrata mujer
+que me ha dejado tan solito
+llevándose todo mi querer`,
+      fr: `C'est à juste titre que mon âme pleure
+Elle a reçu un coup de douleur
+Moi qui étais si plein d'illusions
+Livré à une immense passion
+Et on m'a laissé si seul
+Sans me donner d'explication
+C'est pour cela que je pleure d'impuissance
+Noyé dans un cri de douleur
+
+Pleure, mon âme, pleure, mon âme
+Pleure jusqu'à ce qu'il ne reste
+Qu'une goutte de douleur
+Pleure, mon âme, pleure, mon âme
+Le poison de son adieu
+Saigne dans mes veines
+
+Je te donne mon consentement
+Pour que tu oublies cette ingrate femme
+Qui m'a laissé si seul
+En emportant tout mon amour`
+    }
+  },
+  {
+    id: "que-vuelva-alex-bueno",
+    title: "Que Vuelva",
+    artist: "Alex Bueno",
+    year: 2000,
+    tags: ["Classique", "Sentimentale"],
+    color: "#fbbf24",
+    spotify: "https://open.spotify.com/track/6gVb18mR5X2Vd9Uj38rS94",
+    culture: {
+      context: "Alex Bueno a marqué le passage au nouveau millénaire avec cet album 'Corazón Duro', consolidant sa place de maître du romantisme.",
+      meaning: "Un appel désespéré au retour de l'être aimé, demandant à une amie commune de lui dire qu'il ne supporte plus la solitude.",
+      artistInfo: "Alex Bueno est un artiste polyvalent capable de chanter du merengue, de la salsa et de la bachata avec une aisance technique impressionnante.",
+      album: "Corazón Duro"
+    },
+    lyrics: {
+      es: `Anda ve a decirle que yo estoy sufriendo
+Dile que no puedo con las penas
+Tú que te das cuenta que la quiero
+Ve a decirle que mi alma se quema
+Tú que eres su amiga y sabes de mis sueños
+Cuéntale que el mundo se me acaba
+Vamos, date cuenta que me muero
+Que sin ella no soy nada
+
+Ve y dile que mi vida solo es vida si ella está
+Que no soporto más esta terrible soledad
+Que me la encuentro siempre en cada sueño
+Que ya no duermo
+Que si miro al espejo, su reflejo encuentro allí
+Que pronuncio su nombre y nada quiero decir
+Que ahí está su risa en mis recuerdos
+Que ya estoy casi enloqueciendo
+
+Dile que vuelva, a decir que aún me puede amar
+Pero que vuelva a mí, que sin ella no puedo vivir
+
+Anda ve a decirle que no hay un segundo
+Que no me haga falta sus caricias
+Que me hacen daño los minutos
+Que deliro por su sonrisa
+Anda ve a decirle que más primaveras
+No veré llegar si no regresa`,
+      fr: `Va lui dire que je suis en train de souffrir
+Dis-lui que je ne peux pas supporter ces peines
+Toi qui te rends compte que je l'aime
+Va lui dire que mon âme brûle
+Toi qui es son amie et qui connais mes rêves
+Raconte-lui que mon monde s'écroule
+Allez, rends-toi compte que je meurs
+Que sans elle, je ne suis rien
+
+Va et dis-lui que ma vie n'est une vie que si elle est là
+Que je ne supporte plus cette terrible solitude
+Que je la retrouve toujours dans chaque rêve
+Que je ne dors plus
+Que si je regarde dans le miroir, j'y trouve son reflet
+Que je prononce son nom et que je ne veux rien dire
+Que son rire est là dans mes souvenirs
+Que je deviens presque fou
+
+Dis-lui de revenir, pour decir qu'elle peut encore m'aimer
+Mais qu'elle revienne à moi, car sans elle je ne peux pas vivre
+
+Va lui dire qu'il n'y a pas une seconde
+Où ses caresses ne me manquent pas
+Que les minutes me font mal
+Que je délire pour son sourire
+Va lui dire que je ne verrai plus de printemps
+Arriver si elle ne revient pas`
+    }
+  },
+  {
+    id: "ciego-de-amor-anthony-santos",
+    title: "Ciego de Amor",
+    artist: "Anthony Santos & Aventura",
+    year: 2002,
+    tags: ["Classique", "Duo"],
+    color: "#db2777",
+    spotify: "https://open.spotify.com/track/1Lq087Fw1yY7l8uH4rP4C0",
+    culture: {
+      context: "Une collaboration légendaire entre Anthony Santos (Le Mayimbe) et Aventura (Le groupe qui a révolutionné la bachata urbaine).",
+      meaning: "Un dialogue entre un père et son fils sur une trahison amoureuse, où le père refuse de croire aux infidélités de sa bien-aimée car il est 'aveugle d'amour'.",
+      artistInfo: "La rencontre du style traditionnel d'Anthony Santos et du style moderne de Romeo Santos est un moment historique du genre.",
+      album: "The Last"
+    },
+    lyrics: {
+      es: `Viejo, siéntese un momento
+Escuche mi tormento
+Urgentemente le tengo que hablar
+Anoche lo vi con su adorada
+De la que tanto me habla
+Ay hombre, le tengo que decir
+Es la misma maldita mujer
+La que viste y calza de pies
+La que penetró y le acarició la piel
+Y obviamente lo mismo hace usted
+
+Mi hijo, esto no tiene sentido
+Estás muy confundido
+Esa mujer es mía y de nadie más
+A otra se te está pareciendo
+Pero muy bien te entiendo
+De ti acepto una equivocación
+La conozco bastante, lo sé
+No la creo capaz de que me sea infiel
+Soy tu padre, tienes que entender
+No es la misma, se pueden parecer
+
+Ella se burla de ti y de mí
+Somos un chiste y la hacemos reír
+
+Me duele pensar que sí
+Pero si esto es cierto hasta puedo morir
+
+Nadie se muere de amor
+Usted ha sido mi ejemplo y me ha dado valor
+
+Quiero creer tu versión
+Pero en este momento estoy muy ciego de amor`,
+      fr: `Père, assieds-toi un moment
+Écoute mon tourment
+Je dois te parler de toute urgence
+La nuit dernière, je t'ai vu avec ton adorée
+Celle dont tu me parles tant
+Oh homme, je dois te le dire
+C'est la même maudite femme
+Celle qui s'habille et se chausse des pieds à la tête
+Celle que je pénètre et à qui je caresse la peau
+Et évidemment, tu fais la même chose
+
+Mon fils, cela n'a aucun sens
+Tu es très confus
+Cette femme est à moi et à personne d'autre
+Tu la confonds avec une autre
+Mais je te comprends très bien
+De ta part, j'accepte une erreur
+Je la connais assez, je le sais
+Je ne la crois pas capable de m'être infidèle
+Je suis ton père, tu dois comprendre
+Ce n'est pas la même, elles peuvent se ressembler
+
+Elle se moque de toi et de moi
+Nous sommes une blague et nous la faisons rire
+
+Ça me fait mal de penser que oui
+Mais si c'est vrai, je pourrais même en mourir
+
+Personne ne meurt d'amour
+Tu as été mon exemple et tu m'as donné du courage
+
+Je veux croire ta version
+Mais en ce moment, je suis trop aveugle d'amour`
+    }
+  },
+  {
+    id: "hoja-en-blanco-monchy-alexandra",
+    title: "Hoja en Blanco",
+    artist: "Monchy & Alexandra",
+    year: 1999,
+    tags: ["Classique", "Danse"],
+    color: "#0d9488",
+    spotify: "https://open.spotify.com/track/62e21bYt33a5h4b75P2P5c",
+    culture: {
+      context: "Le morceau qui a lancé la carrière internationale de Monchy & Alexandra, devenant un hymne de la bachata moderne.",
+      meaning: "Une chanson sur un amour d'enfance rompu par la distance, où une 'feuille blanche' symbolise le silence et l'oubli forcé.",
+      artistInfo: "Monchy & Alexandra ont été le duo le plus populaire de la bachata dans les années 2000, redéfinissant le genre avec élégance.",
+      album: "Hoja en Blanco"
+    },
+    lyrics: {
+      es: `Fue imposible sacar tu recuerdo de mi mente
+Fue imposible olvidar que algún día yo te quise
+Tanto tiempo pasó desde el día que te fuiste
+Ahí supe que las despedidas son muy tristes
+Nunca me imaginé que un tren se llevaría en su viaje
+Aquellas ilusiones que de niños nos juramos
+Todos tus sentimientos los guardaste en tu equipaje
+Quisiste consolarme y me dijiste "yo te amo"
+Desde entonces no supe qué sería de tu vida
+Desde entonces no supe si algún día regresabas
+Los amigos del pueblo preguntaron si volvías
+Llorando di la espalda, no les pude decir nada
+
+Ayer que regresé a mi pueblo
+Alguien me dijo que ya te casaste
+Mírame y dime si ya me olvidaste
+Me marcharé con los ojos aguados
+
+Y vuela, vuela, por otro rumbo
+Ve y sueña, sueña, que el mundo es tuyo
+Tú ya no puedes volar conmigo
+Aunque mis sueños se irán contigo
+
+Un día recibí tu carta
+Quise leerla y era una hoja en blanco
+Pues de tu vida nunca supe nada
+¿Cómo preguntas que si aún te amo?`,
+      fr: `C'était impossible de sortir ton souvenir de ma tête
+C'était impossible d'oublier qu'un jour je t'ai aimée
+Tant de temps s'est écoulé depuis le jour où tu es partie
+Là, j'ai compris que les adieux sont très tristes
+Je n'aurais jamais imaginé qu'un train emporterait dans son voyage
+Ces illusions que, enfants, nous nous étions jurées
+Tous tes sentiments, tu les as gardés dans tes bagages
+Tu as voulu me consoler et tu m'as dit "je t'aime"
+Depuis ce jour, je ne savais pas ce que serait ta vie
+Depuis ce jour, je ne savais pas si un jour tu revenais
+Les amis du village demandaient si tu revenais
+En pleurant, j'ai tourné le dos, je n'ai pu rien leur dire
+
+Hier, quand je suis revenu dans mon village
+Quelqu'un m'a dit que tu t'étais déjà mariée
+Regarde-moi et dis-moi si tu m'as déjà oublié
+Je m'en irai les yeux embués
+
+Et vole, vole, vers une autre direction
+Va et rêve, rêve, que le monde est à toi
+Tu ne peux plus voler avec moi
+Même si mes rêves partiront avec toi
+
+Un jour j'ai reçu ta lettre
+J'ai voulu la lire et c'était une feuille blanche
+Car de ta vie, je n'ai jamais rien su
+Comment peux-tu demander si je t'aime encore ?`
+    }
+  },
+  {
+    id: "manana-en-tu-olvido-zacarias-ferreira",
+    title: "Mañana en Tu Olvido",
+    artist: "Zacarías Ferreira",
+    year: 1999,
+    tags: ["Classique", "Sentimentale"],
+    color: "#4f46e5",
+    spotify: "https://open.spotify.com/track/105t5uR4P0d8M8d6y5sQ1K",
+    culture: {
+      context: "Une pièce maîtresse de Zacarías Ferreira, 'La Voz de la Ternura', sortie à la fin des années 90.",
+      meaning: "Une chanson poignante sur l'imminence d'une rupture, où l'artiste redoute le lendemain qui sera marqué par l'oubli de celle qu'il aime.",
+      artistInfo: "Zacarías Ferreira est l'un des artistes de bachata les plus constants, célèbre pour son style doux et mélodique.",
+      album: "Me Liberé"
+    },
+    lyrics: {
+      es: `Que mañana te vas
+y yo me quedo a vivir de recuerdos
+Que de nada sirvió la ilusión de mi amor
+para hacerte olvidar sus baisers
+Que no sientes por mí
+que jamás tu intención fue querer lastimarme
+Que en tu jardín no nacieron mis rosas
+pues tu amor brilla como el sol en tus ojos
+
+Y mañana en tu olvido
+Veré marchar mi vivir tras tu sombra
+Veré partirse en pedazos mi historia
+Cómo vivir si mi vida es contigo
+Cómo vas a dejarme
+después de haber sido luna en mi cielo
+Quiero entender pero cómo entender que no puedes amarme
+
+Cinco para las diez
+cada tic-tac del reloj me atormenta
+Diera el alma porque tarde el amanecer
+que esta noche transcurra lenta
+Que se tarde tu adiós
+el tiempo suficiente para que comprendas
+Que sin ti no podría vivir
+que sin ti me podría morir`,
+      fr: `Que demain tu t'en vas
+et je reste à vivre de souvenirs
+Que l'illusion de mon amour n'a servi à rien
+pour te faire oublier ses baisers
+Que tu ne ressens rien pour moi
+que jamais ton intention n'a été de me blesser
+Que dans ton jardin mes roses n'ont pas poussé
+car ton amour brille comme le soleil dans tes yeux
+
+Et demain dans ton oubli
+Je verrai ma vie s'en aller derrière ton ombre
+Je verrai mon histoire se briser en morceaux
+Comment vivre si ma vie est avec toi
+Comment vas-tu me laisser
+après avoir été la lune dans mon ciel
+Je veux comprendre, mais comment comprendre que tu ne peux pas m'aimer
+
+Cinq heures moins dix
+chaque tic-tac de l'horloge me tourmente
+Je donnerais mon âme pour que l'aube tarde
+que cette nuit s'écoule lentement
+Que ton adieu tarde
+le temps suffisant pour que tu comprennes
+Que sans toi, je ne pourrais pas vivre
+que sans toi, je pourrais mourir`
+    }
+  },
+  {
+    id: "volvio-el-dolor-luis-vargas",
+    title: "Volvió el Dolor",
+    artist: "Luis Vargas",
+    year: 1996,
+    tags: ["Classique", "Mélancolique"],
+    color: "#b91c1c",
+    spotify: "https://open.spotify.com/track/0x91J62P8oN7H4L7yE01sD",
+    culture: {
+      context: "Luis Vargas, 'El Rey Supremo', exprime ici toute la rudesse et la passion de la bachata traditionnelle des années 90.",
+      meaning: "L'histoire d'une trahison découverte par une lettre, où la douleur revient pour hanter l'artiste après avoir cru qu'il l'avait vaincue.",
+      artistInfo: "Luis Vargas est l'un des pionniers de la bachata moderne, célèbre pour son jeu de guitare virtuose et son style direct.",
+      album: "Volvió el Dolor"
+    },
+    lyrics: {
+      es: `Me mandaron una carta, mujer
+Y yo la recibí, no la quise leer
+Porque allí comprendí que tú me eras infiel
+Qué decían esos renglones de ti
+No te puedo decir, pero hay algo que sé
+Que tú vivías por él y yo moría por ti
+
+Yo soñaba con tenerte entre mis brazos, nena
+Con llevarte hasta el altar y hacerte mi mujer
+Dibujaba tu figura entre el mar y la arena
+Y hoy todas mis ilusiones ya no pueden ser
+
+El dolor, que un día de mí se fue
+Hoy volvió y yo no lo acepté
+Lo que pasó con mi vida, no se lo deseo a nadie
+Solo vivir de mentira, de una forma inexplicable
+
+Él disfrutará solo con tenerte a su lado
+Con besar tus labios y mirar tus ojos bien
+Y cuando se sienta de ti muy enamorado
+Nunca se te ocurra hacerle lo que a mí también`,
+      fr: `On m'a envoyé une lettre, femme
+Et je l'ai reçue, je n'ai pas voulu la lire
+Car j'y ai compris que tu m'étais infidèle
+Ce que disaient ces lignes sur toi
+Je ne peux pas te le dire, mais il y a quelque chose que je sais
+Que tu vivais pour lui et que je mourais pour toi
+
+Je rêvais de te tenir dans mes bras, bébé
+De t'emmener jusqu'à l'autel et de faire de toi ma femme
+Je dessinais ta silhouette entre la mer et le sable
+Et aujourd'hui, toutes mes illusions ne peuvent plus être
+
+La douleur, qui un jour m'a quitté
+Aujourd'hui est revenue et je ne l'ai pas acceptée
+Ce qui est arrivé dans ma vie, je ne le souhaite à personne
+Seulement vivre dans le mensonge, d'une manière inexplicable
+
+Il profitera simplement de t'avoir à ses côtés
+D'embrasser tes lèvres et de regarder tes yeux
+Et quand il se sentira très amoureux de toi
+N'aie jamais l'idée de faire ce que tu m'as fait à moi aussi`
+    }
+  },
+  {
+    id: "intentalo-tu-joe-veras",
+    title: "Inténtalo Tú",
+    artist: "Joe Veras",
+    year: 2003,
+    tags: ["Classique", "Danse"],
+    color: "#ea580c",
+    spotify: "https://open.spotify.com/track/0cW5q762jP5kR1w2WjJd0T",
+    culture: {
+      context: "Joe Veras 'El Hombre de tu Vida' a marqué l'année 2003 avec cet hymne romantique.",
+      meaning: "Un immense défi lancé à celle qui veut rompre : le chanteur lui demande d'essayer elle-même de l'oublier, car pour lui c'est impossible.",
+      artistInfo: "Joe Veras est connu pour son jeu de guitare cristallin et ses textes qui parlent au cœur des amoureux.",
+      album: "Desde mi Alma"
+    },
+    lyrics: {
+      es: `Me dices que debo olvidarte
+Porque eso es lo mejor para los dos
+¿Pero cómo crees que amándote tanto
+Puedo de mi alma arrancarte?
+Quizás para ti, resulte muy fácil
+Pero para mí, es algo imposible
+No puedo intentarlo, pensarlo es sufrir
+¿Cómo le digo al corazón que te olvide?
+
+Inténtalo tú
+A ver si puedes sacarme de tu vida
+A ver si logras olvidarte de mi amor
+Porque yo no puedo
+Inténtalo tú
+Porque yo sé que jamás podré olvidarte
+Será difícil para mí acostumbrarme
+A vivir sin ti
+¿Cómo te olvido?
+Inténtalo tú`,
+      fr: `Tu me dis que je dois t'oublier
+Parce que c'est ce qu'il y a de mieux pour nous deux
+Mais comment peux-tu croire qu'en t'aimant autant
+Je peux t'arracher de mon âme ?
+Peut-être que pour toi, c'est très facile
+Mais pour moi, c'est impossible
+Je ne peux pas essayer, rien que d'y penser, c'est souffrir
+Comment dire à mon cœur de t'oublier ?
+
+Essaie donc toi
+Pour voir si tu peux m'effacer de ta vie
+Pour voir si tu réussis à oublier mon amour
+Parce que moi, je ne peux pas
+Essaie donc toi
+Parce que je sais que je ne pourrai jamais t'oublier
+Il sera difficile pour moi de m'habituer
+À vivre sans toi
+Comment faire pour t'oublier ?
+Essaie donc toi`
+    }
+  },
+  {
+    id: "medicina-de-amor-raulin-rodriguez",
+    title: "Medicina de Amor",
+    artist: "Raulin Rodriguez",
+    year: 1994,
+    tags: ["Classique", "Passion"],
+    color: "#dc2626",
+    spotify: "https://open.spotify.com/track/5u0w3D5d5u1t5K6W4H8K6y",
+    culture: {
+      context: "L'un des plus grands succès de Raulín Rodríguez, dit 'El Cacique', au début des années 90.",
+      meaning: "Une métaphore puissante où l'amour est décrit comme une maladie (un 'cancer d'amour') dont seule la femme aimée détient le remède.",
+      artistInfo: "Raulín Rodríguez a aidé à populariser la bachata auprès de tous les publics avec son charisme et sa mélancolie unique.",
+      album: "Medicina de Amor"
+    },
+    lyrics: {
+      es: `Medicina de amor, quiero de ti
+Porque tú eras la mujer
+Que me puede curar mi cáncer de amor
+
+Que tan mal me porté mi corazón
+Que me tiene tanto rencor
+Y me ve muriendo, por culpa de tu amor
+
+Otro año pasó, muriendo voy
+No lo olvides mi corazón
+¿Quién me puede curar dándome tu amor?
+
+Porque no guardo rencor en mi corazón
+En mi corazón
+Tu recuerdo de amor me llevaré
+Y con él me consolaré
+Y quizás mi amor feliz seré
+
+Esta canción va dedicada
+Especialmente para una mujer
+Une mujer que ha acabado con mi alma, con mi vida`,
+      fr: `Médecine d'amour, je veux de toi
+Parce que tu étais la femme
+Qui peut guérir mon cancer d'amour
+
+Comme je me suis mal comporté, mon cœur
+Qui me garde tant de rancœur
+Et qui me voit mourir, à cause de ton amour
+
+Une autre année est passée, je meurs (lentement)
+Ne l'oublie pas, mon cœur
+Qui peut me guérir en me donnant ton amour ?
+
+Parce que je ne garde pas de rancœur dans mon cœur
+Dans mon cœur
+J'emporterai ton souvenir d'amour
+Et avec lui je me consolerai
+Et peut-être que je serai heureux, mon amour
+
+Cette chanson est dédiée
+Spécialement à une femme
+Une femme qui a détruit mon âme, ma vie`
+    }
+  },
+  {
+    id: "si-algun-dia-la-ves-sergio-vargas",
+    title: "Si Algún Día la Ves",
+    artist: "Sergio Vargas",
+    year: 2004,
+    tags: ["Classique", "Élégant"],
+    color: "#1e40af",
+    spotify: "https://open.spotify.com/track/6g0S5B0p09D4sN5M8eKz1k",
+    culture: {
+      context: "Sergio Vargas, 'El Negrito de Villa', apporte son élégance vocale à ce titre romantique des années 2000.",
+      meaning: "Un message confié à un voyageur, demandant de raconter comment va celle qui est partie, tout en espérant qu'elle n'ait pas oublié ses délires.",
+      artistInfo: "Sergio Vargas est une légende du merengue qui a toujours su interpréter la bachata avec une classe exceptionnelle.",
+      album: "Bohemio"
+    },
+    lyrics: {
+      es: `Se fue y me niego a creer que se fue
+Y tú que viajas, si algún día la ves
+Cuéntamelo, cuéntamelo
+Dime si lleva en su pelo el olor
+De lo que quise que fuera el amor
+
+Si aún soy el dueño de su gran sueño
+Prométeme que si la ves
+No pondrás en su piel lo que puse yo, delirios
+
+Yo la abracé sin miedo y me abrazó
+Y aún me escuece el fuego
+Que me quemó su brillo, ay, su brillo
+Tiene la edad del primer corazón
+
+Yo que una noche la dejé escapar
+Y me reí sin saber llorar
+Si la ves perdida, dile que cambie de vida`,
+      fr: `Elle est partie et je refuse de croire qu'elle est partie
+Et toi qui voyages, si un jour tu la vois
+Raconte-le-moi, raconte-le-moi
+Dis-moi si elle porte dans ses cheveux l'odeur
+De ce que je voulais que l'amour soit
+
+Si je suis encore le propriétaire de son grand rêve
+Promets-moi que si tu la vois
+Tu ne mettras pas sur sa peau ce que j'y ai mis, des délires
+
+Je l'ai serrée sans peur et elle m'a serré
+Et le feu me brûle encore
+Celui qui m'a consumé par son éclat, oh, son éclat
+Elle a l'âge du premier cœur
+
+Moi qui, une nuit, l'ai laissée s'échapper
+Et j'ai ri sans savoir pleurer
+Si tu la vois perdue, dis-lui de changer de vie`
+    }
+  },
+  {
+    id: "piensa-en-mi-junior-jorge",
+    title: "Piensa en Mí",
+    artist: "Junior & Jorge",
+    year: 1998,
+    tags: ["Classique", "Duo"],
+    color: "#15803d",
+    spotify: "https://open.spotify.com/track/7p5G4w8DovWq4m0Yv8XlJq",
+    culture: {
+      context: "Le duo Junior & Jorge a marqué les années 90 avec des harmonies vocales impeccables, comme sur ce titre 'Piensa en Mí'.",
+      meaning: "Une invitation directe à oublier un amant décevant pour se tourner vers celui qui l'aime vraiment, avec des envies de voyage et de bonheur.",
+      artistInfo: "Junior & Jorge étaient célèbres pour moderniser les mélodies traditionnelles avec des arrangements plus urbains et doux.",
+      album: "Piensa en Mi"
+    },
+    lyrics: {
+      es: `En vez de ponerte a pensar en él
+En vez de que vivas llorando por él
+Piensa en mí, llora por mí
+Llámame a mí, no, no le hables a él
+Piensa en mí, llora por mí
+Llámame a mí, no, no le hables a él, a él.
+No llores por él.
+
+Recuerda que hace mucho tiempo te amo
+Te amo, te amo, oh-oh
+Quiero hacerte, muy, muy feliz
+Vamos a tomar el primer avión
+Con destino a la felicidad
+La felicidad, para mí eres tú.`,
+      fr: `Au lieu de te mettre à penser à lui
+Au lieu de vivre en pleurant pour lui
+Pense à moi, pleure pour moi
+Appelle-moi, non, ne lui parle pas à lui
+Pense à moi, pleure pour moi
+Appelle-moi, non, ne lui parle pas à lui, à lui
+Ne pleure pas pour lui.
+
+Rappelle-toi que depuis longtemps je t'aime
+Je t'aime, je t'aime, oh-oh
+Je veux te rendre, très, très heureuse
+Prenons le premier avion
+En direction du bonheur
+Le bonheur, pour moi, c'est toi.`
+    }
   }
-];
-
-
+]
