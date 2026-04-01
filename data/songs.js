@@ -1810,7 +1810,7 @@ Mon cœur a un bypass
 Quand je te vois marcher
 Mon monde commence à tourner
 Cela me met tout en émoi
-Je ne sais pas où je vais finir`,
+Je ne sais pas où je vais finir`
     },
   },
   {
@@ -1822,7 +1822,7 @@ Je ne sais pas où je vais finir`,
     color: "#4f46e5",
     spotify: "https://open.spotify.com/search/Dardos%20Romeo%20Santos%20Prince%20Royce",
     lyrics: {
-      es: `[ Prince Royce]
+      es: `[Prince Royce]
 Por poquito te olvido de verdad, ya había dejado la bebida
 La señal que continúa mi mala racha, tus llamadas perdidas
 
@@ -1861,10 +1861,10 @@ Apagar las llamas, y así me quemo en tu fuego
 Ámame, solo un CC por lo menos
 Quiéreme, nada má' un chinchín, te lo ruego
 Cuidado, no abuses demasiado (Demasiado)
-
 Comprobado, tú eres un caramelo envenenado
 Ámame, solo un CC por lo menos
 Quiéreme, nada má' un chinchín, te lo ruego
+
 Me han voceado: "Bachatero aficiado" (Aficiado)
 Embriagado, dicen las malas lenguas, idiotizado
 
@@ -1878,6 +1878,7 @@ Ah ya, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
 Royce
 The biggest
 Ah-ah, I'm not okay
+
 [Prince Royce & Romeo Santos]
 Ya no quiero ser esa burla
 No me gusta que seas tan cruel
@@ -1886,11 +1887,13 @@ Ay, ay, ay, grito, me haces sufrir (Uh)
 Si tiras un dardo más, no voy a aguantar
 Me tiras un dardo más, me vas a matar
 Ay, ay, dolores, mal de amores
+
 Ay, ay, voy a llorar, mi amor (Uh)
 Si tiras un dardo más, voy a desangrar
 Si tiras un dardo más, me vas a matar
 Ouch
 You're killing me, ma
+
 Me han voceado: "Bachatero aficiado"
 Embriagado, dicen las malas lenguas, idiotizado`,
       fr: `[Prince Royce]
@@ -1910,10 +1913,10 @@ C'est peut-être à cause de Vénus que je ne peux pas
 Aime-moi, juste un peu au moins
 Aime-moi, juste un petit peu, je t'en supplie
 Attention, n'abuse pas trop (Trop)
-
 C'est prouvé, tu es un bonbon empoisonné
 Aime-moi, juste un peu au moins
 Aime-moi, juste un petit peu, je t'en supplie
+
 On m'a crié : "Bachatero amateur" (Amateur)
 Ivrogne, disent les mauvaises langues, idiotisé
 
@@ -1928,7 +1931,6 @@ Mon signe du Cancer est très vulnérable face à un Lion
 C'est peut-être à cause de Vénus que je ne peux pas
 Éteindre les flammes, et ainsi je brûle dans ton feu
 
-
 [Prince Royce & Romeo Santos]
 Aime-moi, juste un peu au moins
 Aime-moi, juste un petit peu, je t'en supplie
@@ -1936,6 +1938,7 @@ Attention, n'abuse pas trop (Trop)
 C'est prouvé, tu es un bonbon empoisonné
 Aime-moi, juste un peu au moins
 Aime-moi, juste un petit peu, je t'en supplie
+
 On m'a crié : "Bachatero amateur" (Amateur)
 Ivrogne, disent les mauvaises langues, idiotisé
 
@@ -1945,11 +1948,11 @@ Ah oui, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
 Ah oui, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya (Yaqui-ye, yaqui-ye, yaqui-ya)
 Ah oui, yaqui-yaqui-yaqui-ye, yaqui-yaqui-ya
 
-
 [Prince Royce]
 Royce
 Le plus grand
 Ah-ah, je ne vais pas bien
+
 [Prince Royce & Romeo Santos]
 Je ne veux plus être cette moquerie
 Je n'aime pas que tu sois si cruelle
@@ -1958,14 +1961,16 @@ Oh, oh, oh, je crie, tu me fais souffrir (Uh)
 Si tu lances une fléchette de plus, je ne vais pas tenir
 Si tu lances une fléchette de plus, tu vas me tuer
 Oh, oh, douleurs, mal d'amour
+
 Oh, oh, je vais pleurer, mon amour (Uh)
 Si tu lances une fléchette de plus, je vais saigner
 Si tu lances une fléchette de plus, tu vas me tuer
 
 Aïe
 Tu me tues, ma
+
 On m'a crié : "Bachatero amateur"
-Ivrogne, disent les mauvaises langues, idiotisé`,
+Ivrogne, disent les mauvaises langues, idiotisé`
     },
   },
   {
@@ -3522,7 +3527,7 @@ Israel palma, ton fils`
     year: 2025,
     tags: ["Sensual", "Classique"],
     color: "#f59e0b",
-    spotify: "https://open.spotify.com/search/Fanatico%20Dani%20J",
+    spotify: "https://open.spotify.com/search/Lokita%20Por%20Mi%20Prince%20Royce%20Romeo%20Santos",
     culture: {
       context: "Une collaboration historique en 2025 entre les deux rois de la Bachata, Prince Royce et Romeo Santos, marquant une nouvelle ère pour le genre.",
       meaning: "La chanson explore une relation passionnelle et 'toxique' avec humour, où les deux artistes célèbrent les défauts et la 'folie' de leur partenaire.",
@@ -3927,7 +3932,7 @@ Arriver si elle ne revient pas`
     year: 2002,
     tags: ["Classique", "Duo"],
     color: "#db2777",
-    spotify: "https://open.spotify.com/search/Ciego%20de%20Amor%20Anthony%20Santos",
+    spotify: "https://open.spotify.com/search/Ciego%20de%20Amor%20Anthony%20Santos%20Aventura",
     culture: {
       context: "Une collaboration légendaire entre Anthony Santos (Le Mayimbe) et Aventura (Le groupe qui a révolutionné la bachata urbaine).",
       meaning: "Un dialogue entre un père et son fils sur une trahison amoureuse, où le père refuse de croire aux infidélités de sa bien-aimée car il est 'aveugle d'amour'.",
@@ -5619,7 +5624,6 @@ Et te dévorer jusqu'aux os
 
 Cette nuit est une nuit de sexe
 Bébé, je connais le processus
-Pour te donner du plaisir en excès et tout le reste
 Et te dévorer jusqu'aux os`
     }
   }

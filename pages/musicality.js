@@ -214,7 +214,7 @@ export default function MusicalityTrainer() {
   }, []);
 
   // -- Utility for adding markers --
-  const addMarker = (type, label, color) => {
+  const addMarker = (type, label, color, emoji = '') => {
     const time = (wavesurfer.current && wavesurfer.current.getDuration() > 0) 
       ? wavesurfer.current.getCurrentTime() 
       : currentTime;
@@ -230,7 +230,8 @@ export default function MusicalityTrainer() {
       color, 
       id: Date.now(),
       note: '',
-      videoUrl: ''
+      videoUrl: '',
+      emoji: ''
     };
     const updatedMarkers = [...markers, newMarker].sort((a, b) => a.time - b.time);
     setMarkers(updatedMarkers);
@@ -239,7 +240,8 @@ export default function MusicalityTrainer() {
       localStorage.setItem(`markers-yt-${youtubeId}`, JSON.stringify(updatedMarkers));
     }
     
-    setActiveMarkerId(newMarker.id); // Auto-open for editing
+    // Auto-open for editing
+    setActiveMarkerId(newMarker.id);
   };
 
   const fetchUserSessions = async () => {
@@ -502,45 +504,27 @@ export default function MusicalityTrainer() {
               </div>
             </div>
 
-            <div className="source-url-input" style={{ width: '100%', maxWidth: '100%', padding: '0.5rem', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <span style={{ fontSize: '1.5rem' }}>🔗</span>
+            <div className="source-url-input-container">
+              <div className="input-wrapper">
+                <span className="field-label">URL DE LA VIDÉO</span>
                 <input
                   type="url"
+                  className="text-input"
                   placeholder="https://www.youtube.com/watch?v=..."
                   value={remoteUrl}
-                  onChange={e => { 
-                    setRemoteUrl(e.target.value); 
-                  }}
-                  style={{ 
-                    flex: 1,
-                    padding: '1rem', 
-                    fontSize: '1.1rem', 
-                    borderRadius: '12px', 
-                    border: '1px solid rgba(255,255,255,0.2)',
-                    background: 'rgba(0,0,0,0.5)',
-                    color: 'white'
-                  }}
+                  onChange={e => setRemoteUrl(e.target.value)}
                 />
               </div>
               
               {youtubeId && (
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{ fontSize: '1.5rem' }}>🔖</span>
+                <div className="input-wrapper animate-fade-in">
+                  <span className="field-label">TITRE DE LA SESSION (OPTIONNEL)</span>
                   <input
                     type="text"
-                    placeholder="Nom de la session (ex: Intro Guitare Mike)..."
+                    className="text-input"
+                    placeholder="Ex: Intro Guitare Mike, Routine Social..."
                     value={sessionTitle}
                     onChange={e => setSessionTitle(e.target.value)}
-                    style={{ 
-                      flex: 1,
-                      padding: '0.8rem 1rem', 
-                      fontSize: '0.95rem', 
-                      borderRadius: '12px', 
-                      border: '1px solid var(--accent-dim)',
-                      background: 'rgba(124, 58, 237, 0.05)',
-                      color: 'white'
-                    }}
                   />
                 </div>
               )}
@@ -711,11 +695,15 @@ export default function MusicalityTrainer() {
                       }}
                     >
                       <span className="marker-icon">
-                        {marker.type === 'bongo' && '🥁'}
-                        {marker.type === 'roll' && '🌀'}
-                        {marker.type === 'break' && '⚡'}
-                        {marker.type === 'guira' && '🥄'}
-                        {marker.type === 'custom' && '📝'}
+                        {marker.emoji || (
+                          <>
+                            {marker.type === 'bongo' && '🥁'}
+                            {marker.type === 'roll' && '🌀'}
+                            {marker.type === 'break' && '⚡'}
+                            {marker.type === 'guira' && '🥄'}
+                            {marker.type === 'custom' && '📍'}
+                          </>
+                        )}
                       </span>
                     </div>
                   );
@@ -757,7 +745,8 @@ export default function MusicalityTrainer() {
                     className="instrument-btn custom-marker" 
                     onClick={() => {
                       const label = prompt('Nom du marqueur ?');
-                      if (label) addMarker('custom', label, '#f59e0b');
+                      const emoji = prompt('Emoji pour le marqueur ?', '📍');
+                      if (label) addMarker('custom', label, '#f59e0b', emoji);
                     }}
                   >
                     <span className="icon">➕</span>
@@ -1926,7 +1915,6 @@ export default function MusicalityTrainer() {
           .instrument-btn { padding: 12px; min-width: 75px; border-radius: 16px; gap: 4px; }
           .instrument-btn .icon { font-size: 1.5rem; }
           .instrument-btn .name { font-size: 0.7rem; }
-        }
         }
       `}</style>
     </div>

@@ -1168,3 +1168,69 @@ body::before {
   background: var(--accent);
   color: white;
 }
+
+/* ─── MUSICALITY TRAINER REFINEMENTS ─── */
+.source-url-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.field-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.text-input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.3) !important;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.text-input:focus {
+  border-color: var(--accent);
+  background: rgba(168, 85, 247, 0.05) !important;
+  box-shadow: 0 0 0 4px var(--accent-dim);
+  outline: none;
+}
+
+.text-input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .trainer-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .source-header {
+    flex-direction: column !important;
+    gap: 16px;
+  }
+  
+  .source-title {
+    font-size: 1.2rem !important;
+  }
+  
+  .source-subtitle {
+    font-size: 0.9rem !important;
+  }
+}
