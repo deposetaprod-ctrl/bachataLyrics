@@ -21,6 +21,8 @@ export default function MusicalityTrainer() {
   const [recentLinks, setRecentLinks] = useState([]);
   const [userSessions, setUserSessions] = useState([]);
   const [sessionTitle, setSessionTitle] = useState('');
+  const [showHistory, setShowHistory] = useState(false);
+  const [saveStatus, setSaveStatus] = useState(''); // '', 'saving', 'saved', 'error'
 
   const [user, setUser] = useState(null);
   const [supabaseClient, setSupabaseClient] = useState(null);
@@ -266,27 +268,31 @@ export default function MusicalityTrainer() {
       return;
     }
     
-    setIsLoading(true);
-    const sessionData = {
-      user_id: user.id,
-      song_id: 'yt-' + youtubeId,
-      markers: markers,
-      title: sessionTitle || `Session - ${new Date().toLocaleDateString()}`,
-      url: remoteUrl,
-      updated_at: new Date().toISOString()
-    };
-
-    const { error } = await supabaseClient
-      .from('musicality_sessions')
-      .upsert(sessionData, { onConflict: 'user_id, song_id' });
-
-    setIsLoading(false);
-    if (error) alert("Erreur de sauvegarde : " + error.message);
-    else {
-      alert("Analyse sauvegardée dans ton catalogue ! ✅");
-      fetchUserSessions();
-    }
-  };
+     setIsLoading(true);
+     setSaveStatus('saving');
+     const sessionData = {
+       user_id: user.id,
+       song_id: 'yt-' + youtubeId,
+       markers: markers,
+       title: sessionTitle || `Session - ${new Date().toLocaleDateString()}`,
+       url: remoteUrl,
+       updated_at: new Date().toISOString()
+     };
+ 
+     const { error } = await supabaseClient
+       .from('musicality_sessions')
+       .upsert(sessionData, { onConflict: 'user_id, song_id' });
+ 
+     setIsLoading(false);
+     if (error) {
+       setSaveStatus('error');
+       alert("Erreur de sauvegarde : " + error.message);
+     } else {
+       setSaveStatus('saved');
+       setTimeout(() => setSaveStatus(''), 3000);
+       fetchUserSessions();
+     }
+   };
 
   const loadFromSupabase = async () => {
     if (!supabaseClient || !user || !youtubeId) return;
@@ -530,44 +536,68 @@ export default function MusicalityTrainer() {
               )}
             </div>
             
-            {((user && userSessions.length > 0) || (!user && recentLinks.length > 0)) && !youtubeId && (
+            {((user && userSessions.length > 0) || (!user && recentLinks.length > 0)) && (
               <div className="recent-links-section" style={{ marginTop: '1.5rem', textAlign: 'left' }}>
-                <h4 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '8px', paddingLeft: '8px' }}>
-                  {user ? 'Tes dernières sessions (Cloud)' : 'Dernières sessions (Local)'}
-                </h4>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  {user ? (
-                    userSessions.map((session, idx) => (
-                      <button 
-                        key={idx}
-                        onClick={() => {
-                          setRemoteUrl(session.url);
-                          setSessionTitle(session.title);
-                        }}
-                        style={recentButtonStyle}
-                        onMouseOver={recentButtonHover}
-                        onMouseOut={recentButtonNormal}
-                      >
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-                          <span style={{ fontWeight: 700 }}>🎬 {session.title || 'Sans titre'}</span>
-                          <span style={{ fontSize: '0.75rem', opacity: 0.5 }}>{new Date(session.updated_at).toLocaleDateString()}</span>
-                        </div>
-                      </button>
-                    ))
-                  ) : (
-                    recentLinks.map((link, idx) => (
-                      <button 
-                        key={idx}
-                        onClick={() => setRemoteUrl(link)}
-                        style={recentButtonStyle}
-                        onMouseOver={recentButtonHover}
-                        onMouseOut={recentButtonNormal}
-                      >
-                        🔗 {link}
-                      </button>
-                    ))
-                  )}
-                </div>
+                <button 
+                  onClick={() => setShowHistory(!showHistory)}
+                  style={{ 
+                    background: 'none', 
+                    border: 'none', 
+                    color: 'var(--accent)', 
+                    fontSize: '0.85rem', 
+                    fontWeight: 700, 
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    marginBottom: showHistory ? '12px' : '0'
+                  }}
+                >
+                  {showHistory ? '▼ Masquer l\'historique' : '▶ Voir mes dernières sessions'}
+                </button>
+
+                {showHistory && (
+                  <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <h4 style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                      {user ? 'Cloud (Dernières analyses)' : 'Local (Sessions récentes)'}
+                    </h4>
+                    {user ? (
+                      userSessions.map((session, idx) => (
+                        <button 
+                          key={idx}
+                          onClick={() => {
+                            setRemoteUrl(session.url);
+                            setSessionTitle(session.title);
+                            setShowHistory(false);
+                          }}
+                          style={recentButtonStyle}
+                          onMouseOver={recentButtonHover}
+                          onMouseOut={recentButtonNormal}
+                        >
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+                            <span style={{ fontWeight: 700 }}>🎬 {session.title || 'Sans titre'}</span>
+                            <span style={{ fontSize: '0.75rem', opacity: 0.5 }}>{new Date(session.updated_at).toLocaleDateString()}</span>
+                          </div>
+                        </button>
+                      ))
+                    ) : (
+                      recentLinks.map((link, idx) => (
+                        <button 
+                          key={idx}
+                          onClick={() => {
+                            setRemoteUrl(link);
+                            setShowHistory(false);
+                          }}
+                          style={recentButtonStyle}
+                          onMouseOver={recentButtonHover}
+                          onMouseOut={recentButtonNormal}
+                        >
+                          🔗 {link}
+                        </button>
+                      ))
+                    )}
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -789,14 +819,35 @@ export default function MusicalityTrainer() {
 
                 <div className="spacer" />
 
-              <button 
-                className="btn-icon-secondary" 
-                onClick={user ? saveToSupabase : () => setShowLoginModal(true)}
-                disabled={isAuthLoading}
-                title={user ? 'Sauvegarder dans le Cloud' : 'Se connecter pour sauvegarder'}
-              >
-                {user ? '☁️' : '👤'}
-              </button>
+               <button 
+                 className={`btn-icon-secondary ${saveStatus === 'saved' ? 'success' : ''}`} 
+                 onClick={user ? saveToSupabase : () => setShowLoginModal(true)}
+                 disabled={isAuthLoading || saveStatus === 'saving'}
+                 title={user ? 'Sauvegarder dans le Cloud' : 'Se connecter pour sauvegarder'}
+                 style={{ 
+                   position: 'relative',
+                   background: saveStatus === 'saved' ? 'rgba(16, 185, 129, 0.2)' : 'rgba(255, 255, 255, 0.05)',
+                   borderColor: saveStatus === 'saved' ? '#10b981' : 'var(--border)'
+                 }}
+               >
+                 {saveStatus === 'saving' ? '⏳' : (saveStatus === 'saved' ? '✅' : (user ? '☁️' : '👤'))}
+                 {saveStatus === 'saved' && (
+                   <span style={{ 
+                     position: 'absolute', 
+                     top: '-25px', 
+                     left: '50%', 
+                     transform: 'translateX(-50%)', 
+                     fontSize: '0.7rem', 
+                     background: '#10b981', 
+                     color: 'white', 
+                     padding: '2px 8px', 
+                     borderRadius: '4px',
+                     whiteSpace: 'nowrap'
+                   }}>
+                     Sauvegardé !
+                   </span>
+                 )}
+               </button>
               
               <button 
                 className="btn-icon-secondary" 
