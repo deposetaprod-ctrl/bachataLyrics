@@ -375,23 +375,7 @@ export default function MusicalityTrainer() {
     setIsLoading(false);
   };
 
-  // -- Keyboard Shortcuts for Recording --
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (!isRecording) return;
-      
-      switch (e.key.toLowerCase()) {
-        case 'b': addMarker('bongo', 'Bongo', '#3b82f6'); break;
-        case 'r': addMarker('roll', 'Bongo Roll', '#a855f7'); break;
-        case 'k': addMarker('break', 'Break', '#ef4444'); break;
-        case 'g': addMarker('guira', 'Guira', '#10b981'); break;
-        default: return;
-      }
-    };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isRecording, markers, youtubeId, currentTime]);
 
   // -- Warning System (HUD) --
   useEffect(() => {
