@@ -6,6 +6,7 @@ import { songs } from '../data/songs';
 import { SpotifyIcon } from '../components/SpotifyIcon';
 import AuthModal from '../components/AuthModal';
 import Navbar from '../components/Navbar';
+import SeoFooter from '../components/SeoFooter';
 
 export default function Home() {
   const router = useRouter();
@@ -116,7 +117,51 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bachata Flow — Paroles de Bachata en Français</title>
+        <title>Bachata Flow — Paroles de Bachata en Français | Traductions Bilingues</title>
+        <meta name="description" content={`Découvrez ${songs.length} paroles de bachata traduites en français. Textes originaux en espagnol avec traduction française côte à côte — Romeo Santos, Prince Royce, Jensen et plus.`} />
+        <meta property="og:title" content="Bachata Flow — Paroles de Bachata en Français" />
+        <meta property="og:description" content={`${songs.length} paroles de bachata avec traduction française. Textes bilingues, analyse musicale et progression de danse.`} />
+        <meta property="og:url" content="https://bachatalyrics.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Bachata Flow",
+              "alternateName": "Bachata Lyrics",
+              "url": "https://bachatalyrics.com",
+              "description": "Paroles de bachata bilingues (espagnol / français), analyse musicale et progression de danse.",
+              "inLanguage": ["fr", "es"],
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://bachatalyrics.com/?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "name": "Paroles de Bachata",
+              "description": "Collection de paroles de bachata traduites en français",
+              "numberOfItems": songs.length,
+              "itemListElement": songs.slice(0, 20).map((song, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "url": `https://bachatalyrics.com/song/${song.id}`,
+                "name": `${song.title} — ${song.artist}`
+              }))
+            })
+          }}
+        />
       </Head>
       <Script 
         src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" 
@@ -439,10 +484,8 @@ export default function Home() {
         </div>
       )}
 
-      {/* ─── FOOTER ─── */}
-      <footer className="footer">
-        <p>Fait avec <span>♥</span> pour les amoureux de bachata · {new Date().getFullYear()}</p>
-      </footer>
+      {/* ─── FOOTER SEO ─── */}
+      <SeoFooter currentPage="home" />
 
       {/* ─── SUGGESTION MODAL ─── */}
       {isModalOpen && (

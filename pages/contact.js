@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
+import SeoFooter from '../components/SeoFooter';
 
 export default function Contact() {
   const router = useRouter();
@@ -33,8 +34,11 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact — Bachata Lyrics</title>
-        <meta name="description" content="Envoie-nous un message !" />
+        <title>Contact — Bachata Flow | Proposez une chanson ou signalez un bug</title>
+        <meta name="description" content="Contactez l'équipe Bachata Flow. Proposez une chanson de bachata à ajouter, signalez un bug ou envoyez-nous vos suggestions." />
+        <meta property="og:title" content="Contact — Bachata Flow" />
+        <meta property="og:description" content="Contactez-nous pour proposer une chanson, signaler un bug ou nous écrire." />
+        <meta property="og:url" content="https://bachatalyrics.com/contact" />
       </Head>
 
       <Navbar onLoginClick={() => router.push('/')} />
@@ -129,9 +133,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <footer className="footer">
-        <p>Fait avec <span>♥</span> pour les amoureux de bachata · {new Date().getFullYear()}</p>
-      </footer>
+      <SeoFooter currentPage="contact" />
     </>
   );
 }

@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { passes } from '../data/passes';
 import AuthModal from '../components/AuthModal';
 import Navbar from '../components/Navbar';
+import SeoFooter from '../components/SeoFooter';
 
 export default function Passes() {
   const router = useRouter();
@@ -65,7 +66,11 @@ export default function Passes() {
   return (
     <>
       <Head>
-        <title>Passes & Mouvements — Bachata Flow</title>
+        <title>Passes & Mouvements de Bachata — Apprends par l'image | Bachata Flow</title>
+        <meta name="description" content="Découvrez les passes et mouvements de bachata en vidéo. Apprenez la bachata sensual, dominicaine et d'influence avec des tutoriels visuels." />
+        <meta property="og:title" content="Passes & Mouvements de Bachata — Bachata Flow" />
+        <meta property="og:description" content="Catalogue de passes de bachata en vidéo. Bachata sensual, dominicaine, influence et plus." />
+        <meta property="og:url" content="https://bachatalyrics.com/passes" />
         <style dangerouslySetInnerHTML={{ __html: `
           .passe-video-container { position: relative; width: 100%; aspect-ratio: 4/5; background: #000; overflow: hidden; border-bottom: 1px solid var(--border); }
           .passe-video { width: 100%; height: 100%; object-fit: contain; display: block; }
@@ -183,10 +188,8 @@ export default function Passes() {
         )}
       </div>
       
-      {/* ─── FOOTER ─── */}
-      <footer className="footer">
-        <p>Fait avec <span style={{ color: '#3b82f6' }}>♥</span> pour les amoureux de la danse · {new Date().getFullYear()}</p>
-      </footer>
+      {/* ─── FOOTER SEO ─── */}
+      <SeoFooter currentPage="passes" />
     </>
   );
 }

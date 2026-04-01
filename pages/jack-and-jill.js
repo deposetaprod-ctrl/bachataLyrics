@@ -226,7 +226,11 @@ export default function JackAndJill() {
   return (
     <>
       <Head>
-        <title>Jack & Jill Training — Bachata Flow</title>
+        <title>Jack & Jill Training — 30 Minutes d'Entraînement Bachata | Bachata Flow</title>
+        <meta name="description" content="Entraîne-toi au Jack & Jill avec 30 minutes de musique bachata aléatoire. Change de style toutes les 30 secondes pour challenger ta danse." />
+        <meta property="og:title" content="Jack & Jill Training — Bachata Flow" />
+        <meta property="og:description" content="30 minutes d'entraînement Jack & Jill avec playlist bachata générée automatiquement." />
+        <meta property="og:url" content="https://bachatalyrics.com/jack-and-jill" />
       </Head>
 
       <Script 

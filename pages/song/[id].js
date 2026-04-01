@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { songs } from '../../data/songs';
 import { SpotifyIcon } from '../../components/SpotifyIcon';
 import Navbar from '../../components/Navbar';
+import SeoFooter from '../../components/SeoFooter';
 
 export async function getStaticPaths() {
   const paths = songs.map((s) => ({ params: { id: s.id } }));
@@ -55,10 +56,39 @@ export default function SongPage({ song }) {
   return (
     <>
       <Head>
-        <title>{song.title} — {song.artist} | Bachata Lyrics</title>
+        <title>{song.title} — {song.artist} | Paroles & Traduction Française | Bachata Flow</title>
         <meta
           name="description"
-          content={`Paroles de ${song.title} par ${song.artist} en espagnol avec traduction française.`}
+          content={`Paroles de « ${song.title} » par ${song.artist} (${song.year}) en espagnol avec traduction française côte à côte. Découvrez le sens, le contexte culturel et l'artiste.`}
+        />
+        <meta property="og:title" content={`${song.title} — ${song.artist} | Bachata Flow`} />
+        <meta property="og:description" content={`Paroles bilingues de « ${song.title} » par ${song.artist}. Texte original espagnol + traduction française.`} />
+        <meta property="og:url" content={`https://bachatalyrics.com/song/${song.id}`} />
+        <meta property="og:type" content="music.song" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MusicRecording",
+              "name": song.title,
+              "byArtist": {
+                "@type": "MusicGroup",
+                "name": song.artist
+              },
+              "datePublished": String(song.year),
+              "genre": "Bachata",
+              "inLanguage": ["es", "fr"],
+              "description": `Paroles de ${song.title} par ${song.artist} (${song.year}) — traduction française`,
+              "url": `https://bachatalyrics.com/song/${song.id}`,
+              ...(song.culture?.album && { "inAlbum": { "@type": "MusicAlbum", "name": song.culture.album } }),
+              "isPartOf": {
+                "@type": "WebSite",
+                "name": "Bachata Flow",
+                "url": "https://bachatalyrics.com"
+              }
+            })
+          }}
         />
       </Head>
 
@@ -293,10 +323,8 @@ export default function SongPage({ song }) {
           </div>
         </div>
 
-        {/* ─── FOOTER ─── */}
-        <footer className="footer">
-          <p>Fait avec <span>♥</span> pour les amoureux de bachata · {new Date().getFullYear()}</p>
-        </footer>
+        {/* ─── FOOTER SEO ─── */}
+        <SeoFooter currentPage="song" />
       </div>
     </>
   );
