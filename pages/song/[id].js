@@ -57,6 +57,7 @@ export default function SongPage({ song }) {
     <>
       <Head>
         <title>{song.title} — {song.artist} | Paroles & Traduction Française | Bachata Flow</title>
+        <link rel="canonical" href={`https://bachatalyrics.com/song/${song.id}`} />
         <meta
           name="description"
           content={`Paroles de « ${song.title} » par ${song.artist} (${song.year}) en espagnol avec traduction française côte à côte. Découvrez le sens, le contexte culturel et l'artiste.`}

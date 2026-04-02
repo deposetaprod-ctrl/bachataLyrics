@@ -37,20 +37,20 @@ function generateSiteMap(songs) {
        <changefreq>yearly</changefreq>
        <priority>0.3</priority>
      </url>
-     ${songs
-       .map(({ id, year }) => {
-         // Use Jan 1 of the song's year as a rough lastmod
-         const songDate = `${year}-01-01`;
-         return `
-       <url>
-           <loc>${`${EXTERNAL_DATA_URL}/song/${id}`}</loc>
-           <lastmod>${songDate}</lastmod>
-           <changefreq>monthly</changefreq>
-           <priority>0.6</priority>
-       </url>
-     `;
-       })
-       .join('')}
+      ${songs
+        .map(({ id, dateAdded, year }) => {
+          // Use dateAdded (precise) if available, otherwise fall back to Jan 1 of the song's year
+          const songDate = dateAdded || `${year}-01-01`;
+          return `
+        <url>
+            <loc>${`${EXTERNAL_DATA_URL}/song/${id}`}</loc>
+            <lastmod>${songDate}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+        </url>
+      `;
+        })
+        .join('')}
    </urlset>
  `;
 }
