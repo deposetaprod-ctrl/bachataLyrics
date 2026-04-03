@@ -248,11 +248,33 @@ export default function MusicalityTrainer() {
     setActiveMarkerId(newMarker.id);
   };
 
+  const timeAgo = (dateStr) => {
+    const diff = Date.now() - new Date(dateStr).getTime();
+    const mins = Math.floor(diff / 60000);
+    if (mins < 1) return 'à l\'instant';
+    if (mins < 60) return `il y a ${mins}min`;
+    const hours = Math.floor(mins / 60);
+    if (hours < 24) return `il y a ${hours}h`;
+    const days = Math.floor(hours / 24);
+    if (days < 7) return `il y a ${days}j`;
+    return new Date(dateStr).toLocaleDateString();
+  };
+
+  const toggleSessionPublic = async (songId, currentValue) => {
+    if (!supabaseClient || !user) return;
+    await supabaseClient
+      .from('musicality_sessions')
+      .update({ is_public: !currentValue })
+      .eq('user_id', user.id)
+      .eq('song_id', songId);
+    fetchUserSessions();
+  };
+
   const fetchUserSessions = async () => {
     if (!supabaseClient || !user) return;
     const { data, error } = await supabaseClient
       .from('musicality_sessions')
-      .select('song_id, title, url, updated_at')
+      .select('song_id, title, url, updated_at, is_public')
       .eq('user_id', user.id)
       .order('updated_at', { ascending: false })
       .limit(5);
@@ -571,22 +593,61 @@ export default function MusicalityTrainer() {
                     </h4>
                     {user ? (
                       userSessions.map((session, idx) => (
-                        <button 
+                        <div 
                           key={idx}
-                          onClick={() => {
-                            setRemoteUrl(session.url);
-                            setSessionTitle(session.title);
-                            setShowHistory(false);
+                          style={{
+                            background: 'rgba(255,255,255,0.03)',
+                            border: '1px solid rgba(255,255,255,0.08)',
+                            padding: '14px 16px',
+                            borderRadius: '14px',
+                            transition: 'all 0.2s',
+                            cursor: 'pointer'
                           }}
-                          style={recentButtonStyle}
-                          onMouseOver={recentButtonHover}
-                          onMouseOut={recentButtonNormal}
+                          onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.borderColor = 'rgba(124,58,237,0.3)'; }}
+                          onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.03)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; }}
                         >
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-                            <span style={{ fontWeight: 700 }}>🎬 {session.title || 'Sans titre'}</span>
-                            <span style={{ fontSize: '0.75rem', opacity: 0.5 }}>{new Date(session.updated_at).toLocaleDateString()}</span>
+                          <div 
+                            onClick={() => {
+                              setRemoteUrl(session.url);
+                              setSessionTitle(session.title);
+                              setShowHistory(false);
+                            }}
+                            style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', marginBottom: '8px' }}
+                          >
+                            <span style={{ fontWeight: 700, fontSize: '0.9rem', color: 'white' }}>🎵 {session.title || 'Sans titre'}</span>
+                            <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.35)', fontWeight: 500 }}>{timeAgo(session.updated_at)}</span>
                           </div>
-                        </button>
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                            <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.3)' }}>🔗 {(() => { try { return new URL(session.url).hostname.replace('www.', ''); } catch { return 'lien'; } })()}</span>
+                            <div 
+                              onClick={(e) => { e.stopPropagation(); toggleSessionPublic(session.song_id, session.is_public); }}
+                              style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}
+                              title={session.is_public ? 'Cliquer pour rendre privé' : 'Cliquer pour partager'}
+                            >
+                              <span style={{ fontSize: '0.7rem', color: session.is_public ? 'var(--accent)' : 'rgba(255,255,255,0.3)', fontWeight: 600 }}>
+                                {session.is_public ? 'Public' : 'Privé'}
+                              </span>
+                              <div style={{
+                                width: '36px', height: '20px',
+                                borderRadius: '10px',
+                                background: session.is_public ? 'var(--accent)' : 'rgba(255,255,255,0.1)',
+                                position: 'relative',
+                                transition: 'background 0.25s ease'
+                              }}>
+                                <div style={{
+                                  width: '16px', height: '16px',
+                                  borderRadius: '50%',
+                                  background: 'white',
+                                  position: 'absolute',
+                                  top: '2px',
+                                  left: session.is_public ? '18px' : '2px',
+                                  transition: 'left 0.25s ease',
+                                  boxShadow: '0 1px 3px rgba(0,0,0,0.3)'
+                                }} />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       ))
                     ) : (
                       recentLinks.map((link, idx) => (
@@ -891,34 +952,6 @@ export default function MusicalityTrainer() {
                  )}
                </button>
 
-               {user && (
-                 <div className="visibility-toggle" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: '12px' }}>
-                   <button 
-                     type="button"
-                     className={`btn-toggle-mini ${isPublic ? 'active' : ''}`}
-                     onClick={() => setIsPublic(!isPublic)}
-                     title={isPublic ? 'Visible par la communauté' : 'Session privée'}
-                     style={{
-                       background: isPublic ? 'rgba(124, 58, 237, 0.2)' : 'rgba(255, 255, 255, 0.05)',
-                       border: '1px solid',
-                       borderColor: isPublic ? 'var(--accent)' : 'rgba(255, 255, 255, 0.1)',
-                       color: isPublic ? 'white' : 'rgba(255, 255, 255, 0.5)',
-                       padding: '6px 12px',
-                       borderRadius: '20px',
-                       fontSize: '0.75rem',
-                       fontWeight: 700,
-                       cursor: 'pointer',
-                       transition: 'all 0.2s',
-                       display: 'flex',
-                       alignItems: 'center',
-                       gap: '6px',
-                       outline: 'none'
-                     }}
-                   >
-                     {isPublic ? '🔓 Public' : '🔒 Privé'}
-                   </button>
-                 </div>
-               )}
               
               <button 
                 className="btn-icon-secondary" 
