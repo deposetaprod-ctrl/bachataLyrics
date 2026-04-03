@@ -23,6 +23,8 @@ export default function MusicalityTrainer() {
   const [sessionTitle, setSessionTitle] = useState('');
   const [showHistory, setShowHistory] = useState(false);
   const [saveStatus, setSaveStatus] = useState(''); // '', 'saving', 'saved', 'error'
+  const [isPublic, setIsPublic] = useState(false);
+  const [publicSessions, setPublicSessions] = useState([]);
 
   const [user, setUser] = useState(null);
   const [supabaseClient, setSupabaseClient] = useState(null);
@@ -276,6 +278,7 @@ export default function MusicalityTrainer() {
        markers: markers,
        title: sessionTitle || `Session - ${new Date().toLocaleDateString()}`,
        url: remoteUrl,
+       is_public: isPublic,
        updated_at: new Date().toISOString()
      };
  
@@ -299,7 +302,7 @@ export default function MusicalityTrainer() {
     
     const { data, error } = await supabaseClient
       .from('musicality_sessions')
-      .select('markers, title')
+      .select('markers, title, is_public')
       .eq('user_id', user.id)
       .eq('song_id', 'yt-' + youtubeId)
       .single();
@@ -307,12 +310,29 @@ export default function MusicalityTrainer() {
     if (data) {
       if (data.markers) setMarkers(data.markers);
       if (data.title) setSessionTitle(data.title);
+      if (data.hasOwnProperty('is_public')) setIsPublic(data.is_public);
     }
   };
 
   useEffect(() => {
     if (user && youtubeId) loadFromSupabase();
   }, [user, youtubeId]);
+
+  const fetchPublicSessions = async () => {
+    if (!supabaseClient) return;
+    const { data, error } = await supabaseClient
+      .from('musicality_sessions')
+      .select('user_id, song_id, title, url, updated_at')
+      .eq('is_public', true)
+      .order('updated_at', { ascending: false })
+      .limit(10);
+
+    if (data) setPublicSessions(data);
+  };
+
+  useEffect(() => {
+    fetchPublicSessions();
+  }, [supabaseClient]);
 
 
 
@@ -586,6 +606,40 @@ export default function MusicalityTrainer() {
                     )}
                   </div>
                 )}
+                
+                {publicSessions.length > 0 && (
+                  <div className="community-showcase animate-fade-in" style={{ marginTop: '2rem' }}>
+                    <h4 style={{ fontSize: '0.8rem', color: 'var(--accent)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.1em', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <span style={{ fontSize: '1.2rem' }}>🌎</span> Analyses de la Communauté
+                    </h4>
+                    <div className="public-sessions-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '12px' }}>
+                      {publicSessions.map((session, idx) => (
+                        <button 
+                          key={idx}
+                          onClick={() => {
+                            setRemoteUrl(session.url);
+                            setSessionTitle(session.title);
+                          }}
+                          style={{
+                            ...recentButtonStyle,
+                            padding: '16px',
+                            background: 'rgba(124, 58, 237, 0.05)',
+                            border: '1px solid rgba(124, 58, 237, 0.2)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'flex-start',
+                            gap: '4px'
+                          }}
+                          onMouseOver={recentButtonHover}
+                          onMouseOut={(e) => e.currentTarget.style.background = 'rgba(124, 58, 237, 0.05)'}
+                        >
+                          <span style={{ fontWeight: 800, fontSize: '0.85rem' }}>{session.title || 'Analyse sans titre'}</span>
+                          <span style={{ fontSize: '0.7rem', opacity: 0.6 }}>🔗 {new URL(session.url).hostname.replace('www.', '')}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -836,6 +890,35 @@ export default function MusicalityTrainer() {
                    </span>
                  )}
                </button>
+
+               {user && (
+                 <div className="visibility-toggle" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: '12px' }}>
+                   <button 
+                     type="button"
+                     className={`btn-toggle-mini ${isPublic ? 'active' : ''}`}
+                     onClick={() => setIsPublic(!isPublic)}
+                     title={isPublic ? 'Visible par la communauté' : 'Session privée'}
+                     style={{
+                       background: isPublic ? 'rgba(124, 58, 237, 0.2)' : 'rgba(255, 255, 255, 0.05)',
+                       border: '1px solid',
+                       borderColor: isPublic ? 'var(--accent)' : 'rgba(255, 255, 255, 0.1)',
+                       color: isPublic ? 'white' : 'rgba(255, 255, 255, 0.5)',
+                       padding: '6px 12px',
+                       borderRadius: '20px',
+                       fontSize: '0.75rem',
+                       fontWeight: 700,
+                       cursor: 'pointer',
+                       transition: 'all 0.2s',
+                       display: 'flex',
+                       alignItems: 'center',
+                       gap: '6px',
+                       outline: 'none'
+                     }}
+                   >
+                     {isPublic ? '🔓 Public' : '🔒 Privé'}
+                   </button>
+                 </div>
+               )}
               
               <button 
                 className="btn-icon-secondary" 
