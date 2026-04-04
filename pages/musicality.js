@@ -235,7 +235,7 @@ export default function MusicalityTrainer() {
       id: Date.now(),
       note: '',
       videoUrl: '',
-      emoji: ''
+      emoji: emoji
     };
     const updatedMarkers = [...markers, newMarker].sort((a, b) => a.time - b.time);
     setMarkers(updatedMarkers);
@@ -471,7 +471,7 @@ export default function MusicalityTrainer() {
   const recentButtonStyle = {
     background: 'rgba(255,255,255,0.05)',
     border: '1px solid rgba(255,255,255,0.1)',
-    padding: '12px 16px',
+    padding: '8px 12px',
     borderRadius: '12px',
     color: 'white',
     textAlign: 'left',
@@ -588,9 +588,6 @@ export default function MusicalityTrainer() {
 
                 {showHistory && (
                   <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    <h4 style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                      {user ? 'Cloud (Dernières analyses)' : 'Local (Sessions récentes)'}
-                    </h4>
                     {user ? (
                       userSessions.map((session, idx) => (
                         <div 
@@ -598,7 +595,7 @@ export default function MusicalityTrainer() {
                           style={{
                             background: 'rgba(255,255,255,0.03)',
                             border: '1px solid rgba(255,255,255,0.08)',
-                            padding: '14px 16px',
+                            padding: '10px 14px',
                             borderRadius: '14px',
                             transition: 'all 0.2s',
                             cursor: 'pointer'
@@ -617,8 +614,7 @@ export default function MusicalityTrainer() {
                             <span style={{ fontWeight: 700, fontSize: '0.9rem', color: 'white' }}>🎵 {session.title || 'Sans titre'}</span>
                             <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.35)', fontWeight: 500 }}>{timeAgo(session.updated_at)}</span>
                           </div>
-                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                            <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.3)' }}>🔗 {(() => { try { return new URL(session.url).hostname.replace('www.', ''); } catch { return 'lien'; } })()}</span>
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
                             <div 
                               onClick={(e) => { e.stopPropagation(); toggleSessionPublic(session.song_id, session.is_public); }}
                               style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}
@@ -683,7 +679,7 @@ export default function MusicalityTrainer() {
                           }}
                           style={{
                             ...recentButtonStyle,
-                            padding: '16px',
+                            padding: '10px 14px',
                             background: 'rgba(124, 58, 237, 0.05)',
                             border: '1px solid rgba(124, 58, 237, 0.2)',
                             display: 'flex',
@@ -695,7 +691,6 @@ export default function MusicalityTrainer() {
                           onMouseOut={(e) => e.currentTarget.style.background = 'rgba(124, 58, 237, 0.05)'}
                         >
                           <span style={{ fontWeight: 800, fontSize: '0.85rem' }}>{session.title || 'Analyse sans titre'}</span>
-                          <span style={{ fontSize: '0.7rem', opacity: 0.6 }}>🔗 {new URL(session.url).hostname.replace('www.', '')}</span>
                         </button>
                       ))}
                     </div>
@@ -1038,12 +1033,6 @@ export default function MusicalityTrainer() {
                             onChange={(e) => updateMarker(m.id, { videoUrl: e.target.value })}
                           />
                         </div>
-                        
-                        {m.videoUrl && (
-                          <div className="marker-video-preview">
-                            <VideoPreview url={m.videoUrl} />
-                          </div>
-                        )}
 
                         <div className="edit-actions">
                           <button className="btn-close" onClick={() => setActiveMarkerId(null)}>OK</button>
@@ -2073,37 +2062,5 @@ export default function MusicalityTrainer() {
         }
       `}</style>
     </div>
-  );
-}
-
-function VideoPreview({ url }) {
-  if (!url) return null;
-  
-  const isYouTube = url.includes('youtube.com') || url.includes('youtu.be');
-  let youtubeId = '';
-  if (isYouTube) {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-    const match = url.match(regExp);
-    youtubeId = (match && match[2].length === 11) ? match[2] : '';
-  }
-
-  if (isYouTube && youtubeId) {
-    return (
-      <iframe 
-        width="100%" 
-        height="100%" 
-        src={`https://www.youtube.com/embed/${youtubeId}?autoplay=0&controls=1`}
-        frameBorder="0" 
-        allowFullScreen 
-      />
-    );
-  }
-
-  return (
-    <video 
-      src={url} 
-      controls 
-      style={{ width: '100%', height: '100%' }}
-    />
   );
 }
