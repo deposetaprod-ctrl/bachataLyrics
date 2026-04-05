@@ -1,5 +1,141 @@
 export const songs = [
   {
+    id: "dec-21-prince-royce",
+    title: "Dec. 21",
+    artist: "Prince Royce",
+    year: 2020,
+    dateAdded: "2026-04-05",
+    tags: ["Sensual"],
+    color: "#3b82f6",
+    spotify: "https://open.spotify.com/search/Dec.%2021%20Prince%20Royce",
+    culture: {
+      context: "Apparu sur l'album Alter Ego (2020), 'Dec. 21' est un morceau très sensuel de Prince Royce relatant des étreintes passionnées tenues secrètes.",
+      meaning: "Les paroles décrivent une relation purement physique, passionnelle et éphémère. Le chanteur est parfaitement conscient qu'il n'est 'qu'un moment' pour la fille, mais décrit l'intensité de ces nuits secrètes passées dans des chambres d'hôtel.",
+      artistInfo: "Prince Royce, souvent décrit comme le prince de la bachata moderne, mélange des sonorités pop urbaines aux bases de la bachata traditionnelle dominicaine.",
+      album: "Alter Ego"
+    },
+    lyrics: {
+      es: `Ouh
+Ouh
+Ouh
+Con mis manos, lentamente, acariciándote la espalda
+Yo quitándome las ganas
+Cómo te extraño en mi cama
+Tus gemidos en el cielo
+Yo tocándote, elevándote
+Quizás sea la última vez
+Me miras a los ojos
+Te das cuenta del cuento
+Yo soy solo un momento
+Y me duele saberlo
+Tenerte en poca ropa
+Me quitas el sueño
+Aunque nada es en serio
+De ti me siento dueño
+
+Otra noche que te hago volar
+Muy alto, las estrellas puedes tocar
+Pero conmigo no te puedes quedar
+Antes de que el botón te abroche
+Hagámoslo como la última noche
+Y si no' volvemo' a ver
+Pa' que nadie sospeche cambiamos de hotel
+
+12-21
+She know' what I'm talking about
+Yo' Darz
+Desnudarme, no
+Royce
+
+Con mis manos, lentamente, acariciándote tu cintura
+Admirando tu figura
+Repitiendo esa locura
+Tus gemidos en el cielo
+Yo tocándote, elevándote
+Sé que ahora es la última vez
+
+Me miras a los ojos
+Te das cuenta del cuento
+Yo soy solo un momento
+Y me duele saberlo
+Tenerte en poca ropa
+Me quitas el sueño
+Y aunque nada es en serio
+De ti me siento dueño
+
+Otra noche que te hago volar
+Muy alto, las estrellas puedes tocar
+Pero conmigo no te puedes quedar
+Antes de que el botón te abroche
+Hagámoslo como la última noche
+Y si no' volvemo' a ver
+Pa' que nadie sospeche cambiamos de hotel
+
+Sincerely (Ouh)
+Royce (Ouh)
+Yeah`,
+      fr: `Ouh
+Ouh
+Ouh
+Avec mes mains, lentement, te caressant le dos
+Je me débarrasse de mon envie
+Comme tu me manques dans mon lit
+Tes gémissements au ciel
+Moi te touchant, t'élevant
+C'est peut-être la dernière fois
+Tu me regardes dans les yeux
+Tu te rends compte de l'histoire
+Je ne suis qu'un moment
+Et ça me fait mal de le savoir
+T'avoir en petite tenue
+Tu m'enlèves le sommeil
+Même si rien n'est sérieux
+Je me sens propriétaire de toi
+
+Une autre nuit où je te fais voler
+Très haut, tu peux toucher les étoiles
+Mais avec moi tu ne peux pas rester
+Avant que le bouton ne s'attache
+Faisons-le comme la dernière nuit
+Et si on se revoit
+Pour que personne ne se doute de rien on change d'hôtel
+
+12-21
+Elle sait de quoi je parle
+Yo' Darz
+Me déshabiller, non
+Royce
+
+Avec mes mains, lentement, caressant ta taille
+Admirant ta silhouette
+Répétant cette folie
+Tes gémissements au ciel
+Moi te touchant, t'élevant
+Je sais que maintenant c'est la dernière fois
+
+Tu me regardes dans les yeux
+Tu te rends compte de l'histoire
+Je ne suis qu'un moment
+Et ça me fait mal de le savoir
+T'avoir en petite tenue
+Tu m'enlèves le sommeil
+Et même si rien n'est sérieux
+Je me sens propriétaire de toi
+
+Une autre nuit où je te fais voler
+Très haut, tu peux toucher les étoiles
+Mais avec moi tu ne peux pas rester
+Avant que le bouton ne s'attache
+Faisons-le comme la dernière nuit
+Et si on se revoit
+Pour que personne ne se doute de rien on change d'hôtel
+
+Sincèrement (Ouh)
+Royce (Ouh)
+Ouais`
+    }
+  },
+  {
     id: "mil-preguntas-marina-reche",
     title: "Mil preguntas",
     artist: "Marina Reche",
