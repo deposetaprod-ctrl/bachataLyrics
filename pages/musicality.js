@@ -22,10 +22,10 @@ export default function MusicalityTrainer() {
   const [userSessions, setUserSessions] = useState([]);
   const [sessionTitle, setSessionTitle] = useState('');
   const [showHistory, setShowHistory] = useState(false);
-  const [saveStatus, setSaveStatus] = useState(''); // '', 'saving', 'saved', 'error'
+  const [saveStatus, setSaveStatus] = useState('');
   const [isPublic, setIsPublic] = useState(false);
   const [publicSessions, setPublicSessions] = useState([]);
-  const [loadedPublicMarkers, setLoadedPublicMarkers] = useState(null);
+  const pendingMarkersRef = useRef(null);
   const [urlError, setUrlError] = useState('');
 
   const [user, setUser] = useState(null);
@@ -200,10 +200,9 @@ export default function MusicalityTrainer() {
         setUrlError('');
         setYoutubeId(ytId);
         setIsLoading(false);
-        
-        if (loadedPublicMarkers) {
-          setMarkers(loadedPublicMarkers);
-          setLoadedPublicMarkers(null);
+        if (pendingMarkersRef.current) {
+          setMarkers(pendingMarkersRef.current);
+          pendingMarkersRef.current = null;
         } else {
           const savedMarkers = JSON.parse(localStorage.getItem(`markers-yt-${ytId}`) || '[]');
           setMarkers(savedMarkers);
@@ -223,7 +222,7 @@ export default function MusicalityTrainer() {
     } else {
       setUrlError('');
     }
-  }, [remoteUrl, loadedPublicMarkers]);
+  }, [remoteUrl]);
 
   // Load history on mount
   useEffect(() => {
@@ -691,7 +690,7 @@ export default function MusicalityTrainer() {
                           key={idx}
                           onClick={() => {
                             if (session.markers) {
-                              setLoadedPublicMarkers(session.markers);
+                              pendingMarkersRef.current = session.markers;
                             }
                             setRemoteUrl(session.url);
                             setSessionTitle(session.title);
