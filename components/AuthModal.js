@@ -82,6 +82,22 @@ export default function AuthModal({ isOpen, onClose, supabaseClient, onSuccess }
     }
   };
 
+  const handleForgotPassword = async () => {
+    if (!supabaseClient) return setError('Service indisponible, réessaie plus tard.');
+    if (!form.email) return setError('Remplis ton adresse email.');
+    setIsLoading(true);
+    setError('');
+    const { error } = await supabaseClient.auth.resetPasswordForEmail(form.email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+    setIsLoading(false);
+    if (error) {
+      setError(error.message);
+    } else {
+      setSuccessMsg('✅ Un email de réinitialisation a été envoyé ! Vérifie ta boîte mail.');
+    }
+  };
+
   return (
     <>
       <div className="auth-modal-overlay animate-fade-in" onClick={handleClose}>
@@ -140,10 +156,50 @@ export default function AuthModal({ isOpen, onClose, supabaseClient, onSuccess }
                 >
                   {isLoading ? 'Connexion...' : 'Se connecter →'}
                 </button>
-                <p className="auth-switch">
-                  Pas encore de compte ?{' '}
-                  <button className="auth-switch-link" onClick={() => handleTabChange('register')}>
-                    Crée-en un !
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '4px' }}>
+                  <p className="auth-switch">
+                    Pas encore de compte ?{' '}
+                    <button className="auth-switch-link" onClick={() => handleTabChange('register')}>
+                      Crée-en un !
+                    </button>
+                  </p>
+                  <p className="auth-switch">
+                    <button className="auth-switch-link" onClick={() => handleTabChange('forgot')}>
+                      Mot de passe oublié ?
+                    </button>
+                  </p>
+                </div>
+              </>
+            ) : tab === 'forgot' ? (
+              <>
+                <p className="auth-subtitle">Entre ton adresse email pour réinitialiser ton mot de passe.</p>
+                {successMsg ? (
+                  <div className="auth-success" style={{ marginBottom: '16px' }}>{successMsg}</div>
+                ) : (
+                  <>
+                    <div className="auth-fields">
+                      <input
+                        type="email"
+                        placeholder="Email"
+                        value={form.email}
+                        onChange={e => setForm({ ...form, email: e.target.value })}
+                        onKeyDown={e => e.key === 'Enter' && handleForgotPassword()}
+                        autoFocus
+                      />
+                    </div>
+                    {error && <p className="auth-error">{error}</p>}
+                    <button
+                      className="auth-submit-btn"
+                      onClick={handleForgotPassword}
+                      disabled={isLoading}
+                    >
+                      {isLoading ? 'Envoi...' : 'Réinitialiser →'}
+                    </button>
+                  </>
+                )}
+                <p className="auth-switch" style={{ marginTop: '10px' }}>
+                  <button className="auth-switch-link" onClick={() => handleTabChange('login')}>
+                    ← Retour à la connexion
                   </button>
                 </p>
               </>

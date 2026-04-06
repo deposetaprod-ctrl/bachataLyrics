@@ -25,6 +25,8 @@ export default function MusicalityTrainer() {
   const [saveStatus, setSaveStatus] = useState(''); // '', 'saving', 'saved', 'error'
   const [isPublic, setIsPublic] = useState(false);
   const [publicSessions, setPublicSessions] = useState([]);
+  const [loadedPublicMarkers, setLoadedPublicMarkers] = useState(null);
+  const [urlError, setUrlError] = useState('');
 
   const [user, setUser] = useState(null);
   const [supabaseClient, setSupabaseClient] = useState(null);
@@ -195,10 +197,18 @@ export default function MusicalityTrainer() {
     if (remoteUrl) {
       const ytId = extractYoutubeId(remoteUrl);
       if (ytId) {
+        setUrlError('');
         setYoutubeId(ytId);
         setIsLoading(false);
-        const savedMarkers = JSON.parse(localStorage.getItem(`markers-yt-${ytId}`) || '[]');
-        setMarkers(savedMarkers);
+        
+        if (loadedPublicMarkers) {
+          setMarkers(loadedPublicMarkers);
+          setLoadedPublicMarkers(null);
+        } else {
+          const savedMarkers = JSON.parse(localStorage.getItem(`markers-yt-${ytId}`) || '[]');
+          setMarkers(savedMarkers);
+        }
+        
         if (audioRef.current) audioRef.current.src = '';
 
         // Save to history
@@ -207,9 +217,13 @@ export default function MusicalityTrainer() {
           localStorage.setItem('recent-yt-links', JSON.stringify(newLinks));
           return newLinks;
         });
+      } else {
+        setUrlError('Lien invalide. Vérifie qu\'il s\'agit bien d\'un lien YouTube valide.');
       }
+    } else {
+      setUrlError('');
     }
-  }, [remoteUrl]);
+  }, [remoteUrl, loadedPublicMarkers]);
 
   // Load history on mount
   useEffect(() => {
@@ -344,7 +358,7 @@ export default function MusicalityTrainer() {
     if (!supabaseClient) return;
     const { data, error } = await supabaseClient
       .from('musicality_sessions')
-      .select('user_id, song_id, title, url, updated_at')
+      .select('user_id, song_id, title, url, updated_at, markers')
       .eq('is_public', true)
       .order('updated_at', { ascending: false })
       .limit(10);
@@ -541,15 +555,17 @@ export default function MusicalityTrainer() {
             </div>
 
             <div className="source-url-input-container">
-              <div className="input-wrapper">
-                <span className="field-label">URL DE LA VIDÉO</span>
+              <div className="input-wrapper" style={{ marginBottom: urlError ? '16px' : '0' }}>
+                <span className="field-label" style={{ color: urlError ? '#f87171' : 'inherit' }}>URL DE LA VIDÉO</span>
                 <input
                   type="url"
                   className="text-input"
+                  style={{ borderColor: urlError ? 'rgba(248, 113, 113, 0.5)' : undefined, background: urlError ? 'rgba(248, 113, 113, 0.05)' : undefined }}
                   placeholder="https://www.youtube.com/watch?v=..."
                   value={remoteUrl}
                   onChange={e => setRemoteUrl(e.target.value)}
                 />
+                {urlError && <div className="url-error animate-fade-in" style={{ color: '#f87171', fontSize: '0.8rem', marginTop: '6px', fontWeight: 500 }}>⚠️ {urlError}</div>}
               </div>
               
               {youtubeId && (
@@ -674,6 +690,9 @@ export default function MusicalityTrainer() {
                         <button 
                           key={idx}
                           onClick={() => {
+                            if (session.markers) {
+                              setLoadedPublicMarkers(session.markers);
+                            }
                             setRemoteUrl(session.url);
                             setSessionTitle(session.title);
                           }}
