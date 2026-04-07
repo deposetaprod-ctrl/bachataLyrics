@@ -130,24 +130,6 @@ export const passes = [
     instagram: "https://www.instagram.com/denis_malyutov/",
     tags: ["Sensual", "Moderne"],
     color: "#3b82f6"
-  },
-  {
-    id: "anita-varea-fumo-1",
-    title: "Passe 1 sur FUMO de Montelier (Anita y Varea)",
-    style: "Bachata Sensual",
-    videoUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1775334854/IMG_9741_fsew6m.mov",
-    instagram: "https://www.instagram.com/anitayvarea_bachata/",
-    tags: ["Sensual"],
-    color: "#e11d48"
-  },
-  {
-    id: "anita-varea-fumo-2",
-    title: "Passe 2 sur FUMO de Montelier (Anita y Varea)",
-    style: "Bachata Sensual",
-    videoUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1775334925/ScreenRecording_04-04-2026_21_qm9qvy.mov",
-    instagram: "https://www.instagram.com/anitayvarea_bachata/",
-    tags: ["Sensual"],
-    color: "#e11d48"
   }
 ];
 
