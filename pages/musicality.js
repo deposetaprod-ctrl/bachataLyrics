@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
 import MusicalityHUD from '../components/MusicalityHUD';
+import MusicalityTheory from '../components/MusicalityTheory';
 import AuthModal from '../components/AuthModal';
 import Navbar from '../components/Navbar';
 export default function MusicalityTrainer() {
@@ -34,6 +35,12 @@ export default function MusicalityTrainer() {
   const [isDragging, setIsDragging] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const videoInputRef = useRef(null);
+
+  // Gamification state
+  const [isChallengeMode, setIsChallengeMode] = useState(false);
+  const [challengeScore, setChallengeScore] = useState({ hits: 0, misses: 0, combo: 0 });
+  const [gameFeedback, setGameFeedback] = useState(null);
+  const [showTheory, setShowTheory] = useState(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.supabase) {
@@ -229,6 +236,40 @@ export default function MusicalityTrainer() {
     const savedLinks = JSON.parse(localStorage.getItem('recent-yt-links') || '[]');
     setRecentLinks(savedLinks);
   }, []);
+
+  // -- Challenge gamification Logic --
+  const evaluateHit = (type) => {
+    const time = (wavesurfer.current && wavesurfer.current.getDuration() > 0) 
+      ? wavesurfer.current.getCurrentTime() 
+      : currentTime;
+
+    // We allow hitting up to 0.5s BEFORE the marker, and up to 0.1s AFTER the marker.
+    // If they press late, it's missed. 
+    const targetMarker = markers.find(m => m.type === type && m.time >= time - 0.15 && m.time <= time + 0.5);
+
+    if (targetMarker) {
+      setChallengeScore(s => ({ ...s, hits: s.hits + 1, combo: s.combo + 1 }));
+      setGameFeedback({ type: 'hit', text: 'Parfait ! 🔥' });
+      setShowFlash('hit');
+    } else {
+      setChallengeScore(s => ({ ...s, misses: s.misses + 1, combo: 0 }));
+      setGameFeedback({ type: 'miss', text: 'Trop tard ! ❌' });
+      setShowFlash('miss');
+    }
+
+    setTimeout(() => {
+      setGameFeedback(null);
+      setShowFlash(null);
+    }, 400);
+  };
+
+  const handleInstrumentClick = (type, label, color, emoji = '') => {
+    if (isChallengeMode) {
+      evaluateHit(type);
+    } else {
+      addMarker(type, label, color, emoji);
+    }
+  };
 
   // -- Utility for adding markers --
   const addMarker = (type, label, color, emoji = '') => {
@@ -536,9 +577,63 @@ export default function MusicalityTrainer() {
         <div className="trainer-header">
           <h1>Analyse Musicale</h1>
           <p>Enregistre les instruments en temps réel pour ne plus jamais rater un bongo ou un break.</p>
+          
+          <div style={{ marginTop: '12px' }}>
+            <button 
+              onClick={() => setShowTheory(true)}
+              className="hover-scale"
+              style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid rgba(255,255,255,0.2)',
+                color: 'white',
+                padding: '8px 16px',
+                borderRadius: '16px',
+                fontWeight: 600,
+                fontSize: '0.9rem',
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px'
+              }}
+            >
+              🎓 Académie de la Bachata (Théorie & Mnémotechnique)
+            </button>
+          </div>
+          
+          {markers.length > 0 && (
+            <div style={{ marginTop: '20px' }}>
+              <button 
+                onClick={() => {
+                  setIsChallengeMode(!isChallengeMode);
+                  setChallengeScore({ hits: 0, misses: 0, combo: 0 });
+                  setCurrentTime(0);
+                  if (youtubePlayer && youtubeId) youtubePlayer.seekTo(0);
+                  if (wavesurfer.current) wavesurfer.current.setTime(0);
+                }}
+                className="hover-scale"
+                style={{
+                  background: isChallengeMode ? '#ef4444' : 'var(--accent)',
+                  color: 'white',
+                  padding: '12px 24px',
+                  borderRadius: '24px',
+                  border: 'none',
+                  fontWeight: 900,
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                  boxShadow: isChallengeMode ? '0 10px 20px rgba(239, 68, 68, 0.4)' : '0 10px 20px rgba(124, 58, 237, 0.4)',
+                  transition: 'all 0.3s ease',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}
+              >
+                {isChallengeMode ? '🔥 Mettre fin à l\'Entraînement' : '🎮 Lancer le Mode Entraînement'}
+              </button>
+            </div>
+          )}
         </div>
 
-        <div className="song-selection-wrapper">
+        <div className="song-selection-wrapper" style={{ display: isChallengeMode ? 'none' : 'block' }}>
           <div className="source-section glass" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
             <div className="source-header" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>
               <span className="source-icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(167, 139, 250, 0.1)', padding: '16px', borderRadius: '50%', color: '#a78bfa' }}>
@@ -822,7 +917,7 @@ export default function MusicalityTrainer() {
                 </div>
               )}
 
-              <div className="markers-layer">
+              <div className="markers-layer" style={{ opacity: isChallengeMode ? 0 : 1, transition: 'opacity 0.3s' }}>
                 {markers.map(marker => {
                   const duration = wavesurfer.current?.getDuration() || youtubePlayer?.getDuration() || 300;
                   return (
@@ -861,43 +956,45 @@ export default function MusicalityTrainer() {
                 <div className="recording-console animate-fade-in glass">
                   <button 
                     className="instrument-btn bongo" 
-                    onClick={() => addMarker('bongo', 'Bongo', '#3b82f6')}
+                    onClick={() => handleInstrumentClick('bongo', 'Bongo', '#3b82f6')}
                   >
                     <span className="icon">🥁</span>
                     <span className="name">Bongo</span>
                   </button>
                   <button 
                     className="instrument-btn roll" 
-                    onClick={() => addMarker('roll', 'Bongo Roll', '#a855f7')}
+                    onClick={() => handleInstrumentClick('roll', 'Bongo Roll', '#a855f7')}
                   >
                     <span className="icon">🌀</span>
                     <span className="name">Roll</span>
                   </button>
                   <button 
                     className="instrument-btn break" 
-                    onClick={() => addMarker('break', 'Break', '#ef4444')}
+                    onClick={() => handleInstrumentClick('break', 'Break', '#ef4444')}
                   >
                     <span className="icon">⚡</span>
                     <span className="name">Break</span>
                   </button>
                   <button 
                     className="instrument-btn guira" 
-                    onClick={() => addMarker('guira', 'Guira', '#10b981')}
+                    onClick={() => handleInstrumentClick('guira', 'Guira', '#10b981')}
                   >
                     <span className="icon">🥄</span>
                     <span className="name">Guira</span>
                   </button>
-                  <button 
-                    className="instrument-btn custom-marker" 
-                    onClick={() => {
-                      const label = prompt('Nom du marqueur ?');
-                      const emoji = prompt('Emoji pour le marqueur ?', '📍');
-                      if (label) addMarker('custom', label, '#f59e0b', emoji);
-                    }}
-                  >
-                    <span className="icon">➕</span>
-                    <span className="name">Custom</span>
-                  </button>
+                  {!isChallengeMode && (
+                    <button 
+                      className="instrument-btn custom-marker" 
+                      onClick={() => {
+                        const label = prompt('Nom du marqueur ?');
+                        const emoji = prompt('Emoji pour le marqueur ?', '📍');
+                        if (label) handleInstrumentClick('custom', label, '#f59e0b', emoji);
+                      }}
+                    >
+                      <span className="icon">➕</span>
+                      <span className="name">Custom</span>
+                    </button>
+                  )}
                 </div>
               )}
 
@@ -975,7 +1072,8 @@ export default function MusicalityTrainer() {
               </button>
             </div>
 
-            <div className="markers-list">
+            {!isChallengeMode && (
+              <div className="markers-list">
               <h3>Marqueurs ({markers.length})</h3>
               <div className="markers-grid">
                 {markers.map(m => (
@@ -1060,14 +1158,53 @@ export default function MusicalityTrainer() {
                   </div>
                 ))}
               </div>
-            </div>
+              </div>
+            )}
           </div>
         )}
 
-        <MusicalityHUD upcomingMarker={upcomingMarker} currentTime={currentTime} />
+        {!isChallengeMode && <MusicalityHUD upcomingMarker={upcomingMarker} currentTime={currentTime} />}
+        {isChallengeMode && (
+          <div className="challenge-scoreboard-hud">
+            <div className="score-item combo">🔥 Combo: {challengeScore.combo}</div>
+            <div className="score-stats">
+              <span className="score-hit">✅ {challengeScore.hits}</span>
+              <span className="score-miss">❌ {challengeScore.misses}</span>
+            </div>
+          </div>
+        )}
+        {gameFeedback && (
+          <div className={`game-feedback-popup ${gameFeedback.type} animate-pop`}>
+            {gameFeedback.text}
+          </div>
+        )}
+
+        {showTheory && <MusicalityTheory onClose={() => setShowTheory(false)} />}
       </main>
 
       <style jsx>{`
+        .challenge-scoreboard-hud {
+          position: fixed; top: 100px; right: 40px; display: flex; flex-direction: column; gap: 8px;
+          background: rgba(0,0,0,0.8); padding: 20px; border-radius: 20px; border: 2px solid var(--accent);
+          z-index: 1000; color: white; font-weight: 800; font-size: 1.2rem; text-align: center;
+        }
+        .score-stats { display: flex; gap: 16px; justify-content: center; margin-top: 8px; font-size: 1rem; }
+        .score-hit { color: #10b981; } .score-miss { color: #ef4444; }
+        
+        .game-feedback-popup {
+          position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+          font-size: 4rem; font-weight: 900; z-index: 2000; text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+          pointer-events: none;
+        }
+        .game-feedback-popup.hit { color: #10b981; }
+        .game-feedback-popup.miss { color: #ef4444; }
+        @keyframes pop {
+          0% { opacity: 0; transform: translate(-50%, -20%) scale(0.5); }
+          50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+          100% { opacity: 0; transform: translate(-50%, -80%) scale(1); }
+        }
+        .animate-pop { animation: pop 0.4s ease-out forwards; }
+
         .marker-item.active {
           border-color: var(--accent);
           background: rgba(124, 58, 237, 0.1);
