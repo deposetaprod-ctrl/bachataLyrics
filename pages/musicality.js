@@ -576,7 +576,7 @@ export default function MusicalityTrainer() {
       <main className="container trainer-content">
         <div className="trainer-header">
           <h1>Analyse Musicale</h1>
-          <p>Enregistre les instruments en temps réel pour ne plus jamais rater un bongo ou un break.</p>
+          <p>Travaille ta musicalité de manière ludique pour jouer avec les instruments de la bachata.</p>
           
           <div style={{ marginTop: '12px' }}>
             <button 
