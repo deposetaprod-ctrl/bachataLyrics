@@ -5897,5 +5897,1802 @@ Cette nuit est une nuit de sexe
 Bébé, je connais le processus
 Et te dévorer jusqu'aux os`
     }
+  ,
+  {
+    id: "mala-la-la-sebas-garreta",
+    title: "Mala La La",
+    artist: "Sebas Garreta",
+    year: 2026,
+    dateAdded: "2026-04-08",
+    tags: ["Sensual", "Moderne"],
+    color: "#ef4444",
+    spotify: "https://open.spotify.com/search/Mala%20La%20La%20Sebas%20Garreta",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "La chanson exprime le refus catégorique de donner une seconde chance à une personne qui s'est mal comportée ('mala'). Le chanteur rappelle qu'il l'a bien traitée mais qu'il a percé son jeu au grand jour.",
+      artistInfo: "Sebas Garreta est un artiste émergent de la nouvelle scène bachata, connu pour ses textes directs et ses mélodies entraînantes.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Nooo...
+Y-eh-y-eeehh
+No-uh-nooo
+Y ahora me pregunta que si quiero volver
+Pero de ella yo no sé na na na
+Tan solo sé que tiene lo que se merece
+Por ser conmigo mala la la
+Cuéntale-le a tu novio nuevo
+Que yo te traté muy bien y que acabé con tu juego
+Cuéntale a él que a él no le quieres
+Que es ese parche, ese clavito que tu creías que iba a poder conmigo
+Y no...
+No pudo y ahora estás aquí pidiendo perdón
+Pero ya lo siento te perdoné pero no vuelvo y no
+No sé como explicarte, que no voy a volver a decirte "te quiero, te amo" decidí marcharme
+Y ahora me pregunta que si quiero volver
+Pero de ella yo no sé na na na
+Tan solo sé que tiene lo que se merece
+Por ser conmigo mala la la
+Aay...
+Sebas Garreta mami
+Díselo Alex
+Cuéntale a otro todos tus cuentos
+La tinta es floja pero pa' ti quedan los recuerdos
+Todos esos intentos de darme celos
+Quedaron en libros que acabaste perdiendo
+Y ahora me pregunta que si quiero volver
+Pero de ella yo no sé na na na
+Tan solo sé que tiene lo que se merece
+Por ser conmigo mala la la
+Y ahora me pregunta que si quiero volver
+Pero de ella yo no sé na na na
+Tan solo sé que tiene lo que se merece
+Por ser conmigo mala la la`,
+      fr: `Nooo...
+Y-eh-y-eeehh
+No-uh-nooo
+Et maintenant elle me demande si je veux revenir
+Mais d'elle je ne sais plus rien (rien de rien)
+Je sais seulement qu'elle a ce qu'elle mérite
+Pour avoir été méchante avec moi
+Raconte-le à ton nouveau petit ami
+Que je t'ai très bien traitée et que j'ai mis fin à ton jeu
+Dis-lui que tu ne l'aimes pas lui
+Qu'il est ce pansement, ce petit clou que tu pensais pouvoir gagner contre moi
+Et non...
+Il n'a pas pu et maintenant tu es ici à demander pardon
+Mais je suis désolé, je t'ai pardonné mais je ne reviens pas, non
+Je ne sais pas comment t'expliquer que je ne vais plus te dire "je t'aime, je t'adore", j'ai décidé de partir
+Et maintenant elle me demande si je veux revenir
+Mais d'elle je ne sais plus rien (rien de rien)
+Je sais seulement qu'elle a ce qu'elle mérite
+Pour avoir été méchante avec moi
+Aay...
+Sebas Garreta mami
+Dis-lui Alex
+Raconte tes histoires à un autre
+L'encre est effaçable mais pour toi il reste les souvenirs
+Toutes ces tentatives de me rendre jaloux
+Sont restées dans des livres que tu as fini par perdre
+Et maintenant elle me demande si je veux revenir
+Mais d'elle je ne sais plus rien (rien de rien)
+Je sais seulement qu'elle a ce qu'elle mérite
+Pour avoir été méchante avec moi
+Et maintenant elle me demande si je veux revenir
+Mais d'elle je ne sais plus rien (rien de rien)
+Je sais seulement qu'elle a ce qu'elle mérite
+Pour avoir été méchante avec moi`
+    }
+  },
+  {
+    id: "insomnio-dj-husky-shama",
+    title: "Insomnio",
+    artist: "DJ Husky, SHAMA",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Moderne", "Sentimentale"],
+    color: "#4f46e5",
+    spotify: "https://open.spotify.com/search/Insomnio%20DJ%20Husky%20SHAMA",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Le titre 'Insomnio' (Insomnie) fait référence à l'impossibilité de dormir après une rupture, car le silence de la nuit ramène tous les souvenirs et l'absence de l'être aimé.",
+      artistInfo: "DJ Husky est un acteur majeur de la promotion de la bachata en Europe, fusionnant des techniques de mixage modernes avec les instruments traditionnels dominicains.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Otra noche sin ti
+Otra noche bebiendo solo
+¿Dónde fue que perdí
+El orgullo para sentir que quiero hablarte?
+Miro mi cel y solo quiero llamarte
+Ayer me fui de fiesta para olvidarte y no pensarte
+Te mando un audio solo pa contarte
+Y me subió la nota como el primero
+Y bailando con otra, sin ti me vieron
+Para olvidar las penas que dejaste
+Al hombre del que un día te enamoraste
+Y me subió la nota como el primero
+Y bailando con otra, sin ti me vieron
+Y ya no duermo para no soñarte
+Que con tu partida me provocaste insomnio
+Solo quiero que digas que me quieres, baby
+Siempre sin separarnos ni por un instante
+Apagando luz y celular
+Pero te llamo solo pa contarte
+Y me subió la nota como el primero
+Y bailando con otra, sin ti me vieron
+Para olvidar las penas que dejaste
+Al hombre del que un día te enamoraste
+Y me subió la nota como el primero
+Y bailando con otra, sin ti me vieron
+Y ya no duermo para no soñarte
+Que con tu partida me provocaste insomnio
+Tócala, Abelito
+¿Cómo te digo que te extraño, baby?
+Shama, con Dj Husky
+Dímelo, Cupido
+Y me subió la nota como el primero
+Y bailando con otra, sin ti me vieron
+Para olvidar las penas que dejaste
+Al hombre del que un día te enamoraste
+Y me subió la nota comme le premier
+Y bailando con otra, sin ti me vieron
+Yo ya no duermo para no soñarte
+Que con tu partida me provocaste insomnio`,
+      fr: `Une autre nuit sans toi
+Une autre nuit à boire seul
+Où est-ce que j'ai perdu
+L'orgueil pour sentir que je veux te parler ?
+Je regarde mon tel et je veux seulement t'appeler
+Hier je suis allé faire la fête pour t'oublier et ne pas penser à toi
+Je t'envoie un audio juste pour te raconter
+Et l'alcool m'est monté à la tête comme au premier
+Et dansant avec une autre, ils m'ont vu sans toi
+Pour oublier les peines que tu as laissées
+À l'homme dont tu es tombée amoureuse un jour
+Et l'alcool m'est monté à la tête comme au premier
+Et dansant avec une autre, ils m'ont vu sans toi
+Et maintenant je ne dors plus pour ne pas rêver de toi
+Parce qu'avec ton départ, tu m'as provoqué l'insomnie
+Je veux seulement que tu dises que tu m'aimes, bébé
+Toujours sans nous séparer un seul instant
+Éteignant la lumière et le portable
+Mais je t'appelle juste pour te raconter
+Et l'alcool m'est monté à la tête comme au premier
+Et dansant avec une autre, ils m'ont vu sans toi
+Pour oublier les peines que tu as laissées
+À l'homme dont tu es tombée amoureuse un jour
+Et l'alcool m'est monté à la tête comme au premier
+Et dansant avec une autre, ils m'ont vu sans toi
+Et maintenant je ne dors plus pour ne pas rêver de toi
+Parce qu'avec ton départ, tu m'as provoqué l'insomnie
+Joue-le, Abelito
+Comment te dire que tu me manques, bébé ?
+Shama, avec Dj Husky
+Dis-le-moi, Cupidon
+Et l'alcool m'est monté à la tête comme au premier
+Et dansant avec une autre, ils m'ont vu sans toi
+Pour oublier les peines que tu as laissées
+À l'homme dont tu es tombée amoureuse un jour
+Et l'alcool m'est monté à la tête comme au premier
+Et dansant avec une autre, ils m'ont vu sans toi
+Moi je ne dors plus pour ne pas rêver de toi
+Parce qu'avec ton départ, tu m'as provoqué l'insomnie`
+    }
+  },
+  {
+    id: "tu-turno-karen-mendez",
+    title: "Tu Turno",
+    artist: "Karen Méndez",
+    year: 2020,
+    dateAdded: "2026-04-08",
+    tags: ["Empowerment", "Moderne"],
+    color: "#8b5cf6",
+    spotify: "https://open.spotify.com/search/Tu%20Turno%20Karen%20Mendez",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "C'est le message d'une femme qui a souffert mais qui se relève, prévenant son ex que le karma finira par le rattraper pendant qu'elle continue son chemin sereinement.",
+      artistInfo: "Karen Méndez a commencé par des reprises sur YouTube avant d'imposer son style mélangeant pop, reggaeton et bachata.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Porque nunca te van a amar de verdad no
+después del daño que me hiciste
+te aseguro que el karma existe
+
+Dime si aún así te vas te vas
+sabiendo que después no nadie más
+sabiendo que yo no perdí
+sabiendo que no hay na´ pa ti
+
+Porque nunca te van a amar de verdad
+después de to´ lo que me hiciste
+te aseguro que el karma existe
+
+Te juro que te van a hacer llorar
+ahí te va a tocar acordarte de mí
+de todas las veces que tú me hiciste infeliz
+
+Crees que después de ti se acaba el mundo
+lo siento pero todo acá sigue su rumbo
+sabes que yo sigo tengo mi camino
+después todo esto hasta podemos ser amigos
+
+Ya no me vas a ver
+los cuadros me los llevé
+pa´ que te vaya mal no hará falta
+ni que el mal yo te lo desee
+
+Destapo vivo la vida
+salgo en toas partes cómo me olvidas
+ahora llora como lloré
+yo escribiéndote interrogativa
+
+Dime si aún así te vas te vas
+sabiendo que después no nadie más
+sabiendo que yo no perdí
+sabiendo que no hay na´ pa ti
+
+Porque nunca te van a amar de verdad
+después de to´ lo que me hiciste
+te aseguro que el karma existe
+
+Te juro que te van a hacer llorar
+ahí te va a tocar acordarte de mí
+de todas las veces que tú me hiciste infeliz
+
+Me pueden venir a hablar de ti si quieren
+que tú ya estás rumbeando con diez mil mujeres
+algún día vas a caer algún día vas a caer
+cuando menos te lo esperes lo mismo te van a hacer
+
+Me pueden venir a hablar de ti si quieren
+que yo ya pasé página no sé quién eres
+algún día vas a caer algún día vas a caer
+el karma a ti te va a joder
+
+Porque nunca te van a amar de verdad
+después de to´ lo que me hiciste
+te aseguro que el karma existe
+
+Karen Méndez
+Juacko produciendo
+desde la casa Literal.`,
+      fr: `Parce qu'ils ne t'aimeront jamais vraiment, non
+after le mal que tu m'as fait
+je t'assure que le karma existe
+Dis-moi si tu pars quand même, tu pars
+sachant qu'après il n'y aura personne d'autre
+sachant que je n'ai pas perdu
+sachant qu'it n'y a rien pour toi
+Parce qu'ils ne t'aimeront jamais vraiment
+après tout ce que tu m'as fait
+je t'assure que le karma existe
+Je te jure qu'ils vont te faire pleurer
+là tu devras te souvenir de moi
+de toutes les fois où tu m'as rendue malheureuse
+Tu crois qu'après toi le monde s'arrête
+je suis désolée mais ici tout continue son chemin
+tu sais que je continue ma route
+après tout ça on peut même être amis
+Tu ne me verras plus
+j'ai emporté les tableaux
+pour que ça se passe mal pour toi, il n'y aura pas besoin
+que je te souhaite du mal
+Je débouche, je vis ma vie
+je sors partout, comment peux-tu m'oublier ?
+maintenant pleure comme j'ai pleuré
+moi t'écrivant des questions
+Dis-moi si tu pars quand même, tu pars
+sachant qu'après il n'y aura personne d'autre
+sachant que je n'ai pas perdu
+sachant qu'il n'y a rien pour toi
+Parce qu'ils ne t'aimeront jamais vraiment
+après tout ce que tu m'as fait
+je t'assure que le karma existe
+Je te jure qu'ils vont te faire pleurer
+là tu devras te souvenir de moi
+de toutes les fois où tu m'as rendue malheureuse
+Ils peuvent venir me parler de toi s'ils veulent
+que tu es déjà en train de faire la fête avec dix mille femmes
+un jour tu vas tomber, un jour tu vas tomber
+quand tu t'y attendras le moins, on te fera la même chose
+Ils peuvent venir me parler de toi s'ils veulent
+que j'ai déjà tourné la page, je ne sais pas qui tu es
+un jour tu vas tomber, un jour tu vas tomber
+le karma va te foutre en l'air
+Parce qu'ils ne t'aimeront jamais vraiment
+après tout ce que tu m'as fait
+je t'assure que le karma existe
+Karen Méndez
+Juacko à la production
+depuis la maison Literal.`
+    }
+  },
+  {
+    id: "carita-jensen",
+    title: "Carita",
+    artist: "Jensen",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Sensual", "Moderne"],
+    color: "#ec4899",
+    spotify: "https://open.spotify.com/search/Carita%20Jensen",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Les paroles décrivent une attirance irrésistible, centrée sur le visage et les expressions d'une femme ('carita'). Le chanteur se remémore une nuit intense et admet que personne d'autre ne le fait vibrer ainsi.",
+      artistInfo: "Jensen est un nouvel artiste qui monte dans l'univers de la bachata urbaine, mêlant flow reggaeton et rythmique dominicaine.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Quiero volverte a ver
+Llame para resolver, contesta el cel
+Pase por el hotel bebé
+Donde te veía, donde te lo hacia
+Esa noche fue un desorden
+Lo hicimo' hasta las cinco de la morning
+Ese momento baby no hay quien me lo borre
+Sali con otra y se me escapó tu nombre
+Cuando tu me miras
+Con esa carita
+Te pones rojita, eres mi favorita
+No existe nadie que me encienda como
+Cuando tu me miras
+Con esa carita
+Te pones rojita, y me debilitas
+No existe nadie que me encienda como tu
+Es Jensen
+Pero tu sabias
+Sacala a bailar
+Esta noche yo me arrebate
+Prendí uno y de ti me acordé
+Desde que te probe me juquie
+Tanto polvo que ni lo conté
+Si te olvidaste de esos momentos yo recuerdo varios
+Que para ti tenerme cerca era necesario
+Oh no, ayy no
+Yo sigo aqui, tu estas lejos
+Probablemente estás feliz y yo estoy solitario
+Y quizás ya ni te acuerdas de mi
+Esa noche fue un desorden
+Lo hicimo' hasta las cinco de la morning
+Ese momento baby no hay quien me lo borre
+Sali con otra y se me escapó tu nombre
+Cuando tu me miras
+Con esa carita
+Te pones rojita, eres mi favorita
+No existe nadie que me encienda como
+Cuando tu me miras
+Con esa carita
+Te pones rojita, y me debilitas
+No existe nadie que me encienda como tu
+SP, yea yea
+It's a problem
+Cuando tu me miras
+Con esa carita
+Te pones rojita, eres mi favorita
+No existe nadie que me encienda como tu`,
+      fr: `Je veux te revoir
+J'ai appelé pour régler ça, réponds au tel
+Je suis passé par l'hôtel bébé
+Où je te voyais, où je te faisais l'amour
+Cette nuit-là c'était le désordre
+On l'a fait jusqu'à cinq heures du matin
+Ce moment bébé, personne ne peut me l'effacer
+Je suis sorti avec une autre et ton nom m'a échappé
+Quand tu me regardes
+Avec cette petite tête
+Tu deviens toute rouge, tu es ma préférée
+Il n'existe personne qui m'allume comme ça
+Quand tu me regardes
+Avec cette petite tête
+Tu deviens toute rouge et tu m'affaiblis
+Il n'existe personne qui m'allume comme toi
+C'est Jensen
+Mais tu savais
+Invite-la à danser
+Cette nuit je me suis emporté
+J'en ai allumé un et je me suis souvenu de toi
+Depuis que je t'ai goûtée je suis accro
+Tant de fois que je ne les ai même pas comptées
+Si tu as oublié ces moments, moi je m'en rappelle plusieurs
+Que pour toi m'avoir près de toi était nécessaire
+Oh no, ayy no
+Je suis toujours ici, tu es loin
+Probablement que tu es heureuse et moi je suis solitaire
+Et peut-être que tu ne te souviens même plus de moi
+Cette nuit-là c'était le désordre
+On l'a fait jusqu'à cinq heures du matin
+Ce moment bébé, personne ne peut me l'effacer
+Je suis sorti avec une autre et ton nom m'a échappé
+Quand tu me regardes
+Avec cette petite tête
+Tu deviens toute rouge, tu es ma préférée
+Il n'existe personne qui m'allume comme ça
+Quand tu me regardes
+Avec cette petite tête
+Tu deviens toute rouge et tu m'affaiblis
+Il n'existe personne qui m'allume comme toi
+SP, yea yea
+C'est un problème
+Quand tu me regardes
+Avec cette petite tête
+Tu deviens toute rouge, tu es ma préférée
+Il n'existe personne qui m'allume comme toi`
+    }
+  },
+  {
+    id: "lo-tenias-callao-jean-alex",
+    title: "Lo Tenias Callao",
+    artist: "Jean & Alex",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Dramatique", "Moderne"],
+    color: "#fb923c",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Le titre 'Lo Tenías Callao' (Tu le gardais pour toi) exprime la trahison d'une personne qui menait une double vie. Le chanteur relate comment un simple message sur un iPhone a tout fait basculer.",
+      artistInfo: "Auto-proclamés 'Los Reyes del R&B' (dans un contexte bachata), Jean & Alex fusionnent des harmonies vocales R&B avec le rythme bachata.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Una noche normal
+dique te vas con tus amigas a janguear
+Te metiste a bañar dejaste el iPhone en la mesa
+Eso no para de sonar, me pregunto quién será
+Veo un corazón en el contacto
+Te rebusco los mensajes
+Me inundo de coraje yo no creo cosa igual
+De lo que me acabo de enterar.
+Me enteré que tú
+Me engañabas con él, te lo tenías callao
+Pa’ ti yo solo era un juego
+Es que tú mientes tan bien que casi casi te creo
+Bebé es que tú
+Me engañabas con él, te lo tenías callao
+Pa’ ti yo solo era un juego
+Ahora lo voy a llamar
+¿Te crees que yo no me atrevo?
+Jean & Alex
+Los Reyes del R&B
+Sé que se llama Juan
+Lo conociste en una noche de San Juan
+Y qué casualidad en la que cuidaste a tu mamá
+Dando la mamá de la mamá allá abajo en Samaná
+Creí que la distancia y frialdad solo eran algo temporal
+No te creí capaz de que me fueras a fallar
+Pero me terminaste de matar.
+Me enteré que tú
+Me engañabas con él, te lo tenías callao
+Pa’ ti yo solo era un juego
+Es que tú mientes tan bien que casi casi te creo
+Bebé es que tú
+Me engañabas con él, te lo tenías callao
+Pa’ ti yo solo era un juego
+Ahora lo voy a llamar
+¿Te crees que yo no me atrevo?
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Tú me engañabas con él
+Te lo tenías callao
+Pa’ ti yo solo era un jeu
+Te puedes ir al carajo
+no quiero verte de nuevo`,
+      fr: `Une nuit normale
+soi-disant tu sors avec tes amies faire la fête
+Tu es allée te doucher tu as laissé l'iPhone sur la table
+Ça n'arrête pas de sonner, je me demande qui c'est
+Je vois un cœur dans le contact
+Je fouille tes messages
+Je suis envahi par la rage je n'en crois pas mes yeux
+De ce que je viens d'apprendre.
+J'ai appris que toi
+Tu me trompais avec lui, tu le gardais secret
+Pour toi je n'étais qu'un jeu
+C'est que tu mens si bien que j'ai bien failli te croire
+Bébé c'est que toi
+Tu me trompais avec lui, tu le gardais secret
+Pour toi je n'étais qu'un jeu
+Maintenant je vais l'appeler
+Tu crois que je n'ose pas ?
+Jean & Alex
+Les Rois du R&B
+Je sais qu'il s'appelle Juan
+Tu l'as connu une nuit de la Saint-Jean
+Et quelle coïncidence celle où tu gardais ta maman
+Donnant "la mamá de la mamá" là-bas à Samaná
+Je croyais que la distance et la froideur n'étaient que temporaires
+Je ne te croyais pas capable de me trahir
+Mais tu as fini de m'achever.
+J'ai appris que toi
+Tu me trompais avec lui, tu le gardais secret
+Pour toi je n'étais qu'un jeu
+C'est que tu mens si bien que j'ai bien failli te croire
+Bébé c'est que toi
+Tu me trompais avec lui, tu le gardais secret
+Pour toi je n'étais qu'un jeu
+Maintenant je vais l'appeler
+Tu crois que je n'ose pas ?
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Tu me trompais avec lui
+Tu le gardais secret
+Pour toi je n'étais qu'un jeu
+Tu peux aller te faire foutre
+je ne veux plus te revoir`
+    }
+  },
+  {
+    id: "el-acuerdo-dj-husky-shama",
+    title: "El Acuerdo",
+    artist: "DJ Husky ft. SHAMA",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Sentimentale", "Moderne"],
+    color: "#1fb6ff",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "L'accord dont il est question est un pacte de relation sans attaches. Mais la réalité des sentiments finit par rattraper les protagonistes.",
+      artistInfo: "DJ Husky continue de définir le son de la bachata moderne européenne avec ses rythmiques précises.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Tenia que ser solo deseo sin sentimiento
+Que tal si por la mañana, SHAMA
+Asi que te propongo un acuerdo, rompemos el acuerdo y lo volvemos hacer
+Terminamos aqui, no quiero perderte.
+Dicen que nunca es tarde pa' volver a donde fuiste feliz una vez
+Qué rabia enamorarme y caer en esa locura con formas de mujer
+Es que te he dado tanto de mi tiempo y sin quererlo me enredé
+Sé que hicimos un pacto sin sentimientos, pero hoy siento que otra vez.
+Me traicionaron las ganas de recorrer tu cuerpo hasta desvanecer
+¿Qué tal si por la mañana rompemos el acuerdo y lo volvemos a hacer
+Y aunque parezca un delito, pa vivir necesito de tus besos pa' calmarme la sed
+¿Qué tal si por la mañana rompemos el acuerdo y lo volvemos a hacer
+Y lo volvemos a hacer
+Dimelo cupido, con Dj Husky
+Comenzamos jugando entre risas y llantos
+El oro con llantos yo me quedé
+¿Y ahora pa' qué extrañarnos con miedo a amarnos
+Si ahora estoy sintiendo que otra vez.
+Me traicionaron las ganasde recorrer tu cuerpo hasta desvanecer
+¿Qué tal si por la mañana rompemos el acuerdo y lo volvemos a hacer
+Y aunque parezca un delito, pa vivir necesito de tus besos pa' calmarme la sed
+¿Qué tal si por la mañana rompemos el acuerdo y lo volvemos a hacerY lo volvemos a hacer
+Que tal si por la mañana, rompemos el acuerdo y lo volvemos a hacer
+Y aunque parezca un delito, Mami, yo necesito de tus besos pa' calmarme la sed
+¿Qué tal si por la mañana rompemos el acuerdo y lo volvemos a hacer
+Y lo volvemos a hacer y lo volvemos a hacer y lo volvemos a hacer
+Rompemos el acuerdo y lo volvemo a hacer.`,
+      fr: `Ça ne devait être que du désir sans sentiment
+Et si demain matin, SHAMA
+Alors je te propose un accord, on rompt l'accord et on recommence
+On finit ici, je ne veux pas te perdre.
+On dit qu'il n'est jamais trop tard pour revenir là où on a été heureux une fois
+Quelle rage de tomber amoureux et de succomber à cette folie aux formes de femme
+C'est que je t'ai donné tellement de mon temps et sans le vouloir je me suis emmêlé
+Je sais que nous avions fait un pacte sans sentiments, mais aujourd'hui je sens qu'à nouveau.
+Mon envie de parcourir ton corps jusqu'à m'évanouir m'a trahi
+Et si demain matin on rompait l'accord pour le refaire à nouveau
+Et même si ça semble être un délit, pour vivre j'ai besoin de tes baisers pour calmer ma soif
+Et si demain matin on rompait l'accord pour le refaire à nouveau
+Pour le refaire à nouveau
+Dis-le moi cupidon, avec Dj Husky
+On a commencé en jouant entre rires et pleurs
+L'or avec des pleurs je l'ai gardé
+Et maintenant pourquoi se manquer avec la peur de s'aimer
+Si maintenant je sens qu'à nouveau.
+Mon envie de parcourir ton corps jusqu'à m'évanouir m'a trahi
+Et si demain matin on rompait l'accord pour le refaire à nouveau
+Et même si ça semble être un délit, pour vivre j'ai besoin de tes baisers pour calmer ma soif
+Et si demain matin on rompait l'accord pour le refaire à nouveau et on le refait à nouveau
+Et si demain matin, on rompait l'accord pour le refaire à nouveau
+Et même si ça semble être un délit, Mami, j'ai besoin de tes baisers pour calmer ma soif
+Et si demain matin on rompait l'accord pour le refaire à nouveau
+Et on le refait et on le refait et on le refait
+On rompt l'accord et on le refait.`
+    }
+  },
+  {
+    id: "en-privado-manuel-turizo-xavi",
+    title: "En Privado",
+    artist: "Manuel Turizo & Xavi",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Romantique", "Moderne"],
+    color: "#0ea5e9",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Une chanson sur un amour inconditionnel où le protagoniste est prêt à emmener sa bien-aimée au bout du monde (Dubaï, Cancún) en jet privé.",
+      artistInfo: "Manuel Turizo est l'une des plus grandes stars de la musique latine actuelle, capable de naviguer entre reggaeton, bachata et pop.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Por ti, lo que tú quieras, chiquita
+Hasta borro las morras que tengo en el Insta
+Volamo en privado, más nunca en turista
+Dime si estás lista
+Siento que me pongo medio loco
+Cuando miro tus labios (cuando miro tus labios)
+Se mueren de envidia
+Porque tengo a la más chula del barrio
+Llego y cierro el antro, porque me gasto el billete y me niego
+Pídelo, muñequita (pídelo, muñequita)
+Que yo te cumplo el deseo (el deseo)
+Yo te voy a robar, te vo'a patrocinar
+Una noche en Cancún, la siguiente en Dubai
+Te compro Louis Vuitton, un anillo con ice
+Que como tú no hay, hay, hay
+Por ti, lo que tú quieras, chiquita
+Hasta borro las morras que tengo en el Insta
+Volemos en privado, más nunca en turista
+Dime si estás lista, dime si estás lista
+Por ti, bebo hasta al fondo del vaso
+Borracho llamo al cura y contigo me caso
+Hagamos mil locuras, el tiempo es escaso
+Bebé, ya hazme caso, bebé, ya hazme caso, oh-oh
+Esos ojitos, ¿cómo los rechazo?
+No me mires así, que me caso
+Pensándote, ya en esa me paso
+Un beso en tu boca y tequila en el vaso
+Ya no me alcanzan los 12 meses
+Pa estar contigo, al año quiero 13
+Yo no duermo, si esta reina conmigo amanece
+Siento que me pongo medio loco cuando miro tus labios (yeah, yeah)
+Cuando beso tu cuerpo
+Ay, yo no sé lo que está pasando (ay, ay, yo)
+Yo te voy a robar, te vo'a patrocinar
+Una noche en Cancún, la siguiente en Dubai
+Te compro Louis Vuitton, un anillo con ice
+Que como tú no hay, hay, hay
+Por ti, lo que tú quieras, chiquita
+Hasta borro las morras que tengo en el Insta
+Volemos en privado, más nunca en turista
+Dime si estás lista, dime si estás lista
+Por ti, bebo hasta al fondo del vaso
+Borracho llamo al cura y contigo me caso
+Hagamos mil locuras, que el tiempo es escaso
+Bebé, ya hazme caso, bebé, ya hazme caso
+Oh-oh-oh
+Ah, ah-ah-ah
+Ah-ah-ah
+Ah-ah-ah
+Por ti, lo que tú quieras, chiquita (ay, ay, ay, ay, ay)
+Hasta borro las morras que tengo en el Insta (Manuel Turizo)
+Volemos en privado, más nunca en turista
+Dime si estás lista`,
+      fr: `Pour toi, tout ce que tu veux, chérie
+Je supprime même les filles que j'ai sur Insta
+On vole en privé, plus jamais en touriste
+Dis-moi si tu es prête
+Je sens que je deviens un peu fou
+Quand je regarde tes lèvres (quand je regarde tes lèvres)
+Ils meurent d'envie
+Parce que j'ai la plus belle du quartier
+J'arrive et je privatise la boîte, parce que je dépense l'argent et je m'y refuse
+Demande-le, poupée (demande-le, poupée)
+Que je réalise ton souhait (le souhait)
+Je vais te voler, je vais te parrainer
+Une nuit à Cancún, la suivante à Dubaï
+Je t'achète du Louis Vuitton, une bague avec des diamants
+Car il n'y en a pas d'autre comme toi, non, non
+Pour toi, tout ce que tu veux, chérie
+Je supprime même les filles que j'ai sur Insta
+Volons en privé, plus jamais en touriste
+Dis-moi si tu es prête, dis-moi si tu es prête
+Pour toi, je bois jusqu'au fond du verre
+Ivre j'appelle le curé et je me marie avec toi
+Faisons mille folies, le temps est compté
+Bébé, écoute-moi enfin, bébé, écoute-moi enfin, oh-oh
+Ces petits yeux, comment les rejeter ?
+Ne me regarde pas comme ça, ou je me marie
+En pensant à toi, je m'emporte déjà
+Un baiser sur ta bouche et de la tequila dans le verre
+12 mois ne me suffisent plus
+Pour être avec toi, j'en veux 13 par an
+Je ne dors pas, si cette reine se réveille avec moi
+Je sens que je deviens un peu fou quand je regarde tes lèvres (yeah, yeah)
+Quand j'embrasse ton corps
+Ay, je ne sais pas ce qui se passe (ay, ay, moi)
+Je vais te voler, je vais te parrainer
+Une nuit à Cancún, la suivante à Dubaï
+Je t'achète du Louis Vuitton, une bague avec des diamants
+Car il n'y en a pas d'autre comme toi, non, non
+Pour toi, tout ce que tu veux, chérie
+Je supprime même les filles que j'ai sur Insta
+Volons en privé, plus jamais en touriste
+Dis-moi si tu es prête, dis-moi si tu es prête
+Pour toi, je bois jusqu'au fond du verre
+Ivre j'appelle le curé et je me marie avec toi
+Faisons mille folies, car le temps est compté
+Bébé, écoute-moi enfin, bébé, écoute-moi enfin
+Oh-oh-oh
+Ah, ah-ah-ah
+Ah-ah-ah
+Ah-ah-ah
+Pour toi, tout ce que tu veux, chérie (ay, ay, ay, ay, ay)
+Je supprime même les filles que j'ai sur Insta (Manuel Turizo)
+Volons en privé, plus jamais en touriste
+Dis-moi si tu es prête`
+    }
+  },
+  {
+    id: "alma-dj-husky-dimelo-cupido-montelier",
+    title: "Alma",
+    artist: "DJ Husky, Dimelo Cupido, Montelier",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Triste", "Moderne"],
+    color: "#7c3aed",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Une chanson sur la douleur de l'absence et l'incapacité de l'âme à se reconstruire après une rupture brutale.",
+      artistInfo: "Montelier apporte sa voix suave à ces compositions produites par l'incontournable DJ Husky.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh
+Qué mala suerte
+No ser tan fuerte de
+Para meterme en la cabeza que no estás
+No, no es suficiente
+Tu ausencia es evidente que
+Conviene el tiempo que todo puede curar
+Si yo lo he intentado todo pa' olvidar
+Tu amor que fue sobrenatural
+No tengo armas para enfrentarte
+Y si te dicen que no
+Que nunca me has visto llorando
+Que sepas que aun sueño contigo
+Que todavía te ando buscando
+Ya se me olvidó
+Cómo se sienten tus abrazos
+Y cuando hablan de ti sonrío
+Pero con el alma hecha pedazos
+Con el alma hecha pedazos
+Oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh
+Es inminente
+El llanto de repente yeah
+Que alguien me diga cuándo esto va a terminar
+Si yo lo he intentado todo pa' olvidar
+Tu amor que fue sobrenatural
+No tengo armas para enfrentarte
+Y si te dicen que no
+Que nunca me has visto llorando
+Que sepas que aún sueño contigo
+Que todavía te ando buscando
+Ya se me olvido
+Cómo se sienten tus abrazos
+Y cuando hablan de ti sonrío
+Pero con el alma hecha pedazos
+Con el alma hecha pedazos
+Este es el junte que todos ustedes estaban esperando
+En una bachata con sentimiento
+Dímelo Cupido, DJ Husky, quién más
+Tu Montelier
+Y si te dicen que no
+Que nunca me has visto llorando
+Que sepas que aún sueño contigo
+Que todavía te ando buscando
+Ya se me olvidó
+Cómo se sienten tus abrazos
+Y cuando hablan de ti sonrío
+Pero con el alma hecha pedazos
+Con el alma hecha pedazos
+Oh, oh, oh
+Con el alma hecha pedazos
+Oh, oh, oh`,
+      fr: `Oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh
+Quelle mauvaise chance
+De ne pas être assez fort
+Pour me mettre dans la tête que tu n'es plus là
+Non, ce n'est pas suffisant
+Ton absence est évidente
+Il faut laisser le temps qui peut tout guérir
+Pourtant j'ai tout essayé pour oublier
+Ton amour qui fut surnaturel
+Je n'ai pas d'armes pour t'affronter
+Et s'ils te dicen que non
+Que tu ne m'as jamais vu pleurer
+Sache que je rêve encore de toi
+Que je te cherche encore toujours
+J'ai déjà oublié
+Ce qu'on ressent dans tes bras
+Et quand on parle de toi je souris
+Mais avec l'âme en morceaux
+Avec l'âme en morceaux
+Oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh
+C'est imminent
+Les pleurs soudains yeah
+Que quelqu'un me dise quand cela va se terminer
+Pourtant j'ai tout essayé pour oublier
+Ton amour qui fut surnaturel
+Je n'ai pas d'armes pour t'affronter
+Et s'ils te dicen que non
+Que tu ne m'as jamais vu pleurer
+Sache que je rêve encore de toi
+Que je te cherche encore toujours
+J'ai déjà oublié
+Ce qu'on ressent dans tes bras
+Et quand on parle de toi je souris
+Mais avec l'âme en morceaux
+Avec l'âme en morceaux
+C'est le duo que vous attendiez tous
+Dans une bachata avec du sentiment
+Dis-le moi Cupidon, DJ Husky, qui d'autre
+Ton Montelier
+Et s'ils te dicen que non
+Que tu ne m'as jamais vu pleurer
+Sache que je rêve encore de toi
+Que je te cherche encore toujours
+J'ai déjà oublié
+Ce qu'on ressent dans tes bras
+Et quand on parle de toi je souris
+Mais avec l'âme en morceaux
+Avec l'âme en morceaux
+Oh, oh, oh
+Avec l'âme en morceaux
+Oh, oh, oh`
+    }
+  },
+  {
+    id: "la-parte-buena-fase-karen-mendez",
+    title: "La Parte Buena",
+    artist: "Fase & Karen Méndez",
+    year: 2022,
+    dateAdded: "2026-04-08",
+    tags: ["Sentimentale", "Moderne"],
+    color: "#6d28d9",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Chanson sur l'acceptation de ses propres défauts dans une relation passée, reconnaissant que l'autre était la meilleure partie de l'histoire.",
+      artistInfo: "Karen Méndez prête sa voix puissante à cette ballade bachata moderne.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Sé que pude
+Ser mejor de mil maneras
+Pero yo fui esa nube
+Que jodió tu primavera
+Y aunque en la cama éramos dos
+No había nadie
+El amor siempre se va
+Sin avisarme
+Fuiste tú
+De esta historia la parte buena
+Solo tú
+Quien salvaría si el barco se hundiera
+Llévate tu lugar antes de irte
+Nadie va a llenarlo, no voy a mentirte
+Fuiste tú
+Fuiste tú
+Yo fui la primera en borrar la foto
+Mi forma de ser nos borró a nosotros
+Nadie puede entrar en un corazón roto
+Y tú lo hiciste igual
+Porque yo
+Nunca supe nada del amor
+Tú sumabas y yo fui quien restó
+Pero debí contarte que yo no
+Que yo no tengo nada pa ti
+Ibas a quemarte y no te advertí
+Te dejé quererme y luego me fui
+Solo pensaba en mí
+Fuiste tú
+De esta historia la parte buena
+Solo tú
+Quien salvaría si el barco se hundiera
+Llévate tu lugar antes de irte
+Nadie va a llenarlo, no voy a mentirte
+Fuiste tú
+Fuiste tú
+Lo siento si me equivoqué
+He abierto las heridas que también cerré
+Si buscas un culpable, tú lo sabes bien
+No es que tú fueras frágil es que solo sé romper
+Porque yo sé también cómo se siente
+Ver alejarse a quien dijo siempre
+Te he hecho daño, pero soy consiente
+Que ahora que me has perdido va a cambiar tu suerte
+Y aunque en la cama éramos dos
+No había nadie
+El amor siempre se va
+Sin avisarme
+Fuiste tú
+De esta historia la parte buena
+Solo tú
+Quien salvaría si el barco se hundiera
+Llévate tu lugar antes de irte
+Nadie va a llenarlo, no voy a mentirte
+Fuiste tú
+Fuiste tú`,
+      fr: `Je sais que j'aurais pu
+Être meilleur de mille manières
+Mais j'ai été ce nuage
+Qui a gâché ton printemps
+Et même si dans le lit nous étions deux
+Il n'y avait personne
+L'amour s'en va toujours
+Sans me prévenir
+C'était toi
+De cette histoire la bonne partie
+Seulement toi
+Celle que je sauverais si le bateau coulait
+Emporte ta place avant de partir
+Personne ne la remplira, je ne vais pas te mentir
+C'était toi
+C'était toi
+J'ai été la première à effacer la photo
+Ma façon d'être nous a effacés nous deux
+Personne ne peut entrer dans un cœur brisé
+Et tu l'as fait quand même
+Parce que moi
+Je n'ai jamais rien su de l'amour
+Tu additionnais et c'est moi qui soustrayais
+Mais j'aurais dû te dire que moi non
+Que je n'ai rien pour toi
+Tu allais te brûler et je ne t'ai pas prévenu
+Je t'ai laissé m'aimer et puis je suis partie
+Je ne pensais qu'à moi
+C'était toi
+De cette histoire la bonne partie
+Seulement toi
+Celle que je sauverais si le bateau coulait
+Emporte ta place avant de partir
+Personne ne la remplira, je ne vais pas te mentir
+C'était toi
+C'était toi
+Désolée si je me suis trompée
+J'ai rouvert les blessures que j'avais aussi fermées
+Si tu cherches un coupable, tu le sais bien
+Ce n'est pas que tu étais fragile c'est que je ne sais que briser
+Parce que je sais aussi ce qu'on ressent
+En voyant s'éloigner celui qui a dit toujours
+Je t'ai fait du mal, mais je suis consciente
+Que maintenant que tu m'as perdue, ta chance va tourner
+Et même si dans le lit nous étions deux
+Il n'y avait personne
+L'amour s'en va toujours
+Sans me prévenir
+C'était toi
+De cette histoire la bonne partie
+Seulement toi
+Celle que je sauverais si le bateau coulait
+Emporte ta place avant de partir
+Personne ne la remplira, je ne vais pas te mentir
+C'était toi
+C'était toi`
+    }
+  ,
+  {
+    id: "bilirrubina-jensen-mila-egred",
+    title: "Bilirrubina",
+    artist: "Jensen & Mila Egred",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Divertissant", "Moderne"],
+    color: "#fbbf24",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Une chanson festive sur le sentiment amoureux qui provoque des réactions physiques ('la bilirrubina que sube'), détournant le concept médical pour exprimer l'excitation.",
+      artistInfo: "Jensen continue de s'imposer comme un leader de la bachata urbaine, ici accompagné de la voix fraîche de Mila Egred.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `It's Jensen
+Ay, shorty
+Quiero quedarme dormido soñándote
+Estoy pensando que nos hizo falta darnos más que solo un beso
+Me tienes tras de eso
+Miro, toco y reso
+que me sube la bilirrubina
+¿Qué hiciste? Ya me cambiaste la suerte
+Me gusta sentir esa adrenalina
+Que cada vez se pone más fuerte solo con verte
+Se me sube la bilirrubina
+No te olvido por más que lo intente
+Me tienes pensando en lo que sería
+Sé que tenemos algo pendiente
+Las ganas no mienten
+Aquí recordando que la pasamos bien
+Pero quedamos que esto sería solo pa una vez
+Se nos cruzó la vuelta y no nos dimos cuenta
+Y de repente, yo me encuentro en tu piel envuelta
+Ando ansioso buscando que se repita
+Nunca imaginé enchularme de una shorty caleñita
+Que me mira así, que me baile así encima de mí
+que me sube la bilirrubina
+¿Qué hiciste? Ya me cambiaste la suerte
+Me gusta sentir esa adrenalina
+Que cada vez se pone más fuerte solo con verte
+Se me sube la bilirrubina
+No te olvido, por más que lo intente
+Me tienes pensando en lo que sería
+Sé que tenemos algo pendiente
+Las ganas no mienten
+It's Jensen
+Mila
+Sácalo a bailar
+sP
+It's a problem
+que me sube la bilirrubina
+¿Que hiciste? Ya me cambiaste la suerte
+Me gusta sentir esa adrenalina
+Que cada vez se pone más fuerte solo con verte
+Se me sube la bilirrubina
+No te olvido por más que lo intente
+Me tienes pensando en lo que sería
+Sé que tenemos algo pendiente
+Las ganas no mienten
+Quiero quedarme dormida soñándote
+Estoy pensando que
+Nos hizo falta darnos más que solo un beso
+Te tengo tras de eso
+Miro, toco y reso`,
+      fr: `C'est Jensen
+Ay, chérie
+Je veux m'endormir en rêvant de toi
+Je pense qu'il nous a manqué de nous donner plus qu'un simple baiser
+Tu me tiens avec ça
+Je regarde, je touche et je prie
+que ma bilirubine monte
+Qu'as-tu fait ? Tu as déjà changé ma chance
+J'aime ressentir cette adrénaline
+Qui devient chaque fois plus forte juste en te voyant
+Ma bilirubine monte
+Je ne t'oublie pas, j'ai beau essayer
+Tu me fais penser à ce que ce serait
+Je sais que nous avons quelque chose en suspens
+L'envie ne ment pas
+Ici me rappelant qu'on a passé du bon temps
+Mais on avait dit que ce ne serait que pour une fois
+Le destin s'est croisé sans qu'on s'en rende compte
+Et soudain, je me retrouve enveloppée dans ta peau
+Je suis anxieux en cherchant à ce que ça se répète
+Je n'aurais jamais imaginé tomber amoureux d'une chérie de Cali
+Qui me regarde ainsi, qui me danse ainsi au-dessus de moi
+que ma bilirubine monte
+Qu'as-tu fait ? Tu as déjà changé ma chance
+J'aime ressentir cette adrénaline
+Qui devient chaque fois plus forte juste en te voyant
+Ma bilirubine monte
+Je ne t'oublie pas, j'ai beau essayer
+Tu me fais penser à ce que ce serait
+Je sais que nous avons quelque chose en suspens
+L'envie ne ment pas
+C'est Jensen
+Mila
+Invite-la à danser
+sP
+C'est un problème
+que ma bilirubine monte
+Qu'as-tu fait ? Tu as déjà changé ma chance
+J'aime ressentir cette adrénaline
+Qui devient chaque fois plus forte juste en te voyant
+Ma bilirubine monte
+Je ne t'oublie pas, j'ai beau essayer
+Tu me fais penser à ce que ce serait
+Je sais que nous avons quelque chose en suspens
+L'envie ne ment pas
+Je veux m'endormir en rêvant de toi
+Je suis en train de penser que
+Il nous a manqué de nous donner plus qu'un simple baiser
+Je te tiens avec ça
+Je regarde, je touche et je prie`
+    }
+  },
+  {
+    id: "drama- charles-luis-dj-husky",
+    title: "DRAMA",
+    artist: "Charles Luis & DJ Husky",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Dramatique", "Moderne"],
+    color: "#f87171",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Une chanson sur la fin d'une relation où les amants sont devenus des étrangers. Le titre souligne le côté théâtral et épuisant des disputes passées.",
+      artistInfo: "Charles Luis est un chanteur talentueux qui collabore régulièrement avec DJ Husky pour proposer des bachatas riches en émotions.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Que extraño fue, no volverte a ver
+Pero esta vez, ya perdí la fe
+Como palabras en el viento
+Se fue muriendo el sentimiento
+Entre mil llantos y lamentos
+Tu Y yo solo hemos perdido el tiempo
+Fuimos extraños en la cama y así
+Se desvanecieron las ganas de aquí
+Se fue el amor por la ventana
+Y en el pentagrama
+Melodía y drama en su fin
+Fuimos extraños en la cama y así
+Se desvanecieron las ganas de aquí
+Se fue el amor por la ventana
+Y en el pentagrama
+Melodía y drama en su fin
+Ah-ah-ah-ah-ah-ah
+No hay más que hacer
+No vuelvo a caer
+Vas a estar bien
+Seguiré de pie
+Como palabras en el viento
+Se fue muriendo el sentimiento
+Entre mil llantos y lamentos
+Tu Y yo solo hemos perdido el tiempo
+Fuimos extraños en la cama y así
+Se desvanecieron las ganas de aquí
+Se fue el amor por la ventana
+Y en el pentagrama
+Melodía y drama en su fin
+Fuimos extraños en la cama y así
+Se desvanecieron las ganas de aquí
+Se fue el amor por la ventana
+Y en el pentagrama
+Melodía y drama en su fin
+You know Baby, Pablo G, Dj Husky
+Dimelo Cupido, prrraaaaa, Tocala Abelito
+Charles Luis, Charles Luis
+Fuimos extraños en la cama y así
+Se desvanecieron las ganas de aquí
+Se fue el amor por la ventana
+Y en el pentagrama
+Melodía y dramaaaaaaa
+Fuimos extraños en la cama y así
+Se desvanecieron las ganas de aquí
+Se fue el amor por la ventana
+Y en el pentagrama
+Melodía y drama en su fin
+Ah-ah-ah-ah-ah-ah`,
+      fr: `Comme c'était étrange, de ne plus te revoir
+Mais cette fois, j'ai déjà perdu la foi
+Comme des mots dans le vent
+Le sentiment s'est éteint petit à petit
+Entre mille pleurs et lamentations
+Toi et moi, nous n'avons fait que perdre notre temps
+Nous étions des étrangers dans le lit et c'est ainsi
+Que les envies se sont évanouies ici
+L'amour s'est envolé par la fenêtre
+Et sur la portée musicale
+Mélodie et drame touchent à leur fin
+Nous étions des étrangers dans le lit et c'est ainsi
+Que les envies se sont évanouies ici
+L'amour s'est envolé par la fenêtre
+Et sur la portée musicale
+Mélodie et drame touchent à leur fin
+Ah-ah-ah-ah-ah-ah
+Il n'y a plus rien à faire
+Je ne retomberai pas
+Tu iras bien
+Je resterai debout
+Comme des mots dans le vent
+Le sentiment s'est éteint petit à petit
+Entre mille pleurs et lamentations
+Toi et moi, nous n'avons fait que perdre notre temps
+Nous étions des étrangers dans le lit et c'est ainsi
+Que les envies se sont évanouies ici
+L'amour s'est envolé par la fenêtre
+Et sur la portée musicale
+Mélodie et drame touchent à leur fin
+Nous étions des étrangers dans le lit et c'est ainsi
+Que les envies se sont évanouies ici
+L'amour s'est envolé par la fenêtre
+Et sur la portée musicale
+Mélodie et drame touchent à leur fin
+Tu le sais bébé, Pablo G, Dj Husky
+Dis-le moi Cupidon, prrraaaaa, Joue-le Abelito
+Charles Luis, Charles Luis
+Nous étions des étrangers dans le lit et c'est ainsi
+Que les envies se sont évanouies ici
+L'amour s'est envolé par la fenêtre
+Et sur la portée musicale
+Mélodie et drama-a-a-a-a-a
+Nous étions des étrangers dans le lit et c'est ainsi
+Que les envies se sont évanouies ici
+L'amour s'est envolé par la fenêtre
+Et sur la portée musicale
+Mélodie et drame touchent à leur fin
+Ah-ah-ah-ah-ah-ah`
+    }
+  },
+  {
+    id: "menor-prince-royce-romeo-santos",
+    title: "Menor",
+    artist: "Prince Royce & Romeo Santos",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Legendaire", "Moderne"],
+    color: "#4338ca",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Un dialogue entre un homme plus âgé (l'un des deux chanteurs) et un plus jeune qui souffre de sa première rupture. C'est une leçon de vie sur la cruauté et la beauté de l'amour.",
+      artistInfo: "Prince Royce et Romeo Santos sont les figures emblématiques qui ont propulsé la bachata au niveau mondial.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Hiedes a tabaco y ron
+Al cabaré llegas temprano
+Eres muy joven
+Y un error no define el posterior
+El amor es como un juego
+Vas a conocer mil mujeres
+Unas pagarán muy mal
+El amor es bello
+El amor es cruel
+No te escapas del despecho
+No es saludable a mi edad
+Que el desamor me esté consumiendo
+Menor, no estás en el colegio
+Chamaquitas con cuadernos
+Te asfixió una mujer
+No es saludable a mi edad
+Mi corazón ya me lo están rompiendo
+La vida no es color de rosas
+Ponte fuerte como roca
+Tú tienes que aprender
+Se reporta un inexperto en la cantina
+Que todavía la lleva a pecho
+Maldito sentimiento
+¿Lo tenemo nosotro?
+Esto es pa los musicólogos
+Te estás ahogando en el romo y la tequila
+Padeciendo la epidemia mal de amores
+Veo tu herida
+El amor es bello
+El amor es cruel
+No te escapas del despecho
+No es saludable a mi edad
+Que el desamor me esté consumiendo
+Menor, no estás en el colegio
+Chamaquitas con cuadernos
+Te asfixió una mujer
+No es saludable a mi edad
+Mi corazón ya me lo están rompiendo
+La vida no es color de rosas
+Ponte fuerte como roca
+Tú tienes que aprender
+Se reporta un inexperto en la cantina
+Que todavía la lleva a pecho
+Dalvin, desahógate ahí
+¿Seguro?
+Dale, dale
+Dale sin miedo, loco
+Dale
+Aquí extrañando su cuerpo
+Y todo lo que me enseñó
+La more ya no me quiere
+Por eso me emborracho yo
+Menor, ya deja de llorar
+Todo va a pasar
+Cuando te vuelvas a enamorar
+No te puedes entregar
+Menor ya deja de llorar
+Todo va a pasar
+Cuando te vuelvas a enamorar
+Hey, bájale dos`,
+      fr: `Tu sens le tabac et le rhum
+Au cabaret tu arrives tôt
+Tu es très jeune
+Et une erreur n'en définit pas une autre
+L'amour est comme un jeu
+Tu vas connaître mille femmes
+Certaines te traiteront très mal
+L'amour est beau
+L'amour est cruel
+Tu n'échapperas pas au dépit
+Ce n'est pas sain à mon âge
+Que le chagrin d'amour me consume
+Petit, tu n'es plus à l'école
+À courir les gamines avec leurs cahiers
+Une femme t'a étouffé
+Ce n'est pas sain à mon âge
+Mon cœur, on est déjà en train de me le briser
+La vie n'est pas toute rose
+Sois fort comme un roc
+Tu dois apprendre
+On signale un inexpérimenté à la cantine
+Qui prend encore tout trop à cœur
+Maudit sentiment
+Est-ce qu'on le possède aussi ?
+C'est pour les musicologues
+Tu es en train de te noyer dans le rhum et la tequila
+Souffrant de l'épidémie du mal d'amour
+Je vois ta blessure
+L'amour est beau
+L'amour est cruel
+Tu n'échapperas pas au dépit
+Ce n'est pas sain à mon âge
+Que le chagrin d'amour me consume
+Petit, tu n'es plus à l'école
+À courir les gamines avec leurs cahiers
+Une femme t'a étouffé
+Ce n'est pas sain à mon âge
+Mon cœur, on est déjà en train de me le briser
+La vie n'est pas toute rose
+Sois fort comme un roc
+Tu dois apprendre
+On signale un inexpérimenté à la cantine
+Qui prend encore tout trop à cœur
+Dalvin, vide ton sac là
+T'es sûr ?
+Vas-y, vas-y
+Vas-y sans peur, mec
+Vas-y
+Ici son corps me manque
+Et tout ce qu'elle m'a appris
+Ma "more" ne m'aime plus
+C'est pour ça que je m'enivre
+Petit, arrête déjà de pleurer
+Tout va passer
+Quand tu retomberas amoureux
+Tu ne peux pas tout donner
+Petit arrête déjà de pleurer
+Tout va passer
+Quand tu retomberas amoureux
+Hey, calme-toi un peu`
+    }
+  },
+  {
+    id: "sirena-dimelo-cupido-dj-husky",
+    title: "Sirena",
+    artist: "Dimelo Cupido ft. DJ Husky (Leo Guzmán)",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Envoutant", "Moderne"],
+    color: "#06b6d4",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "La sirène est une métaphore pour une femme à la beauté surnaturelle dont le chant (ou le charme) a fait perdre la raison au protagoniste.",
+      artistInfo: "Dimelo Cupido est un producteur influent qui collabore souvent avec DJ Husky pour créer des hits bachata.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Bendita locura que me hace subir y bajar otra vez
+Gratificante tortura, si me lo preguntan lo volvería a hacer
+Parece que del pasado yo nada aprendí
+¿Por qué diablos tuvo que pasarme a mí
+Me besó los labios con su frenesí
+Y en su belleza juro me perdí
+Una hermosura sobrenatural, los ojos del color del cielo
+Y pierdo la cordura cuando llega me ilumina tal como lucero
+Me enredó con su canto de sirena, de sirena dulce tentación
+Persiguiendo ese canto de sirena, de sirena he perdido la razón
+Parece que del pasado yo nada aprendí
+¿Por qué diablos tuvo que pasarme a mí
+Me besó los labios con su frenesí
+Y en su belleza juro me perdí
+Una hermosura sobrenatural, los ojos del color del cielo
+Y pierdo la cordura cuando llega me ilumina tal como lucero
+Me enredó con su canto de sirena, de sirena dulce tentación
+Persiguiendo ese canto de sirena, de sirena he perdido la razón
+Oye, tú sabes quién soy
+Yo soy Leo Guzmán
+Y es un placer conocerte
+Ay dio'
+Pa' la Republica
+Dimelo Cupido
+Dj Husky
+Una hermosura sobrenatural, los ojos del color del cielo
+Y pierdo la cordura cuando llega me ilumina tal como lucero
+Me enredó con su canto de sirena, de sirena dulce tentación
+Persiguiendo ese canto de sirena, de sirena he perdido la razón`,
+      fr: `Maudite folie qui me fait monter et descendre à nouveau
+Torture gratifiante, si on me le demande je le referais
+On dirait que je n'ai rien appris du passé
+Pourquoi diable a-t-il fallu que ça m'arrive à moi
+Elle m'a embrassé les lèvres avec sa frénésie
+Et dans sa beauté je jure que je me suis perdu
+Une beauté surnaturelle, les yeux de la couleur du ciel
+Et j'en perds la raison quand elle arrive, elle m'illumine comme une étoile
+Elle m'a emmêlé avec son chant de sirène, de sirène, douce tentation
+En poursuivant ce chant de sirène, de sirène, j'ai perdu la raison
+On dirait que je n'ai rien appris du passé
+Pourquoi diable a-t-il fallu que ça m'arrive à moi
+Elle m'a embrassé les lèvres avec sa frénésie
+Et dans sa beauté je jure que je me suis perdu
+Une beauté surnaturelle, les yeux de la couleur du ciel
+Et j'en perds la raison quand elle arrive, elle m'illumine comme une étoile
+Elle m'a emmêlé avec son chant de sirène, de sirène, douce tentation
+En poursuivant ce chant de sirène, de sirène, j'ai perdu la raison
+Hé, tu sais qui je suis
+Je suis Leo Guzmán
+Et c'est un plaisir de te connaître
+Oh mon Dieu
+Pour la République
+Dis-le moi Cupidon
+Dj Husky
+Une beauté surnaturelle, les yeux de la couleur du ciel
+Et j'en perds la raison quand elle arrive, elle m'illumine comme une étoile
+Elle m'a emmêlé avec son chant de sirène, de sirène, douce tentation
+En poursuivant ce chant de sirène, de sirène, j'ai perdu la raison`
+    }
+  },
+  {
+    id: "better-late-than-never-prince-royce-romeo-santos",
+    title: "Better Late Than Never",
+    artist: "Prince Royce & Romeo Santos",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Legendaire", "Romantique"],
+    color: "#6366f1",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Une demande de pardon après avoir mûri. Le chanteur admet ses erreurs passées et espère qu'il n'est pas trop tard pour regagner le cœur de sa bien-aimée.",
+      artistInfo: "Cette réunion des deux rois de la bachata moderne marque un tournant dans l'industrie musicale des années 2020.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Yo te abro las puertas de mi corazón, sin miedo
+Así verás el cambio tan genuino en mi interior
+Le he gastado el tiempo a tu reloj
+Pero voy a luchar por ti aunque no quieras
+Lo que esperabas demoró
+But it's better late than never
+Esto amerita una última pelea
+Bebé, dame otro chance para que veas
+Escúchame, mi amor
+Yo ya perdí la cuenta de tantos errores
+Dime si sabes
+Las abejas más dañinas complementan las flores
+Si abres tus DMs
+Vas a ver un millón de mis disculpas
+Y ya que me bloqueaste
+Iré a tu casa a ver si me resulta
+No digas nada
+Que ya cambié mi corazón
+Y te presento esta versión de un hombre renovado
+Mejor tarde que nunca
+Tú lo anhelabas
+Por fin maduré cuando te perdí
+Quizás te verás más bella sin mí
+No olvides, más vale tarde que no hacerlo nunca
+That's class right there
+Royce
+The king
+Tu amiga dice que tienes pareja
+Y se burla de mí
+Ojalá el rumor no sea cierto
+Si abres tus DMs
+Vas a ver un millón de mis disculpas
+Y ya que me bloqueaste
+Iré a tu casa a ver si me resulta
+No digas nada
+Que ya cambié mi corazón
+Y te presento esta versión de un hombre renovado
+Mejor tarde que nunca
+Tú lo anhelabas
+Por fin maduré cuando te perdí
+Quizás te verás más bella sin mí
+No olvides, más vale tarde que no hacerlo nunca
+El amor que perdimos
+Para mí sigue incondicional
+Y te me vas dejándome en la carretera
+Y solo quiero darte un beso
+Yo te hago una propuesta, mi santa
+Quédate solo conmigo
+Aunque yo fui soberbio y canalla
+I promise, eres mía
+No digas nada
+Que ya cambié mi corazón
+Y te presento esta versión de un hombre renovado
+Mejor tarde que nunca
+Tú lo anhelabas
+Por fin maduré cuando te perdí
+Quizás te verás más bella sin mí
+No olvides, más vale tarde que no hacerlo nunca`,
+      fr: `Je t'ouvre les portes de mon cœur, sans peur
+Ainsi tu verras le changement si authentique en moi
+J'ai gaspillé le temps de ton horloge
+Mais je vais me battre pour toi même si tu ne veux pas
+Ce que tu attendais a tardé
+Mais mieux vaut tard que jamais
+Cela mérite un dernier combat
+Bébé, donne-moi une autre chance pour que tu voies
+Écoute-moi, mon amour
+J'ai déjà perdu le compte de tant d'erreurs
+Dis-moi si tu sais
+Les abeilles les plus nuisibles complètent les fleurs
+Si tu ouvres tes DMs
+Tu verras un million de mes excuses
+Et comme tu m'as bloqué
+J'irai chez toi voir si ça marche
+Ne dis rien
+Car j'ai déjà changé mon cœur
+Et je te présente cette version d'un homme renouvelé
+Mieux vaut tard que jamais
+Tu le désirais tant
+J'ai enfin mûri quand je t'ai perdue
+Peut-être que tu seras plus belle sans moi
+N'oublie pas, mieux vaut tard que de ne jamais le faire
+C'est ça la classe
+Royce
+Le roi
+Ton amie dit que tu as un partenaire
+Et elle se moque de moi
+J'espère que la rumeur n'est pas vraie
+Si tu ouvres tes DMs
+Tu verras un million de mes excuses
+Et comme tu m'as bloqué
+J'irai chez toi voir si ça marche
+Ne dis rien
+Car j'ai déjà changé mon cœur
+Et je te présente cette version d'un homme renouvelé
+Mieux vaut tard que jamais
+Tu le désirais tant
+J'ai enfin mûri quand je t'ai perdue
+Peut-être que tu seras plus belle sans moi
+N'oublie pas, mieux vaut tard que de ne jamais le faire
+L'amour que nous avons perdu
+Pour moi reste inconditionnel
+Et tu t'en vas en me laissant sur la route
+Et je veux seulement te donner un baiser
+Je te fais une proposition, ma sainte
+Reste seulement avec moi
+Même si j'ai été superbe et canaille
+Je te le promets, tu es à moi
+Ne dis rien
+Car j'ai déjà changé mon cœur
+Et je te présente cette version d'un homme renouvelé
+Mieux vaut tard que jamais
+Tu le désirais tant
+J'ai enfin mûri quand je t'ai perdue
+Peut-être que tu seras plus belle sans moi
+N'oublie pas, mieux vaut tard que de ne jamais le faire`
+    }
+  ,
+  {
+    id: "en-los-pasillos-mayinbito-sonce",
+    title: "En Los Pasillos",
+    artist: "Mayinbito & SONCE",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Romantique", "Moderne"],
+    color: "#fb923c",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Une chanson sur l'attente et le désir constant de l'autre, s'imaginant sa présence même dans les couloirs de la maison.",
+      artistInfo: "Mayinbito est un artiste montant de la bachata urbaine, ici en duo avec SONCE.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Como caminas
+Por los pasillos de mi casa
+Me dejas sin aliento
+Emocion no dejo de sentir
+Ohhhhh
+Los movimientos de tu cuerpo
+Son como llamas en un fuego
+Que no dejan de bailar
+En su esencia natural
+Yo quiero otra noche
+Otra noche contigo
+Que no haya testigos
+Solos tú y yo
+En mi habitación
+Yo quiero otra noche
+Otra noche contigo
+Todo tu cuerpo reviso
+Sin planes yo improviso
+Mayinbito
+Tú sabes lo que hay
+Dueño del movimiento
+Anastasiia SONCE
+Me levanto cada mañana
+Imaginándome acostada en tu cama
+La sensación en mi no quiere irse
+Soy tu alumna y tú eres mi teacher
+Esta noche llévame contigo
+Ohhhhh
+Llevarnos al punto del abismo
+Yo quiero otra noche
+Otra noche contigo
+Que no haya testigos
+Solos tú y yo
+En mi habitación
+Yo quiero otra noche
+Otra noche contigo
+Todo tu cuerpo reviso
+Sin planes yo improviso
+Uh
+You know what it is
+Is 5 boro music
+Oye Argenis
+Es que ella no entiende los código
+Quiero otra noche
+Noche contigo
+Ohhhh
+Anastasiia SONCE
+Uuuuu
+Quiero otra noche
+Otra noche
+Ohhh
+Contigo`,
+      fr: `Comment tu marches
+Dans les couloirs de ma maison
+Tu me laisses sans souffle
+Je ne cesse de ressentir de l'émotion
+Ohhhhh
+Les mouvements de ton corps
+Sont comme des flammes dans un feu
+Qui ne cessent de danser
+Dans leur essence naturelle
+Je veux une autre nuit
+Autre nuit avec toi
+Qu'il n'y ait pas de témoins
+Seuls toi et moi
+Dans ma chambre
+Je veux une autre nuit
+Autre nuit avec toi
+Tout ton corps je l'examine
+Sans plans j'improvise
+Mayinbito
+Tu sais ce qu'il y a
+Maître du mouvement
+Anastasiia SONCE
+Je me lève chaque matin
+M'imaginant allongée dans ton lit
+La sensation en moi ne veut pas partir
+Je suis ton élève et tu es mon professeur
+Ce soir emmène-moi avec toi
+Ohhhhh
+Nous emmener au bord de l'abîme
+Je veux une autre nuit
+Autre nuit avec toi
+Qu'il n'y ait pas de témoins
+Seuls toi et moi
+Dans ma chambre
+Je veux une autre nuit
+Autre nuit avec toi
+Tout ton corps je l'examine
+Sans plans j'improvise
+Uh
+Tu sais ce que c'est
+C'est 5 boro music
+Écoute Argenis
+C'est qu'elle ne comprend pas les codes
+Je veux une autre nuit
+Nuit avec toi
+Ohhhh
+Anastasiia SONCE
+Uuuuu
+Je veux une autre nuit
+Autre nuit
+Ohhh
+Avec toi`
+    }
+  },
+  {
+    id: "travesuras-jean-alex",
+    title: "Travesuras",
+    artist: "Jean & Alex",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Urbaine", "Divertissant"],
+    color: "#f43f5e",
+    culture: {
+      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
+      meaning: "Une chanson festive et osée sur une nuit de fête, de danse sensuelle et de 'travesuras' (bêtises/espiègleries) dans un club.",
+      artistInfo: "Jean & Alex confirment leur statut de rois du R&B-Bachata avec ce titre club.",
+      album: "Non spécifié"
+    },
+    lyrics: {
+      es: `Bailándome en el lap
+yo sé que eso es mío
+Selfie request por collab
+You wanna show me off
+Trajecito corto, escota'
+La nota ya está eleva'
+She just wanna throw it back
+Tiene la mente daña, woop
+Y es evidente que estamos calientes, vamos de aquí
+Te tengo de frente pero en mi mente, encima de mí
+Y es evidente que estamos calientes
+Fuck this VIP
+Aquí no se duerme porque esta noche es de
+Travesuras, pa’ devorarte en la noche oscura
+Mami, tú quieres vivir una aventura
+Hoy voy a darte hasta la sepultura
+Travesuras, pa’ devorarte en la noche oscura
+Mami, tú quieres vivir una aventura
+Hoy voy a darte hasta la sepultura
+Cuando yo le bajo me pide
+La, la, la, la, la, la, la, la
+Cuando yo le bajo me pide
+La, la, la, la, la, la, la, la
+La, la, ahh, ahh
+Tú eres salvaje, yo te pongo dócil
+Quieres que te apriete y te haga sentir
+Contra la pared se empieza desvestir
+Se pone violenta Kill Bill
+Tú eres salvaje, yo te pongo dócil
+Quieres que te apriete y te haga sentir
+Contra la pared se empieza desvestir
+Te pongo a gemir
+Y es evidente que estamos calientes, vamos de aquí
+Te tengo de frente pero en mi mente, encima de mí
+Y es evidente que estamos calientes
+Fuck this VIP
+Aquí no se duerme porque esta noche es de
+Travesuras, pa’ devorarte en la noche oscura
+Mami, tú quieres vivir una aventura
+Hoy voy a darte hasta la sepultura, oh ohh
+Travesuras, pa’ devorarte en la noche oscura
+Mami, tú quieres vivir una aventura
+Hoy voy a darte hasta la sepultura
+Cuando yo le bajo me pide
+La, la, la, la, la, la, la, la
+Cuando yo le bajo me pide
+La, la, la, la, la, la, la, la
+Cuando yo le bajo me pide
+La, la, la, la, la, la, la, la
+Cuando yo le bajo me pide
+La, la, la, la, la, la, la, la
+La, la, ahh ahh
+Jean & Alex, Los reyes del R&B
+Dímelo, Cupido
+DJ Husky
+Yeah`,
+      fr: `En dansant sur mes genoux
+je sais que tout ça est à moi
+Requête de selfie pour collab
+Tu veux te montrer avec moi
+Petite robe courte, décolletée
+L'ambiance est déjà montée
+Elle veut juste se déhancher
+Elle a l'esprit mal tourné, woop
+Et c'est évident qu'on a envie l'un de l'autre, partons d'ici
+Je t'ai en face de moi mais dans ma tête, tu es sur moi
+Et c'est évident qu'on a envie l'un de l'autre
+Au diable ce VIP
+Ici on ne dort pas parce que cette nuit est aux
+Bêtises, pour te dévorer dans la nuit noire
+Mami, tu veux vivre une aventure
+Aujourd'hui je vais t'aimer jusqu'à la tombe
+Bêtises, pour te dévorer dans la nuit noire
+Mami, tu veux vivre une aventure
+Aujourd'hui je vais t'aimer jusqu'à la tombe
+Quand je descends elle me demande
+La, la, la, la, la, la, la, la
+Quand je descends elle me demande
+La, la, la, la, la, la, la, la
+La, la, ahh, ahh
+Tu es sauvage, je te rends docile
+Tu veux que je te serre et que je te fasse vibrer
+Contre le mur elle commence à se déshabiller
+Elle devient violente comme Kill Bill
+Tu es sauvage, je te rends docile
+Tu veux que je te serre et que je te fasse vibrer
+Contre le mur elle commence à se déshabiller
+Je te fais gémir
+Et c'est évident qu'on a envie l'un de l'autre, partons d'ici
+Je t'ai en face de moi mais dans ma tête, tu es sur moi
+Et c'est évident qu'on a envie l'un de l'autre
+Au diable ce VIP
+Ici on ne dort pas parce que cette nuit est aux
+Bêtises, pour te dévorer dans la nuit noire
+Mami, tu veux vivre une aventure
+Aujourd'hui je vais t'aimer jusqu'à la tombe, oh ohh
+Bêtises, pour te dévorer dans la nuit noire
+Mami, tu veux vivre une aventure
+Aujourd'hui je vais t'aimer jusqu'à la tombe
+Quand je descends elle me demande
+La, la, la, la, la, la, la, la
+Quand je descends elle me demande
+La, la, la, la, la, la, la, la
+Quand je descends elle me demande
+La, la, la, la, la, la, la, la
+Quand je descends elle me demande
+La, la, la, la, la, la, la, la
+La, la, ahh ahh
+Jean & Alex, Les rois du R&B
+Dis-le moi, Cupidon
+DJ Husky
+Yeah`
+    }
   }
-]
+];
