@@ -3781,6 +3781,7 @@ Israel palma, ton fils`
     tags: ["Sensual", "Classique"],
     color: "#f59e0b",
     spotify: "https://open.spotify.com/search/Lokita%20Por%20Mi%20Prince%20Royce%20Romeo%20Santos",
+    danceVideo: "VJ4cJ8uNNG8",
     culture: {
       context: "Une collaboration historique en 2025 entre les deux rois de la Bachata, Prince Royce et Romeo Santos, marquant une nouvelle ère pour le genre.",
       meaning: "La chanson explore une relation passionnelle et 'toxique' avec humour, où les deux artistes célèbrent les défauts et la 'folie' de leur partenaire.",
