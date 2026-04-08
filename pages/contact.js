@@ -65,7 +65,7 @@ export default function Contact() {
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                placeholder="Maximilien..."
+                placeholder="Ton prénom..."
                 style={inputStyle}
               />
             </div>
