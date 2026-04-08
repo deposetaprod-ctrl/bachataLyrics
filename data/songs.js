@@ -3527,7 +3527,7 @@ Quels idiots, quels fous nous sommes toi et moi
     dateAdded: "2026-03-30",
     tags: ["Sensual", "Classique"],
     color: "#9333ea",
-    spotify: "https://open.spotify.com/search/Creme%20De%20La%20Creme%20Mayinbito",
+    spotify: "https://open.spotify.com/search/Propuesta%20Indecente%20Romeo%20Santos",
     culture: {
       context: "Considérée comme l'une des chansons de bachata les plus emblématiques de tous les temps, 'Propuesta Indecente' a fusionné le tango argentin avec la bachata moderne.",
       meaning: "La chanson raconte une tentative de séduction audacieuse lors d'une soirée, où le protagoniste propose une 'proposition indécente' à une femme déjà accompagnée.",
@@ -3657,7 +3657,8 @@ Moi et vous (Vous)`
     dateAdded: "2026-03-30",
     tags: ["Dominicaine", "Moderne"],
     color: "#10b981",
-    spotify: "https://open.spotify.com/search/Lokita%20Por%20Mi%20Prince%20Royce%20Romeo%20Santos",
+    spotify: "https://open.spotify.com/search/Creme%20De%20La%20Creme%20Mayinbito",
+    danceVideo: "zJqJvLxYvXk",
     culture: {
       context: "Un titre récent de Mayinbito qui célèbre la femme dominicaine à travers un mélange de rythmes urbains et de bachata traditionnelle.",
       meaning: "Une chanson qui décrit une femme exceptionnelle, la 'crème de la crème', à qui le chanteur promet un royaume et une passion éternelle.",
