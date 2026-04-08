@@ -7699,5 +7699,125 @@ Dis-le moi, Cupidon
 DJ Husky
 Yeah`
     }
+  },
+  {
+    id: "no-me-toca-sp-polanco-pinto-picasso",
+    title: "No Me Toca",
+    artist: "sP Polanco, Pinto Picasso & Bchta Rising",
+    year: 2025,
+    dateAdded: "2026-04-08",
+    tags: ["Sensual", "Moderne", "Nostalgie"],
+    color: "#6366f1",
+    danceVideo: "XKVWNhNFgas",
+    culture: {
+      context: "Sortie en 2025 sur la compilation 'BCHTA RISING, Vol. 2', cette collaboration réunit sP Polanco et Pinto Picasso, deux figures de proue de la nouvelle vague bachata.",
+      meaning: "La chanson explore la difficulté de tourner la page après une rupture, malgré la douleur et les avertissements des proches ('mami me advirtió'). L'expression 'todavía no me toca' souligne que le chanteur n'est pas encore prêt à oublier.",
+      artistInfo: "sP Polanco est connu pour son style moderne, tandis que Pinto Picasso est célèbre pour sa voix R&B unique intégrée à la bachata.",
+      album: "BCHTA RISING, Vol. 2"
+    },
+    lyrics: {
+      es: `Mm, ayer sonando tu canción
+Por el parlante, te vi en el retrovisor
+Tu melodía se grabó en mi corazón
+¿Qué no daría por volver a oír tu voz?
+
+Hasta mami me advirtió
+Que tú te irías y que amarte fue un error
+Que, entre las millas, solo hay mares y dolor
+Pero no importa, yo me tiro por amor
+
+No sé si a ti te sabe igual
+Si la distancia a ti también te pone mal
+No sé si yo te vo'a olvidar
+Con par de tragos, par de moñas o alguien más
+Ahora que te alejaste, es que más se me nota
+Que me muero por vos y el sabor de tu boca
+Se me alargan las noches, mientras el tiempo acorta
+Estoy que te olvido, pero todavía no me toca
+
+Oh-oh-oh-ouh
+Picasso, baby
+sP
+You already know it's a problem
+Rising
+
+Estoy aquí solo en cuerpo, en mi mente (estoy a tu lado)
+Esperanzado, que aunque haya pasado el tiempo (no me has olvidado)
+Bailé muy cerquita del fuego y casi pierdo la' manos
+
+La realidad me acordó de to lo que mami me advirtió
+Que tú te irías y que amarte fue un error
+Entre las millas, solo hay mares y dolor
+Pero no importa, yo me tiro por amor
+
+No sé si a ti te sabe igual
+Si la distancia a ti también te pone mal
+No sé si yo te vo'a olvidar
+Con par de tragos, par de moñas o alguien más
+Ahora que te alejaste, es que más se me nota
+Que me muero por vos y el sabor de tu boca
+Se me alargan las noches, mientras el tiempo acorta
+Estoy que te olvido, pero todavía no me toca
+
+No sé si a ti te sabe igual
+Si la distancia a ti también te pone mal
+No sé si yo te vo'a olvidar
+Con par de tragos, par de moñas o alguien más
+Ahora que te alejaste, es que más se me nota
+Que me muero por vos y el sabor de tu boca
+Se me alargan las noches, mientras el tiempo acorta
+Estoy que te olvido, pero todavía no me toca`,
+      fr: `Mm, hier en écoutant ta chanson
+Dans le haut-parleur, je t'ai vue dans le rétroviseur
+Ta mélodie s'est gravée dans mon cœur
+Que ne donnerais-je pas pour réentendre ta voix ?
+
+Même maman m'avait prévenu
+Que tu partirais et que t'aimer était une erreur
+Qu'entre les miles, il n'y a que mers et douleur
+Mais peu importe, je me jette à l'eau par amour
+
+Je ne sais pas si c'est la même chose pour toi
+Si la distance te rend mal aussi
+Je ne sais pas si je vais t'oublier
+Avec quelques verres, quelques joints ou quelqu'un d'autre
+Maintenant que tu t'es éloignée, c'est là que ça se voit le plus
+Que je meure pour toi et le goût de ta bouche
+Les nuits s'allongent alors que le temps raccourcit
+Je suis sur le point de t'oublier, mais ce n'est pas encore mon tour
+
+Oh-oh-oh-ouh
+Picasso, baby
+sP
+Tu sais déjà que c'est un problème
+Rising
+
+Je suis ici seulement de corps, dans mon esprit (je suis à tes côtés)
+Espérant que même si le temps a passé (tu ne m'as pas oublié)
+J'ai dansé très près du feu et j'ai failli me brûler les mains
+
+La réalité m'a rappelé tout ce que maman m'avait prévenu
+Que tu partirais et que t'aimer était une erreur
+Entre les miles, il n'y a que mers et douleur
+Mais peu importe, je me jette à l'eau par amour
+
+Je ne sais pas si c'est la même chose pour toi
+Si la distance te rend mal aussi
+Je ne sais pas si je vais t'oublier
+Avec quelques verres, quelques joints ou quelqu'un d'autre
+Maintenant que tu t'es éloignée, c'est là que ça se voit le plus
+Que je meure pour toi et le goût de ta bouche
+Les nuits s'allongent alors que le temps raccourcit
+Je suis sur le point de t'oublier, mais ce n'est pas encore mon tour
+
+Je ne sais pas si c'est la même chose pour toi
+Si la distance te rend mal aussi
+Je ne sais pas si je vais t'oublier
+Avec quelques verres, quelques joints ou quelqu'un d'autre
+Maintenant que tu t'es éloignée, c'est là que ça se voit le plus
+Que je meure pour toi et le goût de ta bouche
+Les nuits s'allongent alors que le temps raccourcit
+Je suis sur le point de t'oublier, mais ce n'est pas encore mon tour`
+    }
   }
 ];
