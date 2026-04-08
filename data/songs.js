@@ -6868,7 +6868,7 @@ Personne ne la remplira, je ne vais pas te mentir
 C'était toi
 C'était toi`
     }
-  ,
+  },
   {
     id: "bilirrubina-jensen-mila-egred",
     title: "Bilirrubina",
