@@ -926,6 +926,7 @@ Et maintenant ça me fait mal que tu sois à un autre`,
     tags: ["Sensual"],
     color: "#f59e0b",
     spotify: "https://open.spotify.com/search/Mamacita%20Mickey%20Then",
+    danceVideo: "zLCeVhzsYh0",
     culture: {
       context: "Sortie en 2025, 'Mamacita' est devenue l'un des morceaux les plus joués dans la scène bachata mondiale, fréquemment utilisée dans les démos de danse et workshops internationaux.",
       meaning: "Un titre festif et séducteur où le chanteur décrit une femme irrésistible sur la piste de danse : ses yeux, sa cintura, son énergie — une 'mamacita' qui fait tourner les têtes.",
