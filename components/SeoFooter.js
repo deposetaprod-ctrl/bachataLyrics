@@ -22,6 +22,31 @@ export default function SeoFooter({ currentPage = '' }) {
               Paroles de bachata traduites en français, musicality trainer et passes de danse.
               L'application des passionnés de bachata.
             </p>
+            <div style={{ marginTop: '20px' }}>
+              <a 
+                href="https://instagram.com/bachata_gang" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  color: 'white',
+                  textDecoration: 'none',
+                  fontSize: '0.85rem',
+                  fontWeight: 700,
+                  background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
+                  padding: '8px 16px',
+                  borderRadius: '999px',
+                  boxShadow: '0 4px 15px rgba(220, 39, 67, 0.3)',
+                  transition: 'transform 0.2s'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              >
+                📸 Rejoins-nous sur Instagram
+              </a>
+            </div>
           </div>
 
           <div className="seo-footer-col">
