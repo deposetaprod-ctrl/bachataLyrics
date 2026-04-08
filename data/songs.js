@@ -4062,6 +4062,7 @@ Je te supplie, tu es ma vie, ne m'abandonne pas !`
     tags: ["Classique", "Mélancolique"],
     color: "#6b7280",
     spotify: "https://open.spotify.com/search/Llora%20Alma%20Mia%20Yoskar%20Sarante",
+    danceVideo: "GM3tJksOKKs",
     culture: {
       context: "L'un des titres les plus célèbres de Yoskar Sarante, figure majeure de la 'Bachata Rosa' et sentimentale.",
       meaning: "Une expression profonde de la douleur après un abandon soudain et inexpliqué, où l'âme 'pleure jusqu'à la dernière goutte'.",
