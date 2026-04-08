@@ -218,8 +218,21 @@ export default function SongPage({ song }) {
         {/* ─── DIVIDER ─── */}
         <div className="divider" />
 
-        {/* ─── LYRICS ─── Interleaved ES/FR ─── */}
-        <div className="lyrics-interleaved">
+        <div className="song-content-layout">
+          {song.danceVideo && (
+            <div className="dance-video-container">
+              <iframe
+                src={`https://www.youtube.com/embed/${song.danceVideo}?autoplay=0&rel=0`}
+                title="Dance Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          )}
+
+          {/* ─── LYRICS ─── Interleaved ES/FR ─── */}
+          <div className="lyrics-interleaved">
           {song.lyrics.es.split('\n').map((esLine, i) => {
             const frLines = song.lyrics.fr.split('\n');
             const frLine = frLines[i] || '';
@@ -231,6 +244,7 @@ export default function SongPage({ song }) {
               </div>
             );
           })}
+          </div>
         </div>
 
         {/* ─── CULTURE & OBJECTIVES ─── */}

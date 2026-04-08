@@ -1418,6 +1418,7 @@ Ay, ay, ay`,
     color: "#facc15",
     audioUrl: "https://res.cloudinary.com/drm02su8h/video/upload/v1774291698/Romeo_Santos_Prince_Royce_-_Ay_San_Miguel_Lyric_Video_ipw2to.mp3",
     spotify: "https://open.spotify.com/search/Ay!%20San%20Miguel%20Romeo%20Santos%20Prince%20Royce",
+    danceVideo: "yputHd_BSlk",
     culture: {
       context: "Extrait de l'album collaboratif 'Better Late Than Never' sorti le 28 novembre 2025. Ce projet historique entre Romeo Santos et Prince Royce a été préparé dans le secret pendant environ sept ans, avec des noms de code 'Batman' et 'Robin'.",
       meaning: "Le titre fait référence à San Miguel, figure spirituelle de la culture dominicaine. Les paroles puisent dans la spiritualité caribéenne mêlée à la passion romantique.",
