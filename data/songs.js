@@ -5898,7 +5898,7 @@ Cette nuit est une nuit de sexe
 Bébé, je connais le processus
 Et te dévorer jusqu'aux os`
     }
-  ,
+  },
   {
     id: "mala-la-la-sebas-garreta",
     title: "Mala La La",
@@ -7445,7 +7445,7 @@ J'ai enfin mûri quand je t'ai perdue
 Peut-être que tu seras plus belle sans moi
 N'oublie pas, mieux vaut tard que de ne jamais le faire`
     }
-  ,
+  },
   {
     id: "en-los-pasillos-mayinbito-sonce",
     title: "En Los Pasillos",
