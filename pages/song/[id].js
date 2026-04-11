@@ -60,10 +60,10 @@ export default function SongPage({ song }) {
         <link rel="canonical" href={`https://bachatalyrics.com/song/${song.id}`} />
         <meta
           name="description"
-          content={`Paroles de « ${song.title} » par ${song.artist} (${song.year}) en espagnol avec traduction française côte à côte. Découvrez le sens, le contexte culturel et l'artiste.`}
+          content={`Paroles de « ${song.title} » par ${song.artist} (${song.year}) en version originale avec traduction française côte à côte. Découvrez le sens, le contexte culturel et l'artiste.`}
         />
         <meta property="og:title" content={`${song.title} — ${song.artist} | Bachata Flow`} />
-        <meta property="og:description" content={`Paroles bilingues de « ${song.title} » par ${song.artist}. Texte original espagnol + traduction française.`} />
+        <meta property="og:description" content={`Paroles bilingues de « ${song.title} » par ${song.artist}. Texte original avec traduction française.`} />
         <meta property="og:url" content={`https://bachatalyrics.com/song/${song.id}`} />
         <meta property="og:type" content="music.song" />
         <script

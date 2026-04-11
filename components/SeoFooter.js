@@ -89,6 +89,28 @@ export default function SeoFooter({ currentPage = '' }) {
           <p>
             Fait avec <span style={{ color: '#c026d3' }}>♥</span> pour les amoureux de bachata · © {new Date().getFullYear()} Bachata Flow
           </p>
+          <div style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'center' }}>
+            <a 
+              href="https://maximilien.digital" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ color: 'rgba(255, 255, 255, 0.4)', fontSize: '0.75rem', textDecoration: 'none', transition: 'color 0.2s' }}
+              onMouseOver={(e) => e.currentTarget.style.color = '#c026d3'}
+              onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.4)'}
+            >
+              Développé par l'agence Maximilien Digital
+            </a>
+            <a 
+              href="https://comeup.com/fr/service/382688/vous-developper-une-application-mobile-saas-avec-ou-sans-intelligence-artificielle" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ color: 'rgba(255, 255, 255, 0.4)', fontSize: '0.75rem', textDecoration: 'none', transition: 'color 0.2s' }}
+              onMouseOver={(e) => e.currentTarget.style.color = '#c026d3'}
+              onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.4)'}
+            >
+              Maximilien - SAAS / Application Mobile
+            </a>
+          </div>
         </div>
       </div>
 

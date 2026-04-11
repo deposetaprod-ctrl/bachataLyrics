@@ -1,5 +1,295 @@
 export const songs = [
   {
+    id: "lo-tenias-callao-jean-alex",
+    title: "Lo Tenias Callao",
+    artist: "Jean & Alex",
+    year: 2025,
+    dateAdded: "2026-04-11",
+    tags: ["Dramatique", "Moderne", "R&B"],
+    color: "#ef4444",
+    spotify: "https://open.spotify.com/search/Lo%20Tenias%20Callao%20Jean%20%26%20Alex",
+    danceVideo: "T4I5W2kWDZM",
+    culture: {
+      context: "Sorti début 2025, 'Lo Tenías Callao' confirme le statut de Jean & Alex comme les pionniers de la fusion Bachata-R&B. Le titre s'est rapidement imposé dans les festivals de danse, notamment grâce à des chorégraphies de couples renommés comme Cristian & Gabriella.",
+      meaning: "Le titre 'Lo tenías callao' (tu le gardais secret) exprime la découverte d'une trahison passionnelle. Les paroles décrivent le choc du narrateur découvrant une double vie à travers des messages sur un iPhone laissé sur une table.",
+      artistInfo: "Jean & Alex, surnommés 'Los Reyes del R&B', sont un duo originaire de Puerto Rico (Bayamón). Ils sont reconnus pour leurs arrangements vocaux léchés inspirés du R&B américain, qu'ils marient aux rythmes de la bachata moderne. Ils écrivent et produisent l'intégralité de leurs morceaux pour garantir leur authenticité artistique.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Una noche normal
+dique te vas con tus amigas a janguear
+Te metiste a bañar dejaste el iPhone en la mesa
+Eso no para de sonar, me pregunto quién será
+Veo un corazón en el contacto
+Te rebusco los mensajes
+Me inundo de coraje yo no creo cosa igual
+De lo que me acabo de enterar.
+Me enteré que tú
+Me engañabas con él, te lo tenías callao
+Pa’ ti yo solo era un juego
+Es que tú mientes tan bien que casi casi te creo
+Bebé es que tú
+Me engañabas con él, te lo tenías callao
+Pa’ ti yo solo era un juego
+Ahora lo voy a llamar
+¿Te crees que yo no me atrevo?
+Jean & Alex
+Los Reyes del R&B
+Sé que se llama Juan
+Lo conociste en una noche de San Juan
+Y qué casualidad en la que cuidaste a tu mamá
+Dando la mamá de la mamá allá abajo en Samaná
+Creí que la distancia y frialdad solo eran algo temporal
+No te creí capaz de que me fueras a fallar
+Pero me terminaste de matar.
+Me enteré que tú
+Me engañabas con él, te lo tenías callao
+Pa’ ti yo solo era un juego
+Es que tú mientes tan bien que casi casi te creo
+Bebé es que tú
+Me engañabas con él, te lo tenías callao
+Pa’ ti yo solo era un juego
+Ahora lo voy a llamar
+¿Te crees que yo no me atrevo?
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Tú me engañabas con él
+Te lo tenías callao
+Pa’ ti yo solo era un juego
+Te puedes ir al carajo
+no quiero verte de nuevo`,
+      fr: `Une nuit normale
+soi-disant tu sors avec tes amies faire la fête
+Tu es allée te doucher, tu as laissé l'iPhone sur la table
+Ça n'arrête pas de sonner, je me demande qui ça peut être
+Je vois un cœur dans les contacts
+Je fouille tes messages
+Je suis submergé de colère, je n'en crois pas mes yeux
+De ce que je viens d'apprendre.
+J'ai appris que tu
+Me trompais avec lui, tu cachais bien ton jeu
+Pour toi je n'étais qu'un jeu
+C'est que tu mens si bien que j'y croirais presque
+Bébé, c'est que tu
+Me trompais avec lui, tu cachais bien ton jeu
+Pour toi je n'étais qu'un jeu
+Maintenant je vais l'appeler
+Tu crois que je n'ose pas ?
+Jean & Alex
+Les Rois du R&B
+Je sais qu'il s'appelle Juan
+Tu l'as rencontré lors d'une nuit de la Saint-Jean
+Et quelle coïncidence, celle où tu t'es occupée de ta mère
+En donnant tout ce que tu avais là-bas à Samaná
+Je pensais que la distance et la froideur n'étaient que temporaires
+Je ne te croyais pas capable de me trahir
+Mais tu as fini par m'achever.
+J'ai appris que tu
+Me trompais avec lui, tu cachais bien ton jeu
+Pour toi je n'étais qu'un jeu
+C'est que tu mens si bien que j'y croirais presque
+Bébé, c'est que tu
+Me trompais avec lui, tu cachais bien ton jeu
+Pour toi je n'étais qu'un jeu
+Maintenant je vais l'appeler
+Tu crois que je n'ose pas ?
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Uh ohh, uh ohh,
+Tu me trompais avec lui
+Tu cachais bien ton jeu
+Pour toi je n'étais qu'un jeu
+Tu peux aller au diable
+je ne veux plus te revoir`
+    }
+  },
+  {
+    id: "addicted-to-pain-velvet-desires",
+    title: "Addicted to Pain",
+    artist: "Velvet Desires",
+    year: 2024,
+    dateAdded: "2026-04-11",
+    tags: ["Sensual"],
+    color: "#2e1065",
+    spotify: "https://open.spotify.com/search/Addicted%20to%20the%20Pain%20Velvet%20Desires",
+    danceVideo: "aYoWDTfIA9U",
+    culture: {
+      context: "Sorti fin 2024, 'Addicted to the Pain' est rapidement devenu une pièce maîtresse des ateliers de Bachata Sensual à travers le monde. Son atmosphère sombre et ses rythmes marqués en font un morceau idéal pour travailler l'interprétation et la connexion émotionnelle.",
+      meaning: "Les paroles explorent une relation toxique et addictive, où la douleur devient paradoxalement une source de confort ou une preuve d'intensité émotionnelle. L'amour y est décrit comme une drogue dont on ne peut se sevrer.",
+      artistInfo: "Velvet Desires est un projet musical qui s'est imposé dans la communauté Bachata grâce à des productions léchées et des thématiques souvent plus sombres et introspectives que la bachata traditionnelle dominicaine. Le morceau est particulièrement associé au couple de danseurs Melvin & Gatica (Bachata Influence), dont la démo sur ce titre a cumulé des millions de vues.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `you taste like danger dressed in lace
+and i still crave every trace
+i should leave but i stay
+guess i love the way it breaks me
+
+you pull me close just to push me down
+smile like a sinner wearing a crown
+every word is a loaded gun
+and i keep running towards the one
+
+you burn too high, i can’t let go
+you’re the high i wasn’t meant to know
+your touch, it poisons slow
+but i still want every dose
+
+you bruised my soul and called it grace
+but i keep crawling back to taste
+
+i am addicted to pain, addicted to you
+to the way you lie, the way you move
+you cut me deep and i still stay
+love is a drug and i can’t walk away
+i am addicted to pain, addicted to fire
+you are the curse that i desire
+tell me your part, do it again
+baby, i am addicted, addicted to pain
+
+you were control like a second skin
+and i fall every time you grin
+your eyes say “stay”, your heart says “go”
+you keep me chained and i call it home
+
+it’s not love, it’s obsession bloomed
+we light our hearts just to watch the fume
+i don’t want peace, i want the burn
+every scar is a lesson i’ll never learn
+
+you hang me sweet like smokin’ sins
+and i breath you deeper in
+
+i am addicted to pain, addicted to you
+to the way you lie, the way you move
+you cut me deep and i still stay
+love is a drug and i can’t walk away
+i am addicted to pain, addicted to fire
+you are the curse that i desire
+tell me your part, do it again
+baby, i am addicted, addicted to pain
+
+it’s a ritual, it’s a spell
+heaven dressed in a taste of h+ll
+i am on my knees but i don’t pray
+i just want feel your sway
+control me, break me, leave your mark
+you shine brightest when it’s dark
+every tear, every scream, it’s the sound of my disease
+
+i am addicted to pain, addicted to you
+i bleed again to feel it true
+you cut me deep but it feels like art
+you want a ruin in my heart
+
+i am addicted to pain, addicted to fire
+you are my sin, my only liar
+tear me apart, i’ll still remain
+’cause i am addicted, addicted to pain
+
+don’t heal me, just feel me
+i am addicted
+to pain
+i am addicted to pain`,
+      fr: `tu as le goût du danger habillé de dentelle
+et je désire encore chaque trace
+je devrais partir mais je reste
+je suppose que j'aime la façon dont ça me brise
+
+tu m'attires pour mieux me rejeter
+tu souris comme un pécheur portant une couronne
+chaque mot est une arme chargée
+et je continue de courir vers l'unique
+
+tu brûles trop fort, je ne peux pas lâcher prise
+tu es l'ivresse que je n'étais pas censé connaître
+ton contact m'empoisonne lentement
+mais je veux encore chaque dose
+
+tu as meurtri mon âme et as appelé ça de la grâce
+mais je continue de ramper pour y goûter
+
+je suis accro à la douleur, accro à toi
+à ta façon de mentir, à ta façon de bouger
+tu me blesses profondément et je reste quand même
+l'amour est une drogue et je ne peux pas m'en aller
+je suis accro à la douleur, accro au feu
+tu es la malédiction que je désire
+joue ton rôle, recommence encore
+bébé, je suis accro, accro à la douleur
+
+tu étais le contrôle comme une seconde peau
+et je tombe chaque fois que tu souris
+tes yeux disent "reste", ton cœur dit "pars"
+tu me gardes enchaîné et j'appelle ça ma maison
+
+ce n'est pas de l'amour, c'est une obsession qui a éclos
+nous allumons nos cœurs juste pour regarder la fumée
+je ne veux pas de paix, je veux la brûlure
+chaque cicatrice est une leçon que je n'apprendrai jamais
+
+tu me tues doucement comme des péchés fumants
+et je t'inspire encore plus profondément
+
+je suis accro à la douleur, accro à toi
+à ta façon de mentir, à ta façon de bouger
+tu me blesses profondément et je reste quand même
+l'amour est une drogue et je ne peux pas m'en aller
+je suis accro à la douleur, accro au feu
+tu es la malédiction que je désire
+joue ton rôle, recommence encore
+bébé, je suis accro, accro à la douleur
+
+c'est un rituel, c'est un sortilège
+le paradis déguisé en goût d'enfer
+je suis à genoux mais je ne prie pas
+je veux juste sentir ton emprise
+contrôle-moi, brise-moi, laisse ta marque
+tu brilles plus fort quand il fait sombre
+chaque larme, chaque cri, c'est le son de ma maladie
+
+je suis accro à la douleur, accro à toi
+je saigne encore pour m'assurer que c'est vrai
+tu me blesses profondément mais ça ressemble à de l'art
+tu veux une ruine dans mon cœur
+
+je suis accro à la douleur, accro au feu
+tu es mon péché, mon seul menteur
+déchire-moi, je resterai là
+parce que je suis accro, accro à la douleur
+
+ne me guéris pas, sens-moi simplement
+je suis accro
+à la douleur
+je suis accro à la douleur`
+    }
+  },
+  {
+    id: "aceite-de-coco-blessd",
+    title: "Aceite de Coco",
+    artist: "Blessd",
+    featuring: "Ryan Castro, De La Ghetto, Darell, Sahir, Hades66 & Kris R.",
+    year: 2025,
+    dateAdded: "2026-04-11",
+    tags: ["Urbaine", "Reggaeton"],
+    color: "#f59e0b",
+    spotify: "https://open.spotify.com/search/Aceite%20de%20Coco%20Blessd",
+    danceVideo: "92ZKxXNPIBs",
+    culture: {
+      context: "Sorti le 13 janvier 2025, 'Aceite de Coco' est une collaboration massive réunissant plusieurs figures majeures de l'urbain latino. Produit par Los Money Makers, Monja et OG Flamez, le titre dure près de 7 minutes et illustre la montée en puissance du son de Medellín sur la scène internationale.",
+      meaning: "Le morceau est une ode à la séduction sans fioriture, typique du courant musical paisa (de Medellín). Chaque artiste apporte son propre style et ses references locales — des allusions au quartier Antioquia, aux rues de Medellín, à la culture de la fête et de la conquête.",
+      artistInfo: "Blessd (Stiven Mesa Londoño, né en 2000 à Itagüí, commune limitrophe de Medellín) est la figure centrale du son urbain paisa de sa génération. Issu d'un milieu modeste, il a percé grâce à 'Medallo' (100M+ vues) et son album 'Hecho en Medellín' (2021). Il partage ici l'affiche avec Ryan Castro (Bryan Castro Sosa, Medellín, 1994) — surnommé 'El Cantante del Ghetto' —, De La Ghetto (Rafael Castillo Torres, NY/Puerto Rico, 1984) — pionnier du reggaeton et roi des remixes —, Darell (Osvaldo Castro Hernández, Puerto Rico, 1990) — vétéran de la scène urbaine —, et Hades66 (Ángel Yamil Santiago Vázquez, Guaynabo, Puerto Rico) — figure montante du trap puertorricain.",
+      album: "Single"
+    },
+    lyrics: {
+      es: ``,
+      fr: ``
+    }
+  },
+  {
     id: "dec-21-prince-royce",
     title: "Dec. 21",
     artist: "Prince Royce",
@@ -6199,109 +6489,8 @@ Je te jure qu'ils vont te faire pleurer
 là tu devras te souvenir de moi
 de toutes les fois où tu m'as rendue malheureuse
 Ils peuvent venir me parler de toi s'ils veulent
-que tu es déjà en train de faire la fête avec dix mille femmes
-un jour tu vas tomber, un jour tu vas tomber
-quand tu t'y attendras le moins, on te fera la même chose
-Ils peuvent venir me parler de toi s'ils veulent
-que j'ai déjà tourné la page, je ne sais pas qui tu es
-un jour tu vas tomber, un jour tu vas tomber
-le karma va te foutre en l'air
-Parce qu'ils ne t'aimeront jamais vraiment
-après tout ce que tu m'as fait
-je t'assure que le karma existe
-Karen Méndez
-Juacko à la production
-depuis la maison Literal.`
-    }
-  },
-  {
-    id: "carita-jensen",
-    title: "Carita",
-    artist: "Jensen",
-    year: 2025,
-    dateAdded: "2026-04-08",
-    tags: ["Sensual", "Moderne"],
-    color: "#ec4899",
-    spotify: "https://open.spotify.com/search/Carita%20Jensen",
-    culture: {
-      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
-      meaning: "Les paroles décrivent une attirance irrésistible, centrée sur le visage et les expressions d'une femme ('carita'). Le chanteur se remémore une nuit intense et admet que personne d'autre ne le fait vibrer ainsi.",
-      artistInfo: "Jensen est un nouvel artiste qui monte dans l'univers de la bachata urbaine, mêlant flow reggaeton et rythmique dominicaine.",
-      album: "Non spécifié"
-    },
-    lyrics: {
-      es: `Quiero volverte a ver
-Llame para resolver, contesta el cel
-Pase por el hotel bebé
-Donde te veía, donde te lo hacia
-Esa noche fue un desorden
-Lo hicimo' hasta las cinco de la morning
-Ese momento baby no hay quien me lo borre
-Sali con otra y se me escapó tu nombre
-Cuando tu me miras
-Con esa carita
-Te pones rojita, eres mi favorita
-No existe nadie que me encienda como
-Cuando tu me miras
-Con esa carita
-Te pones rojita, y me debilitas
-No existe nadie que me encienda como tu
-Es Jensen
-Pero tu sabias
-Sacala a bailar
-Esta noche yo me arrebate
-Prendí uno y de ti me acordé
-Desde que te probe me juquie
-Tanto polvo que ni lo conté
-Si te olvidaste de esos momentos yo recuerdo varios
-Que para ti tenerme cerca era necesario
-Oh no, ayy no
-Yo sigo aqui, tu estas lejos
-Probablemente estás feliz y yo estoy solitario
-Y quizás ya ni te acuerdas de mi
-Esa noche fue un desorden
-Lo hicimo' hasta las cinco de la morning
-Ese momento baby no hay quien me lo borre
-Sali con otra y se me escapó tu nombre
-Cuando tu me miras
-Con esa carita
-Te pones rojita, eres mi favorita
-No existe nadie que me encienda como
-Cuando tu me miras
-Con esa carita
-Te pones rojita, y me debilitas
-No existe nadie que me encienda como tu
-SP, yea yea
-It's a problem
-Cuando tu me miras
-Con esa carita
-Te pones rojita, eres mi favorita
-No existe nadie que me encienda como tu`,
-      fr: `Je veux te revoir
-J'ai appelé pour régler ça, réponds au tel
-Je suis passé par l'hôtel bébé
-Où je te voyais, où je te faisais l'amour
-Cette nuit-là c'était le désordre
-On l'a fait jusqu'à cinq heures du matin
-Ce moment bébé, personne ne peut me l'effacer
-Je suis sorti avec une autre et ton nom m'a échappé
-Quand tu me regardes
-Avec cette petite tête
-Tu deviens toute rouge, tu es ma préférée
-Il n'existe personne qui m'allume comme ça
-Quand tu me regardes
-Avec cette petite tête
-Tu deviens toute rouge et tu m'affaiblis
-Il n'existe personne qui m'allume comme toi
-C'est Jensen
-Mais tu savais
-Invite-la à danser
-Cette nuit je me suis emporté
-J'en ai allumé un et je me suis souvenu de toi
-Depuis que je t'ai goûtée je suis accro
-Tant de fois que je ne les ai même pas comptées
-Si tu as oublié ces moments, moi je m'en rappelle plusieurs
-Que pour toi m'avoir près de toi était nécessaire
+que tu es déjà en train   {
+    id: "el-acuerdo-dj-husky-shama",�cessaire
 Oh no, ayy no
 Je suis toujours ici, tu es loin
 Probablement que tu es heureuse et moi je suis solitaire
@@ -6324,111 +6513,6 @@ Quand tu me regardes
 Avec cette petite tête
 Tu deviens toute rouge, tu es ma préférée
 Il n'existe personne qui m'allume comme toi`
-    }
-  },
-  {
-    id: "lo-tenias-callao-jean-alex",
-    title: "Lo Tenias Callao",
-    artist: "Jean & Alex",
-    year: 2025,
-    dateAdded: "2026-04-08",
-    tags: ["Dramatique", "Moderne"],
-    color: "#fb923c",
-    culture: {
-      context: "Aucune information contextuelle vérifiée n'est disponible sur internet pour cette chanson.",
-      meaning: "Le titre 'Lo Tenías Callao' (Tu le gardais pour toi) exprime la trahison d'une personne qui menait une double vie. Le chanteur relate comment un simple message sur un iPhone a tout fait basculer.",
-      artistInfo: "Auto-proclamés 'Los Reyes del R&B' (dans un contexte bachata), Jean & Alex fusionnent des harmonies vocales R&B avec le rythme bachata.",
-      album: "Non spécifié"
-    },
-    lyrics: {
-      es: `Una noche normal
-dique te vas con tus amigas a janguear
-Te metiste a bañar dejaste el iPhone en la mesa
-Eso no para de sonar, me pregunto quién será
-Veo un corazón en el contacto
-Te rebusco los mensajes
-Me inundo de coraje yo no creo cosa igual
-De lo que me acabo de enterar.
-Me enteré que tú
-Me engañabas con él, te lo tenías callao
-Pa’ ti yo solo era un juego
-Es que tú mientes tan bien que casi casi te creo
-Bebé es que tú
-Me engañabas con él, te lo tenías callao
-Pa’ ti yo solo era un juego
-Ahora lo voy a llamar
-¿Te crees que yo no me atrevo?
-Jean & Alex
-Los Reyes del R&B
-Sé que se llama Juan
-Lo conociste en una noche de San Juan
-Y qué casualidad en la que cuidaste a tu mamá
-Dando la mamá de la mamá allá abajo en Samaná
-Creí que la distancia y frialdad solo eran algo temporal
-No te creí capaz de que me fueras a fallar
-Pero me terminaste de matar.
-Me enteré que tú
-Me engañabas con él, te lo tenías callao
-Pa’ ti yo solo era un juego
-Es que tú mientes tan bien que casi casi te creo
-Bebé es que tú
-Me engañabas con él, te lo tenías callao
-Pa’ ti yo solo era un juego
-Ahora lo voy a llamar
-¿Te crees que yo no me atrevo?
-Uh ohh, uh ohh,
-Uh ohh, uh ohh,
-Uh ohh, uh ohh,
-Uh ohh, uh ohh,
-Tú me engañabas con él
-Te lo tenías callao
-Pa’ ti yo solo era un jeu
-Te puedes ir al carajo
-no quiero verte de nuevo`,
-      fr: `Une nuit normale
-soi-disant tu sors avec tes amies faire la fête
-Tu es allée te doucher tu as laissé l'iPhone sur la table
-Ça n'arrête pas de sonner, je me demande qui c'est
-Je vois un cœur dans le contact
-Je fouille tes messages
-Je suis envahi par la rage je n'en crois pas mes yeux
-De ce que je viens d'apprendre.
-J'ai appris que toi
-Tu me trompais avec lui, tu le gardais secret
-Pour toi je n'étais qu'un jeu
-C'est que tu mens si bien que j'ai bien failli te croire
-Bébé c'est que toi
-Tu me trompais avec lui, tu le gardais secret
-Pour toi je n'étais qu'un jeu
-Maintenant je vais l'appeler
-Tu crois que je n'ose pas ?
-Jean & Alex
-Les Rois du R&B
-Je sais qu'il s'appelle Juan
-Tu l'as connu une nuit de la Saint-Jean
-Et quelle coïncidence celle où tu gardais ta maman
-Donnant "la mamá de la mamá" là-bas à Samaná
-Je croyais que la distance et la froideur n'étaient que temporaires
-Je ne te croyais pas capable de me trahir
-Mais tu as fini de m'achever.
-J'ai appris que toi
-Tu me trompais avec lui, tu le gardais secret
-Pour toi je n'étais qu'un jeu
-C'est que tu mens si bien que j'ai bien failli te croire
-Bébé c'est que toi
-Tu me trompais avec lui, tu le gardais secret
-Pour toi je n'étais qu'un jeu
-Maintenant je vais l'appeler
-Tu crois que je n'ose pas ?
-Uh ohh, uh ohh,
-Uh ohh, uh ohh,
-Uh ohh, uh ohh,
-Uh ohh, uh ohh,
-Tu me trompais avec lui
-Tu le gardais secret
-Pour toi je n'étais qu'un jeu
-Tu peux aller te faire foutre
-je ne veux plus te revoir`
     }
   },
   {
