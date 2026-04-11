@@ -6489,30 +6489,7 @@ Je te jure qu'ils vont te faire pleurer
 là tu devras te souvenir de moi
 de toutes les fois où tu m'as rendue malheureuse
 Ils peuvent venir me parler de toi s'ils veulent
-que tu es déjà en train   {
-    id: "el-acuerdo-dj-husky-shama",�cessaire
-Oh no, ayy no
-Je suis toujours ici, tu es loin
-Probablement que tu es heureuse et moi je suis solitaire
-Et peut-être que tu ne te souviens même plus de moi
-Cette nuit-là c'était le désordre
-On l'a fait jusqu'à cinq heures du matin
-Ce moment bébé, personne ne peut me l'effacer
-Je suis sorti avec une autre et ton nom m'a échappé
-Quand tu me regardes
-Avec cette petite tête
-Tu deviens toute rouge, tu es ma préférée
-Il n'existe personne qui m'allume comme ça
-Quand tu me regardes
-Avec cette petite tête
-Tu deviens toute rouge et tu m'affaiblis
-Il n'existe personne qui m'allume comme toi
-SP, yea yea
-C'est un problème
-Quand tu me regardes
-Avec cette petite tête
-Tu deviens toute rouge, tu es ma préférée
-Il n'existe personne qui m'allume comme toi`
+que tu es déjà en train`
     }
   },
   {
