@@ -80,7 +80,8 @@ export default function Home() {
       !q ||
       song.title.toLowerCase().includes(q) ||
       song.artist.toLowerCase().includes(q) ||
-      song.tags.some((t) => t.includes(q));
+      song.tags.some((t) => t.toLowerCase().includes(q)) ||
+      (song.dancers && song.dancers.toLowerCase().includes(q));
     const matchTag = !activeTag || song.tags.includes(activeTag);
     const matchFav = !showFavorites || favoriteSongs.includes(song.id);
     return matchSearch && matchTag && matchFav;
