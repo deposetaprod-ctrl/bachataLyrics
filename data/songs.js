@@ -1,5 +1,106 @@
 export const songs = [
   {
+    id: "in-the-stars-benson-boone",
+    title: "In The Stars",
+    artist: "Benson Boone",
+    year: 2022,
+    dateAdded: "2026-04-12",
+    tags: ["Sensual", "Influence", "Moderne"],
+    color: "#3b82f6",
+    spotify: "https://open.spotify.com/search/In%20The%20Stars%20Benson%20Boone",
+    danceVideo: "-mti4IuWhjU",
+    culture: {
+      context: "La chanson a été originellement écrite par Benson Boone en hommage à son arrière-grand-mère décédée. Récemment, elle a été adaptée et chorégraphiée dans le style 'Bachata Influence' par Melvin et Gatica avec le DJ Dimensions, lui donnant un rythme parfait pour la danse sociale sensuelle.",
+      meaning: "Les paroles très émouvantes explorent le deuil universel et la difficulté de faire ses adieux. La métaphore des 'nombres dans les étoiles' exprime cette sensation que nos proches disparus continuent de veiller sur nous, même si leur absence est douloureuse au quotidien.",
+      artistInfo: "Benson Boone est un auteur-compositeur-interprète américain connu pour ses balades pop poignantes. Comme pour beaucoup de hits pop émotionnels, la communauté bachata s'est accaparée le morceau pour y exprimer sa musicalité et sa connexion.",
+      album: "Walk Me Home..."
+    },
+    lyrics: {
+      es: `Two, three
+Sunday mornings were your favorite
+I used to meet you down on Woods Creek Road
+You did your hair up like you were famous
+Even though it's only church where we were goin'
+Now, Sunday mornings, I just sleep in
+It's like I buried my faith with you
+I'm screamin' at a God I don't know if I believe in
+'Cause I don't know what else I can do
+I'm still holdin' on to everything that's dead and gone
+I don't wanna say goodbye, 'cause this one means forever
+And now you're in the stars and six-feet's never felt so far
+Here I am alone between the heavens and the embers
+Oh, it hurts so hard
+For a million different reasons
+You took the best of my heart
+And left the rest in pieces
+Diggin' through your old birthday letters
+A crumpled 20 still in the box
+I don't think that I could ever find a way to spend it
+Even if it's the last 20 that I've got, oh
+I'm still holdin' on to everything that's dead and gone
+I don't wanna say goodbye, 'cause this one means forever
+And now you're in the stars and six-feet's never felt so far
+Here I am alone between the heavens and the embers
+Oh, it hurts so hard
+For a million different reasons
+You took the best of my heart
+And left the rest in pieces
+I'm still holdin' (on), holdin' (on), holdin' on (on)
+I'm still holdin' (on), holdin' (on), holdin' on (on)
+I'm still holdin' (on), holdin' (on), I'm still holdin' on (on)
+I'm still, ooh, still holdin' on
+I'm still holdin' on to everything that's dead and gone (ooh)
+I don't wanna say goodbye, 'cause this one means forever (ooh)
+Now you're in the stars and six-feet's never felt so far
+Here I am alone between the heavens and the embers
+Oh, it hurts so hard
+For a million different reasons
+You took the best of my heart
+Left the rest in pieces`,
+      fr: `Deux, trois
+Les dimanches matins étaient tes préférés
+J'avais l'habitude de te retrouver sur Woods Creek Road
+Tu te coiffais comme si tu étais célèbre
+Même si nous n'allions qu'à l'église
+Maintenant, les dimanches matins, je fais juste la grasse matinée
+C'est comme si j'avais enterré ma foi avec toi
+Je crie après un Dieu auquel je ne sais même pas si je crois
+Parce que je ne sais pas quoi faire d'autre
+Je m'accroche encore à tout ce qui est mort et disparu
+Je ne veux pas dire au revoir, car celui-ci signifie pour toujours
+Et maintenant tu es dans les étoiles et six pieds sous terre n'ont jamais paru si loin
+Me voici seul entre les cieux et les braises
+Oh, ça fait si mal
+Pour un million de raisons différentes
+Tu as pris la meilleure partie de mon cœur
+Et tu as laissé le reste en morceaux
+En fouillant dans tes vieilles lettres d'anniversaire
+Un billet de 20 froissé encore dans la boîte
+Je ne pense pas que je pourrai un jour trouver un moyen de le dépenser
+Même si c'est le dernier billet de 20 que j'ai, oh
+Je m'accroche encore à tout ce qui est mort et disparu
+Je ne veux pas dire au revoir, car celui-ci signifie pour toujours
+Et maintenant tu es dans les étoiles et six pieds sous terre n'ont jamais paru si loin
+Me voici seul entre les cieux et les braises
+Oh, ça fait si mal
+Pour un million de raisons différentes
+Tu as pris la meilleure partie de mon cœur
+Et tu as laissé le reste en morceaux
+Je m'accroche encore, m'accroche, m'accroche encore
+Je m'accroche encore, m'accroche, m'accroche encore
+Je m'accroche encore, m'accroche, je m'accroche encore
+Je m'accroche encore, ooh, m'accroche encore
+Je m'accroche encore à tout ce qui est mort et disparu (ooh)
+Je ne veux pas dire au revoir, car celui-ci signifie pour toujours (ooh)
+Maintenant tu es dans les étoiles et six pieds sous terre n'ont jamais paru si loin
+Me voici seul entre les cieux et les braises
+Oh, ça fait si mal
+Pour un million de raisons différentes
+Tu as pris la meilleure partie de mon cœur
+Et laissé le reste en morceaux`
+    }
+  },
+  {
     id: "lo-tenias-callao-jean-alex",
     title: "Lo Tenias Callao",
     artist: "Jean & Alex",
