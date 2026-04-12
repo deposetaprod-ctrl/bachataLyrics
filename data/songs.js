@@ -1,5 +1,1348 @@
 export const songs = [
   {
+    id: "luna-de-crucero-sp-polanco-bchta-rising-jean-alex",
+    title: "Luna De Crucero",
+    artist: "Jean & Alex ft. sP Polanco & Bchta Rising",
+    year: 2025,
+    dateAdded: "2026-04-12",
+    tags: ["Moderne", "Sensual"],
+    color: "#2c5282",
+    spotify: "https://open.spotify.com/search/Luna%20De%20Crucero%20Jean%20Alex%20SP%20Polanco",
+    danceVideo: "KiTKBPtLaig",
+    culture: {
+      context: "Sorti en janvier 2025 sur le projet 'BCHTA RISING, Vol. 2', ce titre est une collaboration entre le duo Jean & Alex et le producteur sP Polanco.",
+      meaning: "La chanson raconte une rencontre avec un amour passé. Malgré les erreurs avouées, la chimie reste indéniable et le narrateur propose de repartir de zéro.",
+      artistInfo: "Jean & Alex, surnommés les rois du R&B, fusionnent leur style vocal lisse avec les rythmiques bachata modernes de sP Polanco.",
+      album: "BCHTA RISING, Vol. 2"
+    },
+    lyrics: {
+      es: `Qué casualidad, aquí tú y yo otra vez
+Con la mente te llamé y ahora te encontré
+Sé que la última vez fui yo la quien la cagué
+Pero tu mirada dice qué lo que
+
+Bastó con pegarme para recordarte, desearte
+Qué cabron sería besarte otra vez
+
+Y poderte dar como antes
+Ojalá pudiera volver a tocarte
+Pa poderte dar como antes
+Quiero repetirte parte por parte
+Las noches en vela mojado en tus besos
+Bailando pegados bajo el aguacero
+Sol de Cartagena, luna de crucero
+Ya que terminamos, empecemos de cero
+Ya que terminamos, empecemos de cero
+Ya que terminamos, empecemos de cero
+
+El malo de la película
+Ese pasado, déjalo atrás
+Es innegable la química
+Sigues siendo mi debilidad
+Aunque tu mente diga
+Que no quieres saber más de mí
+Tu cora no me olvida
+Sabes que no es mentira
+
+Bastó con pegarme para recordarte, desearte
+Qué cabron sería besarte otra vez
+
+Y poderte dar como antes
+Ojalá pudiera volver a tocarte
+Pa poderte dar como antes
+Quiero repetirte parte por parte
+Las noches en vela mojado en tus besos
+Bailando pegados bajo el aguacero
+Sol de Cartagena, luna de crucero
+Ya que terminamos, empecemos de cero
+
+Jean & Alex
+Los reyes del R & B
+SP
+It's a problem
+Watch out, they are rising`,
+      fr: `Quelle coïncidence, encore toi et moi ici
+Je t'ai appelée par la pensée et je t'ai trouvée
+Je sais que la dernière fois c'est moi qui ai déconné
+Mais ton regard dit bien ce qu'il en est
+
+Il a suffi de me rapprocher pour me souvenir, te désirer
+Ce serait génial de t'embrasser à nouveau
+
+Et pouvoir te donner comme avant
+Si seulement je pouvais te toucher encore
+Pour pouvoir te donner comme avant
+Je veux te répéter partie par partie
+Les nuits blanches, trempé de tes baisers
+Dansant collés sous l'averse
+Soleil de Carthagène, lune de croisière
+Puisque nous avons rompu, repartons de zéro
+Puisque nous avons rompu, repartons de zéro
+Puisque nous avons rompu, repartons de zéro
+
+Le méchant du film
+Ce passé, laisse-le derrière nous
+La chimie entre nous est indéniable
+Tu restes ma faiblesse
+Même si ton esprit dit
+Que tu ne veux plus entendre parler de moi
+Ton cœur ne m'oublie pas
+Tu sais que ce n'est pas un mensonge
+
+Il a suffi de me rapprocher pour me souvenir, te désirer
+Ce serait génial de t'embrasser à nouveau
+
+Et pouvoir te donner comme avant
+Si seulement je pouvais te toucher encore
+Pour pouvoir te donner comme avant
+Je veux te répéter partie par partie
+Les nuits blanches, trempé de tes baisers
+Dansant collés sous l'averse
+Soleil de Carthagène, lune de croisière
+Puisque nous avons rompu, repartons de zéro
+
+Jean & Alex
+Les rois du R & B
+SP
+C'est un problème
+Attention, ils arrivent`
+    }
+  },
+  {
+    id: "estare-esperandote-shama",
+    title: "Estaré Esperándote",
+    artist: "SHAMA",
+    year: 2023,
+    dateAdded: "2026-04-12",
+    tags: ["Moderne", "Sensual"],
+    color: "#ef4444",
+    spotify: "https://open.spotify.com/search/Estare%20Esperandote%20SHAMA",
+    danceVideo: "YPv-M3lQvN0",
+    culture: {
+      context: "Sorti en 2023, 'Estaré Esperándote' est un titre phare de l'artiste italien SHAMA (Alessio Buscemi), figure montante de la bachata moderne.",
+      meaning: "La chanson se concentre sur une attraction physique intense et le désir brûlant de répéter une rencontre passionnée. Le narrateur exprime sa disponibilité totale pour sa partenaire.",
+      artistInfo: "Originaire de Catane en Italie, SHAMA s'est spécialisé dans une bachata urbaine et sensuelle qui résonne particulièrement dans les festivals de danse internationaux.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Hey girl
+No me olvida'o de la otra noche de ayer
+Cuando fumamos hasta el amanecer
+Tus panties en mi cara
+La music no para
+Me matan las ganas de volverte a comer
+Solo textea y dime cuándo y dónde
+Quiero saber lo que tu cuerpo esconde
+Ahí pa sacar lo mejor de ti
+Ahí baby you can count on me
+Ahí ahí
+Te voy a hacer lo que te prometí, girl
+Y pasar las horas sin pensar
+Bebiendo licor hasta olvidar
+Solo nos amamos
+Cuando nos comemos
+Cuando tú me digas
+Estaré esperándote
+Y besar tu cuerpo más y más
+Ahogados en un mar de lágrimas
+Solo nos amamos
+Cuando nos comemos
+Cuando tú me digas
+Estaré esperándote
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Estaré esperándote
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Estaré esperándote
+Hey girl
+No sales de mi cabeza desde ayer
+Tú dime si me quieres ver que te vo' a caer
+Solo textea y dime cuándo y dónde
+Quiero saber lo que tu cuerpo esconde
+Ahí pa sacar lo mejor de ti
+Ahí baby you can count on me
+Ahí ahí
+Te voy a hacer lo que te prometí, girl
+Y pasar las horas sin pensar
+Bebiendo licor hasta oublier
+Solo nos amamos
+Cuando nos comemos
+Cuando tú me digas
+Estaré esperándote
+Y besar tu cuerpo más y más
+Ahogados en un mar de lágrimas
+Solo nos amamos
+Cuando nos comemos
+Cuando tú me digas
+Estaré esperándote
+Dímelo Cupido
+Vamo' a hacerlo fresh
+Shama
+Sigo esperándote mami
+Hasta que me maten las ganas
+Y pasar las horas sin pensar
+Bebiendo licor hasta oublier
+Solo nos amamos
+Cuando nos comemos
+Cuando tú me digas
+Estaré esperándote
+Y besar tu corps más y más
+Ahogados en un mar de lágrimas
+Solo nos amamos
+Cuando nos comemos
+Cuando tú me digas
+Estaré esperándote
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Estaré esperándote
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Estaré esperándote`,
+      fr: `Hey chérie
+Je n'ai pas oublié l'autre soir, celui d'hier
+Quand nous avons fumé jusqu'à l'aube
+Tes sous-vêtements sur mon visage
+La musique ne s'arrête pas
+J'ai une envie folle de te dévorer à nouveau
+Envoie juste un texto et dis-moi quand et où
+Je veux savoir ce que ton corps cache
+Là pour tirer le meilleur de toi
+Là bébé tu peux compter sur moi
+Là là
+Je vais te faire ce que je t'ai promis, chérie
+Et passer les heures sans réfléchir
+Buvant de l'alcool jusqu'à oublier
+On ne s'aime seulement
+Quand on se dévore
+Quand tu me le diras
+Je t'attendrai
+Et embrasser ton corps encore et encore
+Noyés dans une mer de larmes
+On ne s'aime seulement
+Quand on se dévore
+Quand tu me le diras
+Je t'attendrai
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Je t'attendrai
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Je t'attendrai
+Hey chérie
+Tu ne sors pas de ma tête depuis hier
+Dis-moi si tu veux me voir, je viendrai te trouver
+Envoie juste un texto et dis-moi quand et où
+Je veux savoir ce que ton corps cache
+Là pour tirer le meilleur de toi
+Là bébé tu peux compter sur moi
+Là là
+Je vais te faire ce que je t'ai promis, chérie
+Et passer les heures sans réfléchir
+Buvant de l'alcool jusqu'à oublier
+On ne s'aime seulement
+Quand on se dévore
+Quand tu me le diras
+Je t'attendrai
+Et embrasser ton corps encore et encore
+Noyés dans une mer de larmes
+On ne s'aime seulement
+Quand on se dévore
+Quand tu me le diras
+Je t'attendrai
+Dis-le moi Cupido
+On va faire ça avec fraîcheur
+Shama
+Je continue de t'attendre maman
+Jusqu'à ce que l'envie m'épuise
+Et passer les heures sans réfléchir
+Buvant de l'alcool jusqu'à oublier
+On ne s'aime seulement
+Quand on se dévore
+Quand tu me le diras
+Je t'attendrai
+Et embrasser ton corps encore et encore
+Noyés dans une mer de larmes
+On ne s'aime seulement
+Quand on se dévore
+Quand tu me le diras
+Je t'attendrai
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Je t'attendrai
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Ohhh-oh-oh-oh-oh
+Je t'attendrai`
+    }
+  },
+  {
+    id: "volar-jalil-lopez-bchta-rising",
+    title: "Volar",
+    artist: "Jalil Lopez ft. sP Polanco & Bchta Rising",
+    year: 2025,
+    dateAdded: "2026-04-12",
+    tags: ["Moderne", "Sensual"],
+    color: "#38bdf8",
+    spotify: "https://open.spotify.com/search/Volar%20Jalil%20Lopez%20Bchta%20Rising",
+    danceVideo: "HrX7NsMVv-M",
+    culture: {
+      context: "Sorti en 2025 sur le projet 'BCHTA RISING Vol. 2', 'Volar' est une fusion moderne de bachata sensual portée par Jalil Lopez et le producteur sP Polanco.",
+      meaning: "Le titre exprime une attirance irrésistible qui transporte le narrateur vers les sommets, lui donnant littéralement la sensation de voler.",
+      artistInfo: "sP Polanco est un producteur visionnaire qui modernise le genre bachata. Jalil Lopez, artiste Portoricain-Américain, apporte ici sa voix douce caractéristique.",
+      album: "BCHTA RISING Vol. 2"
+    },
+    lyrics: {
+      es: `Cuando me acerco
+Mi piel se eriza de una vez
+Y lo sabes
+Todo se pone lento
+No ha existido otra mujer
+Tan dura y especial
+En las cimas te pude encontrar
+Bailando sola, ay, ay, ay, ay
+Es la vibra que nos conecta
+En esta vida, bebé
+Solo tú me puedes hacer volar
+Me llevas al cielo tú
+Y nadie de ici nos podrá bajar
+Na-na-na, na-na-na, na-na
+Tú me puedes hacer volar
+Me llevas al cielo tú
+Te juro que no quiero bajar
+Na-na-na, na-na-na, na-na
+Ey, sabes que eres dura, baby, no tienes que fingir
+Ey, con esa mirada a cualquiera puedes seducir (no-oh)
+Muchas intentan, pero no pueden competir
+No voy a mentir, tu corps quiero descubrir
+En las cimas te pude encontrar
+Bailando sola, ay, ay, ay, ay
+Es la vibra que nos conecta
+En esta vida, bebé
+Solo tú me puedes hacer volar
+Me llevas al cielo tú
+Y nadie de ici nos podrá bajar
+Na-na-na, na-na-na, na-na
+Tú me puedes hacer volar
+Me llevas al cielo tú
+Te juro que no quiero bajar
+Na-na-na, na-na-na, na-na`,
+      fr: `Quand je m'approche
+Ma peau se hérisse d'un coup
+Et tu le sais
+Tout devient lent
+Il n'a existé aucune autre femme
+Aussi incroyable et spéciale
+Sur les sommets j'ai pu te trouver
+Dansant seule, ay, ay, ay, ay
+C'est la vibration qui nous connecte
+Dans cette vie, bébé
+Toi seule peux me faire voler
+Tu m'emmènes au ciel toi
+Et personne ici ne pourra nous faire descendre
+Na-na-na, na-na-na, na-na
+Tu peux me faire voler
+Tu m'emmènes au ciel toi
+Je te jure que je ne veux pas redescendre
+Na-na-na, na-na-na, na-na
+Ey, tu sais que tu es incroyable, bébé, tu n'as pas besoin de feindre
+Ey, avec ce regard tu peux séduire n'importe qui
+Beaucoup essayent, mais ne peuvent pas rivaliser
+Je ne vais pas mentir, ton corps je veux le découvrir
+Sur les sommets j'ai pu te trouver
+Dansant seule, ay, ay, ay, ay
+C'est la vibration qui nous connecte
+Dans cette vie, bébé
+Toi seule peux me faire voler
+Tu m'emmènes au ciel toi
+Et personne ici ne pourra nous faire descendre
+Na-na-na, na-na-na, na-na
+Tu peux me faire voler
+Tu m'emmènes au ciel toi
+Je te jure que je ne veux pas redescendre
+Na-na-na, na-na-na, na-na`
+    }
+  },
+  {
+    id: "love-me-reece-lemonius",
+    title: "Love Me",
+    artist: "Reece Lemonius",
+    year: 2018,
+    dateAdded: "2026-04-12",
+    tags: ["Sensual", "Moderne"],
+    color: "#f472b6",
+    spotify: "https://open.spotify.com/search/Love%20Me%20Reece%20Lemonius",
+    danceVideo: "n2kIJZpz6rc",
+    culture: {
+      context: "Sorti en 2018, 'Love Me' de Reece Lemonius est devenu un succès majeur dans la communauté Bachata Sensual via divers remixes, malgré ses origines pop.",
+      meaning: "Un morceau mélancolique sur le regret et le besoin d'une seconde chance dans une relation, capturant l'émotion brute d'un amour qui s'estompe.",
+      artistInfo: "Reece Lemonius est un artiste britannique dont la voix soul s'adapte parfaitement aux rythmiques bachata, ce qui explique sa popularité chez les danseurs.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Say, say what you used to say to me
+Take, take me into your arms, where I should be
+Make, oh, make
+Make me feel like I'm flying (love me)
+Love, love me like I'm dying (love me)
+Can you change your mind? Can we do it again?
+Can we start it over, even if it's pretend?
+Let us be the same
+Just our hearts to claim
+Calling out your name
+To love me
+Oh-oh, oh-oh
+To love me
+Let, let me feel your heartbeat next to me
+You, you are all that I'll ever need
+But I, I ignored you when you were crying (love me)
+So now, now I'll love you like you're dying (love me)
+Can you change your mind? Can we do it again?
+Can we start it over, even if it's pretend?
+Let us be the same
+Just our hearts to claim
+Calling out your name
+Now it's all said and done (said and done, done)
+There's no turning back now
+Sorry for tainting our love (just from the look on your face)
+But I guess it's too late for that
+Oh-oh
+Oh-oh
+Oh-oh
+Love me
+Oh-oh, oh
+Oh-oh
+To love me`,
+      fr: `Dis, dis ce que tu avais l'habitude de me dire
+Prends, prends-moi dans tes bras, là où je devrais être
+Fais, oh, fais
+Fais-moi sentir comme si je volais (aime-moi)
+Aime, aime-moi comme si j'allais mourir (aime-moi)
+Peux-tu changer d'avis ? Pouvons-nous recommencer ?
+Pouvons-nous tout reprendre à zéro, même si on fait semblant ?
+Laissons-nous être les mêmes
+Juste nos cœurs à revendiquer
+En criant ton nom
+Pour m'aimer
+Oh-oh, oh-oh
+Pour m'aimer
+Laisse, laisse-moi sentir ton cœur battre près du mien
+Toi, tu es tout ce dont j'aurai jamais besoin
+Mais moi, je t'ai ignorée quand tu pleurais (aime-moi)
+Alors maintenant, maintenant je t'aimerai comme si tu allais mourir (aime-moi)
+Peux-tu changer d'avis ? Pouvons-nous recommencer ?
+Pouvons-nous tout reprendre à zéro, même si on fait semblant ?
+Laissons-nous être les mêmes
+Juste nos cœurs à revendiquer
+En criant ton nom
+Maintenant tout est dit et fait (tout est dit, fait)
+Il n'y a plus de retour en arrière possible maintenant
+Désolé d'avoir entaché notre amour (rien qu'au regard sur ton visage)
+Mais je suppose qu'il est trop tard pour ça
+Oh-oh
+Oh-oh
+Oh-oh
+Aime-moi
+Oh-oh, oh
+Oh-oh
+Pour m'aimer`
+    }
+  },
+  {
+    id: "lemonade-cry-me-a-river-william-singe",
+    title: "Lemonade X Cry Me a River",
+    artist: "William Singe (remix by DJD)",
+    year: 2020,
+    dateAdded: "2026-04-12",
+    tags: ["Moderne", "Remix"],
+    color: "#fde047",
+    spotify: "https://open.spotify.com/search/Lemonade%20Cry%20Me%20a%20River%20William%20Singe",
+    danceVideo: "xvX-QJaf9Gs",
+    culture: {
+      context: "Ce mashup créatif de William Singe fusionne deux époques : le hit trap 'Lemonade' d'Internet Money (2020) et l'hymne R&B 'Cry Me a River' de Justin Timberlake (2002). La version ici est un remix bachata par DJD.",
+      meaning: "Le morceau mélange l'ascension luxueuse de 'Lemonade' avec la thématique de la trahison amoureuse de 'Cry Me a River', créant un contraste saisissant.",
+      artistInfo: "William Singe est célèbre pour ses covers innovantes. Ce titre est devenu une référence pour les danseurs de bachata moderne grâce au remix de DJD.",
+      album: "Single / Mashup"
+    },
+    lyrics: {
+      es: `Xanny bars, suicide doors, brand new bag
+College girls give a brother head in my Rafs
+Rockstar life, so much money it'll make you laugh, hey
+As much as they hate, but you can't miss what you never had, hey-hey
+
+Off the juice, codeine got me trippin'
+Cop the coupe, woke up, roof was missin'
+Ice, lemonade, my neck was drippin'
+Ice, lemonade, my neck was drippin'
+
+Addy boys got some 60s in my bag
+Lips sealed, ain't pillow-talkin' on no rag
+In my еar I got two carats, VVS
+Got a penthouse in Rodeo off the stress
+All this money, when I grew up I had nothing
+Filled with backstabbers my whole life, it's disgusting
+Can't believe it, gotta thank God I'm living comfortably
+Getting checks, I don't believe her, she says she done with me
+
+Off the juice, codeine got me trippin'
+Cop the coupe, woke up, roof was missin'
+Ice, lemonade, my neck was drippin'
+Ice, lemonade, my neck was drippin'
+
+You were my sun
+You were my earth
+But you didn't know all the ways
+I loved you, oh-oh, oh-oh-oh
+So you took a chance
+And made other plans
+But I bet you didn't think that they would
+Come crashing down, no, babe
+
+You don't have to say what you did
+I already know, I found out from him
+Now there's just no chance of you and me
+We'll never be, and don't it make you sad?
+
+(Cry me a river) baby, go on and just
+(Cry me a river) you can go on and just
+(Cry me a river) stop, I already cried
+(Cry me a river)
+I don't wanna cry no more
+
+Oh, the damage is done so I guess I'll be leaving
+Oh, the damage is done so I guess I'll be leaving
+Oh, the damage is done so I guess I'll be leaving
+Oh, the damage is done so I guess I'll b-b-b-be leaving
+
+(Off the juice)`,
+      fr: `Barrettes de Xanax, portes suicide, tout nouveau sac
+Les filles de la fac me font une gâterie dans mes Raf Simons
+Vie de rockstar, tellement d'argent que ça te ferait rire, hey
+Ils ont beau détester, on ne peut pas regretter ce qu'on n'a jamais eu, hey-hey
+
+Défoncé au jus, la codéine me fait planer
+J'ai acheté le coupé, je me suis réveillé, le toit avait disparu
+Glace, limonade, mon cou dégoulinait (de bijoux)
+Glace, limonade, mon cou dégoulinait
+
+Les gars sous Adderall ont des 60mg dans mon sac
+Lèvres scellées, pas de bavardages sur l'oreiller
+Dans mon oreille j'ai deux carats, VVS
+J'ai un penthouse à Rodeo pour oublier le stress
+Tout cet argent, quand j'ai grandi je n'avais rien
+Entouré de traîtres toute ma vie, c'est dégoûtant
+Je n'arrive pas à y croire, je dois remercier Dieu de vivre confortablement
+J'encaisse les chèques, je ne la crois pas quand elle dit qu'elle en a fini avec moi
+
+Défoncé au jus, la codéine me fait planer
+J'ai acheté le coupé, je me suis réveillé, le toit avait disparu
+Glace, limonade, mon cou dégoulinait
+Glace, limonade, mon cou dégoulinait
+
+Tu étais mon soleil
+Tu étais ma terre
+Mais tu ne savais pas toutes les façons
+Dont je t'aimais, oh-oh, oh-oh-oh
+Alors tu as tenté ta chance
+Et tu as fait d'autres projets
+Mais je parie que tu ne pensais pas
+Qu'ils s'effondreraient, non, bébé
+
+Tu n'as pas besoin de dire ce que tu as fait
+Je le sais déjà, je l'ai appris par lui
+Maintenant il n'y a plus aucune chance pour toi et moi
+Nous ne serons jamais ensemble, et est-ce que ça ne te rend pas triste ?
+
+(Pleure-moi une rivière) bébé, vas-y et contente-toi de
+(Pleure-moi une rivière) tu peux continuer et simplement
+(Pleure-moi une rivière) arrête, j'ai déjà assez pleuré
+(Pleure-moi une rivière)
+Je ne veux plus pleurer
+
+Oh, le mal est fait alors je suppose que je vais partir
+Oh, le mal est fait alors je suppose que je vais partir
+Oh, le mal est fait alors je suppose que je vais partir
+Oh, le mal est fait alors je suppose que je v-v-v-vais partir
+
+(Défoncé au jus)`
+    }
+  },
+  {
+    id: "crazy-mayinbito-dj-nico",
+    title: "Crazy",
+    artist: "Mayinbito ft. DJ Nico",
+    year: 2024,
+    dateAdded: "2026-04-12",
+    tags: ["Moderne", "Sensual"],
+    color: "#e53e3e",
+    spotify: "https://open.spotify.com/search/Crazy%20Mayinbito%20DJ%20Nico",
+    danceVideo: "JnLpT_-VJ3I",
+    culture: {
+      context: "Sorti en 2024, 'Crazy' est un morceau de bachata urbaine produit par DJ Nico avec la voix de Mayinbito. Il s'est rapidement imposé comme un favori dans les festivals internationaux.",
+      meaning: "La chanson décrit une attirance physique intense et presque addictive. Le narrateur exprime comment les mouvements et l'attitude de sa partenaire le rendent 'fou', devenant sa seule 'faiblesse'.",
+      artistInfo: "DJ Nico est un producteur influent dans le milieu de la bachata sensual. Mayinbito apporte une touche urbaine avec un flow mélodique, créant une ambiance parfaite pour la danse sociale moderne.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Mayinbito
+Sorpréndeme
+Haz lo que quieras con mi cuerpo
+Abúsame
+Que me encanta tu movimento
+Y como un loco a esperar
+Que tú quieras llamarme
+Pensando en ti sin parar
+No dejo de imaginarme
+Otra noche pasarme
+Comiéndote completa
+Es que no hay nadie que me lo hace cómo me lo haces tú
+Me controlas los sentidos me envuelve tu actitud
+Te has vuelto mi enfermedad, mi debilidad
+No hay nadie cómo tú, mami nadie cómo tú
+Cause you got me
+Crazy
+You got me
+Crazy
+You got me
+Crazy
+Cause you got me baby
+Crazy
+You got me
+Crazy
+You got me
+Crazy
+Yeah
+Dímelo, Cupido
+Dj Nico
+Mayinbito
+Dueño del movimento
+Haz lo que quieras hacer
+Como lo hagas lo vas a romper
+Me adapto a tu movimento
+Arriba, abajo, al centro me conecto
+Sea en la pista o en la habitación
+Me gusta que pierdas el control
+Y pasemos la noche cabrón
+Y como un loco a esperar
+Que tú quieras llamarme
+Pensando en ti sin parar
+No dejo de imaginarme
+Otra noche pasarme
+Comiéndote completa
+Es que no hay nadie que me lo hace cómo me lo haces tú
+Me controlas los sentidos me envuelve tu actitud
+Te has vuelto mi enfermedad, mi debilidad
+No hay nadie cómo tú, mami nadie cómo tú
+Cause you got me
+Crazy
+You got me
+Crazy
+You got me
+Crazy
+Cause you got me baby
+Crazy
+You got me
+Crazy
+You got me
+Crazy
+Loco me tienes
+Pero eso creo que ya lo sabes
+Es un placer tenerte
+Espero que nunca se acabe
+(Espero que nunca se acabe)
+Es que no hay nadie que me lo hace cómo me lo haces tú
+Me controlas los sentidos me envuelve tu actitud
+Te has vuelto mi enfermedad, mi debilidad
+No hay nadie cómo tú, mami nadie cómo tú
+Cause you got me
+Crazy
+You got me
+Crazy
+You got me
+Crazy
+Cause you got me baby
+Crazy
+You got me
+Crazy
+You got me
+Crazy`,
+      fr: `Mayinbito
+Surprends-moi
+Fais ce que tu veux de mon corps
+Abuse de moi
+Car j'adore ton mouvement
+Et comme un fou j'attends
+Que tu veuilles m'appeler
+En pensant à toi sans arrêt
+Je ne cesse de m'imaginer
+Passer une autre nuit
+À te dévorer tout entière
+C'est qu'il n'y a personne qui me le fait comme tu me le fais
+Tu contrôles mes sens, ton attitude m'enveloppe
+Tu es devenue ma maladie, ma faiblesse
+Il n'y a personne comme toi, maman personne comme toi
+Car tu me rends
+Fou
+Tu me rends
+Fou
+Tu me rends
+Fou
+Car tu me rends bébé
+Fou
+Tu me rends
+Fou
+Tu me rends
+Fou
+Ouais
+Dis-le moi, Cupido
+Dj Nico
+Mayinbito
+Maître du mouvement
+Fais ce que tu veux faire
+Peu importe comment tu le fais tu vas tout déchirer
+Je m'adapte à ton mouvement
+En haut, en bas, au centre je me connecte
+Que ce soit sur la piste ou dans la chambre
+J'aime quand tu perds le contrôle
+Et qu'on passe une nuit d'enfer
+Et comme un fou j'attends
+Que tu veuilles m'appeler
+En pensant à toi sans arrêt
+Je ne cesse de m'imaginer
+Passer une autre nuit
+À te dévorer tout entière
+C'est qu'il n'y a personne qui me le fait comme tu me le fais
+Tu contrôles mes sens, ton attitude m'enveloppe
+Tu es devenue ma maladie, ma faiblesse
+Il n'y a personne comme toi, maman personne comme toi
+Car tu me rends
+Fou
+Tu me rends
+Fou
+Tu me rends
+Fou
+Car tu me rends bébé
+Fou
+Tu me rends
+Fou
+Tu me rends
+Fou
+Tu me rends fou
+Mais ça je crois que tu le sais déjà
+C'est un plaisir de t'avoir
+J'espère que ça ne finira jamais
+(J'espère que ça ne finira jamais)
+C'est qu'il n'y a personne qui me le fait comme tu me le fais
+Tu contrôles mes sens, ton attitude m'enveloppe
+Tu es devenue ma maladie, ma faiblesse
+Il n'y a personne comme toi, maman personne comme toi
+Car tu me rends
+Fou
+Tu me rends
+Fou
+Tu me rends
+Fou
+Car tu me rends bébé
+Fou
+Tu me rends
+Fou
+Tu me rends
+Fou`
+    }
+  },
+  {
+    id: "fantasmas-lil-angello-dj-husky",
+    title: "Fantasmas",
+    artist: "Lil Angello ft. DJ Husky, Dímelo Cupido & DJ Nico",
+    year: 2025,
+    dateAdded: "2026-04-12",
+    tags: ["Moderne", "Sensual"],
+    color: "#4a5568",
+    spotify: "https://open.spotify.com/search/Fantasmas%20Lil%20Angello%20DJ%20Husky",
+    danceVideo: "1t3RI1MCsd0",
+    culture: {
+      context: "Sorti en 2025 dans le projet 'Bachata Desk: The Mixtape', 'Fantasmas' est une collaboration moderne explorant la mélancolie post-rupture.",
+      meaning: "La chanson utilise la métaphore des fantômes pour désigner les souvenirs qui empêchent le narrateur de se reconstruire et de 'recommencer à zéro' après la perte de son 'autre moitié'.",
+      artistInfo: "Le morceau réunit Lil Angello, Dímelo Cupido et DJ Husky, des artistes clés de la bachata moderne fusionnant émotion et rythmiques urbaines.",
+      album: "Bachata Desk: The Mixtape"
+    },
+    lyrics: {
+      es: `Mejor ya dilo de una vez si crees que todo está perdido
+No voy a preguntarlo más quizá merezco este castigo
+Te olvidas lo que un día fue y todo lo que hemos vivido
+Y siguen pasando las horas y arrancarte no consigo
+Ya sé que quieres marcharte no voy a obligarte
+Si no quieres darme otra oportunidad
+Sin ti no puedo encontrarme me siento un cobarde
+Si tú no vuelves
+Dime cómo
+Cómo volver a empezar
+Cómo explico al corazón que ya no volverás
+Cómo te logro olvidar
+Cómo no echarte de menos queriéndote más
+Y yo que había prometido no volver atrás
+Now that my ghosts were at peace (Ahora que mis fantasmas estaban en paz)
+Cómo volver a empezar
+Cómo volver a ser yo sin mi otra mitad
+Tú me has dejado en el ayer
+Me has empujado hacia el vacío
+Cómo podía suponer
+Que fuera hiciese tanto frío
+Te va muy bien al parecer
+Desde que ya no estás conmigo
+Mientras yo sigo aquí pensando
+Por qué diablos te me has ido
+Ya sé que quieres quedarte no voy a obligarte
+Si no quieres darme otra oportunidad
+Sin ti no puedo encontrarme me siento un cobarde`,
+      fr: `Mieux vaut déjà le dire une fois pour toutes si tu crois que tout est perdu
+Je ne vais plus le demander, peut-être que je mérite ce châtiment
+Tu oublies ce qui fut un jour et tout ce que nous avons vécu
+Et les heures passent et je n'arrive pas à t'arracher (de mes pensées)
+Je sais déjà que tu veux t'en aller, je ne vais pas t'obliger
+Si tu ne veux pas me donner une autre chance
+Sans toi je ne peux pas me retrouver, je me sens comme un lâche
+Si tu ne reviens pas
+Dis-moi comment
+Comment recommencer à zéro
+Comment expliquer à mon cœur que tu ne reviendras plus
+Comment réussir à t'oublier
+Comment ne pas regretter ton absence en t'aimant davantage
+Et moi qui avais promis de ne pas revenir en arrière
+Maintenant que mes fantômes étaient en paix
+Comment recommencer à zéro
+Comment redevenir moi-même sans mon autre moitié
+Tu m'as laissé dans le passé
+Tu m'as poussé vers le vide
+Comment pouvais-je supposer
+Qu'il ferait si froid dehors (sans toi)
+Tout a l'air d'aller très bien pour toi apparemment
+Depuis que tu n'es plus avec moi
+Pendant que moi je continue ici à me demander
+Pourquoi diable tu es partie
+Je sais déjà que tu veux rester je ne vais pas t'obliger
+Si tu ne veux pas me donner une autre chance
+Sans toi je ne peux pas me retrouver, je me sens comme un lâche`
+    }
+  },
+  {
+    id: "millonario-dani-j-pinto-picasso",
+    title: "Millonario",
+    artist: "Dani J ft. Pinto Picasso",
+    year: 2024,
+    dateAdded: "2026-04-12",
+    tags: ["Moderne", "Sensual"],
+    color: "#FFD700",
+    spotify: "https://open.spotify.com/search/Millonario%20Dani%20J%20Pinto%20Picasso",
+    danceVideo: "hrbmM41FnYs",
+    culture: {
+      context: "Sorti en 2024, 'Millonario' est une collaboration entre Dani J et Pinto Picasso. La chanson est une ode à la beauté naturelle, affirmant que la valeur d'une femme réside dans son authenticité.",
+      meaning: "Le titre utilise la métaphore de la richesse pour décrire la beauté d'une femme. Il encourage à délaisser les filtres des réseaux sociaux pour embrasser sa propre identité.",
+      artistInfo: "Dani J est une figure majeure de la bachata en Europe. Pour ce titre, il collabore avec Pinto Picasso, créant un morceau très prisé dans le milieu de la Bachata Sensual.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Dices que no eres linda
+Pero yo te veo
+Más linda que cualquiera
+Las marcas de tu cuerpo
+Y el paso del tiempo
+Solo te hacen más bella
+
+Tu carita me encanta
+Los filtros no te hacen falta
+Brillas como la luna
+Tu piel con el sol resalta
+
+Y no importa lo que digan
+Tú no eres una entre tantas
+Eres mi reina, mi santa
+
+Bebé tú eres millonaria porque estás rica
+No hagas caso a la gente que solo critica
+Tú eres millonaria porque estás rica
+Y si me lo pides, te como enterita
+
+Bebé tú eres millonaria porque estás rica
+No hagas caso a la gente que solo critica
+Tú eres millonaria porque estás rica
+La más bonita, mi favorita
+
+Dices que no eres linda
+Pero ya quisieran estar a tu altura
+Cuando bailas se enciende la pista y se prende la temperatura
+
+Tu carita me encanta
+Los filtros no te hacen falta
+Brillas como la luna
+Tu piel con el sol resalta
+
+Y no importa lo que digan
+Tú no eres una entre tantas
+Eres mi reina, mi santa
+
+Bebé tú eres millonaria porque estás rica
+No hagas caso a la gente que solo critica
+Tú eres millonaria porque estás rica
+Y si me lo pides, te como enterita
+
+Bebé tú eres millonaria porque estás rica
+No hagas caso a la gente que solo critica
+Tú eres millonaria porque estás rica
+La más bonita, mi favorita
+
+Te haces más rica cuando inviertes en mi cama
+Yo con tus besos millonario en la mañana
+Que me tocó la lotería no sabía
+Que yo a ti te ganaría, que contigo estaría
+
+Tu eres millonaria
+Porque estás rica`,
+      fr: `Tu dis que tu n'es pas jolie
+Mais moi je te vois
+Plus jolie que n'importe qui
+Les marques sur ton corps
+Et le passage du temps
+Ne font que te rendre plus belle
+
+Ton petit visage m'enchante
+Tu n'as pas besoin de filtres
+Tu brilles comme la lune
+Ta peau ressort avec le soleil
+
+Et peu importe ce qu'ils disent
+Tu n'es pas une parmi tant d'autres
+Tu es ma reine, ma sainte
+
+Bébé tu es millionnaire parce que tu es superbe
+N'écoute pas les gens qui ne font que critiquer
+Tu es millionnaire parce que tu es superbe
+Et si tu me le demandes, je te dévore tout entière
+
+Bébé tu es millionnaire parce que tu es superbe
+N'écoute pas les gens qui ne font que critiquer
+Tu es millionnaire parce que tu es superbe
+La plus jolie, ma préférée
+
+Tu dis que tu n'es pas jolie
+Mais ils aimeraient bien être à ton niveau
+Quand tu danses la piste s'enflamme et la température monte
+
+Ton petit visage m'enchante
+Tu n'as pas besoin de filtres
+Tu brilles comme la lune
+Ta peau ressort avec le soleil
+
+Et peu importe ce qu'ils disent
+Tu n'es pas une parmi tant d'autres
+Tu es ma reine, ma sainte
+
+Bébé tu es millionnaire parce que tu es superbe
+N'écoute pas les gens qui ne font que critiquer
+Tu es millionnaire parce que tu es superbe
+Et si tu me le demandes, je te dévore tout entière
+
+Bébé tu es millionnaire parce que tu es superbe
+N'écoute pas les gens qui ne font que critiquer
+Tu es millionnaire parce que tu es superbe
+La plus jolie, ma préférée
+
+Tu deviens plus riche quand tu investis dans mon lit
+Moi avec tes baisers je suis millionnaire le matin
+Que j'avais gagné à la loterie je ne le savais pas
+Que je te gagnerais, que je serais avec toi
+
+Tu es millionnaire
+Parce que tu es superbe`
+    }
+  },
+  {
+    id: "que-pena-pinto-picasso",
+    title: "Que Pena",
+    artist: "Pinto Picasso",
+    year: 2024,
+    dateAdded: "2026-04-12",
+    tags: ["Sensual", "Moderne"],
+    color: "#8b0000",
+    spotify: "https://open.spotify.com/search/Que%20Pena%20Pinto%20Picasso",
+    danceVideo: "0J1LSyqMX2Q",
+    culture: {
+      context: "Sorti en 2024 dans le cadre du projet 'Casagemas', 'Que Pena' s'est rapidement imposé comme un incontournable des pistes de bachata contemporaine.",
+      meaning: "La chanson est un hymne à la résilience après une rupture. Pinto Picasso s'y adresse sarcastiquement à une ex-partenaire qui tente de revenir, en affirmant que les chances de réconciliation sont de 'zéro pour cent' et qu'il a déjà tourné la page.",
+      artistInfo: "Pinto Picasso est une figure montante de la bachata moderne, connu pour sa fusion de rythmes latins traditionnels avec des influences pop et urbaines, ainsi que son style vocal distinctif.",
+      album: "Casagemas"
+    },
+    lyrics: {
+      es: `Qué pena que terminaras llorando así
+Qué triste que él nunca te viera
+De la manera en que yo siempre te vi
+Oh, qué pena-a-a, mira las vueltas que da el mundo
+Tú que me heriste tan profundo
+Y ahora de mi calor quisieras (qué pena)
+Ay, no me sorprende, sabía que ibas a regresar
+Inevitable como la ley de gravedad
+¿Cómo te atreves?, dar la cara jurándome que yo soy tu amor de verdad
+Please
+Qué mal que no te diste cuenta a tiempo
+Ahora quieres volver, pero lo siento
+Cuando hay copa rota, se consigue otra
+Cosas de la vida, toca a quien le toca
+Qué mal que no te diste cuenta a tiempo
+Los chances de volver son de cero por ciento
+Cuando alguien te bota te consigue' otra
+Cosas de la vida, toca a quien le toca
+SP, oye eso
+Hey, ¿y qué fue?
+Casagemas
+Te lo dije, ¿sí o no?
+I'm sure that you know
+I was more than patient
+You were on a roll
+I seen all your faces
+I know we had our time
+But now you're out of time
+Ya me olvidé de ti
+Hoy amanecí enchulao y no fue de ti
+Por la noche anduve bailando sin pensar en ti
+Tus mensajes en mi cel explotando
+¿Pa qué te voy a estar contestando si me despedí?
+Hey, no me sorprende, sabía que ibas a regresar
+Inevitable como la ley de gravedad
+¿Cómo te atreves?, dar la cara jurándome que yo soy tu amor de verdad
+Ta bien
+Qué mal que no te diste cuenta a tiempo (so you say)
+Ahora quieres volver pero lo siento (ain't no way)
+Cuando hay copa rota (ya), se consigue otra (ya)
+Cosas de la vida, toca a quien le toca
+Qué mal que no te diste cuenta a tiempo (qué mal que no)
+Los chances de volver son de cero por ciento
+Cuando alguien te bota te consigue' otra
+Cosas de la vida, toca a quien le toca
+Qué mal que no te diste cuenta a tiempo (qué mal, qué mal, qué mal)
+Los chances de volver son de cero por ciento (cero, cero)
+Cuando alguien te bota te consigue' otra
+Cosas de la vida, toca a quien le toca`,
+      fr: `Quel dommage que tu finisses par pleurer ainsi
+C'est triste qu'il ne t'ait jamais vue
+De la manière dont je t'ai toujours vue
+Oh, quel dommage, regarde comme le monde tourne
+Toi qui m'as blessé si profondément
+Et maintenant tu voudrais ma chaleur (quel dommage)
+Ay, ça ne me surprend pas, je savais que tu reviendrais
+Inévitable comme la loi de la gravité
+Comment oses-tu ? Te montrer en me jurant que je suis ton vrai amour
+S'il te plaît
+Dommage que tu ne t'en sois pas rendu compte à temps
+Maintenant tu veux revenir, mais je suis désolé
+Quand un verre est brisé, on en trouve un autre
+C'est la vie, chacun son tour
+Dommage que tu ne t'en sois pas rendu compte à temps
+Les chances de revenir sont de zéro pour cent
+Quand quelqu'un te jette, il en trouve un autre
+C'est la vie, chacun son tour
+SP, écoute ça
+Hey, et alors ?
+Casagemas
+Je te l'ai dit, oui ou non ?
+Je suis sûr que tu le sais
+J'ai été plus que patient
+Tu étais sur une lancée
+J'ai vu tous tes visages
+Je sais que nous avons eu notre temps
+Mais maintenant ton temps est écoulé
+Je t'ai déjà oubliée
+Aujourd'hui je me suis réveillé amoureux et ce n'était pas de toi
+Pendant la nuit j'ai dansé sans penser à toi
+Tes messages explosent sur mon téléphone
+Pourquoi est-ce que je te répondrais si j'ai dit adieu ?
+Hey, ça ne me surprend pas, je savais que tu reviendrais
+Inévitable comme la loi de la gravité
+Comment oses-tu ? Te montrer en me jurant que je suis ton vrai amour
+D'accord
+Dommage que tu ne t'en sois pas rendu compte à temps (c'est ce que tu dis)
+Maintenant tu veux revenir mais je suis désolé (pas question)
+Quand un verre est brisé (déjà), on en trouve un autre (déjà)
+C'est la vie, chacun son tour
+Dommage que tu ne t'en sois pas rendu compte à temps (quel dommage que non)
+Les chances de revenir sont de zéro pour cent
+Quand quelqu'un te jette, il en trouve un autre
+C'est la vie, chacun son tour
+Dommage que tu ne t'en sois pas rendu compte à temps (quel mal, quel mal, quel mal)
+Les chances de revenir sont de zéro pour cent (zéro, zéro)
+Quand quelqu'un te jette, il en trouve un autre
+C'est la vie, chacun son tour`
+    }
+  },
+  {
+    id: "7-dias-romeo-santos",
+    title: "7 Días",
+    artist: "Romeo Santos",
+    year: 2014,
+    dateAdded: "2026-04-12",
+    tags: ["Dominicaine", "Moderne"],
+    color: "#b8860b",
+    spotify: "https://open.spotify.com/search/7%20Dias%20Romeo%20Santos",
+    danceVideo: "9Wn7OKEAiK8",
+    culture: {
+      context: "Sorti en 2014 sur l'album Formula, Vol. 2, '7 Días' est un classique de Romeo Santos. La chanson suit une structure chronologique où chaque jour de la semaine représente une étape de la relation amoureuse.",
+      meaning: "L'histoire d'un coup de foudre où le protagoniste décide de conquérir, épouser et partir en lune de miel avec sa bien-aimée en l'espace d'une seule semaine.",
+      artistInfo: "Romeo Santos, 'Le Roi de la Bachata', a modernisé le genre en y apportant des touches de R&B. Ancien membre d'Aventura, il est l'artiste bachata le plus influent de sa génération.",
+      album: "Formula, Vol. 2"
+    },
+    lyrics: {
+      es: `Who's back?
+The king
+Solo escucha
+Cariñito no seas mala
+Te lo ruego
+Asómate a tu balcón
+He venido aquí descalzo
+Melancólico y borracho
+Como a un perro
+Si a caso me llevan preso
+Tírame un besito de adiós
+Ya te he escrito tres bachatas
+Como muestra que tengo sentimientos
+Loco, amante y bohemio
+Tu Romeo moderno
+Un demente seductor
+Dame 7 días
+Intento regalarte el cielo
+A una jornada amorosa mi reina te llevo
+El domingo empieza el juego de seducción
+Monday night una velada entre tú y yo
+Martes te hago mi novia en París
+By Wednesday you'll love me the way it should be
+Y el jueves el anillo down on my knees
+Te propongo matrimonio
+Dices que sí
+Friday we'll marry
+Wherever you want
+Luna de miel es el Sábado
+Hermoso final
+All I need is 7 days boo!
+¡Ay chi chi!
+Ponla a llorar
+¿Y le gusta mi bachata amiguita?
+Volvió
+El chico de las poesías
+Gustoso
+Un cariñito una semana
+Es suficiente pa' mostrar que el amor
+Es veloz, es eterno
+No juzgará en cuanto tiempo
+Nos conocemos los dos
+Dame 7 días
+Intento regalarte el cielo
+A una jornada amorosa mi reina te llevo
+El domingo empieza el juego de seducción
+Monday night una velada entre tú y yo
+Martes te hago mi novia en París
+By Wednesday you'll love me the way it should be
+Y el Jueves el anillo down on my knees
+Te propongo matrimonio
+Dices que sí
+Friday we'll marry
+Wherever you want
+Luna de miel es el sábado
+Hermoso final
+Swagger on another level
+Let me find out`,
+      fr: `Qui est de retour ?
+Le roi
+Écoute seulement
+Ma chérie ne sois pas méchante
+Je t'en prie
+Montre-toi à ton balcon
+Je suis venu ici pieds nus
+Mélancolique et ivre
+Comme un chien
+Si par hasard on m'emmène en prison
+Lance-moi un petit baiser d'adieu
+Je t'ai déjà écrit trois bachatas
+Comme preuve que j'ai des sentiments
+Fou, amant et bohème
+Ton Roméo moderne
+Un dément séducteur
+Donne-moi 7 jours
+J'essaie de t'offrir le ciel
+Je t'emmène dans un voyage amoureux ma reine
+Dimanche commence le jeu de séduction
+Lundi soir une veillée entre toi et moi
+Mardi je fais de toi ma petite amie à Paris
+D'ici mercredi tu m'aimeras comme il se doit
+Et jeudi la bague, un genou à terre
+Je te demande en mariage
+Tu dis oui
+Vendredi nous nous marions
+Où tu veux
+La lune de miel est le samedi
+Une fin magnifique
+Tout ce dont j'ai besoin c'est de 7 jours chérie !
+¡Ay chi chi! (Cri de joie)
+Fais-la pleurer
+Et tu aimes ma bachata mon amie ?
+Il est revenu
+Le garçon aux poésies
+Avec plaisir
+Un petit moment de tendresse, une semaine
+C'est suffisant pour montrer que l'amour
+Est rapide, est éternel
+Il ne jugera pas en combien de temps
+Nous nous sommes connus tous les deux
+Donne-moi 7 jours
+J'essaie de t'offrir le ciel
+Je t'emmène dans un voyage amoureux ma reine
+Dimanche commence le jeu de séduction
+Lundi soir une veillée entre toi et moi
+Mardi je fais de toi ma petite amie à Paris
+D'ici mercredi tu m'aimeras comme il se doit
+Et jeudi la bague, un genou à terre
+Je te demande en mariage
+Tu dis oui
+Vendredi nous nous marions
+Où tu veux
+La lune de miel est le samedi
+Une fin magnifique
+Le style à un autre niveau
+Laisse-moi découvrir`
+    }
+  },
+  {
+    id: "adrenalina-charles-luis-dj-husky",
+    title: "Adrenalina",
+    artist: "Charles Luis ft. DJ Husky",
+    year: 2025,
+    dateAdded: "2026-04-12",
+    tags: ["Sensual", "Moderne"],
+    color: "#f97316",
+    spotify: "https://open.spotify.com/search/Adrenalina%20Charles%20Luis%20DJ%20Husky",
+    danceVideo: "WnkeTsmOVKU",
+    culture: {
+      context: "\"Adrenalina\" est un pur produit de la bachata moderne sorti en 2025, spécifiquement pensé pour les professeurs et les danseurs (\"el bailador\"). On le retrouve énormément dans les démos et festivals de danse.",
+      meaning: "Les paroles décrivent l'attirance irrésistible et la tension (\"l'adrénaline\") qui montent entre deux partenaires pendant la danse, avec de nombreuses métaphores sensorielles.",
+      artistInfo: "DJ Husky (Jhonatan Lillo) est l'un des producteurs les plus en vue de la scène bachata actuelle, connu pour des sonorités percussives et modernes taillées pour la danse. Charles Luis apporte la voix douce caractéristique du genre.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Acércate, pero lentamente
+Tu cuerpo siempre ha sido mi adicción
+Tus labios rojos nublan mi mente
+Y me llevan a la perdición
+
+Los diamantes le brillan, viene desde barranquilla
+Es como una pesadilla y aquí me tiene suave
+Como mantequilla y su boca como vainilla
+Yo no sé lo que quiere de mí
+
+Me está llevando al cielo
+Me enreda en terciopelo
+Ella me mira y se disfruta el proceso
+Y esta noche me está tentando en exceso
+
+Sube la adrenalina poco a poco, poco a poco
+Ella no tiene freno y yo tampoco
+Poco a poco, poco a poco
+Sube la adrenalina (sube la adrenalina)
+
+No te pegues así de repente
+Que cuando bailas yo pierdo el control
+Y es que nunca tiene suficiente
+Eres como una gran maldición
+
+Los diamantes le brillan, viene desde barranquilla
+Es como una pesadilla y aquí me tiene suave
+Como mantequilla y su boca como vainilla
+Yo no sé lo que quiere de mí
+
+Me está llevando al cielo
+Me enreda en terciopelo
+Ella me mira y se disfruta el proceso
+Y esta noche me está tentando en exceso
+
+Sube la adrenalina poco a poco, poco a poco
+Ella no tiene freno y yo tampoco
+Poco a poco, poco a poco
+Sube la adrenalina (sube la adrenalina)
+
+This is crazy man
+Another one
+You know (Cupido)
+No andamos solo, Dj Husky (Charles Luis)
+
+Me está llevando al cielo
+Me enreda en terciopelo
+Ella me mira y se disfruta el proceso
+Y esta noche me está tentando en exceso
+
+Sube la adrenalina poco a poco, poco a poco
+Ella no tiene freno y yo tampoco
+Poco a poco, poco a poco
+Sube la adrenalina (sube la adrenalina)`,
+      fr: `Approche-toi, mais lentement
+Ton corps a toujours été mon addiction
+Tes lèvres rouges troublent mon esprit
+Et me mènent à la perdition
+
+Les diamants brillent sur elle, elle vient de Barranquilla
+C'est comme un cauchemar et ici elle me rend tout doux
+Comme du beurre et sa bouche au goût de vanille
+Je ne sais pas ce qu'elle veut de moi
+
+Elle m'emmène au ciel
+Elle m'enlace dans du velours
+Elle me regarde et profite du moment
+Et cette nuit elle me tente à l'excès
+
+L'adrénaline monte petit à petit, petit à petit
+Elle n'a pas de frein et moi non plus
+Petit à petit, petit à petit
+L'adrénaline monte (l'adrénaline monte)
+
+Ne te colle pas comme ça d'un coup
+Parce que quand tu danses je perds le contrôle
+Et c'est qu'elle n'en a jamais assez
+Tu es comme une grande malédiction
+
+Les diamants brillent sur elle, elle vient de Barranquilla
+C'est comme un cauchemar et ici elle me rend tout doux
+Comme du beurre et sa bouche au goût de vanille
+Je ne sais pas ce qu'elle veut de moi
+
+Elle m'emmène au ciel
+Elle m'enlace dans du velours
+Elle me regarde et profite du moment
+Et cette nuit elle me tente à l'excès
+
+L'adrénaline monte petit à petit, petit à petit
+Elle n'a pas de frein et moi non plus
+Petit à petit, petit à petit
+L'adrénaline monte (l'adrénaline monte)
+
+C'est fou mec
+Encore un
+Tu sais (Cupido)
+On n'est pas tout seuls, Dj Husky (Charles Luis)
+
+Elle m'emmène au ciel
+Elle m'enlace dans du velours
+Elle me regarde et profite du moment
+Et cette nuit elle me tente à l'excès
+
+L'adrénaline monte petit à petit, petit à petit
+Elle n'a pas de frein et moi non plus
+Petit à petit, petit à petit
+L'adrénaline monte (l'adrénaline monte)`
+    }
+  },
+  {
     id: "in-the-stars-benson-boone",
     title: "In The Stars",
     artist: "Benson Boone",
