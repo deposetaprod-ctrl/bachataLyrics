@@ -1,5 +1,145 @@
 export const songs = [
   {
+    id: "apretaito-charles-luis",
+    title: "Apretaito",
+    artist: "Charles Luis",
+    year: 2024,
+    dateAdded: "2026-04-16",
+    dancers: "Gero & Migle",
+    tags: ["Moderne", "Sensual"],
+    color: "#f59e0b",
+    spotify: "https://open.spotify.com/search/Apretaito%20Charles%20Luis",
+    danceVideo: "J677nLxjlXg",
+    culture: {
+      context: "Sorti en 2024, 'Apretaito' est un single de Charles Luis, artiste cubain devenu une voix montante de la bachata moderne en Europe. Le titre mêle sonorités urbaines et bachata sensual.",
+      meaning: "La chanson décrit une attirance mutuelle sur la piste de danse. Le narrateur reconnaît la réputation de séductrice de sa partenaire, mais affirme être l'homme qu'elle cherche, l'invitant à danser 'apretaito' (bien serré).",
+      artistInfo: "Charles Luis (José Luis Charles Costa, né en 1989 à Pinar del Río, Cuba) a débuté l'écriture de chansons à 15 ans avant de s'installer en Europe à 22 ans. Initialement dans le reggaeton, il s'est orienté vers la bachata grâce aux producteurs Fabrizio Zoro et Dany De Santis. La démo de danse est signée Gero & Migle, duo international de Bachata Sensual reconnu pour leur style fusionnant flamenco, ballet et danses latines.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Dicen
+Que eres mala, pero sé que escondes muchas cosas
+Por momento, te vuelves una mentirosa
+Que te gusta engañar a los hombres, y que
+Oh, oh-oh-oh, oh-oh-oh, oh-oh-oh, oh-oh
+
+Rosas
+Ninguno te regala porque es otra cosa
+Lo que tú anda' buscando por ser peligrosa
+Pero sabes que buscas un hombre como yo
+Y esta noche
+
+Tú viniste a vacilar, y qué bien se te ve
+No me canso de mirar cómo mueve' los pies
+Yo sé que tú tienes tu plan, te lo digo otra vez
+A ti nadie te va a tirar, ya yo te disparé
+Y esta noche se baila
+
+A-a-a-a-apretaito, bebé
+A-a-a-a-apretaito, bebé
+A-a-a-a-apretaito, bebé
+A-a-a-a-apretaito, bebé
+
+Viste
+Ahora traes mi ropa
+Me mordiste la boca
+Ahora soy yo el que te trae loca
+Oh, oh-oh-oh, oh-oh-oh, oh-oh-oh, oh-oh
+
+Rosas
+Ninguno te regala porque es otra cosa
+Lo que tú andas buscando por ser peligrosa
+Pero sabes que buscas un hombre como yo
+Y esta noche
+
+Tú viniste a vacilar, y qué bien se te ve
+No me canso de mirar cómo mueve' los pies
+Yo sé que tú tienes tu plan, te lo digo otra vez
+A ti nadie te va a tirar, ya yo te disparé
+Y esta noche se baila
+
+A-a-a-a-apretaito, bebé
+A-a-a-a-apretaito, bebé
+A-a-a-a-apretaito, bebé
+A-a-a-a-
+
+You know, baby, ja, ja, ja, ja
+Charles Luis
+Cupido
+
+Tú viniste a vacilar, y qué bien se te ve
+No me canso de mirar cómo mueve' los pies
+Yo sé que tú tienes tu plan, te lo digo otra vez
+A ti nadie te va a tirar, ya yo te disparé
+Y esta noche se baila
+
+A-a-a-a-apretaito, bebé
+A-a-a-a-apretaito, bebé
+A-a-a-a-apretaito, bebé
+A-a-a-a-apretaito, bebé`,
+      fr: `Ils disent
+Que tu es mauvais mais je sais que tu caches beaucoup de choses
+Parfois tu deviens un menteur
+Que tu aimes tromper les hommes et que
+Oh, oh-oh-oh, oh-oh-oh, oh-oh-oh, oh-oh
+
+Rose
+Personne ne vous fait de cadeau parce que c'est autre chose.
+Ce que vous recherchez comme étant dangereux
+Mais tu sais que tu cherches un homme comme moi
+Et cette nuit
+
+Tu es venu pour hésiter et comme tu es belle
+Je ne me lasse jamais de regarder comment il bouge ses pieds
+Je sais que tu as ton plan, je te le répète.
+Personne ne va te tirer dessus et je t'ai tiré dessus
+Et ce soir on danse
+
+Aaaa serré bébé
+Aaaa serré bébé
+Aaaa serré bébé
+Aaaa serré bébé
+
+Savait
+Maintenant tu apportes mes vêtements
+Tu m'as mordu la bouche
+Maintenant, c'est moi qui te rends fou
+Oh, oh-oh-oh, oh-oh-oh, oh-oh-oh, oh-oh
+
+Rose
+Personne ne vous fait de cadeau parce que c'est autre chose.
+Ce que vous recherchez comme étant dangereux
+Mais tu sais que tu cherches un homme comme moi
+Et cette nuit
+
+Tu es venu pour hésiter et comme tu es belle
+Je ne me lasse jamais de regarder comment il bouge ses pieds
+Je sais que tu as ton plan, je te le répète.
+Personne ne va te tirer dessus et je t'ai tiré dessus
+Et ce soir on danse
+
+Aaaa serré bébé
+Aaaa serré bébé
+Aaaa serré bébé
+Aaaa-
+
+Tu sais, bébé, et, et, et, et
+Charles-Louis
+Cupidon
+
+Tu es venu pour hésiter et comme tu es belle
+Je ne me lasse jamais de regarder comment il bouge ses pieds
+Je sais que tu as ton plan, je te le répète.
+Personne ne va te tirer dessus et je t'ai tiré dessus
+Et ce soir on danse
+
+Aaaa serré bébé
+Aaaa serré bébé
+Aaaa serré bébé
+Aaaa serré bébé`
+    }
+  },
+  {
     id: "cuando-yo-te-bese-sebas-garreta-dj-husky",
     title: "Cuando Yo Te Besé",
     artist: "Sebas Garreta ft. Dj Husky",
