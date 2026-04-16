@@ -1,5 +1,159 @@
 export const songs = [
   {
+    id: "cuando-yo-te-bese-sebas-garreta-dj-husky",
+    title: "Cuando Yo Te Besé",
+    artist: "Sebas Garreta ft. Dj Husky",
+    year: 2024,
+    dateAdded: "2026-04-14",
+    dancers: "Anita y Varea",
+    tags: ["Moderne", "Sensual"],
+    color: "#ec4899",
+    spotify: "https://open.spotify.com/search/Cuando%20Yo%20Te%20Bes%C3%A9%20Sebas%20Garreta%20Dj%20Husky",
+    danceVideo: "gRIkcPVOTmg",
+    culture: {
+      context: "Sorti en novembre 2024, 'Cuando Yo Te Besé' est une collaboration vibrante entre le chanteur Sebas Garreta et le producteur DJ Husky, rapidement adoptée par les danseurs de bachata moderne.",
+      meaning: "La chanson est une déclaration passionnée qui évoque l'intensité mémorable et la magie d'un premier baiser qui laisse le narrateur hypnotisé et captivé.",
+      artistInfo: "DJ Husky est un producteur influent créant des rythmiques urbaines, tandis que Sebas Garreta apporte une voix douce et romantique. La danse de démonstration par Anita et Varea a popularisé le titre au Bachata Dream 2024.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Tienes un poder que a mi me hipnotiza
+Que eriza mi piel, hiere y cicatriza
+No sé qué tienen tus labios rojos
+Que mi cuerpo inmovilizan
+
+Cuando yo te besé por primera vez
+Sentí ese cosquilleo de la cabeza a los pies
+Un algo que no sé que me hizo enloquecer
+Hoy sueño con volver a repetirlo otra vez
+
+Cuando yo te besé por primera vez
+Sentí ese cosquilleo de la cabeza a los pies
+Un algo que no sé que me hizo enloquecer
+Hoy sueño con volver a repetirlo otra vez
+
+Que tu boca me envuelve
+Tu boca me hace sentir
+Mi mente se pierde
+Y no sé ni que decir
+Pero me sorprende
+Me acalora
+Me prende
+Me mata
+Me revive
+Me apaga y me enciende
+
+Tiene el sabor en los labios que a mí me fascina es mi dulce princesa
+Mágica poción divina que me debilita con sabor a fresa
+Sueño con besar tu boca, escuchar tu risa loca
+A lo mejor en el mundo hay otras como tú pero deben ser pocas
+
+Bésame bien lento, que cuando tú me besas me pongo contento
+Te lo pido, bésame bien lento
+Bien despacio pero sin freno, quiero probar de tu veneno
+
+Cuando yo te besé por primera vez
+Sentí ese cosquilleo de la cabeza a los pies
+Un algo que no sé que me hizo enloquecer
+Hoy sueño con volver a repetirlo otra vez
+
+Cuando yo te besé por primera vez
+Sentí ese cosquilleo de la cabeza a los pies
+Un algo que no sé que me hizo enloquecer
+Hoy sueño con volver a repetirlo otra vez
+
+Sebas Garreta mami
+
+Dímelo Husky
+
+Ahhh
+
+Díselo Alex
+
+Ohh no Ohh no
+
+Bésame bien lento, que cuando tú me besas me pongo contento
+Te lo pido, bésame bien lento, bien despacio pero sin freno, quiero probar de tu veneno
+
+Cuando yo te besé por primera vez
+Sentí ese cosquilleo de la cabeza a los pies
+Un algo que no sé que me hizo enloquecer
+Hoy sueño con volver a repetirlo otra vez
+
+Cuando yo te besé por primera vez
+Sentí ese cosquilleo de la cabeza a los pies
+Un algo que no sé que me hizo enloquecer
+Hoy sueño con volver a repetirlo otra vez`,
+      fr: `Tu as un pouvoir qui m'hypnotise
+Qui hérisse ma peau, blesse et cicatrise
+Je ne sais pas ce qu'ont tes lèvres rouges
+Qui immobilisent mon corps
+
+Quand je t'ai embrassée pour la première fois
+J'ai ressenti ce picotement de la tête aux pieds
+Un je-ne-sais-quoi qui m'a rendu fou
+Aujourd'hui je rêve de répéter ça encore une fois
+
+Quand je t'ai embrassée pour la première fois
+J'ai ressenti ce picotement de la tête aux pieds
+Un je-ne-sais-quoi qui m'a rendu fou
+Aujourd'hui je rêve de répéter ça encore une fois
+
+Car ta bouche m'enveloppe
+Ta bouche me fait ressentir
+Mon esprit se perd
+Et je ne sais même plus quoi dire
+Mais ça me surprend
+Ça me donne chaud
+Ça m'allume
+Ça me tue
+Ça me ravive
+Ça m'éteint et m'enflamme
+
+Elle a cette saveur sur les lèvres qui me fascine, c'est ma douce princesse
+Magique potion divine au goût de fraise qui m'affaiblit
+Je rêve d'embrasser ta bouche, d'écouter ton rire fou
+Peut-être qu'il y en a d'autres comme toi dans le monde mais elles doivent être peu nombreuses
+
+Embrasse-moi bien lentement, car quand tu m'embrasses je suis heureux
+Je te le demande, embrasse-moi bien lentement
+Bien doucement mais sans frein, je veux goûter à ton venin
+
+Quand je t'ai embrassée pour la première fois
+J'ai ressenti ce picotement de la tête aux pieds
+Un je-ne-sais-quoi qui m'a rendu fou
+Aujourd'hui je rêve de répéter ça encore une fois
+
+Quand je t'ai embrassée pour la première fois
+J'ai ressenti ce picotement de la tête aux pieds
+Un je-ne-sais-quoi qui m'a rendu fou
+Aujourd'hui je rêve de répéter ça encore une fois
+
+Sebas Garreta mami
+
+Dis-le moi Husky
+
+Ahhh
+
+Dis-lui Alex
+
+Ohh non Ohh non
+
+Embrasse-moi bien lentement, car quand tu m'embrasses je suis heureux
+Je te le demande, embrasse-moi bien lentement, bien doucement mais sans frein, je veux goûter à ton venin
+
+Quand je t'ai embrassée pour la première fois
+J'ai ressenti ce picotement de la tête aux pieds
+Un je-ne-sais-quoi qui m'a rendu fou
+Aujourd'hui je rêve de répéter ça encore une fois
+
+Quand je t'ai embrassée pour la première fois
+J'ai ressenti ce picotement de la tête aux pieds
+Un je-ne-sais-quoi qui m'a rendu fou
+Aujourd'hui je rêve de répéter ça encore une fois`
+    }
+  },
+  {
     id: "luna-de-crucero-sp-polanco-bchta-rising-jean-alex",
     title: "Luna De Crucero",
     artist: "Jean & Alex ft. sP Polanco & Bchta Rising",
