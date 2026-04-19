@@ -1,5 +1,573 @@
 export const songs = [
   {
+    id: "amor-de-cristal-sebas-garreta",
+    title: "AMOR DE CRISTAL",
+    artist: "Sebas Garreta x Dímelo Cupido x DJ Husky",
+    year: 2025,
+    dateAdded: "2026-04-19",
+    dancers: null,
+    tags: ["Moderne", "Romantique"],
+    color: "#a5f3fc",
+    spotify: "https://open.spotify.com/search/Amor%20De%20Cristal%20Sebas%20Garreta",
+    danceVideo: null,
+    culture: {
+      context: "Sorti le 24 juillet 2025 au sein du projet 'Bachata Desk: The Mixtape', ce titre marque une collaboration entre la sensation espagnole Sebas Garreta et les producteurs Dímelo Cupido et DJ Husky.",
+      meaning: "La chanson utilise la métaphore du cristal pour décrire la beauté et la fragilité d'un amour naissant. Le narrateur exprime une dévotion totale, promettant de protéger cette relation précieuse et de vieillir aux côtés de l'être aimé.",
+      artistInfo: "Sebas Garreta, originaire de Majorque, est un artiste polyvalent, à la fois chanteur et poète. Son style mélange la bachata traditionnelle avec une sensibilité pop moderne. 'Amor de Cristal' souligne sa capacité à écrire des textes profonds et romantiques.",
+      album: "Bachata Desk: The Mixtape"
+    },
+    lyrics: {
+      es: `Solo
+Pensando en la primera vez
+Que sonreíste y te miré
+¿Quién diría que me enamoraría y así terminé
+
+Y como un cometa llegaste a mi vida
+No encuentro respuesta, no tengo salida
+Arranca mi piel con tu piel
+Quiero envejecer contigo hasta el final de mis días
+
+Y corro como un loco tras de ti
+Porque eres todo lo que un día pedí
+Te regalo las canciones que escribí
+Porque no quiero que se acabe
+
+Este amor de cristal
+En tu espacio es donde alcanzo a respirar
+Prometo cuidar tu amor de cristal
+
+Solo
+Mirando fotos del ayer
+Muriendo por volverte a ver
+¿Quién diría que el amor vencería sin ningún por qué
+
+Y como un cometa llegaste a mi vida
+No encuentro respuesta, no tengo salida
+Arranca mi piel con tu piel
+Quiero envejecer contigo hasta el final de mis días
+
+Y corro como un loco tras de ti
+Porque eres todo lo que un día pedí
+Te regalo las canciones que escribí
+Porque no quiero que se acabe
+
+Este amor de cristal
+En tu espacio es donde alcanzo a respirar
+Prometo cuidar tu amor de cristal
+
+Y si un día me faltas
+Llévate mi alma
+Porque yo no soy nada
+Sin ti
+
+Y corro como un loco tras de ti
+Porque eres todo lo que un día pedí
+Te regalo las canciones que escribí
+Porque no quiero que se acabe
+
+Este amor de cristal
+En tu espacio es donde alcanzo a respirar
+Prometo cuidar tu amor de cristal
+
+Este amor de cristal`,
+      fr: `Seul
+Pensant à la première fois
+Où tu as souri et je t'ai regardée
+Qui dirait que je tomberais amoureux et que je finirais ainsi
+
+Et comme une comète tu es arrivée dans ma vie
+Je ne trouve pas de réponse, je n'ai pas de sortie
+Arrache ma peau avec ta peau
+Je veux vieillir avec toi jusqu'à la fin de mes jours
+
+Et je cours comme un fou après toi
+Parce que tu es tout ce que j'ai demandé un jour
+Je t'offre les chansons que j'ai écrites
+Parce que je ne veux pas que se termine
+
+Cet amour de cristal
+Dans ton espace c'est là que j'arrive à respirer
+Je promets de prendre soin de ton amour de cristal
+
+Seul
+Regardant des photos d'hier
+Mourant d'envie de te revoir
+Qui dirait que l'amour vaincrait sans aucune raison
+
+Et comme une comète tu es arrivée dans ma vie
+Je ne trouve pas de réponse, je n'ai pas de sortie
+Arrache ma peau avec ta peau
+Je veux vieillir avec toi jusqu'à la fin de mes jours
+
+Et je cours comme un fou après toi
+Parce que tu es tout ce que j'ai demandé un jour
+Je t'offre les chansons que j'ai écrites
+Parce que je ne veux pas que se termine
+
+Cet amour de cristal
+Dans ton espace c'est là que j'arrive à respirer
+Je promets de prendre soin de ton amour de cristal
+
+Et si un jour tu me manques
+Emporte mon âme
+Parce que je ne suis rien
+Sans toi
+
+Et je cours comme un fou après toi
+Parce que tu es tout ce que j'ai demandé un jour
+Je t'offre les chansons que j'ai écrites
+Parce que je ne veux pas que se termine
+
+Cet amour de cristal
+Dans ton espace c'est là que j'arrive à respirer
+Je promets de prendre soin de ton amour de cristal
+
+Cet amour de cristal`
+    }
+  },
+  {
+    id: "siri-dj-husky-lil-angello",
+    title: "Siri (Bachata Version)",
+    artist: "DJ Husky ft. Lil Angello",
+    year: 2022,
+    dateAdded: "2026-04-19",
+    dancers: "Luis y Andrea",
+    tags: ["Moderne", "Sensual"],
+    color: "#3b82f6",
+    spotify: "https://open.spotify.com/search/Siri%20DJ%20Husky%20Lil%20Angello",
+    danceVideo: "tqO6jZx-bns",
+    culture: {
+      context: "Sorti fin 2022, ce titre est une adaptation bachata du succès 'Siri' de l'artiste dominicain Christopher Lebron. Produite par DJ Husky avec la voix de Lil Angello, cette version a rapidement conquis les festivals de bachata.",
+      meaning: "La chanson détourne l'usage de l'assistant vocal Siri pour exprimer le désespoir d'un homme qui ne parvient plus à communiquer avec son ex. Il demande à Siri de l'appeler pour lui dire de revenir, soulignant sa solitude ('haciendo el amor con la soledad').",
+      artistInfo: "Christopher Lebron est l'auteur original de ce titre qui mêle codes digitaux et mélancolie. DJ Husky est un producteur reconnu pour ses remixes bachata. La vidéo présente Luis y Andrea lors du Salamanca Bachata Festival 2022, un couple pionnier du style Bachata Sensual.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Oye, Siri, ¿cómo estás?
+Nada mal, gracias por preguntar
+Tengo el cuaderno repleto de carta' pa' ti
+Las cosa' que de aquel tiempo no supe decir
+Tengo tu foto en la puerta pa' verte al salir
+Ya no hay espacio en el cel pa' volverte a escribir
+
+Siri, llámala y dile que, que
+Que vuelvas
+Sin ella la casa se ha vuelto una selva
+Siri, llama y pregúntale, eh
+¿Dónde está?
+Que recuperé la virginidad
+Haciendo el amor con la soledad, eh
+
+Estas cuatro paredes se ríen en mi cara
+La cama la tengo de adorno y no puedo dormir
+Si la vida te pasa factura, ¿dónde es que se paga?
+Yo no sé qué te hice, ¿por qué te fuiste en silencio?
+¿Qué alarma tengo que poner pa' despertar contigo?
+Suplicando por las redes, soy el más viral
+Nuestro apartamento tiene una peste a agonía
+¿De qué vale un techo si ya no es un hogar?
+
+Y llevo la computadora loca
+Googleando por ti
+Ahora vuelvo a pedir
+
+Siri, llámala y dile que
+Que vuelvas
+Sin ella la casa se ha vuelto una selva
+Siri, llama y pregúntale, eh
+¿Dónde está?
+Que recuperé la virginidad
+Haciendo el amor con la soledad, eh
+
+Ay-ay-ay, ay-ay-ay-ay-yo
+Chateala mi amor
+Oye Siri, hazme un favor y dile que
+Husky y Lil Angello
+La siguen rompiendo
+
+Antes de quedar bloqueado
+Permíteme un beso, un último adiós
+Pero si te molesta mi voz
+Tengo una mensajera
+
+Siri, llámala y dile que
+Que vuelvas
+Sin ella la casa se ha vuelto una selva
+Siri, llama y pregúntale, eh
+¿Dónde está?
+Que recuperé la virginidad
+Haciendo el amor con la soledad, eh
+
+Uhh oh oh oh
+Uh uh no no oh oh
+Lil Angello
+Lil Angello
+No no no oh oh`,
+      fr: `Hé Siri, comment vas-tu ?
+Pas mal, merci de demander
+J'ai le cahier rempli de lettres pour toi
+Les choses que je n'ai pas su dire à cette époque
+J'ai ta photo sur la porte pour te voir en sortant
+Il n'y a plus de place dans mon téléphone pour t'écrire à nouveau
+
+Siri, appelle-la et dis-lui que, que
+Qu'elle revienne
+Sans elle la maison est devenue une jungle
+Siri, appelle et demande-lui, eh
+Où est-elle ?
+Que j'ai retrouvé ma virginité
+En faisant l'amour avec la solitude, eh
+
+Ces quatre murs se moquent de moi en face
+Le lit me sert de décoration et je ne peux pas dormir
+Si la vie te facture, où est-ce qu'on paie ?
+Je ne sais pas ce que je t'ai fait, pourquoi es-tu partie en silence ?
+Quelle alarme dois-je mettre pour me réveiller avec toi ?
+Suppliant sur les réseaux sociaux, je suis le plus viral
+Notre appartement sent l'agonie
+À quoi bon avoir un toit si ce n'est plus un foyer ?
+
+Et je rends l'ordinateur fou
+En te cherchant sur Google
+Maintenant je demande à nouveau
+
+Siri, appelle-la et dis-lui que
+Qu'elle revienne
+Sans elle la maison est devenue une jungle
+Siri, appelle et demande-lui, eh
+Où est-elle ?
+Que j'ai retrouvé ma virginité
+En faisant l'amour avec la solitude, eh
+
+Ay-ay-ay, ay-ay-ay-ay-yo
+Écris-lui mon amour
+Hé Siri, fais-moi une faveur et dis-lui que
+Husky et Lil Angello
+Continuent de tout déchirer
+
+Avant de finir bloqué
+Accorde-moi un baiser, un dernier adieu
+Mais si ma voix te dérange
+J'ai une messagère
+
+Siri, appelle-la et dis-lui que
+Qu'elle revienne
+Sans elle la maison est devenue une jungle
+Siri, appelle et demande-lui, eh
+Où est-elle ?
+Que j'ai retrouvé ma virginité
+En faisant l'amour avec la solitude, eh
+
+Uhh oh oh oh
+Uh uh no no oh oh
+Lil Angello
+Lil Angello
+No no no oh oh`
+    }
+  },
+  {
+    id: "masoquista-lorena-herrera-siempre-reinas",
+    title: "Masoquista",
+    artist: "Lorena Herrera (Siempre Reinas)",
+    year: 2024,
+    dateAdded: "2026-04-19",
+    dancers: "Gero & Migle",
+    tags: ["Moderne", "Sensual", "Fusion"],
+    color: "#9333ea",
+    spotify: "https://open.spotify.com/search/Masoquista%20Lorena%20Herrera",
+    danceVideo: "Hio3QvfaSak",
+    culture: {
+      context: "Originalement un titre pop-dance de 2015 de Lorena Herrera, 'Masoquista' a connu un regain de popularité grâce au reality show de Netflix 'Siempre Reinas'. Cette version remixée en bachata est devenue un incontournable pour les chorégraphies sensuelles.",
+      meaning: "La chanson explore les thèmes du pouvoir, de la domination et de la séduction. Le terme 'Masoquista' fait référence à l'attraction pour le jeu de manipulation émotionnelle et la tension entre les protagonistes. La narratrice revendique le contrôle total ('esta noche mando yo').",
+      artistInfo: "Lorena Herrera est une actrice et chanteuse mexicaine emblématique. Le groupe Siempre Reinas réunit plusieurs icônes de la télévision mexicaine. La vidéo met en scène Gero & Migle lors de l'Empire Sensual Movement 2025 à New York, montrant une fusion entre technique et attitude.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Me extrañaban?... Obvio
+
+Ah! Me miras y te crees tan especial
+Volteo y no te atreves a mirar (que horror!)
+Y se acelera tu respiración oh oh oh… oh
+
+Ya conozco tu manera de jugar
+Haciéndote el difícil de atrapar (que flojera)
+Es hora de aprender una lección oh oh oh… oh
+
+Viajas al inframundo
+Donde excita el doloooor… oh
+Un, dos, tres
+
+Masoquista
+Tan sólo verme es tu fantasía
+Cansado de rogarme noche y día
+Comprende que esta noche mando yo oh oh oh…. oh
+
+Masoquista
+Sí te hago daño es tu fantasía
+Jugando con tu mente egocentrista
+Comprende que esta noche mando yo-oh
+Comprende que esta noche mando…
+
+¡Estúpido!
+
+Oh! Jaque mate la imaginación
+Con mi estrategia creo tentación
+Jugar contigo es mi diversión oh oh oh… oh
+
+Sí, me hago la difícil para ti (porque quiero)
+El blanco, el negro cambio y su finir (porque puedo)
+Y se acelera tu respiración oh oh oh… oh
+
+Viajas al inframundo
+Donde excita el doloooor…
+Un, dos, tres
+
+Masoquista
+Tan sólo verme es tu fantasía
+Cansado de rogarme noche y día
+Comprende que esta noche mando yo oh oh oh… oh
+
+Masoquista
+Sí te hago daño es tu fantasía
+Jugando con tu mente egocentrista
+Comprende que esta noche mando yo-oh
+Comprende que esta noche mando…
+
+¡Estúpido!
+
+Esto es para mis reinas
+Que conocen el arte de la seducción
+
+Rostro, pelazo, cuerpazo y actitud
+Rostro, pelazo (Jajaja)
+¡Ya saben que hacer!
+
+Un, dos, tres, cuatro, cinco, seis, siete, ocho…
+Fotos, paparazzi, sonrisa, besitos
+Un, dos, tres, cuatro, cinco, seis, siete, ocho…
+Fotos, paparazzi, sonrisa, besito (jajaja)
+
+Masoquista…
+Masoquista comprende que esta noche mando yo oh oh oh… oh
+
+Masoquista
+Sí te hago daño es tu fantasía
+Jugando con tu mente egocentrista
+Comprende que esta noche mando yo-oh
+Comprende que esta noche mando…. (jajaja)
+
+¡Estúpido!`,
+      fr: `Je vous ai manqué ?... Évidemment
+
+Ah ! Tu me regardes et tu te crois si spécial
+Je me retourne et tu n'oses pas regarder (quelle horreur !)
+Et ta respiration s'accélère oh oh oh... oh
+
+Je connais déjà ta façon de jouer
+À faire celui qui est difficile à attraper (quelle flemme)
+C'est l'heure d'apprendre une leçon oh oh oh... oh
+
+Tu voyages vers les enfers
+Où la douleur excite... oh
+Un, deux, trois
+
+Masoquiste
+Rien que de me voir est ton fantasme
+Fatigué de me supplier nuit et jour
+Comprends que ce soir c'est moi qui commande oh oh oh... oh
+
+Masoquiste
+Si je te fais du mal c'est ton fantasme
+Jouant avec ton esprit égocentrique
+Comprends que ce soir c'est moi qui commande oh-oh
+Comprends que ce soir je commande...
+
+Stupide !
+
+Oh ! Échec et mat à l'imagination
+Avec ma stratégie je crée la tentation
+Jouer avec toi est mon divertissement oh oh oh... oh
+
+Oui, je fais la difficile pour toi (parce que je veux)
+Le blanc, le noir changent à leur fin (parce que je peux)
+Et ta respiration s'accélère oh oh oh... oh
+
+Tu voyages vers les enfers
+Où la douleur excite...
+Un, deux, trois
+
+Masoquiste
+Rien que de me voir est ton fantasme
+Fatigué de me supplier nuit et jour
+Comprends que ce soir c'est moi qui commande oh oh oh... oh
+
+Masoquiste
+Si je te fais du mal c'est ton fantasme
+Jouant avec ton esprit égocentrique
+Comprends que ce soir c'est moi qui commande oh-oh
+Comprends que ce soir je commande...
+
+Stupide !
+
+Ceci est pour mes reines
+Qui connaissent l'art de la séduction
+
+Visage, chevelure, corps de rêve et attitude
+Visage, chevelure (Jajaja)
+Vous savez quoi faire !
+
+Un, deux, trois, quatre, cinq, six, sept, huit...
+Photos, paparazzi, sourire, bisous
+Un, deux, trois, quatre, cinco, six, sept, huit...
+Photos, paparazzi, sourire, bisou (jajaja)
+
+Masoquiste...
+Masoquiste comprends que ce soir c'est moi qui commande oh oh oh... oh
+
+Masoquiste
+Si je te fais du mal c'est ton fantasme
+Jouant avec ton esprit égocentrique
+Comprends que ce soir c'est moi qui commande oh-oh
+Comprends que ce soir je commande... (jajaja)
+
+Stupide !`
+    }
+  },
+  {
+    id: "solita-dani-j-nesty",
+    title: "Solita",
+    artist: "Dani J x Nesty ft. RoMn Beatz",
+    year: 2024,
+    dateAdded: "2026-04-19",
+    dancers: "Klau y Ros",
+    tags: ["Moderne", "Sensual", "Fusion"],
+    color: "#db2777",
+    spotify: "https://open.spotify.com/search/Solita%20Dani%20J%20Nesty",
+    danceVideo: "0CMOHcKVCAo",
+    culture: {
+      context: "Sorti le 22 novembre 2024, 'Solita' est une collaboration entre l'artiste espagnol Dani J et le chanteur cubain Nesty. Le titre a été produit entre Miami et Séville par RoMn Beatz.",
+      meaning: "La chanson raconte l'histoire de deux amants dont la flamme ne s'est jamais éteinte malgré la séparation. Le narrateur exprime son désir de retrouver la complicité charnelle et émotionnelle, invitant l'autre à mettre de côté son orgueil pour se retrouver 'solita' (seule).",
+      artistInfo: "Dani J est l'une des figures de proue de la bachata en Europe, connu pour son style fusionnant pop et R&B. Nesty, originaire de Cuba, apporte une touche tropicale et urbaine. La vidéo associée présente une démonstration de Klau y Ros, un duo montant dans la communauté bachata internationale.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Ya me dijeron
+Que extrañas mis caricias y mis celos
+Siéndote sincero
+Yo siento igual, pero al meno' espero
+Que me digas que me amas de noche
+Y al otro día sea yo quien te toque
+Susurrarte mientras te desabroche
+El brassier que te compré en la Dolce
+
+Y cuando estés solita
+Y sientas que me necesitas
+Paso a comerte esa boquita
+Que es mi comida favorita
+Baby, cuando estés solita
+Y sientas que me necesitas
+Paso a comerte esa boquita
+Que es mi comida favorita
+
+Creo que si no pensamo' en los dos
+Es que la llama nunca se nos apagó
+Y no hemos tenido el valor
+De vernos de frente
+Y hablar de esto fuerte
+Que no murió
+Solo resurgió
+
+No le demo' más vuelta'
+Y tengamo' en cuenta
+Que todo es culpa del orgullo
+Y eso es lo malo tuyo
+Y tú siempre aparenta'
+Pero nunca lo intenta'
+Entonce' para qué me embullo
+Hágame suyo
+
+Y cuando estés solita
+Y sientas que me necesitas
+Paso a comerte esa boquita
+Que es mi comida favorita
+Baby, cuando estés solita
+Y sientas que me necesitas
+Paso a comerte esa boquita
+Que es mi comida favorita
+
+Que me digas que me amas de noche
+Y al otro día sea yo quien te toque
+Susurrarte mientras te desabroche
+El brassier que te compré en la Dolce
+
+Y cuando estés solita
+Y sientas que me necesitas
+Paso a comerte esa boquita
+Que es mi comida favorita
+Baby, cuando estés solita
+Y sientas que me necesitas
+Paso a comerte esa boquita
+Que es mi comida favorita`,
+      fr: `On m'a déjà dit
+Que mes caresses et ma jalousie te manquent
+Pour être honête avec toi
+Je ressens la même chose, mais au moins j'espère
+Que tu me diras que tu m'aimes la nuit
+Et que le lendemain ce soit moi qui te touche
+Te chuchoter pendant que je te dégrafe
+Le soutien-gorge que je t'ai acheté chez Dolce
+
+Et quand tu seras toute seule
+Et que tu sentiras que tu as besoin de moi
+Je passerai croquer ta petite bouche
+Qui est mon plat préféré
+Bébé, quand tu seras toute seule
+Et que tu sentiras que tu as besoin de moi
+Je passerai croquer ta petite bouche
+Qui est mon plat préféré
+
+Je crois que si on ne pense pas à nous deux
+C'est que la flamme ne s'est jamais éteinte
+Et nous n'avons pas eu le courage
+De nous regarder en face
+Et de parler de ça franchement
+Ça n'est pas mort
+Ça a juste ressurgi
+
+N'y tournons plus autour
+Et gardons à l'esprit
+Que tout est de la faute de l'orgueil
+Et c'est là ton défaut
+Et tu fais toujours semblant
+Mais tu n'essaies jamais
+Alors pourquoi est-ce que je m'emballe
+Fais de moi le tien
+
+Et quand tu seras toute seule
+Et que tu sentiras que tu as besoin de moi
+Je passerai croquer ta petite bouche
+Qui est mon plat préféré
+Bébé, quand tu seras toute seule
+Et que tu sentiras que tu as besoin de moi
+Je passerai croquer ta petite bouche
+Qui est mon plat préféré
+
+Que tu me diras que tu m'aimes la nuit
+Et que le lendemain ce soit moi qui te touche
+Te chuchoter pendant que je te dégrafe
+Le soutien-gorge que je t'ai acheté chez Dolce
+
+Et quand tu seras toute seule
+Et que tu sentiras que tu as besoin de moi
+Je passerai croquer ta petite bouche
+Qui est mon plat préféré
+Bébé, quand tu seras toute seule
+Et que tu sentiras que tu as besoin de moi
+Je passerai croquer ta petite bouche
+Qui est mon plat préféré`
+    }
+  },
+  {
     id: "a-gritos-de-esperanza-karlos-rose",
     title: "A Gritos de Esperanza",
     artist: "Karlos Rosé",

@@ -219,7 +219,7 @@ export default function SongPage({ song }) {
         <div className="divider" />
 
         <div className="song-content-layout">
-          {song.danceVideo && (
+          {song.danceVideo ? (
             <div className="dance-video-container">
               <iframe
                 src={`https://www.youtube.com/embed/${song.danceVideo}?autoplay=0&rel=0`}
@@ -228,6 +228,48 @@ export default function SongPage({ song }) {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
+            </div>
+          ) : (
+            <div 
+              style={{
+                width: '100%',
+                aspectRatio: '16/9',
+                background: 'rgba(255,255,255,0.03)',
+                borderRadius: '32px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '20px',
+                border: '2px dashed rgba(255,255,255,0.1)',
+                padding: '40px',
+                textAlign: 'center'
+              }}
+              className="dance-video-placeholder"
+            >
+              <div style={{ fontSize: '3.5rem' }}>🎬</div>
+              <div>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '8px' }}>Aucune vidéo de démonstration</h3>
+                <p style={{ color: 'var(--text-muted)', maxWidth: '400px', margin: '0 auto', fontSize: '0.95rem' }}>
+                  Tu connais une superbe vidéo de danse sur ce son ? Propose-la nous pour enrichir la communauté !
+                </p>
+              </div>
+              <a 
+                href="mailto:contact@maximilien.digital"
+                style={{
+                  background: 'white',
+                  color: '#1e1b4b',
+                  padding: '12px 24px',
+                  borderRadius: '14px',
+                  fontWeight: 800,
+                  fontSize: '0.9rem',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s'
+                }}
+                className="hover-scale"
+              >
+                🎥 Proposer une vidéo
+              </a>
             </div>
           )}
 
