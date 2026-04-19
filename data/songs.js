@@ -1,5 +1,457 @@
 export const songs = [
   {
+    id: "angel-grupo-frontera-romeo-santos",
+    title: "Ángel",
+    artist: "Grupo Frontera ft. Romeo Santos",
+    year: 2024,
+    dateAdded: "2026-04-19",
+    dancers: "Gero & Migle",
+    tags: ["Moderne", "Fusion", "Música Mexicana"],
+    color: "#fbbf24",
+    spotify: "https://open.spotify.com/search/%C3%81ngel%20Grupo%20Frontera%20Romeo%20Santos",
+    danceVideo: "6gQl94UPDL8",
+    culture: {
+      context: "Sorti en juillet 2024, 'Ángel' est une collaboration historique entre le groupe mexicain Grupo Frontera et le 'Roi de la Bachata', Romeo Santos. Le titre fusionne les sonorités de la musique mexicaine contemporaine avec le rythme sensuel de la bachata.",
+      meaning: "La chanson est une ode à la dévotion amoureuse. Elle compare l'être aimé à un ange descendu du ciel pour sauver le narrateur à un moment critique de sa vie. Les paroles évoquent une beauté si parfaite qu'elle semble irréelle, défiant même l'intelligence artificielle.",
+      artistInfo: "Grupo Frontera est un leader de la nouvelle vague de musique régionale mexicaine, tandis que Romeo Santos reste la figure la plus influente de la bachata moderne. La chorégraphie de démonstration par Gero & Migle met en valeur la douceur et l'émotion du titre.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `No miento cuando digo que me tienes soñando despierto
+Llegaste en mi peor momento
+Y reviviste lo que estaba muerto
+No es cierto cuando dicen que el amor solo existe en los cuentos
+Esa carita yo la vi hace tiempo
+Ya vivías en mis pensamientos
+Nadie como tú, uh
+Nadie como tú, uh
+Llegaste pa darme amor
+Justo lo que merecía
+Alguien como tú, uh
+Loca como tú, uh
+Hay que preguntarle a Dios
+Si se le cayó un ángel de arriba
+Porque tienes la cara
+Solo te faltan las alas
+Al corazón yo le tenía un chaleco antibalas
+Pero contigo no hace falta
+Tienes todo lo que me encanta (solo escucha)
+Yo a veces dudo que seas de carne y hueso
+La inteligencia artificial creó tu cuerpo
+Qué sencillo, sin esfuerzo, tan normal
+Robarte las miradas
+Baby, tú eres arte, melodía, mi mejor canción
+La bachata preferida, aventura, mi obsesión
+Ya no quedan serenatas para expresarte mi amor
+Tú eres mía y no me lo creo
+Nadie como tú, uh
+Nadie como tú, uh
+Llegaste pa darme amor
+Justo lo que merecía
+Alguien como tú, uh
+Loca como tú, uh
+Hay que preguntarle a Dios
+Si se le cayó un ángel de arriba
+Nadie como tú, uh
+Nadie como tú, uh
+Llegaste pa darme amor
+Justo lo que merecía
+Alguien como tú, uh
+Loca como tú, uh
+Hay que preguntarle a Dios
+Si se le cayó un ángel de arriba`,
+      fr: `Je ne mens pas quand je dis que tu me fais rêver éveillé
+Tu es arrivée à mon pire moment
+Et tu as ravivé ce qui était mort
+Il n'est pas vrai que l'amour n'existe que dans les contes
+Ce petit visage, je l'ai vu il y a longtemps
+Tu vivais déjà dans mes pensées
+Personne comme toi, uh
+Personne comme toi, uh
+Tu es arrivée pour me donner de l'amour
+Juste ce que je méritais
+Quelqu'un comme toi, uh
+Folle comme toi, uh
+Il faut demander à Dieu
+S'il a laissé tomber un ange de là-haut
+Parce que tu en as le visage
+Il ne te manque que les ailes
+Pour mon cœur, j'avais un gilet pare-balles
+Mais avec toi, ce n'est pas nécessaire
+Tu as tout ce que j'aime (écoute simplement)
+Je doute parfois que tu sois de chair et d'os
+L'intelligence artificielle a créé ton corps
+Comme c'est simple, sans effort, si normal
+De s'accaparer les regards
+Bébé, tu es de l'art, une mélodie, ma meilleure chanson
+La bachata préférée, une aventure, mon obsession
+Il ne reste plus de sérénades pour exprimer mon amour
+Tu es à moi et je n'y crois pas
+Personne comme toi, uh
+Personne comme toi, uh
+Tu es arrivée pour me donner de l'amour
+Juste ce que je méritais
+Quelqu'un comme toi, uh
+Folle comme toi, uh
+Il faut demander à Dieu
+S'il a laissé tomber un ange de là-haut
+Personne comme toi, uh
+Personne como toi, uh
+Tu es arrivée pour me donner de l'amour
+Juste ce que je méritais
+Quelqu'un comme toi, uh
+Folle comme toi, uh
+Il faut demander à Dieu
+S'il a laissé tomber un ange de là-haut`
+    }
+  },
+  {
+    id: "tu-feo-lenny-tavarez-prince-royce",
+    title: "Tu Feo",
+    artist: "Lenny Tavárez ft. Prince Royce",
+    year: 2024,
+    dateAdded: "2026-04-19",
+    dancers: "Gero & Migle",
+    tags: ["Moderne", "Urbaine", "Fusion"],
+    color: "#3b82f6",
+    spotify: "https://open.spotify.com/search/Tu%20Feo%20Lenny%20Tavarez%20Prince%20Royce",
+    danceVideo: "wzmpZo6mRlg",
+    culture: {
+      context: "Sorti en 2024, 'Tu Feo' est une collaboration majeure entre Lenny Tavárez et l'icône de la bachata Prince Royce. Le morceau fusionne habilement les rythmes urbains et la bachata traditionnelle.",
+      meaning: "La chanson joue sur l'idée que la beauté est subjective. Le narrateur s'accepte comme 'le laid' qui a eu la chance de gagner le cœur d'une femme magnifique, se considérant comme son 'trophée'. C'est une célébration de l'amour authentique au-delà des apparences.",
+      artistInfo: "Lenny Tavárez est une figure de proue du genre urbain, tandis que Prince Royce est mondialement connu pour avoir modernisé la bachata depuis plus d'une décennie. La démo par Gero & Migle souligne le potentiel chorégraphique du titre.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `A la vida le he fallado
+Del karma era un fugitivo
+Aquel que la hace, la paga
+Y ahora me topé contigo
+Pero tu boca, Dios la bendiga
+Porque aunque digas mentira'
+Por la forma en que me mira'
+Yo te la' creo
+Y si tú quieres, me coges de trofeo, pero
+La suerte está de mi lao por lo que veo
+Y toas la' mamichulas tienen su feo, pero
+Si soy el tuyo, pues ma, yo me la creo
+Y si tú quieres, me coges de trofeo, pero
+La suerte está de mi lao por lo que veo
+Y toas la' mamichulas tienen su feo, pero
+Si soy el tuyo, pues ma, yo me la creo
+Si me encuentro con Dios cara a cara
+Le dijera que no se compara
+Pareciera que no es de este world
+Yo creo que e'un ángel sin ala'
+Por ti yo cojo una bala directo al pecho, porque
+'Pues de to lo que me han hecho, no me engancho el antibalas
+¿Y pa qué, pa qué?
+Si me coges de lo que no soy, flaquié, flaquié
+Contigo me voy a fuego y me tatué, tatué
+Tu lengua, ay, Dios la bendiga
+Porque aunque digas mentira'
+Por la forma en que me mira'
+Yo te la' creo
+Y si tú quieres, me coges de trofeo, pero
+La suerte está de mi lao por lo que veo
+Y toas la' mamichulas tienen su feo, pero
+Si soy el tuyo, pues ma, yo me la creo
+Y si tú quieres, me coges de trofeo, pero
+La suerte está de mi lao por lo que veo
+Y toas la' mamichulas tienen su feo, pero
+Si soy el tuyo, pues ma, yo me la creo
+Y toas la' mamichulas tienen su feo
+Y toas la' mamichulas tienen su feo
+A la vida le he fallado
+Del karma era un fugitivo
+Aquel que la hace, la paga
+Y ahora me topé contigo
+Pero tu boca, Dios la bendiga
+Porque aunque diga' mentira'
+Por la forma en que me miras
+Yo te la creo
+Y si tú quieres, yo me enamoro de ti
+Pa ti siempre hay un petty pa Balenciaga y Fendi
+Te vo'a buscar en el Royce, te ganaste el trofeo
+Lenny Tavare' y Prince Royce, Lenny Tavare' y Prince Royce`,
+      fr: `J'ai échoué dans la vie
+J'étais un fugitif du karma
+Celui qui fait le mal, le paie
+Et maintenant je suis tombé sur toi
+Mais ta bouche, que Dieu la bénisse
+Car même si tu dis des mensonges
+À cause de la façon dont tu me regardes
+Je te crois
+Et si tu veux, tu me prends comme trophée, mais
+La chance est de mon côté d'après ce que je vois
+Et toutes les jolies filles ont leur laid, mais
+Si je suis le tien, alors maman, j'y crois
+Et si tu veux, tu me prends comme trophée, mais
+La chance est de mon côté d'après ce que je vois
+Et toutes les jolies filles ont leur laid, mais
+Si je suis le tien, alors maman, j'y crois
+Si je rencontre Dieu face à face
+Je lui dirais qu'il n'y a pas de comparaison
+On dirait qu'elle n'est pas de ce monde
+Je pense que c'est un ange sans ailes
+Pour toi je prendrais une balle en plein cœur, parce que
+Après tout ce qu'on m'a fait, je ne mets pas de gilet pare-balles
+Et pourquoi, pourquoi ?
+Si tu me prends pour ce que je ne suis pas, j'ai faibli, j'ai faibli
+Avec toi je vais au feu et je me suis tatoué, tatoué
+Ta langue, oh, que Dieu la bénisse
+Car même si tu dis des mensonges
+À cause de la façon dont tu me regardes
+Je te crois
+Et si tu veux, tu me prends comme trophée, mais
+La chance est de mon côté d'après ce que je vois
+Et toutes les jolies filles ont leur laid, mais
+Si je suis le tien, alors maman, j'y crois
+Et si tu veux, tu me prends comme trophée, mais
+La chance est de mon côté d'après ce que je vois
+Et toutes les jolies filles ont leur laid, mais
+Si je suis le tien, alors maman, j'y crois
+Et toutes les jolies filles ont leur laid
+Et toutes les jolies filles ont leur laid
+J'ai échoué dans la vie
+J'étais un fugitif du karma
+Celui qui fait le mal, le paie
+Et maintenant je suis tombé sur toi
+Mais ta bouche, que Dieu la bénisse
+Car même si tu dis des mensonges
+À cause de la façon dont tu me regardes
+Je te crois
+Et si tu veux, je tombe amoureux de toi
+Pour toi il y a toujours un peu pour Balenciaga et Fendi
+Je viendrai te chercher en Royce, tu as gagné le trophée
+Lenny Tavarez et Prince Royce, Lenny Tavarez et Prince Royce`
+    }
+  },
+  {
+    id: "calentura-pinto-picasso-dj-nico",
+    title: "Calentura",
+    artist: "DJ Nico & Pinto Picasso",
+    year: 2024,
+    dateAdded: "2026-04-19",
+    dancers: "Gero & Migle",
+    tags: ["Moderne", "Sensual", "Fusion"],
+    color: "#ef4444",
+    spotify: "https://open.spotify.com/search/Calentura%20Pinto%20Picasso",
+    danceVideo: "aEwYySUKsYE",
+    culture: {
+      context: "Sorti en septembre 2024, 'Calentura' est une collaboration entre l'artiste italo-portoricain Pinto Picasso et le producteur DJ Nico. Le titre s'est rapidement imposé comme un incontournable des soirées bachata moderne.",
+      meaning: "Le mot 'Calentura' signifie littéralement 'fièvre' ou 'chaleur'. Dans cette chanson, il exprime l'attraction magnétique et le désir brûlant entre deux personnes sur la piste de danse. Les paroles évoquent une ambiance électrique et une séduction assumée.",
+      artistInfo: "Pinto Picasso est célèbre pour sa capacité à fusionner R&B et bachata, créant un style unique souvent utilisé en Bachata Sensual. La vidéo de démonstration met en scène Gero & Migle, l'un des couples les plus influents au monde dans ce style.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Baby girl
+Siento que se está calentando
+I know you want me, te estoy mirando
+Aquí está lo que tú andas buscando
+Oh yeah (I got it)
+Despacito que no se den cuenta, te voy a dar con la lenta
+Pa tu cama llegó la tormenta, yo tengo lo que te alimenta
+Traemos el piquete del 2090, un swagger que revienta
+Más mala de lo que aparenta
+Está buscando calentura-tura-tura-tura
+Un flow violento que le suba la temperatura
+Está buscando calentura-tura-tura-tura
+Está loca porque me suelte y le agarre su cintura
+Dímelo cupido
+Y el francotirador
+No falla, soy yo
+Pinto Picasso, baby
+Ey baby, dale ahí
+Despacito, que no se den cuenta, te voy a dar con la lenta
+Pa tu cama llegó la tormenta, yo tengo lo que te alimenta
+Traemos el piquete del 2090, un swagger que revienta
+Mas mala de lo que aparenta
+Está buscando calentura-tura-tura-tura
+Un flow violento que le suba la temperatura
+Está buscando calentura-tura-tura-tura
+Está loca porque me suelte y le agarre su cintura
+Está buscando calentura
+Está buscando calentura (tú estás, bien, bien)
+El más fuerte, DJ Nico
+Está buscando calentura-tura-tura-tura
+Un flow violento que le suba la temperatura
+Está buscando calentura-tura-tura-tura
+Está loca porque me suelte y le agarre su cintura
+Está buscando calentura
+Está buscando calentura (tú estás, bien, bien)
+Está buscando calentura`,
+      fr: `Bébé
+Je sens que ça s'échauffe
+Je sais que tu me veux, je te regarde
+Voici ce que tu recherches
+Oh ouais (je l'ai)
+Doucement pour qu'ils ne s'en rendent pas compte, je vais y aller lentement
+La tempête est arrivée dans ton lit, j'ai ce qui te nourrit
+Nous apportons le style de 2090, un swagger qui explose
+Plus mauvaise qu'elle n'en a l'air
+Elle recherche la chaleur-leur-leur-leur
+Un flow violent qui lui fait monter la température
+Elle recherche la chaleur-leur-leur-leur
+Elle est folle parce que je me lâche et je lui saisis la taille
+Dis-le moi Cupidon
+Et le tireur d'élite
+Il n'échoue pas, c'est moi
+Pinto Picasso, bébé
+Hé bébé, vas-y
+Doucement pour qu'ils ne s'en rendent pas compte, je vais y aller lentement
+La tempête est arrivée dans ton lit, j'ai ce qui te nourrit
+Nous apportons le style de 2090, un swagger qui explose
+Plus mauvaise qu'elle n'en a l'air
+Elle recherche la chaleur-leur-leur-leur
+Un flow violent qui lui fait monter la température
+Elle recherche la chaleur-leur-leur-leur
+Elle est folle parce que je me lâche et je lui saisis la taille
+Elle recherche la chaleur
+Elle recherche la chaleur (tu es bien, bien)
+Le plus fort, DJ Nico
+Elle recherche la chaleur-leur-leur-leur
+Un flow violent qui lui fait monter la température
+Elle recherche la chaleur-leur-leur-leur
+Elle est folle parce que je me lâche et je lui saisis la taille
+Elle recherche la chaleur
+Elle recherche la chaleur (tu es bien, bien)
+Elle recherche la chaleur`
+    }
+  },
+  {
+    id: "ocasion-charles-luis",
+    title: "Ocasión",
+    artist: "Charles Luis",
+    year: 2023,
+    dateAdded: "2026-04-18",
+    dancers: "Carlos y Paz",
+    tags: ["Moderne", "Sentimental", "Bachazouk"],
+    color: "#8b5cf6",
+    spotify: "https://open.spotify.com/search/Ocasi%C3%B3n%20Charles%20Luis",
+    danceVideo: "4jiSBVYPM38",
+    culture: {
+      context: "Sorti en novembre 2023, 'Ocasión' est une bachata romantique de l'artiste cubain Charles Luis, qui s'est imposé comme une figure incontournable de la scène bachata moderne en Europe.",
+      meaning: "La chanson explore les thèmes du désir, des rendez-vous manqués et de l'espoir d'une seconde chance. Le titre fait référence à cette 'occasion' tant attendue de pouvoir enfin aimer l'autre pleinement.",
+      artistInfo: "Charles Luis (José Luis Charles Costa) est un auteur-compositeur-interprète cubain basé en Europe. Après avoir débuté dans le reggaeton, il s'est tourné vers la bachata romantique avec succès. La vidéo associée présente une démo de Carlos et Paz, illustrant le style 'Bachazouk'.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Aunque te escondas
+Sé muy bien que me prefieres
+Te diviso entre la gente
+Y a mí
+Ya nada me importa
+Solo tú estás en mi mente
+Y me encanta que me tientes
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Sé que vamos a encontrarnos tú y yo
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Por qué diablos nunca triunfo en el amor
+Te escapas
+Te encuentro
+Te pierdo
+Me pierdo
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Sé que para amarte tendré otra ocasión
+Alzo mi copa
+Hoy yo brindo con Cupido
+Porque cuando di contigo me flechó
+Y en esta nota
+Me pregunto si el destino
+Pueda regalarme otra oportunidad
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Sé que vamos a encontrarnos tú y yo
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Por qué diablos nunca triunfo en el amor
+Te escapas
+Te encuentro
+Te pierdo
+Me pierdo
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Sé que para amarte tendré otra ocasión
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+You know what it is baby
+Charles Luis
+Cupido
+Sentimiento
+Por qué diablos nunca triunfo en el amor
+Te escapas
+Te encuentro
+Te pierdo
+Me pierdo
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Sé que para amarte tendré otra ocasión
+Sé que para amarte tendré otra ocasión`,
+      fr: `Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Même si tu te caches
+Je sais très bien que tu me préfères
+Je t'aperçois parmi les gens
+Et pour moi
+Plus rien n'importe
+Seule toi es dans mon esprit
+Et j'adore que tu me tentes
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Je sais que nous allons nous retrouver toi et moi
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Pourquoi diable ne triomphe-je jamais en amour
+Tu t'échappes
+Je te trouve
+Je te perds
+Je me perds
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Je sais que pour t'aimer j'aurai une autre occasion
+Je lève ma coupe
+Aujourd'hui je trinque avec Cupidon
+Parce que quand je t'ai trouvée, il m'a fléché
+Et dans cet état
+Je me demande si le destin
+Peut m'offrir une autre opportunité
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Je sais que nous allons nous retrouver toi et moi
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Pourquoi diable ne triomphe-je jamais en amour
+Tu t'échappes
+Je te trouve
+Je te perds
+Je me perds
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Je sais que pour t'aimer j'aurai une autre occasion
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Tu sais ce que c'est bébé
+Charles Luis
+Cupidon
+Sentiment
+Pourquoi diable ne triomphe-je jamais en amour
+Tu t'échappes
+Je te trouve
+Je te perds
+Je me perds
+Uoh-oh-oh-oh-ohh
+Uoh-oh-oh-oh-ohh
+Je sais que pour t'aimer j'aurai une autre occasion
+Je sais que pour t'aimer j'aurai une autre occasion`
+    }
+  },
+  {
     id: "apretaito-charles-luis",
     title: "Apretaito",
     artist: "Charles Luis",
