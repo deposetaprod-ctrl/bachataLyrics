@@ -1,5 +1,579 @@
 export const songs = [
   {
+    id: "niveles-pinto-picasso",
+    title: "Niveles",
+    artist: "Pinto Picasso",
+    year: 2024,
+    dateAdded: "2026-04-19",
+    dancers: "Marco y Sara",
+    tags: ["Moderne", "Sensual", "Elite"],
+    color: "#10b981",
+    spotify: "https://open.spotify.com/search/Niveles%20Pinto%20Picasso",
+    danceVideo: "MMfmLVvVTzg",
+    culture: {
+      context: "Sorti le 31 mai 2024, 'Niveles' est un titre phare du projet 'Casagemas' de l'artiste porto-ricain Pinto Picasso. Produit par le célèbre sP Polanco, le morceau s'inscrit dans l'initiative 'BCHTA RISING', visant à propulser la bachata moderne sur la scène mondiale.",
+      meaning: "La chanson célèbre une femme qui se situe à un niveau supérieur ('elite'), brisant toutes les échelles de comparaison. Les paroles mélangent admiration pour son allure naturelle et désir intense, avec des références à la mode (Moschino) et à une complicité exclusive.",
+      artistInfo: "Pinto Picasso (David Alberto Pinto Arzón) est un artiste multidisciplinaire, coach vocal de stars urbaines et pionnier de la fusion Bachata/R&B. Sa voix fluide et ses influences porto-ricaines apportent une fraîcheur unique au genre tropical moderne.",
+      album: "Casagemas"
+    },
+    lyrics: {
+      es: `Yo quiero quemarme en el fuego que sientes por dentro
+Y podemos hacer lo que tengas en el pensamiento
+Tu panticito Moschino se ve fenomenal
+Pero Dios mío, qué rica te ves al natural
+
+Aquí te tengo el menú de placeres
+Pa que lo pidas a tu manera
+Y lo hacemos como tú quieras
+
+Uh, hay muchas duras, pero tú eres elite
+Traigo estas ganas pa que tú me las quites
+No hay dudas que contigo nadie compite
+Hay niveles, pero tú te fuiste
+
+Hay muchas duras, pero tú eres elite
+Traigo estas ganas pa que tú me las quites
+No hay dudas que contigo nadie compite
+Hay niveles, pero tú
+
+Rompiste la escala, eres la que la lleva
+Muchas se creen las malas y ninguna te llega
+¡Ay!, Dios mío que acicale
+No te igualan el flow ni aunque tú se los regales
+
+Calladita da escuela, anda con un piquete muy superior
+Con el mío combina mucho mejor
+Pero tú eres la pieza que da valor
+A toda esa ropa de diseñador, bebe
+
+Go a head and do what you do
+Nobody else on this level but me and you
+
+Hay muchas duras, pero tú eres elite
+Traigo estas ganas pa que tú me las quites
+No hay dudas que contigo nadie compite
+Hay niveles, pero tú te fuiste
+
+Hay muchas duras, pero tú eres elite
+Traigo estas ganas pa que tú me las quites
+No hay dudas que contigo nadie compite
+Hay niveles, pero tú
+
+I ain't really that date type
+Baby, let me take you out for a date night
+I ain't coming with stage fright
+Yeah, we gon get Jiggy and it's gonna be a late night
+Get it
+
+No sé si es the way she moves o el trago que me tiene lost
+What you said to me, give it to me baby, dame luz
+Que en esto nadie puede más que tú
+
+¡Solo dímelo!
+¡Let's dance!
+¡Mayinbito!
+¡SP!, ¡hey!
+
+How many times do we gotta tell them that
+It's a motherfucking problem
+
+Uh, hay muchas duras, pero tú eres elite
+Traigo estas ganas pa que tú me las quites
+No hay dudas que contigo nadie compite
+Hay niveles, pero tú te fuiste
+
+Uh, hay muchas duras, pero tú eres elite
+Traigo estas ganas pa que tú me las quites
+No hay dudas que contigo nadie compite
+Hay niveles, pero tú te fuiste`,
+      fr: `Je veux me brûler au feu que tu ressens à l'intérieur
+Et nous pouvons faire tout ce que tu as à l'esprit
+Ta petite culotte Moschino est phénoménale
+Mais mon Dieu, que tu es délicieuse au naturel
+
+Ici je t'apporte le menu des plaisirs
+Pour que tu le commandes à ta façon
+Et nous le ferons comme tu veux
+
+Uh, il y en a beaucoup des dures, mais toi tu es l'élite
+J'apporte cette envie pour que tu me l'enlèves
+Il n'y a aucun doute, personne ne rivalise avec toi
+Il y a des niveaux, mais toi tu as dépassé tout ça
+
+Il y en a beaucoup des dures, mais toi tu es l'élite
+J'apporte cette envie pour que tu me l'enlèves
+Il n'y a aucun doute, personne ne rivalise avec toi
+Il y a des niveaux, mais toi
+
+Tu as brisé l'échelle, c'est toi qui mènes la danse
+Beaucoup se croient mauvaises mais aucune ne t'arrive à la cheville
+Ah ! mon Dieu, quelle allure
+Elles ne t'égalent pas niveau flow, même si tu le leur offrais
+
+Discrète elle donne des leçons, elle a un style bien supérieur
+Avec le mien, il s'accorde beaucoup mieux
+Mais tu es la pièce qui donne de la valeur
+À tous ces vêtements de créateur, bébé
+
+Vas-y et fais ce que tu as à faire
+Personne d'autre à ce niveau à part toi et moi
+
+Il y en a beaucoup des dures, mais toi tu es l'élite
+J'apporte cette envie pour que tu me l'enlèves
+Il n'y a aucun doute, personne ne rivalise avec toi
+Il y a des niveaux, mais toi tu as dépassé tout ça
+
+Il y en a beaucoup des dures, mais toi tu es l'élite
+J'apporte cette envie pour que tu me l'enlèves
+Il n'y a aucun doute, personne ne rivalise avec toi
+Il y a des niveaux, mais toi
+
+Je ne suis pas vraiment du genre rendez-vous
+Bébé, laisse-moi t'emmener sortir pour un soir
+Je ne viens pas avec le trac
+Ouais, on va faire la fête et la nuit sera longue
+Capte le truc
+
+Je ne sais pas si c'est sa façon de bouger ou le verre qui me fait perdre la tête
+Ce que tu m'as dit, donne-le moi bébé, éclaire-moi
+Parce que dans ça, personne ne peut faire mieux que toi
+
+Dis-le moi, c'est tout !
+Dansons !
+Mayinbito !
+SP !, hey !
+
+Combien de fois doit-on leur dire que
+C'est un putain de problème
+
+Uh, il y en a beaucoup des dures, mais toi tu es l'élite
+J'apporte cette envie pour que tu me l'enlèves
+Il n'y a aucun doute, personne ne rivalise avec toi
+Il y a des niveaux, mais toi tu as dépassé tout ça
+
+Uh, il y en a beaucoup des dures, mais toi tu es l'élite
+J'apporte cette envie pour que tu me l'enlèves
+Il n'y a aucun doute, personne ne rivalise avec toi
+Il y a des niveaux, mais toi tu as dépassé tout ça`
+    }
+  },
+  {
+    id: "boogie-chata-prince-royce-a-boogie-wit-da-hoodie",
+    title: "Boogie Chata",
+    artist: "Prince Royce ft. A Boogie Wit da Hoodie",
+    year: 2024,
+    dateAdded: "2026-04-19",
+    dancers: "Luis y Andrea",
+    tags: ["Moderne", "Urbain", "Fusion"],
+    color: "#a855f7",
+    spotify: "https://open.spotify.com/search/Boogie%20Chata%20Prince%20Royce",
+    danceVideo: "noagc-8DDfs",
+    culture: {
+      context: "Sorti en février 2024 sur l'album 'Llamada Perdida', 'Boogie Chata' est une collaboration historique entre deux natifs du Bronx : Prince Royce, le prince de la bachata, et A Boogie wit da Hoodie, star du rap US. Le titre joue sur un mélange fluide d'anglais et d'espagnol.",
+      meaning: "La chanson explore une relation complexe marquée par l'incertitude et la possession. Les paroles parlent de profiter du moment présent ('te tengo hoy') tout en sachant que l'autre pourrait s'éloigner demain. L'ambiance est luxueuse, évoquant des Rolls Royce et Maybach.",
+      artistInfo: "Prince Royce continue de repousser les limites de la bachata en l'hybridant avec des sons urbains. A Boogie wit da Hoodie apporte son flow mélodique caractéristique. La vidéo présente Luis y Andrea lors du Viva la bachata 2024 aux USA, illustrant la modernité du morceau.",
+      album: "Llamada Perdida"
+    },
+    lyrics: {
+      es: `Royce
+Don't make me seem blind
+Don't you act single when I'm not around you, don't go there, you're still mine
+Let's not go there unless we're going in Maybachs behind blinds
+So they don't see us the way that we flex, the attention I don't like
+Don't even fuck with me like that, instead they gon' say everything's fine
+
+And it's no way it's okay
+Los dos sabemos que tú no estás bien
+Que solo yo, baby, te llevo al cien
+
+Meantime
+It's never okay but I guess I'll just love you for the meantime
+
+Dime, Royce
+No me digas mañana: "Te quiero hoy"
+Te crees la gran vaina cuando no estoy
+Dices que no tienes dueño, pero eso ya tiene dueño
+No me digas mañana: "¿Te tengo hoy?"
+Pa' que intentes robarte mi corazón
+Aprovechemos el tiempo
+Te tengo hoy, no me olvides mañana
+
+Te conozco, sé que vuelves mañana
+Para buscar tu medicina de amor
+Te contradices al fingir que no me amas
+Pero es tan obvio que tu macho soy yo
+¿Qué haces mintiendo?
+
+If you know there's no other way
+Sabes que soy el que quita tu estrés
+Que solo yo, mami, te llevo al cien
+Cómo te prendo, sabes que soy tu dueño
+No habrá otro como yo, sabes que no
+
+No me digas mañana: "Te quiero hoy"
+Te crees la gran vaina cuando no estoy
+Dices que no tienes dueño, pero eso ya tiene dueño
+No me digas mañana: "¿Te tengo hoy?"
+Pa' que intentes robarte mi corazón
+Aprovechemos el tiempo
+Te tengo hoy, no me olvides mañana
+
+I got you right now, don't forget me tomorrow
+Puffin' gelato, no more feelin' sorry
+I let you borrow my heart and you never came back
+You just left with that shit like the lotto
+
+And I can hear it in your voice
+Give them no choice but to fall back
+They got no choice, I'm in a Rolls Royce
+With my boy Royce and me in all black
+
+Tell me why you actin' like Amanda
+Tell me why you actin' like you all that
+Tell me how you gon' swerve on me
+You deserve me, you deserve me
+
+You deserve me, you deserve me
+I'm in a Rolls Royce with my boy Royce
+
+No eres una extraña, te conozco más que bien
+Te conozco más que bien
+You're not unfamiliar, I've seen your type before
+And I know just who you are
+
+No me digas mañana: "Te quiero hoy"
+Te crees la gran vaina cuando no estoy
+Dices que no tienes dueño, pero eso ya tiene dueño
+No me digas mañana: "¿Te tengo hoy?"
+Pa' que intentes robarte mi corazón
+Aprovechemos el tiempo
+Te tengo hoy, no me olvides mañana
+
+Te tengo hoy, te tengo hoy
+Te tengo hoy, te tengo hoy
+Te tengo hoy`,
+      fr: `Royce
+Ne me fais pas paraître aveugle
+Ne joue pas la célibataire quand je ne suis pas là, n'y va pas, tu es toujours à moi
+N'y allons pas à moins d'être dans une Maybach derrière des vitres teintées
+Pour qu'ils ne nous voient pas frimer, je n'aime pas l'attention
+Ne joue pas avec moi comme ça, au lieu de ça ils diront que tout va bien
+
+Et ce n'est pas possible, ça ne va pas
+Nous savons tous les deux que tu ne vas pas bien
+Que moi seul, bébé, je t'emmène à cent pour cent
+
+En attendant
+Ça ne va jamais bien mais je suppose que je t'aimerai juste pour le moment
+
+Dis-moi, Royce
+Ne me dis pas demain : "Je t'aime aujourd'hui"
+Tu te crois tout permis quand je ne suis pas là
+Tu dis que tu n'appartiens à personne, mais ça appartient déjà à quelqu'un
+Ne me dis pas demain : "Est-ce que je t'ai aujourd'hui ?"
+Pour que tu essaies de voler mon cœur
+Profitons du temps
+Je t'ai aujourd'hui, ne m'oublie pas demain
+
+Je te connais, je sais que tu reviendras demain
+Pour chercher ton médicament d'amour
+Tu te contredis en faisant semblant de ne pas m'aimer
+Mais c'est si évident que ton homme c'est moi
+Qu'est-ce que tu fais à mentir ?
+
+Si tu sais qu'il n'y a pas d'autre issue
+Tu sais que je suis celui qui enlève ton stress
+Que moi seul, maman, je t'emmène à cent pour cent
+Comment je t'allume, tu sais que je suis ton maître
+Il n'y en aura pas d'autre comme moi, tu sais bien que non
+
+Ne me dis pas demain : "Je t'aime aujourd'hui"
+Tu te crois tout permis quand je ne suis pas là
+Tu dis que tu n'appartiens à personne, mais ça appartient déjà à quelquun
+Ne me dis pas demain : "Est-ce que je t'ai aujourd'hui ?"
+Pour que tu essaies de voler mon cœur
+Profitons du temps
+Je t'ai aujourd'hui, ne m'oublie pas demain
+
+Je t'ai maintenant, ne m'oublie pas demain
+Fumant du gelato, plus de place pour les regrets
+Je t'ai prêté mon cœur et tu n'es jamais revenue
+Tu es juste partie avec comme si c'était le loto
+
+Et je peux l'entendre dans ta voix
+Ne leur laisse pas d'autre choix que de reculer
+Ils n'ont pas de choix, je suis dans une Rolls Royce
+Avec mon gars Royce et moi tout en noir
+
+Dis-moi pourquoi tu joues les Amanda
+Dis-moi pourquoi tu agis comme si tu étais tout ça
+Dis-moi comment tu vas me rejeter
+Tu me mérites, tu me mérites
+
+Tu me mérites, tu me mérites
+Je suis dans une Rolls Royce avec mon gars Royce
+
+Tu n'es pas une étrangère, je te connais plus que bien
+Je te connais plus que bien
+Tu ne m'es pas inconnue, j'ai déjà vu ton genre
+Et je sais parfaitement qui tu es
+
+Ne me dis pas demain : "Je t'aime aujourd'hui"
+Tu te crois tout permis quand je ne suis pas là
+Tu dis que tu n'appartiens à personne, mais ça appartient déjà à quelqu'un
+Ne me dis pas demain : "Est-ce que je t'ai aujourd'hui ?"
+Pour que tu essaies de voler mon cœur
+Profitons du temps
+Je t'ai aujourd'hui, ne m'oublie pas demain
+
+Je t'ai aujourd'hui, je t'ai aujourd'hui
+Je t'ai aujourd'hui, je t'ai aujourd'hui
+Je t'ai aujourd'hui`
+    }
+  },
+  {
+    id: "serenata-brazil-21-jean-alex-sp-polanco",
+    title: "Serenata",
+    artist: "Brazil 21 x Jean & Alex ft. SP Polanco",
+    year: 2024,
+    dateAdded: "2026-04-19",
+    dancers: "Cristian y Gabriella",
+    tags: ["Moderne", "R&B", "Fusion"],
+    color: "#f87171",
+    spotify: "https://open.spotify.com/search/Serenata%20Brazil%2021%20Jean%20Alex",
+    danceVideo: "n2l3JtvHBSk",
+    culture: {
+      context: "Sorti en juin 2024, 'Serenata' est le fruit d'une collaboration explosive entre le duo porto-ricain Jean & Alex, l'artiste créatif Brazil 21 et le producteur multi-platine SP Polanco. Le titre fusionne parfaitement les codes du R&B sensuel avec le rythme de la bachata moderne.",
+      meaning: "La chanson décrit une nuit de passion intense, utilisant l'expression 'esta noche vamo' a guayar' (cette nuit on va frotter) comme métaphore de la danse et du plaisir charnel. Le terme 'serenata' est ici détourné pour désigner les cris de plaisir s'échappant par la fenêtre.",
+      artistInfo: "Jean & Alex sont reconnus comme les 'rois du R&B' bilingue. Brazil 21 apporte un univers visuel et musical urbain unique. SP Polanco, producteur de renom (Prince Royce, Natti Natasha), signe ici une composition léchée. La vidéo met en scène Cristian y Gabriella, un couple majeur de la scène bachata internationale.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Lleva casi toda la semana
+Hablándome de cosas freaky, de cosas freaky
+Me llegó una foto
+Tocándose los labios con los dedos dripping
+Mhum, me dice que to' eso es mío
+Y tiene una amiga puesta pa'l bacha-trío
+Solo de pensarlo me dan escalofríos
+Quiere que le llegue
+Sabe que en la cama yo soy un lucío', yeah
+
+Si te hago gemir sin que te toque
+Imagínate cuando te lo dé
+
+Esta noche vamo' a guayar
+Como güira de bachata
+Tus gritos se van a escuchar
+Por la ventana como una serenata
+Esta noche vamo' a guayar
+Como güira de bachata
+Tus gritos se van a escuchar
+Por la ventana como una serenata, oh
+
+Qué rico siempre huele a Coco Chanel
+Con la boca yo le quito el brasier
+Te viro de espaldas, te beso, y te hago humedecer
+Hacemos un binging de sexo hasta el amanecer
+Flow Netflix and chill you love how it feels
+Te inundé de placer
+Desde que yo te di
+En la cama me eres fiel
+Nos quedamos pegao' como un reel
+Del jevo no quiere saber
+Lo que te hago sentir
+Es otro nivel
+
+Esta noche vamo' a guayar
+Como güira de bachata
+Tus gritos se van a escuchar
+Por la ventana como una serenata
+Esta noche vamo' a guayar
+Como güira de bachata
+Tus gritos se van a escuchar
+Por la ventana como una serenata
+
+Si te hago gemir sin que te toque
+Imagínate cuando te lo dé
+
+Esta noche vamo' a guayar
+Como güira de bachata
+Tus gritos se van a escuchar
+Por la ventana como una serenata
+Esta noche vamo' a guayar
+Como güira de bachata
+Tus gritos se van a escuchar
+Por la ventana como una serenata, oh
+
+Jean & Alex
+Los reyes del R&B
+Los reyes no, son los dueños del R&B`,
+      fr: `Elle passe presque toute la semaine
+À me parler de trucs coquins, de trucs coquins
+J'ai reçu une photo
+Où elle touche ses lèvres avec ses doigts ruisselants
+Mhum, elle me dit que tout ça est à moi
+Et elle a une amie prête pour un bacha-trio
+Rien qu'en y pensant j'en ai des frissons
+Elle veut que je vienne
+Elle sait qu'au lit j'assure, ouais
+
+Si je te fais gémir sans te toucher
+Imagine quand je te le donnerai
+
+Cette nuit on va frotter
+Comme une güira de bachata
+Tes cris vont s'entendre
+Par la fenêtre comme une sérénade
+Cette nuit on va frotter
+Comme une güira de bachata
+Tes cris vont s'entendre
+Par la fenêtre comme une sérénade, oh
+
+Comme elle sent toujours bon le Coco Chanel
+Avec la bouche je lui retire le soutien-gorge
+Je te mets sur le dos, je t'embrasse, et je te fais mouiller
+On fait un marathon de sexe jusqu'à l'aube
+Ambiance Netflix and chill tu adores ce que ça fait
+Je t'ai inondée de plaisir
+Depuis que je t'ai donné
+Au lit tu m'es fidèle
+On reste collés comme un reel
+De son mec elle ne veut rien savoir
+Ce que je te fais ressentir
+C'est un autre niveau
+
+Cette nuit on va frotter
+Comme une güira de bachata
+Tes cris vont s'entendre
+Par la fenêtre comme une sérénade
+Cette nuit on va frotter
+Comme une güira de bachata
+Tes cris vont s'entendre
+Par la fenêtre comme une sérénade
+
+Si je te fais gémir sans te toucher
+Imagine quand je te le donnerai
+
+Cette nuit on va frotter
+Comme une güira de bachata
+Tes cris vont s'entendre
+Par la fenêtre comme une sérénade
+Cette nuit on va frotter
+Comme une güira de bachata
+Tes cris vont s'entendre
+Par la fenêtre comme une sérénade, oh
+
+Jean & Alex
+Les rois du R&B
+Pas les rois, les propriétaires du R&B`
+    }
+  },
+  {
+    id: "lento-dj-husky-kara-leona",
+    title: "LENTO",
+    artist: "DJ Husky ft. Kara Leona",
+    year: 2025,
+    dateAdded: "2026-04-19",
+    dancers: null,
+    tags: ["Moderne", "Sensual"],
+    color: "#f59e0b",
+    spotify: "https://open.spotify.com/search/Lento%20DJ%20Husky%20Kara%20Leona",
+    danceVideo: null,
+    culture: {
+      context: "Sorti le 14 mars 2025, 'Lento' est un titre de bachata moderne produit par DJ Husky, mettant en vedette la chanteuse Kara Leona (dite 'la rubia') et le guitariste Abelito.",
+      meaning: "Les paroles évoquent une rencontre intense sur la piste de danse. La chanson insiste sur le désir de ralentir le temps et de danser 'bien lento' (très lentement) pour savourer la connexion entre les deux partenaires.",
+      artistInfo: "DJ Husky est un producteur très actif dans la scène bachata contemporaine, connu pour ses collaborations fréquentes avec Kara Leona. Cette dernière apporte une voix suave et sensuelle qui caractérise le style Bachata Sensual moderne.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Ya ya estás, ya te vi
+Un par de miradas y me empiezas a descontrolar
+Ya entendí
+
+Que nadie me saque de aquí
+Nobody is gonna do us apart
+You're gonna be the one touching my whole body
+No me hagas esperar, voy a intentar
+
+Y otro trago junto a ti
+Otro baile con tus manos sobre mí
+Solo tú y yo que lo movemos así, así, así, así
+En el medio de la pista lo hacíamos bien lento, lento, lento
+Con esta bachata lento, lento, lento, lento
+Con esta bachata lento
+
+Soy Cara Leona
+La rubia
+Nobody is gonna do us apart
+You're gonna be the one touching my whole body
+No me hagas esperar, voy a intentar
+
+Y otro trago junto a ti
+Otro baile con tus manos sobre mí
+Solo tú y yo que lo movemos así, así, así, así
+En el medio de la pista lo hacíamos bien lento, lento, lento
+Con esta bachata lento, lento, lento, lento
+Con esta bachata lento
+
+Y si la noche muere
+Dime que quieres seguir aquí
+Bailando bien lento junto a mí
+
+Y otro trago junto a ti
+Otro baile con tus manos sobre mí
+Solo tú y yo que lo movemos así, así, así, ainsi
+En el medio de la pista lo hacíamos bien lento, lento, lento
+Con esta bachata lento
+
+Lento, lento
+Lento, lento
+Lento con esta bachata lento`,
+      fr: `Ça y est, tu es là, je t'ai vu
+Quelques regards et tu commences à me faire perdre le contrôle
+J'ai compris
+
+Que personne ne me sorte d'ici
+Personne ne va nous séparer
+Tu seras celui qui touchera tout mon corps
+Ne me fais pas attendre, je vais essayer
+
+Et un autre verre à tes côtés
+Une autre danse avec tes mains sur moi
+Seulement toi et moi qui bougeons comme ça, comme ça, comme ça, comme ça
+Au milieu de la piste on le faisait bien lentement, lentement, lentement
+Sur cette bachata lentement, lentement, lentement, lentement
+Sur cette bachata lentement
+
+Je suis Kara Leona
+La blonde
+Personne ne va nous séparer
+Tu seras celui qui touchera tout mon corps
+Ne me fais pas attendre, je vais essayer
+
+Et un autre verre à tes côtés
+Une autre danse avec tes mains sur moi
+Seulement toi et moi qui bougeons comme ça, comme ça, comme ça, comme ça
+Au milieu de la piste on le faisait bien lentement, lentement, lentement
+Sur cette bachata lentement, lentement, lentement, lentement
+Sur cette bachata lentement
+
+Et si la nuit s'éteint
+Dis-moi que tu veux rester ici
+À danser bien lentement près de moi
+
+Et un autre verre à tes côtés
+Une autre danse avec tes mains sur moi
+Seulement toi et moi qui bougeons comme ça, comme ça, comme ça, comme ça
+Au milieu de la piste on le faisait bien lentement, lentement, lentement
+Sur cette bachata lentement
+
+Lentement, lentement
+Lentement, lentement
+Lentement sur cette bachata lentement`
+    }
+  },
+  {
     id: "amor-de-cristal-sebas-garreta",
     title: "AMOR DE CRISTAL",
     artist: "Sebas Garreta x Dímelo Cupido x DJ Husky",
