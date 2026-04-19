@@ -20,12 +20,6 @@ function generateSiteMap(songs) {
        <priority>0.8</priority>
      </url>
      <url>
-       <loc>${EXTERNAL_DATA_URL}/passes</loc>
-       <lastmod>${today}</lastmod>
-       <changefreq>monthly</changefreq>
-       <priority>0.8</priority>
-     </url>
-     <url>
        <loc>${EXTERNAL_DATA_URL}/jack-and-jill</loc>
        <lastmod>${today}</lastmod>
        <changefreq>monthly</changefreq>

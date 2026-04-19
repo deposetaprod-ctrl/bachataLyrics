@@ -19,7 +19,7 @@ export default function SeoFooter({ currentPage = '' }) {
           <div className="seo-footer-col">
             <h3>Bachata Flow</h3>
             <p className="seo-footer-desc">
-              Paroles de bachata traduites en français, musicality trainer et passes de danse.
+              Paroles de bachata traduites en français et musicality trainer.
               L'application des passionnés de bachata.
             </p>
             <div style={{ marginTop: '20px' }}>
@@ -55,9 +55,7 @@ export default function SeoFooter({ currentPage = '' }) {
               {currentPage !== 'home' && (
                 <li><Link href="/">🎵 Paroles de Bachata</Link></li>
               )}
-              {currentPage !== 'passes' && (
-                <li><Link href="/passes">🕺 Passes & Mouvements</Link></li>
-              )}
+
               {currentPage !== 'musicality' && (
                 <li><Link href="/musicality">🥁 Musicality Trainer</Link></li>
               )}

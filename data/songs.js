@@ -1,5 +1,263 @@
 export const songs = [
   {
+    id: "a-gritos-de-esperanza-karlos-rose",
+    title: "A Gritos de Esperanza",
+    artist: "Karlos Rosé",
+    year: 2023,
+    dateAdded: "2026-04-19",
+    dancers: "Gero & Migle",
+    tags: ["Moderne", "Sensual", "Fusion"],
+    color: "#4f46e5",
+    spotify: "https://open.spotify.com/search/A%20Gritos%20De%20Esperanza%20Karlos%20Rose",
+    danceVideo: "Y2043GP0_qM",
+    culture: {
+      context: "L'artiste dominicain Karlos Rosé, connu pour sa voix suave et ses reprises bachata de tubes pop, propose ici sa version du classique d'Alex Ubago. Sorti en juin 2023, ce titre revisite l'adrénaline romantique de l'original avec une rythmique bachata moderne.",
+      meaning: "La chanson est un appel désespéré à l'espoir et à l'amour. Les paroles évoquent la peur de perdre l'autre et le désir profond de construire un futur ensemble, transformant les silences en cris d'espoir ('a gritos de esperanza').",
+      artistInfo: "Carlos De La Rosa, alias Karlos Rosé, s'est fait connaître mondialement en 2012 avec sa reprise de Bruno Mars. Il est devenu une figure incontournable de la bachata urbaine. La vidéo de démonstration met en scène Gero & Migle, l'un des couples les plus influents au monde dans le style Bachata Sensual.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `A tu lado...
+Es Karlos Rosé, bebé, tu negro
+Y ojalá que nuestros ojos sí brillen mañana
+Y que tu voz siga pidiéndome a gritos amor,
+A gritos de esperanza...
+
+Ahora que te tengo no pienso perder el tiempo
+Ni perderme por mi absurdo ego ni un solo momento
+Se esfuma el miedo que si preguntan por mí
+No le digas dónde fui
+Que tu alma sea fuerte y cuando mires hacia el frente
+Recuerdes todo lo que no te di
+
+Que tu luz brille por siempre porque tú te lo mereces
+Y perdona si algún día pretendí
+Que no fuera o tú misma
+Si preguntan por ti solo diré que te vi
+Y mi sueño es una noche, es un sueño desde entonces
+Para verme cada día junto a ti
+
+Y es que quedan tantas cosas por contarte
+Que me cuentes tantos tratos y pasiones por vivir
+A tu lado, oh mi vida
+A tu lado...
+
+A pesar de que la luna no brille mañana
+Dará igual, pues solo verte reír es lo que hace feliz
+Mi alma...
+Y es verdad que una mirada distinta o algún gesto más frío
+Se clava en mi pecho, daga del desconcierto
+Pero amor, ahí está la magia
+
+Es Karlos Rosé, bébé
+Joselito El Mutante
+Yes`,
+      fr: `À tes côtés...
+C'est Karlos Rosé, bébé, ton "negro"
+Et j'espère que nos yeux brilleront demain
+Et que ta voix continuera à me crier son amour,
+À grands cris d'espoir...
+
+Maintenant que je te tiens, je ne compte pas perdre de temps
+Ni me perdre dans mon ego absurde un seul instant
+La peur s'évanouit, et s'ils demandent après moi
+Ne leur dis pas où je suis allé
+Que ton âme soit forte et quand tu regarderas devant toi
+Souviens-toi de tout ce que je ne t'ai pas donné
+
+Que ta lumière brille pour toujours parce que tu le mérites
+Et pardonne-moi si un jour j'ai prétendu
+Que tu ne sois pas toi-même
+S'ils demandent après toi, je dirai seulement que je t'ai vue
+Et mon rêve est une nuit, c'est un rêve depuis lors
+De me voir chaque jour à tes côtés
+
+Et c'est qu'il reste tant de choses à te raconter
+Que tu me racontes tant de pactes et de passions à vivre
+À tes côtés, oh ma vie
+À tes côtés...
+
+Même si la lune ne brille pas demain
+Peu importera, car te voir rire est ce qui rend heureuse
+Mon âme...
+Et il est vrai qu'un regard différent ou un geste plus froid
+Se plante dans ma poitrine, dague du désarroi
+Mais mon amour, c'est là qu'est la magie
+
+C'est Karlos Rosé, bébé
+Joselito El Mutante
+Oui`
+    }
+  },
+  {
+    id: "el-corazon-duele-akai-rojas-dj-tony-pecino",
+    title: "El Corazón Duele",
+    artist: "Akai Rojas ft. DJ Tony Pecino",
+    year: 2024,
+    dateAdded: "2026-04-19",
+    dancers: "Marco y Sara",
+    tags: ["Moderne", "Sensual", "Urbaine", "Bachata Chilena"],
+    color: "#e11d48",
+    spotify: "https://open.spotify.com/search/El%20Coraz%C3%B3n%20Duele%20Akai%20Rojas",
+    danceVideo: "M0c6xdv5jzU",
+    culture: {
+      context: "Sorti en novembre 2024, 'El Corazón Duele' est un titre phare de la bachata chilienne contemporaine, né de la collaboration entre l'artiste Akai Rojas et DJ Tony Pecino.",
+      meaning: "La chanson explore la douleur lancinante de l'absence. Le narrateur exprime comment le manque de l'être aimé transforme chaque instant, particulièrement la nuit, en une épreuve émotionnelle ('el corazón duele si no estás para dormir').",
+      artistInfo: "Akai Rojas est un auteur-compositeur chilien originaire de San Antonio, reconnu pour son style 'bachata full urbana' mêlant romantisme et rythmes modernes. DJ Tony Pecino est un producteur respecté dans le milieu. La vidéo présente une démonstration de Marco y Sara, duo de légende de la Bachata Sensual.",
+      album: "Sueños de una Guitarra"
+    },
+    lyrics: {
+      es: `Sabes te he extrañado
+Es Akai Baby
+Y el corazón duele
+Dímelo Tony Pecino
+
+Eres la beba que sigo en mi vida
+Nada te lastima si sigues aquí
+Sabes que tengo la labia
+Y La Vía Láctea conspirando pa tí
+Quiero yo saber si tú me necesitas
+No hay otra bebé con esa cinturita
+
+Cara redondita
+Dulce y señorita
+Mala cuando quiere
+No hay quien la supere
+Para Dios tu eres
+Creación favorita
+Sabe que nada le complica
+No es solo ser la más bonita
+Es lo que piensa, lo que cita
+Es lo de adentro que me excita
+
+Sabes, te he extrañado y
+Nada es lo mismo sin ti
+Y el corazón duele
+Si no estas pa dormir
+Y el corazón duele
+Sabes, te he pensado y
+Nada es lo mismo sin ti
+Y el corazón duele
+Si tu no estás aquí
+El corazón duele
+
+Esto es Bachata Chilena
+Nunca te olvides de mí
+Jerry on the mix, come on!
+Es Akai Baby come on!
+Suena Morale!
+
+Si tu supieras todo lo que hice
+Te quiero, te quise, y siempre te amaré
+Solo contigo pude yo llegar a la cima
+Y la vida como un palmarés
+Todo se pone al revés
+Contigo una y otra vez
+Ya lo sabes
+El mundo entero de pie
+Tu eres el 9 y yo el 10
+
+No es el azar es el destino
+Que nuestro camino selló
+Y el corazón duele
+Cuando no siento el calor
+Aunque no siento temor
+No me desesperes
+Nada me detiene
+Si escucho tu voz
+
+Sabes, te he extrañado y
+Nada es lo mismo sin ti
+Y el corazón duele
+Si no estas pa dormir
+Y el corazón duele
+Sabes, te he pensado y
+Nada es lo mismo sin ti
+Y el corazón duele
+Si tu no estás aquí
+El corazón duele
+
+Sabes te he extrañado
+Dímelo Tony
+Es Akai Baby
+Y el corazón duele`,
+      fr: `Tu sais, tu m'as manqué
+C'est Akai Baby
+Et le cœur fait mal
+Dis-le moi Tony Pecino
+
+Tu es la chérie que je suis dans ma vie
+Rien ne te blesse si tu restes ici
+Tu sais que j'ai le bagout
+Et la Voie Lactée qui conspire pour toi
+Je veux savoir si tu as besoin de moi
+Il n'y a pas d'autre bébé avec cette petite taille
+
+Petit visage rond
+Douce et demoiselle
+Mauvaise quand elle le veut
+Personne ne peut la surpasser
+Pour Dieu, tu es
+Sa création préférée
+Elle sait que rien ne l'arrête
+Il ne s'agit pas seulement d'être la plus jolie
+C'est ce qu'elle pense, ce qu'elle cite
+C'est ce qu'il y a à l'intérieur qui m'excite
+
+Tu sais, tu m'as manqué et
+Rien n'est pareil sans toi
+Et le cœur fait mal
+Si tu n'es pas là pour dormir
+Et le cœur fait mal
+Tu sais, j'ai pensé à toi et
+Rien n'est pareil sans toi
+Et le cœur fait mal
+Si tu n'es pas ici
+Le cœur fait mal
+
+C'est de la Bachata Chilienne
+Ne m'oublie jamais
+Jerry au mix, allez !
+C'est Akai Baby allez !
+Sonne Morale !
+
+Si tu savais tout ce que j'ai fait
+Je t'aime, je t'ai aimée, et je t'aimerai toujours
+Seulement avec toi j'ai pu atteindre le sommet
+Et la vie comme un palmarès
+Tout se met à l'envers
+Avec toi encore et encore
+Tu le sais déjà
+Le monde entier debout
+Tu es le 9 et moi le 10
+
+Ce n'est pas le hasard, c'est le destin
+Qui a scellé notre chemin
+Et le cœur fait mal
+Quand je ne sens pas la chaleur
+Même si je ne ressens pas de crainte
+Ne me fais pas désespérer
+Rien n'est arrête
+Si j'entends ta voix
+
+Tu sais, tu m'as manqué et
+Rien n'est pareil sans toi
+Et le cœur fait mal
+Si tu n'es pas là pour dormir
+Et le cœur fait mal
+Tu sais, j'ai pensé à toi et
+Rien n'est pareil sans toi
+Et le cœur fait mal
+Si tu n'es pas ici
+Le cœur fait mal
+
+Tu sais, tu m'as manqué
+Dis-le moi Tony
+C'est Akai Baby
+Et le cœur fait mal`
+    }
+  },
+  {
     id: "angel-grupo-frontera-romeo-santos",
     title: "Ángel",
     artist: "Grupo Frontera ft. Romeo Santos",

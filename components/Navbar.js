@@ -20,10 +20,7 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
               onClick={() => router.push('/')} 
               style={{ color: activePage === 'home' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}
             >Sons</span>
-            <span 
-              onClick={() => router.push('/passes')} 
-              style={{ color: activePage === 'passes' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}
-            >Passes</span>
+
             <span 
               onClick={() => router.push('/musicality')} 
               style={{ color: activePage === 'musicality' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}
@@ -85,7 +82,7 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
         <div className="mobile-menu-overlay animate-fade-in mobile-only">
           <div className="mobile-menu-links">
             <button onClick={() => { setMobileMenuOpen(false); router.push('/'); }} className={activePage === 'home' ? 'active' : ''}>🎶 Sons</button>
-            <button onClick={() => { setMobileMenuOpen(false); router.push('/passes'); }} className={activePage === 'passes' ? 'active' : ''}>💃 Passes</button>
+
             <button onClick={() => { setMobileMenuOpen(false); router.push('/musicality'); }} className={activePage === 'musicality' ? 'active' : ''}>🥁 Musicalité</button>
             <button onClick={() => { setMobileMenuOpen(false); router.push('/jack-and-jill'); }} className={activePage === 'jnj' ? 'active' : ''}>🏆 Jack & Jill</button>
             
