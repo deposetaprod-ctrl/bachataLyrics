@@ -1,5 +1,345 @@
 export const songs = [
   {
+    id: "para-besarte-lean-akai",
+    title: "Para Besarte",
+    artist: "Lean & Akai",
+    year: 2023,
+    dateAdded: "2026-04-20",
+    dancers: "Gero & Migle",
+    tags: ["Moderne", "Sensual", "Urbain"],
+    color: "#6366f1",
+    spotify: "https://open.spotify.com/search/Para%20Besarte%20Lean%20Akai",
+    danceVideo: "j4CmXKDCMzI",
+    culture: {
+      context: "Sorti fin 2023 sur l'EP 'Hypernova', 'Para Besarte' est devenu l'un des titres les plus emblématiques du duo chilien Lean & Akai. Sa popularité a explosé grâce aux démonstrations de danseurs renommés dans le milieu de la bachata moderne.",
+      meaning: "Les paroles portent un message fort contre les relations abusives ('golpes y gritos'). Le narrateur exprime son désir de protéger et de secourir le cœur de la femme aimée, lui offrant un refuge ('abrigo') et un amour basé sur le respect et la tendresse.",
+      artistInfo: "Lean (Leandro Yañez) et Akai (Alan Rojas) sont les fers de lance de la bachata moderne au Chili. Leur style se distingue par une fusion sophistiquée de rythmes dominicains avec des influences pop et urbaines contemporaines.",
+      album: "Hypernova"
+    },
+    lyrics: {
+      es: `Dime por qué sigues con él si no te trata bien
+Si cada mañana despiertas y no sabes qué hacer
+Si tu corazón dice que ya no puede escapar
+De golpes y gritos, heridas y no puedes ver
+¿Qué pasará si seguirás
+Fingiendo el daño como amor?
+Dame un motivo, una razón
+Y rescatar tu corazón
+
+Para besarte yo quiero verte
+Y complacerte bien lentamente
+Quiero contigo ser un abrigo
+Del corazón
+Para besarte yo quiero verte
+Y complacerte bien lentamente
+Quiero contigo ser un abrigo
+Del corazón
+
+Déjate esa vida para vivir la tuya
+Quiero que te quieras y que tú sola lo intuyas
+Tienes que saber que el amor es pa que fluya
+Valora las cosas, déjalo si no suma
+Súmale, que no te quiere ver bien
+No sabe que hay como cien
+Que darían lo que sea por ti
+Y cuánto duele saber
+Que solo puedes ceder
+Que solamente no te quiere perder
+Y no te quiere ver bien
+
+No sé si fue la distancia
+O tal vez culpa de su ignorancia
+O si no sabe lo que es el amor
+Porque nadie le enseñó
+
+No sé si fue la distancia
+O tal vez culpa de su ignorancia
+Porque él no supo amarte y yo olvidarte
+
+¿Qué pasará si seguirás
+Fingiendo el daño como amor?
+Dame un motivo, una razón
+Y rescatar tu corazón
+
+Para besarte yo quiero verte
+Y complacerte bien lentamente
+Quiero contigo ser un abrigo
+Del corazón
+Para besarte yo quiero verte
+Y complacerte bien lentamente
+Quiero contigo ser un abrigo
+Del corazón
+
+Es Lean & Akai
+Suena Leanway
+
+Para besarte yo quiero verte
+Y complacerte bien lentamente
+El corazón
+
+Para besarte yo quiero verte
+Y complacerte bien lentamente
+El corazón
+
+Para besarte yo quiero verte
+Y complacerte bien lentamente
+El corazón
+
+Para besarte yo quiero verte (para besarte yo quiero verte)
+Y complacerte bien lentamente (oh no, no)
+El corazón
+
+Hypernova`,
+      fr: `Dis-moi pourquoi tu restes avec lui s'il ne te traite pas bien
+Si chaque matin tu te réveilles sans savoir quoi faire
+Si ton cœur dit qu'il ne peut plus s'échapper
+Des coups et des cris, des blessures et tu ne peux pas voir
+Que se passera-t-il si tu continues
+À faire semblant que la douleur est de l'amour ?
+Donne-moi un motif, une raison
+Et de secourir ton cœur
+
+Pour t'embrasser je veux te voir
+Et te faire plaisir bien lentement
+Je veux être avec toi un refuge
+Pour ton cœur
+Pour t'embrasser je veux te voir
+Et te faire plaisir bien lentement
+Je veux être avec toi un refuge
+Pour ton cœur
+
+Laisse cette vie-là pour vivre la tienne
+Je veux que tu t'aimes et que tu le sentes par toi-même
+Tu dois savoir que l'amour est fait pour couler de source
+Apprécie les choses, laisse-le s'il n'apporte rien
+Ajoute à cela qu'il ne veut pas ton bien
+Il ne sait pas qu'il y en a environ cent
+Qui donneraient n'importe quoi pour toi
+Et combien ça fait mal de savoir
+Que tu ne peux que céder
+Qu'il ne veut tout simplement pas te perdre
+Et il ne veut pas te voir épanouie
+
+Je ne sais pas si c'était la distance
+Ou peut-être la faute de son ignorance
+Ou s'il ne sait pas ce qu'est l'amour
+Parce que personne ne lui a appris
+
+Je ne sais pas si c'était la distance
+Ou peut-être la faute de son ignorance
+Parce qu'il n'a pas su t'aimer et moi t'oublier
+
+Que se passera-t-il si tu continues
+À faire semblant que la douleur est de l'amour ?
+Donne-moi un motif, une raison
+Et de secourir ton cœur
+
+Pour t'embrasser je veux te voir
+Et te faire plaisir bien lentement
+Je veux être avec toi un refuge
+Pour ton cœur
+Pour t'embrasser je veux te voir
+Et te faire plaisir bien lentement
+Je veux être avec toi un refuge
+Pour ton cœur
+
+C'est Lean & Akai
+Ça sonne Leanway
+
+Pour t'embrasser je veux te voir
+Et te faire plaisir bien lentement
+Le cœur
+
+Pour t'embrasser je veux te voir
+Et te faire plaisir bien lentement
+Le cœur
+
+Pour t'embrasser je veux te voir
+Et te faire plaisir bien lentement
+Le cœur
+
+Pour t'embrasser je veux te voir (pour t'embrasser je veux te voir)
+Et te faire plaisir bien lentement (oh non, non)
+Le cœur
+
+Hypernova`
+    }
+  },
+  {
+    id: "unico-grande-amore-pinto-picasso-marco-puma",
+    title: "Unico Grande Amore",
+    artist: "Pinto Picasso ft. Marco Puma",
+    year: 2024,
+    dateAdded: "2026-04-20",
+    dancers: "Cristian y Gabriella",
+    tags: ["Moderne", "Romantique", "Sensual"],
+    color: "#ec4899",
+    spotify: "https://open.spotify.com/search/Unico%20Grande%20Amore%20Pinto%20Picasso",
+    danceVideo: "YRFQCpU5NHw",
+    culture: {
+      context: "Sorti début 2024, 'Unico Grande Amore' marque la première collaboration entre l'artiste italien Marco Puma et le porto-ricain Pinto Picasso. Ce titre est rapidement devenu un incontournable des soirées et festivals de bachata.",
+      meaning: "La chanson explore la thématique d'un amour unique et indélébile malgré les erreurs passées et le manque de confiance ('falle', 'karma'). C'est un plaidoyer passionné pour une seconde chance, soulignant que certaines connexions sont impossibles à oublier.",
+      artistInfo: "Marco Puma, originaire de Sicile et basé à Milan, est un pianiste de formation classique devenu une figure majeure de la bachata en Europe. Pinto Picasso est le pionnier de l'urban bachata, célèbre pour sa fusion du genre tropical avec le R&B et son passé de coach vocal urbain.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Ya yo lo se
+Que no has podido encontrar
+Confianza en mi
+Ya no puedo soportar
+Sentirte lejo y no
+Saber que pasara
+Manana
+
+Ya no te alejes mas
+No me castigues
+Te lo imploro
+
+Mio unico grande amore
+
+Escuchame
+Sai non si comanda al cuore
+Abrazame
+Dificil olvidar lo que ya fue
+
+Dime que sientes
+Porque no me entiendes
+Corre hacia mi
+Unico grande amore
+Perdoname
+
+Una pared con muchas grietas
+Como una cancion sin letras
+Quede tan mal herido sin tu amor
+
+Lo nuestro no fue solo un juego
+No te vayas te lo ruego
+No me humilles baby por favor
+
+Yo no te lo niego falle
+Estaba on fire en la calle
+Solo era cuestión de tiempo hasta que el karma conmigo guaye
+
+Ay, no me pidas que ponga el corazón dentro de un maletín
+Dime tu como yo hago para olvidarme de ti
+
+Mio unico grande amore
+
+Abrazame
+Sai non si comanda al cuore
+Dificil olvidar lo que ya fue
+
+Tu dime que sientes
+Porque no me entiendes
+Corre hacia mi
+Unico grande amore
+Perdoname
+
+Ahi
+El mas que suma
+Junto a Marco Puma
+
+Tu Sabes
+Picasso Baby
+Italia y Puertorico
+Tocala Xavi
+
+Marco Puma Baby
+Hey Dicelo Pinto
+Its me
+
+Mio unico grande amore
+
+Abrazame
+Sai non si comanda al cuore
+Dificil olvidar lo que ya fue
+
+Dime que sientes
+Porque no me entiendes
+Corre hacia mi
+Unico grande amore
+
+Aqui te esperare una vida`,
+      fr: `Je le sais déjà
+Que tu n'as pas pu trouver
+Confiance en moi
+Je ne peux plus supporter
+De te sentir loin et de ne pas
+Savoir ce qui se passera
+Demain
+
+Ne t'éloigne plus
+Ne me punis pas
+Je t'en supplie
+
+Mon unique grand amour
+
+Écoute-moi
+Tu sais qu'on ne commande pas au cœur
+Serre-moi dans tes bras
+Difficile d'oublier ce qui a déjà été
+
+Dis-moi ce que tu ressens
+Pourquoi ne me comprends-tu pas
+Cours vers moi
+Unique grand amour
+Pardonne-moi
+
+Un mur avec beaucoup de fissures
+Comme une chanson sans paroles
+Je suis resté si mal blessé sans ton amour
+
+Ce que nous avions n'était pas qu'un jeu
+Ne t'en va pas je t'en prie
+Ne m'humilie pas bébé s'il te plaît
+
+Je ne te le nie pas, j'ai échoué
+J'étais "on fire" dans la rue
+Ce n'était qu'une question de temps avant que le karma ne me rattrape
+
+Ay, ne me demande pas de mettre mon cœur dans une mallette
+Dis-moi comment je fais pour t'oublier
+
+Mon unique grand amour
+
+Serre-moi dans tes bras
+Tu sais qu'on ne commande pas au cœur
+Difficile d'oublier ce qui a déjà été
+
+Toi dis-moi ce que tu ressens
+Pourquoi ne me comprends-tu pas
+Cours vers moi
+Unique grand amour
+Pardonne-moi
+
+Ahi
+Celui qui apporte le plus
+Avec Marco Puma
+
+Tu sais
+Picasso Baby
+Italie et Porto Rico
+Joue-la Xavi
+
+Marco Puma Baby
+Hé dis-lui Pinto
+C'est moi
+
+Mon unique grand amour
+
+Serre-moi dans tes bras
+Tu sais qu'on ne commande pas au cœur
+Difficile d'oublier ce qui a déjà été
+
+Dis-moi ce que tu ressens
+Pourquoi ne me comprends-tu pas
+Cours vers moi
+Unique grand amour
+
+Ici je t'attendrai toute une vie`
+    }
+  },
+  {
     id: "niveles-pinto-picasso",
     title: "Niveles",
     artist: "Pinto Picasso",
