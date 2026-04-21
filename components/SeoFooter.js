@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useTranslation } from '../utils/translations';
 import { songs } from '../data/songs';
 
 /**
@@ -6,6 +8,9 @@ import { songs } from '../data/songs';
  * interne et aider Google à découvrir toutes les pages du site.
  */
 export default function SeoFooter({ currentPage = '' }) {
+  const router = useRouter();
+  const { locale } = router || { locale: 'fr' }; // fallback if router is not mounted properly
+  const t = useTranslation(locale);
   // Prendre les 8 chansons les plus récentes (par année desc, puis par ordre dans le tableau)
   const recentSongs = [...songs]
     .sort((a, b) => b.year - a.year)
@@ -50,10 +55,10 @@ export default function SeoFooter({ currentPage = '' }) {
           </div>
 
           <div className="seo-footer-col">
-            <h4>Explorer</h4>
+            <h4>{locale === 'en' ? 'Explore' : 'Explorer'}</h4>
             <ul>
               {currentPage !== 'home' && (
-                <li><Link href="/">🎵 Paroles de Bachata</Link></li>
+                <li><Link href="/">🎵 {locale === 'en' ? 'Bachata Lyrics' : 'Paroles de Bachata'}</Link></li>
               )}
 
               {currentPage !== 'musicality' && (
@@ -69,7 +74,7 @@ export default function SeoFooter({ currentPage = '' }) {
           </div>
 
           <div className="seo-footer-col">
-            <h4>Chansons récentes</h4>
+            <h4>{locale === 'en' ? 'Recent Songs' : 'Chansons récentes'}</h4>
             <ul>
               {recentSongs.map(song => (
                 <li key={song.id}>
@@ -85,7 +90,7 @@ export default function SeoFooter({ currentPage = '' }) {
         {/* Copyright */}
         <div className="seo-footer-bottom">
           <p>
-            Fait avec <span style={{ color: '#c026d3' }}>♥</span> pour les amoureux de bachata · © {new Date().getFullYear()} Bachata Flow
+            {locale === 'en' ? 'Made with ' : 'Fait avec '}<span style={{ color: '#c026d3' }}>♥</span>{locale === 'en' ? ' for bachata lovers' : ' pour les amoureux de bachata'} · © {new Date().getFullYear()} Bachata Flow
           </p>
           <div style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'center' }}>
             <a 
@@ -96,7 +101,7 @@ export default function SeoFooter({ currentPage = '' }) {
               onMouseOver={(e) => e.currentTarget.style.color = '#c026d3'}
               onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.4)'}
             >
-              Développé par l'agence Maximilien Digital
+              {locale === 'en' ? 'Developed by Maximilien Digital Agency' : "Développé par l'agence Maximilien Digital"}
             </a>
             <a 
               href="https://comeup.com/fr/service/382688/vous-developper-une-application-mobile-saas-avec-ou-sans-intelligence-artificielle" 

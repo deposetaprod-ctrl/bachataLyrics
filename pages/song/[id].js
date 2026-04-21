@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { useTranslation } from '../../utils/translations';
 import Head from 'next/head';
 import { songs } from '../../data/songs';
 import { SpotifyIcon } from '../../components/SpotifyIcon';
@@ -18,6 +19,8 @@ export async function getStaticProps({ params }) {
 
 export default function SongPage({ song }) {
   const router = useRouter();
+  const { locale } = router || { locale: 'fr' };
+  const t = useTranslation(locale);
   const [favoriteSongs, setFavoriteSongs] = useState([]);
   const [masteredSongs, setMasteredSongs] = useState([]);
 
@@ -56,11 +59,11 @@ export default function SongPage({ song }) {
   return (
     <>
       <Head>
-        <title>{song.title} — {song.artist} | Paroles & Traduction Française | Bachata Flow</title>
+        <title>{song.title} — {song.artist} | {locale === 'en' ? 'Lyrics & Translation' : 'Paroles & Traduction Française'} | Bachata Flow</title>
         <link rel="canonical" href={`https://bachatalyrics.com/song/${song.id}`} />
         <meta
           name="description"
-          content={`Paroles de « ${song.title} » par ${song.artist} (${song.year}) en version originale avec traduction française côte à côte. Découvrez le sens, le contexte culturel et l'artiste.`}
+          content={locale === 'en' ? `Lyrics for \"${song.title}\" by ${song.artist} side-by-side with English translation.` : `Paroles de « ${song.title} » par ${song.artist} (${song.year}) en version originale avec traduction française côte à côte.`}
         />
         <meta property="og:title" content={`${song.title} — ${song.artist} | Bachata Flow`} />
         <meta property="og:description" content={`Paroles bilingues de « ${song.title} » par ${song.artist}. Texte original avec traduction française.`} />
@@ -104,10 +107,10 @@ export default function SongPage({ song }) {
             aria-label="Ajouter aux favoris"
           >
             <span className="fav-icon">{favoriteSongs.includes(song.id) ? '♥' : '♡'}</span>
-            {favoriteSongs.includes(song.id) ? 'Sauvegardé' : 'Ajouter'}
+            {favoriteSongs.includes(song.id) ? (locale === 'en' ? 'Saved' : 'Sauvegardé') : (locale === 'en' ? 'Save' : 'Ajouter')}
           </button>
           <button id="back-btn" className="back-btn" onClick={() => router.push('/')}>
-            ← Retour au catalogue
+            ← {locale === 'en' ? 'Back to catalog' : 'Retour au catalogue'}
           </button>
 
           <div className="lyrics-meta">
@@ -151,7 +154,7 @@ export default function SongPage({ song }) {
                   boxShadow: '0 8px 20px rgba(124, 58, 237, 0.4)',
                   textTransform: 'uppercase'
                 }}>
-                  Remix Exclusif
+                  {locale === 'en' ? 'Exclusive Remix' : 'Remix Exclusif'}
                 </div>
               )}
               {song.spotify && !song.audioUrl && (
@@ -164,7 +167,7 @@ export default function SongPage({ song }) {
                     className="spotify-listen-btn"
                   >
                     <SpotifyIcon />
-                    Écouter sur Spotify
+                    {locale === 'en' ? 'Listen on Spotify' : 'Écouter sur Spotify'}
                   </a>
                   <button 
                     onClick={() => document.getElementById('culture-section')?.scrollIntoView({ behavior: 'smooth' })}
@@ -183,7 +186,7 @@ export default function SongPage({ song }) {
                     }}
                     className="hover-scale"
                   >
-                    💡 En savoir plus
+                    💡 {locale === 'en' ? 'Read more' : 'En savoir plus'}
                   </button>
                 </div>
               )}
@@ -249,9 +252,9 @@ export default function SongPage({ song }) {
             >
               <div style={{ fontSize: '3.5rem' }}>🎬</div>
               <div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '8px' }}>Aucune vidéo de démonstration</h3>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '8px' }}>{locale === 'en' ? 'No demonstration video' : 'Aucune vidéo de démonstration'}</h3>
                 <p style={{ color: 'var(--text-muted)', maxWidth: '400px', margin: '0 auto', fontSize: '0.95rem' }}>
-                  Tu connais une superbe vidéo de danse sur ce son ? Propose-la nous pour enrichir la communauté !
+                  {locale === 'en' ? 'Know a great dance video for this song? Let us know to enrich the community!' : 'Tu connais une superbe vidéo de danse sur ce son ? Propose-la nous pour enrichir la communauté !'}
                 </p>
               </div>
               <a 
@@ -273,16 +276,16 @@ export default function SongPage({ song }) {
             </div>
           )}
 
-          {/* ─── LYRICS ─── Interleaved ES/FR ─── */}
           <div className="lyrics-interleaved">
           {song.lyrics.es.split('\n').map((esLine, i) => {
-            const frLines = song.lyrics.fr.split('\n');
-            const frLine = frLines[i] || '';
-            if (!esLine.trim() && !frLine.trim()) return <div key={i} style={{ height: '20px' }} />;
+            const targetLocale = locale === 'en' && song.lyrics.en ? 'en' : 'fr';
+            const targetLines = song.lyrics[targetLocale].split('\n');
+            const targetLine = targetLines[i] || '';
+            if (!esLine.trim() && !targetLine.trim()) return <div key={i} style={{ height: '20px' }} />;
             return (
               <div key={i} className="lyric-pair">
                 {esLine && <div className="lyric-es">{esLine}</div>}
-                {frLine && <div className="lyric-fr">{frLine}</div>}
+                {targetLine && <div className={`lyric-${targetLocale}`}>{targetLine}</div>}
               </div>
             );
           })}
@@ -300,23 +303,23 @@ export default function SongPage({ song }) {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '24px' }}>
             <div style={{ flex: 1, minWidth: '300px' }}>
               <h2 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <span style={{ fontSize: '2rem' }}>🌍</span> Culture & Contexte
+                <span style={{ fontSize: '2rem' }}>🌍</span> {locale === 'en' ? 'Culture & Context' : 'Culture & Contexte'}
               </h2>
               
               <div style={{ display: 'grid', gap: '24px' }}>
                 <section>
-                  <h3 style={{ fontSize: '0.9rem', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px', fontWeight: 900 }}>Contexte</h3>
-                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{song.culture?.context || "Une chanson emblématique du répertoire bachata qui continue de faire vibrer les pistes de danse."}</p>
+                  <h3 style={{ fontSize: '0.9rem', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px', fontWeight: 900 }}>{locale === 'en' ? 'Context' : 'Contexte'}</h3>
+                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{locale === 'en' && song.culture_en?.context ? song.culture_en.context : (song.culture?.context || "Une chanson emblématique du répertoire bachata qui continue de faire vibrer les pistes de danse.")}</p>
                 </section>
                 
                 <section>
-                  <h3 style={{ fontSize: '0.9rem', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px', fontWeight: 900 }}>Signification</h3>
-                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{song.culture?.meaning || "Les paroles explorent les émotions profondes et les thèmes universels de l'amour et de la passion."}</p>
+                  <h3 style={{ fontSize: '0.9rem', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px', fontWeight: 900 }}>{locale === 'en' ? 'Meaning' : 'Signification'}</h3>
+                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{locale === 'en' && song.culture_en?.meaning ? song.culture_en.meaning : (song.culture?.meaning || "Les paroles explorent les émotions profondes et les thèmes universels de l'amour et de la passion.")}</p>
                 </section>
                 
                 <section>
-                  <h3 style={{ fontSize: '0.9rem', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px', fontWeight: 900 }}>L'Artiste</h3>
-                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{song.culture?.artistInfo || `${song.artist} est une figure majeure de la scène bachata contemporaine.`}</p>
+                  <h3 style={{ fontSize: '0.9rem', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px', fontWeight: 900 }}>{locale === 'en' ? 'Artist' : 'L\'Artiste'}</h3>
+                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{locale === 'en' && song.culture_en?.artistInfo ? song.culture_en.artistInfo : (song.culture?.artistInfo || `${song.artist} est une figure majeure de la scène bachata contemporaine.`)}</p>
                 </section>
                 
                 {song.culture?.album && (
@@ -338,9 +341,9 @@ export default function SongPage({ song }) {
               textAlign: 'center'
             }}>
               <div style={{ fontSize: '3rem', marginBottom: '16px' }}>🎯</div>
-              <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '8px' }}>Ton Objectif</h3>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '8px' }}>{locale === 'en' ? 'Your Goal' : 'Ton Objectif'}</h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '24px' }}>
-                Maîtrise les paroles et le sens de cette chanson pour débloquer ta récompense !
+                {locale === 'en' ? 'Master the lyrics and meaning of this song to unlock your reward!' : 'Maîtrise les paroles et le sens de cette chanson pour débloquer ta récompense !'}
               </p>
               
               <button
@@ -364,16 +367,16 @@ export default function SongPage({ song }) {
                 className="hover-scale"
               >
                 {masteredSongs.includes(song.id) ? (
-                  <><span>✅</span> Maîtrisée !</>
+                  <><span>✅</span> {locale === 'en' ? 'Mastered!' : 'Maîtrisée !'}</>
                 ) : (
-                  <><span>🔥</span> Marquer comme apprise</>
+                  <><span>🔥</span> {locale === 'en' ? 'Mark as learned' : 'Marquer comme apprise'}</>
                 )
                 }
               </button>
               
               {masteredSongs.includes(song.id) && (
                 <p style={{ color: '#34d399', fontSize: '0.8rem', fontWeight: 600, marginTop: '16px', animation: 'fadeIn 0.5s ease-out' }}>
-                  Félicitations ! Tu as validé cet objectif.
+                  {locale === 'en' ? 'Congratulations! You achieved this goal.' : 'Félicitations ! Tu as validé cet objectif.'}
                 </p>
               )}
             </div>

@@ -16,6 +16,12 @@ export const songs = [
       artistInfo: "Lean (Leandro Yañez) et Akai (Alan Rojas) sont les fers de lance de la bachata moderne au Chili. Leur style se distingue par une fusion sophistiquée de rythmes dominicains avec des influences pop et urbaines contemporaines.",
       album: "Hypernova"
     },
+    culture_en: {
+      context: "Released late 2023 on the 'Hypernova' EP, 'Para Besarte' has become one of the most iconic tracks from the Chilean duo Lean & Akai. Its popularity exploded thanks to demonstrations by renowned dancers in the modern bachata scene.",
+      meaning: "The lyrics carry a strong message against abusive relationships ('golpes y gritos'). The narrator expresses his desire to protect and rescue the heart of the beloved woman, offering her a shelter ('abrigo') and a love based on respect and tenderness.",
+      artistInfo: "Lean (Leandro Yañez) and Akai (Alan Rojas) are at the forefront of modern bachata in Chile. Their style stands out with a sophisticated fusion of Dominican rhythms with contemporary pop and urban influences.",
+      album: "Hypernova"
+    },
     lyrics: {
       es: `Dime por qué sigues con él si no te trata bien
 Si cada mañana despiertas y no sabes qué hacer
@@ -161,6 +167,79 @@ Le cœur
 Pour t'embrasser je veux te voir (pour t'embrasser je veux te voir)
 Et te faire plaisir bien lentement (oh non, non)
 Le cœur
+
+Hypernova`,
+      en: `Tell me why you're still with him if he doesn't treat you right
+If every morning you wake up and don't know what to do
+If your heart says it can no longer escape
+From hits and screams, wounds and you can't see
+What will happen if you keep
+Pretending the damage is love?
+Give me a motive, a reason
+And to rescue your heart
+
+To kiss you I want to see you
+And please you very slowly
+I want to be a shelter with you
+For your heart
+To kiss you I want to see you
+And please you very slowly
+I want to be a shelter with you
+For your heart
+
+Leave that life to live yours
+I want you to love yourself and figure it out on your own
+You need to know that love is meant to flow
+Value things, leave him if he doesn't add up
+Add to it that he doesn't want to see you well
+He doesn't know there are about a hundred
+Who would give whatever for you
+And how much it hurts to know
+That you can only give in
+That he just doesn't want to lose you
+And he doesn't want to see you well
+
+I don't know if it was the distance
+Or maybe the fault of his ignorance
+Or if he doesn't know what love is
+Because nobody taught him
+
+I don't know if it was the distance
+Or maybe the fault of his ignorance
+Because he didn't know how to love you and I how to forget you
+
+What will happen if you keep
+Pretending the damage is love?
+Give me a motive, a reason
+And to rescue your heart
+
+To kiss you I want to see you
+And please you very slowly
+I want to be a shelter with you
+For your heart
+To kiss you I want to see you
+And please you very slowly
+I want to be a shelter with you
+For your heart
+
+It's Lean & Akai
+Sounds like Leanway
+
+To kiss you I want to see you
+And please you very slowly
+The heart
+
+To kiss you I want to see you
+And please you very slowly
+The heart
+
+To kiss you I want to see you
+And please you very slowly
+The heart
+
+To kiss you I want to see you (to kiss you I want to see you)
+And please you very slowly (oh no, no)
+The heart
 
 Hypernova`
     }

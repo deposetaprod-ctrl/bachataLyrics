@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { useTranslation } from '../utils/translations';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Script from 'next/script';
 import { songs } from '../data/songs';
@@ -10,6 +12,8 @@ import SeoFooter from '../components/SeoFooter';
 
 export default function Home() {
   const router = useRouter();
+  const { locale } = router || { locale: 'fr' };
+  const t = useTranslation(locale);
   const [search, setSearch] = useState('');
   const [activeTag, setActiveTag] = useState(null);
   const [favoriteSongs, setFavoriteSongs] = useState([]);
@@ -118,10 +122,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bachata Flow — Paroles de Bachata en Français | Traductions Bilingues</title>
-        <meta name="description" content={`Découvrez ${songs.length} paroles de bachata traduites en français. Textes originaux en espagnol avec traduction française côte à côte — Romeo Santos, Prince Royce, Jensen et plus.`} />
-        <meta property="og:title" content="Bachata Flow — Paroles de Bachata en Français" />
-        <meta property="og:description" content={`${songs.length} paroles de bachata avec traduction française. Textes bilingues, analyse musicale et progression de danse.`} />
+        <title>{locale === 'en' ? 'Bachata Flow — Bachata Lyrics in English | Bilingual Translations' : 'Bachata Flow — Paroles de Bachata en Français | Traductions Bilingues'}</title>
+        <meta name="description" content={locale === 'en' 
+          ? `Discover ${songs.length} bachata lyrics translated into English. Original Spanish texts with English translation side-by-side.` 
+          : `Découvrez ${songs.length} paroles de bachata traduites en français. Textes originaux en espagnol avec traduction française côte à côte.`} />
+        <meta property="og:title" content={locale === 'en' ? "Bachata Flow — Bachata Lyrics in English" : "Bachata Flow — Paroles de Bachata en Français"} />
+        <meta property="og:description" content={`${songs.length} ${locale === 'en' ? 'bachata lyrics with English translation' : 'paroles de bachata avec traduction française'}.`} />
         <meta property="og:url" content="https://bachatalyrics.com" />
         <script
           type="application/ld+json"
@@ -190,7 +196,7 @@ export default function Home() {
           <input
             id="search-input"
             type="text"
-            placeholder="Rechercher un titre, artiste..."
+            placeholder={t('searchPlaceholder')}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -217,9 +223,9 @@ export default function Home() {
       {/* ─── HERO ─── */}
       <section className="hero">
         <div className="hero-eyebrow">
-          <span>💃</span> Bachata • Paroles bilingues
+          <span>💃</span> Bachata • {locale === 'en' ? 'Bilingual Lyrics' : 'Paroles bilingues'}
         </div>
-        <h1>Les plus belles paroles<br />de bachata</h1>
+        <h1>{locale === 'en' ? 'The most beautiful' : 'Les plus belles'}<br />{locale === 'en' ? 'bachata lyrics' : 'paroles de bachata'}</h1>
         
         {/* PROGRESS STATS */}
         <div 
@@ -240,9 +246,9 @@ export default function Home() {
           }}
           className="hover-scale"
         >
-          <span style={{ color: 'var(--accent)' }}>🎯 Objectifs :</span>
-          <span>{masteredSongs.length} / {songs.length} maîtrisés</span>
-          <span style={{ marginLeft: '8px', opacity: 0.6 }}>Voir tout →</span>
+          <span style={{ color: 'var(--accent)' }}>🎯 {locale === 'en' ? 'Goals :' : 'Objectifs :'}</span>
+          <span>{masteredSongs.length} / {songs.length} {locale === 'en' ? 'mastered' : 'maîtrisés'}</span>
+          <span style={{ marginLeft: '8px', opacity: 0.6 }}>{locale === 'en' ? 'See all →' : 'Voir tout →'}</span>
         </div>
 
         {/* DAILY CHALLENGE CARD */}
@@ -289,11 +295,11 @@ export default function Home() {
               color: '#a78bfa',
               marginBottom: '2px'
             }}>
-              Défi du jour
+              {locale === 'en' ? 'Daily Challenge' : 'Défi du jour'}
             </div>
             <h2 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '2px' }}>{dailySong.title}</h2>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem' }}>
-              Par <strong>{dailySong.artist}</strong>
+              {locale === 'en' ? 'By' : 'Par'} <strong>{dailySong.artist}</strong>
             </p>
           </div>
           
@@ -313,8 +319,9 @@ export default function Home() {
         </div>
 
         <p style={{ marginTop: '32px' }}>
-          Retrouve les textes originaux en espagnol avec leur traduction en français,
-          côte à côte, pour mieux ressentir chaque chanson.
+          {locale === 'en' 
+            ? 'Find original Spanish lyrics with their English translations side-by-side, to feel every song.' 
+            : 'Retrouve les textes originaux en espagnol avec leur traduction en français, côte à côte, pour mieux ressentir chaque chanson.'}
         </p>
 
         {/* Tag filters */}
@@ -326,7 +333,7 @@ export default function Home() {
               if (!showFavorites) setActiveTag(null);
             }}
           >
-            ❤️ Mes Favoris
+            ❤️ {locale === 'en' ? 'My Favorites' : 'Mes Favoris'}
           </button>
           <button
             id="tag-all"
@@ -336,7 +343,7 @@ export default function Home() {
               setShowFavorites(false);
             }}
           >
-            Tout voir
+            {locale === 'en' ? 'View all' : 'Tout voir'}
           </button>
           {['Dominicaine', 'Sensual', 'Influence', 'Mixte', 'Salsa', 'Tropical'].map((tag) => (
             <button
@@ -356,15 +363,17 @@ export default function Home() {
 
       {/* ─── SONG GRID ─── */}
       <div className="section-label">
-        {showFavorites ? 'Mes Favoris' : (activeTag ? `Filtre : ${activeTag}` : 'Tous les sons')}
+        {showFavorites 
+          ? (locale === 'en' ? 'My Favorites' : 'Mes Favoris') 
+          : (activeTag ? (locale === 'en' ? `Filter : ${activeTag}` : `Filtre : ${activeTag}`) : (locale === 'en' ? 'All songs' : 'Tous les sons'))}
       </div>
 
       <div className="song-grid">
         {filtered.length === 0 ? (
           <div className="no-results">
             <div className="no-results-icon">🎵</div>
-            <h3>Aucun résultat trouvé</h3>
-            <p>Essaie un autre terme de recherche</p>
+            <h3>{t('noSongsFound')}</h3>
+            <p>{locale === 'en' ? 'Try another search term' : 'Essaie un autre terme de recherche'}</p>
           </div>
         ) : (
           filtered.map((song) => (
@@ -650,6 +659,8 @@ const inputStyle = {
 };
 
 function SongCard({ song, onClick, isFavorite, onToggleFav }) {
+  const router = useRouter();
+  const locale = router?.locale || 'fr';
   return (
     <article
       id={`card-${song.id}`}
@@ -693,7 +704,7 @@ function SongCard({ song, onClick, isFavorite, onToggleFav }) {
 
         <div className="card-footer">
           <div className="card-cta">
-            <span>{song.audioUrl ? 'Écouter l\'exclu' : 'Voir les paroles'}</span>
+            <span>{song.audioUrl ? (locale === 'en' ? 'Listen exclusive' : 'Écouter l\'exclu') : (locale === 'en' ? 'View lyrics' : 'Voir les paroles')}</span>
             <span>→</span>
           </div>
           {song.spotify && !song.audioUrl && (

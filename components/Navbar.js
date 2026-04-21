@@ -1,9 +1,17 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { useTranslation } from '../utils/translations';
 
 export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestClick, activePage = 'home', children }) {
   const router = useRouter();
+  const { locale, pathname, query, asPath } = router;
+  const t = useTranslation(locale);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleLanguage = () => {
+    const nextLocale = locale === 'fr' ? 'en' : 'fr';
+    router.push({ pathname, query }, asPath, { locale: nextLocale });
+  };
 
   return (
     <>
@@ -19,28 +27,43 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
             <span 
               onClick={() => router.push('/')} 
               style={{ color: activePage === 'home' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}
-            >Sons</span>
+            >{locale === 'fr' ? 'Sons' : 'Songs'}</span>
 
             <span 
               onClick={() => router.push('/musicality')} 
               style={{ color: activePage === 'musicality' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}
-            >Musicalité</span>
+            >{t('musicality')}</span>
             <span 
               onClick={() => router.push('/jack-and-jill')} 
               style={{ color: activePage === 'jnj' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}
-            >Jack & Jill</span>
+            >{t('jackAndJill')}</span>
             
             <div className="auth-profile">
+              <button 
+                onClick={toggleLanguage}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  color: 'white',
+                  padding: '6px 12px',
+                  borderRadius: '12px',
+                  cursor: 'pointer',
+                  marginRight: '16px',
+                  fontSize: '0.85rem'
+                }}
+              >
+                {locale === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'}
+              </button>
               {user ? (
                 <div className="user-logged animate-fade-in">
                   <span className="user-name">👤 {user.email?.split('@')[0]}</span>
                   <button className="btn-logout" onClick={() => supabaseClient?.auth?.signOut()}>
-                    Déconnexion
+                    {t('logout')}
                   </button>
                 </div>
               ) : (
                 <button className="btn-login" onClick={onLoginClick}>
-                  Connexion / S'inscrire
+                  {locale === 'fr' ? "Connexion / S'inscrire" : "Login / Signup"}
                 </button>
               )}
             </div>
@@ -81,11 +104,28 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
       {mobileMenuOpen && (
         <div className="mobile-menu-overlay animate-fade-in mobile-only">
           <div className="mobile-menu-links">
-            <button onClick={() => { setMobileMenuOpen(false); router.push('/'); }} className={activePage === 'home' ? 'active' : ''}>🎶 Sons</button>
+            <button onClick={() => { setMobileMenuOpen(false); router.push('/'); }} className={activePage === 'home' ? 'active' : ''}>🎶 {locale === 'fr' ? 'Sons' : 'Songs'}</button>
 
-            <button onClick={() => { setMobileMenuOpen(false); router.push('/musicality'); }} className={activePage === 'musicality' ? 'active' : ''}>🥁 Musicalité</button>
-            <button onClick={() => { setMobileMenuOpen(false); router.push('/jack-and-jill'); }} className={activePage === 'jnj' ? 'active' : ''}>🏆 Jack & Jill</button>
+            <button onClick={() => { setMobileMenuOpen(false); router.push('/musicality'); }} className={activePage === 'musicality' ? 'active' : ''}>🥁 {t('musicality')}</button>
+            <button onClick={() => { setMobileMenuOpen(false); router.push('/jack-and-jill'); }} className={activePage === 'jnj' ? 'active' : ''}>🏆 {t('jackAndJill')}</button>
             
+            <button 
+              onClick={() => { setMobileMenuOpen(false); toggleLanguage(); }}
+              style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  color: 'white',
+                  marginTop: '8px',
+                  borderRadius: '16px',
+                  padding: '16px 20px',
+                  textAlign: 'left',
+                  fontSize: '1.2rem',
+                  fontWeight: '700'
+              }}
+            >
+              🌐 {locale === 'fr' ? 'Passer en Anglais (EN)' : 'Switch to French (FR)'}
+            </button>
+
             {onSuggestClick && (
               <button 
                 onClick={() => { setMobileMenuOpen(false); onSuggestClick(); }}
@@ -95,7 +135,7 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
                   marginTop: '8px'
                 }}
               >
-                ✨ Proposer un son
+                ✨ {locale === 'fr' ? 'Proposer un son' : 'Suggest a song'}
               </button>
             )}
 
@@ -104,12 +144,12 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
                 <>
                   <div className="mobile-user-name">👤 {user.email?.split('@')[0]}</div>
                   <button className="btn-logout" style={{ width: '100%' }} onClick={() => supabaseClient?.auth?.signOut()}>
-                    Déconnexion
+                    {t('logout')}
                   </button>
                 </>
               ) : (
                 <button className="btn-login" style={{ width: '100%', padding: '12px', fontSize: '1rem' }} onClick={() => { setMobileMenuOpen(false); onLoginClick(); }}>
-                  Connexion / S'inscrire
+                  {locale === 'fr' ? "Connexion / S'inscrire" : "Login / Signup"}
                 </button>
               )}
             </div>
