@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useTranslation } from '../utils/translations';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Script from 'next/script';
 import { songs } from '../data/songs';
