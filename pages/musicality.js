@@ -62,6 +62,12 @@ export default function MusicalityTrainer() {
     }
   }, []);
   
+  useEffect(() => {
+    if (router.isReady && router.query.video) {
+      setRemoteUrl(`https://www.youtube.com/watch?v=${router.query.video}`);
+    }
+  }, [router.isReady, router.query.video]);
+
   const waveformRef = useRef(null);
   const audioRef = useRef(null);
   const wavesurfer = useRef(null);

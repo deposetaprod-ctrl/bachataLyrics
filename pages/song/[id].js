@@ -157,24 +157,14 @@ export default function SongPage({ song }) {
                   {locale === 'en' ? 'Exclusive Remix' : 'Remix Exclusif'}
                 </div>
               )}
-              {song.spotify && !song.audioUrl && (
-                <div style={{ display: 'flex', gap: '8px' }}>
-                  <a
-                    id="spotify-btn"
-                    href={song.spotify}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="spotify-listen-btn"
-                  >
-                    <SpotifyIcon />
-                    {locale === 'en' ? 'Listen on Spotify' : 'Écouter sur Spotify'}
-                  </a>
-                  <button 
-                    onClick={() => document.getElementById('culture-section')?.scrollIntoView({ behavior: 'smooth' })}
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'flex-end', marginTop: '8px' }}>
+                {song.danceVideo && (
+                  <button
+                    onClick={() => router.push(`/musicality?video=${song.danceVideo}`)}
                     style={{
-                      background: 'rgba(255,255,255,0.05)',
-                      border: '1px solid rgba(255,255,255,0.1)',
+                      background: 'linear-gradient(135deg, #3b82f6, #2563eb)',
                       color: 'white',
+                      border: 'none',
                       padding: '8px 16px',
                       borderRadius: '12px',
                       fontSize: '0.85rem',
@@ -182,14 +172,48 @@ export default function SongPage({ song }) {
                       cursor: 'pointer',
                       display: 'flex',
                       alignItems: 'center',
-                      gap: '8px'
+                      gap: '8px',
+                      boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)'
                     }}
                     className="hover-scale"
                   >
-                    💡 {locale === 'en' ? 'Read more' : 'En savoir plus'}
+                    🎵 {locale === 'en' ? 'Practice Musicality' : 'Musicalité'}
                   </button>
-                </div>
-              )}
+                )}
+                {song.spotify && !song.audioUrl && (
+                  <>
+                    <a
+                      id="spotify-btn"
+                      href={song.spotify}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="spotify-listen-btn"
+                    >
+                      <SpotifyIcon />
+                      {locale === 'en' ? 'Listen on Spotify' : 'Écouter sur Spotify'}
+                    </a>
+                    <button 
+                      onClick={() => document.getElementById('culture-section')?.scrollIntoView({ behavior: 'smooth' })}
+                      style={{
+                        background: 'rgba(255,255,255,0.05)',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        color: 'white',
+                        padding: '8px 16px',
+                        borderRadius: '12px',
+                        fontSize: '0.85rem',
+                        fontWeight: 600,
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px'
+                      }}
+                      className="hover-scale"
+                    >
+                      💡 {locale === 'en' ? 'Read more' : 'En savoir plus'}
+                    </button>
+                  </>
+                )}
+              </div>
             </div>
           </div>
           
