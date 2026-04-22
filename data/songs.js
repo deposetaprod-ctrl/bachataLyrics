@@ -1,5 +1,354 @@
 export const songs = [
   {
+    id: "no-hay-vato-perfecto-kewin-cosmos",
+    title: "No Hay Vato Perfecto",
+    artist: "Kewin Cosmos",
+    year: 2024,
+    dateAdded: "2026-04-22",
+    dancers: "Marco y Sara",
+    tags: ["Moderne", "Romantique", "Urbain"],
+    color: "#8b5cf6",
+    spotify: "https://open.spotify.com/search/No%20Hay%20Vato%20Perfecto%20Kewin%20Cosmos",
+    danceVideo: "B76HyzdstRo",
+    culture: {
+      context: "Sorti en 2024, 'No Hay Vato Perfecto' s'inscrit dans la veine de la bachata urbaine moderne de Kewin Cosmos. Le titre a rapidement conquis les pistes de danse internationales, notamment grâce à sa popularité dans le circuit des workshops, comme en témoigne la démonstration de Marco y Sara à Dubai.",
+      meaning: "La chanson dépeint la douleur intérieure d'un homme après une rupture, qui voit son ex avec quelqu'un d'autre. Sans se poser en victime parfaite, il reconnait ses propres erreurs tout en sincèrement convaincu que le nouvel amant lui fera subir le même sort. Le titre — 'il n'y a pas de gars parfait' — est à la fois une excuse et un aveu lucide.",
+      artistInfo: "Kewin Cosmos est un chanteur, compositeur et producteur dominicano-américain né et élevé à Brooklyn, New York, de parents dominicains. Ayant passé une partie de son enfance à Santiago (République Dominicaine), il développe très tôt une connexion profonde avec la bachata. Il est notamment connu pour ses titres 'Dile' et 'La Vecina'.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "Released in 2024, 'No Hay Vato Perfecto' fits into Kewin Cosmos's modern urban bachata style. The track quickly conquered international dancefloors, notably gaining popularity on the workshop circuit, as demonstrated by Marco y Sara in Dubai.",
+      meaning: "The song depicts the inner pain of a man after a breakup who sees his ex with someone else. Without posing as a perfect victim, he acknowledges his own mistakes while being genuinely convinced that the new man will do the same to her. The title — 'there's no perfect guy' — is both an excuse and a lucid confession.",
+      artistInfo: "Kewin Cosmos is a Dominican-American singer, songwriter, and producer born and raised in Brooklyn, New York, to Dominican parents. Having spent part of his childhood in Santiago, Dominican Republic, he developed a deep connection with bachata from an early age. He is notably known for his tracks 'Dile' and 'La Vecina'.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `No creo
+Que en las noches no pienses en mí
+Uno no olvida no más porque sí
+Yo cada champagne que destapo en la disco es por ti
+
+Parece que no, pero sí me dolió
+Verte con el cabrón, que decías que no
+Que nada que ver
+Y hoy te duermes con él
+
+Baby, tú estás durmiendo en la cama equivocada
+Y yo aquí hago lo mismo cada fin de semana
+Ni ganas tengo de salir con los camaradas
+¿Pa qué te largabas?, tan feliz que estaba
+
+Baby, tú estás besando los labios incorrectos
+Estás con un pendejo, y lo digo con respeto
+Él te va a hacer lo mismo, mami, no pierdas tiempo
+No hay vato perfecto, por cierto, lo siento
+
+Perdón
+Oh-oh-oh, perdón
+Oh-oh-oh, perdón
+No hay vato perfecto, por cierto, lo siento
+
+Yo sé que soy el primer lugar en la lista de tus decepciones
+Que con otros tattoos quieres taparte mi nombre
+Te di mil razones pa' que tus amigas te digan
+"Güey, no lo perdones"
+
+Pero acepta que me extrañas, bebé
+Y aquellas noches de hotel, cuando jurabas también
+Que conmigo tú siempre te quedarías
+Y se quedó, pero mi cama vacía
+
+Baby, tú estás durmiendo en la cama equivocada
+Y yo aquí hago lo mismo cada fin de semana
+Ni ganas tengo de salir con los camaradas
+¿Pa qué te largabas?, tan feliz que estaba
+
+Baby, tú estás besando los labios incorrectos
+Estás con un pendejo y lo digo con respeto
+Él te va a hacer lo mismo, mami, no pierdas tiempo
+No hay vato perfecto, por cierto, lo siento
+
+Perdón
+Oh-oh-oh, perdón
+Oh-oh-oh, perdón
+No hay vato perfecto, por cierto, lo siento`,
+      fr: `Je ne crois pas
+Que la nuit tu ne penses pas à moi
+On n'oublie pas juste comme ça, sans raison
+Chaque champagne que j'ouvre en boîte, c'est pour toi
+
+Ça en a pas l'air, mais ça m'a fait mal
+Te voir avec ce type, alors que tu disais que non
+Que ça n'avait rien à voir
+Et aujourd'hui tu dors avec lui
+
+Bébé, tu dors dans le mauvais lit
+Et moi ici je fais pareil chaque week-end
+Je n'ai même plus envie de sortir avec les potes
+Pour quoi tu es partie ?, j'étais tellement heureux
+
+Bébé, tu embrasses les mauvaises lèvres
+Tu es avec un idiot, et je le dis avec respect
+Il va te faire la même chose, mami, ne perds pas ton temps
+Il n'y a pas de gars parfait, d'ailleurs, je suis désolé
+
+Pardon
+Oh-oh-oh, pardon
+Oh-oh-oh, pardon
+Il n'y a pas de gars parfait, d'ailleurs, je suis désolé
+
+Je sais que je suis en tête de liste de tes déceptions
+Que tu veux couvrir mon prénom avec d'autres tatouages
+Je t'ai donné mille raisons pour que tes amies te disent
+"Ma chérie, ne lui pardonne pas"
+
+Mais admets que tu me manques, bébé
+Et ces nuits d'hôtel, quand tu jurais aussi
+Que tu resterais toujours avec moi
+Et elle est restée, mais mon lit est vide
+
+Bébé, tu dors dans le mauvais lit
+Et moi ici je fais pareil chaque week-end
+Je n'ai même plus envie de sortir avec les potes
+Pour quoi tu es partie ?, j'étais tellement heureux
+
+Bébé, tu embrasses les mauvaises lèvres
+Tu es avec un idiot, et je le dis avec respect
+Il va te faire la même chose, mami, ne perds pas ton temps
+Il n'y a pas de gars parfait, d'ailleurs, je suis désolé
+
+Pardon
+Oh-oh-oh, pardon
+Oh-oh-oh, pardon
+Il n'y a pas de gars parfait, d'ailleurs, je suis désolé`,
+      en: `I don't believe
+That at night you don't think of me
+You don't just forget for no reason
+Every champagne I pop at the club is for you
+
+It seems like it didn't, but it did hurt me
+To see you with that guy, the one you said meant nothing
+That it was nothing
+And today you're sleeping with him
+
+Baby, you are sleeping in the wrong bed
+And I'm here doing the same thing every weekend
+I don't even feel like going out with the guys
+Why did you leave?, I was so happy
+
+Baby, you are kissing the wrong lips
+You're with an idiot, and I say that with respect
+He's going to do the same to you, mami, don't waste your time
+There's no perfect guy, by the way, I'm sorry
+
+Forgive me
+Oh-oh-oh, forgive me
+Oh-oh-oh, forgive me
+There's no perfect guy, by the way, I'm sorry
+
+I know I'm at the top of your list of disappointments
+That you want to cover my name with other tattoos
+I gave you a thousand reasons for your friends to tell you
+"Girl, don't forgive him"
+
+But admit that you miss me, baby
+And those hotel nights, when you also swore
+That you would always stay with me
+And she stayed, but my bed is empty
+
+Baby, you are sleeping in the wrong bed
+And I'm here doing the same thing every weekend
+I don't even feel like going out with the guys
+Why did you leave?, I was so happy
+
+Baby, you are kissing the wrong lips
+You're with an idiot and I say that with respect
+He's going to do the same to you, mami, don't waste your time
+There's no perfect guy, by the way, I'm sorry
+
+Forgive me
+Oh-oh-oh, forgive me
+Oh-oh-oh, forgive me
+There's no perfect guy, by the way, I'm sorry`
+    }
+  },
+  {
+    id: "por-que-te-niegas-mickey-then-jr",
+    title: "Por Que Te Niegas",
+    artist: "Mickey Then ft. JR",
+    year: 2023,
+    dateAdded: "2026-04-22",
+    dancers: "Marco y Sara",
+    tags: ["Moderne", "Romantique", "Sensual"],
+    color: "#f59e0b",
+    spotify: "https://open.spotify.com/search/Por%20Que%20Te%20Niegas%20Mickey%20Then%20JR",
+    danceVideo: "ayfHSGV6IA8",
+    culture: {
+      context: "Sorti en juillet 2023, 'Por Que Te Niegas' est une collaboration entre Mickey Then et JR qui a rapidement séduit les pistes de danse du monde entier. Le titre est devenu un incontournable des soirées de bachata et est fréquemment utilisé dans les cours de danse en ligne.",
+      meaning: "La chanson parle d'un amour non partagé et du désir refoulé. Le narrateur exprime sa frustration de vouloir quelqu'un qui le repousse malgré une attirance évidente et mutuelle. La métaphore d'être « porté au ciel puis laissé tomber » et le refrain répétitif « Por qué te niegas en amarme » traduisent le tourbillon émotionnel de quelqu'un qui cherche une connexion plus profonde, en apparence hors de portée.",
+      artistInfo: "Mickey Then (né Yonathan Then le 25 juillet 1990 à New York) est un chanteur, compositeur et producteur dominicano-américain de bachata. Ancien membre du groupe 24 Horas, il est aussi un prolifique parolier pour des artistes majeurs comme Prince Royce, Don Omar et CNCO, et a décroché plusieurs récompenses BMI.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "Released in July 2023, 'Por Que Te Niegas' is a collaboration between Mickey Then and JR that quickly won over dancefloors worldwide. The track became a staple at bachata nights and is frequently used in online dance instruction.",
+      meaning: "The song talks about unrequited love and repressed desire. The narrator expresses frustration at wanting someone who keeps pushing away despite an obvious and mutual attraction. The metaphor of being 'lifted to the sky then dropped back down' and the repeated chorus convey the emotional rollercoaster of yearning for a deeper connection that seems out of reach.",
+      artistInfo: "Mickey Then (born Yonathan Then on July 25, 1990, in New York City) is a Dominican-American bachata singer, songwriter, and producer. A former member of the group 24 Horas, he is also a prolific songwriter for major artists like Prince Royce, Don Omar, and CNCO, and has earned multiple BMI Awards.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `No puedes negar que cuando yo estoy cerca no te puedes resistir
+Pero tu pasado siempre te aleja de mí
+Yo soy diferente, no lo ves que quiero hacerte feliz
+
+Me subes al cielo y me dejas caer
+Y vuelvo a tus brazos como un perro fiel
+Tan solo te quiero preguntar
+
+Por qué te niegas en amarme, bebe
+Si sientes fuego al mirarme, lo sé
+Que ganas sobran de besarme y yo también
+Muero por tenerte desnuda otra vez
+Por qué te niegas en amarme, bebe
+Si sientes fuego al mirarme, lo sé
+Que ganas sobran de besarme y yo también
+Muero por tenerte en mi cama otra vez
+
+JR, Mickey Then
+Is just different
+Es que muero porque estemos juntos, Rulay
+Dígale cuñado, esto es una gracia eterna
+Dice tócala Javier, sóbala, sóbala, sóbala
+
+Me subes al cielo y me dejas caer
+Y vuelvo a tus brazos como un perro fiel
+Tan solo te quiero preguntar
+
+Por qué te niegas en amarme, bebe
+Si sientes fuego al mirarme, lo sé
+Que ganas sobran de besarme y yo también
+Muero por tenerte en mi cama otra vez
+
+Mami, only you me tiene uh, di variando uh
+Lo hacemos a tu manera cuando tú quieras, donde tú quieras
+Ven que el tiempo está pasando y las ganas aumentando
+Si yo te gusto mi amor
+
+Por qué te niegas en amarme, bebe
+Si sientes fuego al mirarme, lo sé
+Que ganas sobran de besarme y yo también
+Muero por tenerte desnuda otra vez
+Por qué te niegas en amarme, bebe
+Si sientes fuego al mirarme, lo sé
+Que ganas sobran de besarme y yo también
+Muero por tenerte en mi cama otra vez
+
+Bailemos, que estés conmigo
+Tiene sentido, regálame una noche más
+Don't matter, baby, don't worry
+You can be my shorty even if it is just one last time`,
+      fr: `Tu ne peux pas nier que quand je suis près de toi, tu ne peux pas résister
+Mais ton passé te tient toujours éloignée de moi
+Je suis différent, tu ne vois pas que je veux te rendre heureuse
+
+Tu m'emportes au paradis et tu me laisses tomber
+Et je reviens dans tes bras comme un chien fidèle
+Je veux juste te demander
+
+Pourquoi refuses-tu de m'aimer, bébé ?
+Si tu ressens du feu quand tu me regardes, je le sais
+Tu as tellement envie de m'embrasser, moi aussi
+Je meurs d'envie de te tenir nue à nouveau
+Pourquoi refuses-tu de m'aimer, bébé ?
+Si tu ressens du feu quand tu me regardes, je le sais
+Tu as tellement envie de m'embrasser, moi aussi
+Je meurs d'envie de t'avoir dans mon lit à nouveau
+
+JR, Mickey Then
+C'est juste différent
+C'est que je meurs d'envie qu'on soit ensemble, Rulay
+Dis-lui, belle-frère, c'est une grâce éternelle
+Il dit joue-la Javier, joue-la, joue-la, joue-la
+
+Tu m'emportes au paradis et tu me laisses tomber
+Et je reviens dans tes bras comme un chien fidèle
+Je veux juste te demander
+
+Pourquoi refuses-tu de m'aimer, bébé ?
+Si tu ressens du feu quand tu me regardes, je le sais
+Tu as tellement envie de m'embrasser, moi aussi
+Je meurs d'envie de t'avoir dans mon lit à nouveau
+
+Maman, toi seule me fais ça uh, tu varies uh
+On le fait à ta manière quand tu veux, où tu veux
+Regarde le temps passe et l'envie grandit
+Si tu m'aimes mon amour
+
+Pourquoi refuses-tu de m'aimer, bébé ?
+Si tu ressens du feu quand tu me regardes, je le sais
+Tu as tellement envie de m'embrasser, moi aussi
+Je meurs d'envie de te tenir nue à nouveau
+Pourquoi refuses-tu de m'aimer, bébé ?
+Si tu ressens du feu quand tu me regardes, je le sais
+Tu as tellement envie de m'embrasser, moi aussi
+Je meurs d'envie de t'avoir dans mon lit à nouveau
+
+Dansons, que tu sois avec moi
+Ça a du sens, offre-moi une nuit de plus
+Ça ne fait rien, bébé, ne t'inquiète pas
+Tu peux être ma chérie même si c'est juste pour la toute dernière fois`,
+      en: `You can't deny that when I'm around you can't resist
+But your past always takes you away from me
+I am different, don't you see that I want to make you happy
+
+You take me to the sky and you let me fall
+And I return to your arms like a faithful dog
+I just want to ask you
+
+Why do you refuse to love me, baby?
+If you feel fire when you look at me, I know
+You have so much desire to kiss me and so do I
+I'm dying to have you naked again
+Why do you refuse to love me, baby?
+If you feel fire when you look at me, I know
+You have so much desire to kiss me and so do I
+I'm dying to have you in my bed again
+
+JR, Mickey Then
+Is just different
+I'm dying because we're together, Rulay
+Tell him brother, this is eternal grace
+He says play it Javier, play it, play it, play it
+
+You take me to the sky and you let me fall
+And I return to your arms like a faithful dog
+I just want to ask you
+
+Why do you refuse to love me, baby?
+If you feel fire when you look at me, I know
+You have so much desire to kiss me and so do I
+I'm dying to have you in my bed again
+
+Mommy, only you have me, uh, giving me variety uh
+We do it your way when you want, where you want
+See that time is passing and the desire is growing
+If you like me, my love
+
+Why do you refuse to love me, baby?
+If you feel fire when you look at me, I know
+You have so much desire to kiss me and so do I
+I'm dying to have you naked again
+Why do you refuse to love me, baby?
+If you feel fire when you look at me, I know
+You have so much desire to kiss me and so do I
+I'm dying to have you in my bed again
+
+Let's dance, you being with me
+Makes sense, give me one more night
+Don't matter, baby, don't worry
+You can be my shorty even if it is just one last time`
+    }
+  },
+  {
     id: "para-besarte-lean-akai",
     title: "Para Besarte",
     artist: "Lean & Akai",
