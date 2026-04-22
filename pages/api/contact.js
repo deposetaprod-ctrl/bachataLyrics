@@ -17,8 +17,8 @@ export default async function handler(req, res) {
       port: 465,
       secure: true,
       auth: {
-        user: 'maximilien.godeau@maximilien.digital',
-        pass: process.env.ZOHO_PASSWORD, // Mot de passe d'application Zoho
+        user: process.env.ZOHO_USER, // maximilien.godeau@maximilien.digital
+        pass: process.env.ZOHO_PASSWORD, // mot de passe d'application Zoho
       },
     });
 
