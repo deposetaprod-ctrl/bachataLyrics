@@ -12248,5 +12248,843 @@ Que je meure pour toi et le goût de ta bouche
 Les nuits s'allongent alors que le temps raccourcit
 Je suis sur le point de t'oublier, mais ce n'est pas encore mon tour`
     }
+  },
+  {
+    id: "sin-casarme-jr",
+    title: "Sin Casarme",
+    artist: "Jr.",
+    year: 2019,
+    dateAdded: "2026-05-24",
+    tags: ["Classique", "Romantique", "Sensual"],
+    color: "#e11d48",
+    spotify: "https://open.spotify.com/search/Sin%20Casarme%20Jr%20Infinito",
+    danceVideo: "7QW2hHVxjps",
+    culture: {
+      context: "Sorti en 2019 sur l'album 'Infinito', 'Sin Casarme' est l'un des titres phares de Jr., artiste dominicano-new-yorkais qui a su s'imposer dans la scène bachata contemporaine avec une signature vocale sensuelle mêlant influences R&B et bachata acoustique. Le morceau est devenu un incontournable des soirées bachata dans le monde entier.",
+      meaning: "La chanson dépeint un amour si fort et si profond que le narrateur se sent déjà marié à sa partenaire, sans avoir eu besoin de bague ni de cérémonie. Le refrain 'Soy tu marido sin casarme' (Je suis ton mari sans me marier) exprime un engagement total qui transcende les conventions sociales. L'outro anglophone 'Is this true love or is it not?' introduit une légère ambiguïté poétique sur la nature de ce lien.",
+      artistInfo: "Jr. (Junior Antonio Perez) est un artiste de bachata basé à New York, fils d'immigrants dominicains, qui a grandi bercé par les sonorités d'Aventura, de R&B américain et de soul. Son style fusionne la guitare acoustique traditionnelle de la bachata avec des productions électroniques modernes. Son album 'Infinito' (2019) lui a ouvert les portes de la reconnaissance internationale.",
+      album: "Infinito"
+    },
+    culture_en: {
+      context: "Released in 2019 on the album 'Infinito', 'Sin Casarme' is one of the standout tracks from Jr., a Dominican New York-based artist who carved his niche in the contemporary bachata scene with a sensual vocal style blending R&B and acoustic bachata influences. The song became a staple at bachata nights worldwide.",
+      meaning: "The song portrays a love so intense that the narrator already feels married to his partner — no ring, no ceremony needed. The chorus 'Soy tu marido sin casarme' (I'm your husband without getting married) expresses total commitment that transcends social conventions. The English outro 'Is this true love or is it not?' adds a subtle poetic ambiguity about the true nature of this bond.",
+      artistInfo: "Jr. (Junior Antonio Perez) is a New York-based bachata artist of Dominican descent, who grew up listening to Aventura, American R&B, and soul. His sound merges traditional acoustic bachata guitar with modern electronic production. His album 'Infinito' (2019) brought him international recognition.",
+      album: "Infinito"
+    },
+    lyrics: {
+      es: `Hasta que la muerte nos separe
+Hasta que la muerte nos separe
+
+Yo sé que nada en la vida es fijo
+Pero cada vez que tú me besas me siento comprometido
+No puedo divorciarme del sentido
+Te propusiste en dos rodillas y no traes un anillo
+
+Haciendo cosas malas tú y yo
+Contigo siempre hay ganas de sexo
+Mira cómo me enamoraste
+Soy tu marido sin casarme
+Haciendo cosas malas tú y yo
+Contigo siempre hay ganas de sexo
+Hasta que la muerte nos separe
+Soy tu marido sin casarme
+
+This is different
+JR
+Quítate la ropa, móntate encima
+Que mi nave espacial quiere despegar
+A nuestra luna de miel
+Que no se acabe el placer
+Y que tu orgasmo bendiga el matrimonio
+
+Haciendo cosas malas tú y yo
+Contigo siempre hay ganas de sexo
+Mira cómo me enamoraste
+Soy tu marido sin casarme
+Haciendo cosas malas tú y yo
+Contigo siempre hay ganas de sexo
+Hasta que la muerte nos separe
+Soy tu marido sin casarme
+Haciendo cosas malas tú y yo
+Contigo siempre hay ganas de sexo
+Mira cómo me enamoraste
+Soy tu marido sin casarme
+Haciendo cosas malas tú y yo
+Contigo siempre hay ganas de sexo
+Hasta que la muerte nos separe
+Soy tu marido sin casarme
+
+Hasta que la muerte nos separe
+Soy tu marido sin casarme
+Hasta que la muerte nos separe
+Oh, soy tu marido sin casarme
+Hasta que la muerte nos separe
+Sin casarme
+Is this true love or is it not?
+Hasta que la muerte nos separe
+Is this true love or is it not?`,
+      fr: `Jusqu'à ce que la mort nous sépare
+Jusqu'à ce que la mort nous sépare
+
+Je sais que rien dans la vie n'est fixe
+Mais chaque fois que tu m'embrasses je me sens engagé
+Je ne peux pas divorcer de ce sentiment
+Tu t'es proposée à deux genoux et tu ne portes pas de bague
+
+On fait de mauvaises choses, toi et moi
+Avec toi l'envie de te désirer est toujours là
+Regarde comment tu m'as fait tomber amoureux
+Je suis ton mari sans me marier
+On fait de mauvaises choses, toi et moi
+Avec toi l'envie de te désirer est toujours là
+Jusqu'à ce que la mort nous sépare
+Je suis ton mari sans me marier
+
+C'est différent
+JR
+Enlève tes vêtements, monte sur moi
+Mon vaisseau spatial veut décoller
+Vers notre lune de miel
+Que le plaisir ne s'arrête pas
+Et que ton orgasme bénisse le mariage
+
+On fait de mauvaises choses, toi et moi
+Avec toi l'envie de te désirer est toujours là
+Regarde comment tu m'as fait tomber amoureux
+Je suis ton mari sans me marier
+On fait de mauvaises choses, toi et moi
+Avec toi l'envie de te désirer est toujours là
+Jusqu'à ce que la mort nous sépare
+Je suis ton mari sans me marier
+On fait de mauvaises choses, toi et moi
+Avec toi l'envie de te désirer est toujours là
+Regarde comment tu m'as fait tomber amoureux
+Je suis ton mari sans me marier
+On fait de mauvaises choses, toi et moi
+Avec toi l'envie de te désirer est toujours là
+Jusqu'à ce que la mort nous sépare
+Je suis ton mari sans me marier
+
+Jusqu'à ce que la mort nous sépare
+Je suis ton mari sans me marier
+Jusqu'à ce que la mort nous sépare
+Oh, je suis ton mari sans me marier
+Jusqu'à ce que la mort nous sépare
+Sans me marier
+Est-ce du vrai amour ou pas ?
+Jusqu'à ce que la mort nous sépare
+Est-ce du vrai amour ou pas ?`,
+      en: `Till death do us part
+Till death do us part
+
+I know nothing in life is set in stone
+But every time you kiss me I feel committed
+I can't divorce myself from this feeling
+You got down on two knees and you don't even have a ring
+
+Doing bad things, you and I
+With you there's always a desire for more
+Look how you made me fall in love
+I'm your husband without getting married
+Doing bad things, you and I
+With you there's always a desire for more
+Till death do us part
+I'm your husband without getting married
+
+This is different
+JR
+Take off your clothes, get on top of me
+My spaceship wants to take off
+To our honeymoon
+May the pleasure never end
+And may your orgasm bless our marriage
+
+Doing bad things, you and I
+With you there's always a desire for more
+Look how you made me fall in love
+I'm your husband without getting married
+Doing bad things, you and I
+With you there's always a desire for more
+Till death do us part
+I'm your husband without getting married
+Doing bad things, you and I
+With you there's always a desire for more
+Look how you made me fall in love
+I'm your husband without getting married
+Doing bad things, you and I
+With you there's always a desire for more
+Till death do us part
+I'm your husband without getting married
+
+Till death do us part
+I'm your husband without getting married
+Till death do us part
+Oh, I'm your husband without getting married
+Till death do us part
+Without getting married
+Is this true love or is it not?
+Till death do us part
+Is this true love or is it not?`
+    }
+  },
+  {
+    id: "esa-mujer-luis-vargas",
+    title: "Esa Mujer",
+    artist: "Luis Vargas",
+    year: 1990,
+    dateAdded: "2026-05-24",
+    tags: ["Classique", "Traditionnel", "Romantique"],
+    color: "#f97316",
+    spotify: "https://open.spotify.com/search/Esa%20Mujer%20Luis%20Vargas%20bachata",
+    danceVideo: "QbLR75mTnPw",
+    culture: {
+      context: "Sorti en 1990 sur l'album 'El Tomate', 'Esa Mujer' est l'un des titres les plus emblématiques de Luis Vargas et un véritable classique de la bachata traditionnelle dominicaine. Le morceau a traversé les décennies et reste un incontournable des soirées bachata du monde entier, souvent cité parmi les standards du genre aux côtés des grands noms comme Anthony Santos ou Juan Luis Guerra.",
+      meaning: "La chanson raconte la douleur d'un homme abandonné par la femme qu'il aimait, partie avec quelqu'un venu d'un village lointain. Le narrateur tente de 's'effacer' ce souvenir ('la borraré') tout en avouant son insomnio et la présence obsédante de sa voix. L'humour teinté de mélancolie de l'outro — demander une serviette, s'essuyer la sueur — est typique du style expressif et populaire de Luis Vargas.",
+      artistInfo: "Luis Vargas (né le 23 mai 1961 à Monte Cristi, République dominicaine) est l'un des pionniers de la bachata moderne. Il a révolutionné le genre en intégrant des pédales d'effets pour guitare (notamment la pédale de chorus) et des micros humbucker, transformant profondément le son de la bachata. En 1996, il est devenu le premier artiste de bachata à signer avec Sony Music Latin. Au début des années 1990, Anthony Santos a joué de la güira dans son groupe avant de lancer sa propre carrière.",
+      album: "El Tomate"
+    },
+    culture_en: {
+      context: "Released in 1990 on the album 'El Tomate', 'Esa Mujer' is one of Luis Vargas's most iconic tracks and a true classic of traditional Dominican bachata. The song has endured through the decades and remains a staple at bachata nights worldwide, frequently cited among the genre's standards alongside Anthony Santos and Juan Luis Guerra.",
+      meaning: "The song tells the pain of a man abandoned by the woman he loved, who left with someone from a distant town. The narrator tries to 'erase' ('borrar') the memory of her, while confessing his insomnia and being haunted by her voice. The bittersweet humor of the outro — asking for a towel, wiping off the sweat — is typical of Luis Vargas's expressive, folk-rooted style.",
+      artistInfo: "Luis Vargas (born May 23, 1961, in Monte Cristi, Dominican Republic) is one of the pioneers of modern bachata. He revolutionized the genre by introducing guitar effect pedals (notably the chorus pedal) and humbucker pickups, profoundly transforming bachata's sound. In 1996, he became the first bachata artist to sign with Sony Music Latin. In the early 1990s, Anthony Santos played güira in his band before launching his own career.",
+      album: "El Tomate"
+    },
+    lyrics: {
+      es: `De tanto andar, una madre de un niño
+De poca edad, de baja estatura
+De pelo rizado, de un cuerpo adorable
+Yo conocí
+Una hermosa mujer que me hizo sentir
+Que aún había tiempo, que solo era el comienzo
+Que todo lo vivido era solo el reflejo
+De lo que pasaría cuando la conocí
+
+Esa mujer de la que hoy le hablo
+Con el pecho desecho, esa mujer
+Mi cuarto, mi carro, mi cama y mi radio
+Oh, lleno de recuerdos, todo ella lo dejó
+Y hoy se ha marchado dejando una duda
+No sé si me quiso, si me traicionó
+Como me contó el que presenció
+Que otro llegó de un pueblo lejano buscándola a ella
+Pero así pasó
+
+Pero a esa mujer (La borraré)
+A esa mujer (La borraré)
+A esa mujer (La borraré)
+La borraré (La borraré)
+A esa mujer (La borraré)
+La borraré (La borraré)
+A esa mujer (La borraré)
+La borraré (La borraré)
+
+No sé con qué
+Si con gasolina
+O papel de lija
+O tine o gasoil
+
+Pero a esa mujer yo la borraré (La borraré)
+A esa mujer (La borraré)
+La borraré (La borraré)
+A esa mujer (La borraré)
+La borraré
+
+De noche tengo insomnio, no puedo dormir
+Yo siento su voz, su cuerpo caliente
+Su voz que me dice: "papi, ven pa'cá
+Papi, echa pa'cá; papi, venga a bañarte"
+
+Pero a esa mujer yo la borraré (La borraré)
+A esa mujer (La borraré)
+La borraré (La borraré)
+A esa mujer (La borraré)
+La borraré (La borraré)
+
+A esa mujer (La borraré)
+La borraré, la borraré (La borraré)
+La borraré (La borraré)
+La borraré (La borraré)
+
+De noche tengo insomnio, no puedo dormir
+Yo siento su voz, su cuerpo caliente
+Su voz que me dice: "papi, ven pa'cá
+Papi, venga a comer; papi, venga a bañarte"
+
+Pero a esa mujer yo la borraré, la borraré (La borraré)
+A esa mujer (La borraré)
+La borraré (La borraré)
+De mi pensamiento (La borraré)
+De mi vida (La borraré)
+De mi cuerpo (La borraré)
+De mi mente (La borraré)
+De mi amor (La borraré)
+De mi existencia (La borraré)
+A esa mujer (La borraré)
+Yo la borraré (La borraré)
+
+La borraré, la borraré
+La borraré, la borraré
+La borraré, la borraré
+La borraré, la borraré
+La borraré, la borraré
+La borraré, la borraré
+La borraré, ay, mamá (La borraré)
+La borraré, la borraré
+La borraré, la borraré
+La borraré, tírame la toalla (La borraré)
+La toalla (La borraré)
+La toalla
+Échenme fre'co
+Séquenme el sudor`,
+      fr: `En marchant tant, une mère d'un enfant
+En bas âge, de petite taille
+Aux cheveux bouclés, au corps adorable
+Je l'ai connue
+Une belle femme qui m'a fait sentir
+Qu'il y avait encore du temps, que ce n'était que le début
+Que tout ce que j'avais vécu n'était que le reflet
+De ce qui arriverait quand je l'ai connue
+
+Cette femme dont je vous parle aujourd'hui
+Le cœur en miettes, cette femme
+Ma chambre, ma voiture, mon lit et ma radio
+Oh, remplis de souvenirs, elle a tout laissé
+Et aujourd'hui elle est partie en laissant un doute
+Je ne sais pas si elle m'aimait, si elle m'a trahi
+Comme me l'a raconté celui qui a été témoin
+Qu'un autre est venu d'un village lointain la chercher
+Mais c'est ainsi que ça s'est passé
+
+Mais cette femme (Je l'effacerai)
+Cette femme (Je l'effacerai)
+Cette femme (Je l'effacerai)
+Je l'effacerai (Je l'effacerai)
+Cette femme (Je l'effacerai)
+Je l'effacerai (Je l'effacerai)
+Cette femme (Je l'effacerai)
+Je l'effacerai (Je l'effacerai)
+
+Je ne sais pas avec quoi
+Si avec de l'essence
+Ou du papier de verre
+Ou de la teinture ou du gasoil
+
+Mais cette femme, je l'effacerai (Je l'effacerai)
+Cette femme (Je l'effacerai)
+Je l'effacerai (Je l'effacerai)
+Cette femme (Je l'effacerai)
+Je l'effacerai
+
+La nuit j'ai de l'insomnie, je ne peux pas dormir
+Je sens sa voix, son corps chaud
+Sa voix qui me dit : "chéri, viens ici
+Chéri, viens par ici ; chéri, viens te baigner"
+
+Mais cette femme, je l'effacerai (Je l'effacerai)
+Cette femme (Je l'effacerai)
+Je l'effacerai (Je l'effacerai)
+Cette femme (Je l'effacerai)
+Je l'effacerai (Je l'effacerai)
+
+Cette femme (Je l'effacerai)
+Je l'effacerai, je l'effacerai (Je l'effacerai)
+Je l'effacerai (Je l'effacerai)
+Je l'effacerai (Je l'effacerai)
+
+La nuit j'ai de l'insomnie, je ne peux pas dormir
+Je sens sa voix, son corps chaud
+Sa voix qui me dit : "chéri, viens ici
+Chéri, viens manger ; chéri, viens te baigner"
+
+Mais cette femme, je l'effacerai, je l'effacerai (Je l'effacerai)
+Cette femme (Je l'effacerai)
+Je l'effacerai (Je l'effacerai)
+De ma pensée (Je l'effacerai)
+De ma vie (Je l'effacerai)
+De mon corps (Je l'effacerai)
+De mon esprit (Je l'effacerai)
+De mon amour (Je l'effacerai)
+De mon existence (Je l'effacerai)
+Cette femme (Je l'effacerai)
+Je l'effacerai (Je l'effacerai)
+
+Je l'effacerai, je l'effacerai
+Je l'effacerai, je l'effacerai
+Je l'effacerai, je l'effacerai
+Je l'effacerai, je l'effacerai
+Je l'effacerai, je l'effacerai
+Je l'effacerai, je l'effacerai
+Je l'effacerai, oh, maman (Je l'effacerai)
+Je l'effacerai, je l'effacerai
+Je l'effacerai, je l'effacerai
+Je l'effacerai, passe-moi la serviette (Je l'effacerai)
+La serviette (Je l'effacerai)
+La serviette
+Rafraîchissez-moi
+Essuyez-moi la sueur`,
+      en: `Walking so much, the mother of a child
+A young child, of small stature
+With curly hair, with an adorable body
+I met her
+A beautiful woman who made me feel
+That there was still time, that it was only the beginning
+That everything I had lived was only the reflection
+Of what would happen when I met her
+
+That woman I speak of today
+With a broken heart, that woman
+My room, my car, my bed and my radio
+Oh, full of memories, she left it all
+And today she has gone, leaving a doubt
+I don't know if she loved me, if she betrayed me
+As told to me by the one who witnessed
+That another man came from a faraway town looking for her
+But that's how it went
+
+But that woman (I'll erase her)
+That woman (I'll erase her)
+That woman (I'll erase her)
+I'll erase her (I'll erase her)
+That woman (I'll erase her)
+I'll erase her (I'll erase her)
+That woman (I'll erase her)
+I'll erase her (I'll erase her)
+
+I don't know with what
+Maybe with gasoline
+Or sandpaper
+Or dye or diesel
+
+But that woman, I'll erase her (I'll erase her)
+That woman (I'll erase her)
+I'll erase her (I'll erase her)
+That woman (I'll erase her)
+I'll erase her
+
+At night I have insomnia, I can't sleep
+I feel her voice, her warm body
+Her voice saying to me: "daddy, come here
+Daddy, come this way; daddy, come take a bath"
+
+But that woman, I'll erase her (I'll erase her)
+That woman (I'll erase her)
+I'll erase her (I'll erase her)
+That woman (I'll erase her)
+I'll erase her (I'll erase her)
+
+That woman (I'll erase her)
+I'll erase her, I'll erase her (I'll erase her)
+I'll erase her (I'll erase her)
+I'll erase her (I'll erase her)
+
+At night I have insomnia, I can't sleep
+I feel her voice, her warm body
+Her voice saying to me: "daddy, come here
+Daddy, come eat; daddy, come take a bath"
+
+But that woman, I'll erase her, I'll erase her (I'll erase her)
+That woman (I'll erase her)
+I'll erase her (I'll erase her)
+From my thoughts (I'll erase her)
+From my life (I'll erase her)
+From my body (I'll erase her)
+From my mind (I'll erase her)
+From my love (I'll erase her)
+From my existence (I'll erase her)
+That woman (I'll erase her)
+I'll erase her (I'll erase her)
+
+I'll erase her, I'll erase her
+I'll erase her, I'll erase her
+I'll erase her, I'll erase her
+I'll erase her, I'll erase her
+I'll erase her, I'll erase her
+I'll erase her, I'll erase her
+I'll erase her, oh, mama (I'll erase her)
+I'll erase her, I'll erase her
+I'll erase her, I'll erase her
+I'll erase her, throw me the towel (I'll erase her)
+The towel (I'll erase her)
+The towel
+Cool me down
+Wipe off my sweat`
+    }
+  },
+  {
+    id: "besito-a-besito-luis-miguel-del-amargue",
+    title: "Besito a Besito",
+    artist: "Luis Miguel Del Amargue",
+    year: 2008,
+    dateAdded: "2026-05-24",
+    tags: ["Classique", "Romantique", "Traditionnel"],
+    color: "#ec4899",
+    spotify: "https://open.spotify.com/search/Besito%20a%20Besito%20Luis%20Miguel%20Del%20Amargue",
+    danceVideo: "2hgHrkAiHSU",
+    culture: {
+      context: "Sorti le 10 septembre 2008 sur l'album 'De Rodillas Te Pido', 'Besito a Besito' est l'un des titres les plus doux et romantiques du répertoire de Luis Miguel Del Amargue. Ce morceau illustre parfaitement son style bachata traditionnel teinté de romantisme sincère, qui lui a valu une grande popularité aussi bien en République dominicaine qu'en Europe, notamment en Espagne où il a longtemps résidé.",
+      meaning: "La chanson est une déclaration d'amour tendre et sensuelle. Le narrateur exprime son désir d'être aux côtés de la femme aimée, de la couvrir de baisers petit à petit ('besito a besito'), et de partager avec elle tout l'amour qu'il porte en lui. Le refrain répétitif 'poquito a poquito, besito a besito' crée une douceur hypnotique, typique de la bachata romantique.",
+      artistInfo: "Luis Miguel Del Amargue (né le 12 mars 1977 à Las Terrenas, Azua de Compostela, République dominicaine) est l'un des grands noms de la bachata traditionnelle. Surnommé 'El Tumba Brios', il débute sa carrière solo en 1994 avec le single 'Entregado a ti' après avoir chanté dans le groupe Los Auténticos del Sur. Il s'installe en Espagne pendant une décennie et y acquiert une notoriété considérable. Récompensé du titre 'Bachatero del Año' aux Premios Soberano, il fait partie des artistes ayant contribué à exporter la bachata traditionnelle en Europe.",
+      album: "De Rodillas Te Pido"
+    },
+    culture_en: {
+      context: "Released on September 10, 2008, on the album 'De Rodillas Te Pido', 'Besito a Besito' is one of the most tender and romantic tracks in Luis Miguel Del Amargue's catalog. The song perfectly embodies his traditional bachata style infused with heartfelt romanticism, which earned him widespread popularity in the Dominican Republic and across Europe, particularly in Spain where he lived for many years.",
+      meaning: "The song is a gentle and sensual love declaration. The narrator expresses his desire to be by his loved one's side, to shower her with kisses little by little ('besito a besito'), and to share with her all the love he carries within. The repetitive chorus 'poquito a poquito, besito a besito' creates a hypnotic sweetness, typical of romantic bachata.",
+      artistInfo: "Luis Miguel Del Amargue (born March 12, 1977, in Las Terrenas, Azua de Compostela, Dominican Republic) is one of the great names of traditional bachata. Nicknamed 'El Tumba Brios', he launched his solo career in 1994 with the single 'Entregado a ti' after singing with the group Los Auténticos del Sur. He settled in Spain for a decade, gaining considerable fame there. A 'Bachatero del Año' (Bachata Artist of the Year) award winner at the Premios Soberano, he is one of the key artists who helped export traditional bachata to Europe.",
+      album: "De Rodillas Te Pido"
+    },
+    lyrics: {
+      es: `Me gustaría hacerte el amor
+Me gustaría colmarte de besos
+Y junto a ti, despertar en tu cuello
+Te juro amor, es lo que más quiero
+Porque contigo todo es tan distinto
+Por eso quiero comerte a besitos
+
+Poquito a poquito, besito a besito
+Poquito a poquito, besito a besito
+
+Me gusta estar a tu lado
+Porque de ti estoy enamorado
+Mi corazón no aguanta la presión
+Por eso quiero colmarte de amor
+
+Poquito a poquito, besito a besito
+Poquito a poquito, besito a besito
+
+Románticamente
+Luis Miguel Del Amargue
+El Tumba Brios ¡mambo!
+Sólo yo, Luis Miguel Del Amargue
+
+Todo este amor que llevo conmigo
+Te lo regalo, cariñito mío
+Porque me siento tan enamorado
+Por eso quiero tenerte a mi lado
+Es que me siento tan enamorado
+Por eso quiero tenerte a mi lado
+
+Poquito a poquito, besito a besito
+Poquito a poquito, besito a besito
+
+Me gusta estar a tu lado
+Porque de ti estoy enamorado
+Mi corazón no aguanta la presión
+Por eso quiero colmarte de amor
+
+Poquito a poquito, besito a besito
+Poquito a poquito, besito a besito
+Poquito a poquito, besito a besito`,
+      fr: `J'aimerais te faire l'amour
+J'aimerais te couvrir de baisers
+Et près de toi, me réveiller dans ton cou
+Je te jure mon amour, c'est ce que je veux le plus
+Parce qu'avec toi tout est tellement différent
+C'est pourquoi je veux te dévorer de petits baisers
+
+Petit à petit, bisou par bisou
+Petit à petit, bisou par bisou
+
+J'aime être à tes côtés
+Parce que je suis amoureux de toi
+Mon cœur ne supporte pas la pression
+C'est pourquoi je veux te combler d'amour
+
+Petit à petit, bisou par bisou
+Petit à petit, bisou par bisou
+
+Romantiquement
+Luis Miguel Del Amargue
+El Tumba Brios, mambo !
+Moi seul, Luis Miguel Del Amargue
+
+Tout cet amour que je porte en moi
+Je te l'offre, mon petit chéri
+Parce que je me sens tellement amoureux
+C'est pourquoi je veux t'avoir à mes côtés
+C'est que je me sens tellement amoureux
+C'est pourquoi je veux t'avoir à mes côtés
+
+Petit à petit, bisou par bisou
+Petit à petit, bisou par bisou
+
+J'aime être à tes côtés
+Parce que je suis amoureux de toi
+Mon cœur ne supporte pas la pression
+C'est pourquoi je veux te combler d'amour
+
+Petit à petit, bisou par bisou
+Petit à petit, bisou par bisou
+Petit à petit, bisou par bisou`,
+      en: `I would love to make love to you
+I would love to shower you with kisses
+And next to you, wake up nuzzled in your neck
+I swear to you my love, it's what I want the most
+Because with you everything is so different
+That's why I want to cover you in little kisses
+
+Little by little, kiss by kiss
+Little by little, kiss by kiss
+
+I love being by your side
+Because I am in love with you
+My heart can't handle the pressure
+That's why I want to fill you with love
+
+Little by little, kiss by kiss
+Little by little, kiss by kiss
+
+Romantically
+Luis Miguel Del Amargue
+El Tumba Brios, mambo!
+Only me, Luis Miguel Del Amargue
+
+All this love I carry within me
+I give it to you, my dear
+Because I feel so in love
+That's why I want to have you by my side
+It's that I feel so in love
+That's why I want to have you by my side
+
+Little by little, kiss by kiss
+Little by little, kiss by kiss
+
+I love being by your side
+Because I am in love with you
+My heart can't handle the pressure
+That's why I want to fill you with love
+
+Little by little, kiss by kiss
+Little by little, kiss by kiss
+Little by little, kiss by kiss`
+    }
+  },
+  {
+    id: "una-vuelta-pinto-picasso",
+    title: "Una Vuelta",
+    artist: "Pinto Picasso",
+    year: 2018,
+    dateAdded: "2026-05-24",
+    tags: ["Moderne", "Sensual", "Urbain"],
+    color: "#7c3aed",
+    spotify: "https://open.spotify.com/search/Una%20Vuelta%20Pinto%20Picasso",
+    danceVideo: "pkiaSDsaXpY",
+    culture: {
+      context: "Sorti le 2 mars 2018 en tant que single, 'Una Vuelta' est l'un des titres qui a propulsé Pinto Picasso sur la scène bachata internationale. Le morceau fusionne la bachata avec des influences R&B et urban, une signature que l'artiste porto-ricain a su imposer bien avant la vague de l'urban bachata. La chanson est devenue un classique des soirées sensual bachata dans le monde entier.",
+      meaning: "La chanson met en scène un homme qui tente de convaincre une femme engagée dans une mauvaise relation de le rejoindre, le tout dans une spontanéité assumée — pas de plan, juste l'instant présent. Les métaphores culinaires ('filete miñón') et l'insistance sur la liberté et le plaisir non planifié reflètent le ton à la fois séducteur et complice propre à Pinto Picasso.",
+      artistInfo: "Pinto Picasso (David Alberto Pinto Arzón) est un artiste multidisciplinaire porto-ricain, coach vocal de stars du reggaeton et pionnier de la fusion Bachata/R&B. Avant de s'imposer comme chanteur, il a forgé sa réputation dans les coulisses de l'industrie musicale latine. 'Una Vuelta' a été l'un de ses premiers grands succès en tant qu'interprète de bachata, ouvrant la voie à des projets ultérieurs comme l'album 'Casagemas' (2024).",
+      album: "Single"
+    },
+    culture_en: {
+      context: "Released on March 2, 2018 as a single, 'Una Vuelta' is one of the tracks that launched Pinto Picasso onto the international bachata scene. The song blends bachata with R&B and urban influences — a signature the Puerto Rican artist established well before the urban bachata wave. It has since become a staple at sensual bachata nights worldwide.",
+      meaning: "The song portrays a man trying to convince a woman stuck in a bad relationship to meet him spontaneously — no plans, just the moment. Culinary metaphors ('filete miñón') and the emphasis on unplanned pleasure and freedom reflect Pinto Picasso's signature seductive yet complicit tone.",
+      artistInfo: "Pinto Picasso (David Alberto Pinto Arzón) is a multidisciplinary Puerto Rican artist, vocal coach to reggaeton stars, and pioneer of the Bachata/R&B fusion. Before establishing himself as a performer, he built his reputation behind the scenes of the Latin music industry. 'Una Vuelta' was one of his first major hits as a bachata artist, paving the way for later projects like the album 'Casagemas' (2024).",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Ohh
+Oh baby
+Picasso baby, yeh
+¿Qué tú crees si te busco y lo hacemo' en el carro parqueao'?
+Lo' asientos en cuero y los cristales limpiao'
+Todo es más rico si no se planifica
+Dame solo un ratito, dime en dónde te ubicas, babe
+Si te llama, ignóralo y echa el celu' pal' lao'
+Si te pregunta luego, dile que no estaba cargao'
+Todo es más rico si no se planifica
+Voy de camino
+
+Dime si paso por ti ahora
+Que estoy loco por pasar las horas
+En alguna parte tú y yo a solas, ya
+Si me dices ven, vamos de cero a cien
+Dime si paso por ti ahora
+Dime, si me tiro pa' tu zona
+Sin tocar, el Guille, me controla, ya
+Quiero irte a ver
+Si me dices ven, vamos de cero a cien, baby
+
+Voy chequeando las señales, esperando tus señal
+Ya me confesaste todo y no hay más nada que hablar
+No le aguantes más, stop ese cabrón
+El tipo es un cerdo y tú eres un sendo filete miñón
+Es una metáfora, baby
+Yo sé que tú me entiendes
+Sin tenerte de frente
+Yo sé bien lo que sientes, ohh
+No le aguantes más, stop ese cabrón
+El tipo es un cerdo y tú eres un sendo filete miñón
+Tengo un programa de placeres para ti sin comerciales
+Cambia' todos los canales, con solo un botón de las naves
+Yo quiero que te prepares, para que esto no se acabe
+Aunque yo estoy manejando, tú eres quien tiene la llave
+How long are you gonna think about it?
+You stay alone, he's never home and he never gonna do a thing about it
+Baby, tú sabes que no importa la hora, si es por mí nunca te quedas sola
+No oh ohh
+
+Dime si paso por ti ahora
+Que estoy loco por pasar las horas
+En alguna parte tú y yo a solas, ya
+Si me dices ven, vamos de cero a cien
+Dime si paso por ti ahora
+Dime, si me tiro pa' tu zona
+Sin tocar, el Guille, me controla, ya
+Quiero irte a ver
+Si me dices ven, vamos de cero a cien, baby
+
+De cero a cien, baby, ohh
+Si tú me dices ven, baby
+Para yo amarte bien baby, baby
+¿Qué tú crees si te busco y lo hacemo' en el carro parqueao'?
+Lo' asientos en cuero y los cristales limpiao'
+Todo es más rico si no se planifica
+Voy de camino
+
+Dime si paso por ti ahora
+Que estoy loco por pasar las horas
+En alguna parte tú y yo a solas, ya
+Si me dices ven, vamos de cero a cien
+Dime si paso por ti ahora
+Dime, si me tiro pa' tu zona
+Sin tocar, el Guille, me controla, ya
+Quiero irte a ver
+Si me dices ven, vamos de cero a cien, baby`,
+      fr: `Ohh
+Oh bébé
+Picasso baby, yeh
+Et si j'allais te chercher et qu'on le faisait dans la voiture garée ?
+Les sièges en cuir et les vitres bien propres
+Tout est meilleur quand ce n'est pas planifié
+Donne-moi juste un petit moment, dis-moi où tu te trouves, babe
+S'il t'appelle, ignore-le et pose ton téléphone de côté
+S'il te pose des questions après, dis-lui qu'il n'était pas chargé
+Tout est meilleur quand ce n'est pas planifié
+Je suis en chemin
+
+Dis-moi si je passe te chercher maintenant
+Car je suis fou de passer les heures
+Quelque part toi et moi seuls, déjà
+Si tu me dis viens, on passe de zéro à cent
+Dis-moi si je passe te chercher maintenant
+Dis-moi, si je fonce vers ton coin
+Sans même le toucher, Guille me contrôle, déjà
+Je veux aller te voir
+Si tu me dis viens, on passe de zéro à cent, bébé
+
+Je vérifie les signaux, j'attends tes signes
+Tu m'as déjà tout avoué et il n'y a plus rien à dire
+N'en supporte plus, stop ce connard
+Ce type est un porc et toi tu es un beau filet mignon
+C'est une métaphore, bébé
+Je sais que tu me comprends
+Sans t'avoir en face de moi
+Je sais bien ce que tu ressens, ohh
+N'en supporte plus, stop ce connard
+Ce type est un porc et toi tu es un beau filet mignon
+J'ai un programme de plaisirs pour toi sans publicités
+Change toutes les chaînes, avec un seul bouton des vaisseaux
+Je veux que tu te prépares, pour que ça ne s'arrête pas
+Même si je conduis, c'est toi qui as la clé
+Combien de temps tu vas encore y réfléchir ?
+Tu restes seule, il n'est jamais là et il ne va jamais rien faire à ce sujet
+Bébé, tu sais que peu importe l'heure, si c'est pour moi tu ne restes jamais seule
+No oh ohh
+
+Dis-moi si je passe te chercher maintenant
+Car je suis fou de passer les heures
+Quelque part toi et moi seuls, déjà
+Si tu me dis viens, on passe de zéro à cent
+Dis-moi si je passe te chercher maintenant
+Dis-moi, si je fonce vers ton coin
+Sans même le toucher, Guille me contrôle, déjà
+Je veux aller te voir
+Si tu me dis viens, on passe de zéro à cent, bébé
+
+De zéro à cent, bébé, ohh
+Si tu me dis viens, bébé
+Pour que je t'aime bien, bébé, bébé
+Et si j'allais te chercher et qu'on le faisait dans la voiture garée ?
+Les sièges en cuir et les vitres bien propres
+Tout est meilleur quand ce n'est pas planifié
+Je suis en chemin
+
+Dis-moi si je passe te chercher maintenant
+Car je suis fou de passer les heures
+Quelque part toi et moi seuls, déjà
+Si tu me dis viens, on passe de zéro à cent
+Dis-moi si je passe te chercher maintenant
+Dis-moi, si je fonce vers ton coin
+Sans même le toucher, Guille me contrôle, déjà
+Je veux aller te voir
+Si tu me dis viens, on passe de zéro à cent, bébé`,
+      en: `Ohh
+Oh baby
+Picasso baby, yeh
+What do you think if I come find you and we do it in the parked car?
+Leather seats and clean windows
+Everything's better when it's not planned
+Just give me a little moment, tell me where you're at, babe
+If he calls you, ignore it and toss your phone aside
+If he asks you later, tell him it wasn't charged
+Everything's better when it's not planned
+I'm on my way
+
+Tell me if I swing by for you now
+'Cause I'm dying to spend the hours
+Somewhere just you and me alone, already
+If you say come, we go from zero to a hundred
+Tell me if I swing by for you now
+Tell me, if I head over to your area
+Without even touching it, Guille controls me, already
+I want to come see you
+If you say come, we go from zero to a hundred, baby
+
+I'm checking the signals, waiting on your signs
+You already told me everything and there's nothing left to say
+Don't put up with it anymore, stop that jerk
+The guy's a pig and you're a beautiful filet mignon
+It's a metaphor, baby
+I know you understand me
+Without having you in front of me
+I know exactly what you feel, ohh
+Don't put up with it anymore, stop that jerk
+The guy's a pig and you're a beautiful filet mignon
+I've got a pleasure program for you with no commercials
+Change all the channels, with just one button from the ship
+I want you to get ready, so this never ends
+Even though I'm driving, you're the one who holds the key
+How long are you gonna think about it?
+You stay alone, he's never home and he never gonna do a thing about it
+Baby, you know that no matter the hour, if it's up to me you'll never be alone
+No oh ohh
+
+Tell me if I swing by for you now
+'Cause I'm dying to spend the hours
+Somewhere just you and me alone, already
+If you say come, we go from zero to a hundred
+Tell me if I swing by for you now
+Tell me, if I head over to your area
+Without even touching it, Guille controls me, already
+I want to come see you
+If you say come, we go from zero to a hundred, baby
+
+From zero to a hundred, baby, ohh
+If you tell me come, baby
+So I can love you right, baby, baby
+What do you think if I come find you and we do it in the parked car?
+Leather seats and clean windows
+Everything's better when it's not planned
+I'm on my way
+
+Tell me if I swing by for you now
+'Cause I'm dying to spend the hours
+Somewhere just you and me alone, already
+If you say come, we go from zero to a hundred
+Tell me if I swing by for you now
+Tell me, if I head over to your area
+Without even touching it, Guille controls me, already
+I want to come see you
+If you say come, we go from zero to a hundred, baby`
+    }
   }
 ];
