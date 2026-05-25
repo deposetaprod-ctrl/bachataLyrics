@@ -1,5 +1,237 @@
 export const songs = [
   {
+    id: "chacha-jean-alex",
+    title: "Chacha",
+    artist: "Jean & Alex ft. Pinto Picasso",
+    year: 2026,
+    dateAdded: "2026-05-25",
+    tags: ["Moderne", "R&B", "Sensual"],
+    color: "#eab308",
+    spotify: "https://open.spotify.com/search/Chacha%20Jean%20Alex",
+    danceVideo: "y5-HoBXfCkY",
+    culture: {
+      context: "Sorti en avril 2026, 'Chacha' est une collaboration entre le duo portoricain Jean & Alex, connus sous le nom de 'Los Reyes del R&B', et le célèbre Pinto Picasso. Ce morceau est une fusion parfaite entre la bachata moderne et le R&B.",
+      meaning: "Les paroles racontent l'histoire d'une femme qui semble au premier abord réservée ou 'timide', mais qui révèle une facette bien plus confiante et imprévisible ('la Mujer Maravilla') une fois sur la piste de danse ou après quelques verres. La chanson évoque la séduction et le jeu du chat et de la souris.",
+      artistInfo: "Jean & Alex sont un duo portoricain reconnu pour leur capacité à mêler les influences urbaines et R&B avec la bachata. Accompagnés ici par Pinto Picasso, une figure de proue de l'Urban Bachata, ils livrent un son moderne et minimaliste très apprécié des danseurs sociaux.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "Released in April 2026, 'Chacha' is a collaboration between the Puerto Rican duo Jean & Alex, known as 'Los Reyes del R&B', and the famous Pinto Picasso. This track is a perfect fusion of modern bachata and R&B.",
+      meaning: "The lyrics tell the story of a woman who initially seems reserved or 'shy', but reveals a much more confident and unpredictable side ('la Mujer Maravilla') once on the dance floor or after a few drinks. The song explores seduction and a playful cat-and-mouse dynamic.",
+      artistInfo: "Jean & Alex are a Puerto Rican duo known for their ability to blend urban and R&B influences with bachata. Joined here by Pinto Picasso, a leading figure in Urban Bachata, they deliver a modern, minimalist sound highly appreciated by social dancers.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Ladies and gentlemen
+Only the finest
+Top tier
+Who? Ya’ll already know, man
+
+Parece que no rompe un plato
+Se ve como una chica sencilla
+Si la vieras después de unos tragos
+Parece la Mujer Maravilla
+
+Y yo aquí sentao’ con el trago aguao’
+Detrás de esa falda como un guaguao
+Parece que nací con los pies virao’s
+Pero si es contigo yo bailo aunque sea cruzao
+
+Oye muchacha, con esa facha
+Se emborracha y le da con bailar bachata
+Me dijo: “Dame de eso”, pues echa pa’ca
+Soy tu gato y hoy tú quieres ser mi gata
+
+Oye muchacha, con esa facha
+Se emborracha y le da con bailar bachata
+Me dijo: “Dame de eso”, pues echa pa’ca
+Se emborracha y le da con bailar bachata
+
+Picasso baby, ¿con quién?
+Jean & Alex, Los Reyes del R&B
+Are you not entertained?
+Esa no me la esperaba
+
+Comenzó media shy, pero al rato
+Se fue poniendo más obsesiva
+En labia tiene un bachillerato, oh oh oh
+Pero en juegos mentales, ma’, dale, tú tienes maestría
+
+Y yo aquí sentao’ con el trago aguao’
+Detrás de esa falda como un guaguao
+Parece que nací con los pies virao’s
+Pero si es contigo yo bailo aunque sea cruzao
+
+Oye muchacha, con esa facha
+Se emborracha y le da con bailar bachata
+Me dijo: “Dame de eso”, pues echa pa’ca
+No amarres fuego, esto en la pista se desata
+
+Oye muchacha, con esa facha
+Se emborracha y le da con bailar bachata
+Me dijo: “Dame de eso”, pues echa pa’ca
+Se emborracha y le da con bailar bachata
+
+Muchacha
+Jean & Alex, Picasso baby
+Me pusiste a bailar, me pusiste a bailar
+One, two
+
+Y yo aquí sentao’ con el trago aguao’
+Detrás de esa falda como un guaguao
+Parece que nací con los pies virao’s
+Pero si es contigo yo bailo aunque sea cruzao
+
+Oye muchacha, con esa facha
+Se emborracha y le da con bailar bachata
+Me dijo: “Dame de eso”, pues echa pa’ca
+No amarres fuego, esto en la pista se desata
+
+Baby, tú sabes que yo no bailo
+Pero por ti
+Por ti yo me tiro los pasos prohibidos
+Los Reyes`,
+      fr: `Mesdames et messieurs
+Seulement le meilleur
+Haut de gamme
+Qui ? Vous le savez déjà, mec
+
+On dirait qu'elle ne ferait pas de mal à une mouche
+Elle a l'air d'une fille simple
+Si tu la voyais après quelques verres
+On dirait Wonder Woman
+
+Et moi ici assis avec mon verre dilué
+Derrière cette jupe comme un petit chien
+On dirait que je suis né avec les pieds à l'envers
+Mais si c'est avec toi je danse même si c'est de travers
+
+Hé jeune fille, avec cette allure
+Elle s'enivre et ça lui prend de danser la bachata
+Elle m'a dit : "Donne-moi de ça", alors viens par ici
+Je suis ton chat et aujourd'hui tu veux être ma chatte
+
+Hé jeune fille, avec cette allure
+Elle s'enivre et ça lui prend de danser la bachata
+Elle m'a dit : "Donne-moi de ça", alors viens par ici
+Elle s'enivre et ça lui prend de danser la bachata
+
+Picasso baby, avec qui ?
+Jean & Alex, Les Rois du R&B
+Ne vous amusez-vous pas ?
+Celle-là je ne m'y attendais pas
+
+Elle a commencé un peu timide, mais après un moment
+Elle est devenue plus obsessionnelle
+En baratin elle a une licence, oh oh oh
+Mais en jeux mentaux, ma', vas-y, tu as une maîtrise
+
+Et moi ici assis avec mon verre dilué
+Derrière cette jupe comme un petit chien
+On dirait que je suis né avec les pieds à l'envers
+Mais si c'est avec toi je danse même si c'est de travers
+
+Hé jeune fille, avec cette allure
+Elle s'enivre et ça lui prend de danser la bachata
+Elle m'a dit : "Donne-moi de ça", alors viens par ici
+N'attise pas le feu, ça se déchaîne sur la piste
+
+Hé jeune fille, avec cette allure
+Elle s'enivre et ça lui prend de danser la bachata
+Elle m'a dit : "Donne-moi de ça", alors viens par ici
+Elle s'enivre et ça lui prend de danser la bachata
+
+Jeune fille
+Jean & Alex, Picasso baby
+Tu m'as fait danser, tu m'as fait danser
+Un, deux
+
+Et moi ici assis avec mon verre dilué
+Derrière cette jupe comme un petit chien
+On dirait que je suis né avec les pieds à l'envers
+Mais si c'est avec toi je danse même si c'est de travers
+
+Hé jeune fille, avec cette allure
+Elle s'enivre et ça lui prend de danser la bachata
+Elle m'a dit : "Donne-moi de ça", alors viens par ici
+N'attise pas le feu, ça se déchaîne sur la piste
+
+Bébé, tu sais que je ne danse pas
+Mais pour toi
+Pour toi je sors les pas interdits
+Les Rois`,
+      en: `Ladies and gentlemen
+Only the finest
+Top tier
+Who? Ya’ll already know, man
+
+She looks like she wouldn't hurt a fly
+She looks like a simple girl
+If you saw her after a few drinks
+She looks like Wonder Woman
+
+And me here sitting with my watered-down drink
+Behind that skirt like a little dog
+It seems I was born with twisted feet
+But if it's with you I'll dance even if it's crossed
+
+Hey girl, with that look
+She gets drunk and feels like dancing bachata
+She told me: "Give me some of that", so come over here
+I'm your cat and today you want to be my cat
+
+Hey girl, with that look
+She gets drunk and feels like dancing bachata
+She told me: "Give me some of that", so come over here
+She gets drunk and feels like dancing bachata
+
+Picasso baby, with who?
+Jean & Alex, The Kings of R&B
+Are you not entertained?
+I wasn't expecting that one
+
+She started half shy, but after a while
+She got more obsessive
+In sweet talk she has a bachelor's degree, oh oh oh
+But in mind games, ma', go ahead, you have a master's
+
+And me here sitting with my watered-down drink
+Behind that skirt like a little dog
+It seems I was born with twisted feet
+But if it's with you I'll dance even if it's crossed
+
+Hey girl, with that look
+She gets drunk and feels like dancing bachata
+She told me: "Give me some of that", so come over here
+Don't stoke the fire, this breaks loose on the dancefloor
+
+Hey girl, with that look
+She gets drunk and feels like dancing bachata
+She told me: "Give me some of that", so come over here
+She gets drunk and feels like dancing bachata
+
+Girl
+Jean & Alex, Picasso baby
+You made me dance, you made me dance
+One, two
+
+And me here sitting with my watered-down drink
+Behind that skirt like a little dog
+It seems I was born with twisted feet
+But if it's with you I'll dance even if it's crossed
+
+Hey girl, with that look
+She gets drunk and feels like dancing bachata
+She told me: "Give me some of that", so come over here
+Don't stoke the fire, this breaks loose on the dancefloor
+
+Baby, you know I don't dance
+But for you
+For you I throw down the forbidden steps
+The Kings`
+    }
+  },
+  {
     id: "no-hay-vato-perfecto-kewin-cosmos",
     title: "No Hay Vato Perfecto",
     artist: "Kewin Cosmos",
