@@ -1,5 +1,343 @@
 export const songs = [
   {
+    id: "te-pido-que-vuelvas-jean-alex",
+    title: "Te Pido Que Vuelvas",
+    artist: "Jean & Alex",
+    year: 2023,
+    dateAdded: "2026-06-02",
+    tags: ["Moderne", "Romantique", "R&B"],
+    color: "#3b82f6",
+    spotify: "https://open.spotify.com/search/Te%20Pido%20Que%20Vuelvas%20Jean%20Alex",
+    danceVideo: "3C6aK3bGpN8",
+    culture: {
+      context: "Sorti en 2023, 'Te Pido Que Vuelvas' est un morceau caractéristique du style de Jean & Alex, combinant la bachata moderne avec des influences R&B très marquées, ce qui leur vaut le titre de 'Los Reyes Del R&B'.",
+      meaning: "La chanson aborde les thèmes de la culpabilité, des regrets après une rupture difficile, et l'espoir d'une réconciliation. Le narrateur reconnaît ses erreurs, son orgueil et ses 'caprices' (jeter les assiettes, faire ses valises), et demande pardon en promettant que ses actions parleront plus fort que ses mots.",
+      artistInfo: "Jean & Alex est un duo reconnu pour sa capacité à fusionner la bachata et le R&B. Leurs chansons explorent souvent les méandres des relations amoureuses, mêlant des paroles sincères à des rythmes entraînants.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "Released in 2023, 'Te Pido Que Vuelvas' is a characteristic track of Jean & Alex's style, combining modern bachata with strong R&B influences, earning them the title of 'Los Reyes Del R&B'.",
+      meaning: "The song addresses themes of guilt, regret after a difficult breakup, and the hope for reconciliation. The narrator acknowledges his mistakes, his pride, and his 'whims' (throwing plates, packing bags), and asks for forgiveness by promising that his actions will speak louder than his words.",
+      artistInfo: "Jean & Alex is a duo known for their ability to fuse bachata and R&B. Their songs often explore the complexities of romantic relationships, blending sincere lyrics with catchy rhythms.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Ando con una presión en el pecho de sol a sol
+Hasta soñando despierto con que me des un call
+Ahogando los recuerdos en el alcohol
+Cometí un grave error, por favor déjame hablarte
+
+Yo lo sé, que fui yo el que me equivoqué
+Tú me dijiste la otra vez que era la última vez
+Pero baby te pido otra última vez
+Yo sé que tu no me crees
+Y yo sé que te cuesta confiar
+Mis acciones van hablar más duro que mis palabras
+
+Y aunque te dije de la boca pa' fuera
+Te boté en hora buena no te quiero ver más
+Y aunque no sé si todavía estás soltera
+No me importa baby yo te pido que vuelvas
+Te Pido Que Vuelvas, uhh uhh uhh
+Te Pido Que Vuelvas, Uhh
+Te Pido Que Vuelvas
+
+Retiro lo dicho, retracto mis acciones con todos mis caprichos
+De levantar la voz, tirar los platos al piso
+El show de hacer maletas, romper planes, compromisos
+Tú buscando la vuelta, yo haciendo caso omiso
+Haciéndote llorar, haciéndome el indeciso
+Ahora se me fue la guagua, le pedí pon y no quiso
+Mi corazón divaga y ahora yo soy el sumiso, ahh
+Ohh tanto orgullo pa' que, ahh?
+Quién me va a dar un premio por decir que yo te boté
+Usted se me ha llevao' la vida y no hablo de Alexandre Pires
+Mirando tu foto en mi mente to' los días son de jueves tbt
+
+Y aunque te dije de la boca pa' fuera
+Te boté en hora buena no te quiero ver más
+Y aunque no sé si todavía estás soltera
+No me importa baby yo te pido que vuelvas
+Y aunque te dije de la boca pa' fuera
+Te boté en hora buena no te quiero ver más
+Y aunque no sé si todavía estás soltera
+No me importa baby yo te pido que vuelvas
+Te Pido Que Vuelvas, uhh uhh uhh
+Te Pido Que Vuelvas, Te Pido Que Vuelvas
+Te Pido Que Vuelvas, uhh uhh uhh
+Te Pido Que Vuelvas, uhh
+Te Pido Que Vuelvas
+
+Jean & Alex Los Reyes Del R&B`,
+      fr: `Je marche avec une pression sur la poitrine du lever au coucher du soleil
+Même en rêvant éveillé que tu me passes un coup de fil
+Noyant les souvenirs dans l'alcool
+J'ai commis une grave erreur, s'il te plaît laisse-moi te parler
+
+Je le sais, que c'est moi qui me suis trompé
+Tu m'as dit l'autre fois que c'était la dernière fois
+Mais bébé je te demande une autre dernière fois
+Je sais que tu ne me crois pas
+Et je sais que tu as du mal à faire confiance
+Mes actions parleront plus fort que mes mots
+
+Et bien que je te l'ai dit du bout des lèvres
+Je t'ai jetée au bon moment je ne veux plus te voir
+Et bien que je ne sache pas si tu es encore célibataire
+Ça m'est égal bébé je te demande de revenir
+Je Te Demande De Revenir, uhh uhh uhh
+Je Te Demande De Revenir, Uhh
+Je Te Demande De Revenir
+
+Je retire ce que j'ai dit, je rétracte mes actions avec tous mes caprices
+D'avoir haussé la voix, jeté les assiettes par terre
+Le spectacle de faire les valises, rompre les plans, les engagements
+Toi cherchant une solution, moi n'y prêtant pas attention
+Te faisant pleurer, faisant l'indécis
+Maintenant le bus est parti, j'ai demandé à monter et il n'a pas voulu
+Mon cœur divague et maintenant je suis le soumis, ahh
+Ohh tant de fierté pour quoi, ahh?
+Qui va me donner un prix pour dire que je t'ai jetée
+Vous m'avez pris la vie et je ne parle pas d'Alexandre Pires
+En regardant ta photo dans mon esprit tous les jours sont des jeudis tbt
+
+Et bien que je te l'ai dit du bout des lèvres
+Je t'ai jetée au bon moment je ne veux plus te voir
+Et bien que je ne sache pas si tu es encore célibataire
+Ça m'est égal bébé je te demande de revenir
+Et bien que je te l'ai dit du bout des lèvres
+Je t'ai jetée au bon moment je ne veux plus te voir
+Et bien que je ne sache pas si tu es encore célibataire
+Ça m'est égal bébé je te demande de revenir
+Je Te Demande De Revenir, uhh uhh uhh
+Je Te Demande De Revenir, Je Te Demande De Revenir
+Je Te Demande De Revenir, uhh uhh uhh
+Je Te Demande De Revenir, uhh
+Je Te Demande De Revenir
+
+Jean & Alex Les Rois Du R&B`,
+      en: `I walk around with pressure in my chest from sun to sun
+Even daydreaming that you give me a call
+Drowning the memories in alcohol
+I made a grave mistake, please let me talk to you
+
+I know it, that I was the one who messed up
+You told me the other time that it was the last time
+But baby I ask you for another last time
+I know you don't believe me
+And I know it's hard for you to trust
+My actions are going to speak louder than my words
+
+And even though I told you from the mouth out
+I dumped you at a good time I don't want to see you anymore
+And even though I don't know if you're still single
+I don't care baby I ask you to come back
+I Ask You To Come Back, uhh uhh uhh
+I Ask You To Come Back, Uhh
+I Ask You To Come Back
+
+I take back what I said, I retract my actions with all my whims
+Of raising my voice, throwing plates on the floor
+The show of packing bags, breaking plans, commitments
+You looking for a way around it, me ignoring it
+Making you cry, playing the indecisive one
+Now the bus has left, I asked for a ride and it didn't want to
+My heart wanders and now I am the submissive one, ahh
+Ohh so much pride for what, ahh?
+Who is going to give me a prize for saying I dumped you
+You have taken my life and I'm not talking about Alexandre Pires
+Looking at your picture in my mind every day is a Thursday tbt
+
+And even though I told you from the mouth out
+I dumped you at a good time I don't want to see you anymore
+And even though I don't know if you're still single
+I don't care baby I ask you to come back
+And even though I told you from the mouth out
+I dumped you at a good time I don't want to see you anymore
+And even though I don't know if you're still single
+I don't care baby I ask you to come back
+I Ask You To Come Back, uhh uhh uhh
+I Ask You To Come Back, I Ask You To Come Back
+I Ask You To Come Back, uhh uhh uhh
+I Ask You To Come Back, uhh
+I Ask You To Come Back
+
+Jean & Alex The Kings Of R&B`
+    }
+  },
+  {
+    id: "feeling-something-pinto-picasso",
+    title: "Feeling Something",
+    artist: "Pinto Picasso",
+    year: 2024,
+    dateAdded: "2026-06-02",
+    tags: ["Moderne", "Sensual", "Urbain"],
+    color: "#e879f9",
+    spotify: "https://open.spotify.com/search/Feeling%20Something%20Pinto%20Picasso",
+    danceVideo: "gebR-f0G14k",
+    culture: {
+      context: "Sortie début 2024 et plus tard incluse dans son projet 'Casagemas', 'Feeling Something' est une bachata contemporaine de Pinto Picasso. Le titre a rapidement gagné en popularité dans la communauté de danse bachata, apparaissant fréquemment dans les vidéos de chorégraphie et les cours de danse.",
+      meaning: "La chanson explore les thèmes de l'attraction romantique et de la connexion émotionnelle intense. Le titre 'Feeling Something' fait directement allusion à ce moment où l'on réalise qu'une étincelle ou une connexion plus profonde s'établit avec un partenaire sur la piste de danse.",
+      artistInfo: "Pinto Picasso est un artiste bien connu dans le monde de la bachata urbaine et moderne, réputé pour sa production fluide et émotive, qui fait de ses morceaux des incontournables des soirées de 'bachata sensual'.",
+      album: "Casagemas"
+    },
+    culture_en: {
+      context: "Released in early 2024 and later included in his project 'Casagemas', 'Feeling Something' is a contemporary bachata track by Pinto Picasso. The song quickly gained traction within the bachata dance community, frequently appearing in choreography videos and dance classes.",
+      meaning: "The song explores themes of romantic attraction and intense emotional connection. The title 'Feeling Something' directly alludes to the moment one acknowledges a spark or a deeper connection with a partner on the dance floor.",
+      artistInfo: "Pinto Picasso is a well-known artist in the modern urban bachata scene, renowned for his smooth and emotive production, making his tracks staples in 'bachata sensual' social settings.",
+      album: "Casagemas"
+    },
+    lyrics: {
+      es: `Picasso made it
+Yeah, yeah
+Ella tiene magia
+Se lo vi en los ojos
+Cómo me miraba
+Cuando me bailaba
+Entre humo y luces apagadas
+Aún se notaba
+Cómo ella brillaba
+La noche nos roba el tiempo
+Sediento de ganas reviento
+Te reto, me tientas, lo intento
+Si me das entrada, decisión tomada
+'Cause I'm feeling something
+Puede que no se nos dé, pero es fascinante
+Un sentimiento en el ambiente dominante
+No existe duda, no hay razón para interrogarte
+Oh-oh, oh-oh
+'Cause I'm feeling something
+Puede que no se nos dé, pero es fascinante (fascinante)
+Un sentimiento en el ambiente dominante
+No existe duda, no hay razón para interrogarte
+Oh-oh, oh-oh
+Es como un viaje de euforia
+Los dos sentimos la histeria
+Así comienza la historia
+La cosa se puso seria, hey
+No sé cuándo será la próxima vez que pueda ver (uh)
+Este momento es de nosotros, ay, no lo dejes morir
+Se tiene que vivir
+Voy y pido un par de tragos y caigo a tu lado
+Porque no puedo resistir, no
+Si al final te vas, espero que no sea sin mí (sin mí)
+Dime quién lo va a prohibir (oh)
+Hoy no se puede dormir
+Porque la noche nos roba el tiempo (nos roba el tiempo)
+Sediento de ganas reviento (oh)
+Te reto, me tientas, lo intento (lo intento)
+Si me das entrada, decisión tomada (yeah)
+'Cause I'm feeling something (feeling something)
+Puede que no se nos dé, pero es fascinante (fascinante)
+Un sentimiento en el ambiente dominante (dominante)
+No existe duda, no hay razón para interrogarte (no)
+Oh-oh, oh-oh
+'Cause I'm feeling something
+Puede que no se nos dé, pero es fascinante (fascinante)
+Un sentimiento en el ambiente dominante
+No existe duda, no hay razón para interrogarte
+Oh-oh, uh-uh`,
+      fr: `Picasso made it
+Ouais, ouais
+Elle a de la magie
+Je l'ai vu dans ses yeux
+Comment elle me regardait
+Quand elle dansait pour moi
+Parmi la fumée et les lumières éteintes
+Ça se remarquait encore
+Comment elle brillait
+La nuit nous vole le temps
+Assoiffé de désir, j'explose
+Je te mets au défi, tu me tentes, j'essaie
+Si tu me donnes l'ouverture, la décision est prise
+'Cause I'm feeling something
+Il se peut que ça ne marche pas entre nous, mais c'est fascinant
+Un sentiment dominant dans l'atmosphère
+Il n'y a aucun doute, aucune raison de t'interroger
+Oh-oh, oh-oh
+'Cause I'm feeling something
+Il se peut que ça ne marche pas entre nous, mais c'est fascinant (fascinant)
+Un sentiment dominant dans l'atmosphère
+Il n'y a aucun doute, aucune raison de t'interroger
+Oh-oh, oh-oh
+C'est comme un voyage d'euphorie
+Nous ressentons tous les deux l'hystérie
+C'est ainsi que commence l'histoire
+La chose est devenue sérieuse, hey
+Je ne sais pas quand sera la prochaine fois que je pourrai voir (uh)
+Ce moment est à nous, oh, ne le laisse pas mourir
+Il faut le vivre
+Je vais demander quelques verres et je tombe à tes côtés
+Parce que je ne peux pas résister, non
+Si à la fin tu pars, j'espère que ce ne sera pas sans moi (sans moi)
+Dis-moi qui va l'interdire (oh)
+Aujourd'hui on ne peut pas dormir
+Parce que la nuit nous vole le temps (nous vole le temps)
+Assoiffé de désir, j'explose (oh)
+Je te mets au défi, tu me tentes, j'essaie (j'essaie)
+Si tu me donnes l'ouverture, la décision est prise (ouais)
+'Cause I'm feeling something (feeling something)
+Il se peut que ça ne marche pas entre nous, mais c'est fascinant (fascinant)
+Un sentiment dominant dans l'atmosphère (dominant)
+Il n'y a aucun doute, aucune raison de t'interroger (non)
+Oh-oh, oh-oh
+'Cause I'm feeling something
+Il se peut que ça ne marche pas entre nous, mais c'est fascinant (fascinant)
+Un sentiment dominant dans l'atmosphère
+Il n'y a aucun doute, aucune raison de t'interroger
+Oh-oh, uh-uh`,
+      en: `Picasso made it
+Yeah, yeah
+She has magic
+I saw it in her eyes
+How she looked at me
+When she danced for me
+Amidst smoke and dimmed lights
+You could still tell
+How she was shining
+The night steals our time
+Thirsty with desire I'm bursting
+I challenge you, you tempt me, I try
+If you give me an opening, the decision is made
+'Cause I'm feeling something
+It might not happen for us, but it's fascinating
+A dominant feeling in the atmosphere
+There's no doubt, no reason to question you
+Oh-oh, oh-oh
+'Cause I'm feeling something
+It might not happen for us, but it's fascinating (fascinating)
+A dominant feeling in the atmosphere
+There's no doubt, no reason to question you
+Oh-oh, oh-oh
+It's like a journey of euphoria
+We both feel the hysteria
+That's how the story begins
+Things got serious, hey
+I don't know when will be the next time I can see (uh)
+This moment is ours, oh, don't let it die
+It has to be lived
+I go and order a couple of drinks and fall by your side
+Because I can't resist, no
+If in the end you leave, I hope it won't be without me (without me)
+Tell me who's going to forbid it (oh)
+Today we can't sleep
+Because the night steals our time (steals our time)
+Thirsty with desire I'm bursting (oh)
+I challenge you, you tempt me, I try (I try)
+If you give me an opening, the decision is made (yeah)
+'Cause I'm feeling something (feeling something)
+It might not happen for us, but it's fascinating (fascinating)
+A dominant feeling in the atmosphere (dominant)
+There's no doubt, no reason to question you (no)
+Oh-oh, oh-oh
+'Cause I'm feeling something
+It might not happen for us, but it's fascinating (fascinating)
+A dominant feeling in the atmosphere
+There's no doubt, no reason to question you
+Oh-oh, uh-uh`
+    }
+  },
+  {
     id: "chacha-jean-alex",
     title: "Chacha",
     artist: "Jean & Alex ft. Pinto Picasso",
