@@ -1,5 +1,330 @@
 export const songs = [
   {
+    id: "in-my-bed-rotimi-wale",
+    title: "In My Bed",
+    artist: "Rotimi ft. Wale",
+    year: 2019,
+    dateAdded: "2026-06-04",
+    tags: ["R&B", "Afrobeats", "Sensual"],
+    color: "#e11d48",
+    spotify: "https://open.spotify.com/search/In%20My%20Bed%20Rotimi%20Wale",
+    danceVideo: "9uSIqO6Epdg",
+    culture: {
+      context: "Sorti fin 2019, 'In My Bed' est un titre R&B infusé d'Afrobeats de l'artiste nigériano-américain Rotimi, avec le rappeur Wale. Le morceau est rapidement devenu populaire dans les soirées sensuelles.",
+      meaning: "La chanson joue sur un double sens, particulièrement pertinent à l'ère du travail à domicile : la 'réunion' (meeting) est une métaphore ludique pour une rencontre intime et passionnée. C'est un morceau qui explore la séduction et l'attraction physique.",
+      artistInfo: "Rotimi est un acteur et chanteur connu pour ses sonorités mélangeant R&B contemporain et Afrobeats. Wale est un rappeur américain renommé qui apporte ici un couplet hip-hop fluide complétant l'ambiance sensuelle du titre.",
+      album: "The Beauty of Becoming"
+    },
+    culture_en: {
+      context: "Released in late 2019, 'In My Bed' is an Afrobeats-infused R&B track by Nigerian-American artist Rotimi, featuring rapper Wale. The song quickly became popular in sensual dance settings.",
+      meaning: "The song plays on a double entendre, especially relevant in the work-from-home era: the 'meeting' is a playful metaphor for an intimate and passionate encounter. It's a track that explores seduction and physical attraction.",
+      artistInfo: "Rotimi is an actor and singer known for his sound blending contemporary R&B and Afrobeats. Wale is a renowned American rapper who brings a smooth hip-hop verse complementing the sensual vibe of the track.",
+      album: "The Beauty of Becoming"
+    },
+    lyrics: {
+      en: `[Intro: Rotimi]
+H-Money
+Baby, baby, yeah
+
+[Chorus: Rotimi]
+There's a meeting in my bed, oh
+In my bed, oh
+There's a meeting in my bed, oh
+In my bed, oh
+There's a meeting in my bed, oh
+My bed, oh
+There's a meeting in my bed, oh
+In my bed, oh
+
+[Verse 1: Wale]
+Yeah, hol' up, uh
+Dinner for two, that's me and you, that's very simple
+Dinner removed, okay we through but I ain't finished yet
+Can I slide with you? (Yeah)
+Spend the night with you? (Yeah)
+Just let me write with the ink drippin' from my signature (Oh-oh)
+I feel like your body inspire my intentions (Yeah)
+You left the squad hangin', it's only time with us (Yeah)
+You know I vibe different 'cause you know my mind different
+Her eyes sayin' my room, her body sayin' "heaven", on God
+
+[Verse 2: Rotimi]
+Tell me what you want, I go repeat
+Tell me what you need, I go knee deep, eh
+When I fall in love, I go deep, deep, eh
+You could copy that like a CC, eh
+You look like you need prop up
+Come get this vitamin D power, proper
+Be ready to touch, when I reach it, yeah
+I go eat it up, I no vegan, yeah
+
+[Pre-Chorus: Rotimi]
+I make that ting go wilder
+I go make that ting run water
+I go make you sing my song
+
+[Chorus: Rotimi]
+There's a meeting in my bed, oh
+In my bed, oh
+There's a meeting in my bed, oh
+In my bed, oh
+There's a meeting in my bed, oh
+My bed, oh
+There's a meeting in my bed, oh
+In my bed, oh
+
+[Post-Chorus: Rotimi]
+Oh nah, nah, nah, nah, nah, nah
+Meeting in my bed
+Oh nah, nah, nah, nah, nah, nah
+In my bed, oh
+
+[Verse 3: Rotimi]
+How you keep it sweet like that? (Like that)
+Love that pretty please like that (Like that)
+Fresher than Febreeze like that
+I be on my knees for that
+Ow, you touch my soul like Sunday (Sunday)
+I touch your fifi the fun way (Ah-woah)
+Everything you need, no cap
+Call me when you need tap tap
+
+Ah-oww
+
+[Pre-Chorus: Rotimi]
+I make that ting go wilder
+I go make that ting run water
+I go make you sing my song
+
+[Chorus: Rotimi]
+There's a meeting in my bed, oh
+In my bed, oh
+There's a meeting in my bed, oh
+In my bed, oh
+There's a meeting in my bed, oh
+My bed, oh
+There's a meeting in my bed, oh
+In my bed, oh
+
+[Post-Chorus: Rotimi]
+Oh nah, nah, nah, nah, nah, nah
+Meeting in my-
+Oh nah, nah, nah, nah, nah, nah
+Baby meet me in my bed
+Oh nah, nah, nah, nah, nah, nah
+Meeting in my bed
+Oh nah, nah, nah, nah, nah, nah
+In my bed, oh
+
+[Outro: Rotimi]
+Baby, baby, yeah
+Baby, baby, yeah
+H-Money produced it
+Baby, baby, yeah
+Baby, baby, yeah`,
+      fr: `[Intro: Rotimi]
+H-Money
+Bébé, bébé, ouais
+
+[Chorus: Rotimi]
+Il y a une réunion dans mon lit, oh
+Dans mon lit, oh
+Il y a une réunion dans mon lit, oh
+Dans mon lit, oh
+Il y a une réunion dans mon lit, oh
+Mon lit, oh
+Il y a une réunion dans mon lit, oh
+Dans mon lit, oh
+
+[Verse 1: Wale]
+Ouais, attends, uh
+Dîner pour deux, c'est toi et moi, c'est très simple
+Dîner débarrassé, d'accord on a fini mais je n'ai pas encore terminé
+Puis-je glisser avec toi ? (Ouais)
+Passer la nuit avec toi ? (Ouais)
+Laisse-moi juste écrire avec l'encre qui coule de ma signature (Oh-oh)
+J'ai l'impression que ton corps inspire mes intentions (Ouais)
+Tu as laissé ton groupe en plan, ce n'est que du temps avec nous (Ouais)
+Tu sais que je vibre différemment parce que tu sais que mon esprit est différent
+Ses yeux disent ma chambre, son corps dit "le paradis", sur Dieu
+
+[Verse 2: Rotimi]
+Dis-moi ce que tu veux, je vais le répéter
+Dis-moi ce dont tu as besoin, j'y vais jusqu'aux genoux, eh
+Quand je tombe amoureux, je vais profondément, profondément, eh
+Tu pourrais copier ça comme un CC (copie carbone), eh
+Tu as l'air d'avoir besoin d'être soutenue
+Viens chercher ce pouvoir de la vitamine D, comme il faut
+Sois prête à toucher, quand j'y arrive, ouais
+Je vais tout dévorer, je ne suis pas végétalien, ouais
+
+[Pre-Chorus: Rotimi]
+Je rends cette chose plus sauvage
+Je fais couler l'eau de cette chose
+Je vais te faire chanter ma chanson
+
+[Chorus: Rotimi]
+Il y a une réunion dans mon lit, oh
+Dans mon lit, oh
+Il y a une réunion dans mon lit, oh
+Dans mon lit, oh
+Il y a une réunion dans mon lit, oh
+Mon lit, oh
+Il y a une réunion dans mon lit, oh
+Dans mon lit, oh
+
+[Post-Chorus: Rotimi]
+Oh nah, nah, nah, nah, nah, nah
+Réunion dans mon lit
+Oh nah, nah, nah, nah, nah, nah
+Dans mon lit, oh
+
+[Verse 3: Rotimi]
+Comment gardes-tu ça si doux comme ça ? (Comme ça)
+J'aime ce s'il te plaît gentiment comme ça (Comme ça)
+Plus frais que Febreeze comme ça
+Je me mets à genoux pour ça
+Ow, tu touches mon âme comme un dimanche (Dimanche)
+Je touche ton fifi de façon amusante (Ah-woah)
+Tout ce dont tu as besoin, pas de mensonge (no cap)
+Appelle-moi quand tu as besoin de tap tap
+
+Ah-oww
+
+[Pre-Chorus: Rotimi]
+Je rends cette chose plus sauvage
+Je fais couler l'eau de cette chose
+Je vais te faire chanter ma chanson
+
+[Chorus: Rotimi]
+Il y a une réunion dans mon lit, oh
+Dans mon lit, oh
+Il y a une réunion dans mon lit, oh
+Dans mon lit, oh
+Il y a une réunion dans mon lit, oh
+Mon lit, oh
+Il y a une réunion dans mon lit, oh
+Dans mon lit, oh
+
+[Post-Chorus: Rotimi]
+Oh nah, nah, nah, nah, nah, nah
+Réunion dans mon-
+Oh nah, nah, nah, nah, nah, nah
+Bébé rejoins-moi dans mon lit
+Oh nah, nah, nah, nah, nah, nah
+Réunion dans mon lit
+Oh nah, nah, nah, nah, nah, nah
+Dans mon lit, oh
+
+[Outro: Rotimi]
+Bébé, bébé, ouais
+Bébé, bébé, ouais
+H-Money l'a produit
+Bébé, bébé, ouais
+Bébé, bébé, ouais`,
+      es: `[Intro: Rotimi]
+H-Money
+Bebé, bebé, sí
+
+[Chorus: Rotimi]
+Hay una reunión en mi cama, oh
+En mi cama, oh
+Hay una reunión en mi cama, oh
+En mi cama, oh
+Hay una reunión en mi cama, oh
+Mi cama, oh
+Hay una reunión en mi cama, oh
+En mi cama, oh
+
+[Verse 1: Wale]
+Sí, espera, uh
+Cena para dos, somos tú y yo, es muy simple
+Cena retirada, okay terminamos pero aún no he acabado
+¿Puedo deslizarme contigo? (Sí)
+¿Pasar la noche contigo? (Sí)
+Solo déjame escribir con la tinta goteando de mi firma (Oh-oh)
+Siento que tu cuerpo inspira mis intenciones (Sí)
+Dejaste a tu grupo colgado, solo es tiempo con nosotros (Sí)
+Sabes que vibro diferente porque sabes que mi mente es diferente
+Sus ojos dicen mi habitación, su cuerpo dice "el cielo", por Dios
+
+[Verse 2: Rotimi]
+Dime qué quieres, lo voy a repetir
+Dime qué necesitas, me meto hasta las rodillas, eh
+Cuando me enamoro, voy profundo, profundo, eh
+Podrías copiar eso como un CC, eh
+Parece que necesitas apoyo
+Ven a buscar este poder de la vitamina D, adecuadamente
+Ponte lista para tocar, cuando yo llegue, sí
+Me lo voy a comer todo, no soy vegano, sí
+
+[Pre-Chorus: Rotimi]
+Hago que esa cosa se vuelva más salvaje
+Hago que esa cosa corra agua
+Haré que cantes mi canción
+
+[Chorus: Rotimi]
+Hay una reunión en mi cama, oh
+En mi cama, oh
+Hay una reunión en mi cama, oh
+En mi cama, oh
+Hay una reunión en mi cama, oh
+Mi cama, oh
+Hay una reunión en mi cama, oh
+En mi cama, oh
+
+[Post-Chorus: Rotimi]
+Oh nah, nah, nah, nah, nah, nah
+Reunión en mi cama
+Oh nah, nah, nah, nah, nah, nah
+En mi cama, oh
+
+[Verse 3: Rotimi]
+¿Cómo lo mantienes tan dulce así? (Así)
+Amo ese por favor bonito así (Así)
+Más fresco que Febreeze así
+Me pongo de rodillas por eso
+Ow, tocas mi alma como un domingo (Domingo)
+Toco tu fifi de la manera divertida (Ah-woah)
+Todo lo que necesitas, sin mentiras
+Llámame cuando necesites tap tap
+
+Ah-oww
+
+[Pre-Chorus: Rotimi]
+Hago que esa cosa se vuelva más salvaje
+Hago que esa cosa corra agua
+Haré que cantes mi canción
+
+[Chorus: Rotimi]
+Hay una reunión en mi cama, oh
+En mi cama, oh
+Hay una reunión en mi cama, oh
+En mi cama, oh
+Hay una reunión en mi cama, oh
+Mi cama, oh
+Hay una reunión en mi cama, oh
+En mi cama, oh
+
+[Post-Chorus: Rotimi]
+Oh nah, nah, nah, nah, nah, nah
+Reunión en mi-
+Oh nah, nah, nah, nah, nah, nah
+Bebé encuéntrame en mi cama
+Oh nah, nah, nah, nah, nah, nah
+Reunión en mi cama
+Oh nah, nah, nah, nah, nah, nah
+En mi cama, oh
+
+[Outro: Rotimi]
+Bebé, bebé, sí
+Bebé, bebé, sí
+H-Money lo produjo
+Bebé, bebé, sí
+Bebé, bebé, sí`
+    }
+  },
+  {
     id: "te-pido-que-vuelvas-jean-alex",
     title: "Te Pido Que Vuelvas",
     artist: "Jean & Alex",
