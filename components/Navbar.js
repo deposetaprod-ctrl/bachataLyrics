@@ -37,6 +37,10 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
               onClick={() => router.push('/jack-and-jill')} 
               style={{ color: activePage === 'jnj' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}
             >{t('jackAndJill')}</span>
+            <span 
+              onClick={() => router.push('/boutique')} 
+              style={{ color: activePage === 'boutique' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}
+            >{locale === 'fr' ? 'Boutique' : 'Shop'}</span>
             
             <div className="auth-profile">
               <button 
@@ -108,6 +112,7 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
 
             <button onClick={() => { setMobileMenuOpen(false); router.push('/musicality'); }} className={activePage === 'musicality' ? 'active' : ''}>🥁 {t('musicality')}</button>
             <button onClick={() => { setMobileMenuOpen(false); router.push('/jack-and-jill'); }} className={activePage === 'jnj' ? 'active' : ''}>🏆 {t('jackAndJill')}</button>
+            <button onClick={() => { setMobileMenuOpen(false); router.push('/boutique'); }} className={activePage === 'boutique' ? 'active' : ''}>🛍️ {locale === 'fr' ? 'Boutique' : 'Shop'}</button>
             
             <button 
               onClick={() => { setMobileMenuOpen(false); toggleLanguage(); }}

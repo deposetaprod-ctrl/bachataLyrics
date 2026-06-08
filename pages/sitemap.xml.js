@@ -10,7 +10,8 @@ function generateSiteMap(songs) {
     '/musicality',
     '/jack-and-jill',
     '/contact',
-    '/passes'
+    '/passes',
+    '/boutique'
   ];
 
   return `<?xml version="1.0" encoding="UTF-8"?>

@@ -70,6 +70,9 @@ export default function SeoFooter({ currentPage = '' }) {
               {currentPage !== 'contact' && (
                 <li><Link href="/contact">💌 Contact</Link></li>
               )}
+              {currentPage !== 'boutique' && (
+                <li><Link href="/boutique">🛍️ {locale === 'en' ? 'Shop' : 'Boutique'}</Link></li>
+              )}
             </ul>
           </div>
 
