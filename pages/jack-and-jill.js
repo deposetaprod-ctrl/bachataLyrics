@@ -45,60 +45,60 @@ export default function JackAndJill() {
         });
       };
 
-      // 1. Add all App Songs (we'll shuffle them later)
-      setStatus('Chargement des sons de l\'application...');
-      const appSongsFormatted = appSongs.map(s => ({
+      setStatus('Génération de la playlist en cours...');
+
+      // 1. Shuffle all app songs first
+      let shuffledAppSongs = [...appSongs].sort(() => 0.5 - Math.random());
+      const appSongsFormatted = shuffledAppSongs.map(s => ({
         trackId: s.id,
         trackName: s.title,
         artistName: s.artist,
-        previewUrl: s.audioUrl, // Might be undefined, we'll search if so
+        previewUrl: s.audioUrl,
         id: s.id
       }));
 
-      // Search for previews if missing
-      for (let i = 0; i < appSongsFormatted.length; i++) {
-        const s = appSongsFormatted[i];
-        if (!s.previewUrl) {
-          setStatus(`Recherche de "${s.trackName}" (${i+1}/${appSongsFormatted.length})...`);
-          try {
-            const res = await fetch(`/api/training-songs?type=search&term=${encodeURIComponent(s.trackName + ' ' + s.artistName)}`);
-            const data = await res.json();
+      // We only search for max 10 app songs that lack a preview, so it's super fast
+      const songsToSearch = appSongsFormatted.filter(s => !s.previewUrl).slice(0, 10);
+      const readyAppSongs = appSongsFormatted.filter(s => s.previewUrl).slice(0, 20);
+
+      // Prepare all concurrent fetch promises
+      const searchPromises = songsToSearch.map(s => 
+        fetch(`/api/training-songs?type=search&term=${encodeURIComponent(s.trackName + ' ' + s.artistName)}`)
+          .then(res => res.json())
+          .then(data => {
             const match = data.results?.[0];
             if (match?.previewUrl) {
               s.previewUrl = match.previewUrl;
               s.trackId = match.trackId;
             }
-          } catch (e) {
-            console.error("Error searching for", s.trackName, e);
-          }
-        }
-      }
-      addSongs(appSongsFormatted.filter(s => s.previewUrl), true);
+          }).catch(e => console.error(e))
+      );
 
-      // 2. Fetch from various categories to ensure variety
       const categories = ['sensual', 'dominican', 'bachazouk', 'bachata'];
-      for (const cat of categories) {
-        if (finalPlaylist.length >= 80) break;
-        setStatus(`Extraction de Bachata ${cat}...`);
-        try {
-          const res = await fetch(`/api/training-songs?type=${cat}`);
-          const data = await res.json();
-          if (data.results) {
-            addSongs(data.results);
-          }
-        } catch (e) {
-          console.error("Error fetching cat", cat, e);
-        }
-      }
+      const categoryPromises = categories.map(cat => 
+        fetch(`/api/training-songs?type=${cat}`)
+          .then(res => res.json())
+          .then(data => data.results || [])
+          .catch(e => [])
+      );
+
+      // Execute all searches and category fetches at the same time (takes ~1 second total)
+      const allResults = await Promise.all([...searchPromises, ...categoryPromises]);
+      const catResults = allResults.slice(searchPromises.length); // Extract category results
+
+      // Add our local app songs
+      addSongs([...readyAppSongs, ...songsToSearch.filter(s => s.previewUrl)], true);
+      
+      // Add the category songs
+      catResults.forEach(results => addSongs(results));
 
       // 3. FULL SHUFFLE (Fisher-Yates)
-      setStatus('Mixage de la playlist...');
       for (let i = finalPlaylist.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [finalPlaylist[i], finalPlaylist[j]] = [finalPlaylist[j], finalPlaylist[i]];
       }
 
-      setSongs(finalPlaylist.slice(0, 100)); // Keep up to 100 songs
+      setSongs(finalPlaylist.slice(0, 100)); // Keep up to 100 songs (enough for 30+ mins)
       setStatus('idle');
     } catch (error) {
       console.error('Error fetching songs:', error);

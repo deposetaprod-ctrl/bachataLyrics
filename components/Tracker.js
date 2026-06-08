@@ -13,7 +13,7 @@ export default function Tracker() {
     }
 
     const sendEvent = (type, data) => {
-      fetch('/api/track', {
+      fetch('/api/ping', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

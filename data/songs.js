@@ -1,5 +1,270 @@
 export const songs = [
   {
+    id: "el-viejo-oeste-pinto-picasso",
+    title: "El Viejo Oeste",
+    artist: "Pinto Picasso",
+    year: 2024,
+    dateAdded: "2026-06-08",
+    tags: ["Moderne", "Sensual", "Urban"],
+    color: "#b91c1c",
+    spotify: "https://open.spotify.com/search/El%20Viejo%20Oeste%20Pinto%20Picasso",
+    danceVideo: "sQQZAunPASY",
+    culture: {
+      context: "Tiré de l'album 'Casagemas' sorti en 2024, 'El Viejo Oeste' (Le Far West) de Pinto Picasso utilise l'imagerie du grand ouest américain pour dépeindre une partenaire amoureuse intrépide et mystérieuse. La chanson mêle les rythmes de la bachata moderne à une attitude urbaine et rebelle.",
+      meaning: "Les paroles explorent les thèmes de la confrontation, du désir intense et de l'excitation de briser les règles. En comparant la relation à un 'duel jusqu'à l'aube', le morceau met en lumière le sentiment enivrant de céder à la tentation.",
+      artistInfo: "Pinto Picasso est un artiste de bachata moderne reconnu pour son approche novatrice du genre, intégrant souvent des influences urbaines, du R&B et des textes bilingues (anglais/espagnol) dans sa musique.",
+      album: "Casagemas"
+    },
+    culture_en: {
+      context: "Featured on the 2024 album 'Casagemas', 'El Viejo Oeste' (The Wild West) by Pinto Picasso uses the imagery of the wild west to describe a fearless and mysterious romantic interest. The song blends modern bachata rhythms with an urban, rebellious attitude.",
+      meaning: "The lyrics explore themes of confrontation, intense desire, and the thrill of breaking the rules. Comparing the relationship to a 'duel until dawn', the track highlights the intoxicating feeling of yielding to temptation.",
+      artistInfo: "Pinto Picasso is a modern bachata artist known for his fresh approach to the genre, often incorporating urban R&B influences and bilingual (English/Spanish) lyrics into his music.",
+      album: "Casagemas"
+    },
+    lyrics: {
+      es: `[Intro]
+Una llamada y se desarma
+Contesta y va sin miedo al karma
+Muy sigilosa, con calma
+Sin disparar alarmas
+
+[Pre-Chorus]
+Es normal que todos la celen
+Si no hay manera que le lleguen
+Ta puesta pa cobrar lo que le deben
+Problemas que se van, otros que vienen
+
+[Chorus]
+Esta noche lo quiere hacer
+Como si fuera el viejo oeste
+Entrar en duelo hasta el amanecer
+Una batalla hasta la muerte
+Guarda secretos de placer entre su piel
+Pero portarse mal se siente bien
+Esta noche lo quiere hacer
+Como si fuera el viejo oeste
+
+[Verse 1]
+Picasso, baby
+You know
+El sol se va escondiendo por el horizonte
+Tras la nube de verde monte
+No se sube a cualquier caballo
+Muy difícil que se le monten
+Cuando apunta no tiene fallo
+No le para a los pariguayos
+Le resbalan los comentarios
+
+[Pre-Chorus]
+Es normal que todos la celen
+Si no hay manera que le lleguen
+Ta puesta pa cobrar lo que le deben
+Problemas que se van, otros que vienen
+
+[Chorus]
+Esta noche lo quiere hacer
+Como si fuera el viejo oeste
+Entrar en duelo hasta el amanecer
+Una batalla hasta la muerte
+Guarda secretos de placer entre su piel
+Pero portarse mal se siente bien
+Esta noche lo quiere hacer
+Como si fuera el viejo oeste
+
+[Verse 2]
+Ey, baby
+It was love like at first sight (yes, it was)
+Then a fuck at a first fight (it was good)
+That body like a song and (yes, it is)
+She keep the verse tight (yeah, she does)
+I'm in it all night (chillin' like Rih Rih)
+Play it 'till first light (got it on repeat)
+They say that love is pain but
+This one just hurts right
+
+[Pre-Chorus]
+Yes, she could claim anybody
+She just can't have any lover
+Many imagine her body
+Butt naked under the covers
+She'll have you messed up and begging on your knees
+Yelling: please, please, oh
+
+[Chorus]
+Esta noche lo quiere hacer
+Como si fuera el viejo oeste
+Entrar en duelo hasta el amanecer
+Una batalla hasta la muerte
+Guarda secretos de placer entre su piel
+Pero portarse mal se siente bien
+Esta noche lo quiere hacer
+Como si fuera el viejo oeste
+
+[Outro]
+Una llamada y se desarma`,
+      en: `[Intro]
+One call and she's disarmed
+She answers and goes without fearing karma
+Very stealthy, calmly
+Without setting off alarms
+
+[Pre-Chorus]
+It's normal for everyone to be jealous of her
+If there's no way to reach her
+She's ready to collect what she's owed
+Problems that go, others that come
+
+[Chorus]
+Tonight she wants to do it
+As if it were the Wild West
+Enter a duel until dawn
+A battle to the death
+She keeps secrets of pleasure under her skin
+But behaving badly feels good
+Tonight she wants to do it
+As if it were the Wild West
+
+[Verse 1]
+Picasso, baby
+You know
+The sun is hiding over the horizon
+Behind the cloud of the green mountain
+She doesn't get on just any horse
+Very hard for anyone to mount her
+When she aims she doesn't miss
+She pays no mind to the fools
+Comments slide right off her
+
+[Pre-Chorus]
+It's normal for everyone to be jealous of her
+If there's no way to reach her
+She's ready to collect what she's owed
+Problems that go, others that come
+
+[Chorus]
+Tonight she wants to do it
+As if it were the Wild West
+Enter a duel until dawn
+A battle to the death
+She keeps secrets of pleasure under her skin
+But behaving badly feels good
+Tonight she wants to do it
+As if it were the Wild West
+
+[Verse 2]
+Hey, baby
+It was love like at first sight (yes, it was)
+Then a fuck at a first fight (it was good)
+That body like a song and (yes, it is)
+She keep the verse tight (yeah, she does)
+I'm in it all night (chillin' like Rih Rih)
+Play it 'till first light (got it on repeat)
+They say that love is pain but
+This one just hurts right
+
+[Pre-Chorus]
+Yes, she could claim anybody
+She just can't have any lover
+Many imagine her body
+Butt naked under the covers
+She'll have you messed up and begging on your knees
+Yelling: please, please, oh
+
+[Chorus]
+Tonight she wants to do it
+As if it were the Wild West
+Enter a duel until dawn
+A battle to the death
+She keeps secrets of pleasure under her skin
+But behaving badly feels good
+Tonight she wants to do it
+As if it were the Wild West
+
+[Outro]
+One call and she's disarmed`,
+      fr: `[Intro]
+Un appel et elle est désarmée
+Elle répond et y va sans craindre le karma
+Très silencieuse, avec calme
+Sans déclencher d'alarmes
+
+[Pre-Chorus]
+C'est normal que tout le monde la jalouse
+S'il n'y a aucun moyen de l'atteindre
+Elle est prête à faire payer ce qu'on lui doit
+Des problèmes qui partent, d'autres qui viennent
+
+[Chorus]
+Cette nuit, elle veut le faire
+Comme si c'était le Far West
+Entrer en duel jusqu'à l'aube
+Une bataille jusqu'à la mort
+Elle garde des secrets de plaisir sous sa peau
+Mais se comporter mal fait du bien
+Cette nuit, elle veut le faire
+Comme si c'était le Far West
+
+[Verse 1]
+Picasso, bébé
+Tu sais
+Le soleil se cache à l'horizon
+Derrière le nuage de la montagne verte
+Elle ne monte pas sur n'importe quel cheval
+Très difficile qu'on la domine
+Quand elle vise, elle ne rate pas
+Elle ne fait pas attention aux idiots
+Les commentaires lui glissent dessus
+
+[Pre-Chorus]
+C'est normal que tout le monde la jalouse
+S'il n'y a aucun moyen de l'atteindre
+Elle est prête à faire payer ce qu'on lui doit
+Des problèmes qui partent, d'autres qui viennent
+
+[Chorus]
+Cette nuit, elle veut le faire
+Comme si c'était le Far West
+Entrer en duel jusqu'à l'aube
+Une bataille jusqu'à la mort
+Elle garde des secrets de plaisir sous sa peau
+Mais se comporter mal fait du bien
+Cette nuit, elle veut le faire
+Comme si c'était le Far West
+
+[Verse 2]
+Hey, bébé
+C'était comme le coup de foudre (oui, ça l'était)
+Puis on a couché dès la première dispute (c'était bien)
+Ce corps est comme une chanson et (oui, il l'est)
+Elle garde le couplet bien serré (ouais, elle le fait)
+Je suis dedans toute la nuit (à me détendre comme Rih Rih)
+Jouez-le jusqu'aux premières lueurs (en boucle)
+Ils disent que l'amour est douleur mais
+Celui-ci fait juste mal comme il faut
+
+[Pre-Chorus]
+Oui, elle pourrait réclamer n'importe qui
+Elle ne peut juste pas avoir n'importe quel amant
+Beaucoup s'imaginent son corps
+Tout nu sous les couvertures
+Elle te mettra dans tous tes états, à supplier à genoux
+Criant : s'il te plaît, s'il te plaît, oh
+
+[Chorus]
+Cette nuit, elle veut le faire
+Comme si c'était le Far West
+Entrer en duel jusqu'à l'aube
+Une bataille jusqu'à la mort
+Elle garde des secrets de plaisir sous sa peau
+Mais se comporter mal fait du bien
+Cette nuit, elle veut le faire
+Comme si c'était le Far West
+
+[Outro]
+Un appel et elle est désarmée`
+    }
+  },
+  {
     id: "in-my-bed-rotimi-wale",
     title: "In My Bed",
     artist: "Rotimi ft. Wale",
