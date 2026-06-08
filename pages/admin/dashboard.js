@@ -205,7 +205,7 @@ export default function AdminDashboard() {
                                 <span className="click-details">
                                   {ev.data.text ? <strong>"{ev.data.text}"</strong> : <em>(Élément sans texte)</em>} 
                                   {ev.data.tagName && <span className="tag-name"> [{ev.data.tagName.toLowerCase()}]</span>}
-                                  {ev.data.href && <span className="href"> -> {ev.data.href}</span>}
+                                  {ev.data.href && <span className="href"> {"->"} {ev.data.href}</span>}
                                 </span>
                               </div>
                             )}
