@@ -301,18 +301,25 @@ export default function SongPage({ song }) {
           )}
 
           <div className="lyrics-interleaved">
-          {song.lyrics.es.split('\n').map((esLine, i) => {
-            const targetLocale = locale === 'en' && song.lyrics.en ? 'en' : 'fr';
-            const targetLines = song.lyrics[targetLocale].split('\n');
-            const targetLine = targetLines[i] || '';
-            if (!esLine.trim() && !targetLine.trim()) return <div key={i} style={{ height: '20px' }} />;
-            return (
-              <div key={i} className="lyric-pair">
-                {esLine && <div className="lyric-es">{esLine}</div>}
-                {targetLine && <div className={`lyric-${targetLocale}`}>{targetLine}</div>}
-              </div>
-            );
-          })}
+          {(() => {
+            // Determine the "original" language: prefer 'es', then 'en', then first available
+            const originalLang = song.lyrics.es ? 'es' : (song.lyrics.en ? 'en' : Object.keys(song.lyrics)[0]);
+            const originalLines = song.lyrics[originalLang].split('\n');
+            // Determine the "translation" language
+            const targetLocale = locale === 'en' && song.lyrics.en && originalLang !== 'en' ? 'en' : 'fr';
+            const targetLines = (song.lyrics[targetLocale] || '').split('\n');
+
+            return originalLines.map((origLine, i) => {
+              const targetLine = targetLines[i] || '';
+              if (!origLine.trim() && !targetLine.trim()) return <div key={i} style={{ height: '20px' }} />;
+              return (
+                <div key={i} className="lyric-pair">
+                  {origLine && <div className={`lyric-${originalLang}`}>{origLine}</div>}
+                  {targetLine && originalLang !== targetLocale && <div className={`lyric-${targetLocale}`}>{targetLine}</div>}
+                </div>
+              );
+            });
+          })()}
           </div>
         </div>
 
