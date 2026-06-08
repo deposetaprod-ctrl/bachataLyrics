@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Canonical from '../components/Canonical';
 import Tracker from '../components/Tracker';
+import InstallPwaPopup from '../components/InstallPwaPopup';
 import '../styles/globals.css';
 import { Analytics } from "@vercel/analytics/react"
 
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Canonical />
       <Tracker />
+      <InstallPwaPopup />
       <Component {...pageProps} />
       <Analytics />
     </>
