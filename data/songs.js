@@ -1,5 +1,674 @@
 export const songs = [
   {
+    id: "furioso-violento-esme",
+    title: "Furioso Violento",
+    artist: "ESME",
+    year: 2019,
+    dateAdded: "2026-06-08",
+    tags: ["Sensual", "Passion", "Moderne"],
+    color: "#dc2626",
+    spotify: "https://open.spotify.com/search/Furioso%20Violento%20ESME",
+    danceVideo: "dFnNZKxD22w",
+    culture: {
+      context: "Sorti en 2019, 'Furioso Violento' est un titre phare de l'artiste ESME (souvent surnommé 'El Pequeño Gigante'). Connu pour son style très sensuel et urbain, ESME livre ici une bachata rythmée et provocante qui aborde sans détour le thème de l'infidélité assumée et de la passion.",
+      meaning: "La chanson raconte l'histoire d'un homme qui assume pleinement son rôle d'amant. Il critique le petit ami officiel qui ne sait pas satisfaire sa compagne, tout en mettant les choses au clair avec la femme : leur relation est purement physique et passionnelle ('furieux, violent'), et il lui demande explicitement de ne pas mélanger les sentiments.",
+      artistInfo: "ESME est un chanteur de bachata moderne qui s'est fait connaître grâce à sa voix haut perchée distincte et ses textes très directs, mêlant la rythmique classique de la bachata dominicaine à une attitude urbaine assumée.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "Released in 2019, 'Furioso Violento' is a hit track by the artist ESME (often nicknamed 'El Pequeño Gigante'). Known for his very sensual and urban style, ESME delivers a rhythmic and provocative bachata that straightforwardly tackles the themes of passion and unapologetic affairs.",
+      meaning: "The song tells the story of a man who fully embraces his role as the lover. He criticizes the official boyfriend for neglecting his partner and failing to satisfy her, while making boundaries clear with the woman: their relationship is purely physical and passionate ('furious, violent'), explicitly asking her not to catch feelings.",
+      artistInfo: "ESME is a modern bachata singer who became known for his distinct high-pitched voice and direct, sensual lyrics, blending the classic rhythms of Dominican bachata with a more urban and modern aesthetic.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `[Intro]
+Esme
+
+[Verse 1]
+Sé que entiendes el proceso de volver a enamorarte
+Ya lo intentamos una vez y fue algo muy interesante
+Dile a tu novio que no llame, miéntele que hoy llegas tarde
+Vamos a hacer de las locuras que sé muy bien que él no te hace
+Seré tu amante
+
+[Chorus]
+Se nota en tu cara, se nota en tus labios, se nota en tu cuerpo
+Furioso, violento
+Él no te da nada, te deja apagada
+Y en su ausencia aprovechas el momento
+Que no está él para buscar a aquel
+A el que sí te complace como él ya no lo hace
+Maldito aquel que enamora a una mujer
+Que no puede complacer
+
+[Verse 2]
+No confundas sentimientos, simplemente soy tu amante
+Búscame si quieres sexo, no vengas a enamorarte
+Él cree ser dueño en tu vida, es un tonto ignorante
+Lo respeto como hombre, que me respete como amante
+Yo soy tu amante
+
+[Chorus]
+Se nota en tu cara, se nota en tus labios, se nota en tu cuerpo
+Furioso, violento
+Él no te da nada, te deja apagada
+Y en su ausencia aprovechas el momento
+Que no está él para buscar a aquel
+A el que sí te complace como él ya no lo hace
+Maldito aquel que enamora a una mujer
+Que no puede complacer
+
+[Chorus]
+Se nota en tu cara, se nota en tus labios, se nota en tu cuerpo
+Furioso, violento
+Él no te da nada (no), te deja apagada (no)
+Y en su ausencia aprovechas el momento
+Que no está él para buscar a aquel
+A el que sí te complace como él ya no lo hace
+Maldito aquel que enamora a una mujer
+Que no puede complacer`,
+      en: `[Intro]
+Esme
+
+[Verse 1]
+I know you understand the process of falling in love again
+We already tried it once and it was very interesting
+Tell your boyfriend not to call, lie to him that you're arriving late today
+We are going to do the crazy things that I know very well he doesn't do to you
+I will be your lover
+
+[Chorus]
+It shows on your face, it shows on your lips, it shows on your body
+Furious, violent
+He doesn't give you anything, he leaves you turned off
+And in his absence you take advantage of the moment
+That he isn't there to look for the one
+The one who does please you like he no longer does
+Damn the one who makes a woman fall in love
+Whom he cannot please
+
+[Verse 2]
+Don't confuse feelings, I am simply your lover
+Look for me if you want sex, don't come falling in love
+He believes he's the owner of your life, he's an ignorant fool
+I respect him as a man, let him respect me as a lover
+I am your lover
+
+[Chorus]
+It shows on your face, it shows on your lips, it shows on your body
+Furious, violent
+He doesn't give you anything, he leaves you turned off
+And in his absence you take advantage of the moment
+That he isn't there to look for the one
+The one who does please you like he no longer does
+Damn the one who makes a woman fall in love
+Whom he cannot please
+
+[Chorus]
+It shows on your face, it shows on your lips, it shows on your body
+Furious, violent
+He doesn't give you anything (no), he leaves you turned off (no)
+And in his absence you take advantage of the moment
+That he isn't there to look for the one
+The one who does please you like he no longer does
+Damn the one who makes a woman fall in love
+Whom he cannot please`,
+      fr: `[Intro]
+Esme
+
+[Verse 1]
+Je sais que tu comprends le processus de retomber amoureuse
+Nous avons déjà essayé une fois et ce fut très intéressant
+Dis à ton petit ami de ne pas appeler, mens-lui que tu rentres tard aujourd'hui
+Nous allons faire ces folies que je sais très bien qu'il ne te fait pas
+Je serai ton amant
+
+[Chorus]
+Ça se voit sur ton visage, ça se voit sur tes lèvres, ça se voit sur ton corps
+Furieux, violent
+Il ne te donne rien, il te laisse éteinte
+Et en son absence tu profites du moment
+Où il n'est pas là pour chercher celui
+Celui qui te satisfait comme il ne le fait plus
+Maudit soit celui qui rend une femme amoureuse
+Qu'il ne peut pas satisfaire
+
+[Verse 2]
+Ne confonds pas les sentiments, je suis simplement ton amant
+Cherche-moi si tu veux du sexe, ne viens pas tomber amoureuse
+Il croit être le maître de ta vie, c'est un idiot ignorant
+Je le respecte en tant qu'homme, qu'il me respecte en tant qu'amant
+Je suis ton amant
+
+[Chorus]
+Ça se voit sur ton visage, ça se voit sur tes lèvres, ça se voit sur ton corps
+Furieux, violent
+Il ne te donne rien, il te laisse éteinte
+Et en son absence tu profites du moment
+Où il n'est pas là pour chercher celui
+Celui qui te satisfait comme il ne le fait plus
+Maudit soit celui qui rend une femme amoureuse
+Qu'il ne peut pas satisfaire
+
+[Chorus]
+Ça se voit sur ton visage, ça se voit sur tes lèvres, ça se voit sur ton corps
+Furieux, violent
+Il ne te donne rien (non), il te laisse éteinte (non)
+Et en son absence tu profites du moment
+Où il n'est pas là pour chercher celui
+Celui qui te satisfait comme il ne le fait plus
+Maudit soit celui qui rend une femme amoureuse
+Qu'il ne peut pas satisfaire`
+    }
+  },
+  {
+    id: "como-ayer-lean-akai",
+    title: "Como Ayer",
+    artist: "Lean & Akai",
+    year: 2024,
+    dateAdded: "2026-06-08",
+    tags: ["Romantique", "Nostalgie", "Sensual"],
+    color: "#8b5cf6",
+    spotify: "https://open.spotify.com/search/Como%20Ayer%20Lean%20Akai",
+    danceVideo: "GE_IGBi0kv8",
+    culture: {
+      context: "'Como Ayer' est une bachata romantique et nostalgique interprétée par le duo Lean & Akai. La chanson aborde le thème intemporel d'un amour de jeunesse qui a survécu à l'épreuve du temps, rappelant que certains liens restent intacts malgré les années.",
+      meaning: "Les paroles racontent l'histoire d'un homme qui tente de reconquérir son ancien amour, actuellement coincée dans une relation malheureuse où elle n'est plus valorisée. Il lui rappelle leur connexion profonde, presque 'surnaturelle', et promet de lui redonner confiance en elle ('elevar el autoestima') et l'amour qu'elle mérite.",
+      artistInfo: "Lean & Akai forment un duo urbain/bachata ('Lean & Akai baby') qui se distingue par des textes très émotionnels, mixant l'authenticité de la bachata romantique avec une touche vocale très moderne.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "'Como Ayer' (Like Yesterday) is a romantic and nostalgic bachata performed by the duo Lean & Akai. The song touches on the timeless theme of young love that has withstood the test of time, reminding us that some connections remain intact despite the years.",
+      meaning: "The lyrics tell the story of a man trying to win back his former love, who is currently stuck in an unhappy relationship where she no longer feels valued. He reminds her of their deep, almost 'unnatural' connection, promising to rebuild her self-esteem and give her the love she deserves.",
+      artistInfo: "Lean & Akai are an urban/bachata duo ('Lean & Akai baby') known for their emotional and romantic lyrics, blending traditional romantic bachata with a very modern vocal styling.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `[Chorus]
+Dime que me extrañas
+y que me quieres ver
+Sabes que aunque pase el tiempo
+te voy a querer
+Y todo es como ayer,
+y ahora todo es como ayer.
+El mismo destino
+es al que somos fiel
+Porque te entregué
+todo lo que no te dio el
+Yo te perdí una vez,
+y nunca es tarde pa' volver.
+
+[Verse 1]
+Para volver a empezar ten
+Mi corazón pa' besarte
+Porque si vuelvo a tu vida
+Sabes que los días se vuelven aparte
+Siempre me tuviste en mente
+Antes y después de los veinte
+Y ahora me dices que no eres feliz
+Si no soy yo el que tienes en frente.
+Y ahora buscas una salida
+porque el no te anima
+Ya no te quiere,
+ya no te sorprende
+ni te mima
+El que merece estar contigo
+es quien no te deprima
+Y que te eleve al cielo "bby" el autoestima.
+
+[Pre-Chorus]
+Y es que me mata el miedo
+de buscarte
+y que no estés ahí
+Tú eres la única mujer
+que siempre estuvo para mi
+Y no me olvido de los momentos
+que tu y yo recordamos
+Cuando nuestras miradas
+se encontraron.
+eh ieh...
+
+[Verse 2]
+Tu eres mi medicina,
+tu eres mi serial
+Conmigo tu estas viva,
+contigo soy real
+Por cosas de la vida
+lo nuestro no se termina
+Es algo casi anti-natural.
+
+[Chorus]
+Dime que me extrañas
+y que me quieres ver
+Sabes que aunque pase el tiempo
+te voy a querer
+Y todo es como ayer,
+y ahora todo es como ayer.
+El mismo destino
+es al que somos fiel
+Porque te entregué
+todo lo que no te dió el
+Yo te perdí una vez,
+y nunca es tarde pa' volver.
+
+[Outro]
+yeeeh
+yeh yeh...
+Lean & Akai baby...
+Lean & Akai baby...`,
+      en: `[Chorus]
+Tell me that you miss me
+and that you want to see me
+You know that even though time passes
+I'm going to love you
+And everything is like yesterday,
+and now everything is like yesterday.
+The same destiny
+is what we are faithful to
+Because I gave you
+everything he didn't give you
+I lost you once,
+and it's never too late to come back.
+
+[Verse 1]
+To start over again, have
+My heart to kiss you
+Because if I come back into your life
+You know the days become apart
+You always had me in mind
+Before and after being twenty
+And now you tell me you're not happy
+If I'm not the one in front of you.
+And now you look for a way out
+because he doesn't cheer you up
+He doesn't love you anymore,
+he no longer surprises you
+nor pampers you
+The one who deserves to be with you
+is the one who doesn't depress you
+And who elevates your self-esteem to the sky, "baby".
+
+[Pre-Chorus]
+And the thing is, the fear kills me
+of looking for you
+and you not being there
+You are the only woman
+who was always there for me
+And I don't forget the moments
+that you and I remember
+When our gazes
+met.
+eh ieh...
+
+[Verse 2]
+You are my medicine,
+you are my serial
+With me you are alive,
+with me I am real
+Because of things in life
+ours doesn't end
+It's something almost unnatural.
+
+[Chorus]
+Tell me that you miss me
+and that you want to see me
+You know that even though time passes
+I'm going to love you
+And everything is like yesterday,
+and now everything is like yesterday.
+The same destiny
+is what we are faithful to
+Because I gave you
+everything he didn't give you
+I lost you once,
+and it's never too late to come back.
+
+[Outro]
+yeeeh
+yeh yeh...
+Lean & Akai baby...
+Lean & Akai baby...`,
+      fr: `[Chorus]
+Dis-moi que je te manque
+et que tu veux me voir
+Tu sais que même si le temps passe
+je t'aimerai
+Et tout est comme hier,
+et maintenant tout est comme hier.
+C'est au même destin
+que nous sommes fidèles
+Parce que je t'ai donné
+tout ce qu'il ne t'a pas donné
+Je t'ai perdue une fois,
+et il n'est jamais trop tard pour revenir.
+
+[Verse 1]
+Pour recommencer à nouveau, prends
+Mon cœur pour t'embrasser
+Parce que si je reviens dans ta vie
+Tu sais que les jours deviennent différents
+Tu m'as toujours eu en tête
+Avant et après tes vingt ans
+Et maintenant tu me dis que tu n'es pas heureuse
+Si ce n'est pas moi que tu as en face de toi.
+Et maintenant tu cherches une issue
+parce qu'il ne t'encourage pas
+Il ne t'aime plus,
+il ne te surprend plus
+ni ne te dorlote
+Celui qui mérite d'être avec toi
+c'est celui qui ne te déprime pas
+Et qui élève ton estime de toi au ciel, "bébé".
+
+[Pre-Chorus]
+Et le truc c'est que la peur me tue
+de te chercher
+et que tu ne sois pas là
+Tu es la seule femme
+qui a toujours été là pour moi
+Et je n'oublie pas les moments
+dont toi et moi nous souvenons
+Quand nos regards
+se sont croisés.
+eh ieh...
+
+[Verse 2]
+Tu es ma médecine,
+tu es mon essentiel
+Avec moi tu es vivante,
+avec toi je suis vrai
+Par les choses de la vie
+notre histoire ne se termine pas
+C'est quelque chose de presque surnaturel.
+
+[Chorus]
+Dis-moi que je te manque
+et que tu veux me voir
+Tu sais que même si le temps passe
+je t'aimerai
+Et tout est comme hier,
+et maintenant tout est comme hier.
+C'est au même destin
+que nous sommes fidèles
+Parce que je t'ai donné
+tout ce qu'il ne t'a pas donné
+Je t'ai perdue une fois,
+et il n'est jamais trop tard pour revenir.
+
+[Outro]
+yeeeh
+yeh yeh...
+Lean & Akai baby...
+Lean & Akai baby...`
+    }
+  },
+  {
+    id: "oye-vecina-mayinbito",
+    title: "Oye Vecina",
+    artist: "Mayinbito",
+    year: 2025,
+    dateAdded: "2026-06-08",
+    tags: ["Urbano", "Humour", "Sensual"],
+    color: "#eab308",
+    spotify: "https://open.spotify.com/search/Oye%20Vecina%20Mayinbito",
+    danceVideo: "",
+    culture: {
+      context: "'Oye Vecina' est un titre de bachata urbaine sorti en 2025 par Mayinbito. Avec son flow caractéristique et son argot dominicain bien trempé, l'artiste aborde une situation classique de séduction de quartier avec humour et malice, se proclamant 'Dueño del movimiento' (Le boss du mouvement).",
+      meaning: "La chanson raconte l'histoire d'un homme qui profite de l'absence de sa femme, partie en week-end dans sa famille, pour inviter sa séduisante voisine. Entre regards suggestifs et propositions festives, les paroles dépeignent une attirance mutuelle assumée, basée purement sur le physique et l'amusement, sans attaches sentimentales ('no se va en sentimiento').",
+      artistInfo: "Mayinbito est un artiste émergent de la scène bachata urbaine, connu pour ses textes directs, son rythme entraînant et sa capacité à raconter des histoires du quotidien (el barrio) avec une touche provocatrice et humoristique.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "'Oye Vecina' is an urban bachata track released in 2025 by Mayinbito. Featuring his characteristic flow and heavy Dominican slang, the artist tackles a classic neighborhood seduction scenario with humor and mischief, proclaiming himself the 'Dueño del movimiento' (Owner of the movement).",
+      meaning: "The song tells the story of a man who takes advantage of his wife being away for the weekend to invite over his attractive neighbor. Through suggestive glances and festive proposals, the lyrics depict an unapologetic mutual attraction based purely on physical chemistry and fun, with no emotional attachment involved.",
+      artistInfo: "Mayinbito is an emerging artist in the urban bachata scene, known for his straightforward lyrics, catchy rhythms, and his ability to tell everyday street stories with a provocative and humorous twist.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `[Intro]
+Buen dia vecino como esta usted
+Todo bien vecina ya usted sabe aqui
+Y la vecina se fue
+Si ella si
+La de la casa se fue pa donde la familia a visitar
+Yo quede solo fin de semana asi que no hay que trabajar
+(Bueno ahora o nunca)
+
+[Chorus]
+Oye vecina vamo a beber
+Y si tu quiere podemo prender
+Ooooo oooooo
+La Vecina ta buena de comer
+Oye vecina vamo a beber
+Y si tu quiere podemo prender
+Ooooo oooooo
+La Vecina ta buena de comer
+
+[Verse 1]
+Aprovechando mi mujer se fue de casa
+Mi nueva vecina ta bien buena ella la grasa
+En la marquesina pone la ropa a tender
+Pantalones corto provechando que la puedan ver
+La vecina siempre ta mirando
+Que la vieron con otro se ta murmurando
+Este el momento ahi que aprovecharlo
+Que nadie se entere
+Que tamo matando
+
+[Chorus]
+Oye vecina vamo a beber
+Y si tu quiere podemo prender
+Ooooo oooooo
+La Vecina ta buena de comer
+Oye vecina vamo a beber
+Y si tu quiere podemo prender
+Ooooo oooooo
+La Vecina ta buena de comer
+
+[Verse 2]
+Ella provoca en mi
+Que la quiera partir
+Todo el tiempo me coquetea
+Ella ta pa mi
+Ella ta buena que ma te puedo decir
+Piel de canela
+Culo como Cardi B (yea)
+Y lo bueno es que no se va en sentimiento
+Ella sabe bajo perfil todo el tiempo
+Ella siempre ta esperando el momento
+Que yo este solo pa comerselo entero
+
+[Chorus]
+Oye vecina vamo a beber
+Y si tu quiere podemo prender
+Ooooo oooooo
+La Vecina ta buena de comer
+Oye vecina vamo a beber
+Y si tu quiere podemo prender
+Ooooo oooooo
+La Vecina ta buena de comer
+
+[Bridge]
+La de la casa se fue pa donde la familia a visitar
+Yo quede solo fin de semana asi que no hay que trabajar
+
+[Chorus]
+Oye vecina vamo a beber
+Y si tu quiere podemo prender
+Ooooo oooooo
+La Vecina ta buena de comer
+Oye vecina vamo a beber
+Y si tu quiere podemo prender
+Ooooo oooooo
+La Vecina ta buena de comer
+
+[Outro]
+Mayinbito
+Dueño del movimiento`,
+      en: `[Intro]
+Good morning neighbor, how are you?
+Everything's good neighbor, you already know, here
+And did the neighbor (wife) leave?
+Yes, she did
+The lady of the house went to visit her family
+I'm left alone for the weekend so there's no work
+(Well, now or never)
+
+[Chorus]
+Hey neighbor, let's drink
+And if you want we can light up (smoke)
+Ooooo oooooo
+The neighbor looks good enough to eat
+Hey neighbor, let's drink
+And if you want we can light up
+Ooooo oooooo
+The neighbor looks good enough to eat
+
+[Verse 1]
+Taking advantage that my woman left the house
+My new neighbor is looking real good, she's the best
+In the driveway she hangs the clothes to dry
+Wearing short shorts taking advantage so they can see her
+The neighbor is always looking
+They're murmuring that they saw her with someone else
+This is the moment, gotta take advantage of it
+Let no one find out
+That we're killing it
+
+[Chorus]
+Hey neighbor, let's drink
+And if you want we can light up
+Ooooo oooooo
+The neighbor looks good enough to eat
+Hey neighbor, let's drink
+And if you want we can light up
+Ooooo oooooo
+The neighbor looks good enough to eat
+
+[Verse 2]
+She provokes in me
+The desire to break her
+She flirts with me all the time
+She is down for me
+She looks good, what more can I tell you
+Cinnamon skin
+Booty like Cardi B (yeah)
+And the good thing is she doesn't get in her feelings
+She keeps a low profile all the time
+She's always waiting for the moment
+For me to be alone to eat it all up
+
+[Chorus]
+Hey neighbor, let's drink
+And if you want we can light up
+Ooooo oooooo
+The neighbor looks good enough to eat
+Hey neighbor, let's drink
+And if you want we can light up
+Ooooo oooooo
+The neighbor looks good enough to eat
+
+[Bridge]
+The lady of the house went to visit her family
+I'm left alone for the weekend so there's no work
+
+[Chorus]
+Hey neighbor, let's drink
+And if you want we can light up
+Ooooo oooooo
+The neighbor looks good enough to eat
+Hey neighbor, let's drink
+And if you want we can light up
+Ooooo oooooo
+The neighbor looks good enough to eat
+
+[Outro]
+Mayinbito
+Owner of the movement`,
+      fr: `[Intro]
+Bonjour voisine, comment allez-vous ?
+Tout va bien voisine, vous savez ce que c'est, ici
+Et la voisine (femme) est partie ?
+Oui, elle est partie
+Celle de la maison est partie rendre visite à sa famille
+Je suis seul ce week-end donc pas besoin de travailler
+(Bon, maintenant ou jamais)
+
+[Chorus]
+Hé voisine, allons boire un verre
+Et si tu veux on peut allumer (fumer)
+Ooooo oooooo
+La voisine est à croquer
+Hé voisine, allons boire un verre
+Et si tu veux on peut allumer
+Ooooo oooooo
+La voisine est à croquer
+
+[Verse 1]
+Profitant du fait que ma femme a quitté la maison
+Ma nouvelle voisine est vraiment bonne, c'est la crème
+Dans le garage elle étend le linge
+En short court, profitant qu'on puisse la voir
+La voisine regarde toujours
+Ça murmure qu'on l'a vue avec un autre
+C'est le moment, il faut en profiter
+Que personne ne le sache
+Qu'on déchire tout
+
+[Chorus]
+Hé voisine, allons boire un verre
+Et si tu veux on peut allumer
+Ooooo oooooo
+La voisine est à croquer
+Hé voisine, allons boire un verre
+Et si tu veux on peut allumer
+Ooooo oooooo
+La voisine est à croquer
+
+[Verse 2]
+Elle provoque en moi
+L'envie de la casser en deux
+Elle flirte avec moi tout le temps
+Elle est partante pour moi
+Elle est bonne, que puis-je te dire de plus
+Peau cannelle
+Un cul comme Cardi B (ouais)
+Et ce qui est bien c'est qu'elle ne s'attache pas
+Elle sait garder un profil bas tout le temps
+Elle attend toujours le moment
+Que je sois seul pour le manger tout entier
+
+[Chorus]
+Hé voisine, allons boire un verre
+Et si tu veux on peut allumer
+Ooooo oooooo
+La voisine est à croquer
+Hé voisine, allons boire un verre
+Et si tu veux on peut allumer
+Ooooo oooooo
+La voisine est à croquer
+
+[Bridge]
+Celle de la maison est partie rendre visite à sa famille
+Je suis seul ce week-end donc pas besoin de travailler
+
+[Chorus]
+Hé voisine, allons boire un verre
+Et si tu veux on peut allumer
+Ooooo oooooo
+La voisine est à croquer
+Hé voisine, allons boire un verre
+Et si tu veux on peut allumer
+Ooooo oooooo
+La voisine est à croquer
+
+[Outro]
+Mayinbito
+Le boss du mouvement`
+    }
+  },
+  {
     id: "el-viejo-oeste-pinto-picasso",
     title: "El Viejo Oeste",
     artist: "Pinto Picasso",
