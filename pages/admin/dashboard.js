@@ -174,7 +174,7 @@ export default function AdminDashboard() {
               <div key={session.sessionId} className={`session-item ${expandedSession === session.sessionId ? 'expanded' : ''}`}>
                 <div className="session-header" onClick={() => toggleSession(session.sessionId)}>
                   <div className="session-info">
-                    <span className="session-id">{session.sessionId}</span>
+                    <span className="session-id" title={session.sessionId}>{session.sessionId.split('-')[0]}...</span>
                     <span className="session-date">Dernière activité: {formatDate(session.lastSeen)}</span>
                   </div>
                   <div className="session-actions">
@@ -202,7 +202,7 @@ export default function AdminDashboard() {
                             ) : (
                               <div className="event-type click">
                                 <span className="badge badge-purple">Clic</span>
-                                <span className="click-details">
+                                <span className="click-details" style={{ wordBreak: 'break-word' }}>
                                   {ev.data.text ? <strong>"{ev.data.text}"</strong> : <em>(Élément sans texte)</em>} 
                                   {ev.data.tagName && <span className="tag-name"> [{ev.data.tagName.toLowerCase()}]</span>}
                                   {ev.data.href && <span className="href"> {"->"} {ev.data.href}</span>}
@@ -431,6 +431,43 @@ export default function AdminDashboard() {
           font-size: 11px;
           color: #475569;
           word-break: break-all;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+          .dashboard-container {
+            padding: 16px;
+          }
+          header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+          }
+          h1 {
+            font-size: 22px;
+          }
+          .stats {
+            width: 100%;
+          }
+          .stat-card {
+            width: 100%;
+          }
+          .session-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+          }
+          .session-actions {
+            width: 100%;
+            justify-content: space-between;
+          }
+          .timeline-content {
+            padding: 12px;
+          }
+          .event-type {
+            flex-wrap: wrap;
+          }
         }
       `}</style>
     </div>
