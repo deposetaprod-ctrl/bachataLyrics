@@ -1284,3 +1284,103 @@ body::before {
     max-width: none;
   }
 }
+
+/* ─── DANCE VIDEO PLACEHOLDER ─── */
+.dance-video-placeholder {
+  width: calc(100% - 48px);
+  margin: 0 24px 32px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 2px dashed rgba(255,255,255,0.1);
+  padding: 40px;
+  text-align: center;
+}
+
+.dance-video-placeholder .placeholder-icon {
+  font-size: 3.5rem;
+}
+
+.dance-video-placeholder .placeholder-text h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.dance-video-placeholder .placeholder-text p {
+  color: var(--text-muted);
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+.btn-suggest-video {
+  background: white;
+  color: #1e1b4b;
+  padding: 12px 24px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btn-suggest-video:hover {
+  transform: translateY(-2px);
+}
+
+@media (min-width: 1024px) {
+  .song-content-layout.no-video {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .song-content-layout.no-video .lyrics-interleaved {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .dance-video-placeholder {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 320px;
+    margin: 0;
+    padding: 24px;
+    gap: 16px;
+    border-radius: 20px;
+    background: rgba(15, 15, 20, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    animation: slideUp 0.4s ease-out forwards;
+  }
+
+  .dance-video-placeholder .placeholder-icon {
+    font-size: 2rem;
+  }
+
+  .dance-video-placeholder .placeholder-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .dance-video-placeholder .placeholder-text p {
+    font-size: 0.85rem;
+  }
+
+  .btn-suggest-video {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

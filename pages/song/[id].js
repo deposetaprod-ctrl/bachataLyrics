@@ -243,7 +243,7 @@ export default function SongPage({ song }) {
         {/* ─── DIVIDER ─── */}
         <div className="divider" />
 
-        <div className="song-content-layout">
+        <div className={`song-content-layout ${!song.danceVideo ? 'no-video' : ''}`}>
           {song.danceVideo ? (
             <div className="dance-video-container">
               <iframe
@@ -255,45 +255,19 @@ export default function SongPage({ song }) {
               ></iframe>
             </div>
           ) : (
-            <div 
-              style={{
-                width: '100%',
-                aspectRatio: '16/9',
-                background: 'rgba(255,255,255,0.03)',
-                borderRadius: '32px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '20px',
-                border: '2px dashed rgba(255,255,255,0.1)',
-                padding: '40px',
-                textAlign: 'center'
-              }}
-              className="dance-video-placeholder"
-            >
-              <div style={{ fontSize: '3.5rem' }}>🎬</div>
-              <div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '8px' }}>{locale === 'en' ? 'No demonstration video' : 'Aucune vidéo de démonstration'}</h3>
-                <p style={{ color: 'var(--text-muted)', maxWidth: '400px', margin: '0 auto', fontSize: '0.95rem' }}>
+            <div className="dance-video-placeholder">
+              <div className="placeholder-icon">🎬</div>
+              <div className="placeholder-text">
+                <h3>{locale === 'en' ? 'No demonstration video' : 'Aucune vidéo de démonstration'}</h3>
+                <p>
                   {locale === 'en' ? 'Know a great dance video for this song? Let us know to enrich the community!' : 'Tu connais une superbe vidéo de danse sur ce son ? Propose-la nous pour enrichir la communauté !'}
                 </p>
               </div>
               <a 
                 href="mailto:contact@maximilien.digital"
-                style={{
-                  background: 'white',
-                  color: '#1e1b4b',
-                  padding: '12px 24px',
-                  borderRadius: '14px',
-                  fontWeight: 800,
-                  fontSize: '0.9rem',
-                  textDecoration: 'none',
-                  transition: 'all 0.2s'
-                }}
-                className="hover-scale"
+                className="btn-suggest-video hover-scale"
               >
-                🎥 Proposer une vidéo
+                🎥 {locale === 'en' ? 'Suggest a video' : 'Proposer une vidéo'}
               </a>
             </div>
           )}
