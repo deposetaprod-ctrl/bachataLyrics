@@ -1,53 +1,58 @@
-import fs from 'fs';
-import path from 'path';
+import { createClient } from '@supabase/supabase-js';
 
-export default function handler(req, res) {
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+
+// Initialize Supabase client only if keys are present
+const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
 
+  if (!supabase) {
+    console.error('Supabase credentials missing');
+    return res.status(500).json({ message: 'Database not configured' });
+  }
+
   try {
-    const filePath = path.join(process.cwd(), 'data', 'tracking.json');
-    let trackingData = {};
-
-    if (fs.existsSync(filePath)) {
-      const fileContent = fs.readFileSync(filePath, 'utf8');
-      if (fileContent) {
-        trackingData = JSON.parse(fileContent);
-      }
-    }
-
     const { sessionId, type, data, timestamp, url, userAgent } = req.body;
 
     if (!sessionId) {
       return res.status(400).json({ message: 'Missing sessionId' });
     }
 
-    if (!trackingData[sessionId]) {
-      trackingData[sessionId] = {
-        sessionId,
-        firstSeen: timestamp,
-        userAgent,
-        events: []
-      };
-    }
+    // 1. Upsert session (creates it if it doesn't exist, updates last_seen if it does)
+    const { error: sessionError } = await supabase
+      .from('tracking_sessions')
+      .upsert(
+        { 
+          session_id: sessionId, 
+          user_agent: userAgent,
+          last_seen: timestamp 
+        }, 
+        { onConflict: 'session_id' }
+      );
 
-    // Update last seen to latest event
-    trackingData[sessionId].lastSeen = timestamp;
-    
-    // Add event
-    trackingData[sessionId].events.push({
-      type,
-      data,
-      timestamp,
-      url
-    });
+    if (sessionError) throw sessionError;
 
-    fs.writeFileSync(filePath, JSON.stringify(trackingData, null, 2));
+    // 2. Insert the specific event
+    const { error: eventError } = await supabase
+      .from('tracking_events')
+      .insert({
+        session_id: sessionId,
+        type,
+        data,
+        url,
+        timestamp
+      });
+
+    if (eventError) throw eventError;
 
     return res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Failed to save tracking event', error);
+    console.error('Failed to save tracking event to Supabase:', error);
     return res.status(500).json({ message: 'Internal Server Error' });
   }
 }

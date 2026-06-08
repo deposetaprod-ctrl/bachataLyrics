@@ -14,7 +14,8 @@
     "react-dom": "^18",
     "@vercel/analytics": "^1.2.2",
     "@ducanh2912/next-pwa": "^10.2.7",
-    "nodemailer": "^6.9.13"
+    "nodemailer": "^6.9.13",
+    "@supabase/supabase-js": "^2.39.0"
   },
   "devDependencies": {
     "eslint": "^8",
