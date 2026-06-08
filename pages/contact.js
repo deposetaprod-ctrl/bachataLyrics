@@ -34,9 +34,9 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact — Bachata Flow | Proposez une chanson ou signalez un bug</title>
-        <meta name="description" content="Contactez l'équipe Bachata Flow. Proposez une chanson de bachata à ajouter, signalez un bug ou envoyez-nous vos suggestions." />
-        <meta property="og:title" content="Contact — Bachata Flow" />
+        <title>Contact — Bachata Lyrics | Proposez une chanson ou signalez un bug</title>
+        <meta name="description" content="Contactez l'équipe Bachata Lyrics. Proposez une chanson de bachata à ajouter, signalez un bug ou envoyez-nous vos suggestions." />
+        <meta property="og:title" content="Contact — Bachata Lyrics" />
         <meta property="og:description" content="Contactez-nous pour proposer une chanson, signaler un bug ou nous écrire." />
         <meta property="og:url" content="https://bachatalyrics.com/contact" />
       </Head>

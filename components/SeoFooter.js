@@ -22,7 +22,7 @@ export default function SeoFooter({ currentPage = '' }) {
         {/* Navigation principale */}
         <nav className="seo-footer-nav" aria-label="Navigation du site">
           <div className="seo-footer-col">
-            <h3>Bachata Flow</h3>
+            <h3>Bachata Lyrics</h3>
             <p className="seo-footer-desc">
               Paroles de bachata traduites en français et musicality trainer.
               L'application des passionnés de bachata.
@@ -90,7 +90,7 @@ export default function SeoFooter({ currentPage = '' }) {
         {/* Copyright */}
         <div className="seo-footer-bottom">
           <p>
-            {locale === 'en' ? 'Made with ' : 'Fait avec '}<span style={{ color: '#c026d3' }}>♥</span>{locale === 'en' ? ' for bachata lovers' : ' pour les amoureux de bachata'} · © {new Date().getFullYear()} Bachata Flow
+            {locale === 'en' ? 'Made with ' : 'Fait avec '}<span style={{ color: '#c026d3' }}>♥</span>{locale === 'en' ? ' for bachata lovers' : ' pour les amoureux de bachata'} · © {new Date().getFullYear()} Bachata Lyrics
           </p>
           <div style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'center' }}>
             <a 

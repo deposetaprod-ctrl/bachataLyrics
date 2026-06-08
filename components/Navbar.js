@@ -19,7 +19,7 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
         <div className="navbar-inner">
           <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer', zIndex: 101 }}>
             <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
-            <span className="logo-text">Bachata Flow</span>
+            <span className="logo-text">Bachata Lyrics</span>
           </div>
 
           {/* Desktop Links */}

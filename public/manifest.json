@@ -1,7 +1,7 @@
 {
-  "name": "Bachata Flow",
-  "short_name": "BachataFlow",
-  "description": "Les meilleures paroles de bachata avec traductions françaises. Découvrez, lisez et comprenez les paroles de vos chansons préférées.",
+  "name": "Bachata Lyrics",
+  "short_name": "BachataLyrics",
+  "description": "Apprenez les paroles de bachata bilingues avec traductions françaises. Découvrez, lisez et comprenez les paroles de vos chansons préférées.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

@@ -4,9 +4,10 @@ export default function Document() {
   return (
     <Html lang="fr">
       <Head>
+        {/* Balises Méta Globales */}
         <meta charSet="UTF-8" />
-        <meta name="description" content="Bachata Flow — Paroles de bachata bilingues (espagnol / français), analyse musicale et progression de danse. L'app des passionnés de bachata." />
-        <meta name="theme-color" content="#0a0a0f" />
+        <meta name="description" content="Bachata Lyrics — Traduction bachata en français, lyrics en français, bachata vidéo et paroles originales. La référence pour comprendre vos musiques préférées." />
+        <meta name="theme-color" content="#1e1b4b" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <link rel="manifest" href="/manifest.json" />
@@ -17,14 +18,16 @@ export default function Document() {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Bachata Flow" />
-        <meta property="og:title" content="Bachata Flow — Paroles de Bachata en Français" />
-        <meta property="og:description" content="Découvrez les plus belles paroles de bachata traduites en français, entraînez votre oreille musicale et progressez en danse." />
+        <meta property="og:site_name" content="Bachata Lyrics" />
+        <meta property="og:title" content="Bachata Lyrics — Paroles de Bachata en Français" />
+        <meta property="og:description" content="Découvrez plus de 110 paroles de bachata en français. Traduction bachata, lyrics en français, vidéo et lyrics côte à côte." />
         <meta property="og:image" content="https://bachatalyrics.com/LOGO_PWA.PNG" />
         <meta property="og:locale" content="fr_FR" />
+        
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bachata Flow" />
-        <meta name="twitter:description" content="Paroles de bachata bilingues + Musicality Trainer pour les danseurs." />
+        <meta name="twitter:title" content="Bachata Lyrics" />
+        <meta name="twitter:description" content="Paroles de Bachata bilingues (espagnol / français)." />
         <meta name="twitter:image" content="https://bachatalyrics.com/LOGO_PWA.PNG" />
 
         {/* Fonts */}

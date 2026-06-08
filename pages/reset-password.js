@@ -49,7 +49,7 @@ export default function ResetPassword() {
   return (
     <div className="reset-password-page">
       <Head>
-        <title>Réinitialiser le mot de passe — Bachata Flow</title>
+        <title>Réinitialiser le mot de passe — Bachata Lyrics</title>
       </Head>
       <Script 
         src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" 

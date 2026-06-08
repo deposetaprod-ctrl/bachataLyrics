@@ -548,9 +548,9 @@ export default function MusicalityTrainer() {
   return (
     <div className="musicality-page">
       <Head>
-        <title>Musicality Trainer — Analyse Musicale Bachata | Bachata Flow</title>
+        <title>Musicality Trainer — Analyse Musicale Bachata | Bachata Lyrics</title>
         <meta name="description" content="Entraîne ton oreille musicale avec le Musicality Trainer. Identifie les bongos, breaks, güiras et rolls dans tes chansons de bachata préférées en temps réel." />
-        <meta property="og:title" content="Musicality Trainer — Bachata Flow" />
+        <meta property="og:title" content="Musicality Trainer — Bachata Lyrics" />
         <meta property="og:description" content="Analyse musicale en temps réel. Identifie les instruments de bachata et améliore ta musicalité." />
         <meta property="og:url" content="https://bachatalyrics.com/musicality" />
       </Head>

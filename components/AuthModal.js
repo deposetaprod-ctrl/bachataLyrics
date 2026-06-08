@@ -105,8 +105,8 @@ export default function AuthModal({ isOpen, onClose, supabaseClient, onSuccess }
 
           {/* Header */}
           <div className="auth-modal-header">
-            <img src="/LOGO_PWA.PNG" alt="Bachata Flow" className="auth-modal-logo" />
-            <h2 className="auth-modal-title">Bachata Flow</h2>
+            <img src="/LOGO_PWA.PNG" alt="Bachata Lyrics" className="auth-modal-logo" />
+            <h2 className="auth-modal-title">Bachata Lyrics</h2>
             <button className="auth-modal-close" onClick={handleClose} aria-label="Fermer">✕</button>
           </div>
 

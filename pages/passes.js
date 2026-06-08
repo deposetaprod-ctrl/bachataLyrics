@@ -66,9 +66,9 @@ export default function Passes() {
   return (
     <>
       <Head>
-        <title>Passes & Mouvements de Bachata — Apprends par l'image | Bachata Flow</title>
+        <title>Passes & Mouvements de Bachata — Apprends par l'image | Bachata Lyrics</title>
         <meta name="description" content="Découvrez les passes et mouvements de bachata en vidéo. Apprenez la bachata sensual, dominicaine et d'influence avec des tutoriels visuels." />
-        <meta property="og:title" content="Passes & Mouvements de Bachata — Bachata Flow" />
+        <meta property="og:title" content="Passes & Mouvements de Bachata — Bachata Lyrics" />
         <meta property="og:description" content="Catalogue de passes de bachata en vidéo. Bachata sensual, dominicaine, influence et plus." />
         <meta property="og:url" content="https://bachatalyrics.com/passes" />
         <style dangerouslySetInnerHTML={{ __html: `

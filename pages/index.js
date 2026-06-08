@@ -121,30 +121,25 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{locale === 'en' ? 'Bachata Flow — Bachata Lyrics in English | Bilingual Translations' : 'Bachata Flow — Paroles de Bachata en Français | Traductions Bilingues'}</title>
-        <meta name="description" content={locale === 'en' 
-          ? `Discover ${songs.length} bachata lyrics translated into English. Original Spanish texts with English translation side-by-side.` 
-          : `Découvrez ${songs.length} paroles de bachata traduites en français. Textes originaux en espagnol avec traduction française côte à côte.`} />
-        <meta property="og:title" content={locale === 'en' ? "Bachata Flow — Bachata Lyrics in English" : "Bachata Flow — Paroles de Bachata en Français"} />
-        <meta property="og:description" content={`${songs.length} ${locale === 'en' ? 'bachata lyrics with English translation' : 'paroles de bachata avec traduction française'}.`} />
-        <meta property="og:url" content="https://bachatalyrics.com" />
+        <title>{locale === 'en' ? 'Bachata Lyrics — Translate Bachata, Video & Lyrics' : 'Bachata Lyrics — Paroles de Bachata en Français, Traduction & Vidéo'}</title>
+        <meta
+          name="description"
+          content={locale === 'en' ? 'Discover 110+ bachata lyrics translated in English. Translate bachata en français, video and lyrics side-by-side.' : 'Découvrez plus de 110 paroles de bachata traduites. Traduction bachata, lyrics en français, vidéo et lyrics côte à côte.'}
+        />
+        <meta property="og:title" content={locale === 'en' ? "Bachata Lyrics — Translate Bachata" : "Bachata Lyrics — Paroles de Bachata en Français"} />
+        <meta property="og:description" content={locale === 'en' ? 'Discover 110+ bachata lyrics translated in English. Video and lyrics side-by-side.' : 'Découvrez plus de 110 paroles de bachata en français. Vidéo et lyrics côte à côte.'} />
+        <meta property="og:type" content="website" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Bachata Flow",
-              "alternateName": "Bachata Lyrics",
+              "name": "Bachata Lyrics",
               "url": "https://bachatalyrics.com",
-              "description": "Paroles de bachata bilingues (espagnol / français), analyse musicale et progression de danse.",
-              "inLanguage": ["fr", "es"],
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://bachatalyrics.com/?q={search_term_string}"
-                },
+                "target": "https://bachatalyrics.com/?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })

@@ -5,42 +5,45 @@ const EXTERNAL_DATA_URL = 'https://bachatalyrics.com';
 function generateSiteMap(songs) {
   const today = new Date().toISOString().split('T')[0];
   
+  const staticPages = [
+    '',
+    '/musicality',
+    '/jack-and-jill',
+    '/contact',
+    '/passes'
+  ];
+
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+     ${staticPages.map((page) => `
      <url>
-       <loc>${EXTERNAL_DATA_URL}/</loc>
+       <loc>${EXTERNAL_DATA_URL}${page}</loc>
        <lastmod>${today}</lastmod>
        <changefreq>weekly</changefreq>
-       <priority>1.0</priority>
+       <priority>${page === '' ? '1.0' : '0.8'}</priority>
      </url>
      <url>
-       <loc>${EXTERNAL_DATA_URL}/musicality</loc>
+       <loc>${EXTERNAL_DATA_URL}/en${page}</loc>
        <lastmod>${today}</lastmod>
-       <changefreq>monthly</changefreq>
-       <priority>0.8</priority>
-     </url>
-     <url>
-       <loc>${EXTERNAL_DATA_URL}/jack-and-jill</loc>
-       <lastmod>${today}</lastmod>
-       <changefreq>monthly</changefreq>
-       <priority>0.8</priority>
-     </url>
-     <url>
-       <loc>${EXTERNAL_DATA_URL}/contact</loc>
-       <lastmod>${today}</lastmod>
-       <changefreq>yearly</changefreq>
-       <priority>0.3</priority>
-     </url>
+       <changefreq>weekly</changefreq>
+       <priority>${page === '' ? '1.0' : '0.8'}</priority>
+     </url>`).join('')}
       ${songs
         .map(({ id, dateAdded, year }) => {
           // Use dateAdded (precise) if available, otherwise fall back to Jan 1 of the song's year
           const songDate = dateAdded || `${year}-01-01`;
           return `
         <url>
-            <loc>${`${EXTERNAL_DATA_URL}/song/${id}`}</loc>
+            <loc>${EXTERNAL_DATA_URL}/song/${id}</loc>
             <lastmod>${songDate}</lastmod>
             <changefreq>monthly</changefreq>
-            <priority>0.6</priority>
+            <priority>0.8</priority>
+        </url>
+        <url>
+            <loc>${EXTERNAL_DATA_URL}/en/song/${id}</loc>
+            <lastmod>${songDate}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
         </url>
       `;
         })

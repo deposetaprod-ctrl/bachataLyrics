@@ -59,12 +59,12 @@ export default function SongPage({ song }) {
   return (
     <>
       <Head>
-        <title>{song.title} — {song.artist} | {locale === 'en' ? 'Lyrics & Translation' : 'Paroles & Traduction Française'} | Bachata Flow</title>
+        <title>{song.title} — {song.artist} | {locale === 'en' ? 'Lyrics & Translation' : 'Paroles & Traduction Française'} | Bachata Lyrics</title>
         <meta
           name="description"
           content={locale === 'en' ? `Lyrics for \"${song.title}\" by ${song.artist} side-by-side with English translation.` : `Paroles de « ${song.title} » par ${song.artist} (${song.year}) en version originale avec traduction française côte à côte.`}
         />
-        <meta property="og:title" content={`${song.title} — ${song.artist} | Bachata Flow`} />
+        <meta property="og:title" content={`${song.title} — ${song.artist} | Bachata Lyrics`} />
         <meta property="og:description" content={`Paroles bilingues de « ${song.title} » par ${song.artist}. Texte original avec traduction française.`} />
         <meta property="og:type" content="music.song" />
         <script
@@ -86,7 +86,7 @@ export default function SongPage({ song }) {
               ...(song.culture?.album && { "inAlbum": { "@type": "MusicAlbum", "name": song.culture.album } }),
               "isPartOf": {
                 "@type": "WebSite",
-                "name": "Bachata Flow",
+                "name": "Bachata Lyrics",
                 "url": "https://bachatalyrics.com"
               }
             })
