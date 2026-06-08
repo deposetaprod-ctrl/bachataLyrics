@@ -60,14 +60,12 @@ export default function SongPage({ song }) {
     <>
       <Head>
         <title>{song.title} — {song.artist} | {locale === 'en' ? 'Lyrics & Translation' : 'Paroles & Traduction Française'} | Bachata Flow</title>
-        <link rel="canonical" href={`https://bachatalyrics.com/song/${song.id}`} />
         <meta
           name="description"
           content={locale === 'en' ? `Lyrics for \"${song.title}\" by ${song.artist} side-by-side with English translation.` : `Paroles de « ${song.title} » par ${song.artist} (${song.year}) en version originale avec traduction française côte à côte.`}
         />
         <meta property="og:title" content={`${song.title} — ${song.artist} | Bachata Flow`} />
         <meta property="og:description" content={`Paroles bilingues de « ${song.title} » par ${song.artist}. Texte original avec traduction française.`} />
-        <meta property="og:url" content={`https://bachatalyrics.com/song/${song.id}`} />
         <meta property="og:type" content="music.song" />
         <script
           type="application/ld+json"
