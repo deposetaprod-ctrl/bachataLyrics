@@ -171,7 +171,7 @@ export default function AdminDashboard() {
         ) : (
           <div className="sessions-list">
             {sessions.map(session => (
-              <div key={session.sessionId} className={\`session-item \${expandedSession === session.sessionId ? 'expanded' : ''}\`}>
+              <div key={session.sessionId} className={`session-item ${expandedSession === session.sessionId ? 'expanded' : ''}`}>
                 <div className="session-header" onClick={() => toggleSession(session.sessionId)}>
                   <div className="session-info">
                     <span className="session-id">{session.sessionId}</span>
