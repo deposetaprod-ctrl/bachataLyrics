@@ -1,3 +1,4 @@
+// Boutique page — Bachata Lyrics merch
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
