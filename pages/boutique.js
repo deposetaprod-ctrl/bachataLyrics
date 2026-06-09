@@ -7,41 +7,186 @@ import SeoFooter from '../components/SeoFooter';
 
 const PRODUCTS = [
   {
-    id: 'tshirt-lyrics',
+    id: 'tshirt-lyrics-white',
     name: {
-      fr: "T-Shirt « Lyrics don't make sense »",
-      en: "T-Shirt « Lyrics don't make sense »",
+      fr: "T-Shirt Blanc « Lyrics don't make sense »",
+      en: "White T-Shirt « Lyrics don't make sense »",
     },
     description: {
-      fr: "T-shirt oversize premium en coton épais. Texte « Lyrics don't make sense » brodé à l'avant, logo Bachata Lyrics imprimé dans le dos. Coupe décontractée streetwear.",
-      en: "Premium heavyweight oversized cotton tee. 'Lyrics don't make sense' embroidered on the front, Bachata Lyrics logo printed on the back. Relaxed streetwear fit.",
+      fr: "T-shirt oversize premium en coton épais blanc. Texte « LDMS » à l'avant, « Lyrics don't make sense » dans le dos. Coupe décontractée streetwear.",
+      en: "Premium heavyweight oversized white cotton tee. 'LDMS' on the front, 'Lyrics don't make sense' on the back. Relaxed streetwear fit.",
+    },
+    price: 40,
+    currency: '€',
+    images: ['/mockups/tshirt_lyrics_white.png'],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    color: 'Blanc',
+    badge: { fr: 'Nouveau', en: 'New Arrival' },
+    features: {
+      fr: ['100% coton bio épais', 'Coupe oversize unisexe', 'Impression haute qualité', 'Livraison offerte en France'],
+      en: ['100% organic heavyweight cotton', 'Unisex oversized fit', 'High-quality print', 'Free shipping in France'],
+    },
+  },
+  {
+    id: 'tshirt-lyrics-black',
+    name: {
+      fr: "T-Shirt Noir « Lyrics don't make sense »",
+      en: "Black T-Shirt « Lyrics don't make sense »",
+    },
+    description: {
+      fr: "T-shirt oversize premium en coton épais noir. Texte « LDMS » à l'avant, « Lyrics don't make sense » dans le dos. Coupe décontractée streetwear.",
+      en: "Premium heavyweight oversized black cotton tee. 'LDMS' on the front, 'Lyrics don't make sense' on the back. Relaxed streetwear fit.",
+    },
+    price: 40,
+    currency: '€',
+    images: ['/mockups/tshirt_lyrics_black.png'],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    color: 'Noir',
+    badge: { fr: 'Nouveau', en: 'New Arrival' },
+    features: {
+      fr: ['100% coton bio épais', 'Coupe oversize unisexe', 'Impression haute qualité', 'Livraison offerte en France'],
+      en: ['100% organic heavyweight cotton', 'Unisex oversized fit', 'High-quality print', 'Free shipping in France'],
+    },
+  },
+  {
+    id: 'tshirt-logo-purple',
+    name: {
+      fr: "T-Shirt Blanc Logo Violet",
+      en: "White T-Shirt Purple Logo",
+    },
+    description: {
+      fr: "T-shirt oversize premium en coton épais. Texte à l'avant, grand logo violet Bachata Lyrics imprimé dans le dos.",
+      en: "Premium heavyweight oversized cotton tee. Text on the front, large purple Bachata Lyrics logo printed on the back.",
     },
     price: 45,
     currency: '€',
-    images: ['/tshirt_lyrics_real.jpg'],
+    images: ['/mockups/tshirt_logo_purple.png'],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     color: 'Blanc cassé',
-    badge: { fr: 'Édition Limitée', en: 'Limited Edition' },
+    badge: { fr: 'Édition Spéciale', en: 'Special Edition' },
     features: {
-      fr: ['100% coton bio épais (240g/m²)', 'Coupe oversize unisexe', 'Broderie à l\'avant', 'Impression haute qualité au dos', 'Livraison offerte en France'],
-      en: ['100% organic heavyweight cotton (240gsm)', 'Unisex oversized fit', 'Embroidery on front', 'High-quality back print', 'Free shipping in France'],
+      fr: ['100% coton bio épais', 'Coupe oversize unisexe', 'Impression haute qualité au dos', 'Livraison offerte en France'],
+      en: ['100% organic heavyweight cotton', 'Unisex oversized fit', 'High-quality back print', 'Free shipping in France'],
     },
   },
 ];
 
-export default function Boutique() {
-  const router = useRouter();
-  const { locale } = router || { locale: 'fr' };
+function ProductCard({ product, locale, t }) {
   const [selectedSize, setSelectedSize] = useState(null);
   const [orderStatus, setOrderStatus] = useState('idle'); // idle | form | sending | success | error
-
-  const product = PRODUCTS[0];
-  const t = (obj) => obj[locale] || obj['fr'];
 
   const handleOrder = () => {
     if (!selectedSize) return;
     setOrderStatus('form');
   };
+
+  return (
+    <div className="boutique-product-card" style={{ marginBottom: '4rem' }}>
+      {/* Image Side */}
+      <div className="boutique-product-image-area">
+        <div className="boutique-limited-badge">{t(product.badge)}</div>
+        <img
+          src={product.images[0]}
+          alt={t(product.name)}
+          className="boutique-product-img"
+        />
+      </div>
+
+      {/* Details Side */}
+      <div className="boutique-product-details">
+        <div className="boutique-product-header">
+          <h2 className="boutique-product-name">{t(product.name)}</h2>
+          <div className="boutique-product-price">
+            <span className="price-amount">{product.price}{product.currency}</span>
+            <span className="price-label">{locale === 'en' ? 'tax included' : 'TTC'}</span>
+          </div>
+        </div>
+
+        <p className="boutique-product-desc">{t(product.description)}</p>
+
+        {/* Features */}
+        <ul className="boutique-features">
+          {t(product.features).map((feat, i) => (
+            <li key={i}>
+              <span className="feature-check">✓</span> {feat}
+            </li>
+          ))}
+        </ul>
+
+        {/* Size Selector */}
+        <div className="boutique-size-section">
+          <label className="boutique-size-label">
+            {locale === 'en' ? 'Select your size' : 'Choisis ta taille'}
+          </label>
+          <div className="boutique-sizes">
+            {product.sizes.map((size) => (
+              <button
+                key={size}
+                className={`boutique-size-btn ${selectedSize === size ? 'active' : ''}`}
+                onClick={() => setSelectedSize(size)}
+              >
+                {size}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        {orderStatus === 'idle' && (
+          <button
+            className={`boutique-cta ${!selectedSize ? 'disabled' : ''}`}
+            onClick={handleOrder}
+            disabled={!selectedSize}
+          >
+            {!selectedSize
+              ? (locale === 'en' ? '👆 Pick a size first' : '👆 Choisis ta taille d\'abord')
+              : (locale === 'en' ? `🛒 Pre-order — ${product.price}${product.currency}` : `🛒 Précommander — ${product.price}${product.currency}`)}
+          </button>
+        )}
+
+        {/* Order Form */}
+        {orderStatus === 'form' && (
+          <OrderForm
+            locale={locale}
+            product={product}
+            selectedSize={selectedSize}
+            onStatusChange={setOrderStatus}
+          />
+        )}
+
+        {orderStatus === 'success' && (
+          <div className="boutique-success">
+            <div className="success-icon">🎉</div>
+            <h3>{locale === 'en' ? 'Pre-order confirmed!' : 'Précommande confirmée !'}</h3>
+            <p>{locale === 'en' ? 'We\'ll email you when your tee is ready. Thank you!' : 'On te contacte par mail quand ton t-shirt est prêt. Merci !'}</p>
+          </div>
+        )}
+
+        {orderStatus === 'error' && (
+          <div className="boutique-error">
+            <p>{locale === 'en' ? 'Something went wrong. Please try again.' : 'Une erreur est survenue. Réessaye.'}</p>
+            <button className="boutique-cta" onClick={() => setOrderStatus('form')}>
+              {locale === 'en' ? 'Try again' : 'Réessayer'}
+            </button>
+          </div>
+        )}
+
+        {/* Trust Signals */}
+        <div className="boutique-trust">
+          <span>🚚 {locale === 'en' ? 'Free shipping (FR)' : 'Livraison offerte (FR)'}</span>
+          <span>🔒 {locale === 'en' ? 'Secure payment' : 'Paiement sécurisé'}</span>
+          <span>📦 {locale === 'en' ? 'Ships in 5-7 days' : 'Expédié sous 5-7 jours'}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Boutique() {
+  const router = useRouter();
+  const { locale } = router || { locale: 'fr' };
+
+  const t = (obj) => obj[locale] || obj['fr'];
 
   return (
     <>
@@ -83,104 +228,9 @@ export default function Boutique() {
 
         {/* Product Showcase */}
         <section className="boutique-product-section">
-          <div className="boutique-product-card">
-            {/* Image Side */}
-            <div className="boutique-product-image-area">
-              <div className="boutique-limited-badge">{t(product.badge)}</div>
-              <img
-                src={product.images[0]}
-                alt={t(product.name)}
-                className="boutique-product-img"
-              />
-            </div>
-
-            {/* Details Side */}
-            <div className="boutique-product-details">
-              <div className="boutique-product-header">
-                <h2 className="boutique-product-name">{t(product.name)}</h2>
-                <div className="boutique-product-price">
-                  <span className="price-amount">{product.price}{product.currency}</span>
-                  <span className="price-label">{locale === 'en' ? 'tax included' : 'TTC'}</span>
-                </div>
-              </div>
-
-              <p className="boutique-product-desc">{t(product.description)}</p>
-
-              {/* Features */}
-              <ul className="boutique-features">
-                {t(product.features).map((feat, i) => (
-                  <li key={i}>
-                    <span className="feature-check">✓</span> {feat}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Size Selector */}
-              <div className="boutique-size-section">
-                <label className="boutique-size-label">
-                  {locale === 'en' ? 'Select your size' : 'Choisis ta taille'}
-                </label>
-                <div className="boutique-sizes">
-                  {product.sizes.map((size) => (
-                    <button
-                      key={size}
-                      className={`boutique-size-btn ${selectedSize === size ? 'active' : ''}`}
-                      onClick={() => setSelectedSize(size)}
-                    >
-                      {size}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* CTA */}
-              {orderStatus === 'idle' && (
-                <button
-                  className={`boutique-cta ${!selectedSize ? 'disabled' : ''}`}
-                  onClick={handleOrder}
-                  disabled={!selectedSize}
-                >
-                  {!selectedSize
-                    ? (locale === 'en' ? '👆 Pick a size first' : '👆 Choisis ta taille d\'abord')
-                    : (locale === 'en' ? `🛒 Pre-order — ${product.price}${product.currency}` : `🛒 Précommander — ${product.price}${product.currency}`)}
-                </button>
-              )}
-
-              {/* Order Form */}
-              {orderStatus === 'form' && (
-                <OrderForm
-                  locale={locale}
-                  product={product}
-                  selectedSize={selectedSize}
-                  onStatusChange={setOrderStatus}
-                />
-              )}
-
-              {orderStatus === 'success' && (
-                <div className="boutique-success">
-                  <div className="success-icon">🎉</div>
-                  <h3>{locale === 'en' ? 'Pre-order confirmed!' : 'Précommande confirmée !'}</h3>
-                  <p>{locale === 'en' ? 'We\'ll email you when your tee is ready. Thank you!' : 'On te contacte par mail quand ton t-shirt est prêt. Merci !'}</p>
-                </div>
-              )}
-
-              {orderStatus === 'error' && (
-                <div className="boutique-error">
-                  <p>{locale === 'en' ? 'Something went wrong. Please try again.' : 'Une erreur est survenue. Réessaye.'}</p>
-                  <button className="boutique-cta" onClick={() => setOrderStatus('form')}>
-                    {locale === 'en' ? 'Try again' : 'Réessayer'}
-                  </button>
-                </div>
-              )}
-
-              {/* Trust Signals */}
-              <div className="boutique-trust">
-                <span>🚚 {locale === 'en' ? 'Free shipping (FR)' : 'Livraison offerte (FR)'}</span>
-                <span>🔒 {locale === 'en' ? 'Secure payment' : 'Paiement sécurisé'}</span>
-                <span>📦 {locale === 'en' ? 'Ships in 5-7 days' : 'Expédié sous 5-7 jours'}</span>
-              </div>
-            </div>
-          </div>
+          {PRODUCTS.map((product) => (
+            <ProductCard key={product.id} product={product} locale={locale} t={t} />
+          ))}
         </section>
       </div>
 
