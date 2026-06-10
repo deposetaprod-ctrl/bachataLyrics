@@ -339,19 +339,6 @@ export default function Home() {
           >
             {locale === 'en' ? 'View all' : 'Tout voir'}
           </button>
-          {['Dominicaine', 'Sensual', 'Influence', 'Mixte', 'Salsa', 'Tropical'].map((tag) => (
-            <button
-              id={`tag-${tag}`}
-              key={tag}
-              className={`tag-btn ${activeTag === tag ? 'active' : ''}`}
-              onClick={() => {
-                setActiveTag(activeTag === tag ? null : tag);
-                setShowFavorites(false);
-              }}
-            >
-              {tag}
-            </button>
-          ))}
         </div>
       </section>
 
@@ -690,10 +677,7 @@ function SongCard({ song, onClick, isFavorite, onToggleFav }) {
 
         <h2 className="card-title">{song.title}</h2>
 
-        <div className="card-tags">
-          {song.tags.map((tag) => (
-            <span key={tag} className="card-tag">#{tag}</span>
-          ))}
+        <div className="card-tags" style={{ display: 'none' }}>
         </div>
 
         <div className="card-footer">

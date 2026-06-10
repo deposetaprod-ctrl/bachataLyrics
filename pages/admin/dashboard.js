@@ -199,6 +199,15 @@ export default function AdminDashboard() {
                                 <span className="badge badge-blue">Page Visitée</span>
                                 <span className="path">{ev.data.path}</span>
                               </div>
+                            ) : ev.type === 'popup_interaction' ? (
+                              <div className="event-type popup">
+                                <span className="badge badge-green">Boutique</span>
+                                <span className="click-details">
+                                  Action: <strong>{ev.data.action}</strong>
+                                  <br/>
+                                  Article: <em>{ev.data.item}</em> ({ev.data.price}€)
+                                </span>
+                              </div>
                             ) : (
                               <div className="event-type click">
                                 <span className="badge badge-purple">Clic</span>
@@ -408,6 +417,10 @@ export default function AdminDashboard() {
         .badge-purple {
           background: rgba(167, 139, 250, 0.15);
           color: #a78bfa;
+        }
+        .badge-green {
+          background: rgba(16, 185, 129, 0.15);
+          color: #10b981;
         }
         .path {
           font-family: monospace;
