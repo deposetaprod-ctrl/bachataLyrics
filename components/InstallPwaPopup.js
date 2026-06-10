@@ -81,6 +81,11 @@ export default function InstallPwaPopup() {
                 ? 'Install Bachata Lyrics on your iPhone for a better experience and offline access.' 
                 : 'Installe Bachata Lyrics sur ton iPhone pour une meilleure expérience et un accès hors ligne.'}
             </p>
+            <p className="pwa-safari-warning">
+              {locale === 'en'
+                ? '⚠️ Note: You must open this page in Safari for this to work.'
+                : '⚠️ Note : il faut ouvrir ce site dans Safari pour que ça fonctionne.'}
+            </p>
             <ol>
               <li>
                 {locale === 'en' ? 'Tap the ' : 'Touche l\'icône '}
@@ -191,6 +196,12 @@ export default function InstallPwaPopup() {
           text-align: center;
           margin-bottom: 16px;
           line-height: 1.5;
+        }
+        .pwa-safari-warning {
+          font-size: 13px !important;
+          color: #fbbf24 !important;
+          font-weight: 600;
+          margin-top: -8px;
         }
         .pwa-instructions ol {
           padding-left: 20px;

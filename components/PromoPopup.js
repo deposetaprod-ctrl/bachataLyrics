@@ -255,6 +255,46 @@ export default function PromoPopup() {
           from { opacity: 0; transform: translateY(20px) scale(0.95); }
           to { opacity: 1; transform: translateY(0) scale(1); }
         }
+
+        @media (max-width: 480px) {
+          .promo-overlay {
+            padding: 16px;
+          }
+          .promo-image-container {
+            height: 220px;
+            padding: 16px;
+          }
+          .promo-content {
+            padding: 20px 16px;
+          }
+          .promo-content h3 {
+            font-size: 1.15rem;
+          }
+          .promo-price {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+          }
+          .promo-desc {
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+          }
+          .promo-btn-secondary, .promo-btn-primary {
+            padding: 10px;
+            font-size: 0.85rem;
+          }
+        }
+        
+        @media (max-height: 650px) {
+          .promo-image-container {
+            height: 160px;
+          }
+          .promo-content {
+            padding: 16px;
+          }
+          .promo-desc {
+            margin-bottom: 12px;
+          }
+        }
       `}</style>
     </div>
   );
