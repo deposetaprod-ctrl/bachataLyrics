@@ -6,6 +6,7 @@ import { songs } from '../../data/songs';
 import { SpotifyIcon } from '../../components/SpotifyIcon';
 import Navbar from '../../components/Navbar';
 import SeoFooter from '../../components/SeoFooter';
+import RelatedSongs from '../../components/RelatedSongs';
 
 export async function getStaticPaths() {
   const paths = songs.map((s) => ({ params: { id: s.id } }));
@@ -56,47 +57,102 @@ export default function SongPage({ song }) {
 
   if (!song) return null;
 
+  // ── Build structured data with optional AudioObject & VideoObject ──
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MusicRecording",
+    "name": song.title,
+    "byArtist": {
+      "@type": "MusicGroup",
+      "name": song.artist
+    },
+    "datePublished": String(song.year),
+    "genre": "Bachata",
+    "inLanguage": ["es", "fr"],
+    "description": locale === 'en'
+      ? `Listen to "${song.title}" by ${song.artist} with side-by-side English translation and dance video.`
+      : `Écoutez « ${song.title} » de ${song.artist} (${song.year}) avec traduction française et vidéo de danse.`,
+    "url": `https://bachatalyrics.com${locale === 'en' ? '/en' : ''}/song/${song.id}`,
+    ...(song.culture?.album && { "inAlbum": { "@type": "MusicAlbum", "name": song.culture.album } }),
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Bachata Lyrics",
+      "url": "https://bachatalyrics.com"
+    }
+  };
+
+  // Add AudioObject if song has exclusive audio
+  if (song.audioUrl) {
+    structuredData.audio = {
+      "@type": "AudioObject",
+      "contentUrl": song.audioUrl,
+      "encodingFormat": "audio/mpeg",
+      "name": `${song.title} — ${song.artist} (Remix Exclusif)`
+    };
+  }
+
+  // Add VideoObject if song has a dance video
+  if (song.danceVideo) {
+    structuredData.video = {
+      "@type": "VideoObject",
+      "name": `${song.title} — Bachata Dance Demonstration`,
+      "description": locale === 'en'
+        ? `Watch a bachata dance demonstration for "${song.title}" by ${song.artist}.`
+        : `Vidéo de démonstration de danse bachata sur « ${song.title} » de ${song.artist}.`,
+      "thumbnailUrl": `https://img.youtube.com/vi/${song.danceVideo}/hqdefault.jpg`,
+      "embedUrl": `https://www.youtube.com/embed/${song.danceVideo}`,
+      "uploadDate": song.dateAdded || `${song.year}-01-01`
+    };
+  }
+
+  // ── Build meta description highlighting interactive features ──
+  const features = [];
+  if (song.audioUrl) features.push(locale === 'en' ? 'exclusive remix' : 'remix exclusif');
+  if (song.danceVideo) features.push(locale === 'en' ? 'dance video' : 'vidéo de danse');
+  if (song.spotify) features.push('Spotify');
+
+  const metaDescription = locale === 'en'
+    ? `"${song.title}" by ${song.artist} — Read the original lyrics with English translation${features.length > 0 ? `. Includes: ${features.join(', ')}` : ''}.`
+    : `« ${song.title} » de ${song.artist} (${song.year}) — Paroles originales avec traduction française côte à côte${features.length > 0 ? `. Inclut : ${features.join(', ')}` : ''}.`;
+
   return (
     <>
       <Head>
         <title>{song.title} — {song.artist} | {locale === 'en' ? 'Lyrics & Translation' : 'Paroles & Traduction Française'} | Bachata Lyrics</title>
-        <meta
-          name="description"
-          content={locale === 'en' ? `Lyrics for \"${song.title}\" by ${song.artist} side-by-side with English translation.` : `Paroles de « ${song.title} » par ${song.artist} (${song.year}) en version originale avec traduction française côte à côte.`}
-        />
+        <meta name="description" content={metaDescription} />
+
+        {/* ── hreflang: tell Google about FR/EN alternates ── */}
+        <link rel="alternate" hrefLang="fr" href={`https://bachatalyrics.com/song/${song.id}`} />
+        <link rel="alternate" hrefLang="en" href={`https://bachatalyrics.com/en/song/${song.id}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://bachatalyrics.com/song/${song.id}`} />
+
+        {/* ── Open Graph ── */}
         <meta property="og:title" content={`${song.title} — ${song.artist} | Bachata Lyrics`} />
-        <meta property="og:description" content={`Paroles bilingues de « ${song.title} » par ${song.artist}. Texte original avec traduction française.`} />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="music.song" />
+        {song.danceVideo && (
+          <meta property="og:image" content={`https://img.youtube.com/vi/${song.danceVideo}/hqdefault.jpg`} />
+        )}
+
+        {/* ── Structured Data (JSON-LD) ── */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MusicRecording",
-              "name": song.title,
-              "byArtist": {
-                "@type": "MusicGroup",
-                "name": song.artist
-              },
-              "datePublished": String(song.year),
-              "genre": "Bachata",
-              "inLanguage": ["es", "fr"],
-              "description": `Paroles de ${song.title} par ${song.artist} (${song.year}) — traduction française`,
-              "url": `https://bachatalyrics.com/song/${song.id}`,
-              ...(song.culture?.album && { "inAlbum": { "@type": "MusicAlbum", "name": song.culture.album } }),
-              "isPartOf": {
-                "@type": "WebSite",
-                "name": "Bachata Lyrics",
-                "url": "https://bachatalyrics.com"
-              }
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
 
       <Navbar activePage="home" onLoginClick={() => router.push('/')} />
 
       <div className="lyrics-page">
+        {/* ─── SEO INTRO (visible to users & crawlers) ─── */}
+        <div className="seo-intro">
+          <p>
+            {locale === 'en'
+              ? `🎧 Listen to "${song.title}" by ${song.artist}, read the bilingual lyrics in real time${song.danceVideo ? ', and practice with the included dance video' : ''}.`
+              : `🎧 Écoute « ${song.title} » de ${song.artist}, lis les paroles bilingues en temps réel${song.danceVideo ? ' et entraîne-toi avec la vidéo de danse incluse' : ''}.`}
+          </p>
+        </div>
+
         {/* ─── HEADER ─── */}
         <div className="lyrics-header" style={{ position: 'relative' }}>
           <button 
@@ -386,9 +442,29 @@ export default function SongPage({ song }) {
           </div>
         </div>
 
+        {/* ─── RELATED SONGS (Internal Linking) ─── */}
+        <RelatedSongs currentSong={song} />
+
         {/* ─── FOOTER SEO ─── */}
         <SeoFooter currentPage="song" />
       </div>
+
+      <style jsx>{`
+        .seo-intro {
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 20px 24px 0;
+        }
+        .seo-intro p {
+          font-size: 0.9rem;
+          color: var(--text-secondary);
+          line-height: 1.6;
+          padding: 12px 20px;
+          background: rgba(167, 139, 250, 0.06);
+          border: 1px solid rgba(167, 139, 250, 0.12);
+          border-radius: 12px;
+        }
+      `}</style>
     </>
   );
 }
