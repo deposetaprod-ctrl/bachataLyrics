@@ -1,3 +1,4 @@
+// Component for internal SEO linking and contextual merch
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
