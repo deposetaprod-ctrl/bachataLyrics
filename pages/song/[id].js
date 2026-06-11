@@ -7,6 +7,7 @@ import { SpotifyIcon } from '../../components/SpotifyIcon';
 import Navbar from '../../components/Navbar';
 import SeoFooter from '../../components/SeoFooter';
 import RelatedSongs from '../../components/RelatedSongs';
+import ShopTheVibe from '../../components/ShopTheVibe';
 
 export async function getStaticPaths() {
   const paths = songs.map((s) => ({ params: { id: s.id } }));
@@ -350,6 +351,9 @@ export default function SongPage({ song }) {
           })()}
           </div>
         </div>
+
+        {/* ─── SHOP THE VIBE (Contextual Merch) ─── */}
+        <ShopTheVibe song={song} />
 
         {/* ─── CULTURE & OBJECTIVES ─── */}
         <div id="culture-section" style={{

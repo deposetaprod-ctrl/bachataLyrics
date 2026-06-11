@@ -19,30 +19,68 @@ export default function InstallPwaPopup() {
       return;
     }
 
-    // Detect platform
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    const isIOS = /iphone|ipad|ipod/.test(userAgent);
-    const isAndroid = /android/.test(userAgent);
-
-    if (isIOS) {
-      setPlatform('ios');
-      // Delay showing the prompt a bit
-      setTimeout(() => setShowPrompt(true), 3000);
-    } else if (isAndroid) {
-      setPlatform('android');
-      // For Android, we rely on beforeinstallprompt event if possible
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        setDeferredPrompt(e);
-        setShowPrompt(true);
-      });
+    // Track page views in session to avoid showing on first land
+    let views = parseInt(sessionStorage.getItem('pageViews') || '0', 10);
+    
+    const handleRouteChange = () => {
+      views += 1;
+      sessionStorage.setItem('pageViews', views.toString());
       
-      // Fallback if beforeinstallprompt is not supported or already fired
-      setTimeout(() => {
-        if (!deferredPrompt) setShowPrompt(true);
-      }, 4000);
+      // If user has navigated to a second page, they are engaged -> trigger prompt
+      if (views >= 2) {
+        checkAndShowPrompt();
+      }
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+    
+    // Also check on initial mount (in case they refreshed on their 3rd page view)
+    views += 1;
+    sessionStorage.setItem('pageViews', views.toString());
+    if (views >= 2) {
+      checkAndShowPrompt();
     }
-  }, [deferredPrompt]);
+
+    function checkAndShowPrompt() {
+      if (showPrompt) return; // already showing
+      
+      const userAgent = window.navigator.userAgent.toLowerCase();
+      const isIOS = /iphone|ipad|ipod/.test(userAgent);
+      const isAndroid = /android/.test(userAgent);
+
+      if (isIOS) {
+        setPlatform('ios');
+        // Delay slightly so it doesn't clash instantly with the page transition
+        setTimeout(() => setShowPrompt(true), 1500);
+      } else if (isAndroid) {
+        setPlatform('android');
+        if (deferredPrompt) {
+          setShowPrompt(true);
+        } else {
+          // Fallback manual instructions if event not caught
+          setTimeout(() => setShowPrompt(true), 1500);
+        }
+      }
+    }
+
+    // Android specific event
+    const handleBeforeInstall = (e) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      // If they already met the view requirement, show it now
+      if (parseInt(sessionStorage.getItem('pageViews') || '0', 10) >= 2) {
+        setPlatform('android');
+        setShowPrompt(true);
+      }
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstall);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstall);
+    };
+  }, [deferredPrompt, router.events, showPrompt]);
 
   const handleDismiss = () => {
     setShowPrompt(false);

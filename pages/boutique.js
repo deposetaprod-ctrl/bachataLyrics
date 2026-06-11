@@ -16,6 +16,10 @@ const PRODUCTS = [
       fr: "T-shirt oversize premium en coton épais blanc. Texte « LDMS » à l'avant, « Lyrics don't make sense » dans le dos. Coupe décontractée streetwear.",
       en: "Premium heavyweight oversized white cotton tee. 'LDMS' on the front, 'Lyrics don't make sense' on the back. Relaxed streetwear fit.",
     },
+    seoStory: {
+      fr: `Conçu pour les danseurs qui font des vagues romantiques sur des paroles de dépression. La prochaine fois que tu danses sur <a href="/song/obsesion-aventura" class="seo-link">Obsesión d'Aventura</a> ou <a href="/song/el-perdedor-aventura" class="seo-link">El Perdedor</a>, regarde bien les paroles !`,
+      en: `Designed for dancers doing body rolls to deeply tragic lyrics. Next time you dance to <a href="/en/song/obsesion-aventura" class="seo-link">Aventura's Obsesión</a>, check the meaning of the words!`
+    },
     price: 40,
     currency: '€',
     images: ['/mockups/tshirt_lyrics_white.png'],
@@ -37,6 +41,10 @@ const PRODUCTS = [
       fr: "T-shirt oversize premium en coton épais noir. Texte « LDMS » à l'avant, « Lyrics don't make sense » dans le dos. Coupe décontractée streetwear.",
       en: "Premium heavyweight oversized black cotton tee. 'LDMS' on the front, 'Lyrics don't make sense' on the back. Relaxed streetwear fit.",
     },
+    seoStory: {
+      fr: `Parce que la bachata sensuelle demande un style sombre et élégant. Parfait pour se fondre dans l'ambiance des soirées sur des sons de <a href="/song/propuesta-indecente-romeo-santos" class="seo-link">Romeo Santos</a>.`,
+      en: `Because sensual bachata calls for dark, elegant streetwear. Perfect for blending into the party vibe while listening to <a href="/en/song/propuesta-indecente-romeo-santos" class="seo-link">Romeo Santos</a>.`
+    },
     price: 40,
     currency: '€',
     images: ['/mockups/tshirt_lyrics_black.png'],
@@ -57,6 +65,10 @@ const PRODUCTS = [
     description: {
       fr: "T-shirt oversize premium en coton épais. Texte à l'avant, grand logo violet Bachata Lyrics imprimé dans le dos.",
       en: "Premium heavyweight oversized cotton tee. Text on the front, large purple Bachata Lyrics logo printed on the back.",
+    },
+    seoStory: {
+      fr: `Affiche ton amour pour la culture dominicaine et les paroles de bachata. Un must-have que tu danses sur de la <a href="/song/furioso-violento-esme" class="seo-link">Moderne</a> ou de la Traditionnelle.`,
+      en: `Show your love for Dominican culture and bachata lyrics. A must-have whether you dance to <a href="/en/song/furioso-violento-esme" class="seo-link">Modern</a> or Traditional styles.`
     },
     price: 45,
     currency: '€',
@@ -103,6 +115,14 @@ function ProductCard({ product, locale, t }) {
         </div>
 
         <p className="boutique-product-desc">{t(product.description)}</p>
+        
+        {/* SEO Story */}
+        {product.seoStory && (
+          <div 
+            className="boutique-seo-story"
+            dangerouslySetInnerHTML={{ __html: t(product.seoStory) }}
+          />
+        )}
 
         {/* Features */}
         <ul className="boutique-features">
@@ -235,6 +255,32 @@ export default function Boutique() {
       </div>
 
       <SeoFooter currentPage="boutique" />
+
+      <style jsx>{`
+        .boutique-seo-story {
+          font-size: 0.9rem;
+          color: var(--text-secondary, #9ca3af);
+          font-style: italic;
+          margin-top: -12px;
+          margin-bottom: 24px;
+          line-height: 1.6;
+          background: rgba(167, 139, 250, 0.05);
+          padding: 12px 16px;
+          border-left: 3px solid #a855f7;
+          border-radius: 4px;
+        }
+        .boutique-seo-story :global(.seo-link) {
+          color: #c026d3;
+          text-decoration: underline;
+          text-decoration-color: rgba(192, 38, 211, 0.4);
+          font-weight: 600;
+          transition: all 0.2s;
+        }
+        .boutique-seo-story :global(.seo-link:hover) {
+          color: #e879f9;
+          text-decoration-color: #e879f9;
+        }
+      `}</style>
     </>
   );
 }
