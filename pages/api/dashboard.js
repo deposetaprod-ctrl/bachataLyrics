@@ -44,15 +44,20 @@ export default async function handler(req, res) {
 
     if (error) throw error;
 
-    // Format data to match what the frontend expects
-    const formattedSessions = sessionsData.map(session => ({
-      sessionId: session.session_id,
-      firstSeen: session.first_seen,
-      lastSeen: session.last_seen,
-      userAgent: session.user_agent,
-      // Sort events chronologically
-      events: (session.tracking_events || []).sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp))
-    }));
+    // Format data to match what the frontend expects, and filter out admin sessions
+    const formattedSessions = sessionsData
+      .map(session => ({
+        sessionId: session.session_id,
+        firstSeen: session.first_seen,
+        lastSeen: session.last_seen,
+        userAgent: session.user_agent,
+        // Sort events chronologically
+        events: (session.tracking_events || []).sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp))
+      }))
+      .filter(session => {
+        // Exclude sessions where any event contains '/admin/dashboard'
+        return !session.events.some(ev => ev.url?.includes('/admin/dashboard') || ev.data?.path?.includes('/admin/dashboard'));
+      });
 
     return res.status(200).json({ sessions: formattedSessions });
   } catch (error) {

@@ -74,10 +74,34 @@ export default function Tracker() {
 
     document.addEventListener('click', handleClick);
 
+    // 3. Track visibility change for accurate time tracking when leaving
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        fetch('/api/ping', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            sessionId,
+            type: 'visibility_hidden',
+            data: {},
+            timestamp: new Date().toISOString(),
+            url: window.location.href,
+            userAgent: window.navigator.userAgent,
+          }),
+          keepalive: true,
+        }).catch(() => {});
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     // Cleanup
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
       document.removeEventListener('click', handleClick);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, [router.asPath]); // Re-bind on path change is not strictly necessary but router might change. Actually, empty dependency array is better to attach listeners once, but we use router.events. Let's use router.
 
