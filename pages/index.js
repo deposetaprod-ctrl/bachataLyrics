@@ -22,7 +22,6 @@ export default function Home() {
   const [suggestionForm, setSuggestionForm] = useState({ personName: '', title: '', artist: '' });
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
   const [showObjectives, setShowObjectives] = useState(false);
-  const [showDailyNotif, setShowDailyNotif] = useState(false);
   const [user, setUser] = useState(null);
   const [supabaseClient, setSupabaseClient] = useState(null);
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -34,13 +33,6 @@ export default function Home() {
     const savedMastered = localStorage.getItem('masteredSongs');
     if (savedMastered) setMasteredSongs(JSON.parse(savedMastered));
 
-    // Daily Notification check
-    const todayStr = new Date().toDateString();
-    const lastNotif = localStorage.getItem('lastDailyNotif');
-    if (lastNotif !== todayStr) {
-      setShowDailyNotif(true);
-      localStorage.setItem('lastDailyNotif', todayStr);
-    }
     // Supabase Init
     if (typeof window !== 'undefined' && window.supabase) {
       const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -245,73 +237,6 @@ export default function Home() {
           <span style={{ marginLeft: '8px', opacity: 0.6 }}>{locale === 'en' ? 'See all →' : 'Voir tout →'}</span>
         </div>
 
-        {/* DAILY CHALLENGE CARD */}
-        <div 
-          onClick={() => router.push(`/song/${dailySong.id}`)}
-          style={{
-            marginTop: '32px',
-            background: 'linear-gradient(135deg, #1e1b4b, #312e81)',
-            borderRadius: '24px',
-            padding: '24px',
-            border: '1px solid rgba(124, 58, 237, 0.3)',
-            display: 'flex',
-            flexWrap: 'wrap',
-            alignItems: 'center',
-            gap: '20px',
-            cursor: 'pointer',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
-            position: 'relative',
-            overflow: 'hidden'
-          }}
-          className="daily-challenge-card hover-scale"
-        >
-          <div style={{
-            width: '60px',
-            height: '60px',
-            borderRadius: '16px',
-            background: `linear-gradient(135deg, ${dailySong.color}, #000)`,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '1.5rem',
-            boxShadow: '0 10px 20px rgba(0,0,0,0.3)',
-            flexShrink: 0
-          }}>
-            🎵
-          </div>
-          
-          <div style={{ flex: '1 1 200px' }}>
-            <div style={{ 
-              textTransform: 'uppercase', 
-              fontSize: '0.65rem', 
-              fontWeight: 900, 
-              letterSpacing: '0.1em',
-              color: '#a78bfa',
-              marginBottom: '2px'
-            }}>
-              {locale === 'en' ? 'Daily Challenge' : 'Défi du jour'}
-            </div>
-            <h2 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '2px' }}>{dailySong.title}</h2>
-            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem' }}>
-              {locale === 'en' ? 'By' : 'Par'} <strong>{dailySong.artist}</strong>
-            </p>
-          </div>
-          
-          <button style={{
-            background: 'white',
-            color: '#1e1b4b',
-            border: 'none',
-            padding: '10px 20px',
-            borderRadius: '10px',
-            fontWeight: 700,
-            fontSize: '0.85rem',
-            cursor: 'pointer',
-            whiteSpace: 'nowrap'
-          }}>
-            Relever le défi
-          </button>
-        </div>
-
         <p style={{ marginTop: '32px' }}>
           {locale === 'en' 
             ? 'Find original Spanish lyrics with their English translations side-by-side, to feel every song.' 
@@ -436,44 +361,73 @@ export default function Home() {
         </div>
       )}
 
-      {/* ─── DAILY NOTIFICATION POPUP ─── */}
-      {showDailyNotif && (
+      {/* ─── DAILY CHALLENGE CARD ─── */}
+      <div style={{ padding: '0 20px', maxWidth: '800px', margin: '40px auto' }}>
         <div 
+          onClick={() => router.push(`/song/${dailySong.id}`)}
           style={{
-            position: 'fixed', bottom: '24px', left: '24px', right: '24px', maxWidth: '400px',
             background: 'linear-gradient(135deg, #1e1b4b, #312e81)',
-            borderRadius: '24px', padding: '24px', border: '1px solid rgba(124, 58, 237, 0.5)',
-            boxShadow: '0 20px 50px rgba(0,0,0,0.5)', zIndex: 2000,
-            display: 'flex', gap: '20px', alignItems: 'center',
-            animation: 'slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1)'
+            borderRadius: '20px',
+            padding: '16px',
+            border: '1px solid rgba(124, 58, 237, 0.3)',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            gap: '16px',
+            cursor: 'pointer',
+            boxShadow: '0 10px 20px rgba(0,0,0,0.2)',
+            position: 'relative',
+            overflow: 'hidden'
           }}
+          className="daily-challenge-card hover-scale"
         >
-          <div style={{ fontSize: '2.5rem', flexShrink: 0 }}>🌟</div>
-          <div style={{ flex: 1 }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 800, marginBottom: '4px' }}>Nouveau défi prêt !</h3>
-            <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.8)', marginBottom: '12px' }}>
-              Découvre <strong>{dailySong.title}</strong> aujourd'hui et améliore ta culture bachata.
-            </p>
-            <div style={{ display: 'flex', gap: '12px' }}>
-              <button 
-                onClick={() => { setShowDailyNotif(false); router.push(`/song/${dailySong.id}`); }}
-                style={{
-                  background: 'white', color: '#1e1b4b', border: 'none', padding: '8px 16px',
-                  borderRadius: '10px', fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer'
-                }}
-              >
-                C'est parti !
-              </button>
-              <button 
-                onClick={() => setShowDailyNotif(false)}
-                style={{ background: 'transparent', color: 'white', border: 'none', fontSize: '0.8rem', opacity: 0.6, cursor: 'pointer' }}
-              >
-                Plus tard
-              </button>
-            </div>
+          <div style={{
+            width: '48px',
+            height: '48px',
+            borderRadius: '12px',
+            background: `linear-gradient(135deg, ${dailySong.color}, #000)`,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '1.2rem',
+            boxShadow: '0 8px 16px rgba(0,0,0,0.3)',
+            flexShrink: 0
+          }}>
+            🎵
           </div>
+          
+          <div style={{ flex: '1 1 150px' }}>
+            <div style={{ 
+              textTransform: 'uppercase', 
+              fontSize: '0.6rem', 
+              fontWeight: 900, 
+              letterSpacing: '0.1em',
+              color: '#a78bfa',
+              marginBottom: '2px'
+            }}>
+              {locale === 'en' ? 'Daily Challenge' : 'Défi du jour'}
+            </div>
+            <h2 style={{ fontSize: '1.1rem', fontWeight: 800, marginBottom: '2px' }}>{dailySong.title}</h2>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.8rem' }}>
+              {locale === 'en' ? 'By' : 'Par'} <strong>{dailySong.artist}</strong>
+            </p>
+          </div>
+          
+          <button style={{
+            background: 'white',
+            color: '#1e1b4b',
+            border: 'none',
+            padding: '8px 16px',
+            borderRadius: '8px',
+            fontWeight: 700,
+            fontSize: '0.8rem',
+            cursor: 'pointer',
+            whiteSpace: 'nowrap'
+          }}>
+            Relever le défi
+          </button>
         </div>
-      )}
+      </div>
 
       {/* ─── FOOTER SEO ─── */}
       <SeoFooter currentPage="home" />
