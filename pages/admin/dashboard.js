@@ -189,39 +189,65 @@ export default function AdminDashboard() {
                   <div className="session-timeline">
                     <h4>Parcours utilisateur :</h4>
                     <div className="timeline">
-                      {session.events.map((ev, index) => (
-                        <div key={index} className="timeline-event">
-                          <div className="timeline-marker"></div>
-                          <div className="timeline-content">
-                            <div className="event-time">{formatDate(ev.timestamp)}</div>
-                            {ev.type === 'page_view' ? (
-                              <div className="event-type page-view">
-                                <span className="badge badge-blue">Page Visitée</span>
-                                <span className="path">{ev.data.path}</span>
+                      {session.events.map((ev, index) => {
+                        const nextEv = session.events[index + 1];
+                        let durationStr = '';
+                        if (nextEv) {
+                          const diff = new Date(nextEv.timestamp) - new Date(ev.timestamp);
+                          const secs = Math.floor(diff / 1000);
+                          if (secs > 0) {
+                            if (secs > 60) {
+                              durationStr = `${Math.floor(secs / 60)} min ${secs % 60} sec`;
+                            } else {
+                              durationStr = `${secs} sec`;
+                            }
+                          }
+                        }
+
+                        let clickText = ev.data.text;
+                        if (ev.type === 'click' && clickText) {
+                          if (clickText === 'X' || clickText === '×' || clickText === '✖' || clickText.toLowerCase() === 'fermer') {
+                            clickText = "Fermeture / Quitter (X)";
+                          }
+                        }
+
+                        return (
+                          <div key={index} className="timeline-event">
+                            <div className="timeline-marker"></div>
+                            <div className="timeline-content">
+                              <div className="event-time">
+                                {formatDate(ev.timestamp)}
+                                {durationStr && <span className="event-duration"> (Temps passé : {durationStr})</span>}
                               </div>
-                            ) : ev.type === 'popup_interaction' ? (
-                              <div className="event-type popup">
-                                <span className="badge badge-green">Boutique</span>
-                                <span className="click-details">
-                                  Action: <strong>{ev.data.action}</strong>
-                                  <br/>
-                                  Article: <em>{ev.data.item}</em> ({ev.data.price}€)
-                                </span>
-                              </div>
-                            ) : (
-                              <div className="event-type click">
-                                <span className="badge badge-purple">Clic</span>
-                                <span className="click-details" style={{ wordBreak: 'break-word' }}>
-                                  {ev.data.text ? <strong>"{ev.data.text}"</strong> : <em>(Élément sans texte)</em>} 
-                                  {ev.data.tagName && <span className="tag-name"> [{ev.data.tagName.toLowerCase()}]</span>}
-                                  {ev.data.href && <span className="href"> {"->"} {ev.data.href}</span>}
-                                </span>
-                              </div>
-                            )}
-                            <div className="event-url">{ev.url}</div>
+                              {ev.type === 'page_view' ? (
+                                <div className="event-type page-view">
+                                  <span className="badge badge-blue">Page Visitée</span>
+                                  <span className="path">{ev.data.path}</span>
+                                </div>
+                              ) : ev.type === 'popup_interaction' ? (
+                                <div className="event-type popup">
+                                  <span className="badge badge-green">Boutique</span>
+                                  <span className="click-details">
+                                    Action: <strong>{ev.data.action}</strong>
+                                    <br/>
+                                    Article: <em>{ev.data.item}</em> ({ev.data.price}€)
+                                  </span>
+                                </div>
+                              ) : (
+                                <div className="event-type click">
+                                  <span className="badge badge-purple">Clic</span>
+                                  <span className="click-details" style={{ wordBreak: 'break-word' }}>
+                                    {clickText ? <strong>"{clickText}"</strong> : <em>(Élément sans texte)</em>} 
+                                    {ev.data.tagName && <span className="tag-name"> [{ev.data.tagName.toLowerCase()}]</span>}
+                                    {ev.data.href && <span className="href"> {"->"} {ev.data.href}</span>}
+                                  </span>
+                                </div>
+                              )}
+                              <div className="event-url">{ev.url}</div>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 )}
@@ -396,6 +422,14 @@ export default function AdminDashboard() {
           font-size: 12px;
           color: #64748b;
           margin-bottom: 8px;
+        }
+        .event-duration {
+          color: #38bdf8;
+          font-weight: 600;
+          margin-left: 8px;
+          background: rgba(56, 189, 248, 0.1);
+          padding: 2px 6px;
+          border-radius: 4px;
         }
         .event-type {
           display: flex;
