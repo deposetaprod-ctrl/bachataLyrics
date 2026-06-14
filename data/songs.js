@@ -1,5 +1,653 @@
 export const songs = [
   {
+    id: "esa-flaquita-sebas-garreta",
+    title: "Esa flaquita",
+    artist: "Sebas Garreta",
+    year: 2023,
+    dateAdded: "2026-06-14",
+    tags: ["Urbano", "Sensual", "Désir"],
+    color: "#ec4899",
+    spotify: "https://open.spotify.com/search/Esa%20flaquita%20Sebas%20Garreta",
+    danceVideo: "fIrEfYbpHJU",
+    culture: {
+      context: "Sortie en 2023, 'Esa flaquita' (Cette petite mince) est un tube incontournable du chanteur espagnol Sebas Garreta, un artiste très apprécié sur la scène de la bachata sensuelle européenne. Avec son style urbain et ses rythmes entraînants, il apporte une touche très moderne et audacieuse à la bachata, souvent influencée par le reggaeton.",
+      meaning: "La chanson aborde un thème classique de la musique urbaine : le contraste entre l'apparence sage d'une femme en public et son attitude sauvage dans l'intimité. Les paroles décrivent une femme qui a l'air d'un 'petit ange tombé du ciel', mais qui se révèle être une véritable 'diablesse' et une 'louve' lorsqu'ils sont seuls en secret.",
+      artistInfo: "Sebas Garreta, originaire d'Espagne, est l'un des piliers de la nouvelle génération bachata en Europe. Collaborant souvent avec le producteur Dave Aguilar, il crée des titres spécialement pensés pour les danseurs de bachata sensuelle, avec de nombreux breaks, des voix douces et des basses très marquées.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "Released in 2023, 'Esa flaquita' (That skinny girl) is a hit song by Spanish singer Sebas Garreta, a highly appreciated artist in the European sensual bachata scene. With his urban style and catchy rhythms, he brings a very modern and bold touch to bachata, often influenced by reggaeton.",
+      meaning: "The song tackles a classic theme in urban music: the contrast between a woman's innocent public appearance and her wild attitude behind closed doors. The lyrics describe a woman who looks like a 'little angel fallen from heaven', but turns out to be a real 'devil' and a 'wolf' when they are alone in secret.",
+      artistInfo: "Sebas Garreta, originally from Spain, is one of the pillars of the new bachata generation in Europe. Often collaborating with producer Dave Aguilar, he creates tracks designed specifically for sensual bachata dancers, featuring numerous breaks, smooth vocals, and heavy basslines.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `[Verse 1]
+Quien la ve por ahí
+Se imagina que es una angelito caído del cielo
+Que no rompe ni un plato
+Pero detrás de ese velo
+Hay una diablilla
+Una gata en celo
+Que maulla a la luna, se pinta los labios y se suelta el pelo
+Se pone baby doll y me modela
+
+[Chorus]
+Esa flaquita
+Se me ha metido en la cabeza y no se quita
+No me resisto cuando pone esa carita
+Experimentada pero en la calle parece señorita
+Y cuando lo hacemos, mi nombre lo grita
+Esa flaquita
+Se me ha metido en la cabeza y no se quita
+No me resisto cuando pone esa carita
+Experimentada pero en la calle parece señorita
+Y cuando lo hacemos, mi nombre lo grita
+
+[Verse 2]
+Esa flaquita me tiene loco
+Nadie sabe que ella anda conmigo
+Solo una habitación de testigo
+Yo me la como entera, y nadie se entera
+Y parecemos solo amigos
+
+[Pre-Chorus]
+Parece una santa pero es diabla
+Me daña la mente cuando me habla
+Y yo digo: Wow, cuando se motiva y me lo hace de lao’
+Se pone agresiva porque como Celia Cruz ella tiene tumbao’
+
+[Chorus]
+Esa flaquita
+Se me ha metido en la cabeza y no se quita
+No me resisto cuando pone esa carita
+Experimentada pero en la calle parece señorita
+Y cuando lo hacemos, mi nombre lo grita
+Esa flaquita
+Se me ha metido en la cabeza y no se quita
+No me resisto cuando pone esa carita
+Experimentada pero en la calle parece señorita
+Y cuando lo hacemos, mi nombre lo grita
+
+[Verse 3]
+Destapamos botellas prendemos la hookah
+Si no le doy doble tanda, ella se disgusta
+Esa beba hermosa, se pone golosa
+Le regalo flores, ella quiere otra cosa
+Me envuelve, me seduce y me destroza
+
+[Bridge]
+En la calle es callaíta, parece buena
+Se le ve bien tranquilita, pero es candela
+En la calle es callaíta, se hace la boba
+Se le ve bien bien tranquilita
+Pero se convierte en loba, y te devora
+
+[Outro]
+Sebas Garreta mami
+Sebas Garreta pa’ ti
+Díselo
+Dave Aguilar
+A los mandos
+Ya sabéis quienes somos
+Dice, wow
+Llora llora, guitarrita llora
+SD
+
+[Chorus]
+Esa flaquita
+Se me ha metido en la cabeza y no se quita
+No me resisto cuando pone esa carita
+Experimentada, pero en la calle parece señorita
+Y cuando lo hacemos, mi nombre lo grita
+
+[Outro 2]
+Wow`,
+      en: `[Verse 1]
+Whoever sees her around
+Imagines she's a little angel fallen from heaven
+Who wouldn't hurt a fly
+But behind that veil
+There is a little devil
+A cat in heat
+Who meows at the moon, paints her lips and lets her hair down
+She puts on a babydoll and models for me
+
+[Chorus]
+That skinny girl
+Has gotten into my head and won't leave
+I can't resist when she makes that little face
+Experienced but in the street she looks like a proper lady
+And when we do it, she screams my name
+That skinny girl
+Has gotten into my head and won't leave
+I can't resist when she makes that little face
+Experienced but in the street she looks like a proper lady
+And when we do it, she screams my name
+
+[Verse 2]
+That skinny girl drives me crazy
+Nobody knows she hangs out with me
+Only a room as a witness
+I eat her all up, and nobody finds out
+And we look just like friends
+
+[Pre-Chorus]
+She looks like a saint but she's a devil
+She messes with my mind when she talks to me
+And I say: Wow, when she gets motivated and does it to me sideways
+She gets aggressive because like Celia Cruz she has swagger (tumbao)
+
+[Chorus]
+That skinny girl
+Has gotten into my head and won't leave
+I can't resist when she makes that little face
+Experienced but in the street she looks like a proper lady
+And when we do it, she screams my name
+That skinny girl
+Has gotten into my head and won't leave
+I can't resist when she makes that little face
+Experienced but in the street she looks like a proper lady
+And when we do it, she screams my name
+
+[Verse 3]
+We pop bottles, we light the hookah
+If I don't give her a double round, she gets upset
+That beautiful baby, she gets greedy
+I give her flowers, she wants something else
+She wraps me up, seduces me and destroys me
+
+[Bridge]
+In the street she is quiet, she seems good
+She looks very calm, but she's fire
+In the street she is quiet, she plays the fool
+She looks very very calm
+But she turns into a wolf, and devours you
+
+[Outro]
+Sebas Garreta mami
+Sebas Garreta for you
+Tell them
+Dave Aguilar
+At the controls
+You already know who we are
+He says, wow
+Cry cry, little guitar cry
+SD
+
+[Chorus]
+That skinny girl
+Has gotten into my head and won't leave
+I can't resist when she makes that little face
+Experienced, but in the street she looks like a proper lady
+And when we do it, she screams my name
+
+[Outro 2]
+Wow`,
+      fr: `[Verse 1]
+Celui qui la voit par-ci par-là
+S'imagine que c'est un petit ange tombé du ciel
+Qui ne ferait pas de mal à une mouche
+Mais derrière ce voile
+Il y a une petite diablesse
+Une chatte en chaleur
+Qui miaule à la lune, se maquille les lèvres et se lâche les cheveux
+Elle met une nuisette et défile pour moi
+
+[Chorus]
+Cette petite femme mince
+S'est mise dans ma tête et n'en sort plus
+Je ne résiste pas quand elle fait cette petite tête
+Expérimentée, mais dans la rue elle a l'air d'une demoiselle sage
+Et quand on le fait, elle crie mon prénom
+Cette petite femme mince
+S'est mise dans ma tête et n'en sort plus
+Je ne résiste pas quand elle fait cette petite tête
+Expérimentée, mais dans la rue elle a l'air d'une demoiselle sage
+Et quand on le fait, elle crie mon prénom
+
+[Verse 2]
+Cette petite femme mince me rend fou
+Personne ne sait qu'elle traîne avec moi
+Seulement une chambre comme témoin
+Je la dévore toute entière, et personne ne le sait
+Et on dirait juste des amis
+
+[Pre-Chorus]
+Elle a l'air d'une sainte mais c'est une diablesse
+Elle me retourne le cerveau quand elle me parle
+Et je dis : Wow, quand elle est motivée et me le fait sur le côté
+Elle devient agressive car comme Celia Cruz elle a du "tumbao" (du rythme)
+
+[Chorus]
+Cette petite femme mince
+S'est mise dans ma tête et n'en sort plus
+Je ne résiste pas quand elle fait cette petite tête
+Expérimentée, mais dans la rue elle a l'air d'une demoiselle sage
+Et quand on le fait, elle crie mon prénom
+Cette petite femme mince
+S'est mise dans ma tête et n'en sort plus
+Je ne résiste pas quand elle fait cette petite tête
+Expérimentée, mais dans la rue elle a l'air d'une demoiselle sage
+Et quand on le fait, elle crie mon prénom
+
+[Verse 3]
+On débouche des bouteilles, on allume la chicha
+Si je ne lui donne pas une double ration, elle se fâche
+Cette belle fille, elle devient gourmande
+Je lui offre des fleurs, elle veut autre chose
+Elle m'envoûte, me séduit et me détruit
+
+[Bridge]
+Dans la rue elle est silencieuse, elle a l'air sage
+On la voit bien tranquille, mais elle est de feu
+Dans la rue elle est silencieuse, elle fait l'innocente
+On la voit très très tranquille
+Mais elle se transforme en louve, et te dévore
+
+[Outro]
+Sebas Garreta mami
+Sebas Garreta pour toi
+Dis-leur
+Dave Aguilar
+Aux commandes
+Vous savez déjà qui nous sommes
+Il dit, wow
+Pleure pleure, petite guitare pleure
+SD
+
+[Chorus]
+Cette petite femme mince
+S'est mise dans ma tête et n'en sort plus
+Je ne résiste pas quand elle fait cette petite tête
+Expérimentée, mais dans la rue elle a l'air d'une demoiselle sage
+Et quand on le fait, elle crie mon prénom
+
+[Outro 2]
+Wow`
+    }
+  },
+    id: "tesoro-jr",
+    title: "Tesoro",
+    artist: "JR",
+    year: 2019,
+    dateAdded: "2026-06-14",
+    tags: ["Romantique", "Inspiration", "Urban"],
+    color: "#fbbf24",
+    spotify: "https://open.spotify.com/search/Tesoro%20JR",
+    danceVideo: "hRLL01HpRMk",
+    culture: {
+      context: "Sortie en 2019 sur l'album \"Infinito\", \"Tesoro\" (Trésor) de l'artiste JR est une magnifique déclaration d'amour en bachata. JR, chanteur américain d'origine dominicaine, est reconnu pour sa capacité à fusionner la bachata romantique avec des influences R&B et pop. Cette chanson reflète parfaitement son style doux et moderne.",
+      meaning: "Dans ce titre, l'artiste élève sa partenaire au rang de véritable \"trésor caché\". L'amour est présenté comme une force si puissante qu'elle remplace les besoins matériels : un journal intime, un compte en banque ou même une maison deviennent inutiles. L'outro (chantée en anglais) renforce ce message profond, expliquant comment cet amour a ouvert son \"troisième œil\" et l'a libéré de ses anciennes chaînes pour le transformer.",
+      artistInfo: "JR (parfois stylisé Jr.) est un artiste urbain/bachata très créatif. Il apporte souvent une sensibilité bilingue (anglais/espagnol) et des mélodies très R&B à la bachata traditionnelle, ce qui rend sa musique très appréciée dans les soirées sensuelles.",
+      album: "Infinito"
+    },
+    culture_en: {
+      context: "Released in 2019 on the album \"Infinito\", \"Tesoro\" (Treasure) by JR is a beautiful bachata declaration of love. JR, an American singer of Dominican descent, is well known for his ability to blend romantic bachata with R&B and pop influences. This song perfectly reflects his smooth and modern style.",
+      meaning: "In this track, the artist elevates his partner to the status of a true \"hidden treasure\". Love is presented as a force so powerful that it replaces material needs: a diary, a bank account, or even a home become unnecessary. The English outro reinforces this profound message, explaining how this love opened his \"third eye\" and set him free from his past, transforming him forever.",
+      artistInfo: "JR is a highly creative urban/bachata artist. He often brings a bilingual (English/Spanish) sensibility and R&B melodies to traditional bachata, making his music very popular for sensual dancing.",
+      album: "Infinito"
+    },
+    lyrics: {
+      es: `[Verse 1]
+¿Quién necesita un diario?
+Si todos mis secretos son tuyos también
+No necesito un banco si toda mi riqueza viene en forma de ti mujer
+
+[Pre-Chorus]
+Ay, eres mi mundo, mi cielo y las estrellas
+Completamente eres más que la mujer a quien
+Le hago el amor, eres la luz de mi existir
+
+[Chorus]
+Tesoro escondido, en la novia mía
+Me haces sentir como un campeón, por ti yo gano cada día
+Tesoro escondido (Oh-oh-oh), en la novia mía (Ah-ah-ah)
+Me iluminas con todo tu amor
+Por ti yo brillo cada día, brillo cada día
+
+[Verse 2]
+¿Quién necesita una casa?
+Si cuando tú me abrazas me refugio en tu ser
+No necesito cama, si sueño en tu mirada y yo vuelvo a renacer
+
+[Pre-Chorus]
+Ay, eres mi mundo, mi cielo y las estrellas
+Completamente eres más que la mujer a quien
+Le hago el amor, eres la luz de mi existir
+
+[Chorus]
+Tesoro escondido en la novia mía
+Me haces sentir como un campeón, por ti yo gano cada día
+Tesoro escondido, (Oh-oh-oh) en la novia mía (Ah-ah-ah)
+Me iluminas con todo tu amor
+Por ti yo brillo cada día, brillo cada día
+
+[Bridge]
+JR
+Tesoro escondido, (Oh-oh-oh) en la novia mía (Ah-ah-ah)
+Me iluminas con todo tu amor
+Por ti yo brillo cada día, yo brillo cada día
+
+[Outro]
+How real is this?
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye, your love has set me free
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye
+Your love has set me free (come on baby, she's so amazing)
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye
+Your love has set me free (come on baby, she's so amazing)
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye
+Your love has set me free (come on baby, she's so amazing)
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye
+Your love has set me free (come on baby, she's so amazing)
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye
+Your love has set me free (come on baby, she's so amazing)
+Love, love, love!`,
+      en: `[Verse 1]
+Who needs a diary?
+If all my secrets are yours too
+I don't need a bank if all my wealth comes in the form of you, woman
+
+[Pre-Chorus]
+Oh, you are my world, my sky and the stars
+Completely you are more than the woman to whom
+I make love, you are the light of my existence
+
+[Chorus]
+Hidden treasure, in my girlfriend
+You make me feel like a champion, for you I win every day
+Hidden treasure (Oh-oh-oh), in my girlfriend (Ah-ah-ah)
+You illuminate me with all your love
+For you I shine every day, I shine every day
+
+[Verse 2]
+Who needs a house?
+If when you hug me I take refuge in your being
+I don't need a bed, if I dream in your gaze and I am reborn again
+
+[Pre-Chorus]
+Oh, you are my world, my sky and the stars
+Completely you are more than the woman to whom
+I make love, you are the light of my existence
+
+[Chorus]
+Hidden treasure in my girlfriend
+You make me feel like a champion, for you I win every day
+Hidden treasure, (Oh-oh-oh) in my girlfriend (Ah-ah-ah)
+You illuminate me with all your love
+For you I shine every day, I shine every day
+
+[Bridge]
+JR
+Hidden treasure, (Oh-oh-oh) in my girlfriend (Ah-ah-ah)
+You illuminate me with all your love
+For you I shine every day, I shine every day
+
+[Outro]
+How real is this?
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye, your love has set me free
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye
+Your love has set me free (come on baby, she's so amazing)
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye
+Your love has set me free (come on baby, she's so amazing)
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye
+Your love has set me free (come on baby, she's so amazing)
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye
+Your love has set me free (come on baby, she's so amazing)
+Once upon a time, was another guy, love was my property
+Falling for you I opened my third eye
+Your love has set me free (come on baby, she's so amazing)
+Love, love, love!`,
+      fr: `[Verse 1]
+Qui a besoin d'un journal intime ?
+Si tous mes secrets sont aussi les tiens
+Je n'ai pas besoin d'une banque si toute ma richesse prend ta forme, femme
+
+[Pre-Chorus]
+Oh, tu es mon monde, mon ciel et les étoiles
+Tu es complètement plus que la femme à qui
+Je fais l'amour, tu es la lumière de mon existence
+
+[Chorus]
+Trésor caché, en ma petite amie
+Tu me fais me sentir comme un champion, grâce à toi je gagne chaque jour
+Trésor caché (Oh-oh-oh), en ma petite amie (Ah-ah-ah)
+Tu m'illumines de tout ton amour
+Grâce à toi je brille chaque jour, je brille chaque jour
+
+[Verse 2]
+Qui a besoin d'une maison ?
+Si quand tu m'enlaces, je trouve refuge dans ton être
+Je n'ai pas besoin d'un lit, si je rêve dans ton regard et que je renais
+
+[Pre-Chorus]
+Oh, tu es mon monde, mon ciel et les étoiles
+Tu es complètement plus que la femme à qui
+Je fais l'amour, tu es la lumière de mon existence
+
+[Chorus]
+Trésor caché en ma petite amie
+Tu me fais me sentir comme un champion, grâce à toi je gagne chaque jour
+Trésor caché, (Oh-oh-oh) en ma petite amie (Ah-ah-ah)
+Tu m'illumines de tout ton amour
+Grâce à toi je brille chaque jour, je brille chaque jour
+
+[Bridge]
+JR
+Trésor caché, (Oh-oh-oh) en ma petite amie (Ah-ah-ah)
+Tu m'illumines de tout ton amour
+Grâce à toi je brille chaque jour, je brille chaque jour
+
+[Outro]
+À quel point est-ce réel ?
+Il était une fois, j'étais un autre homme, l'amour était ma propriété
+En tombant amoureux de toi j'ai ouvert mon troisième œil, ton amour m'a libéré
+Il était une fois, j'étais un autre homme, l'amour était ma propriété
+En tombant amoureux de toi j'ai ouvert mon troisième œil
+Ton amour m'a libéré (allez bébé, elle est si incroyable)
+Il était une fois, j'étais un autre homme, l'amour était ma propriété
+En tombant amoureux de toi j'ai ouvert mon troisième œil
+Ton amour m'a libéré (allez bébé, elle est si incroyable)
+Il était une fois, j'étais un autre homme, l'amour était ma propriété
+En tombant amoureux de toi j'ai ouvert mon troisième œil
+Ton amour m'a libéré (allez bébé, elle est si incroyable)
+Il était une fois, j'étais un autre homme, l'amour était ma propriété
+En tombant amoureux de toi j'ai ouvert mon troisième œil
+Ton amour m'a libéré (allez bébé, elle est si incroyable)
+Il était une fois, j'étais un autre homme, l'amour était ma propriété
+En tombant amoureux de toi j'ai ouvert mon troisième œil
+Ton amour m'a libéré (allez bébé, elle est si incroyable)
+Amour, amour, amour !`
+    }
+  },
+    id: "amorcito-enfermito-hector-acosta",
+    title: "Amorcito enfermito",
+    artist: "Hector Acosta \"El Torito\"",
+    year: 2015,
+    dateAdded: "2026-06-14",
+    tags: ["Classique", "Désir", "Triste"],
+    color: "#0284c7",
+    spotify: "https://open.spotify.com/search/Amorcito%20enfermito%20Hector%20Acosta",
+    danceVideo: "UaKbVn8mOGk",
+    culture: {
+      context: "Écrite par le célèbre Romeo Santos spécialement pour Hector Acosta (surnommé 'El Torito'), 'Amorcito enfermito' est un énorme classique de la bachata dominicaine sorti en 2015. Hector Acosta est l'une des voix les plus respectées de la République Dominicaine, excellant aussi bien dans le merengue que dans la bachata.",
+      meaning: "La chanson file une métaphore médicale tout au long de ses paroles. Elle compare une relation amoureuse qui se détériore à une maladie en phase terminale (coma, cancer, pneumonie, virus). Les deux partenaires sont responsables : elle par sa jalousie 'dictatrice', lui par son égoïsme et son insensibilité, ce qui a conduit leur bel amour à 'mourir' d'une infection de glace.",
+      artistInfo: "Hector Acosta est un chanteur dominicain légendaire, ancien leader du groupe 'Los Toros Band'. Sa voix puissante et pleine d'émotion (le fameux 'Sentimiento Torito') en fait un incontournable des pistes de danse.",
+      album: "Merengue y Bachata"
+    },
+    culture_en: {
+      context: "Written by the famous Romeo Santos specifically for Hector Acosta (nicknamed 'El Torito'), 'Amorcito enfermito' is a massive Dominican bachata classic released in 2015. Hector Acosta is one of the most respected voices in the Dominican Republic, excelling in both merengue and bachata.",
+      meaning: "The song uses an extended medical metaphor throughout its lyrics. It compares a deteriorating romantic relationship to a terminal illness (coma, cancer, pneumonia, virus). Both partners are to blame: she due to her 'dictatorial' jealousy, and he due to his selfishness and insensitivity, which ultimately led their beautiful love to 'die' from an infection of ice.",
+      artistInfo: "Hector Acosta is a legendary Dominican singer and former lead vocalist of 'Los Toros Band'. His powerful and emotional voice (the famous 'Sentimiento Torito') makes him a staple on dance floors.",
+      album: "Merengue y Bachata"
+    },
+    lyrics: {
+      es: `[Verse 1]
+Vale más ceder un minuto
+que perder la vida en un segundo
+Nuestro amor se nos contagió
+de ese virus maligno que da profundo
+
+[Pre-Chorus]
+Aquel cariño que existió una vez se encuentra en coma
+Le han diagnosticado un cáncer sin pena sin gloria
+(Nos dejamos caer) inconsciente hasta fiebre sin alivio
+(Dediqué) Le dio neumonía a los besos, agoniza con deseos de amarte otra vez
+
+[Chorus]
+Y el sentimiento que sentías cuando eras solo mía
+Se ha infectado de hielo
+Amorcito enfermito ya no cree en el optimismo, se murió
+
+[Verse 2]
+Es mejor seguir discutiendo
+que guardar silencio sin remedio
+Preferible la soledad
+que estar acompañado en sufrimiento
+
+[Pre-Chorus]
+Aquel cariño que existió una vez se encuentra en coma
+Le han diagnosticado un cáncer sin pena sin gloria
+(Nos dejamos caer) inconsciente hasta fiebre sin alivio
+(Dediqué) Le dio neumonía a los besos, agoniza con deseos de amarte otra vez
+
+[Chorus]
+Y el sentimiento que sentías cuando eras solo mía
+Se ha infectado de hielo
+Amorcito enfermito ya no cree en el optimismo, se murió
+
+[Bridge]
+¡Sentimiento, Torito!
+¡Sentimiento!
+Bachateame mamá
+Como anoche
+Tú por ser celosa y dictadora, en convulsión el alma llora
+Yo por insensible y egoísta convertí el amor bonito en un desliz
+
+[Pre-Chorus]
+Inconsciente hasta fiebre sin alivio
+(Dediqué) Le dio neumonía a los besos, agoniza con deseos de amarte otra vez
+
+[Chorus]
+Y el sentimiento que sentías cuando eras solo mía
+Se ha infectado de hielo
+Amorcito enfermito ya no cree en el optimismo, se murió
+Se murió`,
+      en: `[Verse 1]
+It is better to yield for a minute
+than to lose life in a second
+Our love got infected
+by that malignant virus that goes deep
+
+[Pre-Chorus]
+That affection that once existed is in a coma
+It has been diagnosed with cancer without pain, without glory
+(We let ourselves fall) unconscious even fever without relief
+(I dedicated) It gave pneumonia to the kisses, agonizing with desires to love you again
+
+[Chorus]
+And the feeling you felt when you were only mine
+Has been infected with ice
+Sick little love no longer believes in optimism, it died
+
+[Verse 2]
+It is better to keep arguing
+than to keep silence without a remedy
+Loneliness is preferable
+than being accompanied in suffering
+
+[Pre-Chorus]
+That affection that once existed is in a coma
+It has been diagnosed with cancer without pain, without glory
+(We let ourselves fall) unconscious even fever without relief
+(I dedicated) It gave pneumonia to the kisses, agonizing with desires to love you again
+
+[Chorus]
+And the feeling you felt when you were only mine
+Has been infected with ice
+Sick little love no longer believes in optimism, it died
+
+[Bridge]
+Torito feeling!
+Feeling!
+Play bachata for me mama
+Like last night
+You for being jealous and dictatorial, in convulsion the soul cries
+I for being insensitive and selfish turned the beautiful love into a slip
+
+[Pre-Chorus]
+Unconscious even fever without relief
+(I dedicated) It gave pneumonia to the kisses, agonizing with desires to love you again
+
+[Chorus]
+And the feeling you felt when you were only mine
+Has been infected with ice
+Sick little love no longer believes in optimism, it died
+It died`,
+      fr: `[Verse 1]
+Il vaut mieux céder une minute
+que perdre la vie en une seconde
+Notre amour a été contaminé
+par ce virus malin qui frappe en profondeur
+
+[Pre-Chorus]
+Cette tendresse qui existait autrefois est dans le coma
+On lui a diagnostiqué un cancer sans peine ni gloire
+(Nous nous laissons tomber) inconscients, avec une fièvre sans soulagement
+(J'ai dédié) Ça a donné une pneumonie aux baisers, agonisant avec l'envie de t'aimer à nouveau
+
+[Chorus]
+Et le sentiment que tu ressentais quand tu n'étais qu'à moi
+A été infecté de glace
+Petit amour malade ne croit plus en l'optimisme, il est mort
+
+[Verse 2]
+Il vaut mieux continuer à se disputer
+que de garder le silence sans remède
+La solitude est préférable
+que d'être accompagné dans la souffrance
+
+[Pre-Chorus]
+Cette tendresse qui existait autrefois est dans le coma
+On lui a diagnostiqué un cancer sans peine ni gloire
+(Nous nous laissons tomber) inconscients, avec une fièvre sans soulagement
+(J'ai dédié) Ça a donné une pneumonie aux baisers, agonisant avec l'envie de t'aimer à nouveau
+
+[Chorus]
+Et le sentiment que tu ressentais quand tu n'étais qu'à moi
+A été infecté de glace
+Petit amour malade ne croit plus en l'optimisme, il est mort
+
+[Bridge]
+Sentiment Torito !
+Sentiment !
+Joue de la bachata pour moi maman
+Comme hier soir
+Toi pour être jalouse et dictatrice, en convulsion l'âme pleure
+Moi pour être insensible et égoïste, j'ai transformé notre bel amour en une erreur
+
+[Pre-Chorus]
+Inconscients, avec une fièvre sans soulagement
+(J'ai dédié) Ça a donné une pneumonie aux baisers, agonisant avec l'envie de t'aimer à nouveau
+
+[Chorus]
+Et le sentiment que tu ressentais quand tu n'étais qu'à moi
+A été infecté de glace
+Petit amour malade ne croit plus en l'optimisme, il est mort
+Il est mort`
+    }
+  },
     id: "furioso-violento-esme",
     title: "Furioso Violento",
     artist: "ESME",
