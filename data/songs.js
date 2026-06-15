@@ -267,6 +267,7 @@ Et quand on le fait, elle crie mon prénom
 Wow`
     }
   },
+  {
     id: "tesoro-jr",
     title: "Tesoro",
     artist: "JR",
@@ -471,6 +472,7 @@ Ton amour m'a libéré (allez bébé, elle est si incroyable)
 Amour, amour, amour !`
     }
   },
+  {
     id: "amorcito-enfermito-hector-acosta",
     title: "Amorcito enfermito",
     artist: "Hector Acosta \"El Torito\"",
@@ -648,6 +650,7 @@ Petit amour malade ne croit plus en l'optimisme, il est mort
 Il est mort`
     }
   },
+  {
     id: "furioso-violento-esme",
     title: "Furioso Violento",
     artist: "ESME",
