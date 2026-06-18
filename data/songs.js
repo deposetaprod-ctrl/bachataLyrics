@@ -9913,6 +9913,7 @@ Je veux que tu ressentes des frissons`
     tags: ["Salsa", "Tropical"],
     color: "#ea580c",
     spotify: "https://open.spotify.com/search/No%20Soy%20Opci%C3%B3n%20Johnny%20Sky",
+    danceVideo: "WJdmkp0SZNw",
     culture: {
       context: "Sortie le 5 mars 2026, cette chanson de Johnny Sky marque son retour avec un son Salsa moderne et percutant.",
       meaning: "Une mise au point claire sur les limites de l'amour : ne pas être une simple option ou un plan B quand l'autre est indécis.",
