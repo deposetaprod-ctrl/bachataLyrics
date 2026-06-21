@@ -7876,6 +7876,7 @@ Puisqu'on a rompu, recommençons de zéro`,
     tags: ["Sensual"],
     color: "#8b5cf6",
     spotify: "https://open.spotify.com/search/Me%20Preguntaron%20Por%20Ti%20sP%20Polanco",
+    danceVideo: "6XhaPoh501E",
     culture: {
       context: "Sortie le 23 janvier 2025 dans le cadre du projet BCHTA RISING, Vol. 2. Interprétée par Sebas Garreta et produite par sP Polanco, la chanson a rapidement gagné en popularité dans la scène de danse bachata.",
       meaning: "Le chanteur croise une photo de son ex, heureuse avec un autre, et regrette les baisers qu'il ne lui a pas donnés et les promesses qu'il n'a pas tenues. Un souvenir d'une nuit à Ibiza hante encore sa mémoire.",
@@ -15466,6 +15467,894 @@ Tell me, if I head over to your area
 Without even touching it, Guille controls me, already
 I want to come see you
 If you say come, we go from zero to a hundred, baby`
+  },
+  {
+    id: "no-tiene-sentido-dimen5ions",
+    title: "No Tiene Sentido",
+    artist: "Dimen5ions, DJ Clau",
+    year: 2025,
+    dateAdded: "2026-06-21",
+    tags: ["Sensual", "Remix"],
+    color: "#f43f5e",
+    spotify: "https://open.spotify.com/search/No%20Tiene%20Sentido%20Dimen5ions",
+    danceVideo: "kYLQm9-x3y4",
+    culture: {
+      context: "Version bachata du hit 'No Tiene Sentido' de Beéle, produite par Dimen5ions et DJ Clau, devenue très populaire dans la scène de danse bachata.",
+      meaning: "La chanson exprime l'incompréhension face à une séparation amoureuse : 'Ça n'a pas de sens' (No tiene sentido) que les deux personnes prennent des chemins différents alors qu'elles ressentent encore une forte connexion.",
+      artistInfo: "Dimen5ions et DJ Clau sont des producteurs de bachata réputés pour leurs remixes sensuels de morceaux populaires, très appréciés dans les festivals internationaux.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `(Gu-gu-gu-gu-gu-gu-gu-gu)
+Baby, ¿que tú espera'?
+Si tú y yo conectamo' la primera vez que nos vimo' a los ojo'
+No hay manera (Óyelo) de que me olvide de esa piel canela
+Quedaron secuela' de esa noche
+
+Que tú y yo paramo' el tiempo
+Frente a frente (Alright), cuerpo a cuerpo
+Yo no sé por qué tan lejos, ma, ah-ah
+
+No tiene sentido que con esto que sentimo'
+Tú esté' por otro camino, no es normal
+Bebé, tú allá y yo acá
+Eso no tiene sentido, baby, si ya coincidimo'
+Y un par de cosas vivimo', no es normal
+Bebé, tú allá y yo acá
+Eso no tiene sentido (No; wuh-wuh-wuh)
+Eso no tiene sentido (No; ay-yeh)
+No tiene sentido (No; alright, gu-gu-gu-gu)
+No tiene sentido (No)
+
+Dime, mami, ¿qué fue? ¿Qué se me hizo?
+Que hace tiempo no te localizo
+Manda ubi que yo te aterrizo (Wuh-wuh)
+Te pienso y me erizo (Ay-yeh)
+A tu nombre yo me desahogo
+El video que hicimo' a vece' lo utilizo
+Las ganas en el cielo y la ropa en el piso
+Bebé (Bebé), hace tiempo que no te veo (Que no)
+Que no me escribes (Que no), que no te leo (Que no)
+Con mi mente a veces peleo (Que no)
+Porque me dice (Que no) que me olvide
+
+Baby, que tú y yo paramo' el tiempo (Tú y yo)
+Frente a frente, cuerpo a cuerpo
+Yo no sé por qué tan lejos vos (Alright, alright), ah-ah
+
+No tiene sentido que con esto que sentimo'
+Tú esté' por otro camino, no es normal
+Bebé, tú allá y yo acá
+Eso no tiene sentido, baby, si ya coincidimo'
+Y un par de cosas vivimo', no es normal
+Bebé, tú allá y yo acá
+Eso no tiene sentido (No; wuh-wuh-wuh)
+Eso no tiene sentido (No; ay-yeh)
+No tiene sentido (No; alright, gu-gu-gu-gu)
+No tiene sentido (No)`,
+      fr: `(Gu-gu-gu-gu-gu-gu-gu-gu)
+Bébé, qu'est-ce que tu attends ?
+Si toi et moi on a connecté la première fois qu'on s'est regardés dans les yeux
+Il n'y a pas moyen (Écoute-le) que j'oublie cette peau cannelle
+Il y a des séquelles de cette nuit
+
+Que toi et moi on arrête le temps
+Face à face (Bien), corps à corps
+Je ne sais pas pourquoi tu es si loin, ma, ah-ah
+
+Ça n'a pas de sens qu'avec ce qu'on ressent
+Tu sois sur un autre chemin, ce n'est pas normal
+Bébé, toi là-bas et moi ici
+Ça n'a pas de sens, bébé, si on a déjà coïncidé
+Et vécu deux ou trois choses, ce n'est pas normal
+Bébé, toi là-bas et moi ici
+Ça n'a pas de sens (Non ; wuh-wuh-wuh)
+Ça n'a pas de sens (Non ; ay-yeh)
+Ça n'a pas de sens (Non ; bien, gu-gu-gu-gu)
+Ça n'a pas de sens (Non)
+
+Dis-moi, mami, qu'est-ce qu'il y a ? Où es-tu passée ?
+Ça fait longtemps que je n'arrive pas à te localiser
+Envoie ta position que j'atterris (Wuh-wuh)
+Je pense à toi et j'en ai des frissons (Ay-yeh)
+En pensant à toi je me soulage
+La vidéo qu'on a faite, parfois je l'utilise
+L'envie au ciel et les vêtements par terre
+Bébé (Bébé), ça fait longtemps que je ne t'ai pas vue (Que non)
+Que tu ne m'écris pas (Que non), que je ne te lis pas (Que non)
+Avec mon esprit parfois je me bats (Que non)
+Parce qu'il me dit (Que non) de t'oublier
+
+Bébé, que toi et moi on arrête le temps (Toi et moi)
+Face à face, corps à corps
+Je ne sais pas pourquoi tu es si loin (Bien, bien), ah-ah
+
+Ça n'a pas de sens qu'avec ce qu'on ressent
+Tu sois sur un autre chemin, ce n'est pas normal
+Bébé, toi là-bas et moi ici
+Ça n'a pas de sens, bébé, si on a déjà coïncidé
+Et vécu deux ou trois choses, ce n'est pas normal
+Bébé, toi là-bas et moi ici
+Ça n'a pas de sens (Non ; wuh-wuh-wuh)
+Ça n'a pas de sens (Non ; ay-yeh)
+Ça n'a pas de sens (Non ; bien, gu-gu-gu-gu)
+Ça n'a pas de sens (Non)`,
+      en: `(Gu-gu-gu-gu-gu-gu-gu-gu)
+Baby, what are you waiting for?
+If you and I connected the first time we looked into each other's eyes
+There's no way (Listen) I could forget that cinnamon skin
+There are sequels left from that night
+
+That you and I stop time
+Face to face (Alright), body to body
+I don't know why you're so far, ma, ah-ah
+
+It makes no sense that with what we're feeling
+You're on another path, it's not normal
+Baby, you over there and me over here
+That makes no sense, baby, if we already matched
+And lived a couple of things, it's not normal
+Baby, you over there and me over here
+That makes no sense (No; wuh-wuh-wuh)
+That makes no sense (No; ay-yeh)
+It makes no sense (No; alright, gu-gu-gu-gu)
+It makes no sense (No)
+
+Tell me, mami, what happened? Where did you go?
+It's been a while since I could locate you
+Send your location and I'll land (Wuh-wuh)
+I think of you and get goosebumps (Ay-yeh)
+In your name I vent
+The video we made, sometimes I use it
+Desire in the sky and clothes on the floor
+Baby (Baby), it's been a while since I saw you (That no)
+That you don't write me (That no), that I don't read you (That no)
+With my mind I sometimes fight (That no)
+Because it tells me (That no) to forget you
+
+Baby, that you and I stop time (You and me)
+Face to face, body to body
+I don't know why you're so far (Alright, alright), ah-ah
+
+It makes no sense that with what we're feeling
+You're on another path, it's not normal
+Baby, you over there and me over here
+That makes no sense, baby, if we already matched
+And lived a couple of things, it's not normal
+Baby, you over there and me over here
+That makes no sense (No; wuh-wuh-wuh)
+That makes no sense (No; ay-yeh)
+It makes no sense (No; alright, gu-gu-gu-gu)
+It makes no sense (No)`
+  },
+  {
+    id: "una-copa-mas-dj-nassos-b",
+    title: "Una Copa Más",
+    artist: "Dj Nassos B, Khris Joe",
+    year: 2023,
+    dateAdded: "2026-06-21",
+    tags: ["Sensual", "Remix"],
+    color: "#6366f1",
+    spotify: "https://open.spotify.com/search/Una%20Copa%20Mas%20Dj%20Nassos%20B",
+    culture: {
+      context: "Version bachata produite par DJ Nassos B et Khris Joe de la chanson originale urbaine 'Una Copa Más' de l'artiste Moffa, sortie en 2023.",
+      meaning: "Une chanson qui décrit comment l'ambiance, la lune et 'un verre de plus' font monter la température entre deux personnes, mêlant désir charnel et fête continue jusqu'au bout de la nuit.",
+      artistInfo: "DJ Nassos B est un DJ et producteur connu pour ses remixes bachata sensual de morceaux reggaeton et urbains, souvent en collaboration avec Khris Joe.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `¿Cómo estás?, espero que estés bien
+Vamos a hacer las pases
+Sin hablar solo quiero tocarte aquí
+Bebé, no temas, ah-ah
+Vamos al grano
+Imagínate lo que pueda pasar
+
+Con una copa más
+La luna llena, ah-ah
+Bajo las estrella' me baila' a poca ropa
+Una copa más
+La luna llena, ah-ah
+Y no es la bebida eres tú quien me da nota
+
+Suena Zun Da Da
+Tú to'a mojada
+Esa luna rosadita
+Y la calentándote tú cuerpo
+En la tuya y yo en la mia
+Muriendo de celo'
+Me ve dura to'a la vida y mi mente en un cementerio
+Cuadra el negocio adueñarte de mi parte
+Baby, ven y parte
+Del party pa'l after de viernes a martes
+Vienes y te vas conmigo en la nave pa' Marte
+Mami, de tu punto g, soy dueño de lo mate
+Baby, ven y parte
+Del party pa'l after de viernes a martes
+Vienes y te vas conmigo en la nave pa' Marte
+Mami, con ese cuerpito me graduó de commander
+
+Una copa más
+La luna llena, ah-ah
+Bajo las estrella' me baila' a poca ropa
+Una copa más
+La luna llena, ah-ah
+Y no es la bebida eres tú quien me da nota
+
+Alístate y le caigo
+No hay seguro, seguro nos cuida Dios
+Si causo un charco
+Si no pues se jodió me busco un caso
+No quiero cerrar levanta el mazo
+Por ti soy un delincuente
+Si te esposo en la cama soy indecente
+Si antes de que te hago sentir bien diferente
+Te hago el amor sin parar soy tu cliente
+Cuadra el negocio adueñarte de mi parte
+Baby, ven y parte
+Del party pa'l after de viernes a martes
+Vienes y te vas conmigo en la nave pa' Marte
+Mami, de tu punto g, soy dueño de lo mate
+
+De la M a la A
+Dime, Moffa, ah-ah
+Los Puche, eh-eh`,
+      fr: `Comment vas-tu ?, j'espère que tu vas bien
+Faisons la paix
+Sans parler, je veux juste te toucher ici
+Bébé, n'aie pas peur, ah-ah
+Allons droit au but
+Imagine ce qui pourrait arriver
+
+Avec un verre de plus
+La pleine lune, ah-ah
+Sous les étoiles tu danses pour moi presque nue
+Un verre de plus
+La pleine lune, ah-ah
+Et ce n'est pas la boisson, c'est toi qui me fais planer
+
+On dirait Zun Da Da
+Toi toute mouillée
+Cette lune rosée
+Et réchauffant ton corps
+Dans le tien et moi dans le mien
+Mourant de jalousie
+Tu me vois dur tout le temps et mon esprit dans un cimetière
+L'affaire est de posséder une part de toi
+Bébé, viens et pars
+De la fête à l'after de vendredi à mardi
+Tu vas et viens avec moi dans le vaisseau spatial vers Mars
+Mami, de ton point G, je possède le maté
+Bébé, viens et pars
+De la fête à l'after de vendredi à mardi
+Tu vas et viens avec moi dans le vaisseau spatial vers Mars
+Mami, avec ce corps tu m'as diplômé comme commandant
+
+Un verre de plus
+La pleine lune, ah-ah
+Sous les étoiles tu danses pour moi presque nue
+Un verre de plus
+La pleine lune, ah-ah
+Et ce n'est pas la boisson, c'est toi qui me fais planer
+
+Prépare-toi et j'arrive
+Il n'y a pas d'assurance, Dieu prendra soin de nous
+Si je cause une flaque
+Sinon, eh bien, c'est foutu, je chercherai une affaire
+Je ne veux pas fermer, lève le marteau
+Pour toi, je suis un criminel
+Si je t'épouse dans le lit, je suis indécent
+Si avant que je te fasse te sentir différemment
+Je te fais l'amour sans arrêt, je suis ton client
+L'affaire est de posséder une part de toi
+Bébé, viens et pars
+De la fête à l'after de vendredi à mardi
+Tu vas et viens avec moi dans le vaisseau spatial vers Mars
+Mami, de ton point G, je possède le maté
+
+De M à A
+Dis-moi, Moffa, ah-ah
+Les Puche, eh-eh`,
+      en: `How are you?, I hope you're doing well
+Let's make amends
+Without talking, I just want to touch you here
+Baby, don't be afraid, ah-ah
+Let's get to the point
+Imagine what could happen
+
+With one more drink
+The full moon, ah-ah
+Under the stars you dance for me almost naked
+One more drink
+The full moon, ah-ah
+And it's not the drink, it's you who gives me a high
+
+Sounds like Zun Da Da
+You all wet
+That rosy moon
+And heating up your body
+In yours and I in mine
+Dying of jealousy
+You see me hard all the time and my mind in a cemetery
+The deal is to own a part of you
+Baby, come and leave
+From the party to the after-party from Friday to Tuesday
+You come and go with me in the spaceship to Mars
+Mommy, from your G-spot, I own the mate
+Baby, come and leave
+From the party to the after-party from Friday to Tuesday
+You come and go with me in the spaceship to Mars
+Mommy, with that body you graduated me as a commander
+
+With one more drink
+The full moon, ah-ah
+Under the stars you dance for me almost naked
+One more drink
+The full moon, ah-ah
+And it's not the drink, it's you who gives me a high
+
+Get ready and I'll come over
+There's no insurance, God will take care of us
+If I cause a puddle
+If not, well, it's fucked, I'll look for a case
+I don't want to close, raise the hammer
+For you, I'm a criminal
+If I marry you in bed, I'm indecent
+If before I make you feel differently
+I make love to you non-stop, I'm your client
+The deal is to own a part of you
+Baby, come and leave
+From the party to the after-party from Friday to Tuesday
+You come and go with me in the spaceship to Mars
+Mommy, from your G-spot, I own the mate
+
+From M to A
+Tell me, Moffa, ah-ah
+Los Puche, eh-eh`
+    }
+  },
+  {
+    id: "fruta-prohibida-dj-nassos-b",
+    title: "Fruta Prohibida",
+    artist: "DJ Nassos B, Khris Joe, Angel Tirana",
+    year: 2024,
+    dateAdded: "2026-06-21",
+    tags: ["Sensual"],
+    color: "#eab308",
+    spotify: "https://open.spotify.com/search/Fruta%20Prohibida%20DJ%20Nassos%20B",
+    danceVideo: "R-sz3y8m0WQ",
+    culture: {
+      context: "Sortie en 2024, 'Fruta Prohibida' est un morceau très apprécié dans les soirées bachata, fruit de la collaboration entre DJ Nassos B, Khris Joe et Angel Tirana.",
+      meaning: "Les paroles parlent d'un désir irrésistible pour une personne déjà en couple, considérée comme le 'fruit défendu' pour lequel le chanteur donnerait sa vie.",
+      artistInfo: "DJ Nassos B est réputé pour ses remixes et productions originales de bachata, collaborant fréquemment avec des artistes comme Khris Joe et Angel Tirana pour animer la scène sensuelle.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Desde hace tiempo tengo algo que decir
+Las ganas que te tengo no me las puedo cohibir, desde el día que bailando yo te ví
+No se como hacer para dejar de pensar en ti
+Es que tu ya tienes dueño, pero mi mente no puede entenderlo, eres la fruta prohibida y por una mordida baby yo daría mi vida yeah
+
+Dame una señal, escápate conmigo ya no aguanto mas las ganas que tengo de ti baby
+Nadie lo tiene que decir lady
+Por eso baby ven y dame una señal ya no puedo ocultarlo y quiero sentir ya tu cuerpo encima de mi baby pa’ que veas lo que yo siento por ti lady
+
+Baby, tu me tiene desesperao’ hace mucho tiempo que te imagino a mi lao’ y siempre que te ibas me mirabas, le agarrabas la mano a tu jevo y eso ami me provocaba
+Y ahora que lo pienso bien, no soy el único culpable tú también, por toa’ la veces que me mirabas y te reías, te apuesto que conmigo en la cama tu te imaginas
+Por eso dame una señal, te quiero robar, tu cuerpo probar
+Escápate conmigo nadie se va a percatar, nadie se va a enterar de que lo nuestro es real, solo tu y yo somos testigos, bebe!
+
+Dame una señal, escápate conmigo ya no aguanto mas las ganas que tengo de ti baby
+Nadie lo tiene que decir lady
+Por eso baby ven y dame una señal ya no puedo ocultarlo y quiero sentir ya tu cuerpo encima de mi baby pa’ que veas lo que yo siento por ti lady
+
+Khris joe, dj Nassos b, Angel Tirana
+…eres la fruta prohibida, y por una mordida baby yo daría mi vida…
+
+Dame una señal, escápate conmigo ya no aguanto mas las ganas que tengo de ti baby
+Nadie lo tiene que decir lady
+Por eso baby ven y dame una señal, quiero sentir ya tu cuerpo encima de mi baby pa’ que veas lo que yo siento por ti lady
+Yeah…`,
+      fr: `Depuis longtemps j'ai quelque chose à te dire
+L'envie que j'ai de toi je ne peux pas la réprimer, depuis le jour où je t'ai vue danser
+Je ne sais pas comment faire pour arrêter de penser à toi
+C'est que tu as déjà un propriétaire, mais mon esprit ne peut pas le comprendre, tu es le fruit défendu et pour une morsure bébé je donnerais ma vie ouais
+
+Donne-moi un signe, échappe-toi avec moi je n'en peux plus de l'envie que j'ai de toi bébé
+Personne ne doit le dire lady
+C'est pourquoi bébé viens et donne-moi un signe je ne peux plus le cacher et je veux déjà sentir ton corps sur moi bébé pour que tu voies ce que je ressens pour toi lady
+
+Bébé, tu me rends désespéré depuis longtemps je t'imagine à mes côtés et chaque fois que tu partais tu me regardais, tu prenais la main de ton mec et ça me provoquait
+Et maintenant que j'y pense bien, je ne suis pas le seul coupable toi aussi, pour toutes les fois où tu me regardais et tu riais, je parie qu'avec moi dans le lit tu t'imagines
+C'est pourquoi donne-moi un signe, je veux te voler, goûter ton corps
+Échappe-toi avec moi personne ne s'en apercevra, personne ne saura que ce qu'il y a entre nous est réel, seuls toi et moi sommes témoins, bébé !
+
+Donne-moi un signe, échappe-toi avec moi je n'en peux plus de l'envie que j'ai de toi bébé
+Personne ne doit le dire lady
+C'est pourquoi bébé viens et donne-moi un signe je ne peux plus le cacher et je veux déjà sentir ton corps sur moi bébé pour que tu voies ce que je ressens pour toi lady
+
+Khris joe, dj Nassos b, Angel Tirana
+…tu es le fruit défendu, et pour une morsure bébé je donnerais ma vie…
+
+Donne-moi un signe, échappe-toi avec moi je n'en peux plus de l'envie que j'ai de toi bébé
+Personne ne doit le dire lady
+C'est pourquoi bébé viens et donne-moi un signe, je veux déjà sentir ton corps sur moi bébé pour que tu voies ce que je ressens pour toi lady
+Ouais…`,
+      en: `For a long time I have something to say
+The desire I have for you I can't hold back, since the day I saw you dancing
+I don't know what to do to stop thinking about you
+It's just that you already have an owner, but my mind can't understand it, you are the forbidden fruit and for a bite baby I would give my life yeah
+
+Give me a sign, run away with me I can't take the desire I have for you baby anymore
+Nobody has to say it lady
+That's why baby come and give me a sign I can't hide it anymore and I want to feel your body on top of me baby so you can see what I feel for you lady
+
+Baby, you have me desperate for a long time I've imagined you by my side and every time you left you looked at me, you grabbed your guy's hand and that provoked me
+And now that I think about it, I'm not the only guilty one you too, for all the times you looked at me and laughed, I bet you imagine yourself with me in bed
+That's why give me a sign, I want to steal you, taste your body
+Run away with me nobody will notice, nobody will find out that what we have is real, only you and I are witnesses, baby!
+
+Give me a sign, run away with me I can't take the desire I have for you baby anymore
+Nobody has to say it lady
+That's why baby come and give me a sign I can't hide it anymore and I want to feel your body on top of me baby so you can see what I feel for you lady
+
+Khris joe, dj Nassos b, Angel Tirana
+…you are the forbidden fruit, and for a bite baby I would give my life…
+
+Give me a sign, run away with me I can't take the desire I have for you baby anymore
+Nobody has to say it lady
+That's why baby come and give me a sign, I want to feel your body on top of me baby so you can see what I feel for you lady
+Yeah…`
+    }
+  },
+  {
+    id: "abril-mario-rainero",
+    title: "ABRIL",
+    artist: "Mario Rainero, Dimelo Cupido, Dj Dima",
+    year: 2025,
+    dateAdded: "2026-06-21",
+    tags: ["Romantica"],
+    color: "#a855f7",
+    spotify: "https://open.spotify.com/search/ABRIL%20Mario%20Rainero",
+    danceVideo: "xlU90PQtbaE",
+    culture: {
+      context: "Sortie en septembre 2025, 'ABRIL' est une bachata romantique mélancolique, fruit de la collaboration entre le chanteur Mario Rainero, le producteur Dimelo Cupido (Dany de Santis) et Dj Dima.",
+      meaning: "La chanson explore la nostalgie et la douleur d'une rupture amoureuse survenue un mois d'avril. Le protagoniste est hanté par les souvenirs et attend désespérément un retour promis mais qui n'arrive jamais.",
+      artistInfo: "Mario Rainero est un artiste de la nouvelle vague de bachata romantique, soutenu ici par Dimelo Cupido et DJ Dima pour créer une atmosphère propice à la danse émotionnelle.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Ha llegado Abril
+Y no sé por qué
+La felicidad me ignora y así
+Quisiera reír
+Pero recordé
+Que hace un año que no sé de ti
+Me olvidé
+De las cosas bonitas cuando te me fuiste
+Y aquí me quedé
+Desde que ibas a volver prometiste
+
+Y aquí estoy como aquel viernes
+En el mismo lugar
+Vuelve la ciudad y tú no vuelves
+Qué tortura esperar
+Por qué diablos te pregunté tu nombre
+Si ahora voy de
+Sesperado persiguiendo sombras
+Como aquel viernes
+En el mismo lugar
+Donde volvimos a empezar
+
+Contigo era feliz
+Y me acostumbré
+A vencer los miedos del ayer
+Y te fuiste un abril
+Y aún espero por ti desde que ibas a volver
+Prometiste
+
+Y aquí estoy como aquel viernes
+En el mismo lugar
+Vuelve la ciudad y tú no vuelves
+Qué tortura esperar
+Por qué diablos te pregunté tu nombre
+Si ahora voy de
+Sesperado persiguiendo sombras
+Como aquel viernes
+En el mismo lugar
+Donde volvimos a empezar
+
+Y yo soy
+Mario Rainero
+Trayendo
+Tu bachata romantica
+Dj Dima
+Dimelo Cupido
+
+Y aquí estoy como aquel viernes
+En el mismo lugar
+Vuelve la ciudad y tú no vuelves
+Qué tortura esperar
+Por qué diablos te pregunté tu nombre
+Si ahora voy de
+Sesperado persiguiendo sombras
+Como aquel viernes
+En el mismo lugar
+Donde volvimos a empezar`,
+      fr: `Avril est arrivé
+Et je ne sais pas pourquoi
+Le bonheur m'ignore et ainsi
+Je voudrais rire
+Mais je me suis rappelé
+Que ça fait un an que je n'ai pas de tes nouvelles
+J'ai oublié
+Les belles choses quand tu m'as quitté
+Et je suis resté ici
+Depuis que tu as promis de revenir
+
+Et me voici comme ce vendredi-là
+Au même endroit
+La ville se réveille et tu ne reviens pas
+Quelle torture d'attendre
+Pourquoi diable t'ai-je demandé ton prénom
+Si maintenant je suis dés-
+-espéré à poursuivre des ombres
+Comme ce vendredi-là
+Au même endroit
+Où nous avons recommencé
+
+Avec toi j'étais heureux
+Et je me suis habitué
+À vaincre les peurs d'hier
+Et tu es partie un mois d'avril
+Et je t'attends encore depuis que tu allais revenir
+Tu as promis
+
+Et me voici comme ce vendredi-là
+Au même endroit
+La ville se réveille et tu ne reviens pas
+Quelle torture d'attendre
+Pourquoi diable t'ai-je demandé ton prénom
+Si maintenant je suis dés-
+-espéré à poursuivre des ombres
+Comme ce vendredi-là
+Au même endroit
+Où nous avons recommencé
+
+Et je suis
+Mario Rainero
+Apportant
+Ta bachata romantique
+Dj Dima
+Dimelo Cupido
+
+Et me voici comme ce vendredi-là
+Au même endroit
+La ville se réveille et tu ne reviens pas
+Quelle torture d'attendre
+Pourquoi diable t'ai-je demandé ton prénom
+Si maintenant je suis dés-
+-espéré à poursuivre des ombres
+Comme ce vendredi-là
+Au même endroit
+Où nous avons recommencé`,
+      en: `April has arrived
+And I don't know why
+Happiness ignores me and so
+I would like to laugh
+But I remembered
+That it's been a year since I heard from you
+I forgot
+About the beautiful things when you left me
+And here I stayed
+Since you promised you would come back
+
+And here I am like that Friday
+In the same place
+The city returns and you don't return
+What a torture to wait
+Why the hell did I ask your name
+If now I am de-
+-sperate chasing shadows
+Like that Friday
+In the same place
+Where we started over
+
+With you I was happy
+And I got used
+To overcoming the fears of yesterday
+And you left one April
+And I'm still waiting for you since you were going to come back
+You promised
+
+And here I am like that Friday
+In the same place
+The city returns and you don't return
+What a torture to wait
+Why the hell did I ask your name
+If now I am de-
+-sperate chasing shadows
+Like that Friday
+In the same place
+Where we started over
+
+And I am
+Mario Rainero
+Bringing
+Your romantic bachata
+Dj Dima
+Dimelo Cupido
+
+And here I am like that Friday
+In the same place
+The city returns and you don't return
+What a torture to wait
+Why the hell did I ask your name
+If now I am de-
+-sperate chasing shadows
+Like that Friday
+In the same place
+Where we started over`
+    }
+  },
+  {
+    id: "atrevete-jensen",
+    title: "Atrévete",
+    artist: "Jensen",
+    year: 2025,
+    dateAdded: "2026-06-21",
+    tags: ["Sensual"],
+    color: "#f97316",
+    spotify: "https://open.spotify.com/search/Atrévete%20Jensen",
+    danceVideo: "VDmGvnmcpeA",
+    culture: {
+      context: "Sortie le 18 avril 2025, 'Atrévete' est produite par le célèbre sP Polanco. Elle mélange la bachata traditionnelle avec des influences urbaines et R&B, signature du style musical de Jensen.",
+      meaning: "Une chanson sensuelle et énergique qui encourage à céder à l'impulsion et au désir, sans se poser de questions : 'Atrévete' (Ose).",
+      artistInfo: "Jensen est un chanteur de la scène bachata moderne qui s'est démarqué par sa capacité à fusionner la bachata avec la musique urbaine, offrant des morceaux parfaits pour la danse.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Siento que vamo' contra la corriente
+Dos trago' en la cabeza y dos pendiente'
+Busquemo' un lugar pa' estar solo', solo', solo'
+
+Paremo' el momento pa' darno' violento
+En esas curva' yo pierdo el control
+Ya te ando imaginando en baby doll
+
+No lo piense', atrévete
+¿Pa' qué dar tanta' vuelta'? Solo entrégate
+Enséñame en privado lo que nadie ve
+Matémono' las ganas sin delay
+Baby, ven
+No lo piense', atrévete
+Sé que va encantarte, solo anímate
+Y si quеdamo' con gana'
+Yo vuelvo y te recojo mañana, na-na-na-na
+
+Es Jеnsen
+Ay, shorty
+Pero tú sabía'`,
+      fr: `Je sens qu'on va à contre-courant
+Deux verres dans la tête et deux en attente
+Cherchons un endroit pour être seuls, seuls, seuls
+
+Arrêtons le moment pour se donner violemment
+Dans ces courbes je perds le contrôle
+Je t'imagine déjà en nuisette
+
+N'y pense pas, ose
+Pourquoi tourner autant autour du pot ? Laisse-toi aller
+Montre-moi en privé ce que personne ne voit
+Tuons nos envies sans délai
+Bébé, viens
+N'y pense pas, ose
+Je sais que ça va te plaire, motive-toi
+Et si on reste sur notre faim
+Je reviens et je viens te chercher demain, na-na-na-na
+
+C'est Jensen
+Ay, shorty
+Mais tu savais`,
+      en: `I feel like we're going against the current
+Two drinks in the head and two pending
+Let's find a place to be alone, alone, alone
+
+Let's stop the moment to give it to each other violently
+In those curves I lose control
+I'm already imagining you in a babydoll
+
+Don't think about it, dare
+Why beat around the bush so much? Just surrender
+Show me in private what nobody sees
+Let's kill our desire without delay
+Baby, come
+Don't think about it, dare
+I know you're gonna love it, just cheer up
+And if we're left wanting more
+I'll come back and pick you up tomorrow, na-na-na-na
+
+It's Jensen
+Ay, shorty
+But you knew`
+    }
+  },
+  {
+    id: "calor-bl-araya-rau",
+    title: "Calor (Bachata Version)",
+    artist: "BL Araya, Rau",
+    year: 2024,
+    dateAdded: "2026-06-21",
+    tags: ["Sensual", "Remix"],
+    color: "#ef4444",
+    spotify: "https://open.spotify.com/search/Calor%20BL%20Araya",
+    danceVideo: "RuxMXcwajBQ",
+    culture: {
+      context: "Il s'agit d'une reprise en version bachata du hit reggaeton 'Calor' originellement interprété par Nicky Jam et Beéle, revisité ici par BL Araya et Rau.",
+      meaning: "Les paroles très suggestives évoquent l'attirance physique intense ('Qué calor en la arena') entre deux personnes, comparant la montée du désir à une température insoutenable.",
+      artistInfo: "BL Araya et Rau sont des artistes émergents qui surfent sur la tendance de créer des covers bachata sensuelles de tubes urbains à succès.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Qué calor, ¡wow!, en la arena
+Tú me calienta' más fuerte que el sol, sol, sol, nena
+Qué problema si te hago el amo-o-o-oo-or
+Si te hago el amo-o-o-oo-or
+
+Cuando me baila' así
+De ti quiero repetir
+Los besos que tú me das
+Mami, yo te lo advertí
+Deja que fluya
+La temperatura tuya
+Dios bendiga esas nalga' suya'
+A ti no hay quien te sustituya, sí
+
+Cuando salga el sol
+Ya te quiero ver
+Nos comemo' con la mirada
+Nadie sabe nada
+Una calentura sube la temperatura
+Tú estás dura, nadie está a tu altura
+Tú me tientas y hoy quiero darte
+
+Cuando salga el sol
+Ya te quiero ver
+Nos comemo' con la mirada
+Nadie sabe nada
+Una calentura sube la temperatura
+Tú estás dura, nadie está a tu altura
+Tú me tientas y hoy quiero darte
+
+Qué calor, ¡wow!, en la arena
+Tú me calienta' más fuerte que el sol, sol, sol, nena
+Qué problema si te hago el amo-o-o-oo-or
+Si te hago el amo-o-o-oo-or
+
+Siento, siento
+Que toco el cielo cuando estoy adentro
+Baby, esta nota me da pa' ti
+Tú y yo bailando encima 'e la arena
+Una como tú qué problema
+Te quiero de almuerzo y de cena
+Tu mamá contigo se pasó
+Te hicieron completa, tiene' to', to', to'
+Quiero los papeles de ese to-to-to-to
+Lo hacemos despacio
+Yo soy un Richard Mille, el novio tuyo es un Casio
+Baby, estás buena sin tener que ir al gimnasio
+Yo me caso, aunque me toque una vez más
+
+Qué calor, ¡wow!, en la arena
+Tú me calienta' más fuerte que el sol, sol, sol, nena
+Qué problema si te hago el amo-o-o-oo-or
+Si te hago el amo-o-o-oo-or`,
+      fr: `Quelle chaleur, waouh !, sur le sable
+Tu me chauffes plus fort que le soleil, soleil, soleil, bébé
+Quel problème si je te fais l'amou-u-u-uu-our
+Si je te fais l'amou-u-u-uu-our
+
+Quand tu danses pour moi comme ça
+De toi je veux répéter
+Les baisers que tu me donnes
+Mami, je t'ai prévenue
+Laisse couler
+Ta température
+Que Dieu bénisse tes fesses
+Il n'y a personne pour te remplacer, oui
+
+Quand le soleil se lèvera
+Je veux déjà te voir
+On se dévore du regard
+Personne ne sait rien
+Une fièvre fait monter la température
+Tu es dure, personne n'est à ta hauteur
+Tu me tentes et aujourd'hui je veux te donner
+
+Quand le soleil se lèvera
+Je veux déjà te voir
+On se dévore du regard
+Personne ne sait rien
+Une fièvre fait monter la température
+Tu es dure, personne n'est à ta hauteur
+Tu me tentes et aujourd'hui je veux te donner
+
+Quelle chaleur, waouh !, sur le sable
+Tu me chauffes plus fort que le soleil, soleil, soleil, bébé
+Quel problème si je te fais l'amou-u-u-uu-our
+Si je te fais l'amou-u-u-uu-our
+
+Je sens, je sens
+Que je touche le ciel quand je suis à l'intérieur
+Bébé, cette vibe me donne envie de toi
+Toi et moi dansant sur le sable
+Une comme toi quel problème
+Je te veux au déjeuner et au dîner
+Ta mère a fait fort avec toi
+Ils t'ont faite complète, tu as tout, tout, tout
+Je veux les papiers de ce tout-tout-tout-tout
+On le fait doucement
+Je suis une Richard Mille, ton mec est une Casio
+Bébé, tu es bonne sans avoir à aller à la salle de sport
+Je t'épouse, même si c'est pour une fois de plus
+
+Quelle chaleur, waouh !, sur le sable
+Tu me chauffes plus fort que le soleil, soleil, soleil, bébé
+Quel problème si je te fais l'amou-u-u-uu-our
+Si je te fais l'amou-u-u-uu-our`,
+      en: `What heat, wow!, on the sand
+You heat me up stronger than the sun, sun, sun, baby
+What a problem if I make lo-o-o-oo-ove to you
+If I make lo-o-o-oo-ove to you
+
+When you dance for me like that
+From you I want to repeat
+The kisses you give me
+Mommy, I warned you
+Let it flow
+Your temperature
+God bless those buttocks of yours
+There is no one to replace you, yes
+
+When the sun comes up
+I already want to see you
+We eat each other with our eyes
+Nobody knows anything
+A fever raises the temperature
+You are tough, nobody is at your level
+You tempt me and today I want to give it to you
+
+When the sun comes up
+I already want to see you
+We eat each other with our eyes
+Nobody knows anything
+A fever raises the temperature
+You are tough, nobody is at your level
+You tempt me and today I want to give it to you
+
+What heat, wow!, on the sand
+You heat me up stronger than the sun, sun, sun, baby
+What a problem if I make lo-o-o-oo-ove to you
+If I make lo-o-o-oo-ove to you
+
+I feel, I feel
+That I touch the sky when I'm inside
+Baby, this vibe makes me want you
+You and I dancing on the sand
+One like you what a problem
+I want you for lunch and dinner
+Your mom went overboard with you
+They made you complete, you have everything, everything, everything
+I want the papers of that everything-everything-everything-everything
+We do it slowly
+I'm a Richard Mille, your boyfriend is a Casio
+Baby, you look good without having to go to the gym
+I'd marry you, even if it's just for one more time
+
+What heat, wow!, on the sand
+You heat me up stronger than the sun, sun, sun, baby
+What a problem if I make lo-o-o-oo-ove to you
+If I make lo-o-o-oo-ove to you`
     }
   }
 ];
