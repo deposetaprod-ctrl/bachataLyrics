@@ -1,5 +1,243 @@
 export const songs = [
   {
+    id: "por-un-segundo-aventura",
+    title: "Por Un Segundo",
+    artist: "Aventura",
+    year: 2008,
+    dateAdded: "2026-06-22",
+    tags: ["Classique", "Romantique", "Triste"],
+    color: "#6366f1",
+    spotify: "https://open.spotify.com/search/Por%20Un%20Segundo%20Aventura",
+    danceVideo: "UtW98LRiNCQ",
+    culture: {
+      context: "Sortie en novembre 2008, 'Por Un Segundo' est le single phare du cinquième et dernier album studio d'Aventura, 'The Last' (2009). Ce titre a marqué l'histoire du groupe en atteignant la première place du Billboard Hot Latin Songs, une première pour Aventura. La chanson a également remporté le prix de la 'Chanson Tropicale de l'Année' aux Premios Lo Nuestro 2010. Elle est aussi présente sur la compilation 'Todavía Me Amas: Lo Mejor de Aventura'.",
+      meaning: "Les paroles racontent le choc émotionnel d'un homme qui retrouve la femme qu'il aime et découvre qu'elle porte une bague de fiançailles : elle va se marier fin août. Imprudent, il lui réclame des comptes en public, incapable de comprendre comment leur amour a pu se terminer sans 'contrat'. Dans le pont, Romeo Santos tisse habilement les titres de précédents hits d'Aventura ('Un Beso', 'Mi Corazoncito', 'Obsesión', 'Hermanita', 'Todavía Me Amas'), créant un clin d'œil à toute la discographie du groupe.",
+      artistInfo: "Aventura, surnommé 'Les Rois de la Bachata', est un groupe formé en 1994 dans le Bronx (New York) par quatre jeunes d'origine dominicaine : Romeo Santos (chant principal), Henry Santos (chant, cousin de Romeo), Lenny Santos (guitare/production) et Max 'Mikie' Santos (basse/rap, frère de Lenny). Ils ont révolutionné la bachata en la fusionnant avec le R&B, le hip-hop et la pop, devenant le premier grand groupe de bachata originaire des États-Unis.",
+      album: "The Last"
+    },
+    culture_en: {
+      context: "Released in November 2008, 'Por Un Segundo' is the lead single from Aventura's fifth and final studio album, 'The Last' (2009). This track made history by reaching number one on the Billboard Hot Latin Songs chart — a first for Aventura. The song also won 'Tropical Song of the Year' at the 2010 Premios Lo Nuestro awards. It also appears on the compilation 'Todavía Me Amas: Lo Mejor de Aventura'.",
+      meaning: "The lyrics describe the emotional shock of a man who runs into the woman he loves and discovers she's wearing an engagement ring — she's getting married at the end of August. Recklessly, he confronts her in public, unable to understand how their love could have ended without a 'contract'. In the bridge, Romeo Santos cleverly weaves in the titles of Aventura's previous hits ('Un Beso', 'Mi Corazoncito', 'Obsesión', 'Hermanita', 'Todavía Me Amas'), creating a nod to the group's entire discography.",
+      artistInfo: "Aventura, nicknamed 'The Kings of Bachata', is a group formed in 1994 in The Bronx, New York, by four young men of Dominican descent: Romeo Santos (lead vocals), Henry Santos (vocals, Romeo's cousin), Lenny Santos (guitar/production), and Max 'Mikie' Santos (bass/rap, Lenny's brother). They revolutionized bachata by fusing it with R&B, hip-hop, and pop, becoming the first major bachata act to originate from the United States.",
+      album: "The Last"
+    },
+    lyrics: {
+      es: `[Verso 1]
+Quizás éste no sea el momento para preguntarte
+Si es que al pasar tanto tiempo pudiste olvidarme
+Veo en tu dedo un anillo y en conclusión
+Te casas al final de agosto
+
+[Coro]
+Y aquí estoy yo, con la misma expresión
+Perdón si soy imprudente, y delante de la gente
+Te reclamo de repente
+Cómo es que, supuestamente, se venció el amor
+Si no hay contrato entre tú y yo
+Como en los cuentos de hadas, nuestra historia fue contada
+Tú eras mi princesa Diana, y yo el Rey que tanto amabas
+El ejemplo es ficción, pero verídico fue mi amor
+
+[Post-Coro]
+Y ahora, por un segundo, me ahogo en los mares de la realidad
+Por un segundo, acepto mi derrota, te perdí de verdad
+Y por un segundo, enfrento mi duelo, ya no estás conmigo
+Y desde luego siento el frío
+Ni tu alma, ni tu cuerpo son míos
+Mis sueños se han perdido y me echas al olvido, no, oh
+
+[Interludio 1]
+The Kings
+Yes, sir
+
+[Verso 2]
+Quizás este no sea el momento para humillarme
+Pero en mis subconsciente estoy consciente que es muy tarde
+Hoy pongo en pausa los deseos y la ilusión
+Porque tienes un nuevo dueño
+
+[Coro]
+Y aquí estoy yo, con la misma expresión
+Perdón si soy imprudente, y delante de la gente
+Te reclamo de repente
+Cómo es que, supuestamente, se venció el amor
+Si no hay contrato entre tú y yo
+Como en los cuentos de hadas, nuestra historia fue contada
+Tú eras mi princesa Diana y yo el Rey que tanto amabas
+El ejemplo es ficción, pero verídico fue mi amor
+
+[Post-Coro]
+Y ahora, por un segundo, me ahogo en los mares de la realidad
+Por un segundo, acepto mi derrota, te perdí de verdad
+Y por un segundo, enfrento mi duelo, ya no estás conmigo
+Y desde luego siento el frío
+Ni tu alma, ni tu cuerpo son míos
+Mis sueños se han perdido y me echas al olvido, no, oh
+
+[Interludio 2]
+No-no-no
+Woh-oh-oh-oh
+Oye, que feeling, mami
+Aventura
+Let's take it back
+
+[Puente]
+Recuerda, por un beso mi corazoncito tuvo una obsesión
+¿Cuándo volverás? Hasta hermanita preguntó
+Enséñame a olvidar, si todavía me amas
+Seré tu angelito aunque la boda sea mañana
+(Yes, sir)
+
+[Outro]
+Por un segundo, me ahogo en los mares de la realidad
+Por un segundo, acepto mi derrota, te perdí de verdad
+Y por un segundo, enfrento mi duelo, ya no estás conmigo
+Por un segundo, me ahogo en los mares de la realidad`,
+      fr: `[Couplet 1]
+Peut-être que ce n'est pas le moment de te demander
+Si après tout ce temps, tu as pu m'oublier
+Je vois à ton doigt une bague et en conclusion
+Tu te maries à la fin du mois d'août
+
+[Refrain]
+Et me voilà, avec la même expression
+Pardon si je suis imprudent, et devant les gens
+Je te fais des reproches soudainement
+Comment se fait-il que, soi-disant, l'amour se soit éteint
+S'il n'y a pas de contrat entre toi et moi
+Comme dans les contes de fées, notre histoire a été racontée
+Tu étais ma princesse Diana, et moi le Roi que tu aimais tant
+L'exemple est fictif, mais mon amour était bien réel
+
+[Post-Refrain]
+Et maintenant, pendant une seconde, je me noie dans les mers de la réalité
+Pendant une seconde, j'accepte ma défaite, je t'ai vraiment perdue
+Et pendant une seconde, j'affronte mon deuil, tu n'es plus avec moi
+Et bien sûr je ressens le froid
+Ni ton âme, ni ton corps ne sont à moi
+Mes rêves se sont perdus et tu me jettes dans l'oubli, non, oh
+
+[Interlude 1]
+The Kings
+Yes, sir
+
+[Couplet 2]
+Peut-être que ce n'est pas le moment de m'humilier
+Mais dans mon subconscient je suis conscient qu'il est trop tard
+Aujourd'hui je mets en pause les désirs et l'illusion
+Parce que tu as un nouveau propriétaire
+
+[Refrain]
+Et me voilà, avec la même expression
+Pardon si je suis imprudent, et devant les gens
+Je te fais des reproches soudainement
+Comment se fait-il que, soi-disant, l'amour se soit éteint
+S'il n'y a pas de contrat entre toi et moi
+Comme dans les contes de fées, notre histoire a été racontée
+Tu étais ma princesse Diana et moi le Roi que tu aimais tant
+L'exemple est fictif, mais mon amour était bien réel
+
+[Post-Refrain]
+Et maintenant, pendant une seconde, je me noie dans les mers de la réalité
+Pendant une seconde, j'accepte ma défaite, je t'ai vraiment perdue
+Et pendant une seconde, j'affronte mon deuil, tu n'es plus avec moi
+Et bien sûr je ressens le froid
+Ni ton âme, ni ton corps ne sont à moi
+Mes rêves se sont perdus et tu me jettes dans l'oubli, non, oh
+
+[Interlude 2]
+No-no-no
+Woh-oh-oh-oh
+Écoute, quel feeling, mami
+Aventura
+Let's take it back
+
+[Pont]
+Souviens-toi, pour un baiser mon petit cœur a eu une obsession
+Quand reviendras-tu ? Même ma petite sœur a demandé
+Apprends-moi à oublier, si tu m'aimes encore
+Je serai ton petit ange même si le mariage est demain
+(Yes, sir)
+
+[Outro]
+Pendant une seconde, je me noie dans les mers de la réalité
+Pendant une seconde, j'accepte ma défaite, je t'ai vraiment perdue
+Et pendant une seconde, j'affronte mon deuil, tu n'es plus avec moi
+Pendant une seconde, je me noie dans les mers de la réalité`,
+      en: `[Verse 1]
+Perhaps this isn't the moment to ask you
+If after all this time, you were able to forget me
+I see a ring on your finger and in conclusion
+You're getting married at the end of August
+
+[Chorus]
+And here I am, with the same expression
+Sorry if I'm being reckless, and in front of everyone
+I suddenly confront you
+How is it that, supposedly, love expired
+If there's no contract between you and me
+Like in fairy tales, our story was told
+You were my Princess Diana, and I the King you loved so much
+The example is fiction, but my love was real
+
+[Post-Chorus]
+And now, for a second, I drown in the seas of reality
+For a second, I accept my defeat, I truly lost you
+And for a second, I face my grief, you're no longer with me
+And of course I feel the cold
+Neither your soul, nor your body are mine
+My dreams have been lost and you cast me into oblivion, no, oh
+
+[Interlude 1]
+The Kings
+Yes, sir
+
+[Verse 2]
+Perhaps this isn't the moment to humiliate myself
+But in my subconscious I'm aware that it's too late
+Today I put my desires and illusions on pause
+Because you have a new owner
+
+[Chorus]
+And here I am, with the same expression
+Sorry if I'm being reckless, and in front of everyone
+I suddenly confront you
+How is it that, supposedly, love expired
+If there's no contract between you and me
+Like in fairy tales, our story was told
+You were my Princess Diana and I the King you loved so much
+The example is fiction, but my love was real
+
+[Post-Chorus]
+And now, for a second, I drown in the seas of reality
+For a second, I accept my defeat, I truly lost you
+And for a second, I face my grief, you're no longer with me
+And of course I feel the cold
+Neither your soul, nor your body are mine
+My dreams have been lost and you cast me into oblivion, no, oh
+
+[Interlude 2]
+No-no-no
+Woh-oh-oh-oh
+Listen, what a feeling, mami
+Aventura
+Let's take it back
+
+[Bridge]
+Remember, for a kiss my little heart had an obsession
+When will you come back? Even my little sister asked
+Teach me to forget, if you still love me
+I'll be your little angel even if the wedding is tomorrow
+(Yes, sir)
+
+[Outro]
+For a second, I drown in the seas of reality
+For a second, I accept my defeat, I truly lost you
+And for a second, I face my grief, you're no longer with me
+For a second, I drown in the seas of reality`
+    }
+  },
+  {
     id: "esa-flaquita-sebas-garreta",
     title: "Esa flaquita",
     artist: "Sebas Garreta",
