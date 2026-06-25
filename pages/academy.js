@@ -224,13 +224,15 @@ export default function Academy() {
                 className={`tab-btn ${activeTab === 'notes' ? 'active' : ''}`}
                 onClick={() => setActiveTab('notes')}
               >
-                📝 Mes Notes
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px', verticalAlign: 'middle'}}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Mes Notes
               </button>
               <button 
                 className={`tab-btn ${activeTab === 'objectives' ? 'active' : ''}`}
                 onClick={() => setActiveTab('objectives')}
               >
-                🎯 Mes Objectifs
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px', verticalAlign: 'middle'}}><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                Mes Objectifs
               </button>
             </div>
 
@@ -301,18 +303,21 @@ export default function Academy() {
                       </div>
 
                       <div className="form-group">
-                        <label>Musique à travailler (Répertoire Bachata Lyrics)</label>
-                        <select
+                        <label>Musique à travailler</label>
+                        <input
+                          type="text"
+                          list="songs-list"
+                          placeholder="Rechercher ou écrire une musique..."
                           value={newObj.song_id}
                           onChange={(e) => setNewObj({...newObj, song_id: e.target.value})}
-                        >
-                          <option value="">-- Choisir une musique --</option>
+                        />
+                        <datalist id="songs-list">
                           {songs.map(song => (
                             <option key={song.id} value={song.id}>
                               {song.title} - {song.artist}
                             </option>
                           ))}
-                        </select>
+                        </datalist>
                       </div>
 
                       <button 
@@ -344,18 +349,24 @@ export default function Academy() {
                               <div className="objective-content">
                                 {obj.footwork && (
                                   <div className="obj-detail">
-                                    <span className="obj-label">👟 Footwork:</span> {obj.footwork}
+                                    <span className="obj-badge">Footwork</span> {obj.footwork}
                                   </div>
                                 )}
                                 {obj.couple_move && (
                                   <div className="obj-detail">
-                                    <span className="obj-label">💃 Couple:</span> {obj.couple_move}
+                                    <span className="obj-badge">Couple</span> {obj.couple_move}
                                   </div>
                                 )}
-                                {linkedSong && (
-                                  <div className="obj-detail song-link" onClick={() => router.push(`/song/${linkedSong.id}`)}>
-                                    <span className="obj-label">🎵 Musique:</span> 
-                                    <u>{linkedSong.title} - {linkedSong.artist}</u> ↗
+                                {obj.song_id && (
+                                  <div className="obj-detail">
+                                    <span className="obj-badge">Musique</span> 
+                                    {linkedSong ? (
+                                      <span className="song-link" onClick={() => router.push(`/song/${linkedSong.id}`)}>
+                                        <u>{linkedSong.title} - {linkedSong.artist}</u> ↗
+                                      </span>
+                                    ) : (
+                                      <span>{obj.song_id}</span>
+                                    )}
                                   </div>
                                 )}
                                 <div className="note-date" style={{ marginTop: '8px' }}>
@@ -638,13 +649,23 @@ export default function Academy() {
 
         .obj-detail {
           margin-bottom: 8px;
-          font-size: 1rem;
+          font-size: 0.95rem;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 8px;
         }
 
-        .obj-label {
+        .obj-badge {
+          background: rgba(124, 58, 237, 0.15);
+          color: #c4b5fd;
+          padding: 2px 8px;
+          border-radius: 6px;
+          font-size: 0.75rem;
           font-weight: 700;
-          color: var(--text-secondary);
-          margin-right: 6px;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          border: 1px solid rgba(124, 58, 237, 0.3);
         }
 
         .song-link {

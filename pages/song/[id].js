@@ -8,6 +8,8 @@ import Navbar from '../../components/Navbar';
 import SeoFooter from '../../components/SeoFooter';
 import RelatedSongs from '../../components/RelatedSongs';
 import ShopTheVibe from '../../components/ShopTheVibe';
+import Script from 'next/script';
+import AuthModal from '../../components/AuthModal';
 
 export async function getStaticPaths() {
   const paths = songs.map((s) => ({ params: { id: s.id } }));
@@ -25,6 +27,10 @@ export default function SongPage({ song }) {
   const t = useTranslation(locale);
   const [favoriteSongs, setFavoriteSongs] = useState([]);
   const [masteredSongs, setMasteredSongs] = useState([]);
+  const [user, setUser] = useState(null);
+  const [supabaseClient, setSupabaseClient] = useState(null);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [addedToAcademy, setAddedToAcademy] = useState(false);
 
   useEffect(() => {
     const savedFavs = localStorage.getItem('favSongs');
@@ -32,7 +38,26 @@ export default function SongPage({ song }) {
 
     const savedMastered = localStorage.getItem('masteredSongs');
     if (savedMastered) setMasteredSongs(JSON.parse(savedMastered));
+
+    if (typeof window !== 'undefined' && window.supabase) {
+      initSupabase();
+    }
   }, []);
+
+  const initSupabase = () => {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    if (supabaseUrl && supabaseKey) {
+      const client = window.supabase.createClient(supabaseUrl, supabaseKey);
+      setSupabaseClient(client);
+      client.auth.getSession().then(({ data: { session } }) => {
+        setUser(session?.user ?? null);
+      });
+      client.auth.onAuthStateChange((_event, session) => {
+        setUser(session?.user ?? null);
+      });
+    }
+  };
 
   const toggleFav = (id, e) => {
     e.stopPropagation();
@@ -53,6 +78,21 @@ export default function SongPage({ song }) {
     
     if (!isMastered) {
       // Small celebration or feedback can be added here
+    }
+  };
+
+  const handleAddToAcademy = async () => {
+    if (!user || !supabaseClient) {
+      setShowLoginModal(true);
+      return;
+    }
+    const { error } = await supabaseClient
+      .from('academy_objectives')
+      .insert([{ user_id: user.id, song_id: song.id }]);
+    
+    if (!error) {
+      setAddedToAcademy(true);
+      setTimeout(() => setAddedToAcademy(false), 3000);
     }
   };
 
@@ -142,7 +182,24 @@ export default function SongPage({ song }) {
         />
       </Head>
 
-      <Navbar activePage="home" onLoginClick={() => router.push('/')} />
+      <Script 
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" 
+        strategy="afterInteractive"
+        onLoad={initSupabase}
+      />
+
+      <Navbar 
+        user={user} 
+        supabaseClient={supabaseClient} 
+        activePage="home" 
+        onLoginClick={() => setShowLoginModal(true)} 
+      />
+
+      <AuthModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+        supabaseClient={supabaseClient}
+      />
 
       <div className="lyrics-page">
         {/* ─── SEO INTRO (visible to users & crawlers) ─── */}
@@ -156,14 +213,26 @@ export default function SongPage({ song }) {
 
         {/* ─── HEADER ─── */}
         <div className="lyrics-header" style={{ position: 'relative' }}>
-          <button 
-            className={`favorite-btn ${favoriteSongs.includes(song.id) ? 'active' : ''}`}
-            onClick={(e) => toggleFav(song.id, e)}
-            aria-label="Ajouter aux favoris"
-          >
-            <span className="fav-icon">{favoriteSongs.includes(song.id) ? '♥' : '♡'}</span>
-            {favoriteSongs.includes(song.id) ? (locale === 'en' ? 'Saved' : 'Sauvegardé') : (locale === 'en' ? 'Save' : 'Ajouter')}
-          </button>
+          <div style={{ position: 'absolute', top: 0, right: 0, display: 'flex', gap: '8px', zIndex: 10 }}>
+            <button 
+              className={`favorite-btn ${addedToAcademy ? 'active' : ''}`}
+              onClick={handleAddToAcademy}
+              aria-label="Ajouter à l'académie"
+              style={{ position: 'relative', top: 'auto', right: 'auto', padding: '8px 16px', background: addedToAcademy ? '#34d399' : 'var(--bg-card)' }}
+            >
+              <span className="fav-icon">{addedToAcademy ? '🎓' : '+'}</span>
+              {addedToAcademy ? 'Ajouté' : 'Academy'}
+            </button>
+            <button 
+              className={`favorite-btn ${favoriteSongs.includes(song.id) ? 'active' : ''}`}
+              onClick={(e) => toggleFav(song.id, e)}
+              aria-label="Ajouter aux favoris"
+              style={{ position: 'relative', top: 'auto', right: 'auto' }}
+            >
+              <span className="fav-icon">{favoriteSongs.includes(song.id) ? '♥' : '♡'}</span>
+              {favoriteSongs.includes(song.id) ? (locale === 'en' ? 'Saved' : 'Sauvegardé') : (locale === 'en' ? 'Save' : 'Ajouter')}
+            </button>
+          </div>
           <button id="back-btn" className="back-btn" onClick={() => router.push('/')}>
             ← {locale === 'en' ? 'Back to catalog' : 'Retour au catalogue'}
           </button>
