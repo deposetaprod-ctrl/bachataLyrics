@@ -24,6 +24,10 @@ export default function Academy() {
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [isSubmittingObj, setIsSubmittingObj] = useState(false);
 
+  const [editingObjId, setEditingObjId] = useState(null);
+  const [editObjForm, setEditObjForm] = useState({ footwork: '', song_id: '', couple_move: '' });
+  const [isUpdatingObj, setIsUpdatingObj] = useState(false);
+
   useEffect(() => {
     if (typeof window !== 'undefined' && window.supabase) {
       const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -164,6 +168,42 @@ export default function Academy() {
     setObjectives(objectives.filter(o => o.id !== id));
   };
 
+  const handleStartEdit = (obj) => {
+    setEditingObjId(obj.id);
+    setEditObjForm({
+      footwork: obj.footwork || '',
+      song_id: obj.song_id || '',
+      couple_move: obj.couple_move || ''
+    });
+  };
+
+  const handleCancelEdit = () => {
+    setEditingObjId(null);
+    setEditObjForm({ footwork: '', song_id: '', couple_move: '' });
+  };
+
+  const handleUpdateObjective = async (e, id) => {
+    e.preventDefault();
+    if (!supabaseClient) return;
+    setIsUpdatingObj(true);
+
+    const { data, error } = await supabaseClient
+      .from('academy_objectives')
+      .update({
+        footwork: editObjForm.footwork.trim(),
+        song_id: editObjForm.song_id || null,
+        couple_move: editObjForm.couple_move.trim()
+      })
+      .eq('id', id)
+      .select();
+
+    if (data && data.length > 0) {
+      setObjectives(objectives.map(o => o.id === id ? data[0] : o));
+      setEditingObjId(null);
+    }
+    setIsUpdatingObj(false);
+  };
+
   const getSongById = (id) => songs.find(s => s.id === id);
 
   return (
@@ -210,7 +250,12 @@ export default function Academy() {
 
         {!user ? (
           <div className="login-prompt">
-            <div className="login-prompt-icon">🔒</div>
+            <div className="login-prompt-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#a78bfa' }}>
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
             <h2>Connecte-toi pour accéder à ton académie</h2>
             <p>Sauvegarde tes notes d'amélioration et tes objectifs quotidiens sur ton compte.</p>
             <button className="btn-primary" onClick={() => setShowLoginModal(true)}>
@@ -266,8 +311,9 @@ export default function Academy() {
                               <span className="note-date">
                                 {new Date(note.created_at).toLocaleDateString('fr-FR')}
                               </span>
-                              <button className="btn-delete" onClick={() => handleDeleteNote(note.id)}>
-                                Supprimer
+                              <button className="btn-icon btn-delete" onClick={() => handleDeleteNote(note.id)} title="Supprimer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                <span>Supprimer</span>
                               </button>
                             </div>
                           </div>
@@ -335,48 +381,101 @@ export default function Academy() {
                       ) : (
                         objectives.map(obj => {
                           const linkedSong = obj.song_id ? getSongById(obj.song_id) : null;
+                          const isEditing = editingObjId === obj.id;
                           return (
-                            <div key={obj.id} className={`objective-card ${obj.completed ? 'completed' : ''}`}>
-                              <label className="checkbox-container">
-                                <input 
-                                  type="checkbox" 
-                                  checked={obj.completed}
-                                  onChange={() => handleToggleObjective(obj.id, obj.completed)}
-                                />
-                                <span className="checkmark"></span>
-                              </label>
-                              
-                              <div className="objective-content">
-                                {obj.footwork && (
-                                  <div className="obj-detail">
-                                    <span className="obj-badge">Footwork</span> {obj.footwork}
+                            <div key={obj.id} className={`objective-card ${obj.completed && !isEditing ? 'completed' : ''}`}>
+                              {isEditing ? (
+                                <form className="edit-form" onSubmit={(e) => handleUpdateObjective(e, obj.id)}>
+                                  <div className="form-group">
+                                    <label>Footwork à travailler</label>
+                                    <input
+                                      type="text"
+                                      value={editObjForm.footwork}
+                                      onChange={(e) => setEditObjForm({...editObjForm, footwork: e.target.value})}
+                                    />
                                   </div>
-                                )}
-                                {obj.couple_move && (
-                                  <div className="obj-detail">
-                                    <span className="obj-badge">Couple</span> {obj.couple_move}
+                                  <div className="form-group">
+                                    <label>Passe de danse de couple</label>
+                                    <input
+                                      type="text"
+                                      value={editObjForm.couple_move}
+                                      onChange={(e) => setEditObjForm({...editObjForm, couple_move: e.target.value})}
+                                    />
                                   </div>
-                                )}
-                                {obj.song_id && (
-                                  <div className="obj-detail">
-                                    <span className="obj-badge">Musique</span> 
-                                    {linkedSong ? (
-                                      <span className="song-link" onClick={() => router.push(`/song/${linkedSong.id}`)}>
-                                        <u>{linkedSong.title} - {linkedSong.artist}</u> ↗
-                                      </span>
-                                    ) : (
-                                      <span>{obj.song_id}</span>
+                                  <div className="form-group">
+                                    <label>Musique à travailler</label>
+                                    <input
+                                      type="text"
+                                      list={`edit-songs-list-${obj.id}`}
+                                      value={editObjForm.song_id}
+                                      onChange={(e) => setEditObjForm({...editObjForm, song_id: e.target.value})}
+                                    />
+                                    <datalist id={`edit-songs-list-${obj.id}`}>
+                                      {songs.map(song => (
+                                        <option key={song.id} value={song.id}>
+                                          {song.title} - {song.artist}
+                                        </option>
+                                      ))}
+                                    </datalist>
+                                  </div>
+                                  <div className="edit-actions">
+                                    <button type="submit" className="btn-submit" disabled={isUpdatingObj}>
+                                      {isUpdatingObj ? 'Sauvegarde...' : 'Sauvegarder'}
+                                    </button>
+                                    <button type="button" className="btn-cancel" onClick={handleCancelEdit}>
+                                      Annuler
+                                    </button>
+                                  </div>
+                                </form>
+                              ) : (
+                                <>
+                                  <label className="checkbox-container">
+                                    <input 
+                                      type="checkbox" 
+                                      checked={obj.completed}
+                                      onChange={() => handleToggleObjective(obj.id, obj.completed)}
+                                    />
+                                    <span className="checkmark"></span>
+                                  </label>
+                                  
+                                  <div className="objective-content">
+                                    {obj.footwork && (
+                                      <div className="obj-detail">
+                                        <span className="obj-badge">Footwork</span> {obj.footwork}
+                                      </div>
                                     )}
+                                    {obj.couple_move && (
+                                      <div className="obj-detail">
+                                        <span className="obj-badge">Couple</span> {obj.couple_move}
+                                      </div>
+                                    )}
+                                    {obj.song_id && (
+                                      <div className="obj-detail">
+                                        <span className="obj-badge">Musique</span> 
+                                        {linkedSong ? (
+                                          <span className="song-link" onClick={() => router.push(`/song/${linkedSong.id}`)}>
+                                            <u>{linkedSong.title} - {linkedSong.artist}</u> ↗
+                                          </span>
+                                        ) : (
+                                          <span>{obj.song_id}</span>
+                                        )}
+                                      </div>
+                                    )}
+                                    <div className="note-date" style={{ marginTop: '8px' }}>
+                                      Ajouté le {new Date(obj.created_at).toLocaleDateString('fr-FR')}
+                                    </div>
                                   </div>
-                                )}
-                                <div className="note-date" style={{ marginTop: '8px' }}>
-                                  Ajouté le {new Date(obj.created_at).toLocaleDateString('fr-FR')}
-                                </div>
-                              </div>
 
-                              <button className="btn-delete" onClick={() => handleDeleteObjective(obj.id)}>
-                                ✕
-                              </button>
+                                  <div className="obj-actions">
+                                    <button className="btn-icon btn-edit" onClick={() => handleStartEdit(obj)} title="Modifier">
+                                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                    </button>
+                                    <button className="btn-icon btn-delete" onClick={() => handleDeleteObjective(obj.id)} title="Supprimer">
+                                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                    </button>
+                                  </div>
+                                </>
+                              )}
                             </div>
                           );
                         })
@@ -611,20 +710,81 @@ export default function Academy() {
           color: var(--text-muted);
         }
 
-        .btn-delete {
+        .btn-icon {
           background: none;
           border: none;
-          color: #ef4444;
+          cursor: pointer;
+          opacity: 0.6;
+          transition: all 0.2s;
+          padding: 6px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
           font-size: 0.85rem;
           font-weight: 600;
-          cursor: pointer;
-          opacity: 0.7;
-          transition: opacity 0.2s;
-          padding: 4px 8px;
         }
 
-        .btn-delete:hover {
+        .btn-icon:hover {
           opacity: 1;
+          background: rgba(255,255,255,0.05);
+        }
+
+        .btn-delete {
+          color: #ef4444;
+        }
+        
+        .btn-delete:hover {
+          background: rgba(239, 68, 68, 0.1);
+        }
+
+        .btn-edit {
+          color: #a78bfa;
+        }
+        
+        .btn-edit:hover {
+          background: rgba(167, 139, 250, 0.1);
+        }
+
+        .obj-actions {
+          display: flex;
+          gap: 4px;
+        }
+
+        .edit-form {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .edit-form .form-group {
+          margin-bottom: 0;
+        }
+
+        .edit-actions {
+          display: flex;
+          gap: 12px;
+          margin-top: 12px;
+        }
+        
+        .btn-cancel {
+          flex: 1;
+          padding: 14px;
+          background: transparent;
+          color: var(--text-muted);
+          border: 1px solid rgba(255,255,255,0.1);
+          border-radius: 12px;
+          font-weight: 600;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        
+        .btn-cancel:hover {
+          background: rgba(255,255,255,0.05);
+          color: white;
         }
 
         /* Objective Card specific */
