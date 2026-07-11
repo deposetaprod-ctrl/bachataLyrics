@@ -1,5 +1,204 @@
 export const songs = [
   {
+    id: "te-robare-prince-royce",
+    title: "Te Robaré",
+    artist: "Prince Royce",
+    year: 2013,
+    dateAdded: "2026-07-10",
+    tags: ["Romantique", "Passion", "Désir"],
+    color: "#e11d48",
+    spotify: "https://open.spotify.com/search/Te%20Robar%C3%A9%20Prince%20Royce",
+    danceVideo: "Nhg_13lVQZ0",
+    culture: {
+      context: "Sortie en 2013, 'Te Robaré' est l'un des plus grands succès de Prince Royce, issu de son troisième album studio 'Soy el Mismo'. Cette chanson a rapidement grimpé dans les classements pour atteindre la première place du Billboard Tropical Songs. Prince Royce y confirme son statut de superstar de la bachata moderne avec un style à la fois romantique et audacieux.",
+      meaning: "Les paroles racontent l'histoire d'un amour interdit. Le chanteur exprime son désir intense pour une femme dont les parents refusent de l'accepter. Face à ce rejet, il se montre prêt à tout braver ('par ta fenêtre j'entrerai') et à prendre tous les risques. Le titre 'Te Robaré' (Je te volerai) est une métaphore de cet enlèvement passionné, illustrant un amour qui consume la raison et défie les interdits.",
+      artistInfo: "Prince Royce (Geoffrey Royce Rojas) est un chanteur américain d'origine dominicaine. Surnommé le 'Prince de la Bachata', il a largement contribué à populariser la bachata urbaine à travers le monde en y intégrant des sonorités pop et R&B, séduisant ainsi un public plus jeune et international.",
+      album: "Soy el Mismo"
+    },
+    culture_en: {
+      context: "Released in 2013, 'Te Robaré' is one of Prince Royce's biggest hits, featured on his third studio album 'Soy el Mismo'. This track quickly climbed the charts to reach number one on the Billboard Tropical Songs. With it, Prince Royce cemented his status as a superstar of modern bachata with a style that is both romantic and bold.",
+      meaning: "The lyrics tell the story of a forbidden love. The singer expresses his intense desire for a woman whose parents refuse to accept him. Faced with this rejection, he is ready to brave anything ('through your window I will enter') and take any risks. The title 'Te Robaré' (I will steal you) serves as a metaphor for this passionate abduction, illustrating a love that consumes reason and defies all boundaries.",
+      artistInfo: "Prince Royce (Geoffrey Royce Rojas) is an American singer of Dominican descent. Nicknamed the 'Prince of Bachata', he has played a major role in popularizing urban bachata globally by infusing it with pop and R&B sounds, thus appealing to a younger, international audience.",
+      album: "Soy el Mismo"
+    },
+    lyrics: {
+      es: `[Verso 1]
+Tus padres no me aceptan en casa
+Y yo no aguanto el deseo de tenerte otra vez
+Tus caricias, tu cuerpo me llaman
+Ay, no, no, no lo pensaré, por tu ventana yo entraré
+
+[Pre-Coro]
+Tú eres quién a mí me hace soñar
+Tú eres quién a mí me hace palpitar
+Tú eres quién a mí me tiene loco (me tiene loco)
+No importa el peligro, yo te quiero ver
+No me importa quién me busque, contigo estaré
+No me importa el que diga que por ti ando loco
+
+[Coro]
+Te robaré esta noche (ja-uah)
+Te robaré esta noche (ju-uh)
+Te robaré esta noche (ja-uah)
+Te besaré esta noche (noche, ju-uh)
+Te robaré esta noche (ja-uah)
+Te robaré esta noche (mmh)
+Te robaré esta noche (ja-uah)
+Te besaré esta noche, serás mía esta noche (te robaré)
+
+[Verso 2]
+Shake it, huh
+Yeah yeah
+I'mma steal your heart
+Let's go
+
+[Pre-Coro]
+Tú eres quién a mí me hace soñar
+Tú eres quién a mí me hace palpitar
+Tú eres quién a mí me tiene loco (me tiene loco)
+No importa el peligro, yo te quiero ver
+No me importa quién me busque, contigo estaré
+No me importa el que diga que por ti ando loco
+
+[Coro]
+Te robaré esta noche (ja-uah)
+Te robaré esta noche (yo lo haré)
+Te robaré esta noche (ja-uah)
+Te besaré esta noche (noche)
+Te robaré esta noche (ja-uah)
+Te robaré esta noche (yo lo haré)
+Te besaré esta noche, serás mía esta noche
+
+[Verso 3]
+Iré (iré)
+Te abrazaré (te abrazaré)
+Y en tu cama yo te lo haré (te lo haré)
+Llegaré (llegaré)
+A donde tú quieras y en tu cama te quemaré
+Te comeré de la cabeza a los pies
+
+[Outro]
+Ha-uah
+Ha-uah`,
+      fr: `[Couplet 1]
+Tes parents ne m'acceptent pas à la maison
+Et je ne supporte plus l'envie de t'avoir encore une fois
+Tes caresses, ton corps m'appellent
+Oh, non, non, je n'y penserai pas, par ta fenêtre j'entrerai
+
+[Pré-Refrain]
+C'est toi qui me fais rêver
+C'est toi qui fais palpiter mon cœur
+C'est toi qui me rends fou (qui me rends fou)
+Peu importe le danger, je veux te voir
+Peu m'importe qui me cherche, je serai avec toi
+Peu m'importe ce qu'ils disent que je suis fou de toi
+
+[Refrain]
+Je te volerai ce soir (ja-uah)
+Je te volerai ce soir (ju-uh)
+Je te volerai ce soir (ja-uah)
+Je t'embrasserai ce soir (nuit, ju-uh)
+Je te volerai ce soir (ja-uah)
+Je te volerai ce soir (mmh)
+Je te volerai ce soir (ja-uah)
+Je t'embrasserai ce soir, tu seras à moi ce soir (je te volerai)
+
+[Couplet 2]
+Shake it, huh
+Yeah yeah
+I'mma steal your heart
+Let's go
+
+[Pré-Refrain]
+C'est toi qui me fais rêver
+C'est toi qui fais palpiter mon cœur
+C'est toi qui me rends fou (qui me rends fou)
+Peu importe le danger, je veux te voir
+Peu m'importe qui me cherche, je serai avec toi
+Peu m'importe ce qu'ils disent que je suis fou de toi
+
+[Refrain]
+Je te volerai ce soir (ja-uah)
+Je te volerai ce soir (je le ferai)
+Je te volerai ce soir (ja-uah)
+Je t'embrasserai ce soir (nuit)
+Je te volerai ce soir (ja-uah)
+Je te volerai ce soir (je le ferai)
+Je t'embrasserai ce soir, tu seras à moi ce soir
+
+[Couplet 3]
+J'irai (j'irai)
+Je te prendrai dans mes bras (je te prendrai dans mes bras)
+Et dans ton lit je te le ferai (je te le ferai)
+J'arriverai (j'arriverai)
+Où tu voudras et dans ton lit je te brûlerai
+Je te dévorerai de la tête aux pieds
+
+[Outro]
+Ha-uah
+Ha-uah`,
+      en: `[Verse 1]
+Your parents don't accept me at home
+And I can't stand the desire to have you again
+Your caresses, your body are calling me
+Oh, no, no, I won't think about it, through your window I will enter
+
+[Pre-Chorus]
+You are the one who makes me dream
+You are the one who makes my heart beat
+You are the one who drives me crazy (drives me crazy)
+The danger doesn't matter, I want to see you
+I don't care who is looking for me, I will be with you
+I don't care who says that I'm crazy about you
+
+[Chorus]
+I will steal you tonight (ja-uah)
+I will steal you tonight (ju-uh)
+I will steal you tonight (ja-uah)
+I will kiss you tonight (night, ju-uh)
+I will steal you tonight (ja-uah)
+I will steal you tonight (mmh)
+I will steal you tonight (ja-uah)
+I will kiss you tonight, you will be mine tonight (I will steal you)
+
+[Verse 2]
+Shake it, huh
+Yeah yeah
+I'mma steal your heart
+Let's go
+
+[Pre-Chorus]
+You are the one who makes me dream
+You are the one who makes my heart beat
+You are the one who drives me crazy (drives me crazy)
+The danger doesn't matter, I want to see you
+I don't care who is looking for me, I will be with you
+I don't care who says that I'm crazy about you
+
+[Chorus]
+I will steal you tonight (ja-uah)
+I will steal you tonight (I will do it)
+I will steal you tonight (ja-uah)
+I will kiss you tonight (night)
+I will steal you tonight (ja-uah)
+I will steal you tonight (I will do it)
+I will kiss you tonight, you will be mine tonight
+
+[Verse 3]
+I will go (I will go)
+I will hold you (I will hold you)
+And in your bed I will do it to you (I will do it to you)
+I will arrive (I will arrive)
+Wherever you want and in your bed I will burn you
+I will eat you from head to toe
+
+[Outro]
+Ha-uah
+Ha-uah`
+    }
+  },
+  {
     id: "por-un-segundo-aventura",
     title: "Por Un Segundo",
     artist: "Aventura",
