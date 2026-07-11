@@ -1,5 +1,685 @@
 export const songs = [
   {
+    id: "te-burlaste-de-mi-esme",
+    title: "Te Burlaste de Mi",
+    artist: "Esme",
+    year: 2023,
+    dateAdded: "2026-07-11",
+    tags: ["Trahison", "Douleur", "Passion"],
+    color: "#dc2626",
+    spotify: "https://open.spotify.com/search/Te%20Burlaste%20de%20Mi%20Esme",
+    danceVideo: "Wrtru9dlL2U",
+    culture: {
+      context: "Sortie en 2023, 'Te Burlaste de Mi' est le premier titre de l'album 'Game Over (Bachata’s Most Wanted)' du chanteur Esme. Connu pour son style très expressif et ancré dans la bachata traditionnelle de rue, Esme aborde ici un thème universel : la trahison amoureuse.",
+      meaning: "Les paroles dénoncent une femme cruelle ('une bête sans compassion', 'une diablesse') qui a joué avec les sentiments du chanteur. Après lui avoir tout donné, il réalise qu'il n'était qu'un de plus dans sa 'collection'. C'est une chanson empreinte de douleur et de regret d'avoir offert son cœur à quelqu'un qui n'en voulait qu'à son ego.",
+      artistInfo: "Esme, de son vrai nom Elmer Abreu Suriel, est un artiste basé aux États-Unis, souvent surnommé 'El Chulo'. Il est reconnu pour avoir revitalisé un style de bachata très pur et authentique, avec une guitare prononcée (le requinto) et une voix plaintive caractéristique du genre.",
+      album: "Game Over (Bachata’s Most Wanted)"
+    },
+    culture_en: {
+      context: "Released in 2023, 'Te Burlaste de Mi' is the first track of the album 'Game Over (Bachata’s Most Wanted)' by singer Esme. Known for his expressive style deeply rooted in traditional street bachata, Esme tackles a universal theme here: romantic betrayal.",
+      meaning: "The lyrics denounce a cruel woman ('a beast without compassion', 'a devil') who played with the singer's feelings. After giving her everything, he realizes he was just one more in her 'collection'. It is a song full of pain and regret for having offered his heart to someone who was only playing games.",
+      artistInfo: "Esme, whose real name is Elmer Abreu Suriel, is a US-based artist, often nicknamed 'El Chulo'. He is recognized for revitalizing a very pure and authentic bachata style, featuring strong guitar elements (the requinto) and a plaintive voice characteristic of the genre.",
+      album: "Game Over (Bachata’s Most Wanted)"
+    },
+    lyrics: {
+      es: `[Verso 1]
+Veo que tomaste una decisión, mmh
+Que fui uno más en tu colección, mmh
+Que mis sentimientos para ti son nada
+Que el sufrimiento de otro te da carcajadas
+Veo que no tienes un corazón
+
+[Coro]
+Te burlaste de mí
+Después de darte todo, me haces sufrir
+Si no querías nada, ¿qué haces aquí?
+Fue mi error darle mi amor a un cazador
+Abusadora
+Te burlaste de mí
+Después de darte todo, me haces sufrir
+Si no querías nada, ¿qué hacеs aquí?
+Fue mi error darle mi amor a un cazador
+Abusadora, ¡ay, qué dolor!
+
+[Verso 2]
+Erеs una bestia sin compasión
+Eres una diabla, una malvada, oh
+Veo que mis sentimientos para ti son nada
+Que el sufrimiento de otro te da carcajadas
+Veo que no tienes un corazón
+
+[Coro]
+Te burlaste de mí
+Después de darte todo, me haces sufrir
+Si no querías nada, ¿qué haces aquí?
+Fue mi error darle mi amor a un cazador
+Abusadora
+Te burlaste de mí
+Después de darte todo, me haces sufrir
+Si no querías nada, ¿qué haces aquí?
+Fue mi error darle mi amor a un cazador
+Abusadora, ¡ay, qué dolor!
+
+[Interludio]
+Me mataste sin ponerme tan solo un dedo
+Esme
+
+[Coro]
+Te burlaste de mí
+Después de darte todo, me haces sufrir
+Si no querías nada, ¿qué haces aquí?
+Fue mi error darle mi amor a un cazador
+Abusadora
+Te burlaste de mí
+Después de darte todo, me haces sufrir
+Si no querías nada, ¿qué haces aquí?
+Fue mi error darle mi amor a un cazador
+Abusadora, ¡ay, qué dolor!`,
+      fr: `[Couplet 1]
+Je vois que tu as pris une décision, mmh
+Que je n'étais qu'un de plus dans ta collection, mmh
+Que mes sentiments pour toi ne sont rien
+Que la souffrance d'un autre te fait éclater de rire
+Je vois que tu n'as pas de cœur
+
+[Refrain]
+Tu t'es moquée de moi
+Après t'avoir tout donné, tu me fais souffrir
+Si tu ne voulais rien, que fais-tu ici ?
+C'était mon erreur de donner mon amour à un chasseur
+Abusatrice
+Tu t'es moquée de moi
+Après t'avoir tout donné, tu me fais souffrir
+Si tu ne voulais rien, que fais-tu ici ?
+C'était mon erreur de donner mon amour à un chasseur
+Abusatrice, oh, quelle douleur !
+
+[Couplet 2]
+Tu es une bête sans compassion
+Tu es une diablesse, une méchante, oh
+Je vois que mes sentiments pour toi ne sont rien
+Que la souffrance d'un autre te fait éclater de rire
+Je vois que tu n'as pas de cœur
+
+[Refrain]
+Tu t'es moquée de moi
+Après t'avoir tout donné, tu me fais souffrir
+Si tu ne voulais rien, que fais-tu ici ?
+C'était mon erreur de donner mon amour à un chasseur
+Abusatrice
+Tu t'es moquée de moi
+Après t'avoir tout donné, tu me fais souffrir
+Si tu ne voulais rien, que fais-tu ici ?
+C'était mon erreur de donner mon amour à un chasseur
+Abusatrice, oh, quelle douleur !
+
+[Interlude]
+Tu m'as tué sans même poser un doigt sur moi
+Esme
+
+[Refrain]
+Tu t'es moquée de moi
+Après t'avoir tout donné, tu me fais souffrir
+Si tu ne voulais rien, que fais-tu ici ?
+C'était mon erreur de donner mon amour à un chasseur
+Abusatrice
+Tu t'es moquée de moi
+Après t'avoir tout donné, tu me fais souffrir
+Si tu ne voulais rien, que fais-tu ici ?
+C'était mon erreur de donner mon amour à un chasseur
+Abusatrice, oh, quelle douleur !`,
+      en: `[Verse 1]
+I see you made a decision, mmh
+That I was just one more in your collection, mmh
+That my feelings for you mean nothing
+That another's suffering makes you laugh out loud
+I see you have no heart
+
+[Chorus]
+You mocked me
+After giving you everything, you make me suffer
+If you didn't want anything, what are you doing here?
+It was my mistake giving my love to a hunter
+Abuser
+You mocked me
+After giving you everything, you make me suffer
+If you didn't want anything, what are you doing here?
+It was my mistake giving my love to a hunter
+Abuser, oh, what pain!
+
+[Verse 2]
+You are a beast without compassion
+You are a devil, a wicked woman, oh
+I see that my feelings for you mean nothing
+That another's suffering makes you laugh out loud
+I see you have no heart
+
+[Chorus]
+You mocked me
+After giving you everything, you make me suffer
+If you didn't want anything, what are you doing here?
+It was my mistake giving my love to a hunter
+Abuser
+You mocked me
+After giving you everything, you make me suffer
+If you didn't want anything, what are you doing here?
+It was my mistake giving my love to a hunter
+Abuser, oh, what pain!
+
+[Interlude]
+You killed me without even laying a finger on me
+Esme
+
+[Chorus]
+You mocked me
+After giving you everything, you make me suffer
+If you didn't want anything, what are you doing here?
+It was my mistake giving my love to a hunter
+Abuser
+You mocked me
+After giving you everything, you make me suffer
+If you didn't want anything, what are you doing here?
+It was my mistake giving my love to a hunter
+Abuser, oh, what pain!`
+    }
+  },
+  {
+    id: "amar-en-paz-jr",
+    title: "Amar En Paz",
+    artist: "JR",
+    year: 2024,
+    dateAdded: "2026-07-11",
+    tags: ["Urbain", "Guérison", "Patience"],
+    color: "#10b981",
+    spotify: "https://open.spotify.com/search/Amar%20En%20Paz%20JR",
+    danceVideo: "HGNeEl4ER_8",
+    culture: {
+      context: "Sortie en 2024, 'Amar En Paz' (Aimer en Paix) de l'artiste JR est une bachata moderne aux influences urbaines et R&B, caractéristiques de son style. JR, chanteur d'origine dominicaine, continue d'innover sur la scène bachata en mélangeant des mélodies douces avec des rythmes entraînants.",
+      meaning: "La chanson aborde le thème de la guérison émotionnelle et de la peur d'aimer à nouveau. Le chanteur demande à une femme de ne pas le rejeter à cause de ses blessures passées. Il l'encourage à lâcher prise, à vivre l'instant présent et à le laisser l'aimer 'en paix', sinon, de le laisser tranquille pour ne pas perdre leur temps.",
+      artistInfo: "JR est un artiste urbain/bachata créatif qui apporte souvent une touche bilingue (anglais/espagnol) et des mélodies très R&B à la bachata traditionnelle.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "Released in 2024, 'Amar En Paz' (Love in Peace) by artist JR is a modern bachata with urban and R&B influences, characteristic of his style. JR, a singer of Dominican descent, continues to innovate in the bachata scene by mixing smooth melodies with catchy rhythms.",
+      meaning: "The song deals with the theme of emotional healing and the fear of loving again. The singer asks a woman not to reject him because of her past wounds. He encourages her to let go, live in the moment, and let him love her 'in peace', or else to leave him alone so they don't waste time.",
+      artistInfo: "JR is a creative urban/bachata artist who often brings a bilingual (English/Spanish) touch and heavy R&B melodies to traditional bachata.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `[Intro]
+I gotta do it again
+JR
+
+[Verso 1]
+Dime que te pasa morena
+Quien te robó toda la fe en el amor
+No me hagas servir la condena
+No soy culpable de un error en tu pasado
+
+[Pre-Coro]
+Recházame
+Y hazlo porque no me quieres
+No por desamores del ayer
+Enséñame
+La herida que tanto proteges
+Si permites yo te sanaré
+
+[Coro]
+Ven y vive en el momento
+Suelta ese miedo y déjame entrar
+Si tu sientes lo que siento
+No perdamos tiempo y déjame amar
+O déjame en paz
+
+[Post-Coro]
+Mami tu va decidir
+Que quieres de mí
+Déjame amar
+O déjame en paz
+Si sabes que estoy pa′ ti
+Y tu para mi
+Déjame amar
+O déjame en paz
+
+[Interludio]
+Ay dios
+Cuánto tiempo tengo que esperar
+Yo Chi
+Headshots only
+
+[Pre-Coro]
+Recházame
+Y hazlo porque no me quieres
+No por desamores del ayer
+Enséñame
+La herida que tanto proteges
+Si permites yo te sanaré
+
+[Coro]
+Ven y vive en el momento
+Suelta ese miedo y déjame entrar
+Si tu sientes lo que siento
+No perdamos tiempo y déjame amar
+O déjame en paz
+
+[Post-Coro]
+Mami tu va decidir
+Que quieres de mí
+Déjame amar
+O déjame en paz
+Si sabes que estoy pa' ti
+Y tu para mi
+Déjame amar
+O déjame en paz
+Si sabes que estoy pa′ ti
+Y tu para mi
+Déjame amar
+O déjame en paz
+
+[Outro]
+Baby girl
+You gotta make a choice
+Either love me
+Or leave me alone
+Girl is now or never
+Cause I can't wait forever
+Quiéreme y te quiero
+Si no me entiendes hasta luego
+Girl is now or never
+Cause I can't wait forever
+Quiéreme y te quiero
+Si no me entiendes hasta luego
+(It′s just different)
+Girl is now or never
+Cause I can′t wait forever
+Quiéreme y te quiero
+Si no me entiendes hasta luego`,
+      fr: `[Intro]
+Il faut que je le refasse
+JR
+
+[Couplet 1]
+Dis-moi ce qui t'arrive ma belle
+Qui t'a volé toute ta foi en l'amour
+Ne me fais pas purger la peine
+Je ne suis pas coupable d'une erreur de ton passé
+
+[Pré-Refrain]
+Rejette-moi
+Et fais-le parce que tu ne m'aimes pas
+Non à cause des déceptions amoureuses d'hier
+Montre-moi
+La blessure que tu protèges tant
+Si tu me le permets je te guérirai
+
+[Refrain]
+Viens et vis le moment présent
+Lâche cette peur et laisse-moi entrer
+Si tu ressens ce que je ressens
+Ne perdons pas de temps et laisse-moi t'aimer
+Ou laisse-moi en paix
+
+[Post-Refrain]
+Mami c'est toi qui vas décider
+Ce que tu veux de moi
+Laisse-moi t'aimer
+Ou laisse-moi en paix
+Si tu sais que je suis là pour toi
+Et toi pour moi
+Laisse-moi t'aimer
+Ou laisse-moi en paix
+
+[Interlude]
+Oh mon dieu
+Combien de temps dois-je attendre
+Yo Chi
+Des tirs dans la tête seulement
+
+[Pré-Refrain]
+Rejette-moi
+Et fais-le parce que tu ne m'aimes pas
+Non à cause des déceptions amoureuses d'hier
+Montre-moi
+La blessure que tu protèges tant
+Si tu me le permets je te guérirai
+
+[Refrain]
+Viens et vis le moment présent
+Lâche cette peur et laisse-moi entrer
+Si tu ressens ce que je ressens
+Ne perdons pas de temps et laisse-moi t'aimer
+Ou laisse-moi en paix
+
+[Post-Refrain]
+Mami c'est toi qui vas décider
+Ce que tu veux de moi
+Laisse-moi t'aimer
+Ou laisse-moi en paix
+Si tu sais que je suis là pour toi
+Et toi pour moi
+Laisse-moi t'aimer
+Ou laisse-moi en paix
+Si tu sais que je suis là pour toi
+Et toi pour moi
+Laisse-moi t'aimer
+Ou laisse-moi en paix
+
+[Outro]
+Bébé
+Tu dois faire un choix
+Soit tu m'aimes
+Soit tu me laisses tranquille
+Meuf c'est maintenant ou jamais
+Car je ne peux pas attendre éternellement
+Aime-moi et je t'aimerai
+Si tu ne me comprends pas, à plus tard
+Meuf c'est maintenant ou jamais
+Car je ne peux pas attendre éternellement
+Aime-moi et je t'aimerai
+Si tu ne me comprends pas, à plus tard
+(C'est juste différent)
+Meuf c'est maintenant ou jamais
+Car je ne peux pas attendre éternellement
+Aime-moi et je t'aimerai
+Si tu ne me comprends pas, à plus tard`,
+      en: `[Intro]
+I gotta do it again
+JR
+
+[Verse 1]
+Tell me what's wrong with you girl
+Who stole all your faith in love
+Don't make me serve the sentence
+I am not guilty of a mistake in your past
+
+[Pre-Chorus]
+Reject me
+And do it because you don't love me
+Not because of yesterday's heartbreaks
+Show me
+The wound you protect so much
+If you let me I will heal you
+
+[Chorus]
+Come and live in the moment
+Let go of that fear and let me in
+If you feel what I feel
+Let's not waste time and let me love
+Or leave me in peace
+
+[Post-Chorus]
+Mami you're gonna decide
+What you want from me
+Let me love
+Or leave me in peace
+If you know that I'm for you
+And you're for me
+Let me love
+Or leave me in peace
+
+[Interlude]
+Oh my god
+How long do I have to wait
+Yo Chi
+Headshots only
+
+[Pre-Chorus]
+Reject me
+And do it because you don't love me
+Not because of yesterday's heartbreaks
+Show me
+The wound you protect so much
+If you let me I will heal you
+
+[Chorus]
+Come and live in the moment
+Let go of that fear and let me in
+If you feel what I feel
+Let's not waste time and let me love
+Or leave me in peace
+
+[Post-Chorus]
+Mami you're gonna decide
+What you want from me
+Let me love
+Or leave me in peace
+If you know that I'm for you
+And you're for me
+Let me love
+Or leave me in peace
+If you know that I'm for you
+And you're for me
+Let me love
+Or leave me in peace
+
+[Outro]
+Baby girl
+You gotta make a choice
+Either love me
+Or leave me alone
+Girl is now or never
+Cause I can't wait forever
+Love me and I love you
+If you don't understand me see you later
+Girl is now or never
+Cause I can't wait forever
+Love me and I love you
+If you don't understand me see you later
+(It's just different)
+Girl is now or never
+Cause I can't wait forever
+Love me and I love you
+If you don't understand me see you later`
+    }
+  },
+  {
+    id: "loteria-prince-royce",
+    title: "Lotería",
+    artist: "Prince Royce",
+    year: 2020,
+    dateAdded: "2026-07-11",
+    tags: ["Urbain", "Rivalité", "Ego"],
+    color: "#8b5cf6",
+    spotify: "https://open.spotify.com/search/Loter%C3%ADa%20Prince%20Royce",
+    danceVideo: "Fn01oVuljqk",
+    culture: {
+      context: "Sortie en 2020, 'Lotería' fait partie du sixième album studio de Prince Royce, 'Alter Ego', un double album ambitieux explorant les différentes facettes de sa personnalité musicale. Ce titre s'inscrit dans un style de bachata moderne, teinté d'influences urbaines.",
+      meaning: "Les paroles décrivent un triangle amoureux où le chanteur affirme être le véritable gagnant du cœur de la femme (la 'loterie'). Il se moque de son rival, le qualifiant de 'perdant' incapable de la satisfaire, affirmant qu'il est trop sage ('un saint') pour une femme aussi passionnée ('une diablesse'). Malgré les efforts ou la 'sorcellerie' de l'autre homme, la femme revient toujours vers le chanteur.",
+      artistInfo: "Prince Royce est l'un des piliers de la bachata moderne. Avec 'Alter Ego', il a célébré ses 10 ans de carrière en montrant à la fois son côté romantique traditionnel et son alter ego plus audacieux et urbain.",
+      album: "Alter Ego"
+    },
+    culture_en: {
+      context: "Released in 2020, 'Lotería' is featured on Prince Royce's sixth studio album, 'Alter Ego', an ambitious double album exploring the different facets of his musical personality. This track fits into a modern bachata style, tinged with urban influences.",
+      meaning: "The lyrics describe a love triangle where the singer claims to be the true winner of the woman's heart (the 'lottery'). He mocks his rival, calling him a 'loser' who is unable to satisfy her, stating that he is too tame ('a saint') for such a passionate woman ('a devil'). Despite the other man's efforts or 'witchcraft', the woman always comes back to the singer.",
+      artistInfo: "Prince Royce is one of the pillars of modern bachata. With 'Alter Ego', he celebrated his 10-year career anniversary by showcasing both his traditional romantic side and his bolder, urban alter ego.",
+      album: "Alter Ego"
+    },
+    lyrics: {
+      es: `[Verso 1]
+A las cinco de la mañana el te llama
+Deseando en tenerte en su cama
+Pero no sabe saciarte las ganas
+Pobrecito, el es un santo y tú una diabla
+
+[Pre-Coro]
+No hay comparación
+Yo bien te lo decía
+Que él es un perdedor, por eso sigues siendo mía
+No ha podido enamorarte aunque te ha hecho brujería
+Solo hay un ganador en esta lotería
+
+[Coro]
+Jay-yay-yay-yay
+Será que no se da cuenta que aun eres mía
+Jay-yay-yay-yay
+O será que se hace el loco pa' disfrazar su perdida
+
+[Verso 2]
+Dile a ese tiguere que te coja en banda ya, ya 'tá bueno
+Bro', your girl knows my name
+Royce
+Pobre infeliz no se da cuenta otra vez
+Que yo soy tu gota de agua en el desierto
+Que cuando él te quiere ver
+Si te llamo, tú le inventas un cuento
+
+[Pre-Coro]
+No hay comparación
+Yo bien te lo decía
+Que él es un perdedor, por eso sigues siendo mía
+No ha podido enamorarte aunque te ha hecho brujería
+Solo hay un ganador en esta lotería
+
+[Pre-Coro 2]
+No hay comparación
+Yo bien te lo decía
+Que él es un perdedor, por eso sigues siendo mía
+No ha podido enamorarte aunque te ha hecho brujería
+Solo hay un ganador en esta lotería
+
+[Coro]
+Jay-yay-yay-yay
+Será que no se da cuenta que aun eres mía
+Jay-yay-yay-yay
+O será que se hace el loco pa' disfrazar su perdida
+
+[Outro]
+Por eso sigue siendo mía
+(Yo le enseñé lo' truco' en la cama)
+Por eso sigue siendo mía
+(Pregúntale, pregúntale, pregúntale
+Quién le eriza la piel)
+(Ey-ye ey-ye)
+Por eso sigue siendo mía
+Por eso sigue siendo mía
+Por eso sigue siendo mía
+(I ain't gon' sing or argue with you)
+(I want my dear)`
+,
+      fr: `[Couplet 1]
+À cinq heures du matin il t'appelle
+Désireux de t'avoir dans son lit
+Mais il ne sait pas assouvir tes envies
+Le pauvre, c'est un saint et toi une diablesse
+
+[Pré-Refrain]
+Il n'y a pas de comparaison
+Je te le disais bien
+Que c'est un perdant, c'est pour ça que tu es toujours à moi
+Il n'a pas pu te rendre amoureuse même s'il t'a fait de la sorcellerie
+Il n'y a qu'un seul gagnant dans cette loterie
+
+[Refrain]
+Jay-yay-yay-yay
+Se pourrait-il qu'il ne se rende pas compte que tu es encore à moi
+Jay-yay-yay-yay
+Ou bien fait-il le fou pour masquer sa défaite
+
+[Couplet 2]
+Dis à ce gars de te lâcher la grappe maintenant, ça suffit
+Bro', ta meuf connaît mon nom
+Royce
+Pauvre malheureux, il ne se rend pas compte une fois de plus
+Que je suis ta goutte d'eau dans le désert
+Que quand il veut te voir
+Si je t'appelle, tu lui inventes une histoire
+
+[Pré-Refrain]
+Il n'y a pas de comparaison
+Je te le disais bien
+Que c'est un perdant, c'est pour ça que tu es toujours à moi
+Il n'a pas pu te rendre amoureuse même s'il t'a fait de la sorcellerie
+Il n'y a qu'un seul gagnant dans cette loterie
+
+[Pré-Refrain 2]
+Il n'y a pas de comparaison
+Je te le disais bien
+Que c'est un perdant, c'est pour ça que tu es toujours à moi
+Il n'a pas pu te rendre amoureuse même s'il t'a fait de la sorcellerie
+Il n'y a qu'un seul gagnant dans cette loterie
+
+[Refrain]
+Jay-yay-yay-yay
+Se pourrait-il qu'il ne se rende pas compte que tu es encore à moi
+Jay-yay-yay-yay
+Ou bien fait-il le fou pour masquer sa défaite
+
+[Outro]
+C'est pour ça qu'elle est toujours à moi
+(C'est moi qui lui ai appris les trucs au lit)
+C'est pour ça qu'elle est toujours à moi
+(Demande-lui, demande-lui, demande-lui
+Qui lui donne la chair de poule)
+(Ey-ye ey-ye)
+C'est pour ça qu'elle est toujours à moi
+C'est pour ça qu'elle est toujours à moi
+C'est pour ça qu'elle est toujours à moi
+(Je ne vais pas chanter ou me disputer avec toi)
+(Je veux ma chérie)`
+,
+      en: `[Verse 1]
+At five in the morning he calls you
+Wanting to have you in his bed
+But he doesn't know how to satisfy your desires
+Poor guy, he is a saint and you are a devil
+
+[Pre-Chorus]
+There is no comparison
+I told you so
+That he is a loser, that's why you are still mine
+He hasn't been able to make you fall in love even if he did witchcraft on you
+There is only one winner in this lottery
+
+[Chorus]
+Jay-yay-yay-yay
+Could it be that he doesn't realize you're still mine
+Jay-yay-yay-yay
+Or is he playing the fool to hide his loss
+
+[Verse 2]
+Tell that dude to leave you alone already, that's enough
+Bro', your girl knows my name
+Royce
+Poor wretch, he doesn't realize once again
+That I am your drop of water in the desert
+That when he wants to see you
+If I call you, you make up a story for him
+
+[Pre-Chorus]
+There is no comparison
+I told you so
+That he is a loser, that's why you are still mine
+He hasn't been able to make you fall in love even if he did witchcraft on you
+There is only one winner in this lottery
+
+[Pre-Chorus 2]
+There is no comparison
+I told you so
+That he is a loser, that's why you are still mine
+He hasn't been able to make you fall in love even if he did witchcraft on you
+There is only one winner in this lottery
+
+[Chorus]
+Jay-yay-yay-yay
+Could it be that he doesn't realize you're still mine
+Jay-yay-yay-yay
+Or is he playing the fool to hide his loss
+
+[Outro]
+That's why she is still mine
+(I taught her the tricks in bed)
+That's why she is still mine
+(Ask her, ask her, ask her
+Who gives her goosebumps)
+(Ey-ye ey-ye)
+That's why she is still mine
+That's why she is still mine
+That's why she is still mine
+(I ain't gon' sing or argue with you)
+(I want my dear)`
+    }
+  },
+  {
     id: "te-robare-prince-royce",
     title: "Te Robaré",
     artist: "Prince Royce",
