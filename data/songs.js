@@ -19075,5 +19075,204 @@ A psychology that traps me
 Feeling
 Don't forget Romeo (Ah-ah)`
     }
+    },
+  {
+    id: "me-quedo-romeo-santos-zacarias-ferreira",
+    title: "Me Quedo",
+    artist: "Romeo Santos & Zacarias Ferreira",
+    year: 2019,
+    dateAdded: "2026-07-17",
+    tags: ["Romantisme", "Dispute", "Persévérance"],
+    color: "#2E8B57",
+    spotify: "https://open.spotify.com/search/Me%20Quedo%20Romeo%20Santos",
+    danceVideo: "lUWduWVzpbw",
+    culture: {
+      context: "Sortie en 2019 sur l'album hommage 'Utopía', 'Me Quedo' est une collaboration magistrale entre Romeo Santos et Zacarias Ferreira, figure de proue de la bachata traditionnelle (surnommé 'La Voz de la Ternura'). L'album visait à réunir Romeo avec les plus grands pionniers du genre.",
+      meaning: "La chanson parle d'un homme qui, malgré les disputes et la colère apparente de sa partenaire, refuse de partir. Il affirme que sa fierté l'aveugle, qu'elle l'aime encore et qu'un simple regard ou un silence lui suffit pour comprendre qu'elle veut qu'il reste. C'est une supplication romantique et têtue pour sauver la relation.",
+      artistInfo: "La rencontre entre la voix douce de Zacarias Ferreira et celle plus aigüe de Romeo Santos offre un contraste vocal parfait pour exprimer le doute et la supplication amoureuse.",
+      album: "Utopía"
+    },
+    culture_en: {
+      context: "Released in 2019 on the tribute album 'Utopía', 'Me Quedo' is a masterful collaboration between Romeo Santos and Zacarias Ferreira, a leading figure in traditional bachata (nicknamed 'La Voz de la Ternura'). The album aimed to reunite Romeo with the greatest pioneers of the genre.",
+      meaning: "The song is about a man who, despite the arguments and his partner's apparent anger, refuses to leave. He claims that her pride blinds her, that she still loves him, and that a simple look or silence is enough for him to understand she wants him to stay. It is a romantic and stubborn plea to save the relationship.",
+      artistInfo: "The meeting of Zacarias Ferreira's soft voice and Romeo Santos' higher-pitched tone offers a perfect vocal contrast to express romantic doubt and supplication.",
+      album: "Utopía"
+    },
+    lyrics: {
+      es: `Yeah
+Zacarias Ferreira
+Okay
+
+Es tu rabia que domina tu actitud
+Ese ego que me clava en una cruz
+Tus labios gritan "Sal de aquí"
+Y no te creo (¡bonita!)
+
+De perfecto no me puedo encasillar
+Me arrepiento del pasado y voy a jurar
+No te he vuelto a ser infiel, deja tus celos
+
+Convénceme que no es orgullo
+Que no me amas y no hay juego
+Háblame aunque sea con odio
+Porque el coraje lo aniquilo con un beso
+
+Me voy no queriendo
+Pues no es secreto que yo te quiero
+Yo interpreto el silencio
+Si en la puerta no veo tu impedimento
+
+Yo me quedo, mami, yo me quedo
+Dame una miradita con deseo
+Yo me quedo, ay more, yo me quedo
+Si tú quieres yo suspendo ese vuelo
+
+Reunanse
+Maldito sentimiento
+
+Convénceme que no es orgullo
+Que no me amas y no hay juego
+Pero háblame aunque sea con odio
+Porque el coraje lo aniquilo con un beso
+
+Me voy no queriendo
+Pues no es secreto que yo te quiero
+Yo interpreto el silencio
+Si en la puerta no veo tu impedimento
+
+Yo me quedo, mami, yo me quedo
+Dame una miradita con deseo
+Yo me quedo, ay more, yo me quedo
+Si tú quieres yo suspendo ese vuelo
+
+Oye que feeling, mami
+Ay Chichi
+Se te fue la mano, ¿eh?
+
+Yo me quedo, mami, yo me quedo
+Y de tantos serenatas en las mañanas al despertar
+Yo me quedo, ay more, yo me quedo
+Con mi guitarra te imploro no me dejes marchar
+Yo me quedo, mami, yo me quedo
+No permitas que tu enfado me haga un desaire
+Yo me quedo, ay more, yo me quedo
+Pero si es tu decisión que yo me vaya, me destroza este final`,
+      fr: `Ouais
+Zacarias Ferreira
+Okay
+
+C'est ta rage qui domine ton attitude
+Cet ego qui me cloue sur une croix
+Tes lèvres crient "Sors d'ici"
+Et je ne te crois pas (jolie !)
+
+Je ne peux pas me classer comme parfait
+Je me repens du passé et je vais jurer
+Que je ne t'ai plus été infidèle, laisse tes jalousies
+
+Convaincs-moi que ce n'est pas de la fierté
+Que tu ne m'aimes pas et qu'il n'y a pas de jeu
+Parle-moi même si c'est avec haine
+Parce que le courage, je l'anéantis d'un baiser
+
+Je m'en vais sans le vouloir
+Puisque ce n'est pas un secret que je t'aime
+J'interprète le silence
+Si à la porte je ne vois pas ton objection
+
+Je reste, maman, je reste
+Donne-moi un petit regard avec désir
+Je reste, oh ma brune, je reste
+Si tu veux je suspends ce vol
+
+Rassemblez-vous
+Maudit sentiment
+
+Convaincs-moi que ce n'est pas de la fierté
+Que tu ne m'aimes pas et qu'il n'y a pas de jeu
+Mais parle-moi même si c'est avec haine
+Parce que le courage, je l'anéantis d'un baiser
+
+Je m'en vais sans le vouloir
+Puisque ce n'est pas un secret que je t'aime
+J'interprète le silence
+Si à la porte je ne vois pas ton objection
+
+Je reste, maman, je reste
+Donne-moi un petit regard avec désir
+Je reste, oh ma brune, je reste
+Si tu veux je suspends ce vol
+
+Écoute ce feeling, maman
+Ay Chichi
+Tu y es allé fort, hein ?
+
+Je reste, maman, je reste
+Et avec tant de sérénades les matins au réveil
+Je reste, oh ma brune, je reste
+Avec ma guitare je t'implore, ne me laisse pas partir
+Je reste, maman, je reste
+Ne permets pas que ta colère me fasse un affront
+Je reste, oh ma brune, je reste
+Mais si c'est ta décision que je m'en aille, cette fin me détruit`,
+      en: `Yeah
+Zacarias Ferreira
+Okay
+
+It's your rage that dominates your attitude
+That ego that nails me to a cross
+Your lips scream "Get out of here"
+And I don't believe you (pretty!)
+
+I can't categorize myself as perfect
+I regret the past and I'm going to swear
+I haven't been unfaithful to you again, leave your jealousy
+
+Convince me that it's not pride
+That you don't love me and there's no game
+Talk to me even if it's with hate
+Because the anger, I annihilate it with a kiss
+
+I'm leaving without wanting to
+Since it's no secret that I love you
+I interpret the silence
+If at the door I don't see your objection
+
+I'm staying, mami, I'm staying
+Give me a little look with desire
+I'm staying, oh my brunette, I'm staying
+If you want I'll suspend that flight
+
+Gather round
+Damn feeling
+
+Convince me that it's not pride
+That you don't love me and there's no game
+But talk to me even if it's with hate
+Because the anger, I annihilate it with a kiss
+
+I'm leaving without wanting to
+Since it's no secret that I love you
+I interpret the silence
+If at the door I don't see your objection
+
+I'm staying, mami, I'm staying
+Give me a little look with desire
+I'm staying, oh my brunette, I'm staying
+If you want I'll suspend that flight
+
+Listen to that feeling, mami
+Ay Chichi
+You went too far, huh?
+
+I'm staying, mami, I'm staying
+And with so many serenades in the mornings upon waking
+I'm staying, oh my brunette, I'm staying
+With my guitar I implore you, don't let me go
+I'm staying, mami, I'm staying
+Don't let your anger slight me
+I'm staying, oh my brunette, I'm staying
+But if it's your decision that I leave, this ending destroys me`
+    }
   }
 ];
