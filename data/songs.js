@@ -17903,5 +17903,466 @@ The arrows I shoot hurt, (uh, uh)
 (Uh, uh, uh)
 (Uh, uh, uh)`
     }
+    },
+  {
+    id: "necio-romeo-santos",
+    title: "Necio",
+    artist: "Romeo Santos ft. Carlos Santana",
+    year: 2014,
+    dateAdded: "2026-07-17",
+    tags: ["Obsession", "Amour Interdit", "Guitare"],
+    color: "#b03060",
+    spotify: "https://open.spotify.com/search/Necio%20Romeo%20Santos",
+    danceVideo: "uDpuTQQWh6c",
+    culture: {
+      context: "Sortie en 2014 sur l'album incontournable 'Fórmula, Vol. 2', 'Necio' se distingue par la collaboration légendaire entre Romeo Santos et le mythique guitariste Carlos Santana. Ce morceau fusionne avec brio les rythmes dominicains et les solos de guitare électrique si caractéristiques de Santana.",
+      meaning: "La chanson dépeint l'obsession irrationnelle d'un homme pour une femme déjà en couple. Le narrateur reconnaît qu'il agit de manière 'insensée' (necio) et irréfléchie, tiraillé par un désir interdit qui le consume peu à peu, au point de perdre la raison.",
+      artistInfo: "Romeo Santos s'entoure ici d'une légende vivante du rock latino, Carlos Santana, dont la guitare donne une dimension dramatique et passionnelle au morceau.",
+      album: "Fórmula, Vol. 2"
+    },
+    culture_en: {
+      context: "Released in 2014 on the landmark album 'Fórmula, Vol. 2', 'Necio' stands out for its legendary collaboration between Romeo Santos and the iconic guitarist Carlos Santana. The track brilliantly fuses Dominican rhythms with Santana's signature electric guitar solos.",
+      meaning: "The song depicts a man's irrational obsession with a woman who is already in a relationship. The narrator admits to acting 'foolish' (necio) and recklessly, torn by a forbidden desire that slowly consumes him to the point of losing his mind.",
+      artistInfo: "Romeo Santos surrounds himself here with a living legend of Latin rock, Carlos Santana, whose guitar gives a dramatic and passionate dimension to the track.",
+      album: "Fórmula, Vol. 2"
+    },
+    lyrics: {
+      es: `[Verso 1]
+Delirando, obsesionado, con cerebro imaginario y dosis de locura
+Veo cosas absurdas, guárdame el secreto
+En mi hombro hay un diablito que me agobia
+Me impulsó a mandarte flores, que te llame por las noches
+Y que viole las reglas aunque seas ajena
+Que no se me ocurra aceptarte ni un segundo como amiga
+
+[Pre-Coro]
+Necio, porque tienes dueño
+Y yo soy un loco hablando con reflejos que no están
+Necio, porque no eres mía, mi fruta prohibida
+Me despierta el deseo de probar
+
+[Coro]
+Sencillamente usted, amada mía, me pone necio
+Es irracional este sentimiento que no detengo
+Me va consumiendo
+Sencillamente usted, amada mía, me vuelve necio
+Mi amor alucinante se lanzó al océano por terco
+Y me estoy hundiendo
+
+[Post-Coro]
+(I like your feeling, mami)
+
+[Verso 2]
+Un amor sin disciplina, calibrado e impaciente
+Y vaga por tus calles como un imprudente
+Viendo cada paso que tú des sin un motivo, amada mía
+
+[Pre-Coro]
+Necio, porque tienes dueño
+Y yo soy un loco hablando con reflejos que no están
+Necio, porque no eres mía, mi fruta prohibida
+Me despierta el deseo de probar
+
+[Coro]
+Sencillamente usted, amada mía, me pone necio
+Es irracional este sentimiento que no detengo
+Me va consumiendo
+Sencillamente usted, amada mía, me vuelve necio
+Mi amor alucinante se lanzó al océano por terco
+Y me estoy hundiendo
+
+[Interlude]
+Let's go
+The one and only Santana
+So nasty
+Okay
+
+[Coro]
+Sencillamente usted, amada mía, me pone necio (Me pone necio)
+Es irracional este sentimiento que no detengo
+Me va consumiendo
+Sencillamente usted, amada mía, me vuelve necio
+Mi amor alucinante se lanzó al océano por terco
+Y me estoy hundiendo`,
+      fr: `[Couplet 1]
+Délirant, obsédé, avec un cerveau imaginaire et une dose de folie
+Je vois des choses absurdes, garde mon secret
+Sur mon épaule il y a un petit diable qui m'accable
+Il m'a poussé à t'envoyer des fleurs, à t'appeler le soir
+Et à enfreindre les règles même si tu appartiens à un autre
+Et qu'il ne me vienne pas à l'esprit de t'accepter une seule seconde comme amie
+
+[Pré-Refrain]
+Insensé, parce que tu as un propriétaire
+Et je suis un fou qui parle à des reflets qui n'existent pas
+Insensé, parce que tu n'es pas à moi, mon fruit défendu
+Tu éveilles en moi le désir d'y goûter
+
+[Refrain]
+Tout simplement vous, ma bien-aimée, vous me rendez insensé
+C'est irrationnel ce sentiment que je ne peux arrêter
+Il me consume
+Tout simplement vous, ma bien-aimée, vous me rendez insensé
+Mon amour hallucinant s'est jeté dans l'océan par entêtement
+Et je suis en train de couler
+
+[Post-Refrain]
+(J'aime ton feeling, maman)
+
+[Couplet 2]
+Un amour sans discipline, calibré et impatient
+Et qui erre dans tes rues comme un imprudent
+Regardant chaque pas que tu fais sans aucun motif, ma bien-aimée
+
+[Pré-Refrain]
+Insensé, parce que tu as un propriétaire
+Et je suis un fou qui parle à des reflets qui n'existent pas
+Insensé, parce que tu n'es pas à moi, mon fruit défendu
+Tu éveilles en moi le désir d'y goûter
+
+[Refrain]
+Tout simplement vous, ma bien-aimée, vous me rendez insensé
+C'est irrationnel ce sentiment que je ne peux arrêter
+Il me consume
+Tout simplement vous, ma bien-aimée, vous me rendez insensé
+Mon amour hallucinant s'est jeté dans l'océan par entêtement
+Et je suis en train de couler
+
+[Interlude]
+Let's go
+Le seul et l'unique Santana
+Si vilain
+Okay
+
+[Refrain]
+Tout simplement vous, ma bien-aimée, vous me rendez insensé (Vous me rendez insensé)
+C'est irrationnel ce sentiment que je ne peux arrêter
+Il me consume
+Tout simplement vous, ma bien-aimée, vous me rendez insensé
+Mon amour hallucinant s'est jeté dans l'océan par entêtement
+Et je suis en train de couler`,
+      en: `[Verse 1]
+Delirious, obsessed, with an imaginary brain and a dose of madness
+I see absurd things, keep my secret
+On my shoulder there's a little devil that overwhelms me
+It urged me to send you flowers, to call you at night
+And to break the rules even though you belong to someone else
+And let it not cross my mind to accept you even for a second as a friend
+
+[Pre-Chorus]
+Foolish, because you belong to someone else
+And I am a madman talking to reflections that aren't there
+Foolish, because you are not mine, my forbidden fruit
+Awakens in me the desire to taste
+
+[Chorus]
+Simply you, my beloved, make me foolish
+This feeling that I can't stop is irrational
+It's consuming me
+Simply you, my beloved, make me foolish
+My hallucinating love threw itself into the ocean out of stubbornness
+And I am sinking
+
+[Post-Chorus]
+(I like your feeling, mami)
+
+[Verse 2]
+An undisciplined love, calibrated and impatient
+And it wanders your streets like a reckless man
+Watching every step you take without a motive, my beloved
+
+[Pre-Chorus]
+Foolish, because you belong to someone else
+And I am a madman talking to reflections that aren't there
+Foolish, because you are not mine, my forbidden fruit
+Awakens in me the desire to taste
+
+[Chorus]
+Simply you, my beloved, make me foolish
+This feeling that I can't stop is irrational
+It's consuming me
+Simply you, my beloved, make me foolish
+My hallucinating love threw itself into the ocean out of stubbornness
+And I am sinking
+
+[Interlude]
+Let's go
+The one and only Santana
+So nasty
+Okay
+
+[Chorus]
+Simply you, my beloved, make me foolish (Make me foolish)
+This feeling that I can't stop is irrational
+It's consuming me
+Simply you, my beloved, make me foolish
+My hallucinating love threw itself into the ocean out of stubbornness
+And I am sinking`
+    }
+    },
+  {
+    id: "promise-romeo-santos-usher",
+    title: "Promise",
+    artist: "Romeo Santos ft. Usher",
+    year: 2011,
+    dateAdded: "2026-07-17",
+    tags: ["R&B", "Crossover", "Promesse"],
+    color: "#191970",
+    spotify: "https://open.spotify.com/search/Promise%20Romeo%20Santos",
+    danceVideo: "GJ3zY8g8VU4",
+    culture: {
+      context: "Sortie en 2011 sur l'album 'Fórmula, Vol. 1', 'Promise' a marqué un tournant historique pour la bachata en réunissant Romeo Santos et la superstar du R&B américain, Usher. Ce 'crossover' a propulsé le genre sur la scène internationale, Usher chantant d'ailleurs ses premières lignes de bachata en espagnol.",
+      meaning: "La chanson évoque l'intensité vertigineuse de l'amour, où le narrateur se sent emprisonné mais heureux de l'être. Il implore sa partenaire de lui promettre de ne jamais le quitter, redoutant la souffrance après s'être donné corps et âme.",
+      artistInfo: "Cette collaboration entre le 'Roi de la Bachata' et le roi du R&B a créé un pont culturel majeur, mêlant les mélodies dominicaines aux harmonies vocales de la musique urbaine américaine.",
+      album: "Fórmula, Vol. 1"
+    },
+    culture_en: {
+      context: "Released in 2011 on the album 'Fórmula, Vol. 1', 'Promise' marked a historic turning point for bachata by bringing together Romeo Santos and American R&B superstar Usher. This 'crossover' propelled the genre onto the international stage, with Usher even singing his first bachata lines in Spanish.",
+      meaning: "The song talks about the dizzying intensity of love, where the narrator feels imprisoned but happy to be so. He begs his partner to promise never to leave him, fearing suffering after giving himself body and soul.",
+      artistInfo: "This collaboration between the 'King of Bachata' and the King of R&B created a major cultural bridge, blending Dominican melodies with the vocal harmonies of American urban music.",
+      album: "Fórmula, Vol. 1"
+    },
+    lyrics: {
+      es: `[Verso 1: Romeo Santos]
+He perdido el balance por tu amor
+En tus manos, yo caí, tienes control sobre mi
+Tu cuerpo es la cárcel y yo un prisionero
+Y jamás quiero salir, condenado y soy feliz
+
+[Verso 1: Usher]
+Try to keep my balance, but I still fall
+But how'd I fell so hard?
+Right into your arms, I swear, girl
+Wrapped inside you, baby, and it's so warm, yeah, yeah, yeah
+But love without a cause
+Leaves me trapped inside my own bars
+
+[Coro: Romeo Santos & Usher]
+Quiero ser tuyo enterito, pero tengo miedo
+Prométeme que no me vas a dejar sin tu amor (talk to Usher)
+I'll give you my heart, girl, but you've got to promise
+Prométeme, mami
+
+[Post-Coro: Usher & Romeo Santos]
+Promise you'll hold me (hold me)
+Oh, touch me (touch me)
+Love me way past forever
+
+(Hasta siempre)
+(Escucha las palabras de Romeo)
+
+(Yeah, man)
+(Usher, baby)
+(Romeo)
+
+[Verso 2: Romeo Santos & Usher]
+Yo, tan joven, padezco del corazón
+Y, por tu amor, sufriría mil años y con mucho honor
+
+I try to be calm, but my chest keeps pounding
+Try to swim, but it's like I'm drowning
+All I've got for your, love
+Oh, baby
+
+[Coro: Romeo Santos & Usher]
+Quiero ser tuyo enterito, pero tengo miedo
+Prométeme que no me vas a dejar sin tu amor (Usher)
+I'll give you my heart, girl, but you've got to promise
+Prométeme, mami
+
+[Post-Coro: Usher]
+Promise you'll hold me (hold me)
+Oh, touch me (touch me)
+Love me way past forever
+
+[Interlude]
+You need this in your life
+Yeah, man
+Two kings
+Revolutionary
+Hey, yo, Romeo, talk to her (hey)
+
+[Puente: Romeo Santos & Usher]
+Temo que me dejes en el abandono
+Y tú eres mi oxígeno y mi todo
+But I realize, yes
+It's worth running the race
+When the finish line is you
+
+[Coro: Romeo Santos & Usher]
+Quiero ser tuyo enterito, pero tengo miedo
+Prométeme que no me vas a dejar sin tu amor
+If I give you my heart, girl, you've got to promise
+Promise that you'll love me, baby
+
+[Post-Coro: Usher]
+Promise you'll hold me
+Oh, touch me (touch me)
+Love me way past forever
+
+[Outro: Romeo Santos]
+Quiero ser tuyo enterito, pero tengo miedo (turn the lights off)
+Prométeme que no me vas a dejar sin tu amor`,
+      fr: `[Couplet 1 : Romeo Santos]
+J'ai perdu l'équilibre à cause de ton amour
+Dans tes mains, je suis tombé, tu as le contrôle sur moi
+Ton corps est la prison et moi un prisonnier
+Et je ne veux jamais sortir, condamné et je suis heureux
+
+[Couplet 1 : Usher]
+J'essaie de garder mon équilibre, mais je tombe quand même
+Mais comment suis-je tombé si fort ?
+Droit dans tes bras, je le jure, chérie
+Enveloppé en toi, bébé, et c'est si chaud, ouais, ouais, ouais
+Mais un amour sans cause
+Me laisse piégé derrière mes propres barreaux
+
+[Refrain : Romeo Santos & Usher]
+Je veux être à toi tout entier, mais j'ai peur
+Promets-moi que tu ne me laisseras pas sans ton amour (parle à Usher)
+Je te donnerai mon cœur, chérie, mais tu dois promettre
+Promets-moi, maman
+
+[Post-Refrain : Usher & Romeo Santos]
+Promets que tu me serreras (serre-moi)
+Oh, touche-moi (touche-moi)
+Aime-moi bien au-delà de l'éternité
+
+(Pour toujours)
+(Écoute les mots de Romeo)
+
+(Ouais, mec)
+(Usher, bébé)
+(Romeo)
+
+[Couplet 2 : Romeo Santos & Usher]
+Moi, si jeune, je souffre du cœur
+Et, pour ton amour, je souffrirais mille ans et avec beaucoup d'honneur
+
+J'essaie d'être calme, mais ma poitrine n'arrête pas de battre
+J'essaie de nager, mais c'est comme si je me noyais
+Tout ce que j'ai pour toi, amour
+Oh, bébé
+
+[Refrain : Romeo Santos & Usher]
+Je veux être à toi tout entier, mais j'ai peur
+Promets-moi que tu ne me laisseras pas sans ton amour (Usher)
+Je te donnerai mon cœur, chérie, mais tu dois promettre
+Promets-moi, maman
+
+[Post-Refrain : Usher]
+Promets que tu me serreras (serre-moi)
+Oh, touche-moi (touche-moi)
+Aime-moi bien au-delà de l'éternité
+
+[Interlude]
+Tu as besoin de ça dans ta vie
+Ouais, mec
+Deux rois
+Révolutionnaire
+Hey, yo, Romeo, parle-lui (hey)
+
+[Pont : Romeo Santos & Usher]
+Je crains que tu ne m'abandonnes
+Et tu es mon oxygène et mon tout
+Mais je réalise, oui
+Qu'il vaut la peine de courir la course
+Quand la ligne d'arrivée c'est toi
+
+[Refrain : Romeo Santos & Usher]
+Je veux être à toi tout entier, mais j'ai peur
+Promets-moi que tu ne me laisseras pas sans ton amour
+Si je te donne mon cœur, chérie, tu dois promettre
+Promettre que tu m'aimeras, bébé
+
+[Post-Refrain : Usher]
+Promets que tu me serreras
+Oh, touche-moi (touche-moi)
+Aime-moi bien au-delà de l'éternité
+
+[Outro : Romeo Santos]
+Je veux être à toi tout entier, mais j'ai peur (éteins les lumières)
+Promets-moi que tu ne me laisseras pas sans ton amour`,
+      en: `[Verse 1: Romeo Santos]
+I have lost my balance because of your love
+In your hands, I fell, you have control over me
+Your body is the prison and I'm a prisoner
+And I never want to leave, condemned and I am happy
+
+[Verse 1: Usher]
+Try to keep my balance, but I still fall
+But how'd I fell so hard?
+Right into your arms, I swear, girl
+Wrapped inside you, baby, and it's so warm, yeah, yeah, yeah
+But love without a cause
+Leaves me trapped inside my own bars
+
+[Chorus: Romeo Santos & Usher]
+I want to be yours entirely, but I'm afraid
+Promise me that you won't leave me without your love (talk to Usher)
+I'll give you my heart, girl, but you've got to promise
+Promise me, mami
+
+[Post-Chorus: Usher & Romeo Santos]
+Promise you'll hold me (hold me)
+Oh, touch me (touch me)
+Love me way past forever
+
+(Forever)
+(Listen to the words of Romeo)
+
+(Yeah, man)
+(Usher, baby)
+(Romeo)
+
+[Verse 2: Romeo Santos & Usher]
+I, so young, suffer from the heart
+And, for your love, I would suffer a thousand years and with great honor
+
+I try to be calm, but my chest keeps pounding
+Try to swim, but it's like I'm drowning
+All I've got for your, love
+Oh, baby
+
+[Chorus: Romeo Santos & Usher]
+I want to be yours entirely, but I'm afraid
+Promise me that you won't leave me without your love (Usher)
+I'll give you my heart, girl, but you've got to promise
+Promise me, mami
+
+[Post-Chorus: Usher]
+Promise you'll hold me (hold me)
+Oh, touch me (touch me)
+Love me way past forever
+
+[Interlude]
+You need this in your life
+Yeah, man
+Two kings
+Revolutionary
+Hey, yo, Romeo, talk to her (hey)
+
+[Bridge: Romeo Santos & Usher]
+I fear you might leave me abandoned
+And you are my oxygen and my everything
+But I realize, yes
+It's worth running the race
+When the finish line is you
+
+[Chorus: Romeo Santos & Usher]
+I want to be yours entirely, but I'm afraid
+Promise me that you won't leave me without your love
+If I give you my heart, girl, you've got to promise
+Promise that you'll love me, baby
+
+[Post-Chorus: Usher]
+Promise you'll hold me
+Oh, touch me (touch me)
+Love me way past forever
+
+[Outro: Romeo Santos]
+I want to be yours entirely, but I'm afraid (turn the lights off)
+Promise me that you won't leave me without your love`
+    }
   }
 ];
