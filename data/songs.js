@@ -17475,5 +17475,433 @@ You heat me up stronger than the sun, sun, sun, baby
 What a problem if I make lo-o-o-oo-ove to you
 If I make lo-o-o-oo-ove to you`
     }
+    },
+  {
+    id: "sobredosis-romeo-santos-ozuna",
+    title: "Sobredosis",
+    artist: "Romeo Santos ft. Ozuna",
+    year: 2017,
+    dateAdded: "2026-07-16",
+    tags: ["Sensuel", "Passion", "Désir"],
+    color: "#8b0000",
+    spotify: "https://open.spotify.com/search/Sobredosis%20Romeo%20Santos",
+    danceVideo: "SCApAhRXTNQ",
+    culture: {
+      context: "Sorti en 2017 sur l'album 'Golden' de Romeo Santos, 'Sobredosis' est une collaboration explosive avec la star du reggaeton Ozuna. La chanson mélange la bachata signature de Romeo Santos avec une touche urbaine.",
+      meaning: "Les paroles abordent une attirance irrésistible et passionnelle, comparée à une addiction ('sobredosis de sexo' - overdose de sexe).",
+      artistInfo: "Romeo Santos, surnommé 'Le Roi de la Bachata', et Ozuna, figure majeure du reggaeton, livrent ici un duo mémorable et sensuel.",
+      album: "Golden"
+    },
+    culture_en: {
+      context: "Released in 2017 on Romeo Santos's album 'Golden', 'Sobredosis' is an explosive collaboration with reggaeton star Ozuna. The song blends Romeo Santos's signature bachata with an urban touch.",
+      meaning: "The lyrics discuss an irresistible and passionate attraction, compared to an addiction ('sobredosis de sexo' - sex overdose).",
+      artistInfo: "Romeo Santos, nicknamed 'The King of Bachata', and Ozuna, a major figure in reggaeton, deliver a memorable and sensual duet here.",
+      album: "Golden"
+    },
+    lyrics: {
+      es: `¿Cuál es el misterio entre medio de tus piernas?
+¿Que enloquece mi cordura? Uh
+Eres un volcán de sensaciones
+Cada célula en tu ser compone ricura
+
+Y puedo morir encima de tu cuerpo
+Amarrado a tu cama, sobredosis de sexo
+
+Tú eres el pecado más divino
+Una víbora sexual en calentura
+Me embeleses con tus técnicas perversas
+Si te vieran, censuraran tu cintura
+Tiemblo al sentir tu narcótico efecto
+Que se me exploten los sesos
+Del placer tan intenso (Ozuna)
+
+Amárrame a tu espalda, yo me presto
+En tu escuelita dame clases de placer
+Bebé, yo quiero ser un alumno en tu pecho
+Voy a volver a mi niñez
+
+Quiero morir en tu interior, juro que me perdone Dios
+Si estar contigo es un delito, hago mil años en prisión
+Ya adivinaste el crucigrama, mi ninfómana en llamas
+Sabes bien soy bellaquito y tú eres provocación
+
+Y puedo morir encima de tu cuerpo
+Amarrado a tu cama, sobredosis de sexo
+
+Amárrame a tu espalda, yo me presto
+En tu escuelita dame clases de placer
+Bebé, yo quiero ser un alumno en tu pecho
+Voy a volver a mi niñez
+
+Quiero morir en tu interior, juro que me perdone Dios
+Si estar contigo es un delito, hago mil años en prisión
+Ya adivinaste el crucigrama, mi ninfómana en llamas
+Sabes bien soy bellaquito y tú eres provocación
+
+Gustoso
+Salvaje (Tú eres)
+Erótica y mi aberración
+Y yo seré tu esclavo
+Y si es a tu lado (Muero feliz)
+
+Y puedo morir
+Encima de tu cuerpo
+Amarrado a tu cama
+Sobredosis de sexo`,
+      fr: `Quel est le mystère entre tes jambes ?
+Qui rend folle ma raison ? Uh
+Tu es un volcan de sensations
+Chaque cellule de ton être compose la douceur
+
+Et je peux mourir sur ton corps
+Attaché à ton lit, overdose de sexe
+
+Tu es le péché le plus divin
+Une vipère sexuelle en chaleur
+Tu m'émerveilles avec tes techniques perverses
+S'ils te voyaient, ils censureraient ta taille
+Je tremble en sentant ton effet narcotique
+Que ma tête explose
+D'un plaisir si intense (Ozuna)
+
+Attache-moi à ton dos, je me prête au jeu
+Dans ta petite école, donne-moi des cours de plaisir
+Bébé, je veux être un élève sur ta poitrine
+Je vais retourner en enfance
+
+Je veux mourir à l'intérieur de toi, je jure que Dieu me pardonne
+Si être avec toi est un délit, je ferai mille ans de prison
+Tu as déjà deviné les mots croisés, ma nymphomane en flammes
+Tu sais bien que je suis un coquin et tu es la provocation
+
+Et je peux mourir sur ton corps
+Attaché à ton lit, overdose de sexe
+
+Attache-moi à ton dos, je me prête au jeu
+Dans ta petite école, donne-moi des cours de plaisir
+Bébé, je veux être un élève sur ta poitrine
+Je vais retourner en enfance
+
+Je veux mourir à l'intérieur de toi, je jure que Dieu me pardonne
+Si être avec toi est un délit, je ferai mille ans de prison
+Tu as déjà deviné les mots croisés, ma nymphomane en flammes
+Tu sais bien que je suis un coquin et tu es la provocation
+
+Savoureuse
+Sauvage (Tu es)
+Érotique et mon aberration
+Et je serai ton esclave
+Et si c'est à tes côtés (Je meurs heureux)
+
+Et je peux mourir
+Sur ton corps
+Attaché à ton lit
+Overdose de sexe`,
+      en: `What is the mystery between your legs?
+That drives my sanity crazy? Uh
+You are a volcano of sensations
+Every cell in your being composes sweetness
+
+And I can die on top of your body
+Tied to your bed, sex overdose
+
+You are the most divine sin
+A sexual viper in heat
+You mesmerize me with your perverse techniques
+If they saw you, they would censor your waist
+I tremble feeling your narcotic effect
+May my brains explode
+From such intense pleasure (Ozuna)
+
+Tie me to your back, I'm game
+In your little school give me pleasure lessons
+Baby, I want to be a student on your chest
+I'm going to return to my childhood
+
+I want to die inside you, I swear may God forgive me
+If being with you is a crime, I'll do a thousand years in prison
+You already guessed the crossword, my nymphomaniac on fire
+You know well I'm a little naughty and you are provocation
+
+And I can die on top of your body
+Tied to your bed, sex overdose
+
+Tie me to your back, I'm game
+In your little school give me pleasure lessons
+Baby, I want to be a student on your chest
+I'm going to return to my childhood
+
+I want to die inside you, I swear may God forgive me
+If being with you is a crime, I'll do a thousand years in prison
+You already guessed the crossword, my nymphomaniac on fire
+You know well I'm a little naughty and you are provocation
+
+Tasty
+Savage (You are)
+Erotic and my aberration
+And I will be your slave
+And if it's by your side (I die happy)
+
+And I can die
+On top of your body
+Tied to your bed
+Sex overdose`
+    }
+  },
+  {
+    id: "salvaje-jr",
+    title: "Salvaje",
+    artist: "Jr.",
+    year: 2023,
+    dateAdded: "2026-07-16",
+    tags: ["Transformation", "Indépendance", "Coeur brisé"],
+    color: "#4b0082",
+    spotify: "https://open.spotify.com/search/Salvaje%20Jr.",
+    danceVideo: "QZkmCPvpVQI",
+    culture: {
+      context: "'Salvaje' est un titre sorti en 2023 par Jr., artiste reconnu dans la bachata moderne. La chanson raconte une transformation personnelle, passant de la vulnérabilité ('cupidon') à la force ('salvaje').",
+      meaning: "Elle utilise la métaphore des flèches de Cupidon pour exprimer la douleur des déceptions passées amoureuses, menant le protagoniste à se protéger et à refuser tout nouvel engagement profond.",
+      artistInfo: "Jr. (Junior Perez) est un chanteur et compositeur qui apporte souvent une touche contemporaine et introspective à la bachata.",
+      album: "Salvaje (Single)"
+    },
+    culture_en: {
+      context: "'Salvaje' is a track released in 2023 by Jr., a recognized artist in modern bachata. The song narrates a personal transformation from vulnerability ('cupid') to strength ('savage').",
+      meaning: "It uses the metaphor of Cupid's arrows to express the pain of past romantic disappointments, leading the protagonist to protect himself and refuse any new deep commitment.",
+      artistInfo: "Jr. (Junior Perez) is a singer and songwriter who often brings a contemporary and introspective touch to bachata.",
+      album: "Salvaje (Single)"
+    },
+    lyrics: {
+      es: `[Intro]
+Mami esta vida es sabia, y llorar no me luce
+Y si por ti yo me muero, no sería dulce
+Yo sé que el amor es ciego
+Lo vi en ti, el embuste
+Pero hice el ajuste
+Aunque no te guste
+
+[Pre-Chorus]
+Renací de nuevo
+Me puse primero
+Olvidándote a ti, recordando el dinero
+No soy el mismo pendejo al que le vendiste sueños
+Ahora tu juego es mi juego
+
+[Chorus]
+Y cuando salgo pa' la calle
+Todos me dicen "tú cambiaste", (cuidado si me ven por ahí)
+Ahora yo soy el que va a romper
+Corazones igual como usted
+Ahora yo soy el salvaje
+Prometo nunca volver al mismo punto de ayer
+Ahora yo soy el salvaje
+
+[Bridge]
+A mi próximo cariño
+Cuidado conmigo
+Tu corazón robaré pero sin compromiso
+No soy el mismo de ayer
+No me vuelvo a someter a un engreído Mabel
+
+[Chorus]
+Y cuando salgo pa' la calle
+Todos me dicen "tú cambiaste", (cuidado si me ven por ahí)
+Ahora yo soy el que va a romper
+Corazones igual como usted
+Ahora yo soy el salvaje
+Prometo nunca volver al mismo punto de ayer
+Ahora yo soy el salvaje
+
+[Hook]
+Uh, Uh
+Yo Chi, le dije que yo vengo duro
+Zaysu, baja el radio
+
+[Verse]
+No me quedo atrás
+De ahora en adelante
+Te puedo amar sin amarte
+Le puedo huir sin dar la despedida
+No puedo darle amor por más que lo pida
+(Uh, Uh)
+Yo te lo pido
+No, no, no, no
+No juegues conmigo
+Ha, ha, ha, ha, no juegues conmigo mami
+Solo
+
+[Outro]
+Cuidado conmigo
+Que no soy cupido
+Las flechas que tiro duelen, (hay cero romance)
+Cuidado conmigo
+Que no soy cupido
+Las flechas que tiro duelen, (si me das un chance)
+Cuidado conmigo
+Que no soy cupido
+Las flechas que tiro duelen, (cero romance)
+Cuidado conmigo
+Que no soy cupido, (eh, eh)
+Las flechas que tiro duelen, (uh, uh)
+Cuidado conmigo
+Que no soy cupido
+Las flechas que tiro duelen, (uh, uh)
+(Uh, uh, uh)
+(Uh, uh, uh)
+(Uh, uh, uh)`,
+      fr: `[Intro]
+Maman, cette vie est sage, et pleurer ne me va pas
+Et si je meurs pour toi, ce ne serait pas doux
+Je sais que l'amour est aveugle
+Je l'ai vu en toi, le mensonge
+Mais j'ai fait l'ajustement
+Même si ça ne te plaît pas
+
+[Pré-Refrain]
+Je suis rené à nouveau
+Je me suis mis en premier
+En t'oubliant, en me rappelant de l'argent
+Je ne suis plus le même idiot à qui tu as vendu des rêves
+Maintenant ton jeu est mon jeu
+
+[Refrain]
+Et quand je sors dans la rue
+Tout le monde me dit "tu as changé", (attention s'ils me voient par là)
+Maintenant c'est moi qui vais briser
+Des cœurs tout comme toi
+Maintenant c'est moi le sauvage
+Je promets de ne jamais revenir au même point qu'hier
+Maintenant c'est moi le sauvage
+
+[Pont]
+À mon prochain amour
+Fais attention avec moi
+Je volerai ton cœur mais sans engagement
+Je ne suis plus le même qu'hier
+Je ne me soumettrai plus à une orgueilleuse Mabel
+
+[Refrain]
+Et quand je sors dans la rue
+Tout le monde me dit "tu as changé", (attention s'ils me voient par là)
+Maintenant c'est moi qui vais briser
+Des cœurs tout comme toi
+Maintenant c'est moi le sauvage
+Je promets de ne jamais revenir au même point qu'hier
+Maintenant c'est moi le sauvage
+
+[Hook]
+Uh, Uh
+Yo Chi, je t'ai dit que je viens fort
+Zaysu, baisse la radio
+
+[Couplet]
+Je ne reste pas en arrière
+À partir de maintenant
+Je peux t'aimer sans t'aimer
+Je peux la fuir sans dire au revoir
+Je ne peux pas lui donner d'amour, peu importe combien elle le demande
+(Uh, Uh)
+Je te le demande
+Non, non, non, non
+Ne joue pas avec moi
+Ha, ha, ha, ha, ne joue pas avec moi maman
+Seul
+
+[Outro]
+Fais attention avec moi
+Car je ne suis pas cupidon
+Les flèches que je tire font mal, (il y a zéro romance)
+Fais attention avec moi
+Car je ne suis pas cupidon
+Les flèches que je tire font mal, (si tu me donnes une chance)
+Fais attention avec moi
+Car je ne suis pas cupidon
+Les flèches que je tire font mal, (zéro romance)
+Fais attention avec moi
+Car je ne suis pas cupidon, (eh, eh)
+Les flèches que je tire font mal, (uh, uh)
+Fais attention avec moi
+Car je ne suis pas cupidon
+Les flèches que je tire font mal, (uh, uh)
+(Uh, uh, uh)
+(Uh, uh, uh)
+(Uh, uh, uh)`,
+      en: `[Intro]
+Mommy this life is wise, and crying doesn't suit me
+And if I die for you, it wouldn't be sweet
+I know love is blind
+I saw it in you, the lie
+But I made the adjustment
+Even if you don't like it
+
+[Pre-Chorus]
+I was reborn again
+I put myself first
+Forgetting you, remembering the money
+I'm not the same idiot you sold dreams to
+Now your game is my game
+
+[Chorus]
+And when I go out to the street
+Everyone tells me "you've changed", (careful if they see me around)
+Now I'm the one who's going to break
+Hearts just like you
+Now I am the savage
+I promise never to return to the same point as yesterday
+Now I am the savage
+
+[Bridge]
+To my next affection
+Be careful with me
+I'll steal your heart but without commitment
+I'm not the same as yesterday
+I won't submit again to a conceited Mabel
+
+[Chorus]
+And when I go out to the street
+Everyone tells me "you've changed", (careful if they see me around)
+Now I'm the one who's going to break
+Hearts just like you
+Now I am the savage
+I promise never to return to the same point as yesterday
+Now I am the savage
+
+[Hook]
+Uh, Uh
+Yo Chi, I told you I'm coming hard
+Zaysu, turn down the radio
+
+[Verse]
+I won't be left behind
+From now on
+I can love you without loving you
+I can run from her without saying goodbye
+I can't give her love no matter how much she asks for it
+(Uh, Uh)
+I'm asking you
+No, no, no, no
+Don't play with me
+Ha, ha, ha, ha, don't play with me mommy
+Alone
+
+[Outro]
+Be careful with me
+'Cause I'm no cupid
+The arrows I shoot hurt, (there's zero romance)
+Be careful with me
+'Cause I'm no cupid
+The arrows I shoot hurt, (if you give me a chance)
+Be careful with me
+'Cause I'm no cupid
+The arrows I shoot hurt, (zero romance)
+Be careful with me
+'Cause I'm no cupid, (eh, eh)
+The arrows I shoot hurt, (uh, uh)
+Be careful with me
+'Cause I'm no cupid
+The arrows I shoot hurt, (uh, uh)
+(Uh, uh, uh)
+(Uh, uh, uh)
+(Uh, uh, uh)`
+    }
   }
 ];
