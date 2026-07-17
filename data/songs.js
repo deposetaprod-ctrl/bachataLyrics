@@ -18364,5 +18364,716 @@ Love me way past forever
 I want to be yours entirely, but I'm afraid (turn the lights off)
 Promise me that you won't leave me without your love`
     }
+    },
+  {
+    id: "odio-romeo-santos-drake",
+    title: "Odio",
+    artist: "Romeo Santos ft. Drake",
+    year: 2014,
+    dateAdded: "2026-07-17",
+    tags: ["Jalousie", "Rupture", "Crossover"],
+    color: "#8B0000",
+    spotify: "https://open.spotify.com/search/Odio%20Romeo%20Santos",
+    danceVideo: "RrjtbhhMzBw",
+    culture: {
+      context: "Sorti en 2014 sur l'album 'Fórmula, Vol. 2', 'Odio' est une collaboration inattendue entre le Roi de la Bachata, Romeo Santos, et le rappeur canadien Drake. Cette rencontre musicale montre l'impact mondial de la bachata.",
+      meaning: "La chanson aborde la jalousie et la douleur d'un homme qui a perdu l'amour de sa vie au profit d'un autre. Il avoue haïr cet autre homme, même s'il rend son ex-partenaire heureuse.",
+      artistInfo: "Le morceau est particulièrement marquant car Drake y chante et rappe non seulement en anglais, mais ose également des passages en espagnol, démontrant sa polyvalence.",
+      album: "Fórmula, Vol. 2"
+    },
+    culture_en: {
+      context: "Released in 2014 on the album 'Fórmula, Vol. 2', 'Odio' is an unexpected collaboration between the King of Bachata, Romeo Santos, and Canadian rapper Drake. This musical encounter shows the global impact of bachata.",
+      meaning: "The song addresses the jealousy and pain of a man who has lost the love of his life to another. He admits hating this other man, even if he makes his ex-partner happy.",
+      artistInfo: "The track is particularly notable because Drake sings and raps not only in English, but also dares to include passages in Spanish, demonstrating his versatility.",
+      album: "Fórmula, Vol. 2"
+    },
+    lyrics: {
+      es: `Yeah, yeah
+Envy is a sign of admiration
+Hate: It's the epitome of destruction
+
+Tal parece
+Que mi amor crece y crece
+Pero tú desvaneces
+Y me ofreces tu amistad sin otra excepción
+
+Sé que hay otro hombre
+Que ha logrado lo que yo jamás a ti te di
+Un hogar, una familia, un buen porvenir
+Perdón por hacerte daño
+
+Y por ti
+Vivo aniquilado en el despecho
+Reprimido, ardiendo por los celos
+Lo odio aunque él te haga feliz
+A mí
+Nada me intimida pero entiendo
+Que él gano la guerra hace tiempo
+Y se me olvida que ya te perdí
+
+Celo sus besos sobre tu cuerpo
+La envidia se apodera así de mí y te quiero aquí
+Odio ese hombre porque está a tu lado
+Perdí tu amor, soy un pobre diablo
+Sin tu amor yo no soy nada, nada
+
+Y por ti
+Vivo aniquilado en el despecho
+Reprimido, ardiendo por los celos
+Lo odio aunque él te haga feliz
+A mí
+Nada me intimida pero entiendo
+Que él gano la guerra hace tiempo
+Y se me olvida que ya te perdí
+
+Escucha las palabras
+Yeah, drizzy Drake
+
+Yo fui el llanto, él es tu sonrisa (turn the lights on)
+Y lo nuestro desplomó sobre un volcán muy de prisa
+
+Uh, you were the one
+You've been the one from the moment I seen you
+Sometimes I question if this is all real
+Then I grab on that ass and I firmly believe it
+And you look like you drawn by an artist
+No you, you look like Bernice and Yaris
+But both put together, those are some girls that I know from back home
+If you saw 'em you'd get it
+Look don't worry about it, keep speakin' Spanish
+I'll get it translated, you know you my baby
+Anything for you, anything baby
+I do not wanna be enemies baby
+I would just much rather give you a baby
+And buy you a house, so I live with you baby
+Don't stay with this new guy, I really go crazy
+
+Y por ti
+Vivo aniquilado en el despecho
+Reprimido, ardiendo por los celos
+Lo odio aunque él te haga feliz
+A mí
+Nada me intimida pero entiendo
+Que él gano la guerra hace tiempo
+Y se me olvida que ya te perdí`,
+      fr: `Ouais, ouais
+L'envie est un signe d'admiration
+La haine : C'est la quintessence de la destruction
+
+Il semble
+Que mon amour grandisse encore et encore
+Mais toi tu t'évanouis
+Et tu m'offres ton amitié sans autre exception
+
+Je sais qu'il y a un autre homme
+Qui a accompli ce que je ne t'ai jamais donné
+Un foyer, une famille, un bel avenir
+Pardon de t'avoir fait du mal
+
+Et pour toi
+Je vis anéanti dans le dépit
+Réprimé, brûlant de jalousie
+Je le hais même s'il te rend heureuse
+Moi
+Rien ne m'intimide mais je comprends
+Qu'il a gagné la guerre il y a longtemps
+Et j'oublie que je t'ai déjà perdue
+
+Je jalouse ses baisers sur ton corps
+L'envie s'empare ainsi de moi et je te veux ici
+Je hais cet homme parce qu'il est à tes côtés
+J'ai perdu ton amour, je suis un pauvre diable
+Sans ton amour je ne suis rien, rien
+
+Et pour toi
+Je vis anéanti dans le dépit
+Réprimé, brûlant de jalousie
+Je le hais même s'il te rend heureuse
+Moi
+Rien ne m'intimide mais je comprends
+Qu'il a gagné la guerre il y a longtemps
+Et j'oublie que je t'ai déjà perdue
+
+Écoute les paroles
+Ouais, drizzy Drake
+
+J'étais les larmes, il est ton sourire (allume les lumières)
+Et notre histoire s'est effondrée sur un volcan très vite
+
+Uh, tu étais la seule
+Tu as été la seule depuis le moment où je t'ai vue
+Parfois je me demande si tout ça est réel
+Puis j'attrape ces fesses et j'y crois fermement
+Et on dirait que tu as été dessinée par un artiste
+Non toi, tu ressembles à Bernice et Yaris
+Mais les deux réunies, ce sont des filles que je connais de chez moi
+Si tu les voyais tu comprendrais
+Écoute ne t'inquiète pas pour ça, continue de parler espagnol
+Je le ferai traduire, tu sais que tu es mon bébé
+N'importe quoi pour toi, n'importe quoi bébé
+Je ne veux pas qu'on soit ennemis bébé
+Je préférerais de loin te faire un bébé
+Et t'acheter une maison, pour vivre avec toi bébé
+Ne reste pas avec ce nouveau gars, je deviens vraiment fou
+
+Et pour toi
+Je vis anéanti dans le dépit
+Réprimé, brûlant de jalousie
+Je le hais même s'il te rend heureuse
+Moi
+Rien ne m'intimide mais je comprends
+Qu'il a gagné la guerre il y a longtemps
+Et j'oublie que je t'ai déjà perdue`,
+      en: `Yeah, yeah
+Envy is a sign of admiration
+Hate: It's the epitome of destruction
+
+It seems
+That my love grows and grows
+But you fade away
+And you offer me your friendship with no other exception
+
+I know there is another man
+Who has achieved what I never gave you
+A home, a family, a good future
+Sorry for hurting you
+
+And for you
+I live annihilated in despair
+Repressed, burning with jealousy
+I hate him even if he makes you happy
+To me
+Nothing intimidates me but I understand
+That he won the war a long time ago
+And I forget that I already lost you
+
+I'm jealous of his kisses on your body
+Envy takes hold of me like this and I want you here
+I hate that man because he is by your side
+I lost your love, I am a poor devil
+Without your love I am nothing, nothing
+
+And for you
+I live annihilated in despair
+Repressed, burning with jealousy
+I hate him even if he makes you happy
+To me
+Nothing intimidates me but I understand
+That he won the war a long time ago
+And I forget that I already lost you
+
+Listen to the words
+Yeah, drizzy Drake
+
+I was the crying, he is your smile (turn the lights on)
+And ours collapsed over a volcano very quickly
+
+Uh, you were the one
+You've been the one from the moment I seen you
+Sometimes I question if this is all real
+Then I grab on that ass and I firmly believe it
+And you look like you drawn by an artist
+No you, you look like Bernice and Yaris
+But both put together, those are some girls that I know from back home
+If you saw 'em you'd get it
+Look don't worry about it, keep speakin' Spanish
+I'll get it translated, you know you my baby
+Anything for you, anything baby
+I do not wanna be enemies baby
+I would just much rather give you a baby
+And buy you a house, so I live with you baby
+Don't stay with this new guy, I really go crazy
+
+And for you
+I live annihilated in despair
+Repressed, burning with jealousy
+I hate him even if he makes you happy
+To me
+Nothing intimidates me but I understand
+That he won the war a long time ago
+And I forget that I already lost you`
+    }
+  },
+  {
+    id: "jezabel-romeo-santos-prince-royce",
+    title: "Jezabel",
+    artist: "Romeo Santos & Prince Royce",
+    year: 2023,
+    dateAdded: "2026-07-17",
+    tags: ["Trahison", "Duo", "Humour amer"],
+    color: "#483D8B",
+    spotify: "https://open.spotify.com/search/Jezabel%20Romeo%20Santos",
+    danceVideo: "T25CNSnL7O0",
+    culture: {
+      context: "Ce morceau marque une collaboration exceptionnelle entre les deux figures emblématiques de la bachata moderne : Romeo Santos et Prince Royce.",
+      meaning: "Le titre 'Jezabel' fait référence à la figure biblique de Jézabel, symbole de tromperie et manipulation. Dans la chanson, les deux artistes découvrent avec stupeur qu'ils sont trompés par la même femme, qui mène une double vie. C'est un dialogue teinté d'humour amer entre deux hommes qui réalisent avoir été joués.",
+      artistInfo: "La réunion de ces deux stars, souvent perçues comme rivales, pour chanter comment une même femme les a bernés tous les deux, donne au morceau une dynamique narrative très amusante et inédite.",
+      album: "Fórmula, Vol. 3"
+    },
+    culture_en: {
+      context: "This track marks an exceptional collaboration between the two iconic figures of modern bachata: Romeo Santos and Prince Royce.",
+      meaning: "The title 'Jezabel' refers to the biblical figure of Jezebel, a symbol of deceit and manipulation. In the song, the two artists are shocked to discover that they are being cheated on by the same woman, who is leading a double life. It is a dialogue tinged with bitter humor between two men who realize they have been played.",
+      artistInfo: "The reunion of these two stars, often perceived as rivals, to sing about how the same woman fooled them both, gives the track a very amusing and unprecedented narrative dynamic.",
+      album: "Fórmula, Vol. 3"
+    },
+    lyrics: {
+      es: `[Intro: Romeo Santos]
+Una noche
+Qué noche
+Una noche
+Qué noche (Hello?)
+
+[Verso 1: Romeo Santos & Prince Royce]
+No se me hizo conocido el tono de su celular
+"El que busca, encuentra" decía mi abuelo, una gran verdad
+¿Quién carajo la llama? 1 de la mañana, esta vaina no cuadra (Ja, nah)
+En sus contactos me tenía como "Uber Eats"
+Dándole mente, ¿quién ordena al dormir?
+Lamento decirte, hay un bobo con los dos
+Si ella es casada, no lo compartió
+
+[Pre-Coro: Romeo Santos & Prince Royce]
+Okey, comprendo, su vibra rara voy notando desde enero
+Le estoy dando a tu mujer y no consejos
+¿O sea que tú eres su resolución de Año Nuevo?
+Ni Jezabel se atrevió a tanto
+
+[Coro: Romeo Santos & Prince Royce]
+Oh, no, oh, no, oh, no
+Ella nos involucró a los dos
+Oh, no, oh, no, oh, no
+Yo gastando mi cuarto en Chanel
+Oh, no, oh, no, oh, no
+Tú supiste, se van a curar
+Oh, no, oh, no, oh, no
+Otra Jezabel
+
+[Interludio: Prince Royce & Romeo Santos]
+Ven acá, viejo, ¿cómo es que tú te llama'?
+Jeffrey
+Okay, so you telling me that you had no idea that she had a man?
+Yo obviamente no sabía que era casada
+What a fuckin' bitch
+
+[Verso 2: Prince Royce & Romeo Santos]
+Ahora le llego porque el jueves me mareó y declinó la cita
+Fuimo' a un concierto, fundía' con El Conejo, dizque callaíta'
+
+[Pre-Coro: Romeo Santos & Prince Royce]
+Okey, comprendo, su vibra rara voy notando desde enero
+Le estoy dando a tu mujer y no consejos
+¿O sea que tú eres su resolución de Año Nuevo?
+Ni Jezabel se atrevió a tanto
+
+[Coro: Romeo Santos & Prince Royce]
+Oh, no, oh, no, oh, no
+Ella nos involucró a los dos
+Oh, no, oh, no, oh, no
+Yo gastando mi cuarto en Chanel
+Oh, no, oh, no, oh, no
+Tú supiste, se van a curar
+Oh, no, oh, no, oh, no
+Otra Jezabel
+
+[Puente: Romeo Santos & Prince Royce]
+"Uno nunca conoce a un ser humano lo suficiente" escuché una vez
+Hay que bautizar a esa mujer, maldito cuero, cuero, baby
+She's for the streets, yeah
+For sure
+
+[Coro: Romeo Santos & Prince Royce]
+Oh, no, oh, no, oh, no
+Ella nos involucró a los dos
+Oh, no, oh, no, oh, no
+Yo gastando mi cuarto en Rolex
+Oh, no, oh, no, oh, no
+Tú supiste, se van a burlar
+Oh, no, oh, no, oh, no (We gon' break it down like this)
+
+[Outro: Romeo Santos]
+If you're faithful to your boo, when Royce say, "One, two," scream, "Yeah"
+One, two, yeah, yeah
+Yeah, if you likin' that bod, when Rome says "Three, four," you say, "Yeah, yeah"
+Three, four, yeah, yeah
+Oh, no
+(Oh, no, oh, no, oh, no)
+No, no
+(Oh, no, oh, no, oh, no)
+She's a Jezabel, Jezabel, Jezabel, Jezabel
+(Oh, no, oh, no, oh, no)
+(Oh, no)
+Ni Don Omar se atrevió a tanto`,
+      fr: `[Intro : Romeo Santos]
+Une nuit
+Quelle nuit
+Une nuit
+Quelle nuit (Allô ?)
+
+[Couplet 1 : Romeo Santos & Prince Royce]
+Je n'ai pas reconnu la sonnerie de son portable
+"Celui qui cherche, trouve" disait mon grand-père, une grande vérité
+Qui putain l'appelle ? 1h du matin, ce truc ne colle pas (Ha, nah)
+Dans ses contacts elle m'avait enregistré comme "Uber Eats"
+En y réfléchissant, qui commande en dormant ?
+Je suis désolé de te le dire, il y a un idiot avec nous deux
+Si elle est mariée, elle ne l'a pas partagé
+
+[Pré-Refrain : Romeo Santos & Prince Royce]
+D'accord, je comprends, je remarque sa drôle d'ambiance depuis janvier
+Je donne à ta femme et ce ne sont pas des conseils
+Donc tu es sa résolution de la nouvelle année ?
+Même Jézabel n'a pas osé faire autant
+
+[Refrain : Romeo Santos & Prince Royce]
+Oh, non, oh, non, oh, non
+Elle nous a impliqués tous les deux
+Oh, non, oh, non, oh, non
+Moi dépensant mon argent en Chanel
+Oh, non, oh, non, oh, non
+Tu savais, ils vont bien en rire
+Oh, non, oh, non, oh, non
+Une autre Jézabel
+
+[Interlude : Prince Royce & Romeo Santos]
+Viens ici, mon vieux, comment est-ce que tu t'appelles ?
+Jeffrey
+D'accord, donc tu me dis que tu n'avais aucune idée qu'elle avait un homme ?
+Moi évidemment je ne savais pas qu'elle était mariée
+Quelle putain de garce
+
+[Couplet 2 : Prince Royce & Romeo Santos]
+Maintenant je capte parce que jeudi elle m'a embrouillé et a décliné le rendez-vous
+Nous sommes allés à un concert, collée avec le Lapin (Bad Bunny), soi-disant toute calme
+
+[Pré-Refrain : Romeo Santos & Prince Royce]
+D'accord, je comprends, je remarque sa drôle d'ambiance depuis janvier
+Je donne à ta femme et ce ne sont pas des conseils
+Donc tu es sa résolution de la nouvelle année ?
+Même Jézabel n'a pas osé faire autant
+
+[Refrain : Romeo Santos & Prince Royce]
+Oh, non, oh, non, oh, non
+Elle nous a impliqués tous les deux
+Oh, non, oh, non, oh, non
+Moi dépensant mon argent en Chanel
+Oh, non, oh, non, oh, non
+Tu savais, ils vont bien en rire
+Oh, non, oh, non, oh, non
+Une autre Jézabel
+
+[Pont : Romeo Santos & Prince Royce]
+"On ne connaît jamais assez un être humain" j'ai entendu une fois
+Il faut baptiser cette femme, maudite garce, garce, bébé
+Elle est pour les rues, ouais
+Pour de bon
+
+[Refrain : Romeo Santos & Prince Royce]
+Oh, non, oh, non, oh, non
+Elle nous a impliqués tous les deux
+Oh, non, oh, non, oh, non
+Moi dépensant mon argent en Rolex
+Oh, non, oh, non, oh, non
+Tu savais, ils vont se moquer de nous
+Oh, non, oh, non, oh, non (On va le décomposer comme ça)
+
+[Outro : Romeo Santos]
+Si tu es fidèle à ta moitié, quand Royce dit "Un, deux", crie "Ouais"
+Un, deux, ouais, ouais
+Ouais, si tu aimes ce corps, quand Rome dit "Trois, quatre", tu dis "Ouais, ouais"
+Trois, quatre, ouais, ouais
+Oh, non
+(Oh, non, oh, non, oh, non)
+Non, non
+(Oh, non, oh, non, oh, non)
+C'est une Jézabel, Jézabel, Jézabel, Jézabel
+(Oh, non, oh, non, oh, non)
+(Oh, non)
+Même Don Omar n'a pas osé faire autant`,
+      en: `[Intro: Romeo Santos]
+One night
+What a night
+One night
+What a night (Hello?)
+
+[Verse 1: Romeo Santos & Prince Royce]
+I didn't recognize the ringtone of her cell phone
+"He who seeks, finds" my grandfather used to say, a great truth
+Who the fuck is calling her? 1 in the morning, this shit doesn't add up (Ha, nah)
+In her contacts she had me as "Uber Eats"
+Thinking about it, who orders while sleeping?
+I'm sorry to tell you, there's a fool with both of us
+If she's married, she didn't share it
+
+[Pre-Chorus: Romeo Santos & Prince Royce]
+Okay, I understand, I've been noticing her weird vibe since January
+I'm giving it to your woman and not advice
+So you are her New Year's resolution?
+Not even Jezebel dared to do so much
+
+[Chorus: Romeo Santos & Prince Royce]
+Oh, no, oh, no, oh, no
+She involved the both of us
+Oh, no, oh, no, oh, no
+Me spending my money on Chanel
+Oh, no, oh, no, oh, no
+You knew, they are going to laugh about it
+Oh, no, oh, no, oh, no
+Another Jezebel
+
+[Interlude: Prince Royce & Romeo Santos]
+Come here, old man, what's your name?
+Jeffrey
+Okay, so you telling me that you had no idea that she had a man?
+I obviously didn't know she was married
+What a fuckin' bitch
+
+[Verse 2: Prince Royce & Romeo Santos]
+Now I get it because on Thursday she made me dizzy and declined the date
+We went to a concert, vibing with The Bunny (Bad Bunny), supposedly quiet
+
+[Pre-Chorus: Romeo Santos & Prince Royce]
+Okay, I understand, I've been noticing her weird vibe since January
+I'm giving it to your woman and not advice
+So you are her New Year's resolution?
+Not even Jezebel dared to do so much
+
+[Chorus: Romeo Santos & Prince Royce]
+Oh, no, oh, no, oh, no
+She involved the both of us
+Oh, no, oh, no, oh, no
+Me spending my money on Chanel
+Oh, no, oh, no, oh, no
+You knew, they are going to laugh about it
+Oh, no, oh, no, oh, no
+Another Jezebel
+
+[Bridge: Romeo Santos & Prince Royce]
+"You never know a human being well enough" I heard once
+We have to baptize that woman, damn whore, whore, baby
+She's for the streets, yeah
+For sure
+
+[Chorus: Romeo Santos & Prince Royce]
+Oh, no, oh, no, oh, no
+She involved the both of us
+Oh, no, oh, no, oh, no
+Me spending my money on Rolex
+Oh, no, oh, no, oh, no
+You knew, they are going to make fun of us
+Oh, no, oh, no, oh, no (We gon' break it down like this)
+
+[Outro: Romeo Santos]
+If you're faithful to your boo, when Royce say, "One, two," scream, "Yeah"
+One, two, yeah, yeah
+Yeah, if you likin' that bod, when Rome says "Three, four," you say, "Yeah, yeah"
+Three, four, yeah, yeah
+Oh, no
+(Oh, no, oh, no, oh, no)
+No, no
+(Oh, no, oh, no, oh, no)
+She's a Jezabel, Jezabel, Jezabel, Jezabel
+(Oh, no, oh, no, oh, no)
+(Oh, no)
+Not even Don Omar dared to do so much`
+    }
+    },
+  {
+    id: "canalla-romeo-santos-el-chaval",
+    title: "Canalla",
+    artist: "Romeo Santos & El Chaval de la Bachata",
+    year: 2019,
+    dateAdded: "2026-07-17",
+    tags: ["Toxique", "Passion", "Bachata traditionnelle"],
+    color: "#B22222",
+    spotify: "https://open.spotify.com/search/Canalla%20Romeo%20Santos",
+    danceVideo: "1YX0q3LGNno",
+    culture: {
+      context: "Sortie en 2019 sur l'album 'Utopía' de Romeo Santos, 'Canalla' est une collaboration très appréciée avec El Chaval de la Bachata, figure emblématique de la bachata traditionnelle dominicaine. L'album 'Utopía' avait pour concept de réunir Romeo Santos avec les plus grands noms de la bachata classique.",
+      meaning: "La chanson parle d'une relation toxique où l'homme est parfaitement conscient de la méchanceté et de la manipulation de sa partenaire (qu'il qualifie de 'canalla', c'est-à-dire de canaille). Il avoue être sous son emprise et accepter ce chantage émotionnel avec une forme de masochisme car l'attirance physique est trop forte.",
+      artistInfo: "Le morceau fusionne la modernité de Romeo Santos avec les arrangements de guitare très prononcés et le chant plein de 'amargue' (amertume) typiques du style d'El Chaval.",
+      album: "Utopía"
+    },
+    culture_en: {
+      context: "Released in 2019 on Romeo Santos' album 'Utopía', 'Canalla' is a highly acclaimed collaboration with El Chaval de la Bachata, an emblematic figure of traditional Dominican bachata. The concept of the 'Utopía' album was to bring Romeo Santos together with the greatest names in classic bachata.",
+      meaning: "The song is about a toxic relationship where the man is perfectly aware of his partner's wickedness and manipulation (calling her a 'canalla' - scoundrel). He admits to being under her spell and accepting this emotional blackmail with a form of masochism because the physical attraction is too strong.",
+      artistInfo: "The track merges Romeo Santos' modernity with the very pronounced guitar arrangements and the singing full of 'amargue' (bitterness) typical of El Chaval's style.",
+      album: "Utopía"
+    },
+    lyrics: {
+      es: `Y sigue El Chaval
+Con el chico de las poesías
+Hoy voy a morir de un amargue
+Y la asesina, eres tú
+Este masoquismo es rentable
+Aunque me afecta la salud
+
+Me hago el sordo y ciego
+Sabiendo, me puede ir mejor
+Cuidadito y te crees que eres muy sabia
+Amor no quita conocimiento, yo sé bien quién eres tú
+
+Mala, tú eres mala
+Así me gustas, así me encantas
+Malvada, pero estás buena
+No me importa que seas una canalla
+Tú me enciendes y me apagas
+Me subes a la cima y me lanzas
+Esa vaina, me acorrala
+Una psicología que me atrapa
+
+Esa maldita guitarra
+You're a bad girl
+But I like it
+
+Voy a permitir tus chantajes
+Aunque resulten mi perdición
+Tengo una paciencia adaptable
+Que se amolda a esta situación
+
+Me hago el sordo y ciego
+Sabiendo, me puede ir mejor
+Cuidadito y te crees que eres muy sabia
+Amor no quita conocimiento (Yo sé bien quién eres tú)
+
+Mala, tú eres mala
+Así me gustas, así me encantas
+Malvada, pero estás buena
+No me importa que seas una canalla
+Tú me enciendes y me apagas
+Me subes a la cima y me lanzas
+Esa vaina, me acorrala
+Una psicología que me atrapa
+
+Dígame Chaval
+Pero es verdad, que es mala la tipa
+
+Mala, tú eres mala
+Así me gustas, así me encantas
+Malvada, pero estás buena
+No me importa que seas una canalla
+Tú me enciendes y me apagas
+Me subes a la cima y me lanzas
+Esa vaina, me acorrala
+Una psicología que me atrapa
+
+Sentimiento
+Don't forget Romeo (Ah-ah)`,
+      fr: `Et El Chaval continue
+Avec le garçon des poésies
+Aujourd'hui je vais mourir de chagrin
+Et l'assassine, c'est toi
+Ce masochisme est rentable
+Même s'il affecte ma santé
+
+Je fais le sourd et l'aveugle
+Sachant que ça pourrait aller mieux pour moi
+Fais bien attention et tu te crois très sage
+L'amour n'enlève pas la connaissance, je sais très bien qui tu es
+
+Mauvaise, tu es mauvaise
+C'est comme ça que tu me plais, c'est comme ça que tu m'enchantes
+Méchante, mais tu es bonne
+Je me fiche que tu sois une canaille
+Tu m'allumes et tu m'éteins
+Tu me montes au sommet et tu me jettes
+Ce truc, me coince
+Une psychologie qui m'attrape
+
+Cette maudite guitare
+Tu es une mauvaise fille
+Mais j'aime ça
+
+Je vais permettre tes chantages
+Même s'ils causent ma perte
+J'ai une patience adaptable
+Qui se moule à cette situation
+
+Je fais le sourd et l'aveugle
+Sachant que ça pourrait aller mieux pour moi
+Fais bien attention et tu te crois très sage
+L'amour n'enlève pas la connaissance (Je sais très bien qui tu es)
+
+Mauvaise, tu es mauvaise
+C'est comme ça que tu me plais, c'est comme ça que tu m'enchantes
+Méchante, mais tu es bonne
+Je me fiche que tu sois une canaille
+Tu m'allumes et tu m'éteins
+Tu me montes au sommet et tu me jettes
+Ce truc, me coince
+Une psychologie qui m'attrape
+
+Dites-moi Chaval
+Mais c'est vrai, qu'elle est mauvaise la fille
+
+Mauvaise, tu es mauvaise
+C'est comme ça que tu me plais, c'est comme ça que tu m'enchantes
+Méchante, mais tu es bonne
+Je me fiche que tu sois une canaille
+Tu m'allumes et tu m'éteins
+Tu me montes au sommet et tu me jettes
+Ce truc, me coince
+Une psychologie qui m'attrape
+
+Sentiment
+N'oublie pas Romeo (Ah-ah)`,
+      en: `And El Chaval continues
+With the boy of poetry
+Today I'm going to die of bitterness
+And the killer, is you
+This masochism is profitable
+Even though it affects my health
+
+I play deaf and blind
+Knowing, I could do better
+Be careful and you think you are very wise
+Love doesn't take away knowledge, I know well who you are
+
+Bad, you are bad
+That's how I like you, that's how I love you
+Wicked, but you look good
+I don't care if you're a scoundrel
+You turn me on and turn me off
+You take me to the top and throw me down
+That thing, corners me
+A psychology that traps me
+
+That damn guitar
+You're a bad girl
+But I like it
+
+I will allow your blackmail
+Even if it turns out to be my ruin
+I have an adaptable patience
+That molds to this situation
+
+I play deaf and blind
+Knowing, I could do better
+Be careful and you think you are very wise
+Love doesn't take away knowledge (I know well who you are)
+
+Bad, you are bad
+That's how I like you, that's how I love you
+Wicked, but you look good
+I don't care if you're a scoundrel
+You turn me on and turn me off
+You take me to the top and throw me down
+That thing, corners me
+A psychology that traps me
+
+Tell me Chaval
+But it's true, the girl is bad
+
+Bad, you are bad
+That's how I like you, that's how I love you
+Wicked, but you look good
+I don't care if you're a scoundrel
+You turn me on and turn me off
+You take me to the top and throw me down
+That thing, corners me
+A psychology that traps me
+
+Feeling
+Don't forget Romeo (Ah-ah)`
+    }
   }
 ];

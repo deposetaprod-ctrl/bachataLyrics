@@ -9,12 +9,19 @@ import AuthModal from '../components/AuthModal';
 import Navbar from '../components/Navbar';
 import SeoFooter from '../components/SeoFooter';
 
+function extractArtists(artistStr) {
+  if (!artistStr) return [];
+  return artistStr.split(/(?:\s*(?:&|ft\.|feat\.|ft|feat|and|,)\s+)/i).map(s => s.trim()).filter(Boolean);
+}
+
+
 export default function Home() {
   const router = useRouter();
   const { locale } = router || { locale: 'fr' };
   const t = useTranslation(locale);
   const [search, setSearch] = useState('');
   const [activeTag, setActiveTag] = useState(null);
+  const [activeArtist, setActiveArtist] = useState(null);
   const [favoriteSongs, setFavoriteSongs] = useState([]);
   const [masteredSongs, setMasteredSongs] = useState([]);
   const [showFavorites, setShowFavorites] = useState(false);
@@ -69,6 +76,9 @@ export default function Home() {
   // Collect all unique tags
   const allTags = [...new Set(songs.flatMap((s) => s.tags))];
 
+  // Collect all unique artists
+  const allArtists = [...new Set(songs.flatMap((s) => extractArtists(s.artist)))].sort((a, b) => a.localeCompare(b));
+
   const filtered = songs.filter((song) => {
     const q = search.toLowerCase();
     const matchSearch =
@@ -79,7 +89,8 @@ export default function Home() {
       (song.dancers && song.dancers.toLowerCase().includes(q));
     const matchTag = !activeTag || song.tags.includes(activeTag);
     const matchFav = !showFavorites || favoriteSongs.includes(song.id);
-    return matchSearch && matchTag && matchFav;
+    const matchArtist = !activeArtist || extractArtists(song.artist).includes(activeArtist);
+    return matchSearch && matchTag && matchFav && matchArtist;
   });
 
   const handleSuggestionSubmit = async (e) => {
@@ -249,21 +260,42 @@ export default function Home() {
             className={`tag-btn ${showFavorites ? 'active' : ''}`}
             onClick={() => {
               setShowFavorites(!showFavorites);
-              if (!showFavorites) setActiveTag(null);
+              if (!showFavorites) {
+                setActiveTag(null);
+                setActiveArtist(null);
+              }
             }}
           >
             ❤️ {locale === 'en' ? 'My Favorites' : 'Mes Favoris'}
           </button>
           <button
             id="tag-all"
-            className={`tag-btn ${!activeTag && !showFavorites ? 'active' : ''}`}
+            className={`tag-btn ${!activeTag && !showFavorites && !activeArtist ? 'active' : ''}`}
             onClick={() => {
               setActiveTag(null);
               setShowFavorites(false);
+              setActiveArtist(null);
             }}
           >
             {locale === 'en' ? 'View all' : 'Tout voir'}
           </button>
+        </div>
+
+        {/* Artists filters */}
+        <div className="artists-filter">
+          {allArtists.map(artist => (
+            <button
+              key={artist}
+              className={`artist-btn ${activeArtist === artist ? 'active' : ''}`}
+              onClick={() => {
+                setActiveArtist(activeArtist === artist ? null : artist);
+                setShowFavorites(false);
+                setActiveTag(null);
+              }}
+            >
+              {artist}
+            </button>
+          ))}
         </div>
       </section>
 
