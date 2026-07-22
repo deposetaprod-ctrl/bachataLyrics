@@ -1,5 +1,252 @@
 export const songs = [
   {
+    id: "valkiria-montelier",
+    title: "Valkiria",
+    artist: "Montelier",
+    year: 2025,
+    dateAdded: "2026-07-22",
+    tags: ["Mélancolie", "Regret", "Amour Perdu"],
+    color: "#64748b",
+    spotify: "https://open.spotify.com/search/Valkiria%20Montelier",
+    danceVideo: "aYtvDx7_wOk",
+    culture: {
+      context: "Sortie en 2025, 'Valkiria' est une bachata romantique et mélancolique interprétée par Montelier, en collaboration avec DJ Sermaan et Cupido. La chanson explore les thèmes de la perte, du regret et de l'incapacité à oublier un amour passé.",
+      meaning: "Le narrateur exprime sa douleur après avoir perdu la femme qu'il aime, la qualifiant de 'Valkyrie'. Il avoue avoir cherché des remplaçantes sans succès. Le refrain soulève une question poétique profonde : 'Pourquoi suis-je parti chasser les nuages si j'ai peur du ciel ?', illustrant l'ironie d'avoir fui une relation par peur de l'engagement ou du bonheur, pour finalement en souffrir.",
+      artistInfo: "Montelier est un chanteur de la scène bachata, connu pour sa voix douce et ses textes poétiques. 'Valkiria' confirme son style émotionnel, bien accompagné par la production de DJ Sermaan.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "Released in 2025, 'Valkiria' is a romantic and melancholic bachata performed by Montelier, in collaboration with DJ Sermaan and Cupido. The song explores themes of loss, regret, and the inability to forget a past love.",
+      meaning: "The narrator expresses his pain after losing the woman he loves, calling her a 'Valkyrie'. He admits to having looked for replacements without success. The chorus raises a deep poetic question: 'Why did I leave chasing the clouds if I'm afraid of the sky?', illustrating the irony of having fled a relationship out of fear of commitment or happiness, only to ultimately suffer from it.",
+      artistInfo: "Montelier is a singer in the bachata scene, known for his smooth voice and poetic lyrics. 'Valkiria' confirms his emotional style, well supported by DJ Sermaan's production.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `[Verso 1]
+Mil veces te he inventado
+Y buscado un reemplazó
+Y nunca es suficiente
+No he conocido
+Otra mujer que logre
+Vivir en mi mente
+Sólo Dios sabe
+Cuántas veces he llorado
+Porque estás ausente
+Ya me ha parecido
+Escuchar tu sonrisa
+Repetidamente
+
+[Puente]
+Pero
+
+[Verso 2]
+No te miento
+Si viro soñando despierto
+Y lucho por una Valkiria en esta soledad
+En medio del desierto
+Me arrepiento
+De darte tanto sufrimiento
+Pero del tiempo que perdí
+Quiero recuperar al menos los recuerdos
+
+[Coro]
+Que alguien me diga
+Si es pasajero?
+Cómo se olvidan los primeros besos
+De un amor sincero?
+Que alguien me diga
+Por qué me muero?
+Por qué me fui
+Persiguiendo las nubes si le temo al cielo?
+
+[Hook]
+Baby, otra bachata con sentimiento
+De párate de
+
+[Puente 2]
+Dímelo Cupido, DJ Sermaan
+Dímelo Cupido, DJ Sermaan
+Quién más, Tu Montelier
+
+[Verso 3]
+No te miento
+Si viro soñando despierto
+Y lucho por una Valkiria en esta soledad
+En medio del desierto
+Me arrepiento
+De darte tanto sufrimiento
+Pero del tiempo que perdí
+Quiero recuperar al menos los recuerdos
+
+[Coro]
+Que alguien me diga
+Si es pasajero?
+Cómo se olvidan los primeros besos
+De un amor sincero?
+Que alguien me diga
+Por qué me muero?
+Por qué me fui
+Persiguiendo las nubes si le temo al cielo?
+Que alguien me diga
+Si es pasajero?
+Cómo se olvidan los primeros besos
+De este amor
+Que alguien me diga
+Por qué me muero?
+Por qué me fui
+Persiguiendo las nubes si le temo al cielo?
+Por qué me fui persiguiendo las nubes si le temo al cielo?`,
+      fr: `[Couplet 1]
+Je t'ai inventée mille fois
+Et cherché une remplaçante
+Et ce n'est jamais suffisant
+Je n'ai pas connu
+D'autre femme qui parvienne
+À vivre dans mon esprit
+Dieu seul sait
+Combien de fois j'ai pleuré
+Parce que tu es absente
+Il m'a déjà semblé
+Entendre ton sourire
+À plusieurs reprises
+
+[Pont]
+Mais
+
+[Couplet 2]
+Je ne te mens pas
+Si je me retrouve à rêver éveillé
+Et je lutte pour une Valkyrie dans cette solitude
+Au milieu du désert
+Je regrette
+De t'avoir causé tant de souffrance
+Mais du temps que j'ai perdu
+Je veux au moins récupérer les souvenirs
+
+[Refrain]
+Que quelqu'un me dise
+Si c'est passager ?
+Comment on oublie les premiers baisers
+D'un amour sincère ?
+Que quelqu'un me dise
+Pourquoi je meurs ?
+Pourquoi je suis parti
+Chasser les nuages si j'ai peur du ciel ?
+
+[Hook]
+Bébé, une autre bachata avec du sentiment
+De lève-toi de
+
+[Pont 2]
+Dis-moi Cupido, DJ Sermaan
+Dis-moi Cupido, DJ Sermaan
+Qui d'autre, Ton Montelier
+
+[Couplet 3]
+Je ne te mens pas
+Si je me retrouve à rêver éveillé
+Et je lutte pour une Valkyrie dans cette solitude
+Au milieu du désert
+Je regrette
+De t'avoir causé tant de souffrance
+Mais du temps que j'ai perdu
+Je veux au moins récupérer les souvenirs
+
+[Refrain]
+Que quelqu'un me dise
+Si c'est passager ?
+Comment on oublie les premiers baisers
+D'un amour sincère ?
+Que quelqu'un me dise
+Pourquoi je meurs ?
+Pourquoi je suis parti
+Chasser les nuages si j'ai peur du ciel ?
+Que quelqu'un me dise
+Si c'est passager ?
+Comment on oublie les premiers baisers
+De cet amour
+Que quelqu'un me dise
+Pourquoi je meurs ?
+Pourquoi je suis parti
+Chasser les nuages si j'ai peur du ciel ?
+Pourquoi je suis parti chasser les nuages si j'ai peur du ciel ?`,
+      en: `[Verse 1]
+A thousand times I have invented you
+And looked for a replacement
+And it's never enough
+I haven't met
+Another woman who manages
+To live in my mind
+Only God knows
+How many times I have cried
+Because you are absent
+It has already seemed to me
+That I heard your smile
+Repeatedly
+
+[Bridge]
+But
+
+[Verse 2]
+I'm not lying to you
+If I end up daydreaming
+And I fight for a Valkyrie in this loneliness
+In the middle of the desert
+I regret
+Giving you so much suffering
+But from the time I lost
+I want to recover at least the memories
+
+[Chorus]
+Someone tell me
+If it is temporary?
+How do you forget the first kisses
+Of a sincere love?
+Someone tell me
+Why I'm dying?
+Why did I leave
+Chasing the clouds if I'm afraid of the sky?
+
+[Hook]
+Baby, another bachata with feeling
+From get up from
+
+[Bridge 2]
+Tell me Cupido, DJ Sermaan
+Tell me Cupido, DJ Sermaan
+Who else, Your Montelier
+
+[Verse 3]
+I'm not lying to you
+If I end up daydreaming
+And I fight for a Valkyrie in this loneliness
+In the middle of the desert
+I regret
+Giving you so much suffering
+But from the time I lost
+I want to recover at least the memories
+
+[Chorus]
+Someone tell me
+If it is temporary?
+How do you forget the first kisses
+Of a sincere love?
+Someone tell me
+Why I'm dying?
+Why did I leave
+Chasing the clouds if I'm afraid of the sky?
+Someone tell me
+If it is temporary?
+How do you forget the first kisses
+Of this love
+Someone tell me
+Why I'm dying?
+Why did I leave
+Chasing the clouds if I'm afraid of the sky?
+Why did I leave chasing the clouds if I'm afraid of the sky?`
+    }
+  },
+  {
     id: "te-burlaste-de-mi-esme",
     title: "Te Burlaste de Mi",
     artist: "Esme",
