@@ -10307,6 +10307,7 @@ Oh, oh, oh, oh, oh`,
     tags: ["Sensual"],
     color: "#9b1c1c",
     spotify: "https://open.spotify.com/search/Entre%20Los%20Dos%20sP%20Polanco%20Karlos%20Rose",
+    danceVideo: "Ms-WsBoEMUU",
     culture: {
       context: "Sortie en janvier 2019, 'Entre Los Dos' fait partie du projet BCHTA RISING produit par sP Polanco. Le morceau a été co-écrit par Pedro Polanco, Israel Palma, Carlos Manuel De La Rosa et Luis Daniel Reyes Alacantara. Il est devenu un classique des festivals de bachata internationaux.",
       meaning: "Une déclaration d'amour et de complicité : ce qui se passe 'entre les deux' est unique et irremplaçable. Un titre romantique qui célèbre l'intimité d'un couple.",
