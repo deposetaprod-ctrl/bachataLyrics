@@ -1,5 +1,237 @@
 export const songs = [
   {
+    id: "mi-plan-prince-royce",
+    title: "Mi Plan",
+    artist: "Prince Royce & Romeo Santos",
+    year: 2025,
+    dateAdded: "2026-07-27",
+    tags: ["Complot", "Trahison", "Jalousie"],
+    color: "#9333ea",
+    spotify: "https://open.spotify.com/search/Mi%20Plan%20Prince%20Royce",
+    danceVideo: "LYzfxGSV4bA",
+    culture: {
+      context: "Issue de l'album collaboratif 'Better Late Than Never' sorti en novembre 2025, 'Mi Plan' réunit deux des plus grandes stars de la bachata : Prince Royce et Romeo Santos. Cette chanson raconte l'histoire d'un plan machiavélique pour séparer un couple.",
+      meaning: "Les paroles décrivent la tentative calculée et manipulatrice du narrateur pour saboter la relation de la femme qu'il aime. Il crée de faux comptes sur les réseaux sociaux pour accuser le petit ami actuel d'infidélité, et répand des mensonges ('Lo difamo con malicia y falacias'). Il joue le rôle de l'ami confident qui la console après leurs disputes, alors qu'il en est l'instigateur. La chanson explore l'obsession et l'amour toxique, où le narrateur n'a aucune morale ni empathie envers son rival, tant qu'il peut l'avoir dans ses bras.",
+      artistInfo: "Prince Royce et Romeo Santos (souvent surnommé le Roi de la Bachata) sont deux figures emblématiques de la bachata moderne. Leur collaboration sur l'album 'Better Late Than Never' était très attendue et marque un événement majeur dans l'histoire de la bachata.",
+      album: "Better Late Than Never"
+    },
+    culture_en: {
+      context: "Featured on the collaborative album 'Better Late Than Never' released in November 2025, 'Mi Plan' reunites two of the biggest stars in bachata: Prince Royce and Romeo Santos. The song tells the story of a Machiavellian plot to break up a couple.",
+      meaning: "The lyrics describe the narrator's calculated and manipulative attempt to sabotage the relationship of the woman he loves. He creates fake social media accounts to falsely accuse her current boyfriend of infidelity, and spreads lies ('Lo difamo con malicia y falacias'). He plays the role of the confidant friend who consoles her after their fights, even though he is the instigator. The song explores themes of obsession and toxic love, where the narrator shows no moral concern or empathy for his rival, as long as he gets the woman in his arms.",
+      artistInfo: "Prince Royce and Romeo Santos (often referred to as the King of Bachata) are two iconic figures in modern bachata. Their collaboration on 'Better Late Than Never' was highly anticipated by fans of the genre and marks a major event in bachata history.",
+      album: "Better Late Than Never"
+    },
+    lyrics: {
+      es: `[Intro]
+New York City
+We plotted
+
+[Verso 1]
+El mensaje por WhatsApp que redacté
+Ni lo envié, no estaba sola
+De la zona de amistad quiero salir
+Decían mis párrafos
+¿Cómo le cuento a mi amiga este secreto de amor?
+Cuando la veo feliz con él
+Por dentro me está matando
+Mis metamensajes a punto de esclarecer
+Le dirán que la estoy amando
+Listen
+
+[Coro]
+Otra noche en mi diligencia
+Voy a prestarle mi hombro y la iré consolando
+Si supiera, no es coincidencia que terminan peleando
+Y soy yo instigando
+De una cuenta falsa, invento que es infiel
+Lo difamo con malicia y falacias
+Le siembro dudas maquiavélicas, qué cruel
+El plan que tengo es que lo deje
+Va a caer en mi trampa
+
+[Interludio]
+Otra noche en mi diligencia
+Voy a prestarle mi hombro y la iré consolando
+
+[Verso 2]
+Estos celos me intoxican
+Puede ser que su novio ya lo nota
+Es indudable, no soy del agrado de él
+Algo común en los dos
+Ya que le estoy oliendo a envidia
+Voy a acelerar mi misión
+La debo intentar de convencer que la está engañando
+Aquí no hay moral ni empatía hacia él
+La quiero en mis brazos
+
+[Coro]
+Otra noche en mi diligencia
+Voy a prestarle mi hombro y la iré consolando
+Si supiera, no es coincidencia
+Que terminan peleando y soy yo instigando
+De una cuenta falsa, invento que es infiel
+Lo difamo con malicia y falacias
+Le siembro dudas maquiavélicas, qué cruel
+El plan que tengo es que lo deje, va a caer en mi trampa
+
+[Interludio]
+Otra noche en mi diligencia
+Voy a prestarle mi hombro y la iré consolando
+Si supiera, no es coincidencia
+Que terminan peleando, y soy yo instigando
+
+[Outro]
+This is Royalty
+Better Late Than Never
+Ajá
+And I know that my plan is so shady
+But what can I say? I'm in too deep
+If she found out, she'd probably hate me
+But like I said, I'm in too deep
+And I know that my plan is so shady
+But what can I say? I'm in too deep
+If she found out, she'd probably hate me`,
+      fr: `[Intro]
+New York City
+Nous avons comploté
+
+[Couplet 1]
+Le message sur WhatsApp que j'ai rédigé
+Je ne l'ai même pas envoyé, elle n'était pas seule
+Je veux sortir de la zone d'amitié (friendzone)
+Disaient mes paragraphes
+Comment avouer à mon amie ce secret d'amour ?
+Quand je la vois heureuse avec lui
+À l'intérieur ça me tue
+Mes méta-messages sur le point d'être clairs
+Lui diront que je l'aime
+Écoute
+
+[Refrain]
+Une autre nuit dans ma démarche
+Je vais lui prêter mon épaule et j'irai la consoler
+Si elle savait, ce n'est pas une coïncidence qu'ils finissent par se disputer
+Et c'est moi qui instigue
+D'un faux compte, j'invente qu'il est infidèle
+Je le diffame avec malice et mensonges
+Je lui sème des doutes machiavéliques, quel cruel
+Le plan que j'ai est qu'elle le quitte
+Elle va tomber dans mon piège
+
+[Interlude]
+Une autre nuit dans ma démarche
+Je vais lui prêter mon épaule et j'irai la consoler
+
+[Couplet 2]
+Cette jalousie m'intoxique
+Il se peut que son petit ami le remarque déjà
+C'est indubitable, il ne m'apprécie pas
+Quelque chose de commun entre nous deux
+Puisque je sens qu'il a de l'envie
+Je vais accélérer ma mission
+Je dois essayer de la convaincre qu'il la trompe
+Ici il n'y a ni morale ni empathie envers lui
+Je la veux dans mes bras
+
+[Refrain]
+Une autre nuit dans ma démarche
+Je vais lui prêter mon épaule et j'irai la consoler
+Si elle savait, ce n'est pas une coïncidence
+Qu'ils finissent par se disputer et c'est moi qui instigue
+D'un faux compte, j'invente qu'il est infidèle
+Je le diffame avec malice et mensonges
+Je lui sème des doutes machiavéliques, quel cruel
+Le plan que j'ai est qu'elle le quitte, elle va tomber dans mon piège
+
+[Interlude]
+Une autre nuit dans ma démarche
+Je vais lui prêter mon épaule et j'irai la consoler
+Si elle savait, ce n'est pas une coïncidence
+Qu'ils finissent par se disputer, et c'est moi qui instigue
+
+[Outro]
+C'est la Royauté
+Mieux vaut tard que jamais
+Aha
+Et je sais que mon plan est tellement louche
+Mais que puis-je dire ? Je suis allé trop loin
+Si elle le découvrait, elle me détesterait probablement
+Mais comme j'ai dit, je suis allé trop loin
+Et je sais que mon plan est tellement louche
+Mais que puis-je dire ? Je suis allé trop loin
+Si elle le découvrait, elle me détesterait probablement`,
+      en: `[Intro]
+New York City
+We plotted
+
+[Verse 1]
+The WhatsApp message that I drafted
+I didn't even send it, she wasn't alone
+I want to get out of the friendzone
+My paragraphs said
+How do I tell my friend this secret of love?
+When I see her happy with him
+Inside it's killing me
+My meta-messages about to clear up
+Will tell her that I'm loving her
+Listen
+
+[Chorus]
+Another night on my duty
+I'm going to lend her my shoulder and I will go console her
+If she only knew, it's no coincidence that they end up fighting
+And I'm the one instigating
+From a fake account, I make up that he's unfaithful
+I defame him with malice and fallacies
+I sow Machiavellian doubts in her, how cruel
+The plan I have is for her to leave him
+She's going to fall into my trap
+
+[Interlude]
+Another night on my duty
+I'm going to lend her my shoulder and I will go console her
+
+[Verse 2]
+This jealousy intoxicates me
+It could be that her boyfriend already notices it
+It's undeniable, I'm not to his liking
+Something common in both of us
+Since I'm smelling envy on him
+I'm going to accelerate my mission
+I have to try to convince her that he's cheating on her
+There's no morals or empathy towards him here
+I want her in my arms
+
+[Chorus]
+Another night on my duty
+I'm going to lend her my shoulder and I will go console her
+If she only knew, it's no coincidence
+That they end up fighting and I'm the one instigating
+From a fake account, I make up that he's unfaithful
+I defame him with malice and fallacies
+I sow Machiavellian doubts in her, how cruel
+The plan I have is for her to leave him, she's going to fall into my trap
+
+[Interlude]
+Another night on my duty
+I'm going to lend her my shoulder and I will go console her
+If she only knew, it's no coincidence
+That they end up fighting, and I'm the one instigating
+
+[Outro]
+This is Royalty
+Better Late Than Never
+Aha
+And I know that my plan is so shady
+But what can I say? I'm in too deep
+If she found out, she'd probably hate me
+But like I said, I'm in too deep
+And I know that my plan is so shady
+But what can I say? I'm in too deep
+If she found out, she'd probably hate me`
+    }
+  },
+  {
     id: "valkiria-montelier",
     title: "Valkiria",
     artist: "Montelier",
