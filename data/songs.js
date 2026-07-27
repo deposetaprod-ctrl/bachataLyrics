@@ -1,5 +1,391 @@
 export const songs = [
   {
+    id: "bachata-heightz-24-horas-no-te-dejo-de-pensar",
+    title: "No Te Dejo De Pensar",
+    artist: "Bachata Heightz ft. 24 Horas",
+    year: 2017,
+    dateAdded: "2026-07-27",
+    tags: ["Nostalgie", "Désir", "Insomnie", "Souvenirs"],
+    color: "#8b5cf6",
+    danceVideo: "vVecXH9NZNQ",
+    culture: {
+      context: "Sortie en 2017 sur l'album « Lost In The Music », cette collaboration entre les groupes Bachata Heightz et 24 Horas combine leurs styles vocaux uniques pour offrir une bachata urbaine empreinte de mélancolie.",
+      meaning: "La chanson explore l'obsession et le désir persistant envers un amour passé. Le protagoniste retourne sur les lieux de leur première rencontre, hanté par les souvenirs charnels et émotionnels qu'ils ont partagés. Incapable de tourner la page, il avoue être « condamné » à cet amour, perdant le sommeil face à l'impossibilité d'oublier cette connexion si intense.",
+      artistInfo: "Bachata Heightz et 24 Horas sont deux groupes majeurs de la scène bachata urbaine de New York. Leur musique intègre souvent des influences pop, R&B et hip-hop, s'éloignant des structures dominicaines traditionnelles pour toucher un public moderne."
+    },
+    culture_en: {
+      context: "Released in 2017 on the album \"Lost In The Music\", this collaboration between groups Bachata Heightz and 24 Horas combines their unique vocal styles to deliver an urban bachata steeped in melancholy.",
+      meaning: "The song explores obsession and lingering desire for a past love. The protagonist returns to the place where they first met, haunted by the physical and emotional memories they shared. Unable to move on, he confesses to being \"condemned\" to this love, losing sleep over the impossibility of forgetting such an intense connection.",
+      artistInfo: "Bachata Heightz and 24 Horas are two major groups from the New York urban bachata scene. Their music often incorporates pop, R&B, and hip-hop influences, moving away from traditional Dominican structures to reach a modern audience."
+    },
+    lyrics: {
+      es: `[Intro]
+Bachata Heightz
+Chia chia
+
+[Pre-Coro]
+Hoy me encuentro en el lugar donde te conocí
+Con la esperanza de verte de nuevo y poder repetir (los actos que hicimos esa noche)
+Pero sólo quedó la huella de los dos
+Los recuerdos en aquel motel
+Lo que hicimos tú y yo en mi mente quedó
+Y hoy de ti sólo tengo sed
+
+[Coro]
+Es que yo no dejo de pensar
+Las ganas que siento no es normal
+Estoy que me desvelo, yo por ti me muero
+Mami, yo no dejo de pensar
+Es que no te dejo de pensar
+Esto que yo siento no es normal
+Estoy que me desvelo, yo por ti me muero
+Mami, no te dejo de pensar
+
+[Interludio]
+Yeh
+Bachata Heightz
+Dime si a ti te gusta, bebé
+Chia chia
+24 Horas
+Once again
+
+[Pre-Coro]
+Hoy me encuentro en el lugar donde te conocí
+Con la esperanza de verte de nuevo y poder repetir (los actos que hicimos esa noche)
+Pero sólo quedó, la huella de los dos
+Los recuerdos en aquel motel
+Lo que hicimos tú y yo en mi mente quedó
+Y hoy de ti sólo tengo sed, sólo tengo sed
+
+[Coro]
+Es que yo no te dejo de pensar
+Las ganas que siento no es normal
+Estoy que me desvelo, yo por ti me muero
+Mami, yo no dejo de pensar
+Es que no te dejo de pensar
+Esto que yo siento no es normal
+Estoy que me desvelo, yo por ti me muero
+Mami, no te dejo de pensar
+
+[Verso 1]
+No puedo ni tampoco quiero
+Olvidarme y superar lo que pasó entre los dos
+Mis sentimientos fueron sinceros
+Me tienes condenado a tu amor
+Eres la razón de mi desvelo
+Quisiera repetir lo que sucedió
+Mis sentimientos fueron sinceros
+Me tienes condenado a tu amor
+
+[Coro]
+Es que no te dejo de pensar
+Las ganas que siento no es normal
+Estoy que me desvelo, yo por ti me muero
+Mami, yo no dejo de pensar
+Es que no te dejo de pensar
+Esto que yo siento no es normal
+Estoy que me desvelo, yo por ti me muero
+Mami, no te dejo de pensar`,
+      fr: `[Intro]
+Bachata Heightz
+Chia chia
+
+[Pre-Coro]
+Aujourd'hui je me trouve à l'endroit où je t'ai rencontrée
+Avec l'espoir de te revoir et de pouvoir répéter (les actes que nous avons faits cette nuit-là)
+Mais il n'est resté que la trace de nous deux
+Les souvenirs dans ce motel
+Ce que toi et moi avons fait est resté dans mon esprit
+Et aujourd'hui je n'ai soif que de toi
+
+[Coro]
+C'est que je n'arrête pas de penser
+L'envie que je ressens n'est pas normale
+J'en perds le sommeil, je meurs d'envie de toi
+Bébé, je n'arrête pas de penser
+C'est que je n'arrête pas de penser à toi
+Ce que je ressens n'est pas normal
+J'en perds le sommeil, je meurs d'envie de toi
+Bébé, je n'arrête pas de penser à toi
+
+[Interludio]
+Yeh
+Bachata Heightz
+Dis-moi si tu aimes ça, bébé
+Chia chia
+24 Horas
+Encore une fois
+
+[Pre-Coro]
+Aujourd'hui je me trouve à l'endroit où je t'ai rencontrée
+Avec l'espoir de te revoir et de pouvoir répéter (les actes que nous avons faits cette nuit-là)
+Mais il n'est resté que la trace de nous deux
+Les souvenirs dans ce motel
+Ce que toi et moi avons fait est resté dans mon esprit
+Et aujourd'hui je n'ai soif que de toi, je n'ai soif que de toi
+
+[Coro]
+C'est que je n'arrête pas de penser à toi
+L'envie que je ressens n'est pas normale
+J'en perds le sommeil, je meurs d'envie de toi
+Bébé, je n'arrête pas de penser
+C'est que je n'arrête pas de penser à toi
+Ce que je ressens n'est pas normal
+J'en perds le sommeil, je meurs d'envie de toi
+Bébé, je n'arrête pas de penser à toi
+
+[Verso 1]
+Je ne peux pas et je ne veux pas non plus
+Oublier et surmonter ce qui s'est passé entre nous deux
+Mes sentiments étaient sincères
+Tu m'as condamné à ton amour
+Tu es la raison de mon insomnie
+J'aimerais répéter ce qui s'est passé
+Mes sentiments étaient sincères
+Tu m'as condamné à ton amour
+
+[Coro]
+C'est que je n'arrête pas de penser à toi
+L'envie que je ressens n'est pas normale
+J'en perds le sommeil, je meurs d'envie de toi
+Bébé, je n'arrête pas de penser
+C'est que je n'arrête pas de penser à toi
+Ce que je ressens n'est pas normal
+J'en perds le sommeil, je meurs d'envie de toi
+Bébé, je n'arrête pas de penser à toi`,
+      en: `[Intro]
+Bachata Heightz
+Chia chia
+
+[Pre-Coro]
+Today I find myself in the place where I met you
+With the hope of seeing you again and being able to repeat (the things we did that night)
+But only the trace of us two remained
+The memories in that motel
+What you and I did stayed in my mind
+And today I only thirst for you
+
+[Coro]
+It's just that I can't stop thinking
+The desire I feel is not normal
+I'm losing sleep over it, I'm dying for you
+Baby, I can't stop thinking
+It's just that I can't stop thinking about you
+What I feel is not normal
+I'm losing sleep over it, I'm dying for you
+Baby, I can't stop thinking about you
+
+[Interludio]
+Yeah
+Bachata Heightz
+Tell me if you like it, baby
+Chia chia
+24 Horas
+Once again
+
+[Pre-Coro]
+Today I find myself in the place where I met you
+With the hope of seeing you again and being able to repeat (the things we did that night)
+But only the trace of us two remained
+The memories in that motel
+What you and I did stayed in my mind
+And today I only thirst for you, I only thirst for you
+
+[Coro]
+It's just that I can't stop thinking about you
+The desire I feel is not normal
+I'm losing sleep over it, I'm dying for you
+Baby, I can't stop thinking
+It's just that I can't stop thinking about you
+What I feel is not normal
+I'm losing sleep over it, I'm dying for you
+Baby, I can't stop thinking about you
+
+[Verso 1]
+I can't and I don't want to either
+Forget and get over what happened between us two
+My feelings were sincere
+You have me condemned to your love
+You are the reason for my sleeplessness
+I would like to repeat what happened
+My feelings were sincere
+You have me condemned to your love
+
+[Coro]
+It's just that I can't stop thinking about you
+The desire I feel is not normal
+I'm losing sleep over it, I'm dying for you
+Baby, I can't stop thinking
+It's just that I can't stop thinking about you
+What I feel is not normal
+I'm losing sleep over it, I'm dying for you
+Baby, I can't stop thinking about you`
+    }
+  },
+  {
+    id: "eterno-depresion",
+    title: "Depresion",
+    artist: "Eterno",
+    year: 2015,
+    dateAdded: "2026-07-27",
+    tags: ["Dépression", "Rupture", "Solitude", "Oubli"],
+    color: "#475569",
+    danceVideo: "1A1YpNvn_RM",
+    culture: {
+      context: "Sorti en 2015, ce morceau du groupe Eterno (écrit par Michael Medina) s'inscrit dans la pure tradition de la bachata : chanter le cœur brisé et la souffrance amoureuse. La chanson aborde la difficulté de tourner la page après une rupture destructrice.",
+      meaning: "Les paroles expriment une profonde douleur émotionnelle et un sentiment de perte de soi. Le protagoniste s'est oublié pour aimer l'autre, et se retrouve aujourd'hui seul et en dépression. Il prend la décision difficile mais nécessaire d'arrêter de pleurer, d'oublier cette personne et de sortir de ce « nuage gris ».",
+      artistInfo: "Eterno est un groupe de bachata qui s'est fait connaître dans les années 2010. Leur style musical dramatique et mélancolique résonne fortement avec les thèmes classiques de la musique dominicaine."
+    },
+    culture_en: {
+      context: "Released in 2015, this track by the group Eterno (written by Michael Medina) is deeply rooted in the pure bachata tradition of singing about heartbreak and romantic suffering. The song addresses the difficulty of moving on after a destructive breakup.",
+      meaning: "The lyrics express profound emotional pain and a feeling of losing oneself. The protagonist forgot about himself to love the other, and now finds himself alone and depressed. He makes the difficult but necessary decision to stop crying, forget this person, and step out of this 'gray cloud'.",
+      artistInfo: "Eterno is a bachata group that gained recognition in the 2010s. Their dramatic and melancholic musical style strongly resonates with the classic themes of Dominican music."
+    },
+    lyrics: {
+      es: `[Verso 1]
+Me olvide de mi
+por amarte a ti
+y aun asi
+hoy no estas aqui
+como puede ser
+que por ti mujer
+ya no soy aquel
+quien yo era ayer
+
+[Pre-Coro]
+me humillo al llorarte a ti
+hoy mis llantos se agotaron por fin
+
+[Coro]
+porque ya no quiero mas estar en soledad
+en depresion
+no quiero escuchar canciones las que
+te lloro
+me tengo que olvidar de ti, yo
+me tengo que olvidar de ti
+
+[Verso 2]
+me olvide de mi
+por amarte asi
+quise resistir
+esfuerzo inutil
+
+[Pre-Coro]
+me humillo al llorarte a ti
+hoy mis llantos se agotaron por fin
+
+[Coro]
+porque ya no quiero mas estar en soledad
+en depresion
+no quiero escuchar canciones las que
+te lloro
+me tengo que olvidar de ti, yo
+me tengo que olvidar de ti
+me tengo que olvidar de ti
+me tengo que olvidar de ti
+
+[Outro]
+me olvide de ti
+pude resurgir
+esta nube gris
+no me podra perseguir`,
+      fr: `[Verso 1]
+Je m'étais oublié
+Pour t'aimer
+Et malgré cela
+Aujourd'hui tu n'es pas là
+Comment est-ce possible
+Que pour toi, femme
+Je ne sois plus celui
+Que j'étais hier
+
+[Pre-Coro]
+Je m'humilie en pleurant pour toi
+Aujourd'hui, mes larmes se sont enfin taries
+
+[Coro]
+Parce que je ne veux plus être dans la solitude
+En dépression
+Je ne veux plus écouter les chansons sur lesquelles
+Je te pleure
+Je dois t'oublier, je
+Je dois t'oublier
+
+[Verso 2]
+Je m'étais oublié
+Pour t'aimer ainsi
+J'ai voulu résister
+Effort inutile
+
+[Pre-Coro]
+Je m'humilie en pleurant pour toi
+Aujourd'hui, mes larmes se sont enfin taries
+
+[Coro]
+Parce que je ne veux plus être dans la solitude
+En dépression
+Je ne veux plus écouter les chansons sur lesquelles
+Je te pleure
+Je dois t'oublier, je
+Je dois t'oublier
+Je dois t'oublier
+Je dois t'oublier
+
+[Outro]
+Je t'ai oubliée
+J'ai pu renaître
+Ce nuage gris
+Ne pourra plus me poursuivre`,
+      en: `[Verso 1]
+I forgot about myself
+For loving you
+And still
+You're not here today
+How could it be
+That for you woman
+I'm not that
+That I was yesterday
+
+[Pre-Coro]
+I humiliate myself to cry for you
+Today, my sobbings had come to an end
+
+[Coro]
+Because I do not want to be in the loneliness
+In depression
+I don't want to hear the songs that
+I cry
+I have to forget you, I
+Have to forget you
+
+[Verso 2]
+I forgot about myself
+To love you
+I wanted to resist
+Useless struggle
+
+[Pre-Coro]
+I humiliate myself to cry for you
+Today, my sobbings had come to an end
+
+[Coro]
+Because I do not want to be in the loneliness
+In depression
+I don't want to hear the songs that
+I cry
+I have to forget you, I
+Have to forget you
+Have to forget you
+Have to forget you
+
+[Outro]
+I forgot about you
+I could resurge
+This gray cloud
+Can't chase me`
+    }
+  },
+  {
     id: "cant-find-love-jean-dr",
     title: "Can't Find Love",
     artist: "Jean (DR)",
