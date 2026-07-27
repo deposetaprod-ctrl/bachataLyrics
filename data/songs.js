@@ -1,5 +1,240 @@
 export const songs = [
   {
+    id: "cant-find-love-jean-dr",
+    title: "Can't Find Love",
+    artist: "Jean (DR)",
+    year: 2014,
+    dateAdded: "2026-07-27",
+    tags: ["Peur de l'engagement", "Cœur brisé", "Spanglish", "Solitude"],
+    color: "#4f46e5",
+    danceVideo: "JDTRzWGdTWg",
+    culture: {
+      context: "Sortie en 2014, « Can't Find Love » de Jean (DR) est devenue un grand classique des soirées de bachata. Mêlant habilement l'anglais et l'espagnol (Spanglish), ce titre de bachata moderne s'inspire fortement du RnB américain tout en gardant une base rythmique entraînante.",
+      meaning: "Les paroles racontent l'histoire d'un homme qui, malgré ses nombreuses aventures d'un soir, se sent profondément vide et seul. Il rêve de vivre le véritable amour, mais est paralysé par une grande peur de souffrir ou d'être trahi. Dès que la romance devient sérieuse, il panique et fuit ses propres émotions.",
+      artistInfo: "Jean (DR) est un artiste qui a marqué le milieu de la bachata dans les années 2010 en y intégrant un flow urbain et bilingue très apprécié par les danseurs."
+    },
+    culture_en: {
+      context: "Released in 2014, \"Can't Find Love\" by Jean (DR) became a major classic in bachata socials. Skillfully blending English and Spanish (Spanglish), this modern bachata track draws heavy inspiration from American R&B while keeping a catchy rhythmic foundation.",
+      meaning: "The lyrics tell the story of a man who, despite his many casual encounters, feels deeply empty and lonely. He dreams of experiencing true love, but is paralyzed by a profound fear of getting hurt or betrayed. As soon as the romance gets serious, he panics and runs away from his own emotions.",
+      artistInfo: "Jean (DR) is an artist who left his mark on the bachata scene in the 2010s by integrating a highly appreciated bilingual, urban flow."
+    },
+    lyrics: {
+      es: `[Verso 1]
+Varias mujeres conocieron la escena, de mi cuarto
+Pero ninguna ha llenado el vacío en mi interior
+Es tan difícil para mi entregarte mi corazón
+Ay como quisiera poder enamorarme en total pasión
+
+[Pre-Coro]
+Cansado de caminar
+Sin alguien a quien amar
+Yo me quiero enamorar
+Y si pudiera encontrar
+Esa persona ideal
+A quien mi amor entregar
+
+[Coro]
+Cuz I
+Can't find love I can't trust no one
+With my heart with my heart
+Aunque
+Quiero sentir it's so hard for me to trust love
+
+[Interludio]
+Once again
+It's Jean
+2 Strong
+Javier
+Let it Rock
+
+[Verso 2]
+A veces me encierro en mi cuarto a imaginar en el perfecto amor
+Como la llevaría al cine o a cenar y darle mi atención
+Pero de una vez reacciona mi corazón
+Y como un cobarde yo le corro a mi emoción
+
+[Pre-Coro]
+Cansado de caminar
+Sin alguien a quien amar
+Yo me quiero enamorar
+Y si pudiera encontrar
+Esa persona ideal
+A quien mi amor entregar
+
+[Coro]
+Cuz I
+Can't find love I can't trust no one
+With my heart with my heart
+Aunque
+Quiero sentir it's so hard for me to trust love
+
+[Puente]
+Cuz I
+Can't find love I can't trust no one
+With my heart trust no one
+Aunque
+Quiero sentir it's so hard for me to trust love
+
+[Coro]
+Cuz I
+Can't find love I can't trust no one
+With my heart with my heart
+Aunque
+Quiero sentir it's so hard for me to trust love
+
+[Outro]
+Cuz I
+Can't find love I can't trust no one
+With my heart trust no one
+Aunque
+Quiero sentir it's so hard for me to trust love
+
+Can't find love trust no one (x's 5)`,
+      fr: `[Verso 1]
+Plusieurs femmes ont connu le décor, de ma chambre
+Mais aucune n'a comblé le vide à l'intérieur de moi
+C'est si difficile pour moi de te livrer mon cœur
+Oh comme j'aimerais pouvoir tomber amoureux avec une passion totale
+
+[Pre-Coro]
+Fatigué de marcher
+Sans personne à aimer
+Je veux tomber amoureux
+Et si seulement je pouvais trouver
+Cette personne idéale
+À qui confier mon amour
+
+[Coro]
+Parce que je
+Ne trouve pas l'amour, je ne peux faire confiance à personne
+Avec mon cœur, avec mon cœur
+Bien que
+Je veuille ressentir, c'est si dur pour moi de faire confiance à l'amour
+
+[Interludio]
+Encore une fois
+C'est Jean
+2 Strong
+Javier
+Faisons vibrer ça
+
+[Verso 2]
+Parfois je m'enferme dans ma chambre pour imaginer l'amour parfait
+Comment je l'emmènerais au cinéma ou dîner et lui donnerais toute mon attention
+Mais tout d'un coup mon cœur réagit
+Et comme un lâche je fuis mes propres émotions
+
+[Pre-Coro]
+Fatigué de marcher
+Sans personne à aimer
+Je veux tomber amoureux
+Et si seulement je pouvais trouver
+Cette personne idéale
+À qui confier mon amour
+
+[Coro]
+Parce que je
+Ne trouve pas l'amour, je ne peux faire confiance à personne
+Avec mon cœur, avec mon cœur
+Bien que
+Je veuille ressentir, c'est si dur pour moi de faire confiance à l'amour
+
+[Puente]
+Parce que je
+Ne trouve pas l'amour, je ne peux faire confiance à personne
+Avec mon cœur, ne faire confiance à personne
+Bien que
+Je veuille ressentir, c'est si dur pour moi de faire confiance à l'amour
+
+[Coro]
+Parce que je
+Ne trouve pas l'amour, je ne peux faire confiance à personne
+Avec mon cœur, avec mon cœur
+Bien que
+Je veuille ressentir, c'est si dur pour moi de faire confiance à l'amour
+
+[Outro]
+Parce que je
+Ne trouve pas l'amour, je ne peux faire confiance à personne
+Avec mon cœur, ne faire confiance à personne
+Bien que
+Je veuille ressentir, c'est si dur pour moi de faire confiance à l'amour
+
+Ne pas trouver l'amour, ne faire confiance à personne (x 5)`,
+      en: `[Verso 1]
+Several women have known the scene, of my room
+But none has filled the emptiness inside of me
+It's so hard for me to surrender my heart to you
+Oh how I wish I could fall in love with total passion
+
+[Pre-Coro]
+Tired of walking
+Without someone to love
+I want to fall in love
+And if only I could find
+That ideal person
+To whom I could give my love
+
+[Coro]
+Cuz I
+Can't find love I can't trust no one
+With my heart with my heart
+Even though
+I want to feel it's so hard for me to trust love
+
+[Interludio]
+Once again
+It's Jean
+2 Strong
+Javier
+Let it Rock
+
+[Verso 2]
+Sometimes I lock myself in my room to imagine the perfect love
+How I would take her to the movies or dinner and give her my attention
+But suddenly my heart reacts
+And like a coward I run away from my emotion
+
+[Pre-Coro]
+Tired of walking
+Without someone to love
+I want to fall in love
+And if only I could find
+That ideal person
+To whom I could give my love
+
+[Coro]
+Cuz I
+Can't find love I can't trust no one
+With my heart with my heart
+Even though
+I want to feel it's so hard for me to trust love
+
+[Puente]
+Cuz I
+Can't find love I can't trust no one
+With my heart trust no one
+Even though
+I want to feel it's so hard for me to trust love
+
+[Coro]
+Cuz I
+Can't find love I can't trust no one
+With my heart with my heart
+Even though
+I want to feel it's so hard for me to trust love
+
+[Outro]
+Cuz I
+Can't find love I can't trust no one
+With my heart trust no one
+Even though
+I want to feel it's so hard for me to trust love
+
+Can't find love trust no one (x's 5)`
+    }
+  },
+  {
     id: "mi-plan-prince-royce",
     title: "Mi Plan",
     artist: "Prince Royce & Romeo Santos",
