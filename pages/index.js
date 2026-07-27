@@ -32,6 +32,7 @@ export default function Home() {
   const [user, setUser] = useState(null);
   const [supabaseClient, setSupabaseClient] = useState(null);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [allSongs, setAllSongs] = useState(songs);
 
   useEffect(() => {
     const savedFavs = localStorage.getItem('favSongs');
@@ -50,6 +51,11 @@ export default function Home() {
         client.auth.getSession().then(({ data: { session } }) => {
           setUser(session?.user ?? null);
         });
+        client.from('songs').select('*').then(({ data, error }) => {
+          if (data && !error) {
+            setAllSongs([...songs, ...data]);
+          }
+        });
         const { data: { subscription } } = client.auth.onAuthStateChange((_event, session) => {
           setUser(session?.user ?? null);
         });
@@ -61,8 +67,8 @@ export default function Home() {
   // Song of the day logic (deterministic based on date)
   const today = new Date();
   const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-  const dailySongIndex = dateSeed % songs.length;
-  const dailySong = songs[dailySongIndex];
+  const dailySongIndex = dateSeed % allSongs.length;
+  const dailySong = allSongs[dailySongIndex];
 
   const toggleFav = (id, e) => {
     e.stopPropagation();
@@ -74,12 +80,12 @@ export default function Home() {
   };
 
   // Collect all unique tags
-  const allTags = [...new Set(songs.flatMap((s) => s.tags))];
+  const allTags = [...new Set(allSongs.flatMap((s) => s.tags || []))];
 
   // Collect all unique artists
-  const allArtists = [...new Set(songs.flatMap((s) => extractArtists(s.artist)))].sort((a, b) => a.localeCompare(b));
+  const allArtists = [...new Set(allSongs.flatMap((s) => extractArtists(s.artist)))].sort((a, b) => a.localeCompare(b));
 
-  const filtered = songs.filter((song) => {
+  const filtered = allSongs.filter((song) => {
     const q = search.toLowerCase();
     const matchSearch =
       !q ||
@@ -156,8 +162,8 @@ export default function Home() {
               "@type": "ItemList",
               "name": "Paroles de Bachata",
               "description": "Collection de paroles de bachata traduites en français",
-              "numberOfItems": songs.length,
-              "itemListElement": songs.slice(0, 20).map((song, index) => ({
+              "numberOfItems": allSongs.length,
+              "itemListElement": allSongs.slice(0, 20).map((song, index) => ({
                 "@type": "ListItem",
                 "position": index + 1,
                 "url": `https://bachatalyrics.com/song/${song.id}`,
@@ -244,7 +250,7 @@ export default function Home() {
           className="hover-scale"
         >
           <span style={{ color: 'var(--accent)' }}>🎯 {locale === 'en' ? 'Goals :' : 'Objectifs :'}</span>
-          <span>{masteredSongs.length} / {songs.length} {locale === 'en' ? 'mastered' : 'maîtrisés'}</span>
+          <span>{masteredSongs.length} / {allSongs.length} {locale === 'en' ? 'mastered' : 'maîtrisés'}</span>
           <span style={{ marginLeft: '8px', opacity: 0.6 }}>{locale === 'en' ? 'See all →' : 'Voir tout →'}</span>
         </div>
 
@@ -355,18 +361,18 @@ export default function Home() {
                 borderRadius: '999px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)'
               }}>
                 <div style={{ 
-                  width: `${(masteredSongs.length / songs.length) * 100}%`, 
+                  width: `${allSongs.length > 0 ? (masteredSongs.length / allSongs.length) * 100 : 0}%`, 
                   height: '100%', background: 'linear-gradient(90deg, #c026d3, #7c3aed)',
                   transition: 'width 1s cubic-bezier(0.4, 0, 0.2, 1)'
                 }} />
               </div>
               <div style={{ marginTop: '8px', fontSize: '0.85rem', fontWeight: 700, opacity: 0.8 }}>
-                {masteredSongs.length} sur {songs.length} chansons apprises ({Math.round((masteredSongs.length / songs.length) * 100)}%)
+                {masteredSongs.length} sur {allSongs.length} chansons apprises ({allSongs.length > 0 ? Math.round((masteredSongs.length / allSongs.length) * 100) : 0}%)
               </div>
             </div>
 
             <div style={{ display: 'grid', gap: '12px' }}>
-              {songs.map(song => {
+              {allSongs.map(song => {
                 const isMastered = masteredSongs.includes(song.id);
                 return (
                   <div 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createClient } from '@supabase/supabase-js';
 import { useRouter } from 'next/router';
 import { useTranslation } from '../../utils/translations';
 import Head from 'next/head';
@@ -13,12 +14,29 @@ import AuthModal from '../../components/AuthModal';
 
 export async function getStaticPaths() {
   const paths = songs.map((s) => ({ params: { id: s.id } }));
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 }
 
 export async function getStaticProps({ params }) {
-  const song = songs.find((s) => s.id === params.id) || null;
-  return { props: { song } };
+  let song = songs.find((s) => s.id === params.id) || null;
+
+  if (!song) {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    if (supabaseUrl && supabaseKey) {
+      const supabase = createClient(supabaseUrl, supabaseKey);
+      const { data, error } = await supabase.from('songs').select('*').eq('id', params.id).single();
+      if (data && !error) {
+        song = data;
+      }
+    }
+  }
+
+  if (!song) {
+    return { notFound: true };
+  }
+
+  return { props: { song }, revalidate: 60 };
 }
 
 export default function SongPage({ song }) {
