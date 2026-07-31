@@ -1,5 +1,243 @@
 export const songs = [
   {
+    id: "romeo-santos-eres-mia",
+    title: "Eres Mía",
+    artist: "Romeo Santos",
+    year: 2014,
+    dateAdded: "2026-08-01",
+    tags: ["Possessivité", "Passion", "Jalousie", "Séduction"],
+    color: "#e11d48",
+    spotify: "https://open.spotify.com/search/Eres%20Mia%20Romeo%20Santos",
+    danceVideo: "snngeGN1ySI",
+    culture: {
+      context: "Sorti en 2014 sur l'album phare « Formula, Vol. 2 », « Eres Mía » est l'un des plus grands succès solo de Romeo Santos. Accumulant plus d'un milliard de vues sur YouTube, la chanson a assis la suprématie de l'artiste au sommet de la bachata moderne à l'échelle internationale.",
+      meaning: "Le morceau explore le thème de la passion possessive et du désir persistant. Le narrateur s'adresse à une ancienne amante engagée dans une nouvelle relation avec un homme qu'il juge terne et sans passion. Convaincu qu'aucun autre ne pourra égaler leur alchimie, il affirme avec assurance qu'elle continue de lui appartenir au plus profond d'elle-même.",
+      artistInfo: "Surnommé « El Rey de la Bachata », Romeo Santos est l'ancien leader du groupe légendaire Aventura. Pionnier du genre bilingue et urbain, il a révolutionné la bachata en la fusionnant avec des sonorités RnB et pop, séduisant ainsi un public mondial.",
+      album: "Formula, Vol. 2"
+    },
+    culture_en: {
+      context: "Released in 2014 on the flagship album \"Formula, Vol. 2\", \"Eres Mía\" is one of Romeo Santos' biggest solo hits. Amassing over one billion views on YouTube, the song solidified the artist's supremacy at the forefront of global modern bachata.",
+      meaning: "The track explores themes of possessive passion and persistent desire. The narrator addresses a former lover currently in a new relationship with a man he considers dull and unpassionate. Convincingly asserting that no one else can match their chemistry, he confidently declares that she still belongs to him deep down.",
+      artistInfo: "Known as \"El Rey de la Bachata\", Romeo Santos is the former lead singer of the legendary group Aventura. A pioneer of urban, bilingual bachata, he transformed the genre by blending traditional rhythms with R&B and pop, bringing it to global mainstream popularity.",
+      album: "Formula, Vol. 2"
+    },
+    lyrics: {
+      es: `[Verso 1]
+Ya me han informado que tu novio es un insípido aburrido
+Tú que eres fogata y él tan frío
+Dice tu amiguita que es celoso, no quiere que sea tu amigo
+Sospecha que soy un pirata y robaré su flor
+
+[Coro]
+No te asombres si una noche
+Entro a tu cuarto y nuevamente te hago mía
+Bien conoces mis errores
+El egoísmo ha de ser dueño de tu vida
+Eres mía, mía, mía
+No te hagas la loca, eso muy bien ya lo sabías
+
+[Post-Coro]
+Si tú te casas
+El día de tu boda, le digo a tu esposo con risas
+Que solo es prestada la mujer que ama
+Porque sigues siendo mía (Mía, mía, mía)
+
+[Interludio]
+You won't forget Romeo
+Ah-ah
+Gostoso
+
+[Verso 2]
+Dicen que un clavo saca un clavo pero eso es solo rima
+No existe una herramienta que saque mi amor
+
+[Coro]
+No te asombres si una noche
+Entro a tu cuarto y nuevamente te hago mía
+Bien conoces mis errores
+El egoísmo ha de ser dueño de tu vida
+Eres mía, mía, mía
+No te hagas la loca, eso muy bien ya lo sabías
+
+[Post-Coro]
+Si tú te casas
+El día de tu boda, le digo a tu esposo con risas
+Que solo es prestada la mujer que ama
+Porque sigues siendo mía (Mía, mía, mía)
+
+[Interludio]
+Te deseo lo mejor
+Y el mejor soy yo
+The King
+
+[Puente]
+You know your heart is mine
+And you'll love me forever
+You know your heart is mine
+And you'll love me forever
+Baby, your heart is mine
+And you'll love me forever
+Baby, your heart is mine
+And you'll love me forever
+
+[Coro]
+No te asombres si una noche
+Entro a tu cuarto y nuevamente te hago mía
+Bien conoces mis errores
+El egoísmo ha de ser dueño de tu vida
+Eres mía, mía, mía, mía
+No te hagas la loca, eso muy bien ya lo sabías
+
+[Post-Coro]
+Si tú te casas
+El día de tu boda, le digo a tu esposo con risas (Jajajaja)
+Que solo es prestada la mujer que ama
+Porque sigues siendo mía`,
+      fr: `[Couplet 1]
+On m'a déjà informé que ton copain est un type fade et ennuyeux
+Toi qui es un feu ardent et lui si froid
+Ta copine dit qu'il est jaloux, il ne veut pas que je sois ton ami
+Il me soupçonne d'être un pirate et de lui voler sa fleur
+
+[Refrain]
+Ne te surprends pas si une nuit
+Je m'introduis dans ta chambre et te fais de nouveau mienne
+Tu connais bien mes travers
+L'égoïsme doit être le maître de ta vie
+Tu es à moi, à moi, à moi
+Ne fais pas l'insensée, tu le savais déjà très bien
+
+[Post-Refrain]
+Si tu te maries
+Le jour de ton mariage, je dirai à ton mari en riant
+Que la femme qu'il aime n'est que prêtée
+Parce que tu continues d'être à moi (À moi, à moi, à moi)
+
+[Interlude]
+Tu n'oublieras pas Romeo
+Ah-ah
+Gostoso (Délicieux)
+
+[Couplet 2]
+On dit qu'un clou chasse l'autre mais ce n'est qu'une rime
+Il n'existe aucun outil capable d'extirper mon amour
+
+[Refrain]
+Ne te surprends pas si une nuit
+Je m'introduis dans ta chambre et te fais de nouveau mienne
+Tu connais bien mes travers
+L'égoïsme doit être le maître de ta vie
+Tu es à moi, à moi, à moi
+Ne fais pas l'insensée, tu le savais déjà très bien
+
+[Post-Refrain]
+Si tu te maries
+Le jour de ton mariage, je dirai à ton mari en riant
+Que la femme qu'il aime n'est que prêtée
+Parce que tu continues d'être à moi (À moi, à moi, à moi)
+
+[Interlude]
+Je te souhaite le meilleur
+Et le meilleur c'est moi
+Le Roi
+
+[Pont]
+Tu sais que ton cœur m'appartient
+Et que tu m'aimeras pour toujours
+Tu sais que ton cœur m'appartient
+Et que tu m'aimeras pour toujours
+Bébé, ton cœur m'appartient
+Et tu m'aimeras pour toujours
+Bébé, ton cœur m'appartient
+Et tu m'aimeras pour toujours
+
+[Refrain]
+Ne te surprends pas si une nuit
+Je m'introduis dans ta chambre et te fais de nouveau mienne
+Tu connais bien mes travers
+L'égoïsme doit être le maître de ta vie
+Tu es à moi, à moi, à moi, à moi
+Ne fais pas l'insensée, tu le savais déjà très bien
+
+[Post-Refrain]
+Si tu te maries
+Le jour de ton mariage, je dirai à ton mari en riant (Hahaha)
+Que la femme qu'il aime n'est que prêtée
+Parce que tu continues d'être à moi`,
+      en: `[Verse 1]
+They already told me that your boyfriend is boring and bland
+You who are a bonfire and he's so cold
+Your friend says he's jealous, he doesn't want me to be your friend
+He suspects that I'm a pirate and I'll steal his flower
+
+[Chorus]
+Don't be surprised if one night
+I walk into your room and make you mine once again
+You know my flaws very well
+Selfishness will be the owner of your life
+You are mine, mine, mine
+Don't play crazy, you knew that very well already
+
+[Post-Chorus]
+If you get married
+On your wedding day, I'll tell your husband with a laugh
+That the woman he loves is only borrowed
+Because you are still mine (Mine, mine, mine)
+
+[Interlude]
+You won't forget Romeo
+Ah-ah
+Gostoso
+
+[Verse 2]
+They say that one nail drives out another nail, but that's just a rhyme
+There is no tool that can remove my love
+
+[Chorus]
+Don't be surprised if one night
+I walk into your room and make you mine once again
+You know my flaws very well
+Selfishness will be the owner of your life
+You are mine, mine, mine
+Don't play crazy, you knew that very well already
+
+[Post-Chorus]
+If you get married
+On your wedding day, I'll tell your husband with a laugh
+That the woman he loves is only borrowed
+Because you are still mine (Mine, mine, mine)
+
+[Interlude]
+I wish you the best
+And the best is me
+The King
+
+[Bridge]
+You know your heart is mine
+And you'll love me forever
+You know your heart is mine
+And you'll love me forever
+Baby, your heart is mine
+And you'll love me forever
+Baby, your heart is mine
+And you'll love me forever
+
+[Chorus]
+Don't be surprised if one night
+I walk into your room and make you mine once again
+You know my flaws very well
+Selfishness will be the owner of your life
+You are mine, mine, mine, mine
+Don't play crazy, you knew that very well already
+
+[Post-Chorus]
+If you get married
+On your wedding day, I'll tell your husband with a laugh (Hahaha)
+That the woman he loves is only borrowed
+Because you are still mine`
+    }
+  },
+  {
     id: "bachata-heightz-24-horas-no-te-dejo-de-pensar",
     title: "No Te Dejo De Pensar",
     artist: "Bachata Heightz ft. 24 Horas",
