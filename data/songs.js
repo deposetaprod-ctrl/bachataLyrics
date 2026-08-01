@@ -1,5 +1,213 @@
 export const songs = [
   {
+    id: "tutto-duran-santa-de-mi-devocion",
+    title: "Santa de Mi Devoción",
+    artist: "Tutto Durán",
+    year: 2021,
+    dateAdded: "2026-08-01",
+    tags: ["Dévotion", "Urbain", "Passion", "Flow"],
+    color: "#f59e0b",
+    danceVideo: "3KDHy-NFx_0",
+    culture: {
+      context: "Ce titre de bachata urbaine joue avec de nombreuses métaphores religieuses, une tendance populaire dans la musique latine moderne, porté par le flow caractéristique de Tutto Durán.",
+      meaning: "Le chanteur compare son amour pour une femme à une véritable religion. Fasciné par sa beauté (son « flow »), il se décrit comme un dévot qui trouve son paradis auprès d'elle, allant jusqu'à prier son corps comme un temple.",
+      artistInfo: "Tutto Durán est un artiste espagnol qui a gagné en popularité grâce à sa participation à des émissions de téléréalité et à son talent pour créer des rythmes urbains accrocheurs comme la bachata et le reggaeton."
+    },
+    culture_en: {
+      context: "This urban bachata track plays with many religious metaphors, a popular trend in modern Latin music, carried by Tutto Durán's characteristic flow.",
+      meaning: "The singer compares his love for a woman to a true religion. Fascinated by her beauty (her 'flow'), he describes himself as a devotee who finds his heaven with her, even praying to her body as a temple.",
+      artistInfo: "Tutto Durán is a Spanish artist who gained popularity through his participation in reality TV shows and his talent for creating catchy urban rhythms like bachata and reggaeton."
+    },
+    lyrics: {
+      es: `[Verso 1]
+Se volvió mi religión besarte
+Un devoto al verte desnudarte
+Amén por ese cuerpito 10
+Haciendo el bien en tu piel
+El cielo ya lo gané
+
+[Pre-Coro]
+Ay, amor
+Que tú eres santa de mi devoción
+Cuando me miras pierdo la razón
+Eres mi credo, eres mi religión, uoh
+
+[Coro]
+Tiene demasiado flow
+Demasiao bonita pa mi corazón
+Cuando me mira pierdo la razón
+Solo le rezo a su cuerpo, su boca es mi templo
+Y dema-demasiado flow
+Demasiao bonita pa mi corazón
+Cuando me mira pierdo la razón
+Solo le rezo a su cuerpo, su boca es mi templo
+
+[Hook]
+Demasiao bonita que está
+Pa hacerle mis cositas, ma
+Quiero el agua bendita
+Que caiga en mi boquita
+Demasiao bonita que está
+Pa hacerle mis cositas, ma
+Quiero el agua bendita
+Que caiga en mi boquita
+
+[Verso 2]
+Yo era ateo, pero ahora solo leo La biblia de tus deseos
+Quiero volver
+A pecar en el coche, a rezarle a la noche
+A arrepentirme solo pa besarte otra vez
+
+[Puente]
+Abúsame
+Quiero la penitencia
+Búscame
+Te pediré clemencia
+Abúsame, abúsame
+Que yo le rezaré a tu piel
+
+[Coro]
+Y tiene demasiado flow
+Demasiao bonita pa mi corazón
+Cuando me mira pierdo la razón
+Solo le rezo a su cuerpo, su boca es mi templo
+Y dema-demasiado flow
+Demasiao bonita pa mi corazón
+Cuando me mira pierdo la razón
+Solo le rezo a su cuerpo, su boca es mi templo
+
+[Outro]
+Abúsame
+Abúsame
+Tutto Durán, emocional
+DJ Class on the track`,
+      fr: `[Verso 1]
+T'embrasser est devenu ma religion
+Un dévot en te voyant te déshabiller
+Amen pour ce petit corps parfait (10)
+Faisant le bien sur ta peau
+J'ai déjà gagné le paradis
+
+[Pre-Coro]
+Oh, mon amour
+Tu es la sainte de ma dévotion
+Quand tu me regardes, je perds la raison
+Tu es mon credo, tu es ma religion, uoh
+
+[Coro]
+Elle a beaucoup trop de flow
+Trop jolie pour mon cœur
+Quand elle me regarde, je perds la raison
+Je ne prie que son corps, sa bouche est mon temple
+Et beau-beaucoup trop de flow
+Trop jolie pour mon cœur
+Quand elle me regarde, je perds la raison
+Je ne prie que son corps, sa bouche est mon temple
+
+[Hook]
+Qu'est-ce qu'elle est belle
+Pour lui faire mes petites choses, ma
+Je veux l'eau bénite
+Qu'elle tombe dans ma petite bouche
+Qu'est-ce qu'elle est belle
+Pour lui faire mes petites choses, ma
+Je veux l'eau bénite
+Qu'elle tombe dans ma petite bouche
+
+[Verso 2]
+J'étais athée, mais maintenant je ne lis que la bible de tes désirs
+Je veux revenir
+Pécher dans la voiture, prier la nuit
+Me repentir juste pour t'embrasser encore une fois
+
+[Puente]
+Abuse de moi
+Je veux la pénitence
+Cherche-moi
+Je te demanderai clémence
+Abuse de moi, abuse de moi
+Car je prierai ta peau
+
+[Coro]
+Et elle a beaucoup trop de flow
+Trop jolie pour mon cœur
+Quand elle me regarde, je perds la raison
+Je ne prie que son corps, sa bouche est mon temple
+Et beau-beaucoup trop de flow
+Trop jolie pour mon cœur
+Quand elle me regarde, je perds la raison
+Je ne prie que son corps, sa bouche est mon temple
+
+[Outro]
+Abuse de moi
+Abuse de moi
+Tutto Durán, émotionnel
+DJ Class sur la piste`,
+      en: `[Verso 1]
+It became my religion to kiss you
+A devotee to see you undress
+Amen for that little body 10
+Doing good on your skin
+I already won heaven
+
+[Pre-Coro]
+Oh, love
+That you are a saint of my devotion
+When you look at me I lose my mind
+You are my creed you are my religion uooohh!!
+
+[Coro]
+It has too much flow
+Too pretty for my heart
+When she looks at me I lose my mind
+I only pray to her body, her mouth is my temple
+Dema - Too much flow
+Too pretty for my heart
+When she looks at me I lose my mind
+I only pray to her body, her mouth is my temple
+
+[Hook]
+How beautiful you are
+To do my little things
+I want holy water
+Let it fall into my mouth
+How beautiful you are
+To do my little things
+I want holy water
+Let it fall into my mouth
+
+[Verso 2]
+I was an atheist but now I only read The Bible of your wishes
+I want to come back
+To sin in the car, to pray to the night
+Regret just to kiss you again
+
+[Puente]
+Abuse me
+I want penance
+Find me
+I will ask you for mercy
+Abuse me, abuse me
+That I will pray to your skin
+
+[Coro]
+And it has too much flow
+Too pretty for my heart
+When she looks at me I lose my mind
+I only pray to her body, her mouth is my temple
+And dema - too much flow
+Too pretty for my heart
+When she looks at me I lose my mind
+I only pray to her body, her mouth is my temple
+
+[Outro]
+Abuse me
+Abuse me
+Tutto durán, emotional
+DJ Class on the track`
+    }
+  },
+  {
     id: "romeo-santos-eres-mia",
     title: "Eres Mía",
     artist: "Romeo Santos",

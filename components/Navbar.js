@@ -33,6 +33,7 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
               onClick={() => router.push('/musicality')} 
               style={{ color: activePage === 'musicality' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}
             >{t('musicality')}</span>
+
             <span 
               onClick={() => router.push('/jack-and-jill')} 
               style={{ color: activePage === 'jnj' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}

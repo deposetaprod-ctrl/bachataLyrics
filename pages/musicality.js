@@ -6,8 +6,11 @@ import MusicalityHUD from '../components/MusicalityHUD';
 import MusicalityTheory from '../components/MusicalityTheory';
 import AuthModal from '../components/AuthModal';
 import Navbar from '../components/Navbar';
+import MicroMusicalite from '../components/MicroMusicalite';
+
 export default function MusicalityTrainer() {
   const router = useRouter();
+  const [isMicroMode, setIsMicroMode] = useState(false);
   const [markers, setMarkers] = useState([]);
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -45,8 +48,8 @@ export default function MusicalityTrainer() {
   useEffect(() => {
     if (typeof window !== 'undefined' && window.supabase) {
       const client = window.supabase.createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL || 'YOUR_SUPABASE_URL',
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'YOUR_SUPABASE_ANON_KEY'
+        process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co',
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder_key'
       );
       setSupabaseClient(client);
 
@@ -844,8 +847,26 @@ export default function MusicalityTrainer() {
             </div>
           )}
 
-
         </div>
+
+        {youtubeId && (
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }} className="animate-fade-in">
+            <div className="flex bg-neutral-900 rounded-lg p-1 border border-neutral-800 shadow-xl">
+              <button 
+                onClick={() => setIsMicroMode(false)}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${!isMicroMode ? "bg-indigo-600 text-white shadow-sm" : "text-neutral-400 hover:text-white"}`}
+              >
+                Macro (Morceau)
+              </button>
+              <button 
+                onClick={() => setIsMicroMode(true)}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 ${isMicroMode ? "bg-indigo-600 text-white shadow-sm" : "text-neutral-400 hover:text-white"}`}
+              >
+                🔬 Micro (Boucle)
+              </button>
+            </div>
+          </div>
+        )}
 
         {youtubeId && (
           <div className="player-section animate-fade-in glass">
@@ -861,8 +882,8 @@ export default function MusicalityTrainer() {
             )}
             
             <audio ref={audioRef} crossOrigin="anonymous" />
-
-            <div className="waveform-wrapper">
+            {!isMicroMode && (
+              <div className="waveform-wrapper">
               <div 
                 className={`waveform-container ${isDragging ? 'dragging' : ''}`} 
                 ref={waveformRef} 
@@ -957,8 +978,9 @@ export default function MusicalityTrainer() {
                 })}
               </div>
             </div>
+            )}
 
-              {(wavesurfer.current?.getDuration() > 0 || youtubeId || manualTimer) && (
+              {!isMicroMode && (wavesurfer.current?.getDuration() > 0 || youtubeId || manualTimer) && (
                 <div className="recording-console animate-fade-in glass">
                   <button 
                     className="instrument-btn bongo" 
@@ -1009,11 +1031,24 @@ export default function MusicalityTrainer() {
                 <p className="manual-hint">Lance la vidéo YouTube 👆 pour synchroniser ton écoute.</p>
               </div>
             )}
-            <div id="youtube-player-container" style={{ display: youtubePlayer && youtubeId ? 'block' : 'none', borderRadius: '16px', overflow: 'hidden', marginBottom: '32px' }}></div>
+            <div id="youtube-player-container" style={{ display: youtubePlayer && youtubeId && !isMicroMode ? 'block' : 'none', borderRadius: '16px', overflow: 'hidden', marginBottom: '32px' }}></div>
 
-            <div className="controls-row">
-              <button 
-                className={`btn-play-large ${isPlaying ? 'playing' : ''}`} 
+            {isMicroMode ? (
+              <MicroMusicalite 
+                youtubeId={youtubeId}
+                youtubePlayer={youtubePlayer}
+                currentTime={currentTime}
+                isPlaying={isPlaying}
+                togglePlay={togglePlay}
+                handleInstrumentClick={handleInstrumentClick}
+                markers={markers}
+              />
+            ) : (
+              <>
+                <div className="controls-row">
+                  <button 
+                    className={`btn-play-large ${isPlaying ? 'playing' : ''}`} 
+
                 onClick={togglePlay}
               >
                 {isPlaying ? (
@@ -1165,6 +1200,8 @@ export default function MusicalityTrainer() {
                 ))}
               </div>
               </div>
+            )}
+            </>
             )}
           </div>
         )}
