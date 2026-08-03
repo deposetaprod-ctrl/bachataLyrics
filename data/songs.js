@@ -1,5 +1,189 @@
 export const songs = [
   {
+    id: "24-horas-24-horas",
+    title: "24 Horas",
+    artist: "24 Horas",
+    year: 2010,
+    dateAdded: "2026-08-03",
+    tags: ["Désir", "Attraction", "Intimité", "Passion"],
+    color: "#f43f5e",
+    danceVideo: "8msvsOsdrUI",
+    culture: {
+      context: "Sorti en 2010 sur l'album « Los Inolvidables », ce morceau est l'un des titres phares du groupe 24 Horas, contribuant à populariser leur style de bachata urbaine infusée de R&B.",
+      meaning: "La chanson décrit une rencontre romantique où le chanteur exprime son désir intense d'être avec sa partenaire toute la nuit. Les paroles utilisent des métaphores comme « être dans mon esprit 24 heures » pour illustrer l'obsession et l'attraction passionnelle qu'il ressent.",
+      artistInfo: "24 Horas est un groupe de bachata urbaine originaire de New York, formé par Mickey Then et Joell Jaquez. Ils sont connus pour leur fusion innovante de bachata traditionnelle avec des éléments de R&B et de musique pop américaine."
+    },
+    culture_en: {
+      context: "Released in 2010 on the album \"Los Inolvidables\", this track is one of the flagship songs of the group 24 Horas, helping to popularize their style of R&B-infused urban bachata.",
+      meaning: "The song describes a romantic encounter where the singer expresses an intense desire to be with their partner all night. The lyrics use metaphors like \"being in my mind 24 hours\" to illustrate the obsession and passionate attraction they feel.",
+      artistInfo: "24 Horas is an urban bachata group from New York, formed by Mickey Then and Joell Jaquez. They are known for their innovative fusion of traditional bachata with elements of American R&B and pop music."
+    },
+    lyrics: {
+      es: `[Verso 1]
+Esta noche tan bonita contigo yo quiero estar
+(Quiero estar) [🔥|Intro|La chanson s'ouvre sur un ton très suave et intime pour capter l'attention]
+Deja la puerta semiabierta, calladito voy a entrar
+(Voy a entrar)
+Te aseguro que tus padres no se van a despertar
+(Despertar)
+Abrazaditos en la cama bien la vamos a pasar (a pasar)
+
+[Coro]
+Baby, estás en mi mente
+Las 24 horas
+Yo quiero estar contigo
+Esta noche tú no duermes sola
+Baby, estás en mi mente
+Las 24 horas (24 horas)
+Ahora dime, frente a frente
+¿Quién es el papi que enciende tus hormonas?
+
+[Verso 2]
+Yeah
+Impresionante
+Toma, toma, toma
+Voy a besar tu cuello para ponerte a temblar
+(A temblar)
+Y esos labios rosaditos que me gustan saborear
+(Saborear, hey)
+Mami, baja el tono de voz, que te van a escuchar
+Si tú quieres que te ayude me voy a tranquilizar
+Esa es la única manera que te voy a perdonar
+
+[Coro]
+Baby, estás en mi mente
+Las 24 horas
+Yo quiero estar contigo
+Esta noche tú no duermes sola
+Baby, estás en mi mente
+Las 24 horas (24 horas)
+Ahora dime, frente a frente
+¿Quién es el papi que enciende tus hormonas?
+
+[Interludio]
+Yeah
+Impresión
+
+[Coro]
+Baby, estás en mi mente (en mi mente, en mi mente)
+Las 24 horas (las 24 horas)
+Yo quiero estar contigo
+Esta noche tú no duermes sola
+Baby, estás en mi mente (baby, tú estás en mi mente)
+Las 24 horas (24 horas)
+Ahora dime, frente a frente
+¿Quién es el papi que enciende tus hormonas?`,
+      fr: `[Verso 1]
+Cette si belle nuit je veux être avec toi
+(Je veux être)
+Laisse la porte entrouverte, je vais entrer sans faire de bruit
+(Je vais entrer)
+Je t'assure que tes parents ne vont pas se réveiller
+(Se réveiller)
+Enlacés dans le lit on va passer un bon moment (passer un bon moment)
+
+[Coro]
+Bébé, tu es dans mon esprit
+Les 24 heures
+Je veux être avec toi
+Cette nuit tu ne dors pas seule
+Bébé, tu es dans mon esprit
+Les 24 heures (24 heures)
+Maintenant dis-moi, face à face
+Qui est le mec qui enflamme tes hormones ?
+
+[Verso 2]
+Ouais
+Impressionnant
+Prends, prends, prends
+Je vais embrasser ton cou pour te faire trembler
+(Te faire trembler)
+Et ces lèvres rosées que j'aime savourer
+(Savourer, hey)
+Mami, baisse le ton de ta voix, on va t'entendre
+Si tu veux que je t'aide je vais me calmer
+C'est la seule façon pour que je te pardonne
+
+[Coro]
+Bébé, tu es dans mon esprit
+Les 24 heures
+Je veux être avec toi
+Cette nuit tu ne dors pas seule
+Bébé, tu es dans mon esprit
+Les 24 heures (24 heures)
+Maintenant dis-moi, face à face
+Qui est le mec qui enflamme tes hormones ?
+
+[Interludio]
+Ouais
+Impression
+
+[Coro]
+Bébé, tu es dans mon esprit (dans mon esprit, dans mon esprit)
+Les 24 heures (les 24 heures)
+Je veux être avec toi
+Cette nuit tu ne dors pas seule
+Bébé, tu es dans mon esprit (bébé, tu es dans mon esprit)
+Les 24 heures (24 heures)
+Maintenant dis-moi, face à face
+Qui est le mec qui enflamme tes hormones ?`,
+      en: `[Verso 1]
+This beautiful night I want to be with you
+(I want to be)
+Leave the door ajar, I'll come in quietly
+(I'll come in)
+I assure you your parents won't wake up
+(Wake up)
+Cuddled up in bed we're going to have a good time (have a good time)
+
+[Coro]
+Baby, you're on my mind
+24 hours
+I want to be with you
+Tonight you're not sleeping alone
+Baby, you're on my mind
+24 hours (24 hours)
+Now tell me, face to face
+Who is the daddy that sets your hormones on fire?
+
+[Verso 2]
+Yeah
+Impressive
+Take it, take it, take it
+I'm going to kiss your neck to make you tremble
+(Make you tremble)
+And those rosy lips I like to savor
+(Savor, hey)
+Mami, lower your voice, they're going to hear you
+If you want me to help you I'm going to calm down
+That's the only way I'm going to forgive you
+
+[Coro]
+Baby, you're on my mind
+24 hours
+I want to be with you
+Tonight you're not sleeping alone
+Baby, you're on my mind
+24 hours (24 hours)
+Now tell me, face to face
+Who is the daddy that sets your hormones on fire?
+
+[Interludio]
+Yeah
+Impression
+
+[Coro]
+Baby, you're on my mind (on my mind, on my mind)
+24 hours (24 hours)
+I want to be with you
+Tonight you're not sleeping alone
+Baby, you're on my mind (baby, you're on my mind)
+24 hours (24 hours)
+Now tell me, face to face
+Who is the daddy that sets your hormones on fire?`
+    }
+  },
+  {
     id: "tutto-duran-santa-de-mi-devocion",
     title: "Santa de Mi Devoción",
     artist: "Tutto Durán",
@@ -22,14 +206,14 @@ export const songs = [
       es: `[Verso 1]
 Se volvió mi religión besarte
 Un devoto al verte desnudarte
-Amén por ese cuerpito 10
-Haciendo el bien en tu piel
+Amén por ese cuerpito [bongo] 10
+Haciendo el bien en tu piel [guira]
 El cielo ya lo gané
 
 [Pre-Coro]
 Ay, amor
 Que tú eres santa de mi devoción
-Cuando me miras pierdo la razón
+Cuando me miras pierdo la razón [break]
 Eres mi credo, eres mi religión, uoh
 
 [Coro]

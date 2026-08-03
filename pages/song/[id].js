@@ -49,6 +49,62 @@ export default function SongPage({ song }) {
   const [supabaseClient, setSupabaseClient] = useState(null);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [addedToAcademy, setAddedToAcademy] = useState(false);
+  const [activeMarkerDetail, setActiveMarkerDetail] = useState(null);
+
+  // Editor mode state
+  const [isEditingMode, setIsEditingMode] = useState(false);
+  const [editableLyrics, setEditableLyrics] = useState(song?.lyrics || {});
+  const [addNoteModal, setAddNoteModal] = useState(null);
+  const [noteForm, setNoteForm] = useState({ emoji: '🥁', label: '', detail: '' });
+  const [isSavingLyrics, setIsSavingLyrics] = useState(false);
+
+  const normalizeAndTokenize = (line) => {
+    const normalized = line.replace(/\[/g, ' [').replace(/\]/g, '] ').replace(/\s+/g, ' ').trim();
+    return normalized.split(' ');
+  };
+
+  const handleSaveNote = () => {
+    if (!noteForm.label) return;
+    const tag = noteForm.detail 
+      ? `[${noteForm.emoji}|${noteForm.label}|${noteForm.detail}]` 
+      : `[${noteForm.emoji}|${noteForm.label}]`;
+      
+    const { lang, lineIndex, tIdx, line } = addNoteModal;
+    const tokens = normalizeAndTokenize(line);
+    tokens.splice(tIdx + 1, 0, tag);
+    const newLine = tokens.join(' ').replace(/ \]/g, ']').replace(/\[ /g, '[');
+    
+    const newLines = editableLyrics[lang].split('\n');
+    newLines[lineIndex] = newLine;
+    
+    setEditableLyrics({
+      ...editableLyrics,
+      [lang]: newLines.join('\n')
+    });
+    setAddNoteModal(null);
+    setNoteForm({ emoji: '🥁', label: '', detail: '' });
+  };
+
+  const saveLyricsToServer = async () => {
+    setIsSavingLyrics(true);
+    try {
+      const originalLang = editableLyrics.es ? 'es' : (editableLyrics.en ? 'en' : Object.keys(editableLyrics)[0]);
+      const res = await fetch('/api/admin/update-lyrics', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          songId: song.id,
+          lang: originalLang,
+          newLyrics: editableLyrics[originalLang]
+        })
+      });
+      if (res.ok) alert('Sauvegardé avec succès dans data/songs.js !');
+      else alert('Erreur lors de la sauvegarde.');
+    } catch (err) {
+      alert('Erreur réseau.');
+    }
+    setIsSavingLyrics(false);
+  };
 
   useEffect(() => {
     const savedFavs = localStorage.getItem('favSongs');
@@ -232,6 +288,26 @@ export default function SongPage({ song }) {
         {/* ─── HEADER ─── */}
         <div className="lyrics-header" style={{ position: 'relative' }}>
           <div style={{ position: 'absolute', top: 0, right: 0, display: 'flex', gap: '8px', zIndex: 10 }}>
+            {process.env.NODE_ENV === 'development' && (
+              <>
+                {isEditingMode && (
+                  <button 
+                    onClick={saveLyricsToServer} 
+                    className="favorite-btn"
+                    disabled={isSavingLyrics}
+                    style={{ background: '#3b82f6', color: 'white', fontWeight: 'bold' }}
+                  >
+                    {isSavingLyrics ? '⏳' : '💾 Sauver'}
+                  </button>
+                )}
+                <button 
+                  onClick={() => setIsEditingMode(!isEditingMode)} 
+                  className="favorite-btn"
+                >
+                  {isEditingMode ? '❌ Quitter' : '✏️ Éditer'}
+                </button>
+              </>
+            )}
             <button 
               className={`favorite-btn ${addedToAcademy ? 'active' : ''}`}
               onClick={handleAddToAcademy}
@@ -418,20 +494,131 @@ export default function SongPage({ song }) {
 
           <div className="lyrics-interleaved">
           {(() => {
+            const MARKERS = {
+              bongo: { label: 'Bongo', emoji: '🥁', color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.15)' },
+              guira: { label: 'Güira', emoji: '🥄', color: '#10b981', bg: 'rgba(16, 185, 129, 0.15)' },
+              break: { label: 'Break', emoji: '⚡', color: '#ef4444', bg: 'rgba(239, 68, 68, 0.15)' },
+              requinto: { label: 'Requinto', emoji: '🎸', color: '#84cc16', bg: 'rgba(132, 204, 22, 0.15)' },
+              bass: { label: 'Bass', emoji: '🎸', color: '#f59e0b', bg: 'rgba(245, 158, 11, 0.15)' },
+              mambo: { label: 'Mambo', emoji: '🎺', color: '#a855f7', bg: 'rgba(168, 85, 247, 0.15)' }
+            };
+
+            const renderLineWithMarkers = (text) => {
+              if (!text) return text;
+              const regex = /\[(.*?)\]/g;
+              const parts = [];
+              let lastIndex = 0;
+              let match;
+              
+              while ((match = regex.exec(text)) !== null) {
+                if (match.index > lastIndex) {
+                  parts.push(text.substring(lastIndex, match.index));
+                }
+                
+                const content = match[1];
+                let markerObj = null;
+
+                if (content.includes('|')) {
+                  // Custom format: [emoji|Label|Detail]
+                  const [emoji, label, detail] = content.split('|');
+                  markerObj = { 
+                    emoji: emoji?.trim(), 
+                    label: label?.trim(), 
+                    detail: detail?.trim(),
+                    color: '#e2e8f0',
+                    bg: 'rgba(255,255,255,0.1)'
+                  };
+                } else {
+                  const keyword = content.toLowerCase();
+                  if (MARKERS[keyword]) {
+                    markerObj = MARKERS[keyword];
+                  }
+                }
+                
+                if (markerObj) {
+                  const isClickable = !!markerObj.detail;
+                  parts.push(
+                    <span 
+                      key={match.index} 
+                      className="inline-marker" 
+                      onClick={isClickable ? () => setActiveMarkerDetail(markerObj) : undefined}
+                      style={{ 
+                        display: 'inline-flex', 
+                        alignItems: 'center', 
+                        gap: '4px',
+                        background: markerObj.bg,
+                        color: markerObj.color,
+                        padding: '2px 8px',
+                        borderRadius: '12px',
+                        fontSize: '0.75rem',
+                        fontWeight: 'bold',
+                        marginLeft: '6px',
+                        marginRight: '6px',
+                        verticalAlign: 'middle',
+                        transform: 'translateY(-2px)',
+                        cursor: isClickable ? 'pointer' : 'default',
+                        boxShadow: isClickable ? '0 0 0 1px rgba(255,255,255,0.2)' : 'none',
+                        transition: 'all 0.2s'
+                      }}
+                    >
+                      <span>{markerObj.emoji}</span>
+                      <span style={{ textTransform: 'uppercase', letterSpacing: '0.05em' }}>{markerObj.label}</span>
+                    </span>
+                  );
+                } else {
+                  // Standard structure tag (like Verso, Coro)
+                  parts.push(
+                    <span key={match.index} style={{ color: 'var(--text-muted)', fontWeight: 600, fontSize: '0.9em' }}>
+                      [{match[1]}]
+                    </span>
+                  );
+                }
+                lastIndex = regex.lastIndex;
+              }
+              
+              if (lastIndex < text.length) {
+                parts.push(text.substring(lastIndex));
+              }
+              return parts.length > 0 ? parts : text;
+            };
+
             // Determine the "original" language: prefer 'es', then 'en', then first available
-            const originalLang = song.lyrics.es ? 'es' : (song.lyrics.en ? 'en' : Object.keys(song.lyrics)[0]);
-            const originalLines = song.lyrics[originalLang].split('\n');
+            const originalLang = editableLyrics.es ? 'es' : (editableLyrics.en ? 'en' : Object.keys(editableLyrics)[0]);
+            const originalLines = editableLyrics[originalLang].split('\n');
             // Determine the "translation" language
-            const targetLocale = locale === 'en' && song.lyrics.en && originalLang !== 'en' ? 'en' : 'fr';
-            const targetLines = (song.lyrics[targetLocale] || '').split('\n');
+            const targetLocale = locale === 'en' && editableLyrics.en && originalLang !== 'en' ? 'en' : 'fr';
+            const targetLines = (editableLyrics[targetLocale] || '').split('\n');
 
             return originalLines.map((origLine, i) => {
               const targetLine = targetLines[i] || '';
               if (!origLine.trim() && !targetLine.trim()) return <div key={i} style={{ height: '20px' }} />;
+              
+              const renderLine = (line, lang, lineIndex) => {
+                if (!isEditingMode) return renderLineWithMarkers(line);
+                
+                const tokens = normalizeAndTokenize(line);
+                return tokens.map((token, tIdx) => {
+                  if (token.startsWith('[') && token.endsWith(']')) {
+                    return <span key={tIdx}>{renderLineWithMarkers(token)}</span>;
+                  }
+                  if (!token.trim()) return <span key={tIdx}> </span>;
+                  
+                  return (
+                    <span 
+                      key={tIdx} 
+                      className="editable-word" 
+                      onClick={() => setAddNoteModal({ lang, lineIndex, tIdx, line })}
+                    >
+                      {token}{' '}
+                    </span>
+                  );
+                });
+              };
+
               return (
                 <div key={i} className="lyric-pair">
-                  {origLine && <div className={`lyric-${originalLang}`}>{origLine}</div>}
-                  {targetLine && originalLang !== targetLocale && <div className={`lyric-${targetLocale}`}>{targetLine}</div>}
+                  {origLine !== undefined && <div className={`lyric-${originalLang}`}>{renderLine(origLine, originalLang, i)}</div>}
+                  {targetLine !== undefined && originalLang !== targetLocale && <div className={`lyric-${targetLocale}`}>{renderLine(targetLine, targetLocale, i)}</div>}
                 </div>
               );
             });
@@ -540,6 +727,69 @@ export default function SongPage({ song }) {
         <SeoFooter currentPage="song" />
       </div>
 
+      {activeMarkerDetail && (
+        <div className="marker-modal-overlay" onClick={() => setActiveMarkerDetail(null)}>
+          <div className="marker-modal-content" onClick={e => e.stopPropagation()}>
+            <div className="marker-modal-header">
+              <span className="marker-modal-emoji">{activeMarkerDetail.emoji}</span>
+              <h3>{activeMarkerDetail.label}</h3>
+            </div>
+            <p className="marker-modal-detail">{activeMarkerDetail.detail}</p>
+            <button className="marker-modal-close" onClick={() => setActiveMarkerDetail(null)}>
+              {locale === 'en' ? 'Close' : 'Fermer'}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {addNoteModal && (
+        <div className="marker-modal-overlay" onClick={() => setAddNoteModal(null)}>
+          <div className="marker-modal-content add-note-modal" onClick={e => e.stopPropagation()}>
+            <h3 style={{ marginBottom: '16px', color: 'white' }}>Ajouter une note</h3>
+            
+            <div style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
+              <input 
+                type="text" 
+                placeholder="Emoji (ex: 🥁)" 
+                value={noteForm.emoji} 
+                onChange={e => setNoteForm({...noteForm, emoji: e.target.value})}
+                style={{ width: '80px', padding: '12px', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', textAlign: 'center' }}
+              />
+              <input 
+                type="text" 
+                placeholder="Titre (ex: Bongo)" 
+                value={noteForm.label} 
+                onChange={e => setNoteForm({...noteForm, label: e.target.value})}
+                style={{ flex: 1, padding: '12px', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'white' }}
+              />
+            </div>
+            
+            <textarea 
+              placeholder="Détail caché (optionnel) - Affiché au clic" 
+              value={noteForm.detail} 
+              onChange={e => setNoteForm({...noteForm, detail: e.target.value})}
+              style={{ width: '100%', padding: '12px', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', minHeight: '80px', marginBottom: '16px', resize: 'vertical' }}
+            />
+            
+            <div style={{ display: 'flex', gap: '12px', justifyContent: 'flex-end' }}>
+              <button 
+                onClick={() => setAddNoteModal(null)}
+                style={{ padding: '10px 16px', background: 'transparent', color: 'var(--text-secondary)', border: 'none', cursor: 'pointer' }}
+              >
+                Annuler
+              </button>
+              <button 
+                onClick={handleSaveNote}
+                disabled={!noteForm.label}
+                style={{ padding: '10px 24px', background: noteForm.label ? '#8b5cf6' : 'gray', color: 'white', borderRadius: '8px', border: 'none', cursor: noteForm.label ? 'pointer' : 'default', fontWeight: 'bold' }}
+              >
+                Insérer ici
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <style jsx>{`
         .seo-intro {
           max-width: 1280px;
@@ -554,6 +804,74 @@ export default function SongPage({ song }) {
           background: rgba(167, 139, 250, 0.06);
           border: 1px solid rgba(167, 139, 250, 0.12);
           border-radius: 12px;
+        }
+        .editable-word {
+          cursor: pointer;
+          transition: all 0.2s;
+          border-radius: 4px;
+          display: inline-block;
+        }
+        .editable-word:hover {
+          background: rgba(167, 139, 250, 0.4);
+          color: white;
+          transform: scale(1.05);
+        }
+        .inline-marker:hover {
+          filter: brightness(1.2);
+        }
+        .marker-modal-overlay {
+          position: fixed;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0,0,0,0.7);
+          z-index: 9999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          backdrop-filter: blur(4px);
+        }
+        .marker-modal-content {
+          background: var(--bg-card, #1e1e24);
+          border: 1px solid rgba(255,255,255,0.1);
+          padding: 24px;
+          border-radius: 20px;
+          max-width: 400px;
+          width: 90%;
+          text-align: center;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+          animation: fadeIn 0.2s ease-out;
+        }
+        .marker-modal-header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          margin-bottom: 16px;
+        }
+        .marker-modal-emoji {
+          font-size: 2rem;
+        }
+        .marker-modal-content h3 {
+          font-size: 1.5rem;
+          margin: 0;
+          color: white;
+        }
+        .marker-modal-detail {
+          color: var(--text-secondary);
+          line-height: 1.6;
+          margin-bottom: 24px;
+        }
+        .marker-modal-close {
+          background: rgba(255,255,255,0.1);
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 12px;
+          cursor: pointer;
+          font-weight: 600;
+          transition: all 0.2s;
+        }
+        .marker-modal-close:hover {
+          background: rgba(255,255,255,0.2);
         }
       `}</style>
     </>
