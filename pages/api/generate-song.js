@@ -5,10 +5,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  const { title, artist, year, color, danceVideo, spotify, lyricsEs } = req.body;
+  const { title, artist, year, color, danceVideo, spotify, lyricsEs, userContext } = req.body;
 
-  if (!title || !artist || !lyricsEs) {
-    return res.status(400).json({ error: 'Titre, artiste et paroles en espagnol sont requis.' });
+  if (!title || !artist || !lyricsEs || !danceVideo || !userContext) {
+    return res.status(400).json({ error: 'Titre, artiste, paroles, lien YouTube et contexte sont requis.' });
   }
 
   const apiKey = process.env.GEMINI_API_KEY;
@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-3.7-flash' });
 
     const prompt = `
 Tu es un expert en musique Bachata. Je vais te donner les informations de base d'une chanson et ses paroles en espagnol.
@@ -28,6 +28,9 @@ Informations:
 Titre: ${title}
 Artiste: ${artist}
 Année: ${year || 'Inconnue'}
+
+Contexte fourni par l'utilisateur (à utiliser pour enrichir ta réponse dans "culture") :
+${userContext}
 
 Paroles originales (Espagnol):
 ${lyricsEs}

@@ -46,11 +46,21 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
               onClick={() => router.push('/boutique')} 
               style={{ color: activePage === 'boutique' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}
             >{locale === 'fr' ? 'Boutique' : 'Shop'}</span>
+            <span 
+              onClick={() => router.push('/ajouter-un-son')} 
+              style={{ color: activePage === 'ajouter' ? 'var(--accent)' : 'inherit', cursor: 'pointer' }}
+            >✨ {locale === 'fr' ? 'Ajouter un son' : 'Add a song'}</span>
             {user?.email === 'maximilien.godeau.off@gmail.com' && (
-              <span 
-                onClick={() => router.push('/admin/add-song')} 
-                style={{ color: '#10b981', cursor: 'pointer', fontWeight: 'bold' }}
-              >🛠 Admin</span>
+              <>
+                <span 
+                  onClick={() => router.push('/admin/add-song')} 
+                  style={{ color: '#10b981', cursor: 'pointer', fontWeight: 'bold' }}
+                >🛠 Admin (Ajout)</span>
+                <span 
+                  onClick={() => router.push('/admin/pending-songs')} 
+                  style={{ color: '#10b981', cursor: 'pointer', fontWeight: 'bold' }}
+                >🛠 Admin (Validations)</span>
+              </>
             )}
             
             <div className="auth-profile">
@@ -125,8 +135,12 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
             <button onClick={() => { setMobileMenuOpen(false); router.push('/jack-and-jill'); }} className={activePage === 'jnj' ? 'active' : ''}>🏆 {t('jackAndJill')}</button>
             <button onClick={() => { setMobileMenuOpen(false); router.push('/academy'); }} className={activePage === 'academy' ? 'active' : ''}>🎓 Academy</button>
             <button onClick={() => { setMobileMenuOpen(false); router.push('/boutique'); }} className={activePage === 'boutique' ? 'active' : ''}>🛍️ {locale === 'fr' ? 'Boutique' : 'Shop'}</button>
+            <button onClick={() => { setMobileMenuOpen(false); router.push('/ajouter-un-son'); }} className={activePage === 'ajouter' ? 'active' : ''}>✨ {locale === 'fr' ? 'Ajouter un son' : 'Add a song'}</button>
             {user?.email === 'maximilien.godeau.off@gmail.com' && (
-              <button onClick={() => { setMobileMenuOpen(false); router.push('/admin/add-song'); }} className={activePage === 'admin' ? 'active' : ''} style={{ color: '#10b981' }}>🛠 Admin (Ajout son)</button>
+              <>
+                <button onClick={() => { setMobileMenuOpen(false); router.push('/admin/add-song'); }} className={activePage === 'admin-ajout' ? 'active' : ''} style={{ color: '#10b981' }}>🛠 Admin (Ajout)</button>
+                <button onClick={() => { setMobileMenuOpen(false); router.push('/admin/pending-songs'); }} className={activePage === 'admin-validation' ? 'active' : ''} style={{ color: '#10b981' }}>🛠 Admin (Validations)</button>
+              </>
             )}
             
             <button 
