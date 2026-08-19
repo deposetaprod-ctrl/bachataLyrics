@@ -1,5 +1,431 @@
 export const songs = [
   {
+    id: "kitipun-juan-luis-guerra",
+    title: "Kitipun",
+    artist: "Juan Luis Guerra",
+    year: 2019,
+    dateAdded: "2026-08-19",
+    tags: ["Joyeuse", "Rythmique", "Classique"],
+    color: "#f59e0b",
+    danceVideo: "WL2luNHgBig",
+    culture: {
+      context: "Kitipun est un immense tube de Juan Luis Guerra sorti en 2019, qui a lancé un challenge de danse viral sur les réseaux sociaux.",
+      meaning: "La chanson parle d'un amour si grand que le chanteur est prêt à tout donner à sa bien-aimée, de sa guitare à son dentifrice. Le terme 'Kitipun' imite le battement joyeux du cœur amoureux.",
+      artistInfo: "Légende de la République Dominicaine, Juan Luis Guerra a popularisé la Bachata et le Merengue à l'échelle mondiale depuis les années 90.",
+      album: "Literal"
+    },
+    culture_en: {
+      context: "Kitipun is a massive hit by Juan Luis Guerra released in 2019, which sparked a viral dance challenge on social media.",
+      meaning: "The song talks about a love so great that the singer is willing to give everything to his beloved, from his guitar to his toothpaste. The term 'Kitipun' mimics the joyful beating of a heart in love.",
+      artistInfo: "A legend from the Dominican Republic, Juan Luis Guerra has popularized Bachata and Merengue on a global scale since the 90s.",
+      album: "Literal"
+    },
+    lyrics: {
+      es: `Mi cuenta de ahorros, mi pasta dental
+Mi guitarra Fender y mi celular
+Mi libro de sushi comprado en Perú
+Mi bata de baño y mi champú
+Mi bici, mi moto, mis discos de rock
+Mi piano de cola, mi televisor
+Mi crema humectante, mis gafas de sol
+Mi silla y mi estante
+Todo lo que tengo es tuyo
+Tuyo, tuyo
+Tú la única en mi vida
+Tuyo, tuyo, tuyo
+La razón de mis anhelos
+Tuyo, tuyo, tuyo
+El vaivén de mis te quieros
+Tuyo, tuyo, todo y más
+Todo es tuyo nena
+Aja
+Todo es tuyo nena
+Mi vida, mi cielo
+La que interpreta el fondo de mis sueños
+Mi casita y mi conujo
+Mis flores de primavera
+Y el rinconcito de la luna, todo es tuyo bella
+Y cada vez que yo te veo caminar, mi corazón
+Retozón, hace ¡pum!, ¡kitipun!, ¡kitipun!
+¡Pum!, ¡kitipun!, ¡kitipun!
+Mis pinos del patio
+Mis cartas de amor
+La quinta de Mahler grabada en Japón
+Mi banda naliva y sin mi Toblerone
+Mis dos maraquitas pa' tocar son
+Ohh, mi aceite del prado
+Mi agua Perrier
+Y mi camomila pa' yo hacerme un té
+Mi almohada, mi sueño, mi despertador
+Mi fiesta y mi traje
+Todo lo que tengo es tuyo
+Tuyo, tuyo
+Tú la única en mi vida
+Tuyo, tuyo, tuyo
+La razón de mis anhelos
+Tuyo, tuyo, tuyo
+El vaivén de mis te quieros
+Tuyo, tuyo, todo y más
+Todo es tuyo nena
+Aja
+Todo es tuyo nena
+Mi vida, mi cielo
+El diccionario en fa de mis te quiero
+Todo es tuyo nena
+Mi corazón de bachata
+El do de mi cafetera
+Y el rinconcito de la noche, todo es tuyo bella
+Y cada vez que yo te veo caminar, mi corazón
+Retozón, hace ¡pum!, ¡kitipun!, ¡kitipun!
+¡Pum!, ¡kitipun!, ¡kitipun!
+¡Pum!, ¡kitipun!, ¡kitipun!`,
+      fr: `Mon compte épargne, mon dentifrice
+Ma guitare Fender et mon téléphone portable
+Mon livre sur les sushis acheté au Pérou
+Mon peignoir et mon shampoing
+Mon vélo, ma moto, mes disques de rock
+Mon piano à queue, ma télévision
+Ma crème hydratante, mes lunettes de soleil
+Ma chaise et mon étagère
+Tout ce que j'ai est à toi
+À toi, à toi
+Toi, l'unique de ma vie
+À toi, à toi, à toi
+La raison de mes désirs
+À toi, à toi, à toi
+Le va-et-vient de mes "je t'aime"
+À toi, à toi, tout et plus encore
+Tout est à toi bébé
+Aha
+Tout est à toi bébé
+Ma vie, mon ciel
+Celle qui interprète le fond de mes rêves
+Ma petite maison et mon potager
+Mes fleurs de printemps
+Et le petit coin de la lune, tout est à toi ma belle
+Et à chaque fois que je te vois marcher, mon cœur
+Joueur, fait boum !, kitipun !, kitipun !
+Boum !, kitipun !, kitipun !
+Mes pins dans le patio
+Mes lettres d'amour
+La cinquième de Mahler enregistrée au Japon
+Ma bande et mon Toblerone
+Mes deux maracas pour jouer du son
+Ohh, mon huile de la prairie
+Mon eau Perrier
+Et ma camomille pour me faire un thé
+Mon oreiller, mon sommeil, mon réveil
+Ma fête et mon costume
+Tout ce que j'ai est à toi
+À toi, à toi
+Toi, l'unique de ma vie
+À toi, à toi, à toi
+La raison de mes désirs
+À toi, à toi, à toi
+Le va-et-vient de mes "je t'aime"
+À toi, à toi, tout et plus encore
+Tout est à toi bébé
+Aha
+Tout est à toi bébé
+Ma vie, mon ciel
+Le dictionnaire en fa de mes "je t'aime"
+Tout est à toi bébé
+Mon cœur de bachata
+Le do de ma cafetière
+Et le petit coin de la nuit, tout est à toi ma belle
+Et à chaque fois que je te vois marcher, mon cœur
+Joueur, fait boum !, kitipun !, kitipun !
+Boum !, kitipun !, kitipun !
+Boum !, kitipun !, kitipun !`,
+      en: `My savings account, my toothpaste
+My Fender guitar and my cell phone
+My sushi book bought in Peru
+My bathrobe and my shampoo
+My bike, my motorcycle, my rock records
+My grand piano, my television
+My moisturizing cream, my sunglasses
+My chair and my shelf
+Everything I have is yours
+Yours, yours
+You, the only one in my life
+Yours, yours, yours
+The reason for my longings
+Yours, yours, yours
+The coming and going of my "I love yous"
+Yours, yours, everything and more
+Everything is yours baby
+Aha
+Everything is yours baby
+My life, my sky
+The one who interprets the depths of my dreams
+My little house and my garden
+My spring flowers
+And the little corner of the moon, everything is yours beautiful
+And every time I see you walk, my heart
+Playful, goes boom!, kitipun!, kitipun!
+Boom!, kitipun!, kitipun!
+My pine trees in the patio
+My love letters
+Mahler's Fifth recorded in Japan
+My band and my Toblerone
+My two maracas to play son
+Ohh, my meadow oil
+My Perrier water
+And my chamomile to make me a tea
+My pillow, my sleep, my alarm clock
+My party and my suit
+Everything I have is yours
+Yours, yours
+You, the only one in my life
+Yours, yours, yours
+The reason for my longings
+Yours, yours, yours
+The coming and going of my "I love yous"
+Yours, yours, everything and more
+Everything is yours baby
+Aha
+Everything is yours baby
+My life, my sky
+The F major dictionary of my "I love yous"
+Everything is yours baby
+My bachata heart
+The C note of my coffee maker
+And the little corner of the night, everything is yours beautiful
+And every time I see you walk, my heart
+Playful, goes boom!, kitipun!, kitipun!
+Boom!, kitipun!, kitipun!
+Boom!, kitipun!, kitipun!`
+    }
+  },
+  {
+    id: "el-tonto-charles-luis",
+    title: "El Tonto",
+    artist: "Charles Luis",
+    year: 2024,
+    dateAdded: "2026-08-19",
+    tags: ["Sensual", "Moderne", "Romantique"],
+    color: "#ef4444",
+    danceVideo: "LkTVKThIOY4",
+    culture: {
+      context: "Chanson romantique et moderne de Bachata par Charles Luis.",
+      meaning: "Les paroles parlent d'un homme piégé par les charmes d'une femme, incapable de lui résister (comme un idiot).",
+      artistInfo: "Charles Luis est un artiste de Bachata reconnu pour ses morceaux rythmés et sensuels.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "Modern romantic Bachata song by Charles Luis.",
+      meaning: "The lyrics talk about a man trapped by a woman's charms, unable to resist her (like a fool).",
+      artistInfo: "Charles Luis is a Bachata artist known for his rhythmic and sensual tracks.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `[Verso 1]
+Ella tiene el control que nunca imaginé
+Toda perfecta de la cabeza a los pies
+Y tiene esa mirada que siempre soñé
+Pero no lo sabe que ahora yo
+Quiero salir de ahí, ahí, ahí
+Y le pido que baile así, así, así
+Quiero salir de ahí, ahí, ahí
+No dejaré que con tu cuerpo me envuelvas a mí
+
+[Verso 2]
+Ella tiene el perfume que le regalé
+Y cuando se me pega me eriza la piel
+Caigo como un tonto una y otra vez
+Tú eres imposible, impredecible
+Y siento que ya
+
+[Coro]
+Me enredaste en tu trampa y no logro escapar
+Que no puedo evitar dejarte de mirar
+Si una vez fuiste el bien
+Ahora tú eres el mal
+Y yo soy aquel tonto que no te logra olvidar
+
+Me enredaste en tu trampa y no logro escapar
+Que no puedo evitar dejarte de mirar
+Si una vez fuiste el bien
+Ahora tú eres el mal
+Y yo soy aquel tonto que no te logra olvidar
+
+[Puente]
+Ella juega conmigo una y otra vez
+Pero no lo sabe que ahora yo
+Quiero salir de ahí, ahí, ahí
+Y le pido que baile así, así, así
+Quiero salir de ahí, ahí, ahí
+No dejaré que con tu cuerpo me envuelvas a mí
+Quiero salir de ahí, ahí, ahí
+Y le pido que baile así, así, así
+Quiero salir de ahí, ahí, ahí
+No dejaré que con tu cuerpo me envuelvas a mí
+
+[Coro]
+Me enredaste en tu trampa y no logro escapar
+Que no puedo evitar dejarte de mirar
+Si una vez fuiste el bien
+Ahora tú eres el mal
+Y yo soy aquel tonto que no te logra olvidar
+
+Me enredaste en tu trampa y no logro escapar
+Que no puedo evitar dejarte de mirar
+Si una vez fuiste el bien
+Ahora tú eres el mal
+Y yo soy aquel tonto que no te logra olvidar
+
+[Outro]
+Cupido
+You know what it is
+Charles Luis
+This is crazy man
+Dj Nico
+Me enredaste en tu trampa y no logro escapar
+Que no puedo evitar dejarte de mirar
+Si una vez fuiste el bien
+Ahora tú eres el mal
+Y yo soy aquel tonto que no te logra olvidar
+Y yo soy aquel tonto que no te logra olvidar
+Y yo soy aquel tonto que no te logra olvidar`,
+      fr: `[Couplet 1]
+Elle a le contrôle que je n'aurais jamais imaginé
+Parfaite de la tête aux pieds
+Et elle a ce regard dont j'ai toujours rêvé
+Mais elle ne sait pas que maintenant je
+Veux sortir de là, de là, de là
+Et je lui demande de danser comme ça, comme ça, comme ça
+Je veux sortir de là, de là, de là
+Je ne te laisserai pas m'envelopper avec ton corps
+
+[Couplet 2]
+Elle porte le parfum que je lui ai offert
+Et quand elle se colle à moi, ça me donne des frissons
+Je tombe comme un idiot encore et encore
+Tu es impossible, imprévisible
+Et je sens que déjà
+
+[Refrain]
+Tu m'as piégé dans ta toile et je n'arrive pas à m'échapper
+Que je ne peux pas m'empêcher d'arrêter de te regarder
+Si autrefois tu étais le bien
+Maintenant tu es le mal
+Et je suis cet idiot qui n'arrive pas à t'oublier
+
+Tu m'as piégé dans ta toile et je n'arrive pas à m'échapper
+Que je ne peux pas m'empêcher d'arrêter de te regarder
+Si autrefois tu étais le bien
+Maintenant tu es le mal
+Et je suis cet idiot qui n'arrive pas à t'oublier
+
+[Pont]
+Elle joue avec moi encore et encore
+Mais elle ne sait pas que maintenant je
+Veux sortir de là, de là, de là
+Et je lui demande de danser comme ça, comme ça, comme ça
+Je veux sortir de là, de là, de là
+Je ne te laisserai pas m'envelopper avec ton corps
+Je veux sortir de là, de là, de là
+Et je lui demande de danser comme ça, comme ça, comme ça
+Je veux sortir de là, de là, de là
+Je ne te laisserai pas m'envelopper avec ton corps
+
+[Refrain]
+Tu m'as piégé dans ta toile et je n'arrive pas à m'échapper
+Que je ne peux pas m'empêcher d'arrêter de te regarder
+Si autrefois tu étais le bien
+Maintenant tu es le mal
+Et je suis cet idiot qui n'arrive pas à t'oublier
+
+Tu m'as piégé dans ta toile et je n'arrive pas à m'échapper
+Que je ne peux pas m'empêcher d'arrêter de te regarder
+Si autrefois tu étais le bien
+Maintenant tu es le mal
+Et je suis cet idiot qui n'arrive pas à t'oublier
+
+[Outro]
+Cupidon
+Tu sais ce que c'est
+Charles Luis
+C'est fou mec
+Dj Nico
+Tu m'as piégé dans ta toile et je n'arrive pas à m'échapper
+Que je ne peux pas m'empêcher d'arrêter de te regarder
+Si autrefois tu étais le bien
+Maintenant tu es le mal
+Et je suis cet idiot qui n'arrive pas à t'oublier
+Et je suis cet idiot qui n'arrive pas à t'oublier
+Et je suis cet idiot qui n'arrive pas à t'oublier`,
+      en: `[Verse 1]
+She has the control I never imagined
+Perfect from head to toe
+And she has that look I always dreamed of
+But she doesn't know that now I
+Want to get out of there, there, there
+And I ask her to dance like this, like this, like this
+I want to get out of there, there, there
+I won't let you wrap me with your body
+
+[Verse 2]
+She has the perfume I gave her
+And when she gets close to me, it gives me goosebumps
+I fall like a fool over and over again
+You are impossible, unpredictable
+And I feel that already
+
+[Chorus]
+You trapped me in your web and I can't escape
+That I can't help but stop looking at you
+If once you were good
+Now you are evil
+And I am that fool who can't forget you
+
+You trapped me in your web and I can't escape
+That I can't help but stop looking at you
+If once you were good
+Now you are evil
+And I am that fool who can't forget you
+
+[Bridge]
+She plays with me over and over again
+But she doesn't know that now I
+Want to get out of there, there, there
+And I ask her to dance like this, like this, like this
+I want to get out of there, there, there
+I won't let you wrap me with your body
+I want to get out of there, there, there
+And I ask her to dance like this, like this, like this
+I want to get out of there, there, there
+I won't let you wrap me with your body
+
+[Chorus]
+You trapped me in your web and I can't escape
+That I can't help but stop looking at you
+If once you were good
+Now you are evil
+And I am that fool who can't forget you
+
+You trapped me in your web and I can't escape
+That I can't help but stop looking at you
+If once you were good
+Now you are evil
+And I am that fool who can't forget you
+
+[Outro]
+Cupid
+You know what it is
+Charles Luis
+This is crazy man
+Dj Nico
+You trapped me in your web and I can't escape
+That I can't help but stop looking at you
+If once you were good
+Now you are evil
+And I am that fool who can't forget you
+And I am that fool who can't forget you
+And I am that fool who can't forget you`
+    }
+  },
+  {
     id: "24-horas-24-horas",
     title: "24 Horas",
     artist: "24 Horas",
