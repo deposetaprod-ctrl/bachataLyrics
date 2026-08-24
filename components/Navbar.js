@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import { useTranslation } from '../utils/translations';
 
 export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestClick, activePage = 'home', children }) {
@@ -18,7 +19,7 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
       <nav className="navbar">
         <div className="navbar-inner">
           <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer', zIndex: 101 }}>
-            <img src="/LOGO_PWA.PNG" alt="Logo" className="logo-img" />
+            <Image src="/LOGO_PWA.PNG" alt="Logo" width={192} height={192} className="logo-img" />
             <span className="logo-text">Bachata Lyrics</span>
           </div>
 

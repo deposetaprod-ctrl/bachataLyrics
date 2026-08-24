@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import SeoFooter from '../components/SeoFooter';
 
@@ -97,9 +98,11 @@ function ProductCard({ product, locale, t }) {
       {/* Image Side */}
       <div className="boutique-product-image-area">
         <div className="boutique-limited-badge">{t(product.badge)}</div>
-        <img
+        <Image
           src={product.images[0]}
           alt={t(product.name)}
+          width={800}
+          height={800}
           className="boutique-product-img"
         />
       </div>

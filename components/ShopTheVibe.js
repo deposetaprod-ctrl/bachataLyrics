@@ -1,5 +1,6 @@
 // Component for internal SEO linking and contextual merch
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 export default function ShopTheVibe({ song }) {
@@ -59,7 +60,7 @@ export default function ShopTheVibe({ song }) {
           </Link>
         </div>
         <div className="vibe-image">
-          <img src={recommendedProduct.img} alt={recommendedProduct.title} />
+          <Image src={recommendedProduct.img} alt={recommendedProduct.title} width={250} height={250} />
         </div>
       </div>
 

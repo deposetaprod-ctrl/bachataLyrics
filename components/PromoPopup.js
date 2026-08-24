@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const SHIRTS = [
   {
@@ -88,7 +89,7 @@ export default function PromoPopup() {
         
         <div className="promo-image-container">
           <div className="promo-badge">{locale === 'en' ? 'New' : 'Nouveau'}</div>
-          <img src={shirt.img} alt={locale === 'en' ? shirt.nameEn : shirt.nameFr} className="promo-img" />
+          <Image src={shirt.img} alt={locale === 'en' ? shirt.nameEn : shirt.nameFr} width={400} height={400} className="promo-img" />
         </div>
         
         <div className="promo-content">
