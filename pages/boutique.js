@@ -5,8 +5,30 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import SeoFooter from '../components/SeoFooter';
-import { track } from '@vercel/analytics';
+import { useEffect } from 'react';
 
+const trackCustom = (eventName, data) => {
+  if (typeof window === 'undefined') return;
+  
+  let sessionId = sessionStorage.getItem('tracker_session_id');
+  if (!sessionId) {
+    sessionId = `sess_${Math.random().toString(36).substr(2, 9)}_${Date.now()}`;
+    sessionStorage.setItem('tracker_session_id', sessionId);
+  }
+
+  fetch('/api/ping', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      sessionId,
+      type: eventName,
+      data,
+      timestamp: new Date().toISOString(),
+      url: window.location.href,
+      userAgent: window.navigator.userAgent,
+    }),
+  }).catch(() => {});
+};
 const PRODUCTS = [
   {
     id: 'tshirt-lyrics-white',
@@ -91,7 +113,19 @@ function ProductCard({ product, locale, t }) {
 
   const handleOrder = () => {
     if (!selectedSize) return;
-    track('click_preorder', { product_id: product.id, size: selectedSize });
+    trackCustom('click_preorder', { product_id: product.id, size: selectedSize });
+    
+    // Envoi silencieux d'un mail d'intention
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: 'Système',
+        email: 'contact@bachatalyrics.com',
+        message: `👀 NOUVELLE INTENTION DE COMMANDE\n\nProduit: ${product.name.fr}\nTaille: ${selectedSize}\n\nUn utilisateur vient de cliquer sur 'Commander' et voit actuellement le formulaire.`,
+      }),
+    }).catch(() => {});
+
     setOrderStatus('form');
   };
 
@@ -150,7 +184,7 @@ function ProductCard({ product, locale, t }) {
                 className={`boutique-size-btn ${selectedSize === size ? 'active' : ''}`}
                 onClick={() => {
                   setSelectedSize(size);
-                  track('select_size', { product_id: product.id, size });
+                  trackCustom('select_size', { product_id: product.id, size });
                 }}
               >
                 {size}
@@ -168,7 +202,7 @@ function ProductCard({ product, locale, t }) {
           >
             {!selectedSize
               ? (locale === 'en' ? '👆 Pick a size first' : '👆 Choisis ta taille d\'abord')
-              : (locale === 'en' ? `🛒 Pre-order — ${product.price}${product.currency}` : `🛒 Précommander — ${product.price}${product.currency}`)}
+              : (locale === 'en' ? `🛒 Order — ${product.price}${product.currency}` : `🛒 Commander — ${product.price}${product.currency}`)}
           </button>
         )}
 
@@ -185,7 +219,7 @@ function ProductCard({ product, locale, t }) {
         {orderStatus === 'success' && (
           <div className="boutique-success">
             <div className="success-icon">🎉</div>
-            <h3>{locale === 'en' ? 'Pre-order confirmed!' : 'Précommande confirmée !'}</h3>
+            <h3>{locale === 'en' ? 'Order confirmed!' : 'Commande confirmée !'}</h3>
             <p>{locale === 'en' ? 'We\'ll email you when your tee is ready. Thank you!' : 'On te contacte par mail quand ton t-shirt est prêt. Merci !'}</p>
           </div>
         )}
@@ -308,19 +342,19 @@ function OrderForm({ locale, product, selectedSize, onStatusChange }) {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
-          message: `🛒 PRÉCOMMANDE BOUTIQUE\n\nProduit: ${product.name.fr}\nTaille: ${selectedSize}\nAdresse: ${form.address}\nEmail: ${form.email}`,
+          message: `🛒 COMMANDE BOUTIQUE\n\nProduit: ${product.name.fr}\nTaille: ${selectedSize}\nAdresse: ${form.address}\nEmail: ${form.email}`,
         }),
       });
 
       if (res.ok) {
-        track('submit_preorder_success', { product_id: product.id, size: selectedSize });
+        trackCustom('submit_preorder_success', { product_id: product.id, size: selectedSize });
         onStatusChange('success');
       } else {
-        track('submit_preorder_error', { product_id: product.id, size: selectedSize, type: 'api_error' });
+        trackCustom('submit_preorder_error', { product_id: product.id, size: selectedSize, type: 'api_error' });
         onStatusChange('error');
       }
     } catch {
-      track('submit_preorder_error', { product_id: product.id, size: selectedSize, type: 'network_error' });
+      trackCustom('submit_preorder_error', { product_id: product.id, size: selectedSize, type: 'network_error' });
       onStatusChange('error');
     }
   };
