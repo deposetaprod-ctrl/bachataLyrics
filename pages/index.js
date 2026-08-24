@@ -225,9 +225,6 @@ export default function Home() {
 
       {/* ─── HERO ─── */}
       <section className="hero">
-        <div className="hero-eyebrow">
-          <span>💃</span> Bachata • {locale === 'en' ? 'Bilingual Lyrics' : 'Paroles bilingues'}
-        </div>
         <h1>{locale === 'en' ? 'The most beautiful' : 'Les plus belles'}<br />{locale === 'en' ? 'bachata lyrics' : 'paroles de bachata'}</h1>
         
         {/* PROGRESS STATS */}
@@ -236,7 +233,7 @@ export default function Home() {
           style={{ 
             display: 'flex', 
             gap: '12px', 
-            marginTop: '24px',
+            marginTop: '16px',
             padding: '8px 20px',
             background: 'rgba(255,255,255,0.05)',
             borderRadius: '999px',
@@ -253,12 +250,6 @@ export default function Home() {
           <span>{masteredSongs.length} / {allSongs.length} {locale === 'en' ? 'mastered' : 'maîtrisés'}</span>
           <span style={{ marginLeft: '8px', opacity: 0.6 }}>{locale === 'en' ? 'See all →' : 'Voir tout →'}</span>
         </div>
-
-        <p style={{ marginTop: '32px' }}>
-          {locale === 'en' 
-            ? 'Find original Spanish lyrics with their English translations side-by-side, to feel every song.' 
-            : 'Retrouve les textes originaux en espagnol avec leur traduction en français, côte à côte, pour mieux ressentir chaque chanson.'}
-        </p>
 
         {/* Tag filters */}
         <div className="tags-filter">

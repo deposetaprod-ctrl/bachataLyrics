@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import SeoFooter from '../components/SeoFooter';
+import { track } from '@vercel/analytics';
 
 const PRODUCTS = [
   {
@@ -90,6 +91,7 @@ function ProductCard({ product, locale, t }) {
 
   const handleOrder = () => {
     if (!selectedSize) return;
+    track('click_preorder', { product_id: product.id, size: selectedSize });
     setOrderStatus('form');
   };
 
@@ -146,7 +148,10 @@ function ProductCard({ product, locale, t }) {
               <button
                 key={size}
                 className={`boutique-size-btn ${selectedSize === size ? 'active' : ''}`}
-                onClick={() => setSelectedSize(size)}
+                onClick={() => {
+                  setSelectedSize(size);
+                  track('select_size', { product_id: product.id, size });
+                }}
               >
                 {size}
               </button>
@@ -308,11 +313,14 @@ function OrderForm({ locale, product, selectedSize, onStatusChange }) {
       });
 
       if (res.ok) {
+        track('submit_preorder_success', { product_id: product.id, size: selectedSize });
         onStatusChange('success');
       } else {
+        track('submit_preorder_error', { product_id: product.id, size: selectedSize, type: 'api_error' });
         onStatusChange('error');
       }
     } catch {
+      track('submit_preorder_error', { product_id: product.id, size: selectedSize, type: 'network_error' });
       onStatusChange('error');
     }
   };
