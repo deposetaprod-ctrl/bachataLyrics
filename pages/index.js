@@ -226,7 +226,11 @@ export default function Home() {
       {/* ─── HERO ─── */}
       <section className="hero">
         <h1>{locale === 'en' ? 'The most beautiful' : 'Les plus belles'}<br />{locale === 'en' ? 'bachata lyrics' : 'paroles de bachata'}</h1>
-        
+        <p style={{ marginTop: '12px', color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '600px', fontWeight: 500 }}>
+          {locale === 'en'
+            ? 'Spanish to English translation of the most beautiful bachata songs.'
+            : 'Traduction espagnol au français des plus belles chansons de bachata.'}
+        </p>        
         {/* PROGRESS STATS */}
         <div 
           onClick={() => setShowObjectives(true)}
