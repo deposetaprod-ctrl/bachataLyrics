@@ -1,5 +1,194 @@
 export const songs = [
   {
+    id: "dos-de-mi-jr",
+    title: "Dos De Mi",
+    artist: "Jr.",
+    year: 2024,
+    dateAdded: "2026-08-26",
+    tags: ["Romantique", "Nostalgie", "Possessif"],
+    color: "#3b82f6",
+    danceVideo: "y09ay-tDfEA",
+    culture: {
+      context: "Dos De Mi est un titre sorti en 2024 par Jr., figurant sur l'album Siempre. La chanson aborde le thème d'une relation passée et l'assurance que ce lien unique ne pourra jamais être reproduit avec quelqu'un d'autre.",
+      meaning: "Dans cette bachata teintée de nostalgie et de possessivité, le chanteur s'adresse à son ancienne partenaire pour lui affirmer qu'il n'y a pas deux comme lui (« no existen dos de mí »). Même si elle cherche l'amour ailleurs, elle ne retrouvera jamais la même passion ni le même feu.",
+      artistInfo: "Jr. est un artiste reconnu de la scène bachata, réputé pour sa voix douce et ses paroles émotionnelles qui mêlent parfois anglais et espagnol (spanglish), caractéristiques de la bachata urbaine moderne.",
+      album: "Siempre"
+    },
+    culture_en: {
+      context: "Dos De Mi is a 2024 track by Jr., featured on the album Siempre. The song tackles the theme of a past relationship and the confidence that such a unique bond can never be replicated with someone else.",
+      meaning: "In this bachata tinged with nostalgia and possessiveness, the singer addresses his former partner, asserting that there are not two of him ('no existen dos de mí'). Even if she seeks love elsewhere, she will never find the same passion or fire.",
+      artistInfo: "Jr. is a renowned artist in the bachata scene, known for his smooth voice and emotional lyrics that often blend English and Spanish (Spanglish), which is characteristic of modern urban bachata.",
+      album: "Siempre"
+    },
+    lyrics: {
+      es: `Igual que un arcoíris en la lluvia
+Tus lágrimas revelan un dolor
+No puedes olvidar y no es tu culpa
+Tu príncipe azul nunca llegó
+Y es que no es lo mismo cómo te enamoré
+Fueron miles bachatas que yo te dediqué
+Yo sí supe amarrarte con mis trucos, bebé
+A nadie como a mí vuelves a querer
+
+Y si te vuelves a enamorar
+Será de mí y de nadie más
+Tú y yo buscando en otros labios
+Nuestro pasado no se va a duplicar
+Si tú te vuelves a enamorar
+Será conmigo y con nadie más
+Sé que andas buscando en otro cuerpo
+El mismo fuego, pero él no te quema
+
+Y yo te dije, no existen dos de mí
+I thought I told you it's just different
+
+Yeah
+Hasta en tus sueños estoy presente
+No existen dos de mí
+Súbala, súbala, súbala
+
+Por qué sigues viviendo en el pasado
+Si en el presente mueres por mi amor
+Y no olvides la promesa que juramos nunca romper
+No olvides, corazón
+
+Que si tú te vuelves a enamorar
+Será conmigo y con nadie más
+Tú y yo buscando en otros labios
+Nuestro pasado no se va a duplicar
+
+Y si te vuelves a enamorar
+Será de mí y de nadie más
+Sé que andas buscando en otro cuerpo
+El mismo fuego, pero él no te quema
+
+Ya te dije, no existen dos de mí
+Ya te dije, no existen dos de mí
+
+Micky Then
+Jr., let's go
+
+Nací pa ti, tú para mí
+Siempre seré ese hombre
+Baby, there's only one
+Stop wondering, I'm ready
+Nací pa ti, tú para mí
+Siempre seré ese hombre
+Baby, there's only one
+Stop wondering, I'm ready`,
+      fr: `Tout comme un arc-en-ciel sous la pluie
+Tes larmes révèlent une douleur
+Tu ne peux pas oublier et ce n'est pas ta faute
+Ton prince charmant n'est jamais arrivé
+Et ce n'est pas pareil, la façon dont je t'ai fait tomber amoureuse
+Ce sont des milliers de bachatas que je t'ai dédiées
+J'ai su t'attacher avec mes astuces, bébé
+Personne comme moi, tu ne pourras aimer à nouveau
+
+Et si tu retombes amoureuse
+Ce sera de moi et de personne d'autre
+Toi et moi cherchant sur d'autres lèvres
+Notre passé ne va pas se dupliquer
+Si tu retombes amoureuse
+Ce sera avec moi et personne d'autre
+Je sais que tu cherches dans un autre corps
+Le même feu, mais il ne te brûle pas
+
+Et je te l'ai dit, il n'y a pas deux comme moi
+Je croyais t'avoir dit que c'est juste différent
+
+Ouais
+Même dans tes rêves, je suis présent
+Il n'y a pas deux comme moi
+Monte-le, monte-le, monte-le
+
+Pourquoi continues-tu à vivre dans le passé
+Si dans le présent tu meurs pour mon amour
+Et n'oublie pas la promesse que nous avons juré de ne jamais briser
+N'oublie pas, mon cœur
+
+Car si tu retombes amoureuse
+Ce sera avec moi et personne d'autre
+Toi et moi cherchant sur d'autres lèvres
+Notre passé ne va pas se dupliquer
+
+Et si tu retombes amoureuse
+Ce sera de moi et de personne d'autre
+Je sais que tu cherches dans un autre corps
+Le même feu, mais il ne te brûle pas
+
+Je te l'ai déjà dit, il n'y a pas deux comme moi
+Je te l'ai déjà dit, il n'y a pas deux comme moi
+
+Micky Then
+Jr., allons-y
+
+Je suis né pour toi, toi pour moi
+Je serai toujours cet homme
+Bébé, il n'y en a qu'un seul
+Arrête de te demander, je suis prêt
+Je suis né pour toi, toi pour moi
+Je serai toujours cet homme
+Bébé, il n'y en a qu'un seul
+Arrête de te demander, je suis prêt`,
+      en: `Just like a rainbow in the rain
+Your tears reveal a pain
+You can't forget and it's not your fault
+Your prince charming never arrived
+And it's just not the same, the way I made you fall in love
+There were thousands of bachatas that I dedicated to you
+I did know how to tie you down with my tricks, baby
+You will never love anyone like me again
+
+And if you fall in love again
+It will be with me and no one else
+You and I searching on other lips
+Our past is not going to be duplicated
+If you fall in love again
+It will be with me and no one else
+I know you are looking in another body
+For the same fire, but he doesn't burn you
+
+And I told you, there aren't two of me
+I thought I told you it's just different
+
+Yeah
+Even in your dreams I am present
+There aren't two of me
+Turn it up, turn it up, turn it up
+
+Why do you keep living in the past
+If in the present you are dying for my love
+And don't forget the promise we swore never to break
+Don't forget, sweetheart
+
+That if you fall in love again
+It will be with me and no one else
+You and I searching on other lips
+Our past is not going to be duplicated
+
+And if you fall in love again
+It will be with me and no one else
+I know you are looking in another body
+For the same fire, but he doesn't burn you
+
+I already told you, there aren't two of me
+I already told you, there aren't two of me
+
+Micky Then
+Jr., let's go
+
+I was born for you, you for me
+I will always be that man
+Baby, there's only one
+Stop wondering, I'm ready
+I was born for you, you for me
+I will always be that man
+Baby, there's only one
+Stop wondering, I'm ready`
+    }
+  },
+  {
     id: "kitipun-juan-luis-guerra",
     title: "Kitipun",
     artist: "Juan Luis Guerra",
