@@ -1,5 +1,140 @@
 export const songs = [
   {
+    id: "desconocidos-johnny-sky",
+    title: "Desconocidos",
+    artist: "Johnny Sky",
+    year: 2025,
+    dateAdded: "2026-08-27",
+    tags: ["Désir", "Attraction", "Intimité"],
+    color: "#8b5cf6",
+    danceVideo: "hCp1zwtKNUQ",
+    culture: {
+      context: "Sorti fin 2025, 'Desconocidos' de Johnny Sky explore la tension palpable et l'attraction intense entre deux personnes qui se rencontrent sans se connaître.",
+      meaning: "Les paroles décrivent le désir magnétique entre deux inconnus (« desconocidos ») sur la piste de danse. La chanson mêle des éléments d'espagnol et d'anglais (Spanglish), exprimant une passion irrésistible et la curiosité d'explorer une connexion physique immédiate.",
+      artistInfo: "Johnny Sky est un chanteur d'origine dominicaine ayant grandi à New York. Doté d'une formation vocale classique, il est connu pour sa capacité à fusionner la bachata avec des influences pop et R&B contemporaines.",
+      album: "Single"
+    },
+    culture_en: {
+      context: "Released in late 2025, 'Desconocidos' by Johnny Sky explores the palpable tension and intense attraction between two people who meet without knowing each other.",
+      meaning: "The lyrics describe the magnetic desire between two strangers ('desconocidos') on the dance floor. The song blends elements of Spanish and English (Spanglish), expressing an irresistible passion and the curiosity to explore an immediate physical connection.",
+      artistInfo: "Johnny Sky is a singer of Dominican descent raised in New York. With classical vocal training, he is known for his ability to fuse bachata with contemporary pop and R&B influences.",
+      album: "Single"
+    },
+    lyrics: {
+      es: `Y nos pegamos más, más, más
+Tú y yo queremos más, más, más
+Tú y yo bailando sin saber por qué
+Mi mano calza con la tuya y queda bien
+Y por tu espalda yo recorro tu piel
+No hay forma de igualar lo que sentí, oh
+¿Qué haces tú tentándome así?
+Aunque no nos conocemos
+Me intriga cómo sabe tu boca
+Como tú y yo nos movemos
+Parece que nos sobra la ropa
+Y nos pegamos más, más, más
+Tú juegas, yo juego
+Tú y yo queremos más, más, más
+Nos mata el deseo
+Y si te robo hasta mañana
+Oh, you got it all, you got all my attention
+Baby, think of me recorriendo tu cuerpo
+Y es que alguien como tú, you don't need no mention
+Shit's getting tired and predictable
+I'm tired of being good, I want it bad, bad, bad
+Y si la gente nos mira
+A mí no me importa
+Baby, no me importa
+No hay forma de igualar lo que sentí, oh
+¿Y qué haces tú tentándome así?
+Aunque no nos conocemos (no)
+Me intriga cómo sabe tu boca (cómo sabe tu boca)
+Como tú y yo nos movemos (nos movemos)
+Parece que nos sobra la ropa (nos sobra la ropa)
+Y nos pegamos más, más, más (nos pegamos más)
+Tú juegas, yo juego (tú juegas, yo juego)
+Tú y yo queremos más, más, más (más, oh)
+Nos mata el deseo (el deseo)
+Tú y yo bailando sin saber por qué
+Mi mano calza con la tuya y queda bien
+Y por tu espalda yo recorro tu piel, oh`,
+      fr: `Et nous nous collons plus, plus, plus
+Toi et moi en voulons plus, plus, plus
+Toi et moi dansant sans savoir pourquoi
+Ma main s'adapte à la tienne et c'est parfait
+Et sur ton dos je parcours ta peau
+Il n'y a pas moyen d'égaler ce que j'ai ressenti, oh
+Que fais-tu à me tenter ainsi ?
+Bien que nous ne nous connaissions pas
+Je suis intrigué par le goût de ta bouche
+La façon dont toi et moi bougeons
+On dirait qu'on a trop de vêtements
+Et nous nous collons plus, plus, plus
+Tu joues, je joue
+Toi et moi en voulons plus, plus, plus
+Le désir nous tue
+Et si je te vole jusqu'à demain
+Oh, tu as tout, tu as toute mon attention
+Bébé, pense à moi parcourant ton corps
+Et c'est que quelqu'un comme toi, tu n'as besoin d'aucune mention
+Les choses deviennent fatigantes et prévisibles
+J'en ai marre d'être sage, je le veux mal, mal, mal
+Et si les gens nous regardent
+Ça m'est égal
+Bébé, ça m'est égal
+Il n'y a pas moyen d'égaler ce que j'ai ressenti, oh
+Et que fais-tu à me tenter ainsi ?
+Bien que nous ne nous connaissions pas (non)
+Je suis intrigué par le goût de ta bouche (le goût de ta bouche)
+La façon dont toi et moi bougeons (nous bougeons)
+On dirait qu'on a trop de vêtements (trop de vêtements)
+Et nous nous collons plus, plus, plus (nous nous collons plus)
+Tu joues, je joue (tu joues, je joue)
+Toi et moi en voulons plus, plus, plus (plus, oh)
+Le désir nous tue (le désir)
+Toi et moi dansant sans savoir pourquoi
+Ma main s'adapte à la tienne et c'est parfait
+Et sur ton dos je parcours ta peau, oh`,
+      en: `And we get closer, more, more, more
+You and I want more, more, more
+You and I dancing without knowing why
+My hand fits with yours and it feels right
+And along your back I explore your skin
+There's no way to match what I felt, oh
+What are you doing tempting me like this?
+Even though we don't know each other
+I'm intrigued by how your mouth tastes
+The way you and I move
+It seems like we have too many clothes on
+And we get closer, more, more, more
+You play, I play
+You and I want more, more, more
+Desire is killing us
+And what if I steal you until tomorrow
+Oh, you got it all, you got all my attention
+Baby, think of me exploring your body
+And it's just that someone like you, you don't need no mention
+Shit's getting tired and predictable
+I'm tired of being good, I want it bad, bad, bad
+And if people look at us
+I don't care
+Baby, I don't care
+There's no way to match what I felt, oh
+And what are you doing tempting me like this?
+Even though we don't know each other (no)
+I'm intrigued by how your mouth tastes (how your mouth tastes)
+The way you and I move (we move)
+It seems like we have too many clothes on (too many clothes on)
+And we get closer, more, more, more (we get closer)
+You play, I play (you play, I play)
+You and I want more, more, more (more, oh)
+Desire is killing us (desire)
+You and I dancing without knowing why
+My hand fits with yours and it feels right
+And along your back I explore your skin, oh`
+    }
+  },
+  {
     id: "dos-de-mi-jr",
     title: "Dos De Mi",
     artist: "Jr.",
