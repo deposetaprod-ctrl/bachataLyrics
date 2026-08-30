@@ -1,5 +1,497 @@
 export const songs = [
   {
+    id: "te-espero-prince-royce-maria-becerra",
+    title: "Te Espero",
+    artist: "Prince Royce, Maria Becerra",
+    year: 2022,
+    dateAdded: "2026-08-30",
+    tags: ["Chagrin d'amour", "Nostalgie", "Amour non partagé"],
+    color: "#a855f7",
+    danceVideo: "j6S3o0KxA_w",
+    culture: {
+      context: "Sorti en 2022, Te Espero est un duo puissant entre le prince de la bachata, Prince Royce, et la star argentine Maria Becerra. La chanson intègre des éléments modernes et pop tout en conservant l'essence romantique de la bachata, avec une interpolation subtile du classique (I Just) Died in Your Arms de Cutting Crew.",
+      meaning: "La chanson explore les conséquences douloureuses d'une rupture et la difficulté de tourner la page. Prince Royce exprime l'espoir de voir son ancien amour revenir, attendant à « l'endroit habituel », tandis que Maria Becerra apporte une perspective opposée : celle d'une femme qui a été abandonnée, qui s'est habituée à la solitude, et qui refuse désormais de l'attendre.",
+      artistInfo: "Prince Royce est une figure incontournable de la bachata moderne, ayant introduit de nombreux éléments pop et R&B dans le genre. Maria Becerra, surnommée « La Nena de Argentina », est l'une des artistes urbaines les plus populaires d'Amérique Latine, connue pour sa versatilité musicale.",
+      album: "Llamada Perdida"
+    },
+    culture_en: {
+      context: "Released in 2022, Te Espero is a powerful duet between the Prince of Bachata, Prince Royce, and Argentine star Maria Becerra. The song blends modern pop elements while keeping the romantic essence of bachata, featuring a subtle interpolation of Cutting Crew's classic (I Just) Died in Your Arms.",
+      meaning: "The song explores the painful aftermath of a breakup and the struggle to move on. Prince Royce expresses hope for his past love to return, waiting at their 'usual place,' while Maria Becerra provides the opposite perspective: a woman who was left behind, got used to being alone, and now refuses to wait for him.",
+      artistInfo: "Prince Royce is a leading figure in modern bachata, known for infusing the genre with pop and R&B elements. Maria Becerra, dubbed 'La Nena de Argentina,' is one of Latin America's most popular urban artists, recognized for her musical versatility.",
+      album: "Llamada Perdida"
+    },
+    lyrics: {
+      es: `[Prince Royce]
+Aquella noche te fuiste con el viento
+Bajo la luna me dijiste: "Lo siento
+Ya no te amo, se terminó lo nuestro"
+Pero te mata el arrepentimiento
+
+[Prince Royce]
+¿Será que estoy soñando demasiado?
+¿O que me has hipnotizado con algún hechizo raro?
+Que las noches cuando trato de acostarme
+Llegas a mi mente pa' desconcentrarme
+Ay, dime qué demonios me has hecho
+Que no te saco del pecho
+Es magia, sospecho
+Solo estoy satisfecho si te veo
+Porfa, deja calmar mis deseos (woh-oh-oh)
+
+[Prince Royce]
+Que yo te espero
+Aquí en el lugar de siempre
+Ay, donde rico la pasamos, donde la ropa dejamos
+Donde nos enamoramos y ahora ya no estamos
+Ven, que yo te espero
+Aquí en el lugar de siempre (yeah-eh)
+Ay, donde rico la pasamos, donde nos enamoramos
+Donde la ropa dejamos y ahora ya no estamos (oh-oh, oh-oh)
+
+[Maria Becerra]
+Lady, Lady
+Na-na, na-ah-ah
+La Nena de Argentina
+
+[Maria Becerra]
+Me dejaste solita y ahora me necesita'
+Probaste otra piel, pero mi sabor no se quita
+Sé que a pesar de todo, debo volver a empezar
+Pero mi corazón no se anima a volver a amar
+Tuve que acostumbrarme a que tus beso' no eran mío'
+Y traté de recuperar lo que estaba perdío'
+Pero ahora eres tú el que ha quedado en el olvido
+Aunque quieras volver, esto ya no tiene sentido
+
+[Maria Becerra & Prince Royce]
+Yo no te espero
+Aquí en el lugar de siempre
+Ay, donde rico la pasamos, donde la ropa dejamos
+Donde nos enamoramos y ahora ya no estamos
+Ven, que yo te espero
+Aquí en el lugar de siempre (yeah-eh-eh)
+Ay, donde rico la pasamos, donde nos enamoramos
+Donde la ropa dejamos y ahora ya no estamos (oh-oh, oh-oh)
+
+[Prince Royce]
+María, mira, tu favorito
+Royce
+
+[Prince Royce & Maria Becerra]
+Ven que yo te espero
+Aquí en el lugar de siempre
+Ay, donde rico la pasamos, donde la ropa dejamos
+Donde nos enamoramos y ahora ya no estamos
+Ya no te espero
+Aquí en el lugar de siempre
+Ay, donde rico la pasamos, donde la ropa dejamos
+Donde nos enamoramos y ahora ya no estamos
+
+[Prince Royce & Maria Becerra]
+You won't forget me, no
+¡Ya!`,
+      fr: `[Prince Royce]
+Cette nuit-là tu es partie avec le vent
+Sous la lune tu m'as dit : "Je suis désolée
+Je ne t'aime plus, c'est fini entre nous"
+Mais le regret te ronge
+
+[Prince Royce]
+Se pourrait-il que je rêve un peu trop ?
+Ou que tu m'aies hypnotisé avec un sort étrange ?
+Car les nuits, quand j'essaie de me coucher
+Tu viens dans mon esprit pour me déconcentrer
+Ah, dis-moi ce que tu m'as fait bon sang
+Que je n'arrive pas à te sortir de mon cœur
+C'est de la magie, je soupçonne
+Je ne suis satisfait que si je te vois
+S'il te plaît, laisse-moi calmer mes désirs (woh-oh-oh)
+
+[Prince Royce]
+Car je t'attends
+Ici, à l'endroit habituel
+Ah, où on passait du bon temps, où on laissait nos vêtements
+Où on est tombés amoureux et où nous ne sommes plus maintenant
+Viens, car je t'attends
+Ici, à l'endroit habituel (yeah-eh)
+Ah, où on passait du bon temps, où on est tombés amoureux
+Où on laissait nos vêtements et où nous ne sommes plus maintenant (oh-oh, oh-oh)
+
+[Maria Becerra]
+Lady, Lady
+Na-na, na-ah-ah
+La Nena de Argentina
+
+[Maria Becerra]
+Tu m'as laissée toute seule et maintenant tu as besoin de moi
+Tu as goûté une autre peau, mais ma saveur ne s'efface pas
+Je sais que malgré tout, je dois recommencer à zéro
+Mais mon cœur n'ose pas aimer à nouveau
+J'ai dû m'habituer au fait que tes baisers n'étaient plus miens
+Et j'ai essayé de récupérer ce qui était perdu
+Mais maintenant c'est toi qui as été oublié
+Même si tu veux revenir, cela n'a plus de sens
+
+[Maria Becerra & Prince Royce]
+Je ne t'attends pas
+Ici, à l'endroit habituel
+Ah, où on passait du bon temps, où on laissait nos vêtements
+Où on est tombés amoureux et où nous ne sommes plus maintenant
+Viens, car je t'attends
+Ici, à l'endroit habituel (yeah-eh-eh)
+Ah, où on passait du bon temps, où on est tombés amoureux
+Où on laissait nos vêtements et où nous ne sommes plus maintenant (oh-oh, oh-oh)
+
+[Prince Royce]
+Maria, regarde, ton préféré
+Royce
+
+[Prince Royce & Maria Becerra]
+Viens, car je t'attends
+Ici, à l'endroit habituel
+Ah, où on passait du bon temps, où on laissait nos vêtements
+Où on est tombés amoureux et où nous ne sommes plus maintenant
+Je ne t'attends plus
+Ici, à l'endroit habituel
+Ah, où on passait du bon temps, où on laissait nos vêtements
+Où on est tombés amoureux et où nous ne sommes plus maintenant
+
+[Prince Royce & Maria Becerra]
+Tu ne m'oublieras pas, non
+C'est ça !`,
+      en: `[Prince Royce]
+That night you left with the wind
+Under the moon you told me: "I'm sorry
+I don't love you anymore, we're over"
+But regret kills you
+
+[Prince Royce]
+Could it be that I'm dreaming too much?
+Or that you hypnotized me with some strange spell?
+Cause on nights when I try to go to bed
+You come into my mind to distract me
+Oh, tell me what the hell you've done to me
+That I can't get you out of my chest
+It's magic, I suspect
+I'm only satisfied if I see you
+Please, let me calm my desires (woh-oh-oh)
+
+[Prince Royce]
+Cause I'm waiting for you
+Here in the usual place
+Oh, where we had a great time, where we left our clothes
+Where we fell in love and now we're no longer together
+Come, cause I'm waiting for you
+Here in the usual place (yeah-eh)
+Oh, where we had a great time, where we fell in love
+Where we left our clothes and now we're no longer together (oh-oh, oh-oh)
+
+[Maria Becerra]
+Lady, Lady
+Na-na, na-ah-ah
+La Nena de Argentina
+
+[Maria Becerra]
+You left me all alone and now you need me
+You tasted another skin, but my flavor won't go away
+I know that despite everything, I must start over
+But my heart doesn't dare to love again
+I had to get used to the fact that your kisses weren't mine
+And I tried to recover what was lost
+But now it is you who has been forgotten
+Even if you want to go back, it doesn't make sense anymore
+
+[Maria Becerra & Prince Royce]
+I'm not waiting for you
+Here in the usual place
+Oh, where we had a great time, where we left our clothes
+Where we fell in love and now we're no longer together
+Come, cause I'm waiting for you
+Here in the usual place (yeah-eh-eh)
+Oh, where we had a great time, where we fell in love
+Where we left our clothes and now we're no longer together (oh-oh, oh-oh)
+
+[Prince Royce]
+Maria, look, your favorite
+Royce
+
+[Prince Royce & Maria Becerra]
+Come, cause I'm waiting for you
+Here in the usual place
+Oh, where we had a great time, where we left our clothes
+Where we fell in love and now we're no longer together
+I'm no longer waiting for you
+Here in the usual place
+Oh, where we had a great time, where we left our clothes
+Where we fell in love and now we're no longer together
+
+[Prince Royce & Maria Becerra]
+You won't forget me, no
+Yes!`
+    }
+  },
+  {
+    id: "el-panuelo-romeo-santos-rosalia",
+    title: "El Pañuelo",
+    artist: "Romeo Santos, ROSALÍA",
+    year: 2022,
+    dateAdded: "2026-08-30",
+    tags: ["Chagrin d'amour", "Désir", "Guérison"],
+    color: "#e11d48",
+    danceVideo: "ULEnx-drkVQ",
+    culture: {
+      context: "Issue de l'album Fórmula, Vol. 3 de Romeo Santos sorti en 2022, El Pañuelo est une puissante collaboration avec l'artiste espagnole ROSALÍA. La chanson mélange des éléments traditionnels de la bachata avec les inflexions vocales flamenco caractéristiques de ROSALÍA, offrant une expérience musicale unique et chargée d'émotion.",
+      meaning: "Le titre aborde la douleur d'une rupture et de l'amour non réciproque, les deux artistes exprimant leur profonde tristesse. De manière métaphorique, ils s'offrent mutuellement d'être le « mouchoir » (el pañuelo) pour sécher leurs larmes et trouver du réconfort dans l'intimité, tentant ainsi de guérir ensemble leurs blessures émotionnelles.",
+      artistInfo: "Surnommé le « Roi de la Bachata », Romeo Santos est célèbre pour avoir popularisé ce genre à l'échelle mondiale. ROSALÍA, chanteuse espagnole récompensée aux Grammy Awards, est reconnue pour sa fusion innovante du flamenco avec la pop moderne et les styles urbains. Leur collaboration crée un véritable pont entre leurs univers musicaux.",
+      album: "Fórmula, Vol. 3"
+    },
+    culture_en: {
+      context: "Released on Romeo Santos' 2022 album Fórmula, Vol. 3, El Pañuelo is a powerful collaboration with Spanish artist ROSALÍA. The song blends traditional bachata elements with ROSALÍA's signature flamenco-inspired vocals, creating a unique and emotional musical experience.",
+      meaning: "The song explores the pain of heartbreak and unrequited love, where both artists express their deep sorrow. Metaphorically, they offer to be a 'handkerchief' (el pañuelo) to dry each other's tears and provide solace in intimacy, attempting to heal their emotional wounds together.",
+      artistInfo: "Romeo Santos, known as the 'King of Bachata', is famous for popularizing the genre globally. ROSALÍA is a Grammy-winning Spanish singer known for her innovative fusion of flamenco with modern pop and urban styles. Their collaboration bridges different musical worlds.",
+      album: "Fórmula, Vol. 3"
+    },
+    lyrics: {
+      es: `[ROSALÍA]
+Mi cantar
+Mi canto e' un lamento
+Ay, porque estoy enamora'
+Y no soy correspondi'a
+Destroza' estoy por dentro
+
+[Romeo Santos]
+Un cigarrillo me acompaña al abismo
+Igual que tú, no tengo suerte en el amor
+Amar a ciegas te quita poder
+Por el riesgo al corazón dañando sentimientos
+
+[ROSALÍA]
+Un lunes se marchó
+A las 6:24, yo dormida, de mí no se despidió
+Y hoy derramo cada lágrima en tu pecho
+No eres él, pero quiero un beso
+
+[Romeo Santos & ROSALÍA]
+Te incito
+A aliviarnos las penas y curarnos en la cama
+Te admito
+Baby, si haces que lo olvide, puede que vuelva mañana
+
+Te aseguro
+Mami, seré el pañuelo
+Mata la angustia aquí en mi cuerpo
+Papi, dame un consuelo
+Seré la cura, quiero tu cuerpo
+
+[Romeo Santos]
+Uh-ah-ah-uh-ah
+Escucha las palabras
+'Pérame
+
+[ROSALÍA]
+No hubo un mensaje ni hubo una nota en la mesa
+Ese cabrón solo dejó su poloche'
+Amar a ciegas te quita poder
+Pero esta noche nos elevamos pa'l cielo
+
+[Romeo Santos & ROSALÍA]
+Te incito
+A aliviarnos las penas y curarnos en la cama
+Te admito
+Baby, si haces que lo olvide, puede que vuelva mañana
+
+Te aseguro
+Mami, seré el pañuelo
+Mata la angustia aquí en mi cuerpo
+Papi, dame un consuelo
+Seré la cura, quiero tu cuerpo
+
+[Romeo Santos & ROSALÍA]
+¿A ti te gusta mi bachata, amiguita?
+Ajá
+La ROSALÍA
+
+[Romeo Santos]
+Es evidente que pasamos por lo mismo
+Pero nadie ha morío por amor
+Esta noche ven, refúgiate en mis brazos
+Desquítate con rabia pasional
+No es casual que nos hayamos encontra'o
+Come on
+
+[Romeo Santos & ROSALÍA]
+Te incito
+A aliviarnos las penas y curarnos en la cama
+Te admito
+Baby, si haces que lo olvide, puede que vuelva mañana
+
+Te aseguro
+Mami, seré el pañuelo
+Mata la angustia aquí en mi cuerpo
+Papi, dame un consuelo
+Seré la cura, quiero tu cuerpo
+Vamo'`,
+      fr: `[ROSALÍA]
+Mon chant
+Mon chant est une complainte
+Ah, parce que je suis amoureuse
+Et ce n'est pas réciproque
+Je suis détruite à l'intérieur
+
+[Romeo Santos]
+Une cigarette m'accompagne vers l'abîme
+Tout comme toi, je n'ai pas de chance en amour
+Aimer aveuglément t'enlève ton pouvoir
+À cause du risque pour le cœur, blessant les sentiments
+
+[ROSALÍA]
+Un lundi il est parti
+À 6h24, pendant que je dormais, il ne m'a pas dit au revoir
+Et aujourd'hui je verse chaque larme sur ton torse
+Tu n'es pas lui, mais je veux un baiser
+
+[Romeo Santos & ROSALÍA]
+Je t'incite
+À soulager nos peines et nous guérir dans le lit
+Je t'avoue
+Bébé, si tu me le fais oublier, il se peut que je revienne demain
+
+Je t'assure
+Mami, je serai le mouchoir
+Tue l'angoisse ici sur mon corps
+Papi, donne-moi du réconfort
+Je serai le remède, je veux ton corps
+
+[Romeo Santos]
+Uh-ah-ah-uh-ah
+Écoute les paroles
+Attends-moi
+
+[ROSALÍA]
+Il n'y a pas eu de message ni de mot sur la table
+Ce connard a juste laissé son t-shirt
+Aimer aveuglément t'enlève ton pouvoir
+Mais ce soir on s'élève jusqu'au ciel
+
+[Romeo Santos & ROSALÍA]
+Je t'incite
+À soulager nos peines et nous guérir dans le lit
+Je t'avoue
+Bébé, si tu me le fais oublier, il se peut que je revienne demain
+
+Je t'assure
+Mami, je serai le mouchoir
+Tue l'angoisse ici sur mon corps
+Papi, donne-moi du réconfort
+Je serai le remède, je veux ton corps
+
+[Romeo Santos & ROSALÍA]
+Est-ce que tu aimes ma bachata, petite amie ?
+Aha
+La ROSALÍA
+
+[Romeo Santos]
+Il est évident que nous traversons la même chose
+Mais personne n'est mort d'amour
+Ce soir viens, réfugie-toi dans mes bras
+Défoule-toi avec une rage passionnelle
+Ce n'est pas par hasard que nous nous sommes rencontrés
+Viens
+
+[Romeo Santos & ROSALÍA]
+Je t'incite
+À soulager nos peines et nous guérir dans le lit
+Je t'avoue
+Bébé, si tu me le fais oublier, il se peut que je revienne demain
+
+Je t'assure
+Mami, je serai le mouchoir
+Tue l'angoisse ici sur mon corps
+Papi, donne-moi du réconfort
+Je serai le remède, je veux ton corps
+Allons-y`,
+      en: `[ROSALÍA]
+My singing
+My song is a lament
+Oh, because I am in love
+And it's unrequited
+I am destroyed inside
+
+[Romeo Santos]
+A cigarette accompanies me to the abyss
+Just like you, I have no luck in love
+Loving blindly takes away your power
+Due to the risk to the heart, damaging feelings
+
+[ROSALÍA]
+On a Monday he left
+At 6:24, while I was sleeping, he didn't say goodbye to me
+And today I shed every tear on your chest
+You are not him, but I want a kiss
+
+[Romeo Santos & ROSALÍA]
+I urge you
+To soothe our sorrows and heal ourselves in bed
+I admit to you
+Baby, if you make me forget him, I might come back tomorrow
+
+I assure you
+Mami, I will be the handkerchief
+Kill the anguish here on my body
+Papi, give me comfort
+I will be the cure, I want your body
+
+[Romeo Santos]
+Uh-ah-ah-uh-ah
+Listen to the words
+Wait for me
+
+[ROSALÍA]
+There was no message and no note on the table
+That bastard only left his polo shirt
+Loving blindly takes away your power
+But tonight we elevate to heaven
+
+[Romeo Santos & ROSALÍA]
+I urge you
+To soothe our sorrows and heal ourselves in bed
+I admit to you
+Baby, if you make me forget him, I might come back tomorrow
+
+I assure you
+Mami, I will be the handkerchief
+Kill the anguish here on my body
+Papi, give me comfort
+I will be the cure, I want your body
+
+[Romeo Santos & ROSALÍA]
+Do you like my bachata, little friend?
+Aha
+La ROSALÍA
+
+[Romeo Santos]
+It's obvious we are going through the same thing
+But nobody has died for love
+Tonight come, take refuge in my arms
+Get even with passionate rage
+It's no coincidence that we have met
+Come on
+
+[Romeo Santos & ROSALÍA]
+I urge you
+To soothe our sorrows and heal ourselves in bed
+I admit to you
+Baby, if you make me forget him, I might come back tomorrow
+
+I assure you
+Mami, I will be the handkerchief
+Kill the anguish here on my body
+Papi, give me comfort
+I will be the cure, I want your body
+Let's go`
+    }
+  },
+  {
     id: "desconocidos-johnny-sky",
     title: "Desconocidos",
     artist: "Johnny Sky",
