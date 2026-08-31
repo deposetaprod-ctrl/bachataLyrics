@@ -145,8 +145,10 @@ body::before {
 
 .search-bar {
   flex: 1;
-  max-width: 400px;
+  min-width: 250px;
+  max-width: 500px;
   position: relative;
+  margin: 0 auto;
 }
 
 .search-bar input {
@@ -809,9 +811,9 @@ body::before {
 /* ─── PASSES PAGE ─── */
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   align-items: center;
 }
 

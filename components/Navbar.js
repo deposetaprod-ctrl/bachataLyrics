@@ -23,6 +23,13 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
             <span className="logo-text">Bachata Lyrics</span>
           </div>
 
+          {/* Optional children (e.g. search bar) rendered in the middle */}
+          {children && (
+            <div className="navbar-custom-content">
+              {children}
+            </div>
+          )}
+
           {/* Desktop Links */}
           <div className="nav-links desktop-only">
             <span 
@@ -94,13 +101,6 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
               )}
             </div>
           </div>
-
-          {/* Optional children (e.g. search bar) rendered in the middle */}
-          {children && (
-            <div className="navbar-custom-content">
-              {children}
-            </div>
-          )}
 
           {/* Mobile Hamburger Button */}
           <button 
@@ -203,8 +203,9 @@ export default function Navbar({ user, supabaseClient, onLoginClick, onSuggestCl
         .navbar-custom-content {
           flex: 1;
           display: flex;
-          justify-content: flex-end;
+          justify-content: center;
           align-items: center;
+          padding: 0 16px;
         }
 
         .mobile-menu-btn {
